@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Order>
+    <OrderItemList />
+    <Total>0</Total>
+    <OrderNo>123</OrderNo>
+    <OrderData>0001-01-01T00:00:00</OrderData>
+  </Order>
+  <Order>
+    <OrderItemList />
+    <Total>0</Total>
+    <OrderNo>456</OrderNo>
+    <OrderData>0001-01-01T00:00:00</OrderData>
+  </Order>
+</ArrayOfOrder>
