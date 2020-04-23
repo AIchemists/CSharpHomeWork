@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>QQ空间_手机QQ空间_QQ空间下载</title>
+<meta name="Copyright" content="Tencent" />
+<meta name="Description" content="QQ空间(Qzone)是中国最大的社交网络,手机QQ空间下载让您在手机上也可以体验。
+QQ空间手机版致力于帮助用户随时随地地“分享生活，留住感动”。您可以使用QQ空间客户端查看好友动态、与好友互动、
+上传照片、写说说、写日志、签到、送礼；更有“玩吧”汇聚众多热门游戏，满足各种娱乐需求。" />
+<meta name="Keywords" content="QQ空间,手机QQ空间,手机QQ空间下载，Android版QQ空间下载,iPhone版QQ空间下载,WP版QQ空间下载,空间" />
+<meta name="baidu-site-verification" content="PCX9xwn5Xs" />
+<link rel="Shortcut Icon" href="//qzonestyle.gtimg.cn/qzone_v6/img/favicon.ico?max_age=31536000" type="image/x-icon" />
+<!-- 接入腾讯分析 -->
+<script type="text/javascript" src="//tajs.qq.com/stats?sId=44475023" charset="UTF-8"></script>
+<script type="text/javascript">
+    // 
+    // if(!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)){
+    //     window.location.href="http://z.qzone.com/mobile.html";
+    // }
+    
+</script>
+<script>
+    document.createElement('header');
+    document.createElement('nav');
+    document.createElement('article');
+    document.createElement('footer');
+</script>
+<link media="screen" href="//qzonestyle.gtimg.cn/qzone_v6/proj_mobile/new-mobile.css" rel="stylesheet"/>
+<!-- <link rel="stylesheet" type="text/css" href="../../qzone_v6/proj_mobile/new-mobile.css"> -->
+<style type="text/css">
+.fn-txt {padding:30px 0 20px 50px;}
+.fn-txt h2 {margin-bottom:10px;}
+.fn-txt .txt {margin-bottom:20px;}
+.fn-txt p {margin-bottom:10px;}
+.fn-txt .highlight {color:#e07024}
+</style>
+</head>
+<body>
+<div class="zqzone-wrap">
+<header id="page-header">
+	<div class="wrapper" role="banner">
+        <h1> 
+            <a href="http://qzone.qq.com/" title="首页" class="logo" target="_blank" onclick="window.TCISD && TCISD.hotClick('mobileProtal.qzoneLogo','sns.qzone.qq.com');">
+                <span>手机QQ空间</span>
+            </a>
+		</h1>
+        <nav class="top-nav" role="navigation">
+			<ul>
+				<li class="current">
+                    <a href="http://z.qzone.com/" class="transition nav-1" title="手机QQ空间"><span>手机QQ空间</span></a>
+                </li>
+                <li>
+                    <a href="http://vip.qzone.com/" class="transition nav-4"  target="_blank" title="QQ空间黄钻特权"><span>QQ空间黄钻特权</span></a>
+                </li>
+				<li>
+                    <a id="downloadHref" href="http://qzs.qzone.qq.com/qzone/v6/mobile/html/download.html" class="transition nav-2"  title="QQ空间下载"><span>QQ空间下载</span></a>
+                </li>
+				<li>
+                    <a href="http://qzs.qzone.qq.com/qzone/v6/mobile/html/connect.html" class="transition nav-3" title="联系我们"><span>联系我们</span></a>
+                </li>
+			</ul>
+		</nav>
+	</div> 
+</header>
+
+<div id="page-content" role="main">
+	<div class="hero" id="hero">
+        <div class="bg" style="background-color:#FFCA06;" id="photo_div_1">
+            <img src="http://qzonestyle.gtimg.cn/qzone_v6/proj_mobile/img/hero_20121030/bg-100.jpg" alt="3D素材，虚实衔接" title="视频拍摄" />
+            <div class="wrapper">
+                <a href="http://z.qzone.com/download.html" class="btn-1" title="免费下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')" role="button">
+                    <span class="texthidden">免费下载QQ空间</span><b class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-5" title="iPhone版QQ空间下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')">
+                    <span class="texthidden">iPhone版QQ空间下载</span><b class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-2" title="Android版QQ空间下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')">
+                    <span class="texthidden">Android版QQ空间下载</span><b  class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-3" title="Windows Phone版QQ空间下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')">
+                    <span class="texthidden">Windows Phone版QQ空间下载</span><b class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-6" title="iPad版QQ空间下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')">
+                    <span class="texthidden">iPad版QQ空间下载</span><b class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-4" title="触屏版QQ空间下载">
+                    <span class="texthidden">触屏版QQ空间下载</span><b class="transition"></b>
+                </a>
+                <a class="prev" href="javascript:;" title="上一页" tabIndex="-1"><span class="texthidden">上一页</span></a>
+                <a class="next" href="javascript:;" title="下一页" tabIndex="-1"><span class="texthidden">下一页</span></a>
+            </div>
+        </div>
+        <div class="bg" style="background-color:#FFCA06;" id="photo_div_2">
+            <img src="http://qzonestyle.gtimg.cn/qzone_v6/proj_mobile/img/hero_20121030/bg-101.jpg" alt="出彩评论，炫动心情" title="评论炫彩字" />
+            <div class="wrapper">
+                <a href="http://z.qzone.com/download.html" class="btn-1" title="免费下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')" role="button">
+                    <span class="texthidden">免费下载QQ空间</span><b class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-5" title="iPhone版QQ空间下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')">
+                    <span class="texthidden">iPhone版QQ空间下载</span><b class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-2" title="Android版QQ空间下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')">
+                    <span class="texthidden">Android版QQ空间下载</span><b  class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-3" title="Windows Phone版QQ空间下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')">
+                    <span class="texthidden">Windows Phone版QQ空间下载</span><b class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-6" title="iPad版QQ空间下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')">
+                    <span class="texthidden">iPad版QQ空间下载</span><b class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-4" title="触屏版QQ空间下载">
+                    <span class="texthidden">触屏版QQ空间下载</span><b class="transition"></b>
+                </a>
+                <a class="prev" href="javascript:;" title="上一页" tabIndex="-1"><span class="texthidden">上一页</span></a>
+                <a class="next" href="javascript:;" title="下一页" tabIndex="-1"><span class="texthidden">下一页</span></a>
+            </div>
+        </div>
+        <div class="bg" style="background-color:#FFCA06;" id="photo_div_3">
+            <img src="http://qzonestyle.gtimg.cn/qzone_v6/proj_mobile/img/hero_20121030/bg-102.jpg" alt="用心点缀，时光记忆" title="相册皮肤" />
+            <div class="wrapper">
+                <a href="http://z.qzone.com/download.html" class="btn-1" title="免费下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')" role="button">
+                    <span class="texthidden">免费下载QQ空间</span><b class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-5" title="iPhone版QQ空间下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')">
+                    <span class="texthidden">iPhone版QQ空间下载</span><b class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-2" title="Android版QQ空间下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')">
+                    <span class="texthidden">Android版QQ空间下载</span><b  class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-3" title="Windows Phone版QQ空间下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')">
+                    <span class="texthidden">Windows Phone版QQ空间下载</span><b class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-6" title="iPad版QQ空间下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')">
+                    <span class="texthidden">iPad版QQ空间下载</span><b class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-4" title="触屏版QQ空间下载">
+                    <span class="texthidden">触屏版QQ空间下载</span><b class="transition"></b>
+                </a>
+                <a class="prev" href="javascript:;" title="上一页" tabIndex="-1"><span class="texthidden">上一页</span></a>
+                <a class="next" href="javascript:;" title="下一页" tabIndex="-1"><span class="texthidden">下一页</span></a>
+            </div>
+        </div>
+        <div class="bg" style="background-color:#FFCA06;" id="photo_div_4">
+            <img src="http://qzonestyle.gtimg.cn/qzone_v6/proj_mobile/img/hero_20121030/bg-98.jpg" alt="萌宠联动，精推快评" title="宠物快评" />
+            <div class="wrapper">
+                <a href="http://z.qzone.com/download.html" class="btn-1" title="免费下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')" role="button">
+                    <span class="texthidden">免费下载QQ空间</span><b class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-5" title="iPhone版QQ空间下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')">
+                    <span class="texthidden">iPhone版QQ空间下载</span><b class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-2" title="Android版QQ空间下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')">
+                    <span class="texthidden">Android版QQ空间下载</span><b  class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-3" title="Windows Phone版QQ空间下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')">
+                    <span class="texthidden">Windows Phone版QQ空间下载</span><b class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-6" title="iPad版QQ空间下载" onclick="TCISD&&TCISD.hotClick('mobileProtal.index_toDownloadPage','sns.qzone.qq.com')">
+                    <span class="texthidden">iPad版QQ空间下载</span><b class="transition"></b>
+                </a>
+                <a href="http://z.qzone.com/download.html" class="btn-4" title="触屏版QQ空间下载">
+                    <span class="texthidden">触屏版QQ空间下载</span><b class="transition"></b>
+                </a>
+                <a class="prev" href="javascript:;" title="上一页" tabIndex="-1"><span class="texthidden">上一页</span></a>
+                <a class="next" href="javascript:;" title="下一页" tabIndex="-1"><span class="texthidden">下一页</span></a>
+            </div>
+        </div>
+	</div>
+
+	<div id="download-section">
+		<div class="wrapper">
+			<ul>
+				<li class="section-1">
+					<img src="https://qzonestyle.gtimg.cn/qzone_v6/proj_mobile/img/erweima.png" alt="扫描二维码 下载QQ空间"/>
+					<h2>二维码扫描获取链接</h2>
+					<p>用二维码扫描软件拍摄二维码，可直接下载QQ空间。</p>
+				</li>
+				<li class="section-2 none">
+					<h2>手机短信获取</h2>
+					<p>填写手机号，下载地址将发送至您的手机</p>
+					<form action="">
+						<input type="text" class="textinput" />
+						<input type="submit" value="" class="submit">
+					</form>
+				</li>
+				<li class="section-3">
+					<h2>手机浏览器下载链接</h2>
+					<p>打开手机浏览器，输入以下地址访问</p>
+					<a href="http://z.qzone.com" target="_blank" onclick="window.TCISD&&window.TCISD.hotClick('mobileProtal.index_mp_qq_com','sns.qzone.qq.com')"><span>http://z.qzone.com</span></a>
+				</li>
+				<li class="section-4">
+					<h2>一键安装 (Android)</h2>
+					<p>通过应用宝进行一键安装</p>
+					<span title="使用应用宝一键安装到手机" asistanturlid="990599" appname="QQ空间" ex_url="http://m.qzone.com/l?g=97&g_f=2000000086" onclick="qqapp_dl_apk(this);" style="cursor:pointer"><img src="https://h5.qzone.qq.com/tx_tls_gate=img2.sj.qq.com/res/sj.qq.com/official2/images/api/api7.png"/> </span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<footer id="page-footer" role="contentinfo">
+    <div class="friend-href">
+        <p>
+            <span>友情链接：</span>
+            <a href="http://im.qq.com/" title="QQ官网下载" target="_blank">QQ官网下载</a> | 
+            <a href="http://y.qq.com/#type=index" title="QQ音乐" target="_blank">QQ音乐</a> | 
+            <a href="http://www.weiyun.com/index.html" title="腾讯微云" target="_blank">腾讯微云</a> | 
+            <a href="http://v.qq.com/" title="腾讯视频" target="_blank">腾讯视频</a> | 
+            <a href="http://guanjia.qq.com/?ADTAG=tr.pcmgr.zqzone" title="腾讯电脑管家" target="_blank">腾讯电脑管家</a> | 
+            <a href="http://m.qq.com/" title="腾讯手机管家" target="_blank">腾讯手机管家</a> | 
+            <a href="http://www.qcloud.com/" title="腾讯云" target="_blank">腾讯云</a> | 
+            <a href="http://kg.qq.com/" title="全民K歌" target="_blank">全民K歌</a> | 
+            <a href="http://fm.qq.com/" title="企鹅FM" target="_blank">企鹅FM</a> | 
+            <a href="http://huabao.qzone.qq.com/" title="画报" target="_blank">画报</a> | 
+            <a href="http://xing.qq.com/" title="星钻" target="_blank">星钻</a> | 
+            <a href="http://act.qzone.qq.com/" title="QQ空间黄钻活动" target="_blank">QQ空间黄钻活动</a>
+        </p>
+    </div>
+	<div class="wrapper">
+		<div class="mqparty-footer">
+		      <p id="tencentNav">
+                <a href="http://www.tencent.com/" target="_blank" title="关于腾讯">关于腾讯</a> | <a href="http://www.tencent.com/index_e.shtml" target="_blank" title="about tencent">About Tencent</a> | <a href="http://www.qq.com/contract.shtml" target="_blank" title="服务条款">服务条款</a> | <a href="http://www.tencentmind.com/" target="_blank" title="广告服务">广告服务</a> | <a href="http://www.tencent.com/about/corp.shtml" target="_blank"  title="商务洽谈">商务洽谈</a> | <a href="http://hr.tencent.com/" target="_blank" title="腾讯招聘">腾讯招聘</a> | <a href="http://gongyi.qq.com/" target="_blank" title="腾讯公益">腾讯公益</a> | <a href="http://service.qq.com/" target="_blank"  title="客服中心">客服中心</a> | <a href="http://www.qq.com/map/" target="_blank" title="网站导航">网站导航</a> | <a href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" target="_blank" title="版权所有">版权所有</a></p>
+
+                <script type="text/javascript">
+                    var str = '<p id="copyRightEn">Copyright © 1998 - '+(new Date().getFullYear())+' Tencent. All Rights Reserved.</p><p id="copyRightCn">腾讯公司 版权所有</p>';
+                    document.write(str);
+                </script>
+		    </div>
+	</div>
+</footer>
+</div>
+
+<div class="user-hz-power">
+    <a href="http://vip.qzone.com/" class="hz-btn" target="_blank" title="QQ空间黄钻特权">QQ空间黄钻特权</a>
+</div>
+<div class="user_share_box" id="user_share_box">
+	<a href="javascript:;" class="share_btn" id="share_btn" title="分享QQ空间">分享QQ空间</a>
+	<div class="share_slide none" id="share_slide">
+		<div class="user_share fr" id="shareContent">
+		</div>
+	</div>
+</div>
+<div class="out_hire_box">
+    <a href="http://user.qzone.qq.com/95005650/blog/1374063086" target="_blank" class="out_hire_btn" title="外团招募">外团招募</a>
+</div>
+<script type="text/javascript">
+
+	var util = (function(){
+		var u = navigator.userAgent.toLowerCase();
+		return {
+			isIphone : function(){return (RegExp("iphone").test(u) || RegExp("ipod touch").test(u))},
+			isIpad : function(){return RegExp("ipad").test(u)},
+			isAndroid : function(){return (RegExp("android").test(u) || RegExp("android 2").test(u))},
+			isMB : function(){return (util.isIphone() || util.isIpad() || util.isAndroid())}, 
+			isPC : function(){return !(util.isIphone() || util.isIpad() || util.isAndroid())},
+			getViewWidth: function (){return document.documentElement.clientWidth},
+       		getViewHeight: function (){return window.innerHeight}
+		};
+	})();
+
+	function getParameter(name){
+        var r = new RegExp("(\\?|#|&)" + name + "=([^&#]*)(&|#|$)");
+        var m = location.href.match(r);
+        return (!m ? "" : m[2]);
+    };
+    if(location.href.indexOf('from=samsung')!=-1){
+    	if(util.isAndroid()){
+    		location.href =  "http://qzs.qq.com/qzone/v6/activity/sumsung/app-home.html";
+    	}else{
+    		location.href =  "http://qzs.qq.com/qzone/v6/activity/sumsung/index.html";
+    	}    	
+    }
+	//为iphone ipad插入下载meta
+	(function(){
+		var hd = document.head;
+		if(util.isIpad()){
+			hd.innerHTML = ('<meta name="apple-itunes-app" content="app-id=433156786">' + hd.innerHTML);
+		}else if(util.isIphone()){
+			hd.innerHTML = ('<meta name="apple-itunes-app" content="app-id=364183992">' + hd.innerHTML);
+		}
+		if(util.isPC()){
+			var fcss = document.createElement("link");
+			fcss.setAttribute("rel", "stylesheet"); 
+			fcss.setAttribute("type", "text/css"); 
+			fcss.setAttribute("href", "//img1.sj.qq.com/api/styles/sjqqapi.css?max_age=36011");
+			document.getElementsByTagName("head")[0].appendChild(fcss);
+		}
+	})();
+
+	(function(){
+		var js_begin = '<script type="text/javascript" src="//',
+			js_end = '" charset="utf-8"><\/script>',
+			jsArr = [];
+			if(util.isMB()){
+                
+				jsArr = [
+					js_begin,'qzonestyle.gtimg.cn/qzone/v6/mobile/js/index_mobile.js?max_age=3600',js_end,
+					js_begin,'qzonestyle.gtimg.cn/ac/qzfl/stat.js?max_age=2592000',js_end
+				];
+			}else{
+				jsArr = [
+					js_begin,'qzonestyle.gtimg.cn/ac/qzone/qzfl/qzfl_2.1.28.js?max_age=2592000',js_end,
+					js_begin,'qzonestyle.gtimg.cn/qzone/v6/activity/template/activity.js?max_age=3600',js_end,
+					js_begin,'qzonestyle.gtimg.cn/ac/qzfl/stat.js?max_age=2592000',js_end,
+					js_begin,'qzonestyle.gtimg.cn/qzone/v6/mobile/js/index.js?max_age=3600&v=1',js_end,
+					js_begin,'img1.sj.qq.com/api/scripts/sjqqapi.js?max_age=3600',js_end
+				];
+			}
+            
+			document.write(jsArr.join(''));
+	})();
+</script>
+<!-- <script type="text/javascript" src="../js/index.js"></script> -->
+<script type="text/javascript">
+        var source = getParameter('from')
+    	if(source){
+    		//存入cookie,统计各渠道实际的下载量链接,PC端才有cookie进入二级统计页
+    		if(util.isPC()){
+    			QZFL.cookie.set("from", source, "z.qzone.com", "", 5);
+    		}
+	    	window.TCISD && TCISD.hotClick("mobileProtal.index_PageView." + source,"sns.qzone.qq.com");
+    	}
+	window.TCISD && TCISD.hotClick("mobileProtal.index_PageView","sns.qzone.qq.com");
+	// referStat();
+
+	function applyBeta(){
+		if(location.host=='z.qzone.com'){
+			location.href = 'http://qzs.qq.com/qzone/v6/mobile/html/index.html#applybeta'
+		}else if(location.host=='qzs.qq.com'){
+			document.domain = 'qq.com';
+
+			var _su,suin,checklogin_r = /\D/g;
+			suin = (_su=QZFL.cookie.get('uin').replace(checklogin_r, '')-0) && QZFL.cookie.get('skey') && _su > 10000 && _su || 0;
+			if(!suin){
+				QZFL.imports(location.protocol + '//qzs.qq.com/ac/qzone/widget/login/login.js',function(){
+					QZFL.widget.loginBox.show({
+						callback: function() {
+							applyBeta();
+						}
+					});
+				});
+				return;
+			}
+
+			QZFL.dialog.create("新版体验报名", '<div class="fn-txt"><div class="txt"><h2>尊敬的用户：</h2><p>我们诚邀您加入QQ空间体验改进计划。</p></div><div class="txt"><h2>报名成功后将享受以下特权：</h2><p>1、新版本内测资格</p><p>2、优先给您发下升级提醒</p><p>3、您的反馈我们将优先关注</p></div><p class="highlight">提交反馈体验还有机会获得意外小奖励哦！</p></div>',{
+				buttonConfig : [{
+						type : QZFL.dialog.BUTTON_TYPE.Confirm,
+						text : '我要报名',
+						tips : '新版体验报名',
+						clickFn : function(){
+							var fs = new QZFL.FormSender(location.protocol + '//3g.qzone.qq.com/client/mobile_register_grey','POST',{uin:suin,source:1},'UTF-8');
+							fs.onSuccess = function(o){
+								if(o.code==0){
+									QZFL.widget.msgbox.show('报名成功', 4, 3000);
+								}else{
+									QZFL.widget.msgbox.show(o.message, 1, 3000);
+								}
+							};
+							fs.onError = function(o){
+								QZFL.widget.msgbox.show('系统繁忙，请稍后再试。', 5, 3000);
+							};
+							fs.send();
+						}
+					},{
+						type : QZFL.dialog.BUTTON_TYPE.Cancel,
+						text : '暂不参加',
+						tips : '暂不参加'
+					}
+				],
+				showMask : true,
+				width : 380,
+				height : 270
+			});
+			TCISD&&TCISD.hotClick('mobileProtal.index_betaapply','sns.qzone.qq.com');
+		}
+	}
+	if(location.hash=='#applybeta'){
+		applyBeta();
+	} 
+</script>
+<script type="text/javascript">
+    // var num = window.devicePixelRatio;
+    // if(num > 1){
+    //     $(".hero > div").each(function(){
+    //         var that = $(this);
+    //         var url = that.css("backgroundImage").slice(4,-5);
+    //         var img = new Image();
+    //         img.src = url + "-b.jpg";
+    //         img.onload = function(){
+    //             that.c ss({
+    //                 "backgroundImage" : "url(" + url + "-b.jpg)",
+    //                 "backgroundSize" : "1670px 490px"
+    //             });
+    //         }
+    //     });
+    // }
+    var num = window.devicePixelRatio;
+    var obj = document.getElementById("hero").getElementsByTagName("IMG");
+    if(num > 1){
+        // document.body.className = "retina";
+        for(var i = 0;i < obj.length; i++){
+            var src = obj[i].getAttribute("src");
+            var sliceSrc = src.slice(0,72);
+            var srcB = sliceSrc + "-b.jpg";
+            obj[i].setAttribute("src",srcB);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8">  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover"><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta content="no-siteapp" http-equiv="Cache-Control"><script>var __START_DATE = +new Date</script>  <title>企业微信</title> <link rel="icon" type="image/png" sizes="16x16" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/images/independent/favicon/favicon_16h$e1750fed.png"> <link rel="icon" type="image/png" sizes="32x32" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/images/independent/favicon/favicon_32h$a41a4426.png"> <link rel="icon" type="image/png" sizes="48x48" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/images/independent/favicon/favicon_48h$c976bd14.png">  <link rel="stylesheet" type="text/css" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/css/_$$_login.merge$f9e0dcf2.css,hotfix$589f053b.css" /> <!--[if lte IE 9]> <link rel="stylesheet" type="text/css" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/css/login.merge.bless1$ce025e7c.css" /> <link rel="stylesheet" type="text/css" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/css/login.merge.bless2$aa7c261e.css" /> <link rel="stylesheet" type="text/css" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/css/hotfix$589f053b.css" /> <![endif]--> <link rel="prefetch" as="style" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/css/main.merge$4b22953f.css" /> <link rel="prefetch" as="style" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/css/jstree-style$8f9920c2.css" /> <link rel="prefetch" as="image" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/images/icons$0517af60.png" /> <link rel="prefetch" as="image" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/images/icons_2x$c478772e.png" /> <link rel="prefetch" as="image" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/images/icons$22e0b58f.svg" /> <link rel="prefetch" as="image" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/images/commonImages$6f9a2f64.png" /> <link rel="prefetch" as="image" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/images/commonImages_2x$36c6bec1.png" /> <link rel="prefetch" as="image" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/images/indexImages$73519f60.png" /> <link rel="prefetch" as="image" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/images/indexImages_2x$e26019b7.png" /> <link rel="prefetch" as="image" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/images/indexImages$879e84c2.svg" /> <link rel="prefetch" as="image" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/images/independent/frame_index/qr_code$c67751ac.svg" /> <link rel="prefetch" as="image" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/images/independent/Loading_20h$c301f555.gif" /> <link rel="prefetch" as="image" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/images/independent/index/WeWorkTeamQRcode$c2333c0c.png" /> <link rel="prefetch" as="script" href="//wwcdn.weixin.qq.com/node/wwmng/wwmng/js/3rd/soundmanager2-official$5b5ace13.js" />  <script>var RES_CDN = '//wwcdn.weixin.qq.com'</script>  <script src="//js.aq.qq.com/js/aq_common.js"></script>  <!--[if lte IE 8]> <script type="text/javascript" src="//wwcdn.weixin.qq.com/node/wwmng/wwmng/js/3rd/supportHtml5$0bb27442.js"></script> <![endif]--><script>var __HEAD_END_DATE = +new Date</script>  </head><body class="frame_wrap lang_zh"><script>var isWin = (function()
+{
+var ua = navigator.userAgent.toLowerCase();
+var isWin = (ua.indexOf('windows') != -1 || ua.indexOf('win32') != -1) && true;
+if (isWin) document.body.className += ' isWin';
+return isWin;
+})();
+function weLANG(msg, tpldata) {
+msg += '';
+if (!tpldata || !tpldata.length || msg.indexOf('%') == -1) return msg;
+var replace_index = 0;
+return msg.replace(/%s|%\{.+?\}/g, function() {
+var newVal = tpldata[replace_index++];
+return newVal === undefined ? '' : newVal;
+});
+}</script><div id="wework_admin.normal_layout_$" rendered="true"><div id="wework_admin.normal_layout$layout$"><div id="wework_admin.register_wx2_$" rendered="true"><style>.register_simple_sec {
+margin: 0 auto;
+}
+.frame_cnt_inside {
+width: 800px;
+}</style>  <header class="register_head register_head_style_white"><div class="register_head_inner">   <span class="register_head_title"><h1 class="ww_commonImg register_head_semLog register_head_semLog_mail">注册企业微信</h1></span>  </div></header>  <main class="frame_cnt"><div class="frame_cnt_inside"><div class="register_simple">  <div class="register_simple_actBar util_clear register_sem_actBar"><div style="position: relative;left: -174px;height: 120px;top:-22px">  <img src="//wwcdn.weixin.qq.com/node/wwmng/wwmng/style/images/independent/sem/test_barv1/banner_2x$1a2ec2fc.png" style="width:800px;height:160px">  </div></div>   <div class="register_simple_header"><div class="register_simple_header_title">注册企业微信</div></div><div class="register_simple_sec js_boss_sec"><div class="register_simple_sec_title">企业信息</div><div class="register_column_item" ><div class="register_column_item_title" id="corp_name_label">企业名称</div><div class="register_column_item_cnt ww_inputWithTips"><input class="qui_inputText ww_inputText ww_inputText_Big" type="text" id="corp_name" value=""><div class="register_column_item_tip"><div class="register_column_item_tip_desc">填写企业、政府或组织名称</div><div class="register_column_item_tip_error js_error_msg"></div></div></div></div><div class="register_column_item register_simple_sec_typeItem"><div class="register_column_item_title">行业类型</div><div class="register_column_item_cnt ww_inputWithTips"><div class="ww_btnWithMenu register_scale_dropdown" id="corp_industry"><a class="qui_btn ww_btn ww_btn_Big ww_btn_Block ww_btn_Dropdown js_corp_industry_btn" href="javascript:;"><span class="ww_btn_Dropdown_label js_corp_industry_text">选择行业类型</span><span class="ww_btn_Dropdown_arrow"></span></a><div class="qui_dropdownMenu ww_dropdownMenu js_corp_industry_ul register_corp_industry_ul"></div></div><div class="register_column_item_tip"><div class="register_column_item_tip_error js_error_msg"></div></div></div></div><div class="register_column_item register_simple_sec_typeItem"><div class="register_column_item_title">人员规模</div><div class="register_column_item_cnt ww_inputWithTips"><div class="ww_btnWithMenu register_scale_dropdown" id="corp_scale_btn"></div><div class="register_column_item_tip"><div class="register_column_item_tip_error js_error_msg"></div></div></div></div></div><div class="register_simple_sec"><div class="register_simple_sec_title">管理员信息</div><div class="register_column_item"><div class="register_column_item_title">管理员姓名</div><div class="register_column_item_cnt ww_inputWithTips"><input class="qui_inputText ww_inputText ww_inputText_Big" id="manager_name" type="text" value=""><div class="register_column_item_tip"><div class="register_column_item_tip_desc">请填写企业微信管理员的姓名</div><div class="register_column_item_tip_error js_error_msg"></div></div></div></div><div class="register_column_item"><div class="register_column_item_title">管理员手机号</div><div class="register_column_item_cnt ww_inputWithTips"><div class="ww_telInput ww_telInput_CompatibleTxt"><div class="ww_telInput_zipCode js_countryCode_dropdown"><div class="ww_telInput_zipCode_input"><input type="text" class="qui_inputText ww_inputText ww_inputText_Big"> <a href="javascript:;" class="ww_telInput_zipCode_input_arrowWrap"><span class="ww_telInput_zipCode_input_arrowWrap_icon"></span></a></div><div class="qui_dropdownMenu ww_dropdownMenu"><ul></ul></div></div><div class="ww_compatibleTxt ww_telInput_mainNumberWrap"><div class="ww_inputWithMagnifier ww_inputWithMagnifier_Big"><input class="ww_compatibleTxt_ipt" name="registerTel" id="register_tel" placeholder="手机号" value="" type="tel"><div class="ww_inputWithMagnifier_info js_num_input_tips" style="display: none"></div></div></div><div class="register_column_item_tip"><div class="register_column_item_tip_desc">请输入你的手机号码</div><div class="register_column_item_tip_error js_error_msg"></div></div></div></div></div><div class="register_column_item register_simple_sec_VerificationCodeItem js_mobile_captcha"><div class="register_column_item_title">短信验证码</div><div class="register_column_item_cnt ww_inputWithTips"><input class="qui_inputText ww_inputText ww_inputText_Big" id="vcode" disabled="disabled" type="text"><a href="javascript:;" class="register_simple_sec_VerificationCodeItem_getLink" disabled="true" id="get_vcode">获取验证码</a><div class="register_column_item_tip"><div class="register_column_item_tip_desc">请输入手机短信收到的6位验证码</div><div class="register_column_item_tip_error js_error_msg"></div></div></div></div><div class="register_column_item register_simple_sec_qrCodeItem js_admin_qrcode_cnt" style=""><div class="register_column_item_title">管理员微信</div><div class="register_column_item_cnt"><div class="ww_scanCodeCard" id="qrlogin_img_wrap"><div class="ww_scanCodeCard_left"><img class="ww_scanCodeCard_left_qrCode" id="qrlogin_img"><div class="ww_scanCodeCard_left_cover"></div></div><div class="ww_scanCodeCard_right"><div class="ww_scanCodeCard_info"><div class="ww_scanCodeCard_info_desc" style="margin-top: 0">扫码绑定微信，创建完成后请用此微信登录管理后台</div></div><div class="ww_scanCodeCard_info ww_scanCodeCard_info_Succ"><div class="ww_scanCodeCard_info_title"><span class="ww_commonImg ww_commonImg_GreenSucc14"></span>绑定微信成功</div><div class="ww_scanCodeCard_info_desc"></div></div><div class="ww_scanCodeCard_info ww_scanCodeCard_info_Scan"><div class="ww_scanCodeCard_info_title"><span class="ww_commonImg ww_commonImg_GreenSucc14"></span>扫描成功</div><div class="ww_scanCodeCard_info_desc">请在微信中点击确认</div></div><div class="ww_scanCodeCard_info ww_scanCodeCard_info_Fail"><div class="ww_scanCodeCard_info_title"><span class="ww_commonImg ww_commonImg_AlertSmall"></span><span id="qrlogin_errMsg">出错信息，请重新扫描绑定</span><a href="javascript:;" id="refreshQRCodeBtn">刷新</a></div><div class="ww_scanCodeCard_info_desc" style="display: none"></div></div></div></div></div></div></div><div class="register_simple_sec"><div class="register_column_item register_simple_sec_submitItem"><div class="register_column_item_cnt"><div class="register_column_item_buttonTips"><label class="ww_label ww_label_Small"><input class="ww_checkbox" type="checkbox" id="iagree"> <span>我同意并遵守<a class="ww_server_agreement" target="_blank" href="/wework_admin/eula">《腾讯企业微信服务协议》</a><a class="ww_privacy_policy" target="_blank" href="/privacy">《隐私政策》</a><a class="ww_rp_use_agreement" target="_blank" href="javascript:;" onclick="$('.js_rule_content').show();return false">《红包使用授权协议》</a></span></label></div><a class="qui_btn ww_btn ww_btn_Big ww_btn_Blue " id="submit_btn" href="javascript:;" disabled="disabled" >注册</a></div></div></div></div></div></main> <style>.telephone_rule_content {
+display: none;
+}
+.telephone_rule_content .telephone_rule_dialog {
+position: absolute;
+top: 170px;
+max-width: 492px;
+border-radius: 3px;
+left: 50%;
+margin-left: -246px;
+}
+.telephone_rule_content .telephone_rule_dialog .ww_dialog_head {
+background: white;
+}
+.telephone_rule_content .telephone_rule_dialog .ww_dialog_head .telephone_rule_dialog_title {
+font-size: 16px;
+color: #000;
+text-align: center;
+margin-left: 0px;
+padding-top: 10px;
+}
+.telephone_rule_content .telephone_rule_dialog .ww_dialog_body {
+padding-top: 0px;
+padding-bottom: 0px;
+height: 290px;
+background-color: #fff;
+overflow-y: auto;
+}
+.telephone_rule_content .telephone_rule_dialog .ww_dialog_body p {
+font-size: 13px;
+}
+.telephone_rule_content .telephone_rule_dialog .ww_dialog_body p.text_right {
+text-align: right;
+}
+.telephone_rule_content .telephone_rule_dialog .ww_dialog_body .msgDlg_stage {
+padding-top: 8px;
+}
+.telephone_rule_content .telephone_rule_dialog .ww_dialog_body .check_address_icon {
+vertical-align: 2px;
+margin-left: 3px;
+}
+.telephone_rule_content .telephone_rule_dialog .ww_dialog_body .telephone_rule_address {
+margin-top: 0px;
+margin-bottom: 20px;
+color: #787878;
+display: none;
+}
+.telephone_rule_content .telephone_rule_dialog .ww_dialog_foot, .telephone_rule_content .telephone_rule_dialog .ww_dialog_Search .ww_dialog_body_confirmMap, .ww_dialog_Search .telephone_rule_content .telephone_rule_dialog .ww_dialog_body_confirmMap {
+text-align: center;
+border: none;
+background-color: #fff;
+padding-top: 0px;
+}
+.telephone_rule_content .telephone_rule_dialog .ww_dialog_foot .telephone_rule_checkbox, .telephone_rule_content .telephone_rule_dialog .ww_dialog_Search .ww_dialog_body_confirmMap .telephone_rule_checkbox, .ww_dialog_Search .telephone_rule_content .telephone_rule_dialog .ww_dialog_body_confirmMap .telephone_rule_checkbox {
+text-align: left;
+border-top: 1px solid #E4E6E9;
+padding-top: 4px;
+padding-bottom: 18px;
+color: #787878;
+}
+.telephone_rule_content .telephone_rule_dialog .ww_dialog_foot .js_confirm_open[disabled], .telephone_rule_content .telephone_rule_dialog .ww_dialog_Search .ww_dialog_body_confirmMap .js_confirm_open[disabled], .ww_dialog_Search .telephone_rule_content .telephone_rule_dialog .ww_dialog_body_confirmMap .js_confirm_open[disabled] {
+pointer-events: none;
+}</style><div class="telephone_rule_content js_rule_content" style="display: none"><div class="qui_dialog ww_dialog telephone_rule_dialog" style="z-index: 1001"><div class="qui_dialog_head ww_dialog_head"><div class="qui_dialog_title ww_dialog_title telephone_rule_dialog_title"><b>企业微信邀一得一红包功能申请须知</b></div></div><div class="qui_dialog_body ww_dialog_body"><div class="msgDlg_stage"><p> 欢迎使用企业微信邀一得一红包功能（以下简称“本功能”）！ <p>为使用本功能，你应当阅读并遵守 <a href="https://work.weixin.qq.com/eula" target="_blank">《腾讯企业微信软件许可及服务协议》</a>及本补充协议。请你务必审慎阅读、充分理解各条款内容，除非你已阅读并接受所有条款，否则请勿申请或使用本功能。</p><p>申请或使用本功能，你知悉并同意：</p><br><p><span class="ww_txtGray">一、本功能由企业微信提供相应技术支持，活动页面可能展示你的企业logo或名称。你特此同意授权企业微信展示、使用你的企业Logo及名称。</span></p><br><p><span class="ww_txtGray">二、企业微信有权自行选择并决定具体执行红包发放的主体，并在相应页面和交易流水中予以展示。企业微信有权自行判断和决定使用本功能的主体及相应红包额度，并有权根据你及你的组织成员的行为独立决定暂停、终止或继续提供本功能及本功能项下的红包发放。你同意，在任何情况下企业微信不对你及/或你的组织成员因申请或使用本功能而遭受的直接或间接的经济损失以及其他损失承担任何责任。</span></p><br><p><span class="ww_txtGray">三、本功能项下的邀请人和被邀请人须为在你的企业实际任职的职员，其中被邀请人须未注册过企业微信。你特此承诺，对你使用本功能而新引入的组织人员予以严格审核，保证其身份真实性；同时，你须告知现有组织成员本补充协议内容并要求其严格予以遵守，邀请符合本功能要求的职员注册企业微信，防止恶意注册、恶意刷抢红包等情况发生。否则，企业微信有权随时终止提供本功能、收回已经分配的红包额度或拒绝向组织成员发放红包。</span></p><br><p class="qui_txtRight">腾讯公司</p><p class="qui_txtRight">企业微信团队</p></p></div></div><div class="qui_dialog_foot ww_dialog_foot"><div class="telephone_rule_checkbox"></div><a class="qui_btn ww_btn js_hongbao_confirm_cancel" href="javascript:;" onclick="$('.js_rule_content').hide();return false">确定</a></div></div><div class="qui_mask ww_mask telephone_rule_mask" style="height: 100%; width: 100%"></div></div> <footer class="frame_foot"><nav class="frame_foot_nav"><a class="frame_foot_nav_item" href="http://www.tencent.com/" target="_blank">关于腾讯</a><span class="frame_foot_nav_itemDep">|</span> <a class="frame_foot_nav_item" href="/eula" target="_blank">用户协议</a><span class="frame_foot_nav_itemDep">|</span> <a class="frame_foot_nav_item" href="/norm" target="_blank">使用规范</a><span class="frame_foot_nav_itemDep">|</span> <a class="frame_foot_nav_item" href="/privacy" target="_blank">隐私政策</a><span class="frame_foot_nav_itemDep">|</span> <a class="frame_foot_nav_item" href="/wework_admin/app_intro_list?type=mng&from=frame_footer" target="_blank">更新日志</a><span class="frame_foot_nav_itemDep">|</span> <a class="frame_foot_nav_item" href="https://work.weixin.qq.com/help" target="_blank">帮助中心</a><div id="i18nDropdown"></div></nav><p class="frame_foot_copyright">© 1998&nbsp;-&nbsp;2020&nbsp;Tencent Inc. All Rights Reserved</p></footer> <script>window.__LQ_REPORT_URL__ = '/wework_admin/report';
+window.__DB_COMBO_FILE__ = '//wwcdn.weixin.qq.com/node/wwmng/wwmng/js/var/global$bc395cc5.js';
+window.process = { env: { NODE_ENV: 'production' } };
+window.XSS_FW_CONFIG = {
+reportOnly: false,
+reportUrl: '/wework_admin/customReport/xssMonitor'
+}</script> <script type="text/javascript" src="//wwcdn.weixin.qq.com/node/wwmng/wwmng/js/var/global$bc395cc5.js"></script> <script src="//wwcdn.weixin.qq.com/node/wwmng/wwmng/_$$_js/3rd/badjs/bj-report-tryjs.min$596c06b4.js,js/3rd/babel-polyfill$dbde3956.js,js/3rd/xss-firewall$c76be4df.js,js/modules/jquery/jquery/1.11.3/jquery.min$4aab53e1.js,comm/3rd/mail.seajs/sea$c9db50ca.js" type="text/javascript"></script> <script src="https://wwcdn.weixin.qq.com/node/wework/js/sentry.5.5.0.min.js" crossorigin="anonymous"></script>  <script type="text/javascript" src="//wwcdn.weixin.qq.com/node/wwmng/wwmng/js/layout/footer$3601b9ba.js"></script> <script>seajs.use("//wwcdn.weixin.qq.com/node/wwmng/wwmng/js/layout/footer.js", function(Footer)
+{
+Footer && (Footer.feedback());
+})</script> <script>window.register_type = '' || 'new';
+window.currentDomainId = +'9';
+window.register_sid = 'RsUIKKy0zvkW-V3dT0zzI5vLDWhv9wfVkwXwS8VIV8Q';
+window.register_ref_from = '';
+window.authfill_from = 'regopt_tlogo_wxcbar_tengxunwang';
+window.industryData = [{"id":1001,"name":"IT服务","children":[{"id":1001000,"name":"计算机软件/硬件/信息服务","children":[]},{"id":1001001,"name":"互联网和相关服务","children":[]},{"id":1001002,"name":"其他","children":[]}],"icon":"https://rescdn.qqmail.com/node/wework/images/1001.9a3abb3196.png"},{"id":1002,"name":"制造业","children":[{"id":1002000,"name":"机械/电子","children":[]},{"id":1003000,"name":"服装/纺织","children":[]},{"id":1002002,"name":"汽车","children":[]},{"id":1002005,"name":"金属制品","children":[]},{"id":1003002,"name":"食品/饮料","children":[]},{"id":1003003,"name":"家具/家纺","children":[]},{"id":1002001,"name":"重工制造","children":[]},{"id":1003005,"name":"家电/数码","children":[]},{"id":1002004,"name":"橡胶/塑料","children":[]},{"id":1003004,"name":"日用品/化妆品","children":[]},{"id":1002006,"name":"化学原料制品","children":[]},{"id":1003007,"name":"文教/工美/体育/娱乐用品","children":[]},{"id":1003006,"name":"烟酒/茶","children":[]},{"id":1002007,"name":"非金属矿物","children":[]},{"id":1002003,"name":"其他","children":[]}],"icon":"https://rescdn.qqmail.com/node/wework/images/1002.7d841ebee9.png"},{"id":1003,"name":"批发/零售","children":[{"id":1003008,"name":"批发","children":[]},{"id":1003010,"name":"零售","children":[]},{"id":1003001,"name":"超市/便利店/百货商场","children":[]},{"id":1003011,"name":"进出口","children":[]},{"id":1003009,"name":"其他","children":[]}],"icon":"https://rescdn.qqmail.com/node/wework/images/1003.b4f9fe25d1.png"},{"id":1004,"name":"生活服务","children":[{"id":1004001,"name":"餐饮","children":[]},{"id":1004004,"name":"居民服务","children":[]},{"id":1004002,"name":"租赁和商务服务","children":[]},{"id":1004000,"name":"酒店/住宿","children":[]},{"id":1004003,"name":"其他","children":[]}],"icon":"https://rescdn.qqmail.com/node/wework/images/1004.f085732337.png"},{"id":1005,"name":"文化/体育/娱乐业","children":[{"id":1005001,"name":"文化/体育","children":[]},{"id":1005002,"name":"娱乐/旅游","children":[]},{"id":1005000,"name":"新闻传媒","children":[]},{"id":1005003,"name":"其他","children":[]}],"icon":"https://rescdn.qqmail.com/node/wework/images/1005.86a7799bd1.png"},{"id":1006,"name":"建筑/房地产","children":[{"id":1006001,"name":"建筑业","children":[]},{"id":1006002,"name":"建材装修","children":[]},{"id":1006000,"name":"房地产","children":[]},{"id":1006003,"name":"其他","children":[]}],"icon":"https://rescdn.qqmail.com/node/wework/images/1006.85e5aa7884.png"},{"id":1007,"name":"教育","children":[{"id":1007000,"name":"学前教育","children":[],"desc":"如：托儿所、幼儿园"},{"id":1007001,"name":"初中等教育","children":[],"desc":"如：小学、初中、高中、职高"},{"id":1007002,"name":"高等教育","children":[],"desc":"如：大学、高职、高专"},{"id":1007003,"name":"培训机构","children":[]},{"id":1007004,"name":"其他","children":[]}],"icon":"https://rescdn.qqmail.com/node/wework/images/1007.e249ad8db1.png"},{"id":1008,"name":"运输/物流/仓储","children":[{"id":1008003,"name":"物流/仓储","children":[]},{"id":1008000,"name":"道路/铁路运输","children":[]},{"id":1008004,"name":"邮政/快递","children":[]},{"id":1008001,"name":"航空运输","children":[]},{"id":1008002,"name":"水上运输","children":[]},{"id":1008005,"name":"其他","children":[]}],"icon":"https://rescdn.qqmail.com/node/wework/images/1008.cdfcd0b7d7.png"},{"id":1009,"name":"医疗","children":[{"id":1009000,"name":"医院/医疗机构","children":[]},{"id":1009003,"name":"医疗器械","children":[]},{"id":1009001,"name":"医药制造","children":[]},{"id":1009002,"name":"医药流通","children":[]},{"id":1009004,"name":"其他","children":[]}],"icon":"https://rescdn.qqmail.com/node/wework/images/1009.940c82ac46.png"},{"id":1010,"name":"政府","children":[{"id":1010000,"name":"党政机关","children":[]},{"id":1010001,"name":"国家权力/行政机构","children":[]},{"id":1010002,"name":"检察院/法院/公安","children":[]},{"id":1010003,"name":"民政/人社/交通/卫生","children":[]},{"id":1010004,"name":"发改委/经信委/商务局/统计局","children":[]},{"id":1010005,"name":"国土/规划","children":[]},{"id":1010006,"name":"税务/海关/工商/环保/物价/药品","children":[]},{"id":1010007,"name":"政协/民主党派","children":[]},{"id":1010008,"name":"地方政府","children":[]},{"id":1010009,"name":"其他","children":[]}],"icon":"https://rescdn.qqmail.com/node/wework/images/1010.0ad8016b7a.png"},{"id":1011,"name":"金融","children":[{"id":1011000,"name":"保险","children":[]},{"id":1011001,"name":"银行","children":[]},{"id":1011002,"name":"证券/投资/基金","children":[]},{"id":1011003,"name":"其他","children":[]}],"icon":"https://rescdn.qqmail.com/node/wework/images/1011.e4d8c18bec.png"},{"id":1012,"name":"能源/采矿","children":[{"id":1014003,"name":"电力/热力/燃气/水供应业","children":[]},{"id":1012003,"name":"石油/天然气","children":[]},{"id":1012002,"name":"煤炭","children":[]},{"id":1012001,"name":"有色金属","children":[]},{"id":1012000,"name":"钢铁","children":[]},{"id":1012004,"name":"其他","children":[]}],"icon":"https://rescdn.qqmail.com/node/wework/images/1012.5ab30318c4.png"},{"id":1013,"name":"农林渔牧","children":[{"id":1013000,"name":"农林渔牧","children":[]}],"icon":"https://rescdn.qqmail.com/node/wework/images/1013.60705fb6e8.png"},{"id":1014,"name":"其他行业","children":[{"id":1014000,"name":"科学研究和技术服务业","children":[]},{"id":1014002,"name":"社会组织","children":[]},{"id":1014001,"name":"水利和环境管理","children":[]},{"id":1014004,"name":"国际组织","children":[]},{"id":1014005,"name":"其他","children":[]}],"icon":"https://rescdn.qqmail.com/node/wework/images/1014.60d108ee37.png"}] || [];
+window.scaleData = [{"id":2001,"name":"1-50人"},{"id":2002,"name":"51-100人"},{"id":2003,"name":"101-200人"},{"id":2004,"name":"201-500人"},{"id":2005,"name":"501-1000人"},{"id":2006,"name":"1001及以上"}] || [];
+window.filingtoken = '';
+window.followervcode = '';
+window.fromsrc = '';
+window.sem_keyword = '';
+window.sem_derivative = '';
+window.isOverseas = +'0';
+window.CHINA_CODES = '86'.split(',');  seajs.use('js/register/register2.js')</script><script>var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "https://hm.baidu.com/hm.js?9364e629af24cb52acc78b43e8c9f77d";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hm, s);
+})()</script></div></div></div><script>(function() {
+if (!window.addEventListener) return;
+window.addEventListener('load', function() {
+var img = new Image(1, 1);
+img.src = 'https://www.google-analytics.com/collect';
+img.onload = function() {
+img.onload = null;
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+if (window.ga) {
+ga('create', 'UA-125033946-1', 'auto');
+if (window.settings && window.settings.vid) {
+ga('set', 'userId', window.settings.vid);
+ga('set', 'dimension1', window.settings.create_time * 1000 > +new Date - 1209600000 ? 'new_corp' : 'old_corp');
+}
+ga('send', 'pageview');
+}
+};
+});
+})()</script><script>var langCookie = document.cookie.match(/(?:^|;) *wwrtx\.i18n_lan=([^;]+)/);
+var langNameArr = null;
+if (!langCookie) {
+(new Image()).src = '/wework_admin/report?q='+ encodeURIComponent('st:logkvauto_report='+JSON.stringify({"kv":"44589", "key": navigator && navigator.userAgent}) ) + "&_t=" +  (new Date -0);
+}
+if (langCookie) {
+langNameArr = langCookie[1].split('%2C');
+}
+if (langNameArr && langNameArr[0].indexOf('en') > -1) {
+document.body.className = 'frame_wrap lang_en';
+}
+(function() {
+var random = +(new Date());
+var settings = window.settings;
+if (settings && settings.vid && settings.corp_id) {
+new Image(1, 1).src = '/wework_admin/report?type=img&r=' + random + '&q='+encodeURIComponent('st:pv_report='+JSON.stringify({
+vid		: +settings.vid || undefined,
+corpid	: +settings.corp_id || undefined,
+refer	: document.referrer || undefined,
+url		: window.location.href
+}));
+}
+})()</script></body></html>

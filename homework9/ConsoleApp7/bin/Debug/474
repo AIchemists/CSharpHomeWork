@@ -1,0 +1,2303 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="GBK">
+  <title>��Ѷ����_��Ѷ��</title>
+  <script type="text/javascript">
+    var QosSS = {};
+    QosSS.t = [], QosSS.t[2] = QosSS.t[1] = QosSS.t[0] = (new Date).getTime();
+  </script>
+  <link rel="shortcut icon" href="//mat1.gtimg.com/www/icon/favicon2.ico">
+  <meta http-equiv="Content-Language" content="zh-CN">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+  <meta name="keywords" content="���˻�,nba,����ֱ��,��������,����,��Ѷ����,��Ѷ��,NBAֱ��,NBA��Ƶ,Ӣ��ֱ��,���ֱ��,������Ƶ,Ӣ����Ƶ,�����Ƶ">
+  <meta name="description" content="��Ѷ�������й�֪���������Ż���վ����ҪΪ���ṩ������Ŀ���������򡢹�������NBA��CBA���ۺ����������ˡ�ֱ������Ʊ�����µȣ��ڸ���ָ���о������˾������ȵ�λ��">
+  <meta name="baidu-site-verification" content="bKqnugZCmo">
+  <link rel="alternate" type="application/vnd.wap.xhtml+xml" media="handheld" href="//xw.qq.com/m/sports/">
+  <script type="text/javascript" src="//mat1.gtimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script charset="utf-8" src="//stdl.qq.com/stdl/qqbrowser/floatlayer/js/qb-ie-sports.js"></script>
+  <script charset="utf-8" src="//stdl.qq.com/stdl/qb/js/qblog.js"></script>
+  <link rel="stylesheet" href="//mat1.gtimg.com/pingjs/ext2020/spIndex/2019/styles/main-58a757ea8d.css">
+  <script>
+    ! function() {
+      var i = function(i) {
+          if (i && i.indexOf("/a/") > 0) {
+            var t = i.split("/")[2].split("qq.com")[0].split("."),
+              e = i.split("/a/")[1].split(".htm")[0].replace(/[^0-9]/g, ""),
+              n = "",
+              o = "",
+              s = "";
+            if (o = 3 === t.length ? t[0] + "_" + t[1] : t[0], s = o.indexOf("_") > 0 && o.split("_")[0].length < 3 ? (o.split("_")[0] + o.split("_")[1]).substring(0, 3).toUpperCase() : o.substring(0, 3).toUpperCase(), o.indexOf("house") > 0 && (s =
+                "HOU"), o.indexOf("auto") > 0 && (s = "AUT"), /cd|fj|cq|hb|gd|zj|ln|js/.test(o) && (s = o.toUpperCase() + "C"), /henan/.test(o) && (s = "HNC"), /xian/.test(o) && (s = "XAC"), /hn/.test(o) && (s = "HNN"), /2016/.test(o) && (s = "BCP"),
+              "undefined" != typeof o && "undefined" != typeof e) {
+              if (o.split(".").length > 2)
+                for (var a = o.split(".").length, l = 0; a > l; l++) n += o.split(".")[l], a - 2 > l && (n += "_");
+              else n = o.split(".")[0];
+              return "http://xw.qq.com/" + o + "/" + e + "/" + s + e + "00"
+            }
+          }
+        },
+        t = {
+          news: "news",
+          photo: "photo",
+          video: "video",
+          view: "huati",
+          finance: "finance",
+          ent: "ent",
+          sports: "sports",
+          digi: "digi",
+          mil: "mil",
+          lady: "lady",
+          auto: "auto",
+          games: "games",
+          house: "house",
+          astro: "astro",
+          cul: "cul",
+          fashion: "fashion",
+          2014: "shijiebei",
+          2016: "2016",
+          edu: "edu",
+          nba: "nba"
+        };
+      if (/Android|webOS|iPhone|Windows Phone|iPod|BlackBerry|SymbianOS/i.test(navigator.userAgent)) {
+        var e = window.location.href;
+        window.location.pathname;
+        if (e.indexOf("/a/") > 0 && "www.nanjing2014.org" != window.location.hostname) {
+          if (e.indexOf("?pc") < 0) try {
+            window.location.href = i(e)
+          } catch (n) {}
+        } else if (e.indexOf("?mobile") < 0) {
+          var o = window.location.hostname.split(".")[0],
+            s = window.location.pathname.split(".")[0].replace(/\//g, "").substring(0, 3);
+          if (/news|pp|video|view|finance|ent|sports|digi|mil|fashion|auto|games|house|astro|cul|2014|2016|edu/i.test(o)) try {
+            "nba" == s ? window.location.href = "http://xw.qq.com/m/" + t[s] + "/index.htm" : window.location.href = "http://xw.qq.com/m/" + t[o] + "/index.htm"
+          } catch (n) {}
+        }
+        try {} catch (n) {}
+      }
+    }();
+  </script>
+  <style>/* ���غ������� + ������� */
+    .tuandui, .huoban .layout {
+      display: none;
+    }
+    .head-logo1 {
+      height: 65px;
+      margin-right: 10px;
+      padding-top: 3px;
+    }</style>
+</head>
+
+<body>
+  <!--Sports_takeover_div AD begin...."l=Sports_takeover&log=off"--><div id="Sports_takeover" class="l_qq_com" style="display:none;margin:0 auto;"></div><!--Sports_takeover AD end --><!--[if !IE]>|xGv00|a151d46f776419677c61805e36765c71<![endif]-->
+  <div id="sp_index" class="sp_index l32">
+    <!-- ͷ�� -->
+    <div id="sp_header" class="sp_header">
+      <div class="layout he_top ft12">
+        <!-- <img class="head-lianhelogo fl" src="//mat1.gtimg.com/sports/index2015/images/logo_lianhe.jpg" alt="">
+        <img class="head-logo fl" src="//mat1.gtimg.com/sports/index2015/images/LGClogo2.png" alt=""> --> <img class="head-logo fl"
+          src="//mat1.gtimg.com/sports/logo/42.png" alt=""> <img class="head-logo1 fl" src="//mat1.gtimg.com/sports/sports/sportslogo2x.png" alt="">
+        <div class="head-nav fl" bosszone="TS_Toplink"><a href="http://www.qq.com/" target="_blank">��Ѷ����ҳ</a><span>|</span><a href="http://www.qq.com/map/" target="_blank">��վ��ͼ</a></div><!-- ��¼ -->
+        <div class="vipbutton"><a class="vip-btn vip-login" href="http://vip.sports.qq.com/" target="_blank"><span class="logo"></span> <span class="vip-text">��Ѷ������Ա</span></a></div>
+        <div class="layout1">
+          <div id="wrap_sportLoginV1"></div>
+        </div>
+      </div>
+      <div class="layout he_ad">
+        <div class="fl ad_width">
+          <div class="gg-1000x90">
+            <!-- ͨ����� -->
+            <!--$loc$_div AD begin...."l=$loc$&log=off"--><div id="QQcom_all_Width1:1" style="width:1000px;height:90px;" data-loc="QQcom_all_Width1" data-index="1" class="l_qq_com"></div><!--$loc$ AD end --><!--[if !IE]>|xGv00|cac576da350178da9681ee923ae7df81<![endif]-->
+            <!-- /ͨ����� -->
+          </div>
+        </div>
+        <div class="fr adright">
+          <div class="fl"><img src="//mat1.gtimg.com/sports/index2015/images/pingtai.jpg" alt=""></div>
+          <div class="fr con">
+            <h6 class="ft14">��Ѷ����΢���˺�</h6>
+            <p class="ft12">�²۰������������ֱ����Ϣ��֪����</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- ����-->
+    <div id="sp_nav" class="sp_nav">
+      <!-- һ������ -->
+      <div class="layout">
+        <div class="nav-list ft14 cf" bosszone="TS_Topgn">
+            <style>
+     #sp_nav .nav-list div a {position: relative;}
+    #sp_nav .nav-list div a span.hot {
+        display: block;
+        position: absolute;
+        right: -10px;
+        top: 0px;
+        width: 16px;
+        height: 16px;
+        background: url(//mat1.gtimg.com/sports/v_cxyu/ts/hot.png) center center no-repeat;
+    z-index: 99;
+    }
+    </style>
+<div class="nav-f">
+            <p>
+              <a href="https://new.qq.com/rolls/?ext=sports" target="_blank">����</a>
+              <a href="http://kbs.sports.qq.com/#hot" target="_blank">ֱ��</a>
+              <span class="fl posr">
+                <a href="http://live.qq.com/" target="_blank">���ֱ��</a>
+              </span>
+              <!-- <a href="http://sports.qq.com/photo/" target="_blank">ͼƬ</a>
+              <a href="http://sports.qq.com/others/2018yayun.htm" target="_blank"><span class="hot"></span>���˻�</a> -->
+            </p>
+            <p class="posr">
+              <span id="xbk_con" class="cf">
+                <a href="http://v.qq.com/sports/" target="_blank">��Ƶ</a>
+                <a href="http://sports.qq.com/nbavideo/nbastarshow/index.htm" target="_blank" class="xingboke posa">�����ǲ���</a>
+              </span>
+              <a href="http://sports.qq.com/video/djsp.htm" target="_blank">�羺��Ƶ</a>
+              <a href="http://sports.qq.com/fans/" target="_blank">����</a>
+            </p>
+          </div>
+          <div class="icons nav-s" bosszone="TS_Topbasket">
+            <p>
+              <strong><a href="http://sports.qq.com/nba/" class="w33" target="_blank">NBA</a></strong>
+              <a href="http://sports.qq.com/espn/" target="_blank">ESPN</a>
+              <a href="http://sports.qq.com/nbavideo/" target="_blank">�㲥</a>
+   <a href="https://sports.qq.com/basket/SuperPENGUINleague/" target="_blank">�����������</a>
+
+            </p>
+            <p>
+              <strong><a href="http://sports.qq.com/cba/"  class="w33" target="_blank">CBA</a></strong>
+              <a href="https://sports.qq.com/2019fbwc/index.htm" target="_blank">�������籭</a>
+<a href="https://sports.qq.com/cxx2/index.htm" target="_blank">������ȫ�˻�</a>
+
+              
+            </p>
+          </div>
+          <div class="icons nav-t" bosszone="TS_Topfootball">
+            <p>
+              <a href="http://sports.qq.com/premierleague/" target="_blank">Ӣ��</a>
+              <a href="http://sports.qq.com/laliga/" target="_blank">����</a>
+              <a href="http://sports.qq.com/bundesliga/" target="_blank">�¼�</a>
+              <a href="http://sports.qq.com/seriea/" target="_blank">���</a>
+              
+            </p>
+            <p>
+              <a href="http://sports.qq.com/ucl/" target="_blank">ŷ��</a>
+              <a href="http://sports.qq.com/csocce/csl/" target="_blank">�г�</a>
+              <a href="http://sports.qq.com/csocce/ACL/" target="_blank">�ǹ�</a>
+                              <a href="https://sports.qq.com/csocce/cft/" target="_blank">����</a>
+ </p>
+          </div>
+          <div class="icons nav-four" bosszone="TS_Topzh">
+            <p class="nav-four-first-cont">
+              <strong><a href="http://sports.qq.com/others/" target="_blank">�ۺ�</a></strong>
+     <a href="https://sports.qq.com/tennis/" target="_blank">����</a>
+              <a href="https://sports.qq.com/others/volleyball.htm" target="_blank">����</a>
+
+
+<a href="https://sports.qq.com/marvellous12/" target="_blank">�ر���ǿ12����</a>
+<a href="https://sports.qq.com/uclesports/" target="_blank">UCL</a>
+
+             
+              <a href="http://sports.qq.com/others/kungfu.htm" target="_blank">����</a>
+                <a href="http://sports.qq.com/others/winters.htm" target="_blank">��ѩ</a>            
+         
+        
+   
+            </p>
+            <p>
+         
+ <a href="https://sports.qq.com/lpl/" target="_blank">LPL</a>
+<a href="http://sports.qq.com/KPL/" target="_blank">KPL</a>
+<a href="https://sports.qq.com/NFL/" target="_blank">NFL</a>
+ 
+<a href="http://sports.qq.com/f1/" target="_blank">F1</a>
+              <a href="http://sports.qq.com/NHL/" target="_blank">NHL</a>
+<a href="http://sports.qq.com/MLB/index.htm" target="_blank">MLB</a>
+
+
+            
+              
+              <a href="http://sports.qq.com/others/running.htm" target="_blank">�ܲ�</a>
+              <a href="http://sports.qq.com/others/run/tebumls.htm" target="_blank">�ز�������</a>       
+            </p>
+</div><!--[if !IE]>|xGv00|16988d867264f821ab27053b4c7a3bce<![endif]-->
+        </div>
+      </div>
+      <!--�������� S-->
+      <div class="nav-sub undis ft14" id="nav-sub">
+        <div class="layout">
+          <div class="arrow-wrap"><span class="arrow"></span></div>
+          <div class="cf">
+                                <a href="http://sports.qq.com/nbavideo/" target="_blank" class="ft">NBA</a>
+              
+                   <a href="http://sports.qq.com/nbavideo/topsk/" target="_blank" class="pd14">TOPʱ��</a>
+
+            <a href="https://sports.qq.com/nbavideo/huifang/" target="_blank" class="pd13">ȫ���ط�</a>
+
+
+<a href="https://sports.qq.com/nbavideo/query/" target="_blank">��Ƶ��</a>
+
+<a href="https://sports.qq.com/nbavideo/match.htm" target="_blank">������</a>
+
+<a href="https://sports.qq.com/nbavideo/qjnba/" target="_blank">ȫ��NBA</a>
+
+<a href="http://sports.qq.com/nbavideo/nbajdjd/" target="_blank" class="pd14">���Ծ���</a>
+
+<a href="https://v.qq.com/x/cover/21xlbvgezmb3f2l/v0031qr5h6j.html" target="_blank">����ͣ</a>
+
+ <a href="http://v.qq.com/x/cover/c79djxckmfsqsu0.html" target="_blank">�����Ӧ</a>
+
+
+  <a href="https://sports.qq.com/nbavideo/jsi/" target="_blank">����I</a>
+
+ <a href="http://sports.qq.com/nbavideo/kqtg/" target="_blank">��������</a>
+
+
+ 
+
+
+     
+
+
+
+
+        
+
+   
+                    
+                   
+
+                    <!--[if !IE]>|xGv00|72ee34081581a694b9a5a7e7a078f8ee<![endif]-->
+          </div>
+        </div>
+      </div>
+    </div><!-- ȫ�� -->
+    <!--Sports_Full_div AD begin...."l=Sports_Full&log=off"-->
+<div id="Sports_Full" style="width:960px; margin:0 auto; display:none;" class="l_qq_com"></div> 
+<!--Sports_Full AD end --><!--[if !IE]>|xGv00|466b49faa01ed6ee6f9b1d434103feaf<![endif]-->
+    <!-- ά��Ӿװ��ͨ���ƹ� -->
+    <style type="text/css" media="screen">
+.secret_vctoria_wrap{margin-top:20px;}
+.secret_vctoria_wrap .secret_erweima{line-height: 16px;}	
+.secret_vctoria_wrap1240 .secret_wrap_layout{width:1240px;background: url(http://mat1.gtimg.com/fashion/secret_vctoria_module/secret_bg1240.jpg);}
+.secret_vctoria_wrap1240 .secret_pic_list{margin-left:65px;}
+.secret_vctoria_wrap1240 .secret_pic_list02{margin:6px 20px 0 25px;}
+.secret_vctoria_wrap1240 .secret_center{width:454px;}
+.secret_vctoria_wrap1240 .secret_right{margin-right:105px;}
+.secret_vctoria_wrap1240 .secret_erweima{right:-65px;}	
+</style>
+<div class="secret_vctoria_wrap" id="secret_vctoria_wrap">
+	<style type="text/css" media="screen">
+#secret_vctoria_wrap{display: none;}
+.secret_wrap_layout{width:1000px;height:160px;overflow: hidden;margin: 0 auto;background: url(//mat1.gtimg.com/fashion/secret_vctoria_module/secret_bg1000.jpg) no-repeat;font-family: microsoft yahei;}
+.secret_pic_list{float: left;display: inline;margin-left: 8px;}	
+.secret_pic_list li{float: left;display: inline;}
+.secret_pic_list01{margin-top:10px;}
+.secret_pic_list02{margin:6px 6px 0 4px;}
+.secret_pic_list03{margin-top:18px;}
+.secret_pic_list li a{display: block;position: relative;}
+.secret_playBtn{position: absolute;top:50%;left:50%;margin:-18px 0 0 -18px;background: url(//mat1.gtimg.com/fashion/secret_vctoria_module/secretplayBtn.png) no-repeat;width:37px;height:37px;display: none;cursor: pointer;}
+.secret_pic_list li a:hover .secret_playBtn{display: block;}
+.secret_center{float: left;display: inline;width:395px;height:160px;position: relative;overflow: hidden;}
+.secret_link01,.secret_link02{height:60px;overflow: hidden;position: absolute;font-size:0;text-indent: -9999px;}
+.secret_link01{width:210px;left:0;top:18px;}
+.secret_link02{width:145px;right:0;top:18px;}
+.secret_right{float: right;height:160px;margin-right:20px;color: #fff; position: relative;} .secret_right a{color: #fff;}.secret_right a:hover,.secret_right a:active{color: #fff;text-decoration: underline;}
+.secret_right h3{background:url(//mat1.gtimg.com/fashion/secret_vctoria_module/secrettxtbg.png) no-repeat;width:242px;height:24px;overflow: hidden;margin:28px 0 14px; text-align: center;font: normal 17px/24px microsoft yahei;}
+.secret_right h3 a:hover{text-decoration: none;}
+.secret_txt_list{float: left;display: inline;margin-left:10px;}
+.secret_txt_list li{background: url(//mat1.gtimg.com/fashion/secret_vctoria_module/secretIcon.png) no-repeat;padding-left:20px;padding-bottom:8px;font:normal 12px/16px microsoft yahei;}
+.secret_erweima{position: absolute;right:0;bottom:5px;width:110px;text-align: center;font-size:11px;}
+.secret_erweima img{display: block; width:70px;height:70px;margin: 0 auto 5px;}
+</style>
+<div class="secret_wrap_layout">
+	<!--�������ͼ���б�S-->
+	<div class="secret_pic_list">
+		<ul>
+			<li class="secret_pic_list01">
+				<a href="http://film.qq.com/cover/b/byhrcyec7j19hqg/p0019sab3pf.html" target="_blank">
+					<img src="//mat1.gtimg.com/fashion/wanghaifeng/2016/03/10/2.png" alt="">	<span class="secret_playBtn"></span>
+				</a>
+			</li>
+			<li class="secret_pic_list02">
+				<a href="http://film.qq.com/cover/b/byhrcyec7j19hqg/s0019beeeoo.html" target="_blank">
+					<img src="//mat1.gtimg.com/fashion/wanghaifeng/2016/03/10/22.png" alt="">	<span class="secret_playBtn"></span>
+				</a>
+			</li>
+			<li class="secret_pic_list03">
+				<a href="http://film.qq.com/cover/b/byhrcyec7j19hqg/z00195xj8mk.html" target="_blank">
+					<img src="//mat1.gtimg.com/fashion/wanghaifeng/2016/03/10/3.png" alt="">	<span class="secret_playBtn"></span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!--�������ͼ���б�E-->
+	<!--�м�S-->
+	<div class="secret_center">	<a class="secret_link01" href="http://vs.qq.com/" target="_blank" title="ά�����ǵ�����">ά�����ǵ�����</a>
+		<a class="secret_link02" href="http://vs.qq.com/" target="_blank" title="��̲Ӿװ��">��̲Ӿװ��</a>
+	</div>
+	<!--�м�E-->
+	<!--�Ҳ�S-->
+	<div class="secret_right">
+			<h3><a href="http://film.qq.com/cover/b/byhrcyec7j19hqg/d0019lnxp5m.html" target="_blank">�����棺���Ը�Ӿ���ɶ���Ϯ</a></h3>
+		<div class="secret_txt_list">
+			<ul>
+				<li><a href="http://film.qq.com/cover/b/byhrcyec7j19hqg/v0019s9ca4y.html" target="_blank">��Ѫ�����Ը�ɳ̲��������</a>
+				</li>
+				<li><a href="http://film.qq.com/cover/b/byhrcyec7j19hqg/l0019aal4k3.html" target="_blank">ά�س�ģ��ս�����˶�ƵƵ��ˮ</a>
+				</li>
+				<li><a href="http://film.qq.com/cover/b/byhrcyec7j19hqg/t0019uqfrxy.html" target="_blank">�α�8�鸹���볬ģ����������</a>
+				</li>
+			</ul>
+		</div>
+		<!--div class="secret_erweima">
+			<img src="//mat1.gtimg.com/fashion/secret_vctoria_module/erweima.png" alt="">ɨ���ά��ۿ�ֱ��</div-->
+	</div>
+	<!--�Ҳ�E-->
+</div><!--[if !IE]>|xGv00|a08ef27ac4f883fa658b4042b10ff770<![endif]-->
+<!--[if !IE]>|xGv00|aea89e68a025d80d004531539963361f<![endif]-->
+</div>
+<script type="text/javascript">
+function changeSecretVctoriaWidth(){
+	var sreenWidth = $(window).width();
+	if(sreenWidth >= 1280){
+		$("#secret_vctoria_wrap").addClass("secret_vctoria_wrap1240");
+	}
+	else{
+		jQuery("#secret_vctoria_wrap").removeClass("secret_vctoria_wrap1240");
+	}
+}
+changeSecretVctoriaWidth();
+window.onresize=function(){
+	changeSecretVctoriaWidth();
+}
+</script><!--[if !IE]>|xGv00|de8694d70741b61a676cce2474b3c276<![endif]-->
+    <!-- ����-->
+    <div id="sp_schedule" class="sp_schedule">
+      <div class="layout site-sch mt20" id="hotmatch" bosszone="TS_SCh">
+        <div id="scroll_01" class="scroll_A cf"><a href="javascript:;" class="sch-left fl" bosszone="TS_SCswitch1"><em class="icons"></em></a>
+          <div class="inner fl">
+            <div id="hotmatchlist" class="cf"></div>
+          </div>
+          <div class="sch-all fl sch-all-1"><a class="sportslogo" target="_blank" href="http://kbs.sports.qq.com/#hot"><img src="//mat1.gtimg.com/sports/logo/tongl.png" alt="ȫ������"></a><a class="qielogo" target="_blank" href="http://live.qq.com/"><img
+                src="//mat1.gtimg.com/sports/index2015/images/qielogo.png" alt="���ֱ��"></a></div><a href="javascript:;" class="sch-right fl" bosszone="TS_SCswitch2"><em class="icons"></em></a>
+        </div>
+      </div>
+    </div><!-- ����-->
+    <div id="main1" class="main1">
+      <div class="layout site-scr mt25">
+        <div class="slide-wrap">
+          <div class="cf">
+            <div class="chief">
+              <!--Ҫ��--> <a id="tag_yw" name="tag_yw" class="fl"></a>
+              <div class="scr-news" bosszone="TS_Mainnews">
+                <!-- �ֶ� -->
+                <!--include virtual="/basket/sports_newlist_sd.htm"-->
+                <!-- ninja��ʽ -->
+                <ul>
+       
+  		                      <li><a target="_blank" href="https://view.inews.qq.com/a/SPO2020042300456300" class=" bold">�й�ӾЭ��������������ѡ���˼�ѵ��������</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/cmsid/20200423A05H2U00" class="">���˷���ղ�����ۣ����ػ��������ֻ���̬�ȣ������治Զ�ˣ�</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/m/rose?id=SPO2020041700910700" class="">����Ƶ���ǵ����ľ������ع� �ǵ�39��չʾ����̯���ʼ綯��</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/sports/20200423003033/SPO2020042300303300" class=" icon-v">����ЦCBA����������ڹ��ϲ���ں� �Ĵ�������ħ�òɷ�</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/sports/20200423002640/SPO2020042300264000" class=" icon-v">���ɰ���10������С�к� ѩ������ְҵѡ�ּ����Ѷȶ���</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/cmsid/20200423A04GXL00" class=" bold">�������6�²���֪��CBA�ܷ����� ������ճ�����</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/sports/20200423003106/SPO2020042300310600" class=" icon-v">��ɷ���ˣ�����ͦ�ж�Яȫ��Ϊ����������ֱ��Ҫ̫�Ҹ�</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/cmsid/20200423A0AXRJ00" class="">�ǵ��������츳�����ж���£�����ٶȲ�ѷ�ֶ������Ʊ�С������</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/sports/20200423003944/SPO2020042300394400" class=" icon-v">���������������������� ���������齲����᫿�������������</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/cmsid/20200423A07BQE00" class="">���㡰�鿪���ʡ�����Ա��������ǩԼ��н����ʦ�����ǹؼ�֤��</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/cmsid/20200422A0PA2B00" class=" bold">�����µĽ������������ͣҵ���� ��������ת��</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/cmsid/20200423A06W6V00" class="">10��ǰ�ͻ�ǧ���ͬ��CBA��һ�һ꣬��Щ������Щ��Ӷ���Ҫ����</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/cmsid/20200423A05ZUX00" class="">÷���ٴα����ӣ������ѫ�������飺��7���Ƕ������ѶԸ�</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/cmsid/20200423A0641200" class="">�����ɵ��̱����ϰ�ʧ�� ����ָ��ǰ�����̵����Լ����</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/cmsid/20200423A067GF00" class="">����370����Ԫ����һ��ʿ�ɽ����ۺ�լ������ʱ����Ա����֣�</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/sports/20200423002978/SPO2020042300297800" class=" icon-v">�������ֱ�Ц��¼���������ƽ�˵�ż̿Ʊ�����������</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/sports/20200423002023/SPO2020042300202300" class=" icon-v">��Ӣ���ǵ䡷��33�ڣ��������ӡ�������-���ŵ���������</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/cmsid/20200423V02KFC00" class="">�����µĿ�����������������ѩ��ġ���߷塱·�� ȥ�������¹ڲ�����⣿</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/sports/20200423001172/SPO2020042300117200" class=" icon-v">Ƥ��ְҵ����ʮ����� ���Ī���������</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/cmsid/20200422A0V95100" class="">���棡�ձ�1��38���Ů�������ٷ����ƿ��֣����ѣ�̫�ɰ���</a></li>
+                                 
+  		                      <li><a target="_blank" href="https://xw.qq.com/sports/20200423001126/SPO2020042300112600" class=" icon-v">NBA������ʮ��2+1���������������� �����޿�ɱ����</a></li>
+                                                                                                                                                                                                                                                                                                                                                    </ul><!--781fd846624d8faea58ec2639a1c4015--><!--[if !IE]>|xGv00|715985d7a9ed974fb2f10df763eebf30<![endif]-->
+              </div>
+            </div>
+            <div class="extra">
+              <div class="scr_fandl cf">
+                <!-- ����ͼ -->
+                <div class="scr_focus fl" bosszone="TS_JDTdianji">
+                  <div id="focus_01" class="focus_A">
+                    <ul class="focus_con">
+
+
+<li class="item"><a href="https://v.qq.com/x/cover/mzc00200yh6xr7i/p00337ruypr.html" target="_blank"><img
+src="http://img1.gtimg.com/sports/pics/hv1/125/46/2323/151064930.jpg"><span class="shadow">�����֮�衷��һ�� ��Ӳ��� ��ţ�������ٷֱ�����</span></a></li>
+
+
+
+
+<li class="item"><a href="https://v.qq.com/x/cover/mzc00200hyh4waj/h00337e2k40.html" target="_blank"><img
+src="http://img1.gtimg.com/sports/pics/hv1/198/48/2323/151065513.jpg"><span class="shadow">���г���������������ѩ��С���� ����������ɱ�������ǿ��</span></a></li>
+
+
+<li class="item"><a href="https://fans.sports.qq.com/#/" target="_blank"><img
+src="http://img1.gtimg.com/sports/pics/hv1/225/55/2323/151067325.jpg"><span class="shadow">����-		KD����֮�� ���׻��м���״̬��</span></a></li>
+
+
+
+
+
+                       </ul>
+
+                       <div class="focus_dot">
+                       <a href="javascript:void(0);">1</a>  
+<a href="javascript:void(0);">2</a> 
+<a href="javascript:void(0);">3</a> 
+
+
+
+
+
+
+
+
+
+
+    
+ 
+
+
+
+                       </div>   <!--[if !IE]>|xGv00|d51975c8a55b2551fbc9e5b717587965<![endif]--> <a href="javascript:;" class="prevBtn" bosszone="TS_JDTswitch1">&lt;</a> <a href="javascript:;" class="nextBtn" bosszone="TS_JDTswitch1">&gt;</a></div>
+                </div><!-- ���ž��� -->
+                <div class="scr-login ft12 fl">
+                  <div class="lyuce"></div>
+                  <span class="undis" id="videoid3" data-vid="" data-cid="8236fpbh1k3bit7" data-zhiboid="" data-title="" data-url=""></span><!--[if !IE]>|xGv00|7f181bc765b51ad7c1ac1b9a1db38aca<![endif]-->
+                  <!-- <span class="undis" id="videoid3" data-vid="" data-cid="8236fpbh1k3bit7" data-zhiboid="" data-title="����Ƶֱ����52�쳬����" data-url="http://sports.qq.com/kbsweb/game.htm?mid=100005:2018020400"></span> -->
+                  <div class="cnxh">
+                    <div class="cf"><span id="hotvideo" class="icons fl">������Ƶ</span></div>
+                    <div class="videocont clearfix"><em></em> <a href="javascript:;" class="fr icons" id="close_video"></a>
+                      <h2 class="videotitle"><a id="shipinTitle" target="_blank"></a></h2><!-- ��Ƶ -->
+                      <div id="videoBox" class="min"></div>
+                      <div class="playlist" id="playlist" style="display: none"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="scr-jcsp">
+                <div class="scr-tit cf">
+                  <h4 class="fl">������Ƶ</h4>
+                  <div class="fr list-title" bosszone="TS_JCmore">
+                    <a href="//clickc.admaster.com.cn/c/a103655,b2306489,c2083,i0,m101,8a1,8b2,0k10060,0i[M_IESID],[NEP],1f[MP],h[TENCENTSOID]" target="_blank">����ȫ������</a>
+<a href="//v.qq.com/sports/" target="_blank">����</a>
+<a href="//sports.qq.com/nbavideo/" target="_blank">NBA</a>
+<a href="//sports.qq.com/cba/video.htm" target="_blank">CBA</a>
+<a href="//sports.qq.com/video/yc/" target="_blank">Ӣ��</a>
+<a href="//sports.qq.com/video/zcvideo/" target="_blank">�г�</a>
+<a href="//sports.qq.com/video/og/" target="_blank">ŷ��</a>
+
+<a href="//sports.qq.com/l/others/othersvideo/roll.htm" target="_blank">�ۺ�</a>
+<a href="//sports.qq.com/l/others/kongfuboxing/kongfuboxingvideo/videoroll.htm" target="_blank">����</a>       <!--[if !IE]>|xGv00|8ddc4e1ced282ad6f3786f292fa2183e<![endif]-->
+                  </div>
+                </div>
+                <span class="videoid" id="videoid" data-cid="zbik3c38m7tqoty,otyvvz9w2g189xf,qopfh2zohecayks,6urmjmkxyhri9o8" style="display:none !important;">
+</span>
+
+<span class="videoid1" id="videoid1" data-cid="2gj9rqqk4xb0yht,ym0t7vog8nsls97,0pmbax0y72edzlc,uyzni62yj0ohv71" style="display:none !important;"></span><!--[if !IE]>|xGv00|e62fcc0eac17a5ece9336094c635b5d1<![endif]-->
+                <div class="jcspList" id="jcspList">
+                  <ul class="scr-vds list1 ft12 cf" bosszone="TS_JCvideo"></ul>
+                  <ul class="scr-vds list2 ft12 cf" bosszone="TS_JCvideo"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          try {
+            QosS.topSpan("sports_index", 2);
+          } catch (e) {}
+        </script>
+                <!--�����澫ѡ start-->
+        <div class="layout mt35">
+            <div class="fl">
+                <embed src="//mat1.gtimg.com/sports/000/big20190731.swf" 
+type="application/x-shockwave-flash" width="1000" height="120" quality="high" pluginspage="//clickc.admaster.com.cn/c/a103655,b2306488,c2083,i0,m101,8a1,8b2,0k10060,0i[M_IESID],[NEP],1f[MP],h[TENCENTSOID]" wmode="transparent"></embed>
+            </div>
+            <div class="fr adrthide">
+                <embed src="//mat1.gtimg.com/sports/000/small20190731.swf" 
+type="application/x-shockwave-flash" width="230" autostart="true"  height="120" quality="high" pluginspage="//clickc.admaster.com.cn/c/a103655,b2306488,c2083,i0,m101,8a1,8b2,0k10060,0i[M_IESID],[NEP],1f[MP],h[TENCENTSOID]" wmode="transparent"></embed>            </div>
+        </div>
+        <!--�����澫ѡ end--><!--[if !IE]>|xGv00|ade39a19e099933ac751f301fec8c591<![endif]-->
+        <div class="cf">
+          <!-- ��Ѷ��Ʒ -->
+          <div class="chief">
+            <div class="scr-chupin" id="scroll_02" bosszone="TS_TXchupin">
+              <div class="scr-tit cf">
+                <h4 class="fl">��Ѷ��Ʒ</h4>
+                <div class="fr"><a class="huan icons fr ft14" href="javascript:void(0);" id="cphang">��һ��</a></div>
+              </div>
+              <div class="bd chupinlist inner">
+                <div id="chupinlist">
+                  <div class="split">
+  <dl class="con cf">
+    <dt class="fl">
+      <a href="https://v.qq.com/x/cover/mzc00200g7s35tg.html" target="_blank">
+        <img name="page_cnt_1" _src="http://img1.gtimg.com/sports/pics/hv1/39/59/2323/151068159.jpg" width="165" 
+
+height="110">
+        <span class="play icons"></span>
+      </a>
+    </dt>
+    <dd class="fr">
+      <div class="title cf"><span class="fl"><a href="https://v.qq.com/x/cover/mzc00200g7s35tg.html" 
+
+target="_blank">�����</a></span><em class="fr ft12">ÿ�ܸ���</em></div>
+      <a href="https://v.qq.com/x/cover/mzc00200g7s35tg.html" target="_blank">
+        <div><span class="newsv">��̳�����</span></div>
+        <p class="ft12">Ȥ����̳һ�������¡�[<span class="detail">��ϸ</span>]</p>
+      </a>
+    </dd>
+  </dl>
+
+  <div class="split">
+  <dl class="con cf">
+    <dt class="fl">
+      <a href="https://v.qq.com/x/cover/mzc0020079bfmcq.html" target="_blank">
+        <img name="page_cnt_1" _src="http://img1.gtimg.com/sports/pics/hv1/44/60/2323/151068419.jpg" width="165" height="110">
+        <span class="play icons"></span>
+      </a>
+    </dt>
+    <dd class="fr">
+      <div class="title cf"><span class="fl"><a href="https://v.qq.com/x/cover/mzc0020079bfmcq.html" target="_blank">���ǹ���
+       
+          </a></span><em class="fr ft12">��һ��</em></div>
+      <a href="https://v.qq.com/x/cover/mzc0020079bfmcq.html" target="_blank">
+        <div><span class="newsv">��̳���ǹ���</span></div>
+        <p class="ft12">׷���Ǹ�Ⱥ���貵�ʱ��������[<span class="detail">��ϸ</span>]</p>
+      </a>
+    </dd>
+  </dl>
+</div>
+
+  <dl class="con cf">
+    <dt class="fl">
+      <a href="https://v.qq.com/x/cover/21xlbvgezmb3f2l.html" target="_blank">
+        <img name="page_cnt_1" _src="http://img1.gtimg.com/sports/pics/hv1/169/142/2320/150894379.jpg" width="165" height="110">
+        <span class="play icons"></span>
+      </a>
+    </dt>
+    <dd class="fr">
+      <div class="title cf"><span class="fl"><a href="https://v.qq.com/x/cover/21xlbvgezmb3f2l.html" target="_blank">����ͣ</a></span><em class="fr ft12">ÿ�����</em></div>
+      <a href="https://v.qq.com/x/cover/21xlbvgezmb3f2l.html" target="_blank">
+        <div><span class="newsv">NBA����ͣ</span></div>
+        <p class="ft12">�������˽����˴��³������...[<span class="detail">��ϸ</span>]</p>
+      </a>
+    </dd>
+  </dl>
+
+  <dl class="con cf">
+    <dt class="fl">
+      <a href="https://v.qq.com/x/cover/gznxnczpnpisftx/g0027s4t73z.html" target="_blank">
+        <img name="page_cnt_1" _src="http://img1.gtimg.com/sports/pics/hv1/251/118/2292/149067641.jpg" width="165" height="110">
+        <span class="play icons"></span>
+      </a>
+    </dt>
+    <dd class="fr">
+      <div class="title cf"><span class="fl"><a href="https://v.qq.com/x/cover/gznxnczpnpisftx/g0027s4t73z.html" target="_blank">���Ƿ���</a></span><em class="fr ft12">��������</em></div>
+      <a href="https://v.qq.com/x/cover/gznxnczpnpisftx/g0027s4t73z.html" target="_blank">
+        <div><span class="newsv">����</span></div>
+        <p class="ft12">ʷ����ǿ�۽�50�ֶ��AI...[<span class="detail">��ϸ</span>]</p>
+      </a>
+    </dd>
+  </dl>
+</div>
+
+
+
+<div class="split">
+  <dl class="con cf">
+    <dt class="fl">
+      <a href="//sports.qq.com/nbavideo/topsk//" target="_blank">
+        <img name="page_cnt_1" _src="http://img1.gtimg.com/sports/pics/hv1/117/173/2276/148041132.jpg" width="165" height="110">
+        <span class="play icons"></span>
+      </a>
+    </dt>
+    <dd class="fr">
+      <div class="title cf"><span class="fl"><a href="//sports.qq.com/nbavideo/topsk/" target="_blank">TOPʱ��
+
+          </a></span><em class="fr ft12">ÿ�ո���</em></div>
+      <a href="//sports.qq.com/nbavideo/topsk/" target="_blank">
+        <div><span class="newsv">�����ظ�ۿ���</span></div>
+        <p class="ft12">���޹�����Ϸˣ��ʿ...[<span class="detail">��ϸ</span>]</p>
+      </a>
+    </dd>
+  </dl>
+
+  <dl class="con cf">
+    <dt class="fl">
+      <a href="//sports.qq.com/nbavideo/kqtg/" target="_blank">
+        <img name="page_cnt_1" _src="//img1.gtimg.com/sports/pics/hv1/241/213/2270/147661306.jpg" width="165" height="110">
+        <span class="play icons"></span>
+      </a>
+    </dt>
+    <dd class="fr">
+      <div class="title cf"><span class="fl"><a href="//sports.qq.com/nbavideo/kqtg/" target="_blank">��������
+
+          </a></span><em class="fr ft12">�ܶ�����</em></div>
+      <a href="//sports.qq.com/nbavideo/kqtg/" target="_blank">
+        <div><span class="newsv">��ɳ��ս�����</span></div>
+        <p class="ft12">����ŷ�����������߹���...[<span class="detail">��ϸ</span>]</p>
+      </a>
+    </dd>
+  </dl>
+
+  <dl class="con cf">
+    <dt class="fl">
+      <a href="https://v.qq.com/x/cover/mzc002001z3nop8.html" target="_blank">
+        <img name="page_cnt_1" _src="http://img1.gtimg.com/sports/pics/hv1/27/226/2319/150850632.jpg" width="165" height="110">
+        <span class="play icons"></span>
+      </a>
+    </dt>
+    <dd class="fr">
+      <div class="title cf"><span class="fl"><a href="https://v.qq.com/x/cover/mzc002001z3nop8.html" target="_blank">�г�������
+
+          </a></span><em class="fr ft12">��һ�������</em></div>
+      <a href="https://v.qq.com/x/cover/mzc002001z3nop8.html" target="_blank">
+        <div><span class="newsv">������������ý�����̾ </span></div>
+        <p class="ft12">�������鳰�������ȷ�Ǻ��������ԸУ�...[<span class="detail">��ϸ</span>]</p>
+      </a>
+    </dd>
+  </dl>
+</div><!--[if !IE]>|xGv00|af19b26f5f712250b47f404eac108f4b<![endif]-->
+                </div>
+              </div>
+            </div>
+          </div><!-- ԭ����Ƶ -->
+          <div class="extra">
+            <div class="scr-ycsp fl">
+              <div class="scr-tit cf">
+                <h4 class="fl">����ԭ������</h4>
+              </div>
+              <ul class="scr-vds ft12 mt20 cf" bosszone="TS_YCvideo">
+                <li>
+<a target="_blank" href="https://v.qq.com/x/cover/otyvvz9w2g189xf/l0808qg56kh.html">
+	<div class="vds-img">
+		<img width="190" height="110" name="page_cnt_1" _src="http://img1.gtimg.com/sports/pics/hv1/100/160/2299/149533375.jpg"/>
+		<span class="txt">
+�������������ʮ����
+ </span>
+		<span class="play icons">
+		</span>
+	</div>
+</a>
+	<p class="cf">
+		<a target="_blank" href="http://v.qq.com/vplus/bce70b6f5da9d3bd1dccdea65b26b83d#uin=bce70b6f5da9d3bd1dccdea65b26b83d">
+			<span class="user icons fl">
+			  �����ս���
+			</span>
+		</a>
+	</p>
+</li>
+
+
+
+
+<li>
+<a target="_blank" href="https://v.qq.com/x/page/s08108cz38e.html">
+	<div class="vds-img">
+		<img width="190" height="110" name="page_cnt_1" _src="http://img1.gtimg.com/sports/pics/hv1/98/160/2299/149533373.jpg"/>
+		<span class="txt">
+ղķ˹������Զ���ִ�ϼ�     </span>
+		<span class="play icons">
+		</span>
+	</div>
+</a>
+	<p class="cf">
+		<a target="_blank" href="http://v.qq.com/vplus/062a0f7110a581882f1b502b5b52b5d5#uin=062a0f7110a581882f1b502b5b52b5d5">
+			<span class="user icons fl">
+			 ئئ����          </span>
+		</a>
+	</p>
+</li>
+
+
+
+
+
+<li>
+<a target="_blank" href="https://v.qq.com/x/cover/53lkyan3hu3fg4w/k0808ehhq3u.html">
+	<div class="vds-img">
+		<img width="190" height="110" name="page_cnt_1" _src="http://img1.gtimg.com/sports/pics/hv1/110/160/2299/149533385.jpg"/>
+		<span class="txt">
+NBA�����Ϯ��Ա ��˹50��</span>
+		<span class="play icons">
+		</span>
+	</div>
+</a>
+	<p class="cf">
+		<a target="_blank" href="http://v.qq.com/vplus/c1fc23902b32e94449f7dca59105875c#uin=c1fc23902b32e94449f7dca59105875c">
+			<span class="user icons fl">
+			 NBA�÷ֻ���
+			</span>
+		</a>
+	</p>
+</li>
+
+
+
+
+<li>
+<a target="_blank" href="https://v.qq.com/x/page/d0809izbgbm.html">
+	<div class="vds-img">
+		<img width="190" height="110" name="page_cnt_1" _src="http://img1.gtimg.com/sports/pics/hv1/107/160/2299/149533382.jpg"/>
+		<span class="txt">
+NBA����4��ȫ��սʿ</span>
+		<span class="play icons">
+		</span>
+	</div>
+</a>
+	<p class="cf">
+		<a target="_blank" href="http://v.qq.com/vplus/3a4bcae25c084c107a828772ba0710bd#uin=3a4bcae25c084c107a828772ba0710bd">
+			<span class="user icons fl">
+				 ������˵       </span>
+		</a>
+	</p>
+</li>
+<li>
+<a target="_blank" href="https://v.qq.com/x/page/a0810egump2.html">
+<div class="vds-img">
+	<img width="190" height="110" name="page_cnt_1" _src="http://img1.gtimg.com/sports/pics/hv1/114/160/2299/149533389.jpg"/>
+	<span class="txt">
+����ѵ������ɳ�������߷�</span>
+	<span class="play icons">
+	</span>
+</div>
+</a>
+<p class="cf">
+	<a target="_blank" href="http://v.qq.com/vplus/y5zd">
+		<span class="user icons fl">
+	   ����֮��            </span>
+	</a>
+</p>
+</li>
+
+
+
+
+<li>
+<a target="_blank" href="https://v.qq.com/x/cover/1re0v3dgfpez46a/k0810g5y56j.html">
+<div class="vds-img">
+	<img width="190" height="110" name="page_cnt_1" _src="http://img1.gtimg.com/sports/pics/hv1/112/160/2299/149533387.jpg"/>
+	<span class="txt">
+�ع��й�Ů�����籭�߹�ʱ��</span>
+	<span class="play icons">
+	</span>
+</div>
+</a>
+<p class="cf">
+	<a target="_blank" href="http://v.qq.com/vplus/f74f522521ba9340a0b6c87bb849e22c#uin=f74f522521ba9340a0b6c87bb849e22c
+">
+		<span class="user icons fl">
+	   ����24Сʱ��ѡ
+</span>
+	</a>
+</p>
+</li>
+
+
+
+
+
+
+
+
+
+
+<!--[if !IE]>|xGv00|9a212db92ce05e75a09eaee865869b11<![endif]-->
+              </ul>
+            </div><!-- ���ְ� -->
+            <div class="scr-bsb mt20 fr" id="teamlist" bosszone="TS_PHBdianji">
+                <div class="hd">
+                    <ul class="name cf" id="teamname">
+                        <li class="on" data-click="1" bosszone="TS_PHBlanmu">NBA</li>
+                        <li data-click="0" bosszone="TS_PHBlanmu">CBA</li>
+                        <li data-click="0" bosszone="TS_PHBlanmu">Ӣ��</li>
+                        <li data-click="0" data-type="groups" bosszone="TS_PHBlanmu">ŷ��</li>
+                        <li data-click="0" bosszone="TS_PHBlanmu">����</li>
+                        <li data-click="0" bosszone="TS_PHBlanmu">���</li>
+                        <li data-click="0" bosszone="TS_PHBlanmu">�¼�</li>
+                        <li data-click="0" bosszone="TS_PHBlanmu">����</li>
+                        <li data-click="0" bosszone="TS_PHBlanmu">�г�</li>
+                        <li data-click="0" data-type="groups" bosszone="TS_PHBlanmu">�ǹ�</li>
+                    </ul>
+                    <span class="next icons" id="teamnext"></span>
+                </div>
+                <div class="bd">
+                    <div class="teamitem">
+                        <div class="sub-name ft14 cf">
+                            <a class="on" data-load="1" href="javascript:;">��������</a>
+                            <a href="javascript:;" data-load="0" data-url="team/rank?competitionId=100000&selects=east"
+                               data-type="east" data-tpl="0">��������</a>
+                            <a href="javascript:;" data-load="0"
+                               data-url="player/rank?competitionId=100000&selects=point" data-type="point" data-tpl="1">�÷ְ�</a>
+                            <a href="javascript:;" data-load="0"
+                               data-url="player/rank?competitionId=100000&selects=assist" data-type="assist"
+                               data-tpl="1">������</a>
+                            <a href="javascript:;" data-load="0"
+                               data-url="player/rank?competitionId=100000&selects=rebound" data-type="rebound"
+                               data-tpl="1">�����</a>
+                        </div>
+                        <div class="bd">
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item2">���</span><span
+                                            class="item3">ʤ</span><span class="item3">��</span><span
+                                            class="item4">ʤ��</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item2">���</span><span
+                                            class="item3">ʤ</span><span class="item3">��</span><span
+                                            class="item4">ʤ��</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">��Ա</span><span
+                                            class="item6">���</span><span class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">��Ա</span><span
+                                            class="item6">���</span><span class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">��Ա</span><span
+                                            class="item6">���</span><span class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="viewall"><a class="chakan icons ft12" href="http://sports.qq.com/nba/standings/" target="_blank" bosszone="TS_PHBall">�鿴����</a></p><!--[if !IE]>|xGv00|2e1ee1cfdf6bf5956bd5e78952a5f093<![endif]-->
+                    </div>
+                    <div class="teamitem">
+                        <div class="sub-name ft14 cf">
+                            <a class="on" href="javascript:;" data-load="0" data-url="team/rank?competitionId=100008"
+                               data-type="list" data-tpl="0">���</a>
+                            <a href="javascript:;" data-load="0"
+                               data-url="player/rank?competitionId=100008&selects=point" data-type="point" data-tpl="1">�÷ְ�</a>
+                            <a href="javascript:;" data-load="0"
+                               data-url="player/rank?competitionId=100008&selects=assist" data-type="assist"
+                               data-tpl="1">������</a>
+                            <a href="javascript:;" data-load="0"
+                               data-url="player/rank?competitionId=100008&selects=rebound" data-type="rebound"
+                               data-tpl="1">�����</a>
+                        </div>
+                        <div class="hd">
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item2">���</span><span
+                                            class="item3">ʤ</span><span class="item3">��</span><span
+                                            class="item4">ʤ��</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">��Ա</span><span
+                                            class="item6">���</span><span class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">��Ա</span><span
+                                            class="item6">���</span><span class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">��Ա</span><span
+                                            class="item6">���</span><span class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="viewall"><a class="chakan icons ft12" href="https://sports.qq.com/cba/stats/index.htm#/ranking" target="_blank" bosszone="TS_PHBall">�鿴����</a></p><!--[if !IE]>|xGv00|21322e4e3822bd5b9d7e538bb05ecc8d<![endif]-->
+                    </div>
+                    <div class="teamitem">
+                        <div class="sub-name ft14 cf">
+                            <a class="on" href="javascript:;" data-load="0" data-url="team/rank?competitionId=8"
+                               data-type="list" data-tpl="1">���ְ�</a>
+                            <a href="javascript:;" data-load="0" data-url="player/rank?competitionId=8&selects=goal"
+                               data-type="goal" data-tpl="1">���ְ�</a>
+                        </div>
+                        <div class="hd">
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">���</span><span class="item6">ʤ/ƽ/��</span><span
+                                            class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">��Ա</span><span
+                                            class="item6">���</span><span class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="viewall"><a class="chakan icons ft12" href="http://soccer.stats.qq.com/table.htm?type=yingchao" target="_blank" bosszone="TS_PHBall">�鿴����</a></p><!--[if !IE]>|xGv00|5d8e83000f727b8f1b6eafb08b96b50b<![endif]-->
+                    </div>
+                    <div class="teamitem">
+                        <div class="sub-name ft14 cf">
+                            <a class="on" href="javascript:;" data-load="0" data-url="team/rank?competitionId=5"
+                               data-type="groups" data-tpl="1">A</a>
+                            <a class="on" href="javascript:;" data-load="1">B</a>
+                            <a class="on" href="javascript:;" data-load="1">C</a>
+                            <a class="on" href="javascript:;" data-load="1">D</a>
+                            <a class="on" href="javascript:;" data-load="1">E</a>
+                            <a class="on" href="javascript:;" data-load="1">F</a>
+                            <a class="on" href="javascript:;" data-load="1">G</a>
+                            <a class="on" href="javascript:;" data-load="1">H</a>
+                            <a href="javascript:;" data-load="0" data-url="player/rank?competitionId=5&selects=goal"
+                               data-type="goal" data-tpl="1">���ְ�</a>
+                        </div>
+                        <div class="hd">
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">��Ա</span><span
+                                            class="item6">���</span><span class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="viewall"><a class="chakan icons ft12" href="http://soccer.stats.qq.com/table.htm?type=ouguan" target="_blank" bosszone="TS_PHBall">�鿴����</a></p><!--[if !IE]>|xGv00|9d7405ff16a20876c45cd9e276795d1f<![endif]-->
+                    </div>
+                    <div class="teamitem">
+                        <div class="sub-name ft14 cf">
+                            <a class="on" href="javascript:;" data-load="0" data-url="team/rank?competitionId=23"
+                               data-type="list" data-tpl="1">���ְ�</a>
+                            <a href="javascript:;" data-load="0" data-url="player/rank?competitionId=23&selects=goal"
+                               data-type="goal" data-tpl="1">���ְ�</a>
+                        </div>
+                        <div class="hd">
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">���</span><span class="item6">ʤ/ƽ/��</span><span
+                                            class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">��Ա</span><span
+                                            class="item6">���</span><span class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="viewall"><a class="chakan icons ft12" href="http://soccer.stats.qq.com/table.htm?type=xijia" target="_blank" bosszone="TS_PHBall">�鿴����</a></p><!--[if !IE]>|xGv00|c24b822b298e384b5fbc98373ead2503<![endif]-->
+                    </div>
+                    <div class="teamitem">
+                        <div class="sub-name ft14 cf">
+                            <a class="on" href="javascript:;" data-load="0" data-url="team/rank?competitionId=21"
+                               data-type="list" data-tpl="1">���ְ�</a>
+                            <a href="javascript:;" data-load="0" data-url="player/rank?competitionId=21&selects=goal"
+                               data-type="goal" data-tpl="1">���ְ�</a>
+                        </div>
+                        <div class="hd">
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">���</span><span class="item6">ʤ/ƽ/��</span><span
+                                            class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">��Ա</span><span
+                                            class="item6">���</span><span class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="viewall"><a class="chakan icons ft12" href="http://soccer.stats.qq.com/table.htm?type=yijia" target="_blank" bosszone="TS_PHBall">�鿴����</a></p><!--[if !IE]>|xGv00|1f0a76a3da657753e044fbea2533a77a<![endif]-->
+                    </div>
+                    <div class="teamitem">
+                        <div class="sub-name ft14 cf">
+                            <a class="on" href="javascript:;" data-load="0" data-url="team/rank?competitionId=22"
+                               data-type="list" data-tpl="1">���ְ�</a>
+                            <a href="javascript:;" data-load="0" data-url="player/rank?competitionId=22&selects=goal"
+                               data-type="goal" data-tpl="1">���ְ�</a>
+                        </div>
+                        <div class="hd">
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">���</span><span class="item6">ʤ/ƽ/��</span><span
+                                            class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">��Ա</span><span
+                                            class="item6">���</span><span class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="viewall"><a class="chakan icons ft12" href="http://soccer.stats.qq.com/table.htm?type=dejia" target="_blank" bosszone="TS_PHBall">�鿴����</a></p><!--[if !IE]>|xGv00|b946075f8d4632ca9c98ddf1713ca707<![endif]-->
+                    </div>
+                    <div class="teamitem">
+                        <div class="sub-name ft14 cf">
+                            <a class="on" href="javascript:;" data-load="0" data-url="team/rank?competitionId=24"
+                               data-type="list" data-tpl="1">���ְ�</a>
+                            <a href="javascript:;" data-load="0" data-url="player/rank?competitionId=24&selects=goal"
+                               data-type="goal" data-tpl="1">���ְ�</a>
+                        </div>
+                        <div class="hd">
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">���</span><span class="item6">ʤ/ƽ/��</span><span
+                                            class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">��Ա</span><span
+                                            class="item6">���</span><span class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="viewall"><a class="chakan icons ft12" href="http://soccer.stats.qq.com/table.htm?type=fajia" target="_blank" bosszone="TS_PHBall">�鿴����</a></p><!--[if !IE]>|xGv00|2b36d112d0d3095840684a5510af22c0<![endif]-->
+                    </div>
+                    <div class="teamitem">
+                        <div class="sub-name ft14 cf">
+                            <a class="on" href="javascript:;" data-load="0" data-url="team/rank?competitionId=208"
+                               data-type="list" data-tpl="1">���ְ�</a>
+                            <a href="javascript:;" data-load="0" data-url="player/rank?competitionId=208&selects=goal"
+                               data-type="goal" data-tpl="1">���ְ�</a>
+                        </div>
+                        <div class="hd">
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">���</span><span class="item6">ʤ/ƽ/��</span><span
+                                            class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">��Ա</span><span
+                                            class="item6">���</span><span class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="viewall"><a class="chakan icons ft12" href="http://soccer.stats.qq.com/table.htm?type=zhongchao" target="_blank" bosszone="TS_PHBall">�鿴����</a></p><!--[if !IE]>|xGv00|9b1f3a8c68905f56f1402f92b7c2746f<![endif]-->
+                    </div>
+                    <div class="teamitem">
+                        <div class="sub-name ft14 cf">
+                            <a class="on" href="javascript:;" data-load="0" data-url="team/rank?competitionId=605"
+                               data-type="groups" data-tpl="1">A</a>
+                            <a class="on" href="javascript:;" data-load="1">B</a>
+                            <a class="on" href="javascript:;" data-load="1">C</a>
+                            <a class="on" href="javascript:;" data-load="1">D</a>
+                            <a class="on" href="javascript:;" data-load="1">E</a>
+                            <a class="on" href="javascript:;" data-load="1">F</a>
+                            <a class="on" href="javascript:;" data-load="1">G</a>
+                            <a class="on" href="javascript:;" data-load="1">H</a>
+                            <a href="javascript:;" data-load="0" data-url="player/rank?competitionId=605&selects=goal"
+                               data-type="goal" data-tpl="1">���ְ�</a>
+                        </div>
+                        <div class="hd">
+                            <div class="teamitem-sub">
+                                <ul class="datainfo ft14 cf">
+                                    <li><span class="item1">����</span><span class="item5">��Ա</span><span
+                                            class="item6">���</span><span class="item4">����</span></li>
+                                </ul>
+                                <ul class="datalist ft14">
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="viewall"><a class="chakan icons ft12" href="http://soccer.stats.qq.com/table.htm?type=yaguan" target="_blank" bosszone="TS_PHBall">�鿴����</a></p><!--[if !IE]>|xGv00|8feb174970c040a782c05660ea874efe<![endif]-->
+                    </div>
+                </div>
+            </div><!--[if !IE]>|xGv00|2eab88f29b847e2215b56575dce6ff59<![endif]-->
+          </div>
+        </div>
+      </div>
+      <div class="layout mt35">
+        <div class="fl">
+          <!--include virtual="/china/2016/sports_ad_yihai.htm"-->
+        </div>
+      </div>
+    </div><!-- ����2-->
+    <div id="main2" class="layout main2">
+      <!-- ��� -->
+      <div class="chief">
+        <!-- ���� -->
+        <div class="bkball">
+          <div class="col-title bkball mt30 cf"><a id="tag_lq" name="tag_lq" class="fl"></a>
+            <div class="page-title icons fl">����</div>
+            <div class="more-title"><span class="fl">BASKETBALL</span>
+              <div class="fr list-title" bosszone="TS_Bswitch">
+                                        <a href="http://sports.qq.com/nbavideo/" target="_blank">��Ƶ</a>
+            <a href="http://nba.stats.qq.com/schedule/" target="_blank">NBA����</a>
+                        <a href="http://sports.qq.com/nba/photo/" target="_blank">NBAͼƬ</a>
+                        <a href="http://sports.qq.com/fans/" target="_blank">����</a>
+                        <a href="http://sports.qq.com/cba/" target="_blank">�й�����</a>
+<a href="http://fiba.qq.com/fibawc/" target="_blank">FIBA���籭</a><!--[if !IE]>|xGv00|cd4c9c456811b092edca282e3b31bb0a<![endif]-->
+              </div>
+            </div>
+          </div>
+          <div class="NBA"><a class="colsub-title icons" href="http://sports.qq.com/nba/" target="_blank">NBA</a>
+            <div class="main-item item1 cf" bosszone="TS_Bdianji">
+              <!-- <div class="ball_left nba_item mt30">
+                <a href="#" target="_blank" class="head_img">
+                  <img src="http://img1.gtimg.com/sports/pics/hv1/218/114/2313/150432113.jpg" alt="�Ʊ��׿�˵���˿촬���շ���" height="180">
+                  <p class="shadow">�Ʊ��׿�˵���˿촬���շ���</p>
+                </a>
+                <a href="#" target="_blank" class="head_img">
+                  <img src="http://img1.gtimg.com/sports/pics/hv1/218/114/2313/150432113.jpg" alt="�Ʊ��׿�˵���˿촬���շ���" height="180">
+                  <p class="shadow">�Ʊ��׿�˵���˿촬���շ���</p>
+                </a>
+                <a href="#" target="_blank" class="head_img">
+                  <img src="http://img1.gtimg.com/sports/pics/hv1/218/114/2313/150432113.jpg" alt="�Ʊ��׿�˵���˿촬���շ���" height="180">
+                  <p class="shadow">�Ʊ��׿�˵���˿촬���շ���</p>
+                </a>
+              </div>
+              <div class="ball_right nba_item mt30">
+                <ul class="bkbb_list">
+                  <li>
+                    <span class="fl">
+                      <a target="_blank" href="/a/20190726/004860.htm">��Ա2K����ֵ��������85���79 ���1.7������Ϊ84</a>
+                    </span>
+                    <em class="fr">07-26 12:50</em>
+                  </li>
+                </ul>
+              </div> -->
+            </div>
+          </div>
+          <div class="CBA"><a class="colsub-title icons" href="http://sports.qq.com/cba/" target="_blank">�й�����</a>
+            <div class="main-item item2 cf" bosszone="TS_Bchina"></div>
+          </div>
+        </div><!-- ���� -->
+        <div class="football">
+          <div class="col-title ftball mt30 cf"><a id="tag_zq" name="tag_zq" class="fl"></a>
+            <div class="page-title icons fl">����</div>
+            <div class="more-title"><span class="fl">FOOTBALL</span>
+              <div class="fr list-title" bosszone="TS_Fswitch">
+                                        <a href="http://sports.qq.com/premierleague/" target="_blank">Ӣ��</a>
+                        <a href="http://sports.qq.com/laliga/" target="_blank">����</a> 
+                        <a href="http://sports.qq.com/ucl/" target="_blank">ŷ��</a>
+                        <a href="http://sports.qq.com/csocce/csl/" target="_blank">�г�</a>
+                        <a href="http://sports.qq.com/csocce/ACL/index.htm" target="_blank">�ǹ�</a>
+
+               <!--[if !IE]>|xGv00|7f4066c597be87ac0fa8c8307021d452<![endif]-->
+              </div>
+            </div>
+          </div>
+          <div class="inter_football">
+            <!-- <a class="colsub-title icons" href="http://sports.qq.com/isocce/" target="_blank">��������</a> -->
+            <div class="main-item item3 cf" bosszone="TS_Fdianji"></div>
+          </div>
+        </div><!-- �ۺ����� -->
+        <div class="complex_sport">
+          <div class="col-title tiyu mt30 cf"><a id="tag_zhty" name="tag_zhty" class="fl"></a> <a href="http://sports.qq.com/others/" target="_blank" class="page-title icons fl">�ۺ�����</a>
+            <div class="more-title"><span class="fl">SPORTS</span>
+              <div class="fr list-title" bosszone="TS_ZHswitch">
+                <a href="http://sports.qq.com/others/running.htm"  target="_blank">�ܲ�</a>
+<a href="http://sports.qq.com/others/kungfu.htm" target="_blank">���򲫻�</a>
+<a href="http://sports.qq.com/others/winters.htm" target="_blank">��ѩ</a>
+<a href="http://golf.qq.com/"  target="_blank">�߶���</a><!--[if !IE]>|xGv00|0ca508d962873fa14860344b62d0fa9f<![endif]-->
+              </div>
+            </div>
+          </div>
+          <div class="main-item item4 cf" bosszone="TS_ZHdianji"></div>
+        </div>
+      </div><!-- �Ҳ� -->
+      <div class="extra mt15">
+        <div class="gg-300x250">
+          <!--$loc$_div AD begin...."l=$loc$&log=off"--><div id="QQcom_all_Rectangle:1" style="width:300px;height:250px;" data-loc="QQcom_all_Rectangle" data-index="1" class="l_qq_com"></div><!--$loc$ AD end --><!--[if !IE]>|xGv00|3ccbb3a3efa8a77278f28a268fadbffc<![endif]-->
+        </div>
+        <style type="text/css">
+.focus_jordon{width:300px;height:150px;position:relative;overflow:hidden;margin:20px 0;}
+.focus_jordon .focus_con .item{position:relative;}
+.focus_jordon .focus_con img{width:300px;height:150px;}
+.focus_jordon .shadow{position:absolute;left:0;bottom:0;text-indent:1em;color:#FFF;width:100%;height:35px;line-height:35px;background:rgba(0, 0, 0, 0.6);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99000000',endColorstr='#99000000');}
+.focus_jordon .focus_dot{position:absolute;right:0;bottom:2px;width:100%;text-align:center;}
+.focus_jordon .focus_dot a{display:inline-block;width:7px;height:7px;border-radius:7px;line-height:99px;margin:0 1px;text-align:center;background:#FFF;color:#FFF;overflow:hidden;}
+.focus_jordon .focus_dot a:hover,
+.focus_jordon .focus_dot .current{text-decoration:none;background:#44A5FE;}
+</style>
+<div id="focus_jordon" class="focus_jordon">
+    <ul class="focus_con">
+        <li class="item"><a href="https://qiaodan.jd.com" target="_blank"><img 
+src="http://img1.gtimg.com/sports/pics/hv1/48/12/2302/149690658.jpg" /></a></li>
+
+        <li class="item"><a href="https://qiaodan.jd.com" target="_blank"><img src="http://img1.gtimg.com/sports/pics/hv1/52/12/2302/149690662.jpg" /></a></li>
+
+        <li class="item"><a href="https://qiaodan.jd.com" target="_blank"><img src="http://img1.gtimg.com/sports/pics/hv1/53/12/2302/149690663.jpg" /></a></li>
+
+        <li class="item"><a href="https://qiaodan.jd.com" target="_blank"><img src="http://img1.gtimg.com/sports/pics/hv1/59/12/2302/149690669.jpg" /></a></li>
+       <li class="item"><a href="https://qiaodan.jd.com" target="_blank"><img 
+src="http://img1.gtimg.com/sports/pics/hv1/210/237/2206/143505795.jpg" /></a></li>
+    </ul>
+    <div class="focus_dot">
+        <a href="javascript:void(0);">1</a>
+        <a href="javascript:void(0);">2</a>
+        <a href="javascript:void(0);">3</a>
+        <a href="javascript:void(0);">4</a>
+    <a href="javascript:void(0);">5</a>
+
+    </div>
+</div><!--[if !IE]>|xGv00|5cc610256801027641ff5af069436602<![endif]-->
+        <div class="ad_r_85" style="height:150px;margin:20px 0;">
+    <a href="
+https://sports.qq.com/uclesports/reg/test.htm  " target="_blank"><img src="http://img1.gtimg.com/sports/pics/hv1/122/103/2312/150364187.png" /></a>
+</div>
+<!--[if !IE]>|xGv00|1a0b5512c539e2eb201abd7f069c8100<![endif]-->
+        <div class="main-title mt20 cf" id="tysqtitle">
+          <div class="tit_con">
+            <h5 class="fl">��������</h5><span class="one fl"></span> <a class="chakan icons fr ft14" href="http://sports.qq.com/fans/" target="_blank" bosszone="TS_SQgo">��������</a>
+          </div>
+        </div><!-- ���� -->
+        <div class="tysq" id="tysq">
+          <!--include virtual="/china/2016/tysq1.htm"-->
+          <!--include virtual="/china/2016/tysq2.htm"-->
+          <!--include virtual="/china/2016/tysq3.htm"-->
+        </div><!-- ad2 begin -->
+        <div class="ad_r_85" bosszone="rightAd2" style="height:60px;margin:20px 0;">
+    <a href="http://sports.qq.com/nbavideo/nbastarshow/" target="_blank"><img src="http://img1.gtimg.com/sports/pics/hv1/225/148/2214/144003315.jpg" /></a>
+</div>
+<!--[if !IE]>|xGv00|465dfc5933310752ceab8e7b3c699d02<![endif]-->
+        <!-- ad2 end -->
+        <!-- Ȧ�� -->
+        <div class="main-title mt20 cf">
+          <div class="tit_con">
+            <h5 class="fl">�Ƽ�Ȧ��</h5><span class="one fl"></span> <a class="huan icons fr ft14" href="javascript:void(0);" id="qzchang" bosszone="TS_Cchange">��һ��</a>
+          </div>
+        </div>
+        <ul class="qzst mt15 cf" id="qzstshow" bosszone="TS_Cdianji">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul class="undis" id="qzstlists">
+          <li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=62" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/12/78/2005/130395027.png">
+                    </div>
+                    <p class="con ft12">
+                        ��ʿ
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=70" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/13/78/2005/130395028.png">
+                    </div>
+                    <p class="con ft12">
+                        ���
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=71" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/16/78/2005/130395031.png">
+                    </div>
+                    <p class="con ft12">
+                        ����
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                      <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=61" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/8/78/2005/130395023.png">
+                    </div>
+                    <p class="con ft12">
+                        ��ʿ
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=74" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/15/78/2005/130395030.png">
+                    </div>
+                    <p class="con ft12">
+                        �촬
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=78" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/7/78/2005/130395022.png">
+                    </div>
+                    <p class="con ft12">
+                        ��ţ
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                      <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=72" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/19/78/2005/130395034.png">
+                    </div>
+                    <p class="con ft12">
+                        �Ȼ�
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=77" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/9/78/2005/130395024.png">
+                    </div>
+                    <p class="con ft12">
+                        Сţ
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=83" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/14/78/2005/130395029.png">
+                    </div>
+                    <p class="con ft12">
+                        ������
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                      <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=116" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/6/78/2005/130395021.png">
+                    </div>
+                    <p class="con ft12">
+                        ����
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=76" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/5/78/2005/130395020.png">
+                    </div>
+                    <p class="con ft12">
+                        ��������
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=110" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/20/78/2005/130395035.png">
+                    </div>
+                    <p class="con ft12">
+                        ��¹
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                      <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=111" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/11/78/2005/130395026.png">
+                    </div>
+                    <p class="con ft12">
+                        ����
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=82" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/3/78/2005/130395018.png">
+                    </div>
+                    <p class="con ft12">
+                        ��ӥ
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=119" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/10/78/2005/130395025.png">
+                    </div>
+                    <p class="con ft12">
+                        ���
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                      <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=99" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/131/80/2005/130395656.png">
+                    </div>
+                    <p class="con ft12">
+                        ɭ����
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=113" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/132/80/2005/130395657.png">
+                    </div>
+                    <p class="con ft12">
+                        ����
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=100" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/134/80/2005/130395659.png">
+                    </div>
+                    <p class="con ft12">
+                        ���˹
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=124" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/136/80/2005/130395661.png">
+                    </div>
+                    <p class="con ft12">
+                        ħ��
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=121" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/137/80/2005/130395662.png">
+                    </div>
+                    <p class="con ft12">
+                       76��
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=112" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/139/80/2005/130395664.png">
+                    </div>
+                    <p class="con ft12">
+                        ̫��
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=80" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/140/80/2005/130395665.png">
+                    </div>
+                    <p class="con ft12">
+                        ������
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=122" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/141/80/2005/130395666.png">
+                    </div>
+                    <p class="con ft12">
+                        ����
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=75" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/143/80/2005/130395668.png">
+                    </div>
+                    <p class="con ft12">
+                        ���
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=73" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/164/80/2005/130395689.png">
+                    </div>
+                    <p class="con ft12">
+                        ����
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=117" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/165/80/2005/130395690.png">
+                    </div>
+                    <p class="con ft12">
+                        ��ʿ
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=79" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/166/80/2005/130395691.png">
+                    </div>
+                    <p class="con ft12">
+                        ���
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=125" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/167/80/2005/130395692.png">
+                    </div>
+                    <p class="con ft12">
+                        ����
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=81" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/181/80/2005/130395706.png">
+                    </div>
+                    <p class="con ft12">
+                        ����
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li>
+<li>
+                    <a href="http://sports.qq.com/fans/group.htm?mid=114" target="_blank">
+                    <div class="img">
+                        <img _src="http://img1.gtimg.com/sports/pics/hv1/182/80/2005/130395707.png">
+                    </div>
+                    <p class="con ft12">
+                        �Ʒ�
+                    </p>
+                    <p class="guanzhu icons undis ft12">
+                        <em>��ע</em>
+                    </p>
+                    </a>
+                </li><!--[if !IE]>|xGv00|6d188a82b338c7504550ff8d28f8e7ee<![endif]-->
+        </ul>
+        <div class="gg-300x250">
+          <!--Sports_Rectangle1_div AD begin...."l=Sports_Rectangle1&log=off"--><div id="Sports_Rectangle1" style="width:300px;height:250px;" class="l_qq_com"></div><!--Sports_Rectangle1 AD end --><!--[if !IE]>|xGv00|198c28c957997419210d27521ee79f37<![endif]-->
+        </div><!-- ��̳�ܱ� -->
+        <div class="main-title mt30 cf" style="display:none">
+          <div class="tit_con">
+            <h5 class="fl">��̳�ܱ�</h5><span class="one fl"></span>
+          </div>
+        </div>
+        <div class="ttzb" bosszone="TS_Tweek" style="display:none">
+          <!--include virtual="/china/2016/ttzb.htm"-->
+        </div><!-- ��̳��̬ -->
+        <div class="main-title mt30 cf" style="display:none">
+          <div class="tit_con">
+            <h5 class="fl">��̳��̬</h5><span class="one fl"></span>
+          </div>
+        </div>
+        <ul class="ttdt ft14 mt5" bosszone="TS_Tdongtai" style="display:none">
+          <!--include virtual="/china/2016/titandongtai.htm"-->
+        </ul><!-- ��Ѷ�߶��� -->
+        <div class="main-title mt30 cf" style="display:none">
+          <div class="tit_con">
+            <h5 class="gef fl">��Ѷ�߶���</h5><span class="one fl"></span>
+          </div>
+        </div>
+        <!--include virtual="/china/2016/txgolf.htm"-->
+        <!-- У԰���� -->
+        <div class="mod_B mod_xyzq" style="display:none;">
+    <div class="main-title mt30 cf">
+                <div class="tit_con">
+                    <h5 class="fl">У԰����</h5>
+                    <span class="one fl"></span>
+                </div>
+            </div>
+    <div class="con mt20 ft12" bosszone="TS_School">
+        <a href="http://sports.qq.com/zt2010/school_/index.htm" target="_blank"><img name="page_cnt_2" src="http://img1.gtimg.com/sports/pics/hv1/221/220/1277/83093246.jpg" alt="" border="0" /></a>
+        <p align="center" class="l30"><a href="http://sports.qq.com/zt2010/school_/index.htm" target="_blank">ȫ��������У԰����ٷ���վ</a></p>
+    </div>
+</div><!--[if !IE]>|xGv00|62b33667a93ac32c9997c774a3245225<![endif]-->
+        <div class="gg-300x250">
+          <!--Sports_Rectangle2_div AD begin...."l=Sports_Rectangle2&log=off"--><div id="Sports_Rectangle2" class="l_qq_com" style="display:none;"></div><!--Sports_Rectangle2 AD end --><!--[if !IE]>|xGv00|b4b10c4b1dfdb64c94d91281ea04b9b1<![endif]-->
+        </div>
+      </div>
+    </div>
+    <div class="layout mt10">
+      <div class="fl">
+        <!--$loc$_div AD begin...."l=$loc$&log=off"--><div id="QQcom_all_Width1:2" style="width:1000px;height:90px;" data-loc="QQcom_all_Width1" data-index="2" class="l_qq_com"></div><!--$loc$ AD end --><!--[if !IE]>|xGv00|db396fba594d0e4e3588b196f80f5cb4<![endif]-->
+      </div>
+    </div><!-- ����ͼƬ-->
+    <div id="wonPic" class="wonPic">
+      <div class="layout mod_jctjP site-tpjx"><a id="tag_tp" name="tag_tp" class="fl"></a>
+        <div class="col-title mt30 cf"><a href="http://sports.qq.com/photo/" target="_blank" class="page-title icons fl">ͼƬ��ѡ</a>
+          <div class="more-title"><span class="fl">SPORTS PHOTOS</span> <a class="chakan icons ft14 fr" href="http://sports.qq.com/photo/" target="_blank" bosszone="TS_TPtuku">����ͼ��</a></div>
+        </div>
+        <div class="bd jctj_list">
+          <ul class="inner">
+            <li class="jstj_twP"><a target="_blank" href="/a/20200311/073644.htm"><span><img src="http://img1.gtimg.com/21/2170/217047/21704734_small.jpg"></span><p>����:�ع�������˥ʷ:�Ա�ɽ�����ζ��³� ְҵ�����𲽵���������Ԩ</p></a></li>
+<li class="jstj_twP"><a target="_blank" href="/a/20200310/050063.htm"><span><img src="http://img1.gtimg.com/21/2170/217045/21704598_small.jpg"></span><p>����:2021���㱭�Ϻ����������칤����ʽ���� ������1.6�������ϯ</p></a></li>
+<li class="jstj_twP"><a target="_blank" href="/a/20200304/057289.htm"><span><img src="http://img1.gtimg.com/21/2170/217038/21703865_small.jpg"></span><p>����:�ع�ë����ְҵ���� 7��շת7�����ջ����</p></a></li>
+<li class="jstj_twP"><a target="_blank" href="/a/20200303/039287.htm"><span><img src="http://img1.gtimg.com/21/2170/217037/21703737_small.jpg"></span><p>����:��������Ӽ����人׿�� ��ά����Ϊ��ѫ�Ͻ����и����ʽ</p></a></li>
+<li class="jstj_twP"><a target="_blank" href="/a/20200229/036167.htm"><span><img src="http://img1.gtimg.com/21/2170/217028/21702801_small.jpg"></span><p>���壺׿�������ۿ����������ҵ±� ȫ�ӵִ������</p></a></li>
+<li class="jstj_twP"><a target="_blank" href="/a/20200228/043388.htm"><span><img src="http://img1.gtimg.com/21/2170/217026/21702676_small.jpg"></span><p>����:�̵��г���������Ԯ����� �Լ۱ȳɾ��ֲ����������</p></a></li>
+<li class="jstj_twP"><a target="_blank" href="/a/20200218/015054.htm"><span><img src="http://img1.gtimg.com/21/2170/217017/21701776_small.jpg"></span><p>����:��������������������ף���� ��ɺͶ��ֻ𱬳�ͻ</p></a></li>
+<li class="jstj_twP"><a target="_blank" href="/a/20200218/013502.htm"><span><img src="http://img1.gtimg.com/21/2170/217017/21701761_small.jpg"></span><p>����:�����������Զ���ͳ� ��̨������人���͡����</p></a></li>
+<li class="jstj_twP"><a target="_blank" href="/a/20200218/012991.htm"><span><img src="http://img1.gtimg.com/21/2170/217017/21701756_small.jpg"></span><p>����:�����ڽ��ִ����� �¹�˹�к����Դ��к���������</p></a></li>
+<li class="jstj_twP"><a target="_blank" href="/a/20200217/012034.htm"><span><img src="http://img1.gtimg.com/21/2170/217017/21701751_small.jpg"></span><p>���壺�����ǹڲȳ������ ���������ǿ���Ц</p></a></li>
+<li class="jstj_twP"><a target="_blank" href="/a/20200128/010524.htm"><span><img src="http://img1.gtimg.com/21/2169/216993/21699317_small.jpg"></span><p>���壺�ϸ۽��ǹ���������ӵ���� ���Ὥ��������</p></a></li>
+<li class="jstj_twP"><a target="_blank" href="/a/20200127/012885.htm"><span><img src="http://img1.gtimg.com/21/2169/216991/21699110_small.jpg"></span><p>���壺�ϸ۷����������������˳�ϯ ����ʮ��</p></a></li>
+<!--[if !IE]>|xGv00|65cd8be84c93509e96bca325d28943d3<![endif]-->
+          </ul>
+        </div>
+      </div>
+    </div><!-- �ײ�-->
+    <div id="footer" class="footer">
+      <!-- ���� -->
+      <div class="site-footer mt50" bosszone="TS_Bottomcoo">
+        <div class="tuandui">
+            <div class="layout mt20">
+                <div class="lianmeng fl">
+                    <div class="hd">
+                        <span>��������</span>
+                    </div>
+                    <ul class="bd ft12">
+                        <li>
+                            <a href="http://www.uefa.com/uefachampionsleague/index.html" target="_blank">
+                                <img name="page_cnt_5" src="//mat1.gtimg.com/sports/sportapp/liansai_logo/ouguan.png" width="60"
+                                     height="60" alt=""/>
+
+                                <p>ŷ��</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.premierleague.com/" target="_blank">
+                                <img name="page_cnt_5" src="//mat1.gtimg.com/sports/sportapp/liansai_logo/yingchao.png" width="60"
+                                     height="60" alt=""/>
+
+                                <p>Ӣ��</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.bundesliga.com/en/" target="_blank">
+                                <img name="page_cnt_5" src="//mat1.gtimg.com/sports/sportapp/liansai_logo/dejia.png" width="60"
+                                     height="60" alt=""/>
+
+                                <p>�¼�</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="julebu fl">
+                    <div class="hd">
+                        <span>�������ֲ�</span>
+                    </div>
+                    <ul class="bd ft12">
+                        <li>
+                            <a href="http://fcbarcelona.qq.com/" target="_blank">
+                                <img name="page_cnt_5" src="//mat1.gtimg.com/sports/logo/xijia/Barcelona.png" width="60"
+                                     height="60" alt=""/>
+
+                                <p>����</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://e.t.qq.com/realmadrid" target="_blank">
+                                <img name="page_cnt_5" src="//mat1.gtimg.com/sports/logo/xijia/Real.png" width="60"
+                                     height="60" alt=""/>
+
+                                <p>����</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://cn.clubatleticodemadrid.com/" target="_blank">
+                                <img name="page_cnt_5" src="//mat1.gtimg.com/sports/logo/xijia/Madrid.png" width="60"
+                                     height="60" alt=""/>
+
+                                <p>���</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://e.t.qq.com/ManUtd" target="_blank">
+                                <img name="page_cnt_5" src="//mat1.gtimg.com/sports/logo/yingchao/ml.png" width="60"
+                                     height="60" alt=""/>
+
+                                <p>����</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://e.t.qq.com/MCFC" target="_blank">
+                                <img name="page_cnt_5" src="http://inews.gtimg.com/newsapp_ls/0/494519152/0.jpg" width="60"
+                                     height="60" alt=""/>
+
+                                <p>����</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://e.t.qq.com/officialarsenal" target="_blank">
+                                <img name="page_cnt_5" src="//mat1.gtimg.com/sports/logo/yingchao/asn.png" width="60"
+                                     height="60" alt=""/>
+
+                                <p>��ɭ��</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://e.t.qq.com/chelseafc" target="_blank">
+                                <img name="page_cnt_5" src="//mat1.gtimg.com/sports/logo/yingchao/qrx.png" width="60"
+                                     height="60" alt=""/>
+
+                                <p>�ж���</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://t.qq.com/liverpoolfc/" target="_blank">
+                                <img name="page_cnt_5" src="//mat1.gtimg.com/sports/logo/yingchao/lwp.png" width="60"
+                                     height="60" alt=""/>
+
+                                <p>������</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://e.t.qq.com/tottenhamhotspur" target="_blank">
+                                <img name="page_cnt_5" src="//mat1.gtimg.com/sports/logo/yingchao/rc.png" width="60"
+                                     height="60" alt=""/>
+
+                                <p>�ȴ�</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://e.t.qq.com/FCbayern" target="_blank">
+                                <img name="page_cnt_5" src="//mat1.gtimg.com/sports/logo/15-16ouguan/br.png" width="60"
+                                     height="60" alt=""/>
+
+                                <p>����</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://e.t.qq.com/bvb" target="_blank">
+                                <img name="page_cnt_5" src="http://f.seals.qq.com/filestore/10006/da/64/87/0/sportlogo/team_1_157.png?v=2" width="60"
+                                     height="60" alt=""/>
+
+                                <p>�����ɵ�</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://e.t.qq.com/acmilan" target="_blank">
+                                <img name="page_cnt_5" src="http://f.seals.qq.com/filestore/10006/da/64/87/0/sportlogo/team_1_120.png?v=2" width="60"
+                                     height="60" alt=""/>
+
+                                <p>AC����</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="huoban">
+            <div class="layout">
+                <div class="hd">
+                    <span>�������</span>
+                </div>
+                <div class="bd ft12 mt30">
+                    <dl class="fl meiti">
+                        <dt>
+                            ��Ѷ����ý��������
+                        </dt>
+                        <dd>
+                            <p><a href="http://www.xinhuanet.com/" target="_blank">�»���</a></p>
+
+                            <p><a href="http://sports.cctv.com/index.shtml" target="_blank">��������</a></p>
+          <p><a href="http://www.tctc.com.cn" target="_blank">��������</a></p>
+                        </dd>
+                    </dl>
+                    <dl class="fl">
+                        <dt>
+                            ��Ѷ����ս�Ժ������
+                        </dt>
+                        <dd>
+                            <p><a href="http://sports.qq.com/zt2013/qqvscoc/" target="_blank">�й���ί��</a></p>
+
+                            <p>AIPS������������Э��</p>
+
+                            <p><a href="http://www.nflchina.com/" target="_blank">NFL����</a></p>
+                        </dd>
+                        <dd>
+                            <p><a href="http://www.cba.org.cn/" target="_blank">�й���ë���</a></p>
+
+                            <p><a href="http://tabletennis.sport.org.cn/" target="_blank">�й�ƹ�����</a></p>
+
+                            <p><a href="http://cga.sport.org.cn/" target="_blank">�й���ٶ�</a></p>
+                        </dd>
+                        <dd>
+                            <p><a href="http://swimming.sport.org.cn/" target="_blank">�й���ˮ��</a></p>
+
+                            <p><a href="http://www.shooting.org.cn/" target="_blank">�й������</a></p>
+
+                            <p><a href="http://www.titan24.com/" target="_blank">��̳�ܱ�</a></p>
+                        </dd>
+                    </dl>
+                    <dl class="fl">
+                        <dt>
+                            ��Ѷ�ݱ���̳�������
+                        </dt>
+                        <dd>
+                            <p><a href="http://www.nanfangdaily.com.cn/" target="_blank">�Ϸ����б�</a></p>
+
+                            <p><a href="http://ctdsb.cnhubei.com/cache/paper_ctdsb.aspx" target="_blank">���춼�б�</a></p>
+
+                            <p><a href="http://e.cdqss.com/" target="_blank">�ɶ��̱�</a></p>
+                        </dd>
+                        <dd>
+                            <p><a href="http://hzdaily.hangzhou.com.cn/dskb/" target="_blank">���п챨</a></p>
+
+                            <p><a href="http://www.hilizi.com/" target="_blank">�뵺����</a></p>
+
+                            <p><a href="http://cqcbepaper.cqnews.net/cqcb/" target="_blank">���쳿��</a></p>
+                        </dd>
+                        <dd>
+                            <p><a href="http://www.qingdaonizao.com/" target="_blank">�ൺ�籨</a></p>
+
+                            <p><a href="http://szsb.sznews.com/" target="_blank">�����̱�</a></p>
+
+                            <p><a href="http://newspaper.jfdaily.com/xwcb/" target="_blank">���ų���</a></p>
+                        </dd>
+                        <dd>
+                            <p><a href="http://epaper.jinghua.cn/" target="_blank">����ʱ��</a></p>
+
+                            <p><a href="http://kb.dsqq.cn/" target="_blank">�ִ��챨</a></p>
+
+                            <p><a href="http://jnsb1.e23.cn/" target="_blank">����ʱ��</a></p>
+                        </dd>
+                        <dd>
+                            <p><a href="http://epaper.tianjinwe.com/mrxb/" target="_blank">ÿ���±�</a></p>
+
+                            <p><a href="http://enews.xwh.cn/" target="_blank">���Ļ���</a></p>
+
+                            <p><a href="http://ehsb.hsw.cn/" target="_blank">���̱�</a></p>
+                        </dd>
+                    </dl>
+                    <div class="pingtai">
+                        <p>��Ѷ��������ƽ̨</p>
+                        <img name="page_cnt_5" src="//mat1.gtimg.com/sports/index2015/images/pingtai.jpg" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <!-- copyright begin -->
+            <script>
+var NavNoticeSiteName = ["sports","tech","games","cul","edu","fashion","house","auto","finance","ent"]; 
+</script>
+<script src="//mat1.gtimg.com/www/chrometips/notification2017_v0118.js"></script><!--[if !IE]>|xGv00|160405494288ecc3516e240c185c4fd7<![endif]-->
+<style>
+.tcopyright {width:960px;margin:0 auto;padding:8px 0;font-size:12px;line-height:28px;color:#333; text-align:center; overflow:hidden;clear:both;}
+.tcopyright .en{font-family:Arial;}
+.tcopyright a{color:#333;text-decoration: none;}
+.tcopyright a:hover{color:#bd0a01;text-decoration: underline;}
+</style>
+<div id="tcopyright" class="tcopyright" bossZone="footer" role="contentinfo">
+	<div>
+		<a href="http://www.tencent.com/" target="_blank" rel="nofollow">������Ѷ</a> | <a href="http://www.tencent.com/index_e.shtml" target="_blank" rel="nofollow">About Tencent</a> | <a href="http://www.qq.com/contract.shtml" target="_blank" rel="nofollow">����Э��</a> | <a href="http://www.qq.com/privacy.htm" target="_blank" rel="nofollow">��˽����</a> | <a href="http://open.qq.com/" target="_blank" rel="nofollow">����ƽ̨</a> | <a href="http://www.tencentmind.com/" target="_blank" rel="nofollow">������</a> | <a href="http://hr.tencent.com/" target="_blank" rel="nofollow">��Ѷ��Ƹ</a> | <a href="http://gongyi.qq.com/" target="_blank" rel="nofollow">��Ѷ����</a> | <a href="http://service.qq.com/" target="_blank" rel="nofollow">�ͷ�����</a> | <a href="http://news.qq.com/zt2014/2014qtnews/ccybspxd.htm
+" target="_blank" rel="nofollow">�ٱ�����</a> | <a href="http://www.qq.com/map/" target="_blank" rel="nofollow">��վ����</a>
+	</div>
+  	<div class="en">Copyright &copy; 1998 - 2020 Tencent. All Rights Reserved</div>
+    <div>
+		<a href="http://www.tencent.com/" target="_blank" rel="nofollow">��Ѷ��˾</a> <a href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml" target="_blank" rel="nofollow">��Ȩ����</a>
+	</div>
+</div><!--[if !IE]>|xGv00|b6614ae390f3ba6a8cbcc269055b42da<![endif]-->
+            <!-- copyright end -->
+        </div>
+    </div><!--[if !IE]>|xGv00|df993bbbe00b3ff65ffea1c70fe2b061<![endif]-->
+      <!-- ��Ŀ����(���ض���) start -->
+      <div id="mod_fixed" class="mod_fixed ft14" bosszone="TS_Elevator"><a id="slideBtn" class="go_up" href="javascript:void(0);"><em>����</em><span class="arrow"></span></a>
+        <div id="sideNav"><a href="#tag_yw">Ҫ��</a> <a href="#tag_tp">ͼƬ</a> <a href="#tag_lq">����</a> <a href="#tag_zq">����</a> <a href="#tag_zhty">�ۺ�</a></div><a class="go_top icons" id="go_top" href="javascript:void(0);" onclick="window.scrollTo(0,0);return false"
+          title="���ض���"></a>
+      </div>
+    </div>
+  </div>
+  <script charset="utf-8" src="//mat1.gtimg.com/sports/js/lib/require.min.js"></script>
+  <script charset="utf-8" src="//mat1.gtimg.com/pingjs/ext2020/spIndex/2019/scripts/main-6d3e4cb752.js"></script><!-- <script charset="utf-8" src="//mat1.gtimg.com/sports/kbsweb2/scripts/sports-web-api-1.1.js"></script> -->
+  <script charset="utf-8" src="//mat1.gtimg.com/house/js/h5rewrite.js"></script>
+  <script charset="utf-8" src="//js.aq.qq.com/js/aq_common.js"></script>
+  <script charset="utf-8" src="//mat1.gtimg.com/js/speed_v1.9-min.js"></script>
+  <script type="text/javascript">
+    QosSS.t[1] = (new Date).getTime();
+  </script>
+  <script>
+    var iboss = {
+      qq: "",
+      getQQ: function() {
+        var num = document.cookie.match(new RegExp('(^|)o_cookie=([^;]*)(;|$)'));
+        return num == null ? Math.floor(Math.random() * 10000000000000000) : unescape(num[2]);
+      },
+      init: function(sop) {
+        this.qq = this.getQQ();
+        var params = "BossId=1604&Pwd=0&vertical=pcda&sUrl=" + escape(location.href) + "&site=sports.qq.com&iQQ=" + this.qq + "&sOp=" + sop;
+        this.pushRequest(params);
+      },
+      pushRequest: function(params) {
+        try {
+          var iurl = 'http://btrace.qq.com/kvcollect?' + params + '&ran=' + Math.random();
+          var gImage = new Image(1, 1);
+          gImage.src = iurl;
+
+        } catch (e) {}
+      },
+      pushVV: function() {
+        var params = "BossId=2619&Pwd=0&vertical=pcda&sUrl=" + escape(location.href) + "&sDomain=sports.qq.com&iQQ=" + this.qq + "&sOp=pcda-bf";
+        this.pushRequest(params);
+      }
+    }
+    // document.write('<script charset="utf-8" src="//stdl.qq.com/stdl/qqbrowser/floatlayer/sportsqq.js?' + new Date().getTime() + '"><\/script\>');
+    // setTimeout(function() {
+    //   $.qbRecommand({
+    //     title: '��Ѷ����',
+    //     minVersion: 9
+    //   }); //IE 6/7/8�� ��ʾQQ�������������
+    // }, 1000);
+    // setTimeout(function() {
+    //   if ($('#qbFloatLayer').length > 0) {
+    //     iboss.init("qqliulqiepor"); //�����ع�
+    //   }
+    // }, 5000);
+  </script><!-- ��湫���ű�ҳ��Ƭ -->
+  <script type="text/javascript" src="//imgcache.qq.com/qzone/biz/comm/js/qbs.js"></script>
+<script type="text/javascript">
+var TIME_BEFORE_LOAD_CRYSTAL = (new Date).getTime();
+</script>
+<script src="//ra.gtimg.com/web/crystal/v4.7Beta04Build040/crystal-min.js" id="l_qq_com" arguments="{'extension_js_src':'//ra.gtimg.com/web/crystal/v4.7Beta04Build040/crystal_ext-min.js', 'jsProfileOpen':'true', 'mo_page_ratio':'0.01', 'mo_ping_ratio':'0.01', 'mo_ping_script':'//ra.gtimg.com/sc/mo_ping-min.js'}"></script>
+<script type="text/javascript">
+if(typeof crystal === 'undefined' && Math.random() <= 1) {
+  (function() {
+    var TIME_AFTER_LOAD_CRYSTAL = (new Date).getTime();
+    var img = new Image(1,1);
+    img.src = "//dp3.qq.com/qqcom/?adb=1&dm=sports&err=1002&blockjs="+(TIME_AFTER_LOAD_CRYSTAL-TIME_BEFORE_LOAD_CRYSTAL);
+  })();
+}
+</script>
+<style>.absolute{position:absolute;}</style>
+<!--[if !IE]>|xGv00|aaf8791a6569c52242b88477e7721841<![endif]-->
+  <!--include virtual="/china/2016/member_ads.htm"-->
+  <!--Sports_backpopup_div AD begin...."l=Sports_backpopup&log=off"-->
+<div id="Sports_backpopup" style="width:750px;height:500px;display:none;" class="l_qq_com" ></div>
+<!--Sports_backpopup AD end --><!--[if !IE]>|xGv00|45ef2e185ec54635eff997b5eca4c924<![endif]-->
+  <!--Sports_Couplet_div AD begin...."l=Sports_Couplet&log=off"-->
+<div id="Sports_Couplet" style="width:1px;height:1px;" class="l_qq_com"></div>
+<!--Sports_Couplet AD end --><!--[if !IE]>|xGv00|e3264644ed7620dc5232f758f2188b04<![endif]-->
+  <!--Sport_RM1_div AD begin...."l=Sport_RM1&log=off"--><div id="Sport_RM1" style="width:1px;height:1px;display:none;margin:0 auto;" class="l_qq_com"></div><!--Sport_RM1 AD end --><!--[if !IE]>|xGv00|e72dea805ec1c036a845a309df07f84f<![endif]-->
+  <!-- JS�ļ� -->
+  <script type="text/javascript">
+(function(){
+var th=this;
+th.pageSize=1000;/* ÿ����Ÿ߶�Ϊ1000px */
+th.pageQuotiety=0.5;/* ��ǰ������ */
+th.imgName="page_cnt_";/* ͼƬͨ���� */
+th.imgs=[];/* ÿ��ͼƬ [ÿ������ͼƬ����һ��ͼƬ����һ��ͼƬ����top:����ͼƬ��top] */
+var B = {};/* Browser check */B.ua = window.navigator.userAgent.toLowerCase();B.ie = /msie/.test(B.ua);B.moz = /gecko/.test(B.ua);B.opera = /opera/.test(B.ua);B.safari = /safari/.test(B.ua);
+var $N=function(s,docu){var doc=docu?docu:document;return(typeof s=="object")?s:doc.getElementsByName(s);};
+th.getWindowSize=function(){var a={};if(window.self&&self.innerWidth){a.width=self.innerWidth;a.height=self.innerHeight;return a;}if(document.documentElement&&document.documentElement.clientHeight){a.width=document.documentElement.clientWidth;a.height=document.documentElement.clientHeight;return a;}a.width=document.body.clientWidth;a.height=document.body.clientHeight;return a;}
+th.getObjPosition=function(obj){var a={};a.x = obj.offsetLeft,a.y = obj.offsetTop;while(obj=obj.offsetParent){a.x += obj.offsetLeft;a.y += obj.offsetTop;}return a;}
+th._getPageScroll=function(){var s;if (typeof(window.pageYOffset)!="undefined"){s = window.pageYOffset;}else if (document.documentElement && document.documentElement.scrollTop){s = document.documentElement.scrollTop;}else if (document.body){s = document.body.scrollTop;}return s;}
+th._loadImages=function(a){if(!a)	return;var obj = a;if(typeof a == "string"){obj=$N(a);}for(var i=0;i<obj.length;i++){var s = obj[i];if(typeof s == "object"){if(s.getAttribute("_src")){s.setAttribute("src",s.getAttribute("_src"));s.removeAttribute("_src",0);}}}delete obj;obj=null;}
+th._loadAllImgs=function(){var i=0;while(th.imgs[i]){th._loadImages(th.imgs[i][0]);i++;}}
+th.getImgPosition=function(){var i=1;var p=$N(th.imgName+i);while(p&&p.length>0){var p=$N("page_cnt_"+i);var t=th.getImgLoadPosition(p[0]);th.imgs.push([p,p[0],t]);i++;p=$N(th.imgName+i);}}
+th.getImgLoadPosition=function(a){var t={imgTop : 0  ,pageTop : 0};if(a){var w=th.getWindowSize();t.imgTop=parseInt(th.getObjPosition(a).y);t.pageTop=parseInt((t.imgTop/1000-th.pageQuotiety)*1000);}return t;}
+th._addScrollEven=function(){if(B.ie){window.attachEvent("onscroll",th._scrollFn);}else{window.addEventListener("scroll",th._scrollFn,false);}}
+th._removeScrollEven=function(){if(B.ie){window.detachEvent("onscroll",th._scrollFn);}else{window.removeEventListener("scroll",th._scrollFn,false);}}
+th._scrollFn=function(){var y=th._getPageScroll();var w=th.getWindowSize().height;if(w==0){th._loadAllImgs();return;}var i=0;var j=0;while(th.imgs[i]){if( !( y+w < th.imgs[i][2].pageTop ) ){th._loadImages(th.imgs[i][0]);j++}i++;if(j>=th.imgs.length){th._removeScrollEven();}}}
+th.getImgPosition();th._addScrollEven();th._scrollFn();
+}
+)()
+</script><!--[if !IE]>|xGv00|14824935a48dfeb9bf18e33bbfd21237<![endif]-->
+  <!-- PVGͳ�ƴ��� -->
+  <!-- #include virtual="/public/speedjs.htm" -->
+  <script type="text/javascript">
+/*
+function: channel homepage
+modified: 20120924
+coding:austinjin
+*/
+var gBossZoneHandler = new bossZoneHandler();
+var gImage;
+var registerZone2 = gBossZoneHandler.registerZone2;
+
+if(document.addEventListener)
+    document.addEventListener("click", registerZone2, false);
+else if(document.attachEvent)
+    document.attachEvent("onclick", registerZone2);
+
+function bossZoneHandler()
+{
+    var sFlag=false;
+	this.registerZone2 = function (ev,clickType)
+	{
+	    var loopTryNum = 10;
+	    var bossID = 1337; 
+		  
+	    try
+		{		
+		    //qq
+			var a=document.cookie.match(new RegExp('(^|)o_cookie=([^;]*)(;|$)'));
+			var iQQ=(a==null?"":unescape(a[2]));
+			var purl='';
+			var zoneId='';
+			
+			if(typeof clickType == 'undefined')
+			{
+			    if(sFlag) return true;
+		        var ev = window.event || ev;
+		        var et = ev.srcElement || ev.target;
+			    var type=et.tagName;
+		        if (type != "A" && type != "IMG" ) 
+			    {
+			        return true;
+			    } 
+			
+			    if (type == "A")
+			    {
+			        purl = et.href;
+			    }
+			    else if (type == "IMG")
+			    {
+			        purl = et.parentNode.href;
+			    }
+			
+			    //pseudo attr
+			    for (var i=loopTryNum-1,tagNode=et;i>=0;i--,tagNode=tagNode.parentNode)
+			    {
+			        if(tagNode.attributes['bossZone'])
+				    {
+			            zoneId = tagNode.attributes['bossZone'].nodeValue;
+				    } else if(tagNode.attributes['bosszone'])
+				    {
+				        zoneId = tagNode.attributes['bosszone'].nodeValue;
+				    }
+				    else if(tagNode.attributes['BossZone'])
+				    {
+				        zoneId = tagNode.attributes['BossZone'].nodeValue;
+				    }
+				    else if(tagNode.attributes['Bosszone'])
+				    {
+				        zoneId = tagNode.attributes['Bosszone'].nodeValue;
+				    }
+
+			        if(zoneId) break; 
+			    }		
+			    if(!zoneId) return;
+			}
+			else
+			{
+			    zoneId = ev.bossZone;
+				purl = ev.url;
+				sFlag = true;
+				setTimeout(function (){sFlag = false;},200);
+			}
+			
+			var localUrl = location.href;
+			var site = localUrl.substring(7,localUrl.indexOf('.qq.com'));
+			site = site.substr(site.lastIndexOf('.')+1);
+
+			var iurl = '//btrace.qq.com/collect?sIp=&iQQ='+iQQ+'&sBiz=qq.com&sOp='+zoneId+'&iSta=&iTy='+bossID+'&iFlow=&sSite='+site+'&sUrl='+escape(purl)+'&sLocalUrl='+escape(location.href)+'&'+Math.random();
+			gImage = new Image(1,1);
+			gImage.src = iurl;
+		} catch (e) {}
+	}
+}</script><!--[if !IE]>|xGv00|42da10df8dbe69f70bc888425a897314<![endif]-->
+  <script>
+  /**
+   * @description �滻ҳ��vվ��Ƶ����
+   * @param: root �����ø��� window.replaceLinkRoot = 'elms'
+   **/
+  ~(function ($, root) {
+    if ($) {
+      var root = root ? $(root) : $(document);
+      root.on('click', 'a', function () {
+        var $a = $(this);
+        var link = $a.attr('href');
+        if (link) {
+            if (link.indexOf('v.qq.com/x/') != -1) {
+                link = link.replace(/http[s]*:\/\/v\.qq\.com\/x\/(.*)\.html/, 'http://v.sports.qq.com/#/$1');
+            } else if (link.indexOf('v.qq.com/page/') != -1) {
+                link = link.replace(/http[s]*:\/\/v\.qq\.com\/page\/(.\/)*(.*)\.html/, 'http://v.sports.qq.com/#/page/$2');
+            }
+            $a.attr('href', link);
+        }
+      });
+    }
+  })(window.jQuery, window.replaceLinkRoot);
+</script><!--[if !IE]>|xGv00|92b740fe166ad3c80a80278a05b86d6c<![endif]-->
+  <!-- ȫվ����ͳ�ƴ��� ��ʼss -->
+  <!--pgv by Austinjin-->
+<script type="text/javascript" language="javascript" src="//mat1.gtimg.com/ping.js"></script>
+<script type="text/javascript" language="javascript">
+var pvCurDomain = "sports.qq.com";  //��������
+if(window['ARTICLE_INFO'] && window['ARTICLE_INFO']['catalog_full']){
+function newPgvDetail(){
+ var catalogPathR1 = ARTICLE_INFO.catalog_full.toString().replace(/-/g,".");
+ var catalogPath = catalogPathR1.toString().replace(/_/g,"-");
+ if(ARTICLE_INFO.topic.name.length>0){var L = "L.",Z = "Z." + catalogPath + "." + ARTICLE_INFO.topic.name;}else{var L = "L." + catalogPath,Z = "Z.";}
+ var W = "W." + ARTICLE_INFO.type,M = "M." + ARTICLE_INFO.tpl.type + ARTICLE_INFO.tpl.stype,P = "P." + ARTICLE_INFO.site.toString().replace(/_/g,"-"),pgvInfo = L + "_" + Z + "_" + W + "_" + M + "_" + P;
+ if(typeof(pgvMain) == 'function'){if(typeof(pgvInfo) != 'undefined'){pgvMain({pgUserType:pgvInfo});}}
+}newPgvDetail();}
+else if(typeof(pgvMain) == 'function'){if(typeof(whatCatalog) != 'undefined'){pvCSTM = whatCatalog;pgvMain();}else{pgvMain();}}
+</script>
+<!--pgv end--><!--[if !IE]>|xGv00|8f905d6d5c7977615c84d60d5b8a7ab3<![endif]-->
+  <!--��ͨר��pgvͳ�ƴ��������<body>��ǩ�·�,�ش���Ŀ������Ƶ����ҳ�İ�pgvͳ�ƴ������������.-->
+  <!-- ȫվ����ͳ�ƴ��� ���� -->
+</body>
+
+</html><!--[if !IE]>|xGv00|900d1f827d86ab5ba286ff1f5d0d43f2<![endif]-->

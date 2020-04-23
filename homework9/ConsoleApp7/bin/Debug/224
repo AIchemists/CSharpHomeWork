@@ -1,0 +1,1793 @@
+﻿<!DOCTYPE html>
+<!--[if lte IE 6 ]> <html class="ie ie6 lte_ie7 lte_ie8 lte_ie9" lang="zh-CN"> <![endif]-->
+<!--[if IE 7 ]> <html class="ie ie7 lte_ie7 lte_ie8 lte_ie9" lang="zh-CN"> <![endif]-->
+<!--[if IE 8 ]> <html class="ie ie8 lte_ie8 lte_ie9" lang="zh-CN"> <![endif]-->
+<!--[if IE 9 ]> <html class="ie ie9 lte_ie9" lang="zh-CN"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="zh-CN"> <!--<![endif]-->
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="renderer" content="webkit" />
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="max-age=60" />
+    <title>体育频道 - 腾讯视频</title>
+    <script type="text/javascript">
+    (function(){function c(h,g){g=g||document.location.toString();var e=new RegExp("[?&#]"+h+"=([^&#]+)","i");var i=e.exec(g);if(i&&i.length>1){return i[1]}return""}function f(){var e=c("ptag")||c("PTAG"),g="v.index.adaptor";if(e){e+="#{defaulTag}#1"}else{if(/https?:\/\/(.+?)(\/|$)/.test(document.referrer)){e=RegExp.$1+"#{defaulTag}#2"}else{e="v_qq_com#{defaulTag}#3"}}return encodeURIComponent(e.replace("{defaulTag}",g))}try{if(window!=top&&document.referrer&&document.referrer.indexOf("v.baidu.com")!=-1){top.location.href=self.location.href}}catch(d){}var ua=navigator.userAgent;var istablet=/android/i.test(ua)&&!/mobile/i.test(ua);if(!istablet&&/(android)|(iphone)|(ipod)/i.test(ua)&&(!/mi pad/i.test(ua))&&(typeof document.referrer!="string"||document.referrer.indexOf("m.v.qq.com")==-1)){try{var a="http://m.v.qq.com/index.html?ptag=",b=f();a=a+b+"&";if(document.referrer){a+="mreferrer="+encodeURIComponent(document.referrer)+"&"}location.replace(a)}catch(d){}}})();
+    </script>
+    <link rel="preload" href="//vm.gtimg.cn/c/=/tencentvideo/vstyle/web/v6/style/css/base.css,head_channel.css,channel/channel_base.css?v=2019111818" as="style" />
+    <link rel="preload" href="//vm.gtimg.cn/c/=/tencentvideo/vstyle/web/v6/style/css/channel/channel.css?v=2019111818" as="style" />
+    <link rel="stylesheet" href="//vm.gtimg.cn/c/=/tencentvideo/vstyle/web/v6/style/css/base.css,head_channel.css,channel/channel_base.css?v=2019111818" />
+    <!--[if lte IE 9 ]>
+    <link rel="stylesheet" href="//vm.gtimg.cn/c/=/tencentvideo/vstyle/web/v6/style/css/base.ie.css,head_channel.ie.css,channel/channel_base.ie.css?v=2019111818" />
+    <![endif]-->
+    <!--[if lte IE 8]><script type="text/javascript">document.createElement('svg');document.createElement('path');document.createElement('use');document.createElement('symbol');document.createElement('circle');document.createElement('defs');document.createElement('polygon');document.createElement('linearGradient')</script><![endif]-->
+    <meta itemprop="name" content="体育频道 - 腾讯视频" />
+    <meta name="keywords" content="腾讯视频,电影,电视剧,综艺,新闻,财经,音乐,MV,高清,视频,在线观看,全网搜,搜全网" />
+    <meta name="description" itemprop="description" content="腾讯视频致力于打造中国领先的在线视频媒体平台，以丰富的内容、极致的观看体验、便捷的登录方式、24小时多平台无缝应用体验以及快捷分享的产品特性，主要满足用户在线观看视频的需求。" />
+    <meta itemprop="image" content="https://puui.qpic.cn/vupload/0/common_logo_square.png/0" />
+    <meta name="apple-itunes-app" content="app-id=407925512" />
+    <link rel="shortcut icon" href="//v.qq.com/favicon.ico" />
+    <link rel="search" type="application/opensearchdescription+xml" href="//v.qq.com/opensearch.xml" title="腾讯视频" />
+    <script>
+        window.channelName = '体育'
+        window.channelInfos= {"channelId":"sports","channelName":"体育","parentName":"","parentEnName":"","pageQuery":{},"channelType":"feed"}
+        try {
+            document.domain = "qq.com";
+        } catch (e) {}
+        function picerr(obj, num) {
+            obj.onerror = null;
+            var p = "blank";
+            if (num == "h" || num == "v" || num == "s" || num == "f") {
+                p = "pic_" + num;
+            } else if (num == "a") {
+                p = "avatar";
+            } else {
+                p = 'blank'
+            }
+            var img = "//puui.qpic.cn/vupload/0/common_" + p + ".png/0";
+            obj.src = img;
+            obj.srcset && (obj.srcset = img + ' 2x');
+        }
+        // 检测白屏跳转且防止死循环跳转
+        window.emptyPageTimer = setTimeout(function () {
+             var loc = window.location
+             if(!~loc.pathname.indexOf('/bk/channel/sports.html')) {
+                 loc.href = 'https://v.qq.com/bk/channel/sports.html'
+             }
+        }, 8000)
+        try {
+            !function(){var e=["lite"],t=["tesla"];function n(e){var t=document.createElement("style"),n=document.head||document.getElementsByTagName("head")[0];t.type="text/css",t.styleSheet?t.styleSheet.cssText=e:t.appendChild(document.createTextNode(e)),n.appendChild(t)}function o(e,t,n){var o="";if(n>0){var i=new Date;i.setTime(i.getTime()+24*n*60*60*1e3),o="; expires="+i.toUTCString()}else o=";expires=Thu, 01 Jan 1970 00:00:01 GMT";document.cookie=e+"="+(t||"")+o+"; path=/"}function i(e){for(var t=e+"=",n=document.cookie.split(";"),o=0;o<n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1,i.length);if(0==i.indexOf(t))return i.substring(t.length,i.length)}return null}function a(e){for(var t={},n=("?"===e[0]?e.substr(1):e).split("&"),o=0;o<n.length;o++){var i=n[o].split("=");t[decodeURIComponent(i[0])]=decodeURIComponent(i[1]||"")}return t}!function(){var r=a(location&&location.search||""),c=navigator.userAgent.toLocaleLowerCase(),d=r.mode,l=i("__mode");try{t.some(function(e){return c.match(e)})}catch(e){}(d&&~e.indexOf(d)||l&&~e.indexOf(l))&&(n(".__client_download__,.__lite_hide__{display:none !important}"),function(){var e=a(location&&location.search||""),t=e&&e.scale||"";t?o("__scale",t,30):t=i("__scale");var r=(document.body&&document.body||document.getElementsByTagName("body")).clientWidth||1e3;if((t=+t)&&"number"==typeof t&&!isNaN(t)){var c="html,body{overflow-x: hidden;}body{transform: scale("+t+");transform-origin: center top;}";r<1280&&(c+="body{min-width: 990px;}",c+=".site_head .head_inner{position: relative;}"),n(c)}}()),window.channelInfos&&"choice"===window.channelInfos.channelId&&(d&&~e.indexOf(d)?o("__mode",d,30):o("__mode","",-1))}()}();
+        } catch (e) {}
+    </script>
+    <link rel="preload" href="//vm.gtimg.cn/tencentvideo_v1/script/txv.core.js?v=20190402" as="script" />
+    <link rel="preload" href="//ra.gtimg.com/sc/vqq/crystal-min.js" as="script" />
+    <link rel="preload" href="//vm.gtimg.cn/c/=/tencentvideo/script/index2017/public_comps/shortcut.min.js,/tencentvideo/script/module/floatpanel.js" as="script" />
+    
+</head>
+<body _wind="scene=频道页&pagename=体育频道" class="page_channel page_channel_sports">
+<svg class="svg_sprite" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1" height="1">
+	<linearGradient id="__lg_collect" gradientUnits="userSpaceOnUse" x1="-126.4" y1="27.9" x2="-126.4" y2="26.9" gradientTransform="matrix(10 0 0 -10 1275 285)">
+		<stop offset="0" stop-color="#fc5131" />
+		<stop offset="1" stop-color="#ff147c" />
+	</linearGradient>
+	<symbol id="svg_icon_collect" viewBox="0 0 16 16">
+		<path d="M3.7 10C2.3 8.7 1 7 1 5.1 1 .3 6.3-.1 8 3c1.6-3 7-2.7 7 2.1" fill="none" stroke="#ff5c38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+		<circle cx="11" cy="11" r="5" fill="url(#__lg_collect)" />
+		<path class="st2" d="M10 8h2v6h-2V8z" fill="#fff" />
+		<path class="st2" d="M14 10v2H8v-2h6z" fill="#fff" />
+	</symbol>
+	<symbol id="svg_icon_collected" viewBox="0 0 16 16">
+		<path d="M14.9 5.2c-3.2-2.1-7.6-1.2-9.7 2-.6.8-.9 1.7-1.1 2.6l-.4.2C2.3 8.7 1 7 1 5.1 1 .3 6.3-.1 8 3c1.6-3 7-2.7 7 2.1l-.1.1z" fill="#ff1b40" stroke="#ff1b40" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+		<circle cx="11" cy="11" r="5" fill="url(#__lg_collect)" />
+		<path d="M9 11l1.5 1.5 3-2.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+	</symbol>
+	<symbol id="svg_icon_collect_pure" viewBox="0 0 16 16">
+		<path d="M3.739 10C2.276 8.685 1 7 1 5.121 1 .29 6.277-.115 7.995 2.975 9.583-.045 15 .246 15 5.095" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+		<path d="M11 16a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm1-6V8h-2v2H8v2h2v2h2v-2h2v-2h-2z" fill="currentColor" fill-rule="nonzero" />
+	</symbol>
+	<symbol id="svg_icon_collected_pure" viewBox="0 0 16 16">
+		<path d="M3.739 10C2.276 8.685 1 7 1 5.121 1 .29 6.277-.115 7.995 2.975 9.583-.045 15 .246 15 5.095" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+		<path d="M11 16a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm1.414-5l1.414-1.414-1.414-1.414L11 9.586 9.586 8.172 8.172 9.586 9.586 11l-1.414 1.414 1.414 1.414L11 12.414l1.414 1.414 1.414-1.414L12.414 11z" fill="currentColor" fill-rule="nonzero" />
+	</symbol>
+	<symbol id="svg_icon_collected_cancel_pure" viewBox="0 0 16 16">
+		<path d="M3.739 10C2.276 8.685 1 7 1 5.121 1 .29 6.277-.115 7.995 2.975 9.583-.045 15 .246 15 5.095" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+		<path d="M11 16a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm1.414-5l1.414-1.414-1.414-1.414L11 9.586 9.586 8.172 8.172 9.586 9.586 11l-1.414 1.414 1.414 1.414L11 12.414l1.414 1.414 1.414-1.414L12.414 11z" fill="currentColor" fill-rule="nonzero" />
+	</symbol>
+	<symbol id="svg_icon_follow" viewBox="0 0 20 20">
+		<path d="M19.2 7l-5.6-1.1L11 1.1c-.2-.3-.5-.6-.9-.6s-.7.2-.9.6L6.4 5.9.7 7c-.4.2-.7.6-.7 1 0 .3.1.6.4.8l3.7 4-.6 5.5v.1c0 .6.5 1 1 1 .2 0 .3 0 .5-.1l5.1-2.2 5.1 2.3c.1.1.3.1.4.1.6 0 1-.5 1-1v-.2l-.5-4c0-.6-.5-1.1-1.1-1.1s-1 .4-1 1l.2 2.5-4.2-1.9-4.3 1.9.6-4.7-3.1-3.3 4.6-.9L10 3.7l2.2 4.1 4.6.9-1.5 1.6-.1.1c-.2.2-.3.5-.3.8 0 .6.5 1.1 1.1 1.1.3 0 .5-.1.7-.3l2.9-3.2c.3-.2.4-.5.4-.8 0-.5-.4-.9-.8-1z"></path>
+	</symbol>
+	<symbol id="svg_icon_followed" viewBox="0 0 20 20">
+		<path d="M15 8.5c1.4 0 2.7.5 3.7 1.3l.9-1c.2-.1.3-.4.3-.6.1-.5-.2-1.1-.8-1.2l-5.5-1.1L11 1.1c-.1-.2-.3-.3-.4-.4-.6-.3-1.3-.1-1.5.4L6.4 5.9.8 7c-.3.1-.4.2-.6.4-.4.4-.3 1.1.1 1.4l3.7 4-.6 5.5v.1c0 .2 0 .3.1.5.3.5.9.7 1.4.4l4.7-2.1c-.3-.7-.6-1.7-.6-2.7 0-3.3 2.7-6 6-6zm-.1.8c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.3-5-5-5zM18 14l-3.2 3.2c-.2.2-.4.3-.7.3-.2 0-.5-.1-.6-.3L12.1 16c-.3-.3-.3-.9 0-1.2.3-.3.9-.3 1.2 0l.7.7 2.7-2.7c.3-.3.9-.3 1.2 0 .4.3.4.8.1 1.2z"></path>
+	</symbol>
+</svg>
+
+
+<div class="site_head_placeholder"></div>
+<div class="site_head site_head_channel" id="new_vs_header">
+    <div class="head_inner">
+        <h1 class="site_logo"><a href="https://v.qq.com/" class="link_logo" _stat="顶部导航区:主导航_LOGO">腾讯视频</a></h1>
+        <div class="site_channel">
+            
+                <a href="/channel/choice" data-key="精选" class="channel_nav channel_nav_0 _channel_nav_精选"  _stat="顶部导航区:主导航:精选" data-icon="">精选</a>
+            
+                <a href="/channel/tv" data-key="电视剧" class="channel_nav channel_nav_1 _channel_nav_电视剧"  _stat="顶部导航区:主导航:电视剧" data-icon="//puui.qpic.cn/vupload/0/20181206_1544081196478_lrgd9cazlhs.png/0">电视剧</a>
+            
+                <a href="/channel/movie" data-key="电影" class="channel_nav channel_nav_2 _channel_nav_电影"  _stat="顶部导航区:主导航:电影" data-icon="//puui.qpic.cn/vupload/0/20181206_1544081196504_itmr2xdlmpb.png/0">电影</a>
+            
+                <a href="/channel/variety" data-key="综艺" class="channel_nav channel_nav_3 _channel_nav_综艺"  _stat="顶部导航区:主导航:综艺" data-icon="//puui.qpic.cn/vupload/0/20181206_1544081196514_yzvp912kh1p.png/0">综艺</a>
+            
+                <a href="/channel/cartoon" data-key="动漫" class="channel_nav channel_nav_4 _channel_nav_动漫"  _stat="顶部导航区:主导航:动漫" data-icon="//puui.qpic.cn/vupload/0/20181206_1544081196508_jhfbyyujr58.png/0">动漫</a>
+            
+                <a href="/channel/child" data-key="少儿" class="channel_nav channel_nav_5 _channel_nav_少儿"  _stat="顶部导航区:主导航:少儿" data-icon="//puui.qpic.cn/vupload/0/20181206_1544081196514_po0qlecenmr.png/0">少儿</a>
+            
+                <a href="/channel/doco" data-key="纪录片" class="channel_nav channel_nav_6 _channel_nav_纪录片"  _stat="顶部导航区:主导航:纪录片" data-icon="//puui.qpic.cn/vupload/0/20181206_1544081196512_zj8b2z4ql2m.png/0">纪录片</a>
+            
+                <a href="https://film.qq.com/" data-key="VIP会员" class="channel_nav channel_nav_7 _channel_nav_VIP会员" target="_blank" _stat="顶部导航区:主导航:VIP会员" data-icon="//img1.gtimg.com/v/pics/hv1/161/167/2257/146804171.png">VIP会员</a>
+            
+                <a href="/channel/music" data-key="音乐" class="channel_nav channel_nav_8 _channel_nav_音乐"  _stat="顶部导航区:主导航:音乐" data-icon="//puui.qpic.cn/vupload/0/20190102_1546416180990_pvyuejg5kzp.png/0">音乐</a>
+            
+                <a href="/channel/feeds_hotspot" data-key="爱看" class="channel_nav channel_nav_9 _channel_nav_爱看"  _stat="顶部导航区:主导航:爱看" data-icon="//puui.qpic.cn/vupload/0/20190605_1559739400506_9x8pvhinoim.png/0">爱看</a>
+            
+            <a href="javascript:void(0);" class="channel_more _site_channel_more" title="展开更多频道" _stat="顶部导航区:主导航:全部频道">
+                <span class="icon_text">全部</span>
+				<svg class="svg_icon_menu_sm" viewBox="0 0 18 18" width="18" height="18">
+					<g class="svg_before">
+						<circle cx="5" cy="5" r="2.4" fill="none" stroke="#ffb821" stroke-width="1.2"></circle>
+						<circle cx="5" cy="13" r="2.4" fill="none" stroke="#fc5131" stroke-width="1.2"></circle>
+						<circle cx="13" cy="5" r="2.4" fill="none" stroke="#ff1919" stroke-width="1.2"></circle>
+						<circle cx="13" cy="13" r="2.4" fill="none" stroke="#ff147c" stroke-width="1.2"></circle>
+					</g>
+					<g class="svg_after">
+						<path d="M6.6 4.1c-.3-.5-.9-.9-1.5-.9-1.1 0-1.9.8-1.9 1.9 0 .7.3 1.2.9 1.6v.5c0 .3 0 .6.1.9C2.9 7.6 2 6.4 2 5.1 2 3.4 3.4 2 5.1 2c1.3 0 2.5.9 2.9 2.2-.3-.1-.6-.2-.9-.2-.2 0-.3.1-.5.1z" fill="#ffb821"></path>
+						<path d="M6.6 13.9h.5c.3 0 .6 0 .9-.1-.4 1.3-1.6 2.2-2.9 2.2C3.4 16 2 14.6 2 12.9c0-1.4.9-2.6 2.2-2.9-.1.3-.2.6-.2.9v.5c-.5.3-.9.9-.9 1.6 0 1 .8 1.8 1.8 1.8.8 0 1.4-.4 1.7-.9z" fill="#fc5131"></path>
+						<path d="M13.9 6.6c.5-.3.9-.9.9-1.6 0-1-.8-1.8-1.8-1.8-.7 0-1.2.3-1.6.9h-.5c-.3 0-.6 0-.9.1.4-1.3 1.6-2.2 2.9-2.2C14.6 2 16 3.4 16 5.1c0 1.4-.9 2.6-2.2 2.9.1-.3.2-.6.2-.9 0-.2-.1-.3-.1-.5z" fill="#ff1919"></path>
+						<path d="M13.9 11.4v-.5c0-.3 0-.6-.1-.9 1.3.4 2.2 1.6 2.2 2.9 0 1.7-1.4 3.1-3.1 3.1-1.4 0-2.6-.9-2.9-2.2.3.1.6.1.9.1h.5c.3.5.9.9 1.6.9 1 0 1.8-.8 1.8-1.8 0-.7-.4-1.3-.9-1.6z" fill="#ff147c"></path>
+					</g>
+				</svg>
+            </a>
+        </div>
+        
+            <img class="unusual_pic none" 
+                data-choice=""
+            
+                data-tv=""
+            
+                data-movie=""
+            
+                data-variety=""
+            
+                data-cartoon=""
+            
+                data-child=""
+            
+                data-doco=""
+            
+                data-hlw=""
+            
+                data-music=""
+            
+                data-feeds_hotspot=""
+             src="//puui.qpic.cn/vupload/0/common_blank.png/0" alt="" />
+        
+        <div class="mod_search">
+            <form id="searchForm" action="//v.qq.com/x/search/" method="get" target="_blank" class="search_form cf">
+                <label class="search_label" for="keywords">搜索关键词</label>
+                <div class="search_keywords">
+                    <input type="text" name="q" id="keywords" class="search_input" placeholder="" autocomplete="off"  _stat="顶部导航区_搜索框" />
+                </div>
+                <input type="hidden" name="stag">
+                <input type="hidden" name="smartbox_ab">
+                <button class="search_btn" type="submit" _stat="顶部导航区_搜索按钮"><svg class="svg_icon svg_icon_search" viewBox="0 0 18 18" width="18" height="18"><path d="M4.5 4.5c-1.9 1.9-1.9 5.1 0 7.1s5.1 1.9 7.1 0 1.9-5.1 0-7.1-5.2-2-7.1 0zm10.8 12.2l-3.1-3.1c-2.7 2-6.6 1.9-9.1-.6C.3 10.2.3 5.8 3 3 5.7.3 10.2.3 12.9 3c2.5 2.5 2.7 6.4.6 9.1l3.1 3.1c.4.4.4 1 0 1.4-.3.5-.9.5-1.3.1z" fill="currentColor" /></svg><span class="btn_inner">全网搜</span></button>
+                <a class="btn_search_hot" href="https://v.qq.com/x/hotlist/search/?channel=555&source=common_nav_vs" target="_blank" title="热搜榜"><svg class="svg_icon_fire" width="12" height="15" viewBox="0 0 12 15">
+                        <linearGradient x1="41.309%" y1="32.314%" x2="71.734%" y2="100%" id="__gradient_fire">
+                        <stop stop-color="#FF9630" offset="0%"></stop>
+                        <stop stop-color="#FF9630" offset="0%"></stop>
+                        <stop stop-color="#FF1E1E" offset="100%"></stop>
+                        </linearGradient>
+                        <path d="M6.634 17C2.539 14.21 1.905 10.843 4.73 6.898 6.307 4.845 7.253 4.053 7.253 2c.353.183 5.134 2.569 4.024 7.5 1.01-.505 1.684-1.659 2.025-3.463 2.28 3.767 2.264 6.9-.051 9.4-.489.528-1.211 1.05-1.873 1.563-1.33-.625-2.932-1.875-3.573-5.625C6.524 12.833 6.133 14.708 6.634 17z" fill="url(#__gradient_fire)" transform="translate(-3 -2)"></path>
+                    </svg>热搜榜
+                </a>
+            </form>
+            <div class="mod_smartbox none" id="smartbox"></div>
+        </div>
+        <!-- 快捷入口 开始 -->
+<div class="mod_quick cf">
+    <div class="quick_item quick_vip">
+        <a href="https://film.qq.com/" class="quick_link" target="_blank" _stat="顶部导航区:VIP" title="VIP频道">
+            
+            <svg class="svg_quick_icon svg_icon_vip" viewBox="0 0 26 26" width="26" height="26">
+                <filter x="-17.4%" y="-16%" width="134.8%" height="132%" filterUnits="objectBoundingBox" id="__gradient_vip1">
+                    <feOffset in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                    <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                    <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+                    <feMerge>
+                        <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                        <feMergeNode in="SourceGraphic"></feMergeNode>
+                    </feMerge>
+                </filter>
+                <linearGradient x1="-4.4%" y1="3.5%" x2="58.5%" y2="104.9%" id="__gradient_vip2">
+                    <stop stop-color="#FFF1CC" offset="0%"></stop>
+                    <stop stop-color="#FFCD45" offset="36.9%"></stop>
+                    <stop stop-color="#FF7000" offset="100%"></stop>
+                </linearGradient>
+                <linearGradient x1="20.3%" y1="11.1%" x2="86.2%" y2="88.9%" id="__gradient_vip3">
+                    <stop stop-color="#FFF8E6" offset="0%"></stop>
+                    <stop stop-color="#FFCD45" offset="44.5%"></stop>
+                    <stop stop-color="#FF7000" offset="100%"></stop>
+                </linearGradient>
+                <linearGradient x1="0%" y1="35.6%" x2="50%" y2="94.2%" id="__gradient_vip4">
+                    <stop stop-color="#FFF1CC" offset="0%"></stop>
+                    <stop stop-color="#FFCD45" offset="40.9%"></stop>
+                    <stop stop-color="#FF7000" offset="100%"></stop>
+                </linearGradient>
+                <g filter="url(#__gradient_vip1)" transform="translate(2 1)" fill="none" fill-rule="evenodd">
+                    <path d="M18.2.1l-6.8 12h-.1L4.5 0h-4C.3.1 0 .5.3.8l10.7 19c.2.4.7.4.9 0L22.6.8c.1-.3 0-.7-.5-.7h-3.9z" transform="translate(0 3.4)" fill="url(#__gradient_vip2)" stroke="#FFF" stroke-opacity=".8" stroke-width=".2"></path>
+                    <path d="M0 0l5.9 10.4L11.8 0z" transform="translate(5.5 3.4)" fill="url(#__gradient_vip3)" opacity=".3"></path>
+                    <path d="M1.7 6.2L6 4.3l4.2 1.9 1.6-2.8v-.6-1.3-1c0-.2-.2-.4-.5-.4H11L6 2.4h-.2L.8.1H.6C.3.1 0 .3 0 .6v2.8l1.6 2.8z" transform="translate(5.5)" fill="url(#__gradient_vip4)" stroke="#FFF" stroke-opacity=".8" stroke-width=".2"></path>
+                </g>
+            </svg>
+            
+            <span class="quick_text">VIP</span>
+        </a>
+    </div>
+
+    <!-- 历史浮层 -->
+    <div class="quick_item quick_history" id="modHistory">
+        <a href="https://v.qq.com/biu/u/history/" class="quick_link" target="_blank" _stat="顶部导航区:观看历史">
+        
+        <svg class="svg_quick_icon svg_icon_time" viewBox="0 0 26 26" width="26" height="26">
+        <circle cx="13" cy="13" r="11" fill="none" stroke="currentColor" stroke-width="2"></circle>
+        <path d="M14 13h3c.6 0 1 .4 1 1s-.4 1-1 1h-4c-.6 0-1-.4-1-1V8c0-.6.4-1 1-1s1 .4 1 1v5z" fill="currentColor"></path></svg>
+        
+        <span class="quick_text">看过</span></a>
+        <!-- 历史播放浮层 开始 -->
+        
+        <div class="mod_quick_pop mod_pop_history" id="history_pop">
+            <div class="quick_pop_tabs" id="quickPopTabs">
+                <button class="pop_tab current" id="btnQuickHistory" data-type="History">看过</button>
+                <button class="pop_tab" id="btnQuickFavs" data-type="Favs">收藏</button>
+                <button class="pop_tab" id="btnQuickSubs" data-type="Subs">订阅</button>
+            </div>
+            <div class="mod_quick_videolist mod_quick_videolist_history" id="modQuickHistory" _wind="columnname=顶部导航区&controlname=看过浮层"></div>
+            <div class="mod_quick_videolist mod_quick_videolist_favs none" id="modQuickFavs" _wind="columnname=顶部导航区&controlname=收藏浮层"></div>
+            <div class="mod_quick_videolist mod_quick_videolist_subs none" id="modQuickSubs" _wind="columnname=顶部导航区&controlname=订阅浮层"></div>
+            <a class="quick_pop_footer quick_pop_footer_disabled" href="#" id="quickHistoryFooterLink"></a>
+        </div>
+        <!-- 历史播放浮层 结束 -->
+    </div>
+
+    <!-- 上传 -->
+    <div class="quick_item quick_upload __lite_hide__">
+        <a href="https://v.qq.com/u/upload.html" target="_blank" class="quick_link" _stat="顶部导航区:上传" title="上传">
+        
+        <svg class="svg_quick_icon svg_icon_upload" viewBox="0 0 26 26" width="26" height="26">
+            <path d="M12 3h2v11c0 .6-.4 1-1 1s-1-.4-1-1V3z" fill="currentColor"></path>
+            <path d="M9 7l4-4M17 7l-4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M23 13v7c0 2.2-1.8 4-4 4H7c-2.2 0-4-1.8-4-4v-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      
+      <span class="quick_text">上传</span></a>
+    </div>
+
+    <!-- pc客户端 -->
+    <div class="quick_item quick_client __lite_hide__" id="pc_client">
+        <a href="https://node.video.qq.com/x/api/download_pc" _hot="顶部导航区:客户端" class="quick_link" _stat="顶部导航区:客户端">
+        
+        <svg class="svg_quick_icon svg_icon_client" viewBox="0 0 26 26" width="26" height="26">
+            <path d="M15 18v2H7c-2.2 0-4-1.8-4-4V7c0-2.2 1.8-4 4-4h12c2.2 0 4 1.8 4 4v6h-2V7c0-1.1-.9-2-2-2H7c-1.1 0-2 .9-2 2v9c0 1.1.9 2 2 2h8zm0 5v2H9v-2h6zM21 23h2v-6c0-.6-.4-1-1-1s-1 .4-1 1v6z" fill="currentColor"></path>
+            <path d="M19 21l3 2M25 21l-3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+        </svg>
+       
+            <span class="quick_text">下载客户端</span>
+            <i class="triangle_up"><i class="triangle_inner"></i></i>
+            <span class="mark_events" style="display: none;">抢福利</span>
+        </a>
+
+        <div class="mod_quick_pop mod_pop_client">
+            <div class="pop_info_content pop_client_wrap _win">
+                <div class="pop_privilege_line hl">
+                    <svg class="svg_icon svg_icon_vip_flat" viewBox="0 0 26 26" width="16" height="16"><g transform="translate(2 1)" fill="none" fill-rule="evenodd"><path d="M18.2.1l-6.8 12h-.1L4.5 0h-4C.3.1 0 .5.3.8l10.7 19c.2.4.7.4.9 0L22.6.8c.1-.3 0-.7-.5-.7h-3.9z" transform="translate(0 3.4)" fill="currentColor" stroke="#FFF" stroke-opacity=".8" stroke-width=".2"></path><path d="M0 0l5.9 10.4L11.8 0z" transform="translate(5.5 3.4)" fill="currentColor" opacity=".3"></path><path d="M1.7 6.2L6 4.3l4.2 1.9 1.6-2.8v-.6-1.3-1c0-.2-.2-.4-.5-.4H11L6 2.4h-.2L.8.1H.6C.3.1 0 .3 0 .6v2.8l1.6 2.8z" transform="translate(5.5)" fill="currentColor" stroke="#FFF" stroke-opacity=".8" stroke-width=".2"></path></g></svg>
+                    <span class="icon_text">签到抢VIP福利</span>
+                </div>
+                <div class="pop_privilege_line">
+                    <svg class="svg_icon svg_icon_lightning" viewBox="0 0 16 16" width="16" height="16"><path d="M13.799 6.94a.422.422 0 0 0-.103-.076.406.406 0 0 0-.256-.094H9.419L10.77.678a.441.441 0 0 0 .002-.181.429.429 0 0 0-.121-.287.4.4 0 0 0-.582.003L2.198 8.459a.436.436 0 0 0-.119.333.452.452 0 0 0 .112.326.395.395 0 0 0 .299.135h4.152l-1.384 6a.443.443 0 0 0-.011.102.437.437 0 0 0 .102.436.405.405 0 0 0 .582-.003l7.871-8.245a.434.434 0 0 0-.003-.603z"></path></svg>
+                    <span class="icon_text">三倍流畅播放</span>
+                </div>
+                <div class="pop_privilege_line">
+                    <svg class="svg_icon svg_icon_hd" viewBox="0 0 20 20" width="20" height="20"><path d="M13.617 7.979h-1.44v5.042h1.431c.738 0 1.216-.171 1.594-.576.433-.459.657-1.152.657-1.999 0-.855-.207-1.494-.621-1.927-.37-.386-.837-.54-1.621-.54zM17.5 4.5h-15a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h15a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2zm-7.869 9.583H8.29c.054-.352.072-.631.072-1.162v-2.034H4.743v2.034c0 .522.018.793.072 1.162H3.473c.054-.343.072-.631.072-1.162V8.079c0-.531-.018-.811-.072-1.161h1.341a7.501 7.501 0 0 0-.071 1.152v1.737h3.619V8.079c0-.514-.018-.838-.072-1.161h1.341a7 7 0 0 0-.072 1.152v4.851c0 .523.018.783.072 1.162zm6.417-.783c-.576.54-1.297.783-2.359.783h-1.638c-.55 0-.774.009-1.144.026.054-.369.072-.647.072-1.188V8.06a7.67 7.67 0 0 0-.072-1.17c.36.018.576.027 1.144.027h1.629c1.125 0 1.854.233 2.431.792.657.621.999 1.558.999 2.728 0 1.224-.36 2.196-1.062 2.863z"></path></svg>
+                    <span class="icon_text">1080P蓝光画质</span>
+                </div>
+                <div class="pop_privilege_line">
+                    <svg class="svg_icon svg_icon_ahead" viewBox="0 0 16 16" width="16" height="16"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm2 9.001H8.005a1.161 1.161 0 0 1-1.137-.534L5.153 6.639c-.315-.521-.128-1.187.419-1.487.546-.301 1.245-.122 1.561.398L8.619 8H10a1 1 0 0 1 0 2.001z"></path></svg>
+                    <span class="icon_text">新剧提前看</span>
+                </div>
+                <div class="pop_privilege_btns">
+                    <a href="javascript:;" class="btn_em">立即体验</a>
+                </div>
+            </div>
+            <div class="pop_info_content pop_client_wrap _mac">
+                <div class="pop_privilege_line hl">
+                    <svg class="svg_icon svg_icon_hd" viewBox="0 0 20 20" width="20" height="20"><path d="M13.617 7.979h-1.44v5.042h1.431c.738 0 1.216-.171 1.594-.576.433-.459.657-1.152.657-1.999 0-.855-.207-1.494-.621-1.927-.37-.386-.837-.54-1.621-.54z"></path><path d="M17.5 4.5h-15a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h15a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2zm-7.869 9.583H8.29c.054-.352.072-.631.072-1.162v-2.034H4.743v2.034c0 .522.018.793.072 1.162H3.473c.054-.343.072-.631.072-1.162V8.079c0-.531-.018-.811-.072-1.161h1.341a7.501 7.501 0 0 0-.071 1.152v1.737h3.619V8.079c0-.514-.018-.838-.072-1.161h1.341a7 7 0 0 0-.072 1.152v4.851c0 .523.018.783.072 1.162zm6.417-.783c-.576.54-1.297.783-2.359.783h-1.638c-.55 0-.774.009-1.144.026.054-.369.072-.647.072-1.188V8.06a7.67 7.67 0 0 0-.072-1.17c.36.018.576.027 1.144.027h1.629c1.125 0 1.854.233 2.431.792.657.621.999 1.558.999 2.728 0 1.224-.36 2.196-1.062 2.863z"></path></svg>
+                    <span class="icon_text">1080P蓝光画质</span>
+                </div>
+                <div class="pop_privilege_line">
+                    <svg class="svg_icon svg_icon_play" viewBox="0 0 16 16" width="16" height="16"><path d="M10.83 8.31v.022l-4.08 2.539-.005.003-.048.03-.012-.005c-.073.051-.15.101-.246.101-.217 0-.376-.165-.413-.369l-.027-.011V5.461l.009-.005c0-.009-.009-.014-.009-.022 0-.24.197-.435.44-.435.096 0 .174.049.247.101l.031-.017 4.129 2.569v.016a.42.42 0 0 1 .153.317.418.418 0 0 1-.169.325zm3.493 2.604a.986.986 0 0 1-.948.742 1 1 0 0 1-1-1 .98.98 0 0 1 .094-.412l-.019-.01C12.79 9.559 13 8.807 13 8a5 5 0 1 0-5 5c.766 0 1.484-.186 2.133-.494l.013.03a.975.975 0 0 1 .417-.097 1 1 0 0 1 1 1 .987.987 0 0 1-.77.954A6.936 6.936 0 0 1 8 14.999a7 7 0 1 1 7-7c0 1.048-.261 2.024-.677 2.915z"></path></svg>
+                    <span class="icon_text">纯净式无框播放器</span>
+                </div>
+                <div class="pop_privilege_line">
+                    <svg class="svg_icon svg_icon_lightning" viewBox="0 0 16 16" width="16" height="16"><path d="M13.799 6.94a.422.422 0 0 0-.103-.076.406.406 0 0 0-.256-.094H9.419L10.77.678a.441.441 0 0 0 .002-.181.429.429 0 0 0-.121-.287.4.4 0 0 0-.582.003L2.198 8.459a.436.436 0 0 0-.119.333.452.452 0 0 0 .112.326.395.395 0 0 0 .299.135h4.152l-1.384 6a.443.443 0 0 0-.011.102.437.437 0 0 0 .102.436.405.405 0 0 0 .582-.003l7.871-8.245a.434.434 0 0 0-.003-.603z"></path></svg>
+                    <span class="icon_text">三倍流畅播放</span>
+                </div>
+                <div class="pop_privilege_btns">
+                    <a href="javascript:;" class="btn_em">立即体验</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mod_quick_tips none mod_client_bubble">
+            <i class="quick_tips_triangle"></i>
+            <div class="quick_tips_inner">
+                <div class="quick_tips_content">
+                    <a class="tips_txt tips_txt_vip none tips_txt_0" href="//node.video.qq.com/x/api/download_pc" _hot="nav.download.bubble1" _stat="顶部导航区:pc_client_bubble1">
+                        <svg class="svg_icon svg_icon_vip_flat" viewBox="0 0 26 26" width="26" height="26" style="	vertical-align: top; position: relative; top: 6px; margin-right: 5px;color: #ff5c38;width:26px;height:26px;"><g transform="translate(2 1)" fill="none" fill-rule="evenodd"><path d="M18.2.1l-6.8 12h-.1L4.5 0h-4C.3.1 0 .5.3.8l10.7 19c.2.4.7.4.9 0L22.6.8c.1-.3 0-.7-.5-.7h-3.9z" transform="translate(0 3.4)" fill="currentColor" stroke="#FFF" stroke-opacity=".8" stroke-width=".2"></path><path d="M0 0l5.9 10.4L11.8 0z" transform="translate(5.5 3.4)" fill="currentColor" opacity=".3"></path><path d="M1.7 6.2L6 4.3l4.2 1.9 1.6-2.8v-.6-1.3-1c0-.2-.2-.4-.5-.4H11L6 2.4h-.2L.8.1H.6C.3.1 0 .3 0 .6v2.8l1.6 2.8z" transform="translate(5.5)" fill="currentColor" stroke="#FFF" stroke-opacity=".8" stroke-width=".2"></path></g></svg>
+                        <span class="txt">PC客户端连续签到</span>
+                        <span class="txt_bold">7天抢福利</span>
+                        <span class="btn_close" _stat="顶部导航区:pc_client_close_bubble1">
+                             
+                            <svg class="svg_icon svg_icon_close" viewBox="0 0 16 16" width="16" height="16"><use xlink:href="#svg_icon_close_em_sm"></use></svg>
+                            
+                        </span>
+                    </a>
+                    <a class="tips_txt none tips_txt_1 tips_txt_mac_0" href="//node.video.qq.com/x/api/download_pc" _hot="nav.download.bubble2" _stat="顶部导航区:pc_client_bubble2">
+                        <svg class="svg_icon svg_icon_lg svg_icon_hdv" viewBox="0 0 36 36" width="36" height="36"><path d="M30.921 21.237c-.358 1.042-.869 1.885-1.533 2.529-.501.488-1.179.869-2.031 1.143-.638.202-1.491.303-2.559.303h-5.439v-14.317h5.283c1.191 0 2.1.091 2.725.273.84.248 1.559.687 2.158 1.318.599.632 1.055 1.405 1.367 2.319.313.915.469 2.043.469 3.384 0 1.18-.147 2.195-.44 3.048zm-2.841-5.723c-.195-.592-.469-1.055-.82-1.387s-.798-.557-1.338-.674c-.404-.091-1.195-.137-2.373-.137h-1.299v9.482h2.158c.807 0 1.39-.045 1.748-.137.469-.117.857-.315 1.167-.596.309-.28.562-.74.757-1.382.195-.641.293-1.515.293-2.622 0-1.104-.098-1.954-.293-2.547zm-14.147 3.438h-5.664v6.26h-2.891v-14.317h2.891v5.635h5.664v-5.635h2.891v14.316h-2.891v-6.259z"></path></svg>
+                        <span class="txt">PC客户端</span>
+                        <span class="txt_bold">免费蓝光播放</span>
+                        <span class="btn_close" _stat="顶部导航区:pc_client_close_bubble2">
+                            
+                            <svg class="svg_icon svg_icon_close" viewBox="0 0 16 16" width="16" height="16"><use xlink:href="#svg_icon_close_em_sm"></use></svg>
+                            
+                        </span>
+                    </a>
+                    <a class="tips_txt none tips_txt_2 tips_txt_mac_1" href="//node.video.qq.com/x/api/download_pc" _hot="nav.download.bubble3" _stat="顶部导航区:pc_client_bubble3">
+                        <svg class="svg_icon svg_icon_lg svg_icon_lightning" viewBox="0 0 36 36" width="36" height="36"><path d="M22.118 5l-14.118 14.696h8.235l-2.353 11.304 14.118-14.696h-8.235l2.353-11.304z"></path></svg>
+                        <span class="txt">PC客户端</span>
+                        <span class="txt_bold">3倍流畅播放</span>
+                        <span class="btn_close" _stat="顶部导航区:pc_client_close_bubble3">
+                             
+                            <svg class="svg_icon svg_icon_close" viewBox="0 0 16 16" width="16" height="16"><use xlink:href="#svg_icon_close_em_sm"></use></svg>
+                            
+                        </span>
+                    </a>
+                    <a class="tips_txt none tips_txt_3" href="//node.video.qq.com/x/api/download_pc"  _hot="nav.download.bubble4" _stat="顶部导航区:pc_client_bubble4">
+                        <svg class="svg_icon svg_icon_lg svg_icon_chanting" viewBox="0 0 36 36" width="36" height="36"><path d="M27.123 23.974c-.08.718-.639 1.284-1.344 1.284-.76 0-1.375-.647-1.375-1.445 0-.347.132-.653.326-.902l-.169-.119c1.055-1.456 1.688-3.267 1.688-5.238 0-4.787-3.693-8.667-8.25-8.667s-8.25 3.88-8.25 8.667c0 4.786 3.694 8.667 8.25 8.667.413 0 .815-.042 1.211-.104l.013.125.15-.032c.759 0 1.375.647 1.375 1.444 0 .798-.616 1.444-1.375 1.444-.123 0-.232-.042-.345-.073-.34.039-.678.085-1.028.085-6.075 0-11-5.173-11-11.555s4.925-11.556 11-11.556 11 5.173 11 11.556c-.001 2.381-.701 4.581-1.877 6.419zm-8.829-3.581l-.27-.053-.123-.06c-.129-.06-.247-.134-.353-.234l-.091-.103-.167-.19-2.746-4.974c-.371-.645-.151-1.468.492-1.84.643-.372 1.465-.151 1.836.493l2.276 4.123h2.883c.81 0 1.466.647 1.466 1.445 0 .797-.657 1.444-1.466 1.444h-3.483l-.254-.051z"></path></svg>
+                        <span class="txt">PC客户端</span>
+                        <span class="txt_bold">提前一小时追剧</span>
+                        <span class="btn_close" _stat="顶部导航区:pc_client_close_bubble4">
+                             
+                            <svg class="svg_icon svg_icon_close" viewBox="0 0 16 16" width="16" height="16"><use xlink:href="#svg_icon_close_em_sm"></use></svg>
+                            
+                        </span>
+                    </a>
+                    <a class="tips_txt none tips_txt_4" href="//node.video.qq.com/x/api/download_pc"  _hot="nav.download.bubble5" _stat="顶部导航区:pc_client_bubble5">
+                        <svg class="svg_icon svg_icon_lg svg_icon_download" viewBox="0 0 36 36" width="36" height="36"><path d="M29.634 24.091l.027.012c-2.056 4.086-6.276 6.896-11.162 6.896-4.923 0-9.169-2.853-11.207-6.989l.022-.011c-.091-.192-.149-.4-.149-.625 0-.822.674-1.488 1.506-1.488.562 0 1.033.318 1.292.769l.012-.006c1.541 3.159 4.773 5.341 8.525 5.341 3.61 0 6.742-2.021 8.346-4.988.218-.555.757-.952 1.396-.952.832 0 1.506.667 1.506 1.488 0 .195-.043.381-.114.553zm-9.805-2.904c-.232.473-.726.813-1.329.813-.205 0-.393-.049-.569-.118l-.098-.043c-.136-.064-.258-.144-.365-.241l-.065-.043-.016-.023c-.099-.104-.183-.219-.245-.346l-3.75-3.732c-.569-.566-.569-1.484 0-2.051.569-.566 1.491-.566 2.06 0l1.559 1.551v-8.6c0-.753.666-1.364 1.488-1.364s1.488.611 1.488 1.364v8.579l1.528-1.521c.568-.565 1.489-.565 2.057 0s.568 1.482 0 2.047l-3.743 3.728z"></path></svg>
+                        <span class="txt">PC客户端</span>
+                        <span class="txt_bold">自动更新下载剧集</span>
+                        <span class="btn_close" _stat="顶部导航区:pc_client_close_bubble5">
+                             
+                            <svg class="svg_icon svg_icon_close" viewBox="0 0 16 16" width="16" height="16"><use xlink:href="#svg_icon_close_em_sm"></use></svg>
+                            
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick_item quick_user" id="mod_head_user">
+        <a href="https://v.qq.com/biu/u/history/" class="quick_link _checklogin" id="mod_head_notice_trigger" target="_blank"  _stat="顶部导航区:头像">
+            <img class="quick_user_avatar" src="//puui.qpic.cn/vupload/0/common_avatar.png/0" data-type="avatar" data-avatarsize="40">
+			    <span class="account_type" data-type="account_type_logo">
+                    <i class="icon icon_qq __account_type_qq none"><svg class="svg_icon svg_icon_qq" viewBox="0 0 20 20" width="8" height="8"><path d="M16.3 13.7c-.3.7-.7 1.3-1.2 1.8 1.1.3.8.9.8.9.5.3.5 2-2.3 2-1.8 0-2.6-.5-2.9-.9H10c-.3 0-.6 0-.9-.1-.3.3-1.1.9-2.9.9-2.7 0-2.7-1.7-2.2-2 0 0-.3-.6 1-.9-.5-.6-.9-1.2-1.2-2-1.1 2-1.7.7-1.6-.9.1-1.4 1.3-2.9 1.6-3.3V9c0-.3.1-.6.4-.9v-.2c0-.3.2-.6.4-.8V7c0-3 2.5-5.5 5.6-5.5S15.7 4 15.7 7v.3c.2.2.3.4.3.6v.2c.2.2.4.5.4.8 0 .2 0 .3-.1.5.3.4 1.5 1.9 1.6 3.3-.1 1.5-.6 2.8-1.6 1z"></path></svg></i>
+                    <i class="icon icon_wechat __account_type_wx none"><svg class="svg_icon svg_icon_wechat" viewBox="0 0 20 20" width="8" height="8"><path d="M13.4 7.6h.7c-.6-2.7-3.6-4.8-7.1-4.8-3.9 0-7 2.6-7 6 0 1.9 1.1 3.5 2.8 4.7l-.7 2.1 2.5-1.2c.9.2 1.6.4 2.5.4h.7c-.1-.5-.2-1-.2-1.5-.1-3.2 2.5-5.7 5.8-5.7zM9.7 5.7c.5 0 .9.3.9.9 0 .5-.3.9-.9.9-.5 0-1.1-.4-1.1-.9s.5-.9 1.1-.9zm-5 1.8c-.5 0-1.1-.4-1.1-.9s.5-.9 1.1-.9.9.3.9.9c0 .5-.3.9-.9.9zM19.8 13.1c0-2.8-2.8-5.1-6-5.1-3.3 0-6 2.3-6 5.1s2.6 5.1 6 5.1c.7 0 1.4-.2 2.1-.4l1.9 1.1-.5-1.8c1.5-1 2.5-2.4 2.5-4zm-7.9-.9c-.3 0-.7-.3-.7-.7 0-.3.4-.7.7-.7.5 0 .9.4.9.7 0 .4-.3.7-.9.7zm3.9 0c-.3 0-.7-.3-.7-.7 0-.3.4-.7.7-.7.5 0 .9.4.9.7 0 .4-.4.7-.9.7z"></path></svg></i>
+                </span>
+                <img src="//puui.qpic.cn/vupload/0/common_blank.png/0" alt="" class="icon_vip_pic none" data-type="viplogo" width="15" />
+            <i class="triangle_up"><i class="triangle_inner"></i></i>
+        </a>
+
+        <!-- 用户信息浮层 开始 -->
+        <div class="mod_quick_pop mod_pop_user" id="mod_head_notice_pop" _stat="顶部导航区:头像浮层">
+            <div class="pop_info_content quick_pop_user">
+                <div class="quick_pop_user_hd">
+                    <span class="account_type __accout_type_name"></span>
+                    <a href="https://v.qq.com/biu/u/history/" _stat="顶部导航区:头像浮层:昵称" class="user_name _nickname"></a>
+                    <a href="https://film.qq.com/vip/my/" class="link_vip_icon" _stat="顶部导航区:头像浮层:vipicon">
+                        <img src="//puui.qpic.cn/vupload/0/common_blank.png/0" alt="" class="icon_vip_pic none" data-type="viplogo" width="24" />
+                    </a>
+                    <a href="javascript:;" class="link_change" data-type="switchlogin" _stat="顶部导航区:头像浮层:切换账号" title="切换账号">切换</a>
+                    <a href="javascript:;" class="link_quit" data-type="logout" _stat="顶部导航区:头像浮层:退出"  title="退出">退出</a>
+                    <div class="quick_vip_meta" id="quick_user_vip" data-version='3'></div>
+                </div>
+                <div class="quick_pop_user_bd">
+                    <div class="quick_features cf">
+                        <a class="feature_item" href="http://v.qq.com/u/comment/" target="_blank" _hot="顶部导航区:头像浮层:user_message" _stat="顶部导航区:头像浮层:user_message">
+                            <i class="icon_feature icon_feature_comment"></i>
+                            <span class="icon_text" id="nav_user_message">评论消息</span>
+                        </a>
+                        <a class="feature_item" href="https://v.qq.com/biu/u/history/" target="_blank" _hot="顶部导航区:头像浮层:user_history" _stat="顶部导航区:头像浮层:user_history">
+                            <i class="icon_feature icon_feature_cloud"></i>
+                            <span class="icon_text">云同步观看记录</span>
+                        </a>
+                        <a class="feature_item" href="https://v.qq.com/u/wallet/vbshop.html#tab=lottery" target="_blank" _hot="顶部导航区:头像浮层:user_lottery" _stat="顶部导航区:头像浮层:user_lottery">
+                            <i class="icon_feature icon_feature_lottery"></i>
+                            <span class="icon_text">免费抽奖</span>
+                        </a>
+                        <a class="feature_item _download_pc" href="//node.video.qq.com/x/api/download_pc" _hot="顶部导航区:头像浮层:download" _stat="顶部导航区:头像浮层:download">
+                            <i class="icon_feature icon_feature_client"></i>
+                            <span class="icon_text">用客户端看抢VIP</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--未登录会员账号 开始-->
+        <div class="mod_quick_pop mod_pop_user none" id="mod_notlogin_pop">
+            <div class="pop_info_content quick_pop_user">
+                <div class="quick_pop_user_hd">
+                    <span class="account_type">登录之后可以</span>
+                    <div class="quick_vip_meta">
+                        <span class="vip_now">开通VIP/超级影视VIP 看大片</span>
+                        <span class="vip_next">
+                            <a href="javascript:;" class="btn_vip_em __open_vip_notLogin" _stat="顶部导航区:头像浮层:开通vip" >开通</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="quick_pop_user_bd">
+                    <div class="quick_features cf">
+                        <a class="feature_item" href="http://v.qq.com/u/comment/" target="_blank" _hot="nav.user.message" _stat="顶部导航区:头像浮层:user_message">
+                            <i class="icon_feature icon_feature_comment"></i>
+                            <span class="icon_text">评论消息</span>
+                        </a>
+                        <a class="feature_item" href="https://v.qq.com/biu/u/history/" target="_blank" _hot="顶部导航区:头像浮层:user_history" _stat="顶部导航区:头像浮层:user_history">
+                            <i class="icon_feature icon_feature_cloud"></i>
+                            <span class="icon_text">云同步观看记录</span>
+                        </a>
+                        <a class="feature_item" href="https://v.qq.com/u/wallet/vbshop.html#tab=lottery" target="_blank" _hot="顶部导航区:头像浮层:user_lottery" _stat="顶部导航区:头像浮层:user_lottery">
+                            <i class="icon_feature icon_feature_lottery"></i>
+                            <span class="icon_text">免费抽奖</span>
+                        </a>
+                        <a class="feature_item _download_pc" href="//node.video.qq.com/x/api/download_pc" _hot="顶部导航区:头像浮层:download" _stat="顶部导航区:头像浮层:download">
+                            <i class="icon_feature icon_feature_client"></i>
+                            <span class="icon_text">用客户端看抢VIP</span>
+                        </a>
+                    </div>
+                    <div class="quick_pop_btn">
+                        <a href="javascript:;" _stat="顶部导航区:头像浮层:立即登录" class="btn_pop_link" data-type="login" data-boss="5">立即登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--未登录会员账号 结束-->
+        
+        <!-- 用户信息浮层 结束 -->
+    </div>
+</div>
+<!-- 快捷入口 结束 -->
+
+    </div>
+
+	<div class="site_head_nav">
+		<div class="site_head_nav_inner">
+            
+                <div class="nav_area">
+                    <img class="nav_label" alt="影视推荐" data-src="//puui.qpic.cn/vupload/0/20181206_mfjob5lc2f/0" src="//puui.qpic.cn/vupload/0/common_blank.png/0" />
+                    <div class="nav_content">
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/choice" _stat="顶部导航区_全部频道浮层_精选"  >精选</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/tv" _stat="顶部导航区_全部频道浮层_电视剧"  >电视剧</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/movie" _stat="顶部导航区_全部频道浮层_电影"  >电影</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/variety" _stat="顶部导航区_全部频道浮层_综艺"  >综艺</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/cartoon" _stat="顶部导航区_全部频道浮层_动漫"  >动漫</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/child" _stat="顶部导航区_全部频道浮层_少儿"  >少儿</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/doco" _stat="顶部导航区_全部频道浮层_纪录片"  >纪录片</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="https://film.qq.com/" _stat="顶部导航区_全部频道浮层_VIP会员"  target="_blank">VIP会员</a>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="nav_area">
+                    <img class="nav_label" alt="乐享生活" data-src="//puui.qpic.cn/vupload/0/20181206_5deqrhrqvnm/0" src="//puui.qpic.cn/vupload/0/common_blank.png/0" />
+                    <div class="nav_content">
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/music" _stat="顶部导航区_全部频道浮层_音乐"  >音乐</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/life" _stat="顶部导航区_全部频道浮层_生活"  >生活</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/art" _stat="顶部导航区_全部频道浮层_艺术"  >艺术</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/travel" _stat="顶部导航区_全部频道浮层_旅游"  >旅游</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/baby" _stat="顶部导航区_全部频道浮层_育儿"  >育儿</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="http://v.qq.com/videoplus/" _stat="顶部导航区_全部频道浮层_原创"  target="_blank">原创</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="https://v.qq.com/livemusic/" _stat="顶部导航区_全部频道浮层_演唱会"  >演唱会</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/fun" _stat="顶部导航区_全部频道浮层_搞笑"  >搞笑</a>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="nav_area">
+                    <img class="nav_label" alt="就好这口" data-src="//puui.qpic.cn/vupload/0/20181206_wm4s3djxw0i/0" src="//puui.qpic.cn/vupload/0/common_blank.png/0" />
+                    <div class="nav_content">
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/feeds_hotspot" _stat="顶部导航区_全部频道浮层_爱看"  >爱看</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/education" _stat="顶部导航区_全部频道浮层_上课啦"  >上课啦</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/knowledge" _stat="顶部导航区_全部频道浮层_知识"  >知识</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/gaokao" _stat="顶部导航区_全部频道浮层_高考"  >高考</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="https://v.qq.com/biu/ranks/?t=hotplay&channel=all&ptag=vheader" _stat="顶部导航区_全部频道浮层_热播榜"  target="_blank">热播榜</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="https://v.qq.com/biu/ranks/?t=hotsearch&ptag=vheader" _stat="顶部导航区_全部频道浮层_热搜榜"  target="_blank">热搜榜</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="http://v.qq.com/x/live/" _stat="顶部导航区_全部频道浮层_直播"  >直播</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/astro" _stat="顶部导航区_全部频道浮层_星座"  >星座</a>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="nav_area">
+                    <img class="nav_label" alt="资讯前沿" data-src="//puui.qpic.cn/vupload/0/20181206_nnf2w1onto/0" src="//puui.qpic.cn/vupload/0/common_blank.png/0" />
+                    <div class="nav_content">
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/ent" _stat="顶部导航区_全部频道浮层_娱乐"  >娱乐</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/news" _stat="顶部导航区_全部频道浮层_新闻"  >新闻</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/fashion" _stat="顶部导航区_全部频道浮层_时尚"  >时尚</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/tech" _stat="顶部导航区_全部频道浮层_科技"  >科技</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/auto" _stat="顶部导航区_全部频道浮层_汽车"  >汽车</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/house" _stat="顶部导航区_全部频道浮层_房产"  >房产</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/finance" _stat="顶部导航区_全部频道浮层_财经"  >财经</a>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="nav_area">
+                    <img class="nav_label" alt="游戏体育" data-src="//puui.qpic.cn/vupload/0/20181226_1545830743429_ynggg8rc7hd.png/0" src="//puui.qpic.cn/vupload/0/common_blank.png/0" />
+                    <div class="nav_content">
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="http://v.qq.com/games/" _stat="顶部导航区_全部频道浮层_游戏"  target="_blank">游戏</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="https://iwan.qq.com/pcwebsite/game?ADTAG=vzdh" _stat="顶部导航区_全部频道浮层_网页游戏"  target="_blank">网页游戏</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="/channel/sports" _stat="顶部导航区_全部频道浮层_体育"  >体育</a>
+                            </div>
+                        
+                            <div class="nav_cell">
+                                <a class="nav_link_main" href="https://v.qq.com/game/p/topic/LOLS9/index.html" _stat="顶部导航区_全部频道浮层_LOL"  target="_blank">LOL</a>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+		</div>
+	</div>
+</div>
+
+
+
+
+
+    <link rel="stylesheet" href="//vm.gtimg.cn/tencentvideo/vstyle/web/v6/style/css/channel/channel_feeds.css?v=2019111818">
+    <!--[if lte IE 9 ]>
+    <link rel="stylesheet" href="//vm.gtimg.cn/tencentvideo/vstyle/web/v6/style/css/channel/channel_feeds.ie.css?v=2019111818" />
+    <![endif]-->
+    <div class="container_feeds">
+
+
+    
+        
+            
+                
+                
+  <div class="site_subnav_v" _wind="columnname=体育_热门筛选&controlname=sport_new_filter_feed_web" _expose="sport_new_filter_feed_web" id="sport_new_filter_feed_web" data-istyle="116" data-context="0">
+    
+    <a href="/channel/sports" class="nav_link nav_link_v current_v" data-channel-name="sports">体育精选</a>
+    
+      
+        
+          
+          
+            
+              
+                  <a href="/channel/channel_nba" class="nav_link nav_link_v " data-channel-name="channel_nba">NBA</a>
+              
+            
+          
+            
+              
+                  <a href="/channel/channel_cba" class="nav_link nav_link_v " data-channel-name="channel_cba">CBA</a>
+              
+            
+          
+            
+              
+                  <a href="/channel/channel_football" class="nav_link nav_link_v " data-channel-name="channel_football">足球</a>
+              
+            
+          
+            
+              
+                  <a href="/channel/channel_kungfu" class="nav_link nav_link_v " data-channel-name="channel_kungfu">功夫搏击</a>
+              
+            
+          
+            
+              
+                  <a href="/channel/channel_extreme_sport" class="nav_link nav_link_v " data-channel-name="channel_extreme_sport">极限运动</a>
+              
+            
+          
+            
+              
+                  <a href="/channel/channel_eletronic_game" class="nav_link nav_link_v " data-channel-name="channel_eletronic_game">电竞</a>
+              
+            
+          
+            
+          
+          
+              <a href="/channel/sports?listpage=1&channel=sports&sort=5&_all=1" data-value="sort=5" class="nav_link nav_link_v nav_link_more  t4">体育片库</a>
+            
+          
+        
+      
+    
+    
+  </div>
+  
+
+            
+        
+    
+
+    
+        
+            
+                
+                
+
+  
+    <div class="mod_video_feeds" _wind="columnname=体育_体育&controlname=feed_sport_new" _expose="feed_sport_new" id="feed_sport_new" data-istyle="117" data-context="0" data-hasnextpage="true" data-pagecontext="1" data-strename="feed_sport_new">
+
+      <div class="video_feeds_loading">
+  <svg class="svg_icon_loading" width="18" height="18" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" fill="none" stroke="currentColor" stroke-width="10" r="35" stroke-dasharray="168 34" transform="rotate(117.68 50 50)">
+      <animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;360 50 50" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animateTransform>
+    </circle>
+  </svg>
+  正在努力加载中
+</div>
+
+      
+
+      <div class="video_feeds_container" style="display: none">
+        
+          
+  
+    <div
+      class="video_feeds_item "
+      data-vid="y0875tbpunq">
+      <div class="item_cover"
+        data-vid="y0875tbpunq"
+        data-title="他明明可以靠身材吃饭，却偏偏靠搞笑，奥斯卡都欠他一座小金人！"
+        data-insert="false"
+        data-duration="62">
+        
+          <div class="title_wrap"><p class="title">他明明可以靠身材吃饭，却偏偏靠搞笑，奥斯卡都欠他一座小金人！</p></div>
+        
+        <img loading="lazy" class="cover" src="//puui.qpic.cn/qqvideo/0/y0875tbpunq/0" xxx="//puui.qpic.cn/qqvideo/0/y0875tbpunq/0">
+        <button class="icon_play" _stat="体育:大封面图">
+          <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#111226" opacity=".9" cx="30" cy="30" r="30"/><path d="M25 37.287V22.713a1 1 0 0 1 1.546-.837l11.17 7.286a1 1 0 0 1 0 1.676l-11.17 7.286A1 1 0 0 1 25 37.287z" fill="#FFF" fill-rule="nonzero"/></g></svg>
+        </button>
+      </div>
+      <div class="item_action">
+        <div class="action_left">
+          
+            
+              
+                <!-- 普通标签 -->
+                
+                <!-- V+ -->
+                
+                  <div class="tag tag_om" data-uin="3056537882" _stat="体育:账号按钮">
+                    <a class="tag_box" href="//v.qq.com/vplus/3056537882">
+                      
+                        <img loading="lazy" class="tag_pic" src="//inews.gtimg.com/newsapp_ls/0/8995693280_200200/0" alt="挑战有可能的">
+                      
+                      <span class="tag_title">挑战有可能的</span>
+                    </a>
+                    <span class="svg_box follow_no" title="订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><rect class="tag_add_svg" x="4" y="8" width="10" height="2" rx="1"/><rect class="tag_add_svg" transform="rotate(-90 9 9)" x="4" y="8" width="10" height="2" rx="1"/></g></svg>
+                    </span>
+                    <span class="svg_box follow_done none" title="取消订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" stroke="#7ED321" stroke-linecap="round" stroke-width="1.8"><path d="M7.972 11.688L14 6M7.361 11.708L5 9"/></g></g></svg>
+                    </span>
+                  </div>
+                
+              
+            
+          
+        </div>
+        <div class="action_right">
+          <span class="svg_box collect_no" title="收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095" class="collect_stroke" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm1-6V9h-2v2H9v2h2v2h2v-2h2v-2h-2z"  class="collect_fill" fill-rule="nonzero"/></g></svg>
+          </span>
+          <span class="svg_box collect_done none" title="取消收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#FC5131" offset="0%"/><stop stop-color="#FF147C" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M15.856 6.157a7.002 7.002 0 0 0-10.761 4.688L4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095l-.144.062z" stroke="#FF1B40" stroke-width="2" fill="#FF1B40" stroke-linecap="round" stroke-linejoin="round"/><circle fill="#FF1B40" fill-rule="nonzero" cx="12" cy="12" r="5"/><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 12l1.5 1.5 3-2.5"/></g></svg>
+          </span>
+          <div class="item item_more">
+            <svg class="item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="#999" fill-rule="evenodd"><circle cx="8.5" cy="14.5" r="1.5"/><circle cx="8.5" cy="8.5" r="1.5"/><circle cx="8.5" cy="2.5" r="1.5"/></g></svg>
+            <div class="more_nav">
+              <button class="nav_item nav_item_download">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero"><path d="M8 8h2V2a1 1 0 1 0-2 0v6z" class="svg_fill"/><path d="M6 6l3 2M12 6L9 8" class="svg_stroke" stroke-width="2" stroke-linecap="square"/><path d="M15 9a1 1 0 0 1 2 0v2.8a4.2 4.2 0 0 1-4.2 4.2H5.2A4.2 4.2 0 0 1 1 11.8V9a1 1 0 1 1 2 0v2.8A2.2 2.2 0 0 0 5.2 14h7.6a2.2 2.2 0 0 0 2.2-2.2V9z" class="svg_fill"/></g></g></svg>
+                下载
+              </button>
+              <button class="nav_item nav_item_dislike ">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" class="svg_stroke" stroke-linecap="square" stroke-width="2"><path d="M7 7l4 4M11 7l-4 4"/></g><circle class="svg_stroke" stroke-width="2" cx="9" cy="9" r="7"/></g></svg>
+                不感兴趣
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  
+    <div
+      class="video_feeds_item "
+      data-vid="q0925knztji">
+      <div class="item_cover"
+        data-vid="q0925knztji"
+        data-title="被老外顶中要害，中国70KG悍将罕见暴怒，连续重拳KO对手"
+        data-insert="false"
+        data-duration="134">
+        
+          <div class="title_wrap"><p class="title">被老外顶中要害，中国70KG悍将罕见暴怒，连续重拳KO对手</p></div>
+        
+        <img loading="lazy" class="cover" src="//puui.qpic.cn/qqvideo/0/q0925knztji/0" xxx="//puui.qpic.cn/qqvideo/0/q0925knztji/0">
+        <button class="icon_play" _stat="体育:大封面图">
+          <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#111226" opacity=".9" cx="30" cy="30" r="30"/><path d="M25 37.287V22.713a1 1 0 0 1 1.546-.837l11.17 7.286a1 1 0 0 1 0 1.676l-11.17 7.286A1 1 0 0 1 25 37.287z" fill="#FFF" fill-rule="nonzero"/></g></svg>
+        </button>
+      </div>
+      <div class="item_action">
+        <div class="action_left">
+          
+            
+              
+                <!-- 普通标签 -->
+                
+                <!-- V+ -->
+                
+                  <div class="tag tag_om" data-uin="3146455917" _stat="体育:账号按钮">
+                    <a class="tag_box" href="//v.qq.com/vplus/3146455917">
+                      
+                        <img loading="lazy" class="tag_pic" src="//inews.gtimg.com/newsapp_ls/0/8667237509_200200/0" alt="勇士的荣耀">
+                      
+                      <span class="tag_title">勇士的荣耀</span>
+                    </a>
+                    <span class="svg_box follow_no" title="订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><rect class="tag_add_svg" x="4" y="8" width="10" height="2" rx="1"/><rect class="tag_add_svg" transform="rotate(-90 9 9)" x="4" y="8" width="10" height="2" rx="1"/></g></svg>
+                    </span>
+                    <span class="svg_box follow_done none" title="取消订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" stroke="#7ED321" stroke-linecap="round" stroke-width="1.8"><path d="M7.972 11.688L14 6M7.361 11.708L5 9"/></g></g></svg>
+                    </span>
+                  </div>
+                
+              
+            
+              
+                <!-- 普通标签 -->
+                
+                  <a class="tag tag_quickPlay" href="https://v.qq.com/channel/tag_page?tag_id=80552&tag_name=%E8%87%AA%E7%94%B1%E6%90%8F%E5%87%BB" data-tagid="80552" data-tagname="自由搏击" _stat="体育:标签按钮">
+                    <span>
+                      <svg class="tag_play" width="18" height="18"><path d="M8.495 3.01L5 10h3v5.282L5.952 16.67c-.846.573-2.015.378-2.61-.436A1.758 1.758 0 0 1 3 15.196V2.804C3 1.807 3.839 1 4.873 1c.379 0 .748.11 1.06.317L8.495 3.01zM9 3.344l6.187 4.09c.853.563 1.07 1.686.484 2.507-.126.177-.284.33-.466.454L9.093 14.54 12 8H9V3.344z" fill="#FF5C38" fill-rule="nonzero"/></svg>
+                    </span>
+                    <span class="tag_box">
+                      
+                      <span class="tag_title">自由搏击</span>
+                    </span>
+                  </a>
+                
+                <!-- V+ -->
+                
+              
+            
+          
+        </div>
+        <div class="action_right">
+          <span class="svg_box collect_no" title="收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095" class="collect_stroke" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm1-6V9h-2v2H9v2h2v2h2v-2h2v-2h-2z"  class="collect_fill" fill-rule="nonzero"/></g></svg>
+          </span>
+          <span class="svg_box collect_done none" title="取消收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#FC5131" offset="0%"/><stop stop-color="#FF147C" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M15.856 6.157a7.002 7.002 0 0 0-10.761 4.688L4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095l-.144.062z" stroke="#FF1B40" stroke-width="2" fill="#FF1B40" stroke-linecap="round" stroke-linejoin="round"/><circle fill="#FF1B40" fill-rule="nonzero" cx="12" cy="12" r="5"/><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 12l1.5 1.5 3-2.5"/></g></svg>
+          </span>
+          <div class="item item_more">
+            <svg class="item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="#999" fill-rule="evenodd"><circle cx="8.5" cy="14.5" r="1.5"/><circle cx="8.5" cy="8.5" r="1.5"/><circle cx="8.5" cy="2.5" r="1.5"/></g></svg>
+            <div class="more_nav">
+              <button class="nav_item nav_item_download">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero"><path d="M8 8h2V2a1 1 0 1 0-2 0v6z" class="svg_fill"/><path d="M6 6l3 2M12 6L9 8" class="svg_stroke" stroke-width="2" stroke-linecap="square"/><path d="M15 9a1 1 0 0 1 2 0v2.8a4.2 4.2 0 0 1-4.2 4.2H5.2A4.2 4.2 0 0 1 1 11.8V9a1 1 0 1 1 2 0v2.8A2.2 2.2 0 0 0 5.2 14h7.6a2.2 2.2 0 0 0 2.2-2.2V9z" class="svg_fill"/></g></g></svg>
+                下载
+              </button>
+              <button class="nav_item nav_item_dislike ">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" class="svg_stroke" stroke-linecap="square" stroke-width="2"><path d="M7 7l4 4M11 7l-4 4"/></g><circle class="svg_stroke" stroke-width="2" cx="9" cy="9" r="7"/></g></svg>
+                不感兴趣
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  
+    <div
+      class="video_feeds_item "
+      data-vid="x0899obsryx">
+      <div class="item_cover"
+        data-vid="x0899obsryx"
+        data-title="极限镜头“失误瞬间”生命的最后一秒，被镜头完整记录！"
+        data-insert="false"
+        data-duration="80">
+        
+          <div class="title_wrap"><p class="title">极限镜头“失误瞬间”生命的最后一秒，被镜头完整记录！</p></div>
+        
+        <img loading="lazy" class="cover" src="//puui.qpic.cn/qqvideo/0/x0899obsryx/0" xxx="//puui.qpic.cn/qqvideo/0/x0899obsryx/0">
+        <button class="icon_play" _stat="体育:大封面图">
+          <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#111226" opacity=".9" cx="30" cy="30" r="30"/><path d="M25 37.287V22.713a1 1 0 0 1 1.546-.837l11.17 7.286a1 1 0 0 1 0 1.676l-11.17 7.286A1 1 0 0 1 25 37.287z" fill="#FFF" fill-rule="nonzero"/></g></svg>
+        </button>
+      </div>
+      <div class="item_action">
+        <div class="action_left">
+          
+            
+              
+                <!-- 普通标签 -->
+                
+                <!-- V+ -->
+                
+                  <div class="tag tag_om" data-uin="2302792119" _stat="体育:账号按钮">
+                    <a class="tag_box" href="//v.qq.com/vplus/2302792119">
+                      
+                        <img loading="lazy" class="tag_pic" src="//inews.gtimg.com/newsapp_ls/0/2581725045_200200/0" alt="生活不过这样">
+                      
+                      <span class="tag_title">生活不过这样</span>
+                    </a>
+                    <span class="svg_box follow_no" title="订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><rect class="tag_add_svg" x="4" y="8" width="10" height="2" rx="1"/><rect class="tag_add_svg" transform="rotate(-90 9 9)" x="4" y="8" width="10" height="2" rx="1"/></g></svg>
+                    </span>
+                    <span class="svg_box follow_done none" title="取消订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" stroke="#7ED321" stroke-linecap="round" stroke-width="1.8"><path d="M7.972 11.688L14 6M7.361 11.708L5 9"/></g></g></svg>
+                    </span>
+                  </div>
+                
+              
+            
+              
+                <!-- 普通标签 -->
+                
+                  <a class="tag tag_quickPlay" href="https://v.qq.com/channel/tag_page?tag_id=11778807&tag_name=%E6%94%80%E7%88%AC%E7%8B%82%E4%BA%BA" data-tagid="11778807" data-tagname="攀爬狂人" _stat="体育:标签按钮">
+                    <span>
+                      <svg class="tag_play" width="18" height="18"><path d="M8.495 3.01L5 10h3v5.282L5.952 16.67c-.846.573-2.015.378-2.61-.436A1.758 1.758 0 0 1 3 15.196V2.804C3 1.807 3.839 1 4.873 1c.379 0 .748.11 1.06.317L8.495 3.01zM9 3.344l6.187 4.09c.853.563 1.07 1.686.484 2.507-.126.177-.284.33-.466.454L9.093 14.54 12 8H9V3.344z" fill="#FF5C38" fill-rule="nonzero"/></svg>
+                    </span>
+                    <span class="tag_box">
+                      
+                      <span class="tag_title">攀爬狂人</span>
+                    </span>
+                  </a>
+                
+                <!-- V+ -->
+                
+              
+            
+          
+        </div>
+        <div class="action_right">
+          <span class="svg_box collect_no" title="收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095" class="collect_stroke" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm1-6V9h-2v2H9v2h2v2h2v-2h2v-2h-2z"  class="collect_fill" fill-rule="nonzero"/></g></svg>
+          </span>
+          <span class="svg_box collect_done none" title="取消收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#FC5131" offset="0%"/><stop stop-color="#FF147C" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M15.856 6.157a7.002 7.002 0 0 0-10.761 4.688L4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095l-.144.062z" stroke="#FF1B40" stroke-width="2" fill="#FF1B40" stroke-linecap="round" stroke-linejoin="round"/><circle fill="#FF1B40" fill-rule="nonzero" cx="12" cy="12" r="5"/><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 12l1.5 1.5 3-2.5"/></g></svg>
+          </span>
+          <div class="item item_more">
+            <svg class="item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="#999" fill-rule="evenodd"><circle cx="8.5" cy="14.5" r="1.5"/><circle cx="8.5" cy="8.5" r="1.5"/><circle cx="8.5" cy="2.5" r="1.5"/></g></svg>
+            <div class="more_nav">
+              <button class="nav_item nav_item_download">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero"><path d="M8 8h2V2a1 1 0 1 0-2 0v6z" class="svg_fill"/><path d="M6 6l3 2M12 6L9 8" class="svg_stroke" stroke-width="2" stroke-linecap="square"/><path d="M15 9a1 1 0 0 1 2 0v2.8a4.2 4.2 0 0 1-4.2 4.2H5.2A4.2 4.2 0 0 1 1 11.8V9a1 1 0 1 1 2 0v2.8A2.2 2.2 0 0 0 5.2 14h7.6a2.2 2.2 0 0 0 2.2-2.2V9z" class="svg_fill"/></g></g></svg>
+                下载
+              </button>
+              <button class="nav_item nav_item_dislike ">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" class="svg_stroke" stroke-linecap="square" stroke-width="2"><path d="M7 7l4 4M11 7l-4 4"/></g><circle class="svg_stroke" stroke-width="2" cx="9" cy="9" r="7"/></g></svg>
+                不感兴趣
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  
+    <div
+      class="video_feeds_item "
+      data-vid="a3051ypad6c">
+      <div class="item_cover"
+        data-vid="a3051ypad6c"
+        data-title="皓钧教你自由泳，如何漂浮水面更轻松？"
+        data-insert="false"
+        data-duration="174">
+        
+          <div class="title_wrap"><p class="title">皓钧教你自由泳，如何漂浮水面更轻松？</p></div>
+        
+        <img loading="lazy" class="cover" src="//puui.qpic.cn/qqvideo/0/a3051ypad6c/0" xxx="//puui.qpic.cn/qqvideo/0/a3051ypad6c/0">
+        <button class="icon_play" _stat="体育:大封面图">
+          <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#111226" opacity=".9" cx="30" cy="30" r="30"/><path d="M25 37.287V22.713a1 1 0 0 1 1.546-.837l11.17 7.286a1 1 0 0 1 0 1.676l-11.17 7.286A1 1 0 0 1 25 37.287z" fill="#FFF" fill-rule="nonzero"/></g></svg>
+        </button>
+      </div>
+      <div class="item_action">
+        <div class="action_left">
+          
+            
+              
+                <!-- 普通标签 -->
+                
+                <!-- V+ -->
+                
+                  <div class="tag tag_om" data-uin="3149257821" _stat="体育:账号按钮">
+                    <a class="tag_box" href="//v.qq.com/vplus/3149257821">
+                      
+                        <img loading="lazy" class="tag_pic" src="//inews.gtimg.com/newsapp_ls/0/11442361580_200200/0" alt="皓钧游泳课堂">
+                      
+                      <span class="tag_title">皓钧游泳课堂</span>
+                    </a>
+                    <span class="svg_box follow_no" title="订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><rect class="tag_add_svg" x="4" y="8" width="10" height="2" rx="1"/><rect class="tag_add_svg" transform="rotate(-90 9 9)" x="4" y="8" width="10" height="2" rx="1"/></g></svg>
+                    </span>
+                    <span class="svg_box follow_done none" title="取消订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" stroke="#7ED321" stroke-linecap="round" stroke-width="1.8"><path d="M7.972 11.688L14 6M7.361 11.708L5 9"/></g></g></svg>
+                    </span>
+                  </div>
+                
+              
+            
+              
+                <!-- 普通标签 -->
+                
+                  <a class="tag tag_quickPlay" href="https://v.qq.com/channel/tag_page?tag_id=67841&tag_name=%E6%B8%B8%E6%B3%B3" data-tagid="67841" data-tagname="游泳" _stat="体育:标签按钮">
+                    <span>
+                      <svg class="tag_play" width="18" height="18"><path d="M8.495 3.01L5 10h3v5.282L5.952 16.67c-.846.573-2.015.378-2.61-.436A1.758 1.758 0 0 1 3 15.196V2.804C3 1.807 3.839 1 4.873 1c.379 0 .748.11 1.06.317L8.495 3.01zM9 3.344l6.187 4.09c.853.563 1.07 1.686.484 2.507-.126.177-.284.33-.466.454L9.093 14.54 12 8H9V3.344z" fill="#FF5C38" fill-rule="nonzero"/></svg>
+                    </span>
+                    <span class="tag_box">
+                      
+                      <span class="tag_title">游泳</span>
+                    </span>
+                  </a>
+                
+                <!-- V+ -->
+                
+              
+            
+          
+        </div>
+        <div class="action_right">
+          <span class="svg_box collect_no" title="收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095" class="collect_stroke" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm1-6V9h-2v2H9v2h2v2h2v-2h2v-2h-2z"  class="collect_fill" fill-rule="nonzero"/></g></svg>
+          </span>
+          <span class="svg_box collect_done none" title="取消收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#FC5131" offset="0%"/><stop stop-color="#FF147C" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M15.856 6.157a7.002 7.002 0 0 0-10.761 4.688L4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095l-.144.062z" stroke="#FF1B40" stroke-width="2" fill="#FF1B40" stroke-linecap="round" stroke-linejoin="round"/><circle fill="#FF1B40" fill-rule="nonzero" cx="12" cy="12" r="5"/><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 12l1.5 1.5 3-2.5"/></g></svg>
+          </span>
+          <div class="item item_more">
+            <svg class="item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="#999" fill-rule="evenodd"><circle cx="8.5" cy="14.5" r="1.5"/><circle cx="8.5" cy="8.5" r="1.5"/><circle cx="8.5" cy="2.5" r="1.5"/></g></svg>
+            <div class="more_nav">
+              <button class="nav_item nav_item_download">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero"><path d="M8 8h2V2a1 1 0 1 0-2 0v6z" class="svg_fill"/><path d="M6 6l3 2M12 6L9 8" class="svg_stroke" stroke-width="2" stroke-linecap="square"/><path d="M15 9a1 1 0 0 1 2 0v2.8a4.2 4.2 0 0 1-4.2 4.2H5.2A4.2 4.2 0 0 1 1 11.8V9a1 1 0 1 1 2 0v2.8A2.2 2.2 0 0 0 5.2 14h7.6a2.2 2.2 0 0 0 2.2-2.2V9z" class="svg_fill"/></g></g></svg>
+                下载
+              </button>
+              <button class="nav_item nav_item_dislike ">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" class="svg_stroke" stroke-linecap="square" stroke-width="2"><path d="M7 7l4 4M11 7l-4 4"/></g><circle class="svg_stroke" stroke-width="2" cx="9" cy="9" r="7"/></g></svg>
+                不感兴趣
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  
+    <div
+      class="video_feeds_item "
+      data-vid="m303428iufr">
+      <div class="item_cover"
+        data-vid="m303428iufr"
+        data-title="荷兰女拳王8年无一败绩，中国姑娘一拳重击逆转KO，主持人都激动哭了"
+        data-insert="false"
+        data-duration="130">
+        
+          <div class="title_wrap"><p class="title">荷兰女拳王8年无一败绩，中国姑娘一拳重击逆转KO，主持人都激动哭了</p></div>
+        
+        <img loading="lazy" class="cover" src="//puui.qpic.cn/qqvideo/0/m303428iufr/0" xxx="//puui.qpic.cn/qqvideo/0/m303428iufr/0">
+        <button class="icon_play" _stat="体育:大封面图">
+          <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#111226" opacity=".9" cx="30" cy="30" r="30"/><path d="M25 37.287V22.713a1 1 0 0 1 1.546-.837l11.17 7.286a1 1 0 0 1 0 1.676l-11.17 7.286A1 1 0 0 1 25 37.287z" fill="#FFF" fill-rule="nonzero"/></g></svg>
+        </button>
+      </div>
+      <div class="item_action">
+        <div class="action_left">
+          
+            
+              
+                <!-- 普通标签 -->
+                
+                <!-- V+ -->
+                
+                  <div class="tag tag_om" data-uin="3407424916" _stat="体育:账号按钮">
+                    <a class="tag_box" href="//v.qq.com/vplus/3407424916">
+                      
+                        <img loading="lazy" class="tag_pic" src="//inews.gtimg.com/newsapp_ls/0/11466769573_200200/0" alt="格斗世界官方">
+                      
+                      <span class="tag_title">格斗世界官方</span>
+                    </a>
+                    <span class="svg_box follow_no" title="订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><rect class="tag_add_svg" x="4" y="8" width="10" height="2" rx="1"/><rect class="tag_add_svg" transform="rotate(-90 9 9)" x="4" y="8" width="10" height="2" rx="1"/></g></svg>
+                    </span>
+                    <span class="svg_box follow_done none" title="取消订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" stroke="#7ED321" stroke-linecap="round" stroke-width="1.8"><path d="M7.972 11.688L14 6M7.361 11.708L5 9"/></g></g></svg>
+                    </span>
+                  </div>
+                
+              
+            
+              
+                <!-- 普通标签 -->
+                
+                  <a class="tag tag_quickPlay" href="https://v.qq.com/channel/tag_page?tag_id=80552&tag_name=%E8%87%AA%E7%94%B1%E6%90%8F%E5%87%BB" data-tagid="80552" data-tagname="自由搏击" _stat="体育:标签按钮">
+                    <span>
+                      <svg class="tag_play" width="18" height="18"><path d="M8.495 3.01L5 10h3v5.282L5.952 16.67c-.846.573-2.015.378-2.61-.436A1.758 1.758 0 0 1 3 15.196V2.804C3 1.807 3.839 1 4.873 1c.379 0 .748.11 1.06.317L8.495 3.01zM9 3.344l6.187 4.09c.853.563 1.07 1.686.484 2.507-.126.177-.284.33-.466.454L9.093 14.54 12 8H9V3.344z" fill="#FF5C38" fill-rule="nonzero"/></svg>
+                    </span>
+                    <span class="tag_box">
+                      
+                      <span class="tag_title">自由搏击</span>
+                    </span>
+                  </a>
+                
+                <!-- V+ -->
+                
+              
+            
+          
+        </div>
+        <div class="action_right">
+          <span class="svg_box collect_no" title="收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095" class="collect_stroke" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm1-6V9h-2v2H9v2h2v2h2v-2h2v-2h-2z"  class="collect_fill" fill-rule="nonzero"/></g></svg>
+          </span>
+          <span class="svg_box collect_done none" title="取消收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#FC5131" offset="0%"/><stop stop-color="#FF147C" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M15.856 6.157a7.002 7.002 0 0 0-10.761 4.688L4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095l-.144.062z" stroke="#FF1B40" stroke-width="2" fill="#FF1B40" stroke-linecap="round" stroke-linejoin="round"/><circle fill="#FF1B40" fill-rule="nonzero" cx="12" cy="12" r="5"/><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 12l1.5 1.5 3-2.5"/></g></svg>
+          </span>
+          <div class="item item_more">
+            <svg class="item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="#999" fill-rule="evenodd"><circle cx="8.5" cy="14.5" r="1.5"/><circle cx="8.5" cy="8.5" r="1.5"/><circle cx="8.5" cy="2.5" r="1.5"/></g></svg>
+            <div class="more_nav">
+              <button class="nav_item nav_item_download">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero"><path d="M8 8h2V2a1 1 0 1 0-2 0v6z" class="svg_fill"/><path d="M6 6l3 2M12 6L9 8" class="svg_stroke" stroke-width="2" stroke-linecap="square"/><path d="M15 9a1 1 0 0 1 2 0v2.8a4.2 4.2 0 0 1-4.2 4.2H5.2A4.2 4.2 0 0 1 1 11.8V9a1 1 0 1 1 2 0v2.8A2.2 2.2 0 0 0 5.2 14h7.6a2.2 2.2 0 0 0 2.2-2.2V9z" class="svg_fill"/></g></g></svg>
+                下载
+              </button>
+              <button class="nav_item nav_item_dislike ">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" class="svg_stroke" stroke-linecap="square" stroke-width="2"><path d="M7 7l4 4M11 7l-4 4"/></g><circle class="svg_stroke" stroke-width="2" cx="9" cy="9" r="7"/></g></svg>
+                不感兴趣
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  
+    <div
+      class="video_feeds_item "
+      data-vid="p09126jb1tk">
+      <div class="item_cover"
+        data-vid="p09126jb1tk"
+        data-title="超好玩！极限牛人骑自行车挑战水滑梯，你猜他能成功吗？"
+        data-insert="false"
+        data-duration="70">
+        
+          <div class="title_wrap"><p class="title">超好玩！极限牛人骑自行车挑战水滑梯，你猜他能成功吗？</p></div>
+        
+        <img loading="lazy" class="cover" src="//puui.qpic.cn/qqvideo/0/p09126jb1tk/0" xxx="//puui.qpic.cn/qqvideo/0/p09126jb1tk/0">
+        <button class="icon_play" _stat="体育:大封面图">
+          <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#111226" opacity=".9" cx="30" cy="30" r="30"/><path d="M25 37.287V22.713a1 1 0 0 1 1.546-.837l11.17 7.286a1 1 0 0 1 0 1.676l-11.17 7.286A1 1 0 0 1 25 37.287z" fill="#FFF" fill-rule="nonzero"/></g></svg>
+        </button>
+      </div>
+      <div class="item_action">
+        <div class="action_left">
+          
+            
+              
+                <!-- 普通标签 -->
+                
+                <!-- V+ -->
+                
+                  <div class="tag tag_om" data-uin="13241586" _stat="体育:账号按钮">
+                    <a class="tag_box" href="//v.qq.com/vplus/13241586">
+                      
+                        <img loading="lazy" class="tag_pic" src="//inews.gtimg.com/newsapp_ls/0/2869769492_200200/0" alt="冒险客">
+                      
+                      <span class="tag_title">冒险客</span>
+                    </a>
+                    <span class="svg_box follow_no" title="订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><rect class="tag_add_svg" x="4" y="8" width="10" height="2" rx="1"/><rect class="tag_add_svg" transform="rotate(-90 9 9)" x="4" y="8" width="10" height="2" rx="1"/></g></svg>
+                    </span>
+                    <span class="svg_box follow_done none" title="取消订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" stroke="#7ED321" stroke-linecap="round" stroke-width="1.8"><path d="M7.972 11.688L14 6M7.361 11.708L5 9"/></g></g></svg>
+                    </span>
+                  </div>
+                
+              
+            
+          
+        </div>
+        <div class="action_right">
+          <span class="svg_box collect_no" title="收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095" class="collect_stroke" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm1-6V9h-2v2H9v2h2v2h2v-2h2v-2h-2z"  class="collect_fill" fill-rule="nonzero"/></g></svg>
+          </span>
+          <span class="svg_box collect_done none" title="取消收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#FC5131" offset="0%"/><stop stop-color="#FF147C" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M15.856 6.157a7.002 7.002 0 0 0-10.761 4.688L4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095l-.144.062z" stroke="#FF1B40" stroke-width="2" fill="#FF1B40" stroke-linecap="round" stroke-linejoin="round"/><circle fill="#FF1B40" fill-rule="nonzero" cx="12" cy="12" r="5"/><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 12l1.5 1.5 3-2.5"/></g></svg>
+          </span>
+          <div class="item item_more">
+            <svg class="item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="#999" fill-rule="evenodd"><circle cx="8.5" cy="14.5" r="1.5"/><circle cx="8.5" cy="8.5" r="1.5"/><circle cx="8.5" cy="2.5" r="1.5"/></g></svg>
+            <div class="more_nav">
+              <button class="nav_item nav_item_download">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero"><path d="M8 8h2V2a1 1 0 1 0-2 0v6z" class="svg_fill"/><path d="M6 6l3 2M12 6L9 8" class="svg_stroke" stroke-width="2" stroke-linecap="square"/><path d="M15 9a1 1 0 0 1 2 0v2.8a4.2 4.2 0 0 1-4.2 4.2H5.2A4.2 4.2 0 0 1 1 11.8V9a1 1 0 1 1 2 0v2.8A2.2 2.2 0 0 0 5.2 14h7.6a2.2 2.2 0 0 0 2.2-2.2V9z" class="svg_fill"/></g></g></svg>
+                下载
+              </button>
+              <button class="nav_item nav_item_dislike ">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" class="svg_stroke" stroke-linecap="square" stroke-width="2"><path d="M7 7l4 4M11 7l-4 4"/></g><circle class="svg_stroke" stroke-width="2" cx="9" cy="9" r="7"/></g></svg>
+                不感兴趣
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  
+    <div
+      class="video_feeds_item "
+      data-vid="v0531gp0on3">
+      <div class="item_cover"
+        data-vid="v0531gp0on3"
+        data-title="中华草原狼刘政开局直接扑向日本武僧，暴打不停手不死也残！"
+        data-insert="false"
+        data-duration="104">
+        
+          <div class="title_wrap"><p class="title">中华草原狼刘政开局直接扑向日本武僧，暴打不停手不死也残！</p></div>
+        
+        <img loading="lazy" class="cover" src="//puui.qpic.cn/qqvideo/0/v0531gp0on3/0" xxx="//puui.qpic.cn/qqvideo/0/v0531gp0on3/0">
+        <button class="icon_play" _stat="体育:大封面图">
+          <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#111226" opacity=".9" cx="30" cy="30" r="30"/><path d="M25 37.287V22.713a1 1 0 0 1 1.546-.837l11.17 7.286a1 1 0 0 1 0 1.676l-11.17 7.286A1 1 0 0 1 25 37.287z" fill="#FFF" fill-rule="nonzero"/></g></svg>
+        </button>
+      </div>
+      <div class="item_action">
+        <div class="action_left">
+          
+            
+              
+                <!-- 普通标签 -->
+                
+                  <a class="tag tag_quickPlay" href="https://v.qq.com/channel/tag_page?tag_id=62276&tag_name=%E6%A0%BC%E6%96%97" data-tagid="62276" data-tagname="格斗" _stat="体育:标签按钮">
+                    <span>
+                      <svg class="tag_play" width="18" height="18"><path d="M8.495 3.01L5 10h3v5.282L5.952 16.67c-.846.573-2.015.378-2.61-.436A1.758 1.758 0 0 1 3 15.196V2.804C3 1.807 3.839 1 4.873 1c.379 0 .748.11 1.06.317L8.495 3.01zM9 3.344l6.187 4.09c.853.563 1.07 1.686.484 2.507-.126.177-.284.33-.466.454L9.093 14.54 12 8H9V3.344z" fill="#FF5C38" fill-rule="nonzero"/></svg>
+                    </span>
+                    <span class="tag_box">
+                      
+                      <span class="tag_title">格斗</span>
+                    </span>
+                  </a>
+                
+                <!-- V+ -->
+                
+              
+            
+          
+        </div>
+        <div class="action_right">
+          <span class="svg_box collect_no" title="收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095" class="collect_stroke" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm1-6V9h-2v2H9v2h2v2h2v-2h2v-2h-2z"  class="collect_fill" fill-rule="nonzero"/></g></svg>
+          </span>
+          <span class="svg_box collect_done none" title="取消收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#FC5131" offset="0%"/><stop stop-color="#FF147C" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M15.856 6.157a7.002 7.002 0 0 0-10.761 4.688L4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095l-.144.062z" stroke="#FF1B40" stroke-width="2" fill="#FF1B40" stroke-linecap="round" stroke-linejoin="round"/><circle fill="#FF1B40" fill-rule="nonzero" cx="12" cy="12" r="5"/><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 12l1.5 1.5 3-2.5"/></g></svg>
+          </span>
+          <div class="item item_more">
+            <svg class="item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="#999" fill-rule="evenodd"><circle cx="8.5" cy="14.5" r="1.5"/><circle cx="8.5" cy="8.5" r="1.5"/><circle cx="8.5" cy="2.5" r="1.5"/></g></svg>
+            <div class="more_nav">
+              <button class="nav_item nav_item_download">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero"><path d="M8 8h2V2a1 1 0 1 0-2 0v6z" class="svg_fill"/><path d="M6 6l3 2M12 6L9 8" class="svg_stroke" stroke-width="2" stroke-linecap="square"/><path d="M15 9a1 1 0 0 1 2 0v2.8a4.2 4.2 0 0 1-4.2 4.2H5.2A4.2 4.2 0 0 1 1 11.8V9a1 1 0 1 1 2 0v2.8A2.2 2.2 0 0 0 5.2 14h7.6a2.2 2.2 0 0 0 2.2-2.2V9z" class="svg_fill"/></g></g></svg>
+                下载
+              </button>
+              <button class="nav_item nav_item_dislike ">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" class="svg_stroke" stroke-linecap="square" stroke-width="2"><path d="M7 7l4 4M11 7l-4 4"/></g><circle class="svg_stroke" stroke-width="2" cx="9" cy="9" r="7"/></g></svg>
+                不感兴趣
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  
+    <div
+      class="video_feeds_item "
+      data-vid="n0861andl20">
+      <div class="item_cover"
+        data-vid="n0861andl20"
+        data-title="播求第一次被KO有多惨？对手太强一拳倒地，场面太丢人了！"
+        data-insert="false"
+        data-duration="63">
+        
+          <div class="title_wrap"><p class="title">播求第一次被KO有多惨？对手太强一拳倒地，场面太丢人了！</p></div>
+        
+        <img loading="lazy" class="cover" src="//puui.qpic.cn/qqvideo/0/n0861andl20/0" xxx="//puui.qpic.cn/qqvideo/0/n0861andl20/0">
+        <button class="icon_play" _stat="体育:大封面图">
+          <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#111226" opacity=".9" cx="30" cy="30" r="30"/><path d="M25 37.287V22.713a1 1 0 0 1 1.546-.837l11.17 7.286a1 1 0 0 1 0 1.676l-11.17 7.286A1 1 0 0 1 25 37.287z" fill="#FFF" fill-rule="nonzero"/></g></svg>
+        </button>
+      </div>
+      <div class="item_action">
+        <div class="action_left">
+          
+            
+              
+                <!-- 普通标签 -->
+                
+                <!-- V+ -->
+                
+                  <div class="tag tag_om" data-uin="858883954" _stat="体育:账号按钮">
+                    <a class="tag_box" href="//v.qq.com/vplus/858883954">
+                      
+                        <img loading="lazy" class="tag_pic" src="//inews.gtimg.com/newsapp_ls/0/663655573_200200/0" alt="篮球说客">
+                      
+                      <span class="tag_title">篮球说客</span>
+                    </a>
+                    <span class="svg_box follow_no" title="订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><rect class="tag_add_svg" x="4" y="8" width="10" height="2" rx="1"/><rect class="tag_add_svg" transform="rotate(-90 9 9)" x="4" y="8" width="10" height="2" rx="1"/></g></svg>
+                    </span>
+                    <span class="svg_box follow_done none" title="取消订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" stroke="#7ED321" stroke-linecap="round" stroke-width="1.8"><path d="M7.972 11.688L14 6M7.361 11.708L5 9"/></g></g></svg>
+                    </span>
+                  </div>
+                
+              
+            
+              
+                <!-- 普通标签 -->
+                
+                  <a class="tag tag_quickPlay" href="https://v.qq.com/channel/tag_page?tag_id=80552&tag_name=%E8%87%AA%E7%94%B1%E6%90%8F%E5%87%BB" data-tagid="80552" data-tagname="自由搏击" _stat="体育:标签按钮">
+                    <span>
+                      <svg class="tag_play" width="18" height="18"><path d="M8.495 3.01L5 10h3v5.282L5.952 16.67c-.846.573-2.015.378-2.61-.436A1.758 1.758 0 0 1 3 15.196V2.804C3 1.807 3.839 1 4.873 1c.379 0 .748.11 1.06.317L8.495 3.01zM9 3.344l6.187 4.09c.853.563 1.07 1.686.484 2.507-.126.177-.284.33-.466.454L9.093 14.54 12 8H9V3.344z" fill="#FF5C38" fill-rule="nonzero"/></svg>
+                    </span>
+                    <span class="tag_box">
+                      
+                      <span class="tag_title">自由搏击</span>
+                    </span>
+                  </a>
+                
+                <!-- V+ -->
+                
+              
+            
+          
+        </div>
+        <div class="action_right">
+          <span class="svg_box collect_no" title="收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095" class="collect_stroke" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm1-6V9h-2v2H9v2h2v2h2v-2h2v-2h-2z"  class="collect_fill" fill-rule="nonzero"/></g></svg>
+          </span>
+          <span class="svg_box collect_done none" title="取消收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#FC5131" offset="0%"/><stop stop-color="#FF147C" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M15.856 6.157a7.002 7.002 0 0 0-10.761 4.688L4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095l-.144.062z" stroke="#FF1B40" stroke-width="2" fill="#FF1B40" stroke-linecap="round" stroke-linejoin="round"/><circle fill="#FF1B40" fill-rule="nonzero" cx="12" cy="12" r="5"/><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 12l1.5 1.5 3-2.5"/></g></svg>
+          </span>
+          <div class="item item_more">
+            <svg class="item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="#999" fill-rule="evenodd"><circle cx="8.5" cy="14.5" r="1.5"/><circle cx="8.5" cy="8.5" r="1.5"/><circle cx="8.5" cy="2.5" r="1.5"/></g></svg>
+            <div class="more_nav">
+              <button class="nav_item nav_item_download">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero"><path d="M8 8h2V2a1 1 0 1 0-2 0v6z" class="svg_fill"/><path d="M6 6l3 2M12 6L9 8" class="svg_stroke" stroke-width="2" stroke-linecap="square"/><path d="M15 9a1 1 0 0 1 2 0v2.8a4.2 4.2 0 0 1-4.2 4.2H5.2A4.2 4.2 0 0 1 1 11.8V9a1 1 0 1 1 2 0v2.8A2.2 2.2 0 0 0 5.2 14h7.6a2.2 2.2 0 0 0 2.2-2.2V9z" class="svg_fill"/></g></g></svg>
+                下载
+              </button>
+              <button class="nav_item nav_item_dislike ">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" class="svg_stroke" stroke-linecap="square" stroke-width="2"><path d="M7 7l4 4M11 7l-4 4"/></g><circle class="svg_stroke" stroke-width="2" cx="9" cy="9" r="7"/></g></svg>
+                不感兴趣
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  
+    <div
+      class="video_feeds_item "
+      data-vid="i3033vueubq">
+      <div class="item_cover"
+        data-vid="i3033vueubq"
+        data-title="被铁锤砸头还能毫发无伤？为你揭秘WWE擂台武器"
+        data-insert="false"
+        data-duration="69">
+        
+          <div class="title_wrap"><p class="title">被铁锤砸头还能毫发无伤？为你揭秘WWE擂台武器</p></div>
+        
+        <img loading="lazy" class="cover" src="//puui.qpic.cn/qqvideo/0/i3033vueubq/0" xxx="//puui.qpic.cn/qqvideo/0/i3033vueubq/0">
+        <button class="icon_play" _stat="体育:大封面图">
+          <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#111226" opacity=".9" cx="30" cy="30" r="30"/><path d="M25 37.287V22.713a1 1 0 0 1 1.546-.837l11.17 7.286a1 1 0 0 1 0 1.676l-11.17 7.286A1 1 0 0 1 25 37.287z" fill="#FFF" fill-rule="nonzero"/></g></svg>
+        </button>
+      </div>
+      <div class="item_action">
+        <div class="action_left">
+          
+            
+              
+                <!-- 普通标签 -->
+                
+                <!-- V+ -->
+                
+                  <div class="tag tag_om" data-uin="546910162" _stat="体育:账号按钮">
+                    <a class="tag_box" href="//v.qq.com/vplus/546910162">
+                      
+                        <img loading="lazy" class="tag_pic" src="//inews.gtimg.com/newsapp_ls/0/2158567954_200200/0" alt="WWE豺哥">
+                      
+                      <span class="tag_title">WWE豺哥</span>
+                    </a>
+                    <span class="svg_box follow_no" title="订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><rect class="tag_add_svg" x="4" y="8" width="10" height="2" rx="1"/><rect class="tag_add_svg" transform="rotate(-90 9 9)" x="4" y="8" width="10" height="2" rx="1"/></g></svg>
+                    </span>
+                    <span class="svg_box follow_done none" title="取消订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" stroke="#7ED321" stroke-linecap="round" stroke-width="1.8"><path d="M7.972 11.688L14 6M7.361 11.708L5 9"/></g></g></svg>
+                    </span>
+                  </div>
+                
+              
+            
+              
+                <!-- 普通标签 -->
+                
+                  <a class="tag tag_quickPlay" href="https://v.qq.com/channel/tag_page?tag_id=9778221&tag_name=WWE" data-tagid="9778221" data-tagname="WWE" _stat="体育:标签按钮">
+                    <span>
+                      <svg class="tag_play" width="18" height="18"><path d="M8.495 3.01L5 10h3v5.282L5.952 16.67c-.846.573-2.015.378-2.61-.436A1.758 1.758 0 0 1 3 15.196V2.804C3 1.807 3.839 1 4.873 1c.379 0 .748.11 1.06.317L8.495 3.01zM9 3.344l6.187 4.09c.853.563 1.07 1.686.484 2.507-.126.177-.284.33-.466.454L9.093 14.54 12 8H9V3.344z" fill="#FF5C38" fill-rule="nonzero"/></svg>
+                    </span>
+                    <span class="tag_box">
+                      
+                      <span class="tag_title">WWE</span>
+                    </span>
+                  </a>
+                
+                <!-- V+ -->
+                
+              
+            
+          
+        </div>
+        <div class="action_right">
+          <span class="svg_box collect_no" title="收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095" class="collect_stroke" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm1-6V9h-2v2H9v2h2v2h2v-2h2v-2h-2z"  class="collect_fill" fill-rule="nonzero"/></g></svg>
+          </span>
+          <span class="svg_box collect_done none" title="取消收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#FC5131" offset="0%"/><stop stop-color="#FF147C" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M15.856 6.157a7.002 7.002 0 0 0-10.761 4.688L4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095l-.144.062z" stroke="#FF1B40" stroke-width="2" fill="#FF1B40" stroke-linecap="round" stroke-linejoin="round"/><circle fill="#FF1B40" fill-rule="nonzero" cx="12" cy="12" r="5"/><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 12l1.5 1.5 3-2.5"/></g></svg>
+          </span>
+          <div class="item item_more">
+            <svg class="item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="#999" fill-rule="evenodd"><circle cx="8.5" cy="14.5" r="1.5"/><circle cx="8.5" cy="8.5" r="1.5"/><circle cx="8.5" cy="2.5" r="1.5"/></g></svg>
+            <div class="more_nav">
+              <button class="nav_item nav_item_download">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero"><path d="M8 8h2V2a1 1 0 1 0-2 0v6z" class="svg_fill"/><path d="M6 6l3 2M12 6L9 8" class="svg_stroke" stroke-width="2" stroke-linecap="square"/><path d="M15 9a1 1 0 0 1 2 0v2.8a4.2 4.2 0 0 1-4.2 4.2H5.2A4.2 4.2 0 0 1 1 11.8V9a1 1 0 1 1 2 0v2.8A2.2 2.2 0 0 0 5.2 14h7.6a2.2 2.2 0 0 0 2.2-2.2V9z" class="svg_fill"/></g></g></svg>
+                下载
+              </button>
+              <button class="nav_item nav_item_dislike ">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" class="svg_stroke" stroke-linecap="square" stroke-width="2"><path d="M7 7l4 4M11 7l-4 4"/></g><circle class="svg_stroke" stroke-width="2" cx="9" cy="9" r="7"/></g></svg>
+                不感兴趣
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  
+    <div
+      class="video_feeds_item "
+      data-vid="m3016avkgr2">
+      <div class="item_cover"
+        data-vid="m3016avkgr2"
+        data-title="世界上最强壮的男人，被大力士比赛终生禁赛，只因实力太变态！"
+        data-insert="false"
+        data-duration="64">
+        
+          <div class="title_wrap"><p class="title">世界上最强壮的男人，被大力士比赛终生禁赛，只因实力太变态！</p></div>
+        
+        <img loading="lazy" class="cover" src="//puui.qpic.cn/qqvideo/0/m3016avkgr2/0" xxx="//puui.qpic.cn/qqvideo/0/m3016avkgr2/0">
+        <button class="icon_play" _stat="体育:大封面图">
+          <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#111226" opacity=".9" cx="30" cy="30" r="30"/><path d="M25 37.287V22.713a1 1 0 0 1 1.546-.837l11.17 7.286a1 1 0 0 1 0 1.676l-11.17 7.286A1 1 0 0 1 25 37.287z" fill="#FFF" fill-rule="nonzero"/></g></svg>
+        </button>
+      </div>
+      <div class="item_action">
+        <div class="action_left">
+          
+            
+              
+                <!-- 普通标签 -->
+                
+                <!-- V+ -->
+                
+                  <div class="tag tag_om" data-uin="3109637270" _stat="体育:账号按钮">
+                    <a class="tag_box" href="//v.qq.com/vplus/3109637270">
+                      
+                        <img loading="lazy" class="tag_pic" src="//inews.gtimg.com/newsapp_ls/0/8740442183_200200/0" alt="丽丽全球旅行">
+                      
+                      <span class="tag_title">丽丽全球旅行</span>
+                    </a>
+                    <span class="svg_box follow_no" title="订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><rect class="tag_add_svg" x="4" y="8" width="10" height="2" rx="1"/><rect class="tag_add_svg" transform="rotate(-90 9 9)" x="4" y="8" width="10" height="2" rx="1"/></g></svg>
+                    </span>
+                    <span class="svg_box follow_done none" title="取消订阅">
+                      <svg class="tag_add" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" stroke="#7ED321" stroke-linecap="round" stroke-width="1.8"><path d="M7.972 11.688L14 6M7.361 11.708L5 9"/></g></g></svg>
+                    </span>
+                  </div>
+                
+              
+            
+          
+        </div>
+        <div class="action_right">
+          <span class="svg_box collect_no" title="收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095" class="collect_stroke" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm1-6V9h-2v2H9v2h2v2h2v-2h2v-2h-2z"  class="collect_fill" fill-rule="nonzero"/></g></svg>
+          </span>
+          <span class="svg_box collect_done none" title="取消收藏">
+            <svg class="item item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#FC5131" offset="0%"/><stop stop-color="#FF147C" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="M15.856 6.157a7.002 7.002 0 0 0-10.761 4.688L4.739 11C3.276 9.685 2 8 2 6.121 2 1.29 7.277.885 8.995 3.975 10.583.955 16 1.246 16 6.095l-.144.062z" stroke="#FF1B40" stroke-width="2" fill="#FF1B40" stroke-linecap="round" stroke-linejoin="round"/><circle fill="#FF1B40" fill-rule="nonzero" cx="12" cy="12" r="5"/><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 12l1.5 1.5 3-2.5"/></g></svg>
+          </span>
+          <div class="item item_more">
+            <svg class="item_svg" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="#999" fill-rule="evenodd"><circle cx="8.5" cy="14.5" r="1.5"/><circle cx="8.5" cy="8.5" r="1.5"/><circle cx="8.5" cy="2.5" r="1.5"/></g></svg>
+            <div class="more_nav">
+              <button class="nav_item nav_item_download">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero"><path d="M8 8h2V2a1 1 0 1 0-2 0v6z" class="svg_fill"/><path d="M6 6l3 2M12 6L9 8" class="svg_stroke" stroke-width="2" stroke-linecap="square"/><path d="M15 9a1 1 0 0 1 2 0v2.8a4.2 4.2 0 0 1-4.2 4.2H5.2A4.2 4.2 0 0 1 1 11.8V9a1 1 0 1 1 2 0v2.8A2.2 2.2 0 0 0 5.2 14h7.6a2.2 2.2 0 0 0 2.2-2.2V9z" class="svg_fill"/></g></g></svg>
+                下载
+              </button>
+              <button class="nav_item nav_item_dislike ">
+                <svg class="item_icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h18v18H0z"/><g fill-rule="nonzero" class="svg_stroke" stroke-linecap="square" stroke-width="2"><path d="M7 7l4 4M11 7l-4 4"/></g><circle class="svg_stroke" stroke-width="2" cx="9" cy="9" r="7"/></g></svg>
+                不感兴趣
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+        
+      </div>
+    </div>
+  
+
+  <script>
+    // 热点短视频数据
+    window._hotFeeds = [{"strType":"vid","mapCmsData":{"vid":"y0875tbpunq"},"mapUnionData":{"duration":"62","imgtag_ver":"","pic_332_187":"http://puui.qpic.cn/qqvideo/0/y0875tbpunq/332","pic_540_960":"http://puui.qpic.cn/qqvideo_ori/0/y0875tbpunq_540_960/0","tag_list":[{"avatar":"http://inews.gtimg.com/newsapp_ls/0/8995693280_200200/0","text":"挑战有可能的","type":4,"value":"3056537882"}],"title":"他明明可以靠身材吃饭，却偏偏靠搞笑，奥斯卡都欠他一座小金人！","upload_qq":"3056537882","view_all_count":"2564372.000000"},"mapUserData":{"algid":"7000","bucketid":"EXP:PROFILE=base|NRBE=base|INDEX=base|SELECTOR=base","debug_info":"feed_hot_y0875tbpunq_0.1396_(v110764_sv_feed_hot)_0.1784","item_owner":"22","item_report":"stainFlag:0|flush_num:|is_insert:|insert_type:|load_type:|a_exp_id:PROFILE-base#NRBE-base#INDEX-base#SELECTOR-base|a_src_key:110764#pc|a_seqnum:0_1587618549_721277442|a_module_id:channel_labelnavigation|a_alg_id:7000","item_score":"1.39587e-01","item_title":"","reason":"v110764_sv_feed_hot","reason_type":"106","reasontype":"106","recall_alg":"7000","report_reason":"v110764_sv_feed_hot","seqnum":"0_1587618549_721277442","strategyId":"","tag_id":"channel_labelnavigation","tag_type":"316","ztid":"110764#pc"},"mapJceData":{},"strId":"y0875tbpunq"},{"strType":"vid","mapCmsData":{"vid":"q0925knztji"},"mapUnionData":{"duration":"134","imgtag_ver":"","pic_332_187":"http://puui.qpic.cn/qqvideo/0/q0925knztji/332","pic_540_960":"http://puui.qpic.cn/qqvideo_ori/0/q0925knztji_540_960/0","tag_list":[{"avatar":"http://inews.gtimg.com/newsapp_ls/0/8667237509_200200/0","text":"勇士的荣耀","type":4,"value":"3146455917"},{"text":"自由搏击","type":1,"value":"80552"}],"title":"被老外顶中要害，中国70KG悍将罕见暴怒，连续重拳KO对手","upload_qq":"3146455917","view_all_count":"1208187.000000"},"mapUserData":{"algid":"7000","bucketid":"EXP:PROFILE=base|NRBE=base|INDEX=base|SELECTOR=base","debug_info":"feed_hot_q0925knztji_0.1435_(v110764_sv_feed_hot)_0.1632","item_owner":"22","item_report":"stainFlag:0|flush_num:|is_insert:|insert_type:|load_type:|a_exp_id:PROFILE-base#NRBE-base#INDEX-base#SELECTOR-base|a_src_key:110764#pc|a_seqnum:0_1587618549_721277442|a_module_id:channel_labelnavigation|a_alg_id:7000","item_score":"1.43485e-01","item_title":"","reason":"v110764_sv_feed_hot","reason_type":"106","reasontype":"106","recall_alg":"7000","report_reason":"v110764_sv_feed_hot","seqnum":"0_1587618549_721277442","strategyId":"","tag_id":"channel_labelnavigation","tag_type":"316","ztid":"110764#pc"},"mapJceData":{},"strId":"q0925knztji"},{"strType":"vid","mapCmsData":{"vid":"x0899obsryx"},"mapUnionData":{"duration":"80","imgtag_ver":"","pic_332_187":"http://puui.qpic.cn/qqvideo/0/x0899obsryx/332","pic_540_960":"http://puui.qpic.cn/qqvideo_ori/0/x0899obsryx_540_960/0","tag_list":[{"avatar":"http://inews.gtimg.com/newsapp_ls/0/2581725045_200200/0","text":"生活不过这样","type":4,"value":"2302792119"},{"text":"攀爬狂人","type":1,"value":"11778807"}],"title":"极限镜头“失误瞬间”生命的最后一秒，被镜头完整记录！","upload_qq":"2302792119","view_all_count":"12719013.000000"},"mapUserData":{"algid":"7000","bucketid":"EXP:PROFILE=base|NRBE=base|INDEX=base|SELECTOR=base","debug_info":"feed_hot_x0899obsryx_0.1318_(v110764_sv_feed_hot)_0.2714","item_owner":"22","item_report":"stainFlag:0|flush_num:|is_insert:|insert_type:|load_type:|a_exp_id:PROFILE-base#NRBE-base#INDEX-base#SELECTOR-base|a_src_key:110764#pc|a_seqnum:0_1587618549_721277442|a_module_id:channel_labelnavigation|a_alg_id:7000","item_score":"1.31809e-01","item_title":"","reason":"v110764_sv_feed_hot","reason_type":"106","reasontype":"106","recall_alg":"7000","report_reason":"v110764_sv_feed_hot","seqnum":"0_1587618549_721277442","strategyId":"","tag_id":"channel_labelnavigation","tag_type":"316","ztid":"110764#pc"},"mapJceData":{},"strId":"x0899obsryx"},{"strType":"vid","mapCmsData":{"vid":"a3051ypad6c"},"mapUnionData":{"duration":"174","imgtag_ver":"","pic_332_187":"http://puui.qpic.cn/qqvideo/0/a3051ypad6c/332","pic_540_960":"http://puui.qpic.cn/qqvideo_ori/0/a3051ypad6c_540_960/0","tag_list":[{"avatar":"http://inews.gtimg.com/newsapp_ls/0/11442361580_200200/0","text":"皓钧游泳课堂","type":4,"value":"3149257821"},{"text":"游泳","type":1,"value":"67841"}],"title":"皓钧教你自由泳，如何漂浮水面更轻松？","upload_qq":"3149257821","view_all_count":"100611.000000"},"mapUserData":{"algid":"6659","bucketid":"EXP:PROFILE=base|NRBE=base|INDEX=base|SELECTOR=base","debug_info":"feed_nh_vid_a3051ypad6c_1.0000_(v110764_sv_global_feed_nh_vid_0000000)_0.1329","item_owner":"","item_report":"stainFlag:0|flush_num:|is_insert:|insert_type:|load_type:|a_exp_id:PROFILE-base#NRBE-base#INDEX-base#SELECTOR-base|a_src_key:110764#pc|a_seqnum:0_1587618549_721277442|a_module_id:channel_labelnavigation|a_alg_id:6659","item_score":"1e+00","item_title":"","reason":"v110764_sv_global_feed_nh_vid_0000000","reason_type":"106","reasontype":"106","recall_alg":"6659","report_reason":"v110764_sv_global_feed_nh_vid_0000000","seqnum":"0_1587618549_721277442","strategyId":"","tag_id":"channel_labelnavigation","tag_type":"316","ztid":"110764#pc"},"mapJceData":{},"strId":"a3051ypad6c"},{"strType":"vid","mapCmsData":{"vid":"m303428iufr"},"mapUnionData":{"duration":"130","imgtag_ver":"","pic_332_187":"http://puui.qpic.cn/qqvideo/0/m303428iufr/332","pic_540_960":"http://puui.qpic.cn/qqvideo_ori/0/m303428iufr_540_960/0","tag_list":[{"avatar":"http://inews.gtimg.com/newsapp_ls/0/11466769573_200200/0","text":"格斗世界官方","type":4,"value":"3407424916"},{"text":"自由搏击","type":1,"value":"80552"}],"title":"荷兰女拳王8年无一败绩，中国姑娘一拳重击逆转KO，主持人都激动哭了","upload_qq":"3407424916","view_all_count":"450048.000000"},"mapUserData":{"algid":"7000","bucketid":"EXP:PROFILE=base|NRBE=base|INDEX=base|SELECTOR=base","debug_info":"feed_hot_m303428iufr_0.1652_(v110764_sv_feed_hot)_0.1687","item_owner":"22","item_report":"stainFlag:0|flush_num:|is_insert:|insert_type:|load_type:|a_exp_id:PROFILE-base#NRBE-base#INDEX-base#SELECTOR-base|a_src_key:110764#pc|a_seqnum:0_1587618549_721277442|a_module_id:channel_labelnavigation|a_alg_id:7000","item_score":"1.65178e-01","item_title":"","reason":"v110764_sv_feed_hot","reason_type":"106","reasontype":"106","recall_alg":"7000","report_reason":"v110764_sv_feed_hot","seqnum":"0_1587618549_721277442","strategyId":"","tag_id":"channel_labelnavigation","tag_type":"316","ztid":"110764#pc"},"mapJceData":{},"strId":"m303428iufr"},{"strType":"vid","mapCmsData":{"vid":"p09126jb1tk"},"mapUnionData":{"duration":"70","imgtag_ver":"","pic_332_187":"http://puui.qpic.cn/qqvideo/0/p09126jb1tk/332","pic_540_960":"http://puui.qpic.cn/qqvideo_ori/0/p09126jb1tk_540_960/0","tag_list":[{"avatar":"http://inews.gtimg.com/newsapp_ls/0/2869769492_200200/0","text":"冒险客","type":4,"value":"13241586"}],"title":"超好玩！极限牛人骑自行车挑战水滑梯，你猜他能成功吗？","upload_qq":"13241586","view_all_count":"351916.000000"},"mapUserData":{"algid":"7000","bucketid":"EXP:PROFILE=base|NRBE=base|INDEX=base|SELECTOR=base","debug_info":"feed_hot_p09126jb1tk_0.1452_(v110764_sv_feed_hot)_0.1784","item_owner":"","item_report":"stainFlag:0|flush_num:|is_insert:|insert_type:|load_type:|a_exp_id:PROFILE-base#NRBE-base#INDEX-base#SELECTOR-base|a_src_key:110764#pc|a_seqnum:0_1587618549_721277442|a_module_id:channel_labelnavigation|a_alg_id:7000","item_score":"1.45157e-01","item_title":"","reason":"v110764_sv_feed_hot","reason_type":"106","reasontype":"106","recall_alg":"7000","report_reason":"v110764_sv_feed_hot","seqnum":"0_1587618549_721277442","strategyId":"","tag_id":"channel_labelnavigation","tag_type":"316","ztid":"110764#pc"},"mapJceData":{},"strId":"p09126jb1tk"},{"strType":"vid","mapCmsData":{"vid":"v0531gp0on3"},"mapUnionData":{"duration":"104","imgtag_ver":"","pic_332_187":"http://puui.qpic.cn/qqvideo/0/v0531gp0on3/332","pic_540_960":"http://puui.qpic.cn/qqvideo_ori/0/v0531gp0on3_540_960/0","tag_list":[{"text":"格斗","type":1,"value":"62276"}],"title":"中华草原狼刘政开局直接扑向日本武僧，暴打不停手不死也残！","upload_qq":"879379489","view_all_count":"237517.000000"},"mapUserData":{"algid":"7000","bucketid":"EXP:PROFILE=base|NRBE=base|INDEX=base|SELECTOR=base","debug_info":"feed_hot_v0531gp0on3_0.1320_(v110764_sv_feed_hot)_0.1630","item_owner":"","item_report":"stainFlag:0|flush_num:|is_insert:|insert_type:|load_type:|a_exp_id:PROFILE-base#NRBE-base#INDEX-base#SELECTOR-base|a_src_key:110764#pc|a_seqnum:0_1587618549_721277442|a_module_id:channel_labelnavigation|a_alg_id:7000","item_score":"1.32008e-01","item_title":"","reason":"v110764_sv_feed_hot","reason_type":"106","reasontype":"106","recall_alg":"7000","report_reason":"v110764_sv_feed_hot","seqnum":"0_1587618549_721277442","strategyId":"","tag_id":"channel_labelnavigation","tag_type":"316","ztid":"110764#pc"},"mapJceData":{},"strId":"v0531gp0on3"},{"strType":"vid","mapCmsData":{"vid":"n0861andl20"},"mapUnionData":{"duration":"63","imgtag_ver":"","pic_332_187":"http://puui.qpic.cn/qqvideo/0/n0861andl20/332","pic_540_960":"http://puui.qpic.cn/qqvideo_ori/0/n0861andl20_540_960/0","tag_list":[{"avatar":"http://inews.gtimg.com/newsapp_ls/0/663655573_200200/0","text":"篮球说客","type":4,"value":"858883954"},{"text":"自由搏击","type":1,"value":"80552"}],"title":"播求第一次被KO有多惨？对手太强一拳倒地，场面太丢人了！","upload_qq":"858883954","view_all_count":"1486184.000000"},"mapUserData":{"algid":"7000","bucketid":"EXP:PROFILE=base|NRBE=base|INDEX=base|SELECTOR=base","debug_info":"feed_hot_n0861andl20_0.1294_(v110764_sv_feed_hot)_0.1801","item_owner":"22","item_report":"stainFlag:0|flush_num:|is_insert:|insert_type:|load_type:|a_exp_id:PROFILE-base#NRBE-base#INDEX-base#SELECTOR-base|a_src_key:110764#pc|a_seqnum:0_1587618549_721277442|a_module_id:channel_labelnavigation|a_alg_id:7000","item_score":"1.29442e-01","item_title":"","reason":"v110764_sv_feed_hot","reason_type":"106","reasontype":"106","recall_alg":"7000","report_reason":"v110764_sv_feed_hot","seqnum":"0_1587618549_721277442","strategyId":"","tag_id":"channel_labelnavigation","tag_type":"316","ztid":"110764#pc"},"mapJceData":{},"strId":"n0861andl20"},{"strType":"vid","mapCmsData":{"vid":"i3033vueubq"},"mapUnionData":{"duration":"69","imgtag_ver":"","pic_332_187":"http://puui.qpic.cn/qqvideo/0/i3033vueubq/332","pic_540_960":"http://puui.qpic.cn/qqvideo_ori/0/i3033vueubq_540_960/0","tag_list":[{"avatar":"http://inews.gtimg.com/newsapp_ls/0/2158567954_200200/0","text":"WWE豺哥","type":4,"value":"546910162"},{"text":"WWE","type":1,"value":"9778221"}],"title":"被铁锤砸头还能毫发无伤？为你揭秘WWE擂台武器","upload_qq":"546910162","view_all_count":"336173.000000"},"mapUserData":{"algid":"7000","bucketid":"EXP:PROFILE=base|NRBE=base|INDEX=base|SELECTOR=base","debug_info":"feed_hot_i3033vueubq_0.1425_(v110764_sv_feed_hot)_0.1873","item_owner":"","item_report":"stainFlag:0|flush_num:|is_insert:|insert_type:|load_type:|a_exp_id:PROFILE-base#NRBE-base#INDEX-base#SELECTOR-base|a_src_key:110764#pc|a_seqnum:0_1587618549_721277442|a_module_id:channel_labelnavigation|a_alg_id:7000","item_score":"1.42518e-01","item_title":"","reason":"v110764_sv_feed_hot","reason_type":"106","reasontype":"106","recall_alg":"7000","report_reason":"v110764_sv_feed_hot","seqnum":"0_1587618549_721277442","strategyId":"","tag_id":"channel_labelnavigation","tag_type":"316","ztid":"110764#pc"},"mapJceData":{},"strId":"i3033vueubq"},{"strType":"vid","mapCmsData":{"vid":"m3016avkgr2"},"mapUnionData":{"duration":"64","imgtag_ver":"","pic_332_187":"http://puui.qpic.cn/qqvideo/0/m3016avkgr2/332","pic_540_960":"http://puui.qpic.cn/qqvideo_ori/0/m3016avkgr2_540_960/0","tag_list":[{"avatar":"http://inews.gtimg.com/newsapp_ls/0/8740442183_200200/0","text":"丽丽全球旅行","type":4,"value":"3109637270"}],"title":"世界上最强壮的男人，被大力士比赛终生禁赛，只因实力太变态！","upload_qq":"3109637270","view_all_count":"5422655.000000"},"mapUserData":{"algid":"7000","bucketid":"EXP:PROFILE=base|NRBE=base|INDEX=base|SELECTOR=base","debug_info":"feed_hot_m3016avkgr2_0.1368_(v110764_sv_feed_hot)_0.2090","item_owner":"22","item_report":"stainFlag:0|flush_num:|is_insert:|insert_type:|load_type:|a_exp_id:PROFILE-base#NRBE-base#INDEX-base#SELECTOR-base|a_src_key:110764#pc|a_seqnum:0_1587618549_721277442|a_module_id:channel_labelnavigation|a_alg_id:7000","item_score":"1.36798e-01","item_title":"","reason":"v110764_sv_feed_hot","reason_type":"106","reasontype":"106","recall_alg":"7000","report_reason":"v110764_sv_feed_hot","seqnum":"0_1587618549_721277442","strategyId":"","tag_id":"channel_labelnavigation","tag_type":"316","ztid":"110764#pc"},"mapJceData":{},"strId":"m3016avkgr2"}]
+  </script>
+
+
+            
+        
+    
+
+    
+        
+            
+                
+                
+
+  <div class="mod_rec_theme" _wind="columnname=体育_热门推荐&controlname=feeds_recommend_data" _expose="feeds_recommend_data" id="feeds_recommend_data" data-istyle="118" data-context="0">
+    <h3 class="rec_theme_title">
+            
+            热门推荐
+            
+        </h3>
+    <div class="rec_theme_list">
+      
+  <a class="rec_theme_item" href="https://v.qq.com/channel/tag_page?tag_id=6019982&tag_name=%E8%B6%B3%E5%9D%9B%E7%BB%8F%E5%85%B8"  data-type="1" data-tagname="小轮车" data-tagid="45035"  _stat="体育:推荐标签">
+    <span class="item_cover rec_theme_item_cover">
+      <img loading="lazy" class="cover" src="//vfiles.gtimg.cn/wupload/vqqcom.web_feed/20191111_eaa0veum1ro.jpg" alt="小轮车">
+    </span>
+    <div class="item_info rec_theme_item_info">
+      <span class="name" title="小轮车">
+        <svg class="name_icon " width="18" height="18"><path d="M8.495 3.01L5 10h3v5.282L5.952 16.67c-.846.573-2.015.378-2.61-.436A1.758 1.758 0 0 1 3 15.196V2.804C3 1.807 3.839 1 4.873 1c.379 0 .748.11 1.06.317L8.495 3.01zM9 3.344l6.187 4.09c.853.563 1.07 1.686.484 2.507-.126.177-.284.33-.466.454L9.093 14.54 12 8H9V3.344z" fill="#FF5C38" fill-rule="nonzero"/></svg>小轮车
+      </span>
+      <span class="play_total" title=""></span>
+    </div>
+  </a>
+
+  <a class="rec_theme_item" href="https://v.qq.com/channel/tag_page?tag_id=22272&tag_name=%E4%B9%92%E4%B9%93%E7%90%83"  data-type="1" data-tagname="乒乓球" data-tagid="22272"  _stat="体育:推荐标签">
+    <span class="item_cover rec_theme_item_cover">
+      <img loading="lazy" class="cover" src="//vfiles.gtimg.cn/wupload/vqqcom.web_feed/20191017_95kj65osx8l.jpeg" alt="乒乓球">
+    </span>
+    <div class="item_info rec_theme_item_info">
+      <span class="name" title="乒乓球">
+        <svg class="name_icon " width="18" height="18"><path d="M8.495 3.01L5 10h3v5.282L5.952 16.67c-.846.573-2.015.378-2.61-.436A1.758 1.758 0 0 1 3 15.196V2.804C3 1.807 3.839 1 4.873 1c.379 0 .748.11 1.06.317L8.495 3.01zM9 3.344l6.187 4.09c.853.563 1.07 1.686.484 2.507-.126.177-.284.33-.466.454L9.093 14.54 12 8H9V3.344z" fill="#FF5C38" fill-rule="nonzero"/></svg>乒乓球
+      </span>
+      <span class="play_total" title=""></span>
+    </div>
+  </a>
+
+    </div>
+  </div>
+
+
+            
+        
+    
+<link rel="stylesheet" href="//vm.gtimg.cn/c/=/tencentvideo/vstyle/web/v6/style/css/channel/channel.css?v=2019111818" />
+<!--[if lte IE 9 ]>
+<link rel="stylesheet" href="//vm.gtimg.cn/c/=/tencentvideo/vstyle/web/v6/style/css/channel/channel.ie.css?v=2019111818" />
+<![endif]-->
+<script type="text/javascript" src="//vm.gtimg.cn/tencentvideo_v1/script/txv.core.js?v=20190402"></script>
+<script>
+  clearTimeout(window.emptyPageTimer)
+</script>
+
+
+    </div>
+
+<link rel="stylesheet" href="//vm.gtimg.cn/tencentvideo/vstyle/web/v6/style/css/footer.css">
+<!--[if lte IE 9 ]>
+<link rel="stylesheet" href="//vm.gtimg.cn/tencentvideo/vstyle/web/v6/style/css/footer.ie.css" />
+<![endif]-->
+<div class="site_footer">
+	<div class="mod_footer_contentinfo cf __lite_hide__">
+		<div class="contentinfo_column contentinfo_channel">
+			<div class="contentinfo_title">热门频道</div>
+			<div class="contentinfo_ul">
+				
+					<div class="foot_item"><a class="foot_link" href="https://v.qq.com/tv" target="_blank" title="电视剧" _stat="page_footer:channel_1">电视剧</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://v.qq.com/variety" target="_blank" title="综艺" _stat="page_footer:channel_2">综艺</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://v.qq.com/movie" target="_blank" title="电影" _stat="page_footer:channel_3">电影</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://v.qq.com/fun" target="_blank" title="搞笑" _stat="page_footer:channel_4">搞笑</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://v.qq.com/channel/music" target="_blank" title="音乐" _stat="page_footer:channel_5">音乐</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://v.qq.com/ent" target="_blank" title="娱乐" _stat="page_footer:channel_6">娱乐</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://v.qq.com/cartoon" target="_blank" title="动漫" _stat="page_footer:channel_7">动漫</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="http://v.qq.com/games/" target="_blank" title="游戏" _stat="page_footer:channel_8">游戏</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://film.qq.com" target="_blank" title="VIP影院" _stat="page_footer:channel_9">VIP影院</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://v.qq.com/channel/usuk" target="_blank" title="海外剧" _stat="page_footer:channel_10">海外剧</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://v.qq.com/channel/doco" target="_blank" title="纪录片" _stat="page_footer:channel_11">纪录片</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://v.qq.com/news" target="_blank" title="新闻" _stat="page_footer:channel_12">新闻</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://v.qq.com/life" target="_blank" title="生活" _stat="page_footer:channel_13">生活</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://v.qq.com/sports" target="_blank" title="体育" _stat="page_footer:channel_14">体育</a></div>
+				
+			</div>
+		</div>
+		<div class="contentinfo_column contentinfo_feature">
+			<div class="contentinfo_title">特色推荐</div>
+			<div class="contentinfo_ul">
+				
+					<div class="foot_item"><a class="foot_link" href="http://v.qq.com/videoplus/" target="_blank" title="原创自媒体" _stat="page_footer:rec_1">原创自媒体</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://v.qq.com/channel/dv" target="_blank" title="自制电影" _stat="page_footer:rec_2">自制电影</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://guanjia.qq.com/?ADTAG=media.buy.sogo.SEO8&type=1" target="_blank" title="杀毒软件" _stat="page_footer:rec_3">杀毒软件</a></div>
+				
+			</div>
+		</div>
+		<div class="contentinfo_column contentinfo_download">
+			<div class="contentinfo_title">软件下载</div>
+			<div class="dl_list">
+				
+					<a class="item" target="_blank" href="http://v.qq.com/download.html#phone" _stat="page_footer:download_1">
+						<svg class="svg_icon svg_icon_iphone" viewBox="0 0 50 50" width="50" height="50"> <path d="M34 3h-18c-1.657 0-3 1.343-3 3v38c0 1.657 1.343 3 3 3h18c1.657 0 3-1.343 3-3v-38c0-1.657-1.343-3-3-3zm1 38h-20v-32h20v32z"></path> <!--[if lte IE 8 ]><image src="//puui.qpic.cn/vupload/0/20190105_svg_icon_iphone.png/0" xlink:href="" /><![endif]--> </svg>
+						<span class="text_icon">手机版</span>
+					</a>
+				
+					<a class="item" target="_blank" href="http://v.qq.com/download.html#pc" _stat="page_footer:download_2">
+						<svg class="svg_icon svg_icon_win" viewBox="0 0 50 50" width="50" height="50"><path d="M7 23.977l13.282-.176v-14.384l-13.282 2.286v12.274zm15.953-15.02v14.809l20.047-.266v-17.993l-20.047 3.45zm-15.953 29.339l13.282 2.286v-14.383l-13.282-.176v12.273zm15.953 2.746l20.047 3.451v-17.994l-20.047-.265v14.808z"></path><!--[if lte IE 8 ]><image src="//puui.qpic.cn/vupload/0/20190105_svg_icon_win.png/0" xlink:href="" /><![endif]--></svg>
+						<span class="text_icon">Windows版</span>
+					</a>
+				
+					<a class="item" target="_blank" href="http://v.qq.com/download.html#mac" _stat="page_footer:download_3">
+						<svg class="svg_icon svg_icon_mac" viewBox="0 0 50 50" width="50" height="50"> <path d="M42.705 17.437c-2.28-2.958-5.474-4.671-8.49-4.671-3.99 0-5.675 1.976-8.454 1.976-2.85 0-5.022-1.964-8.478-1.964-3.384 0-6.993 2.143-9.285 5.796-3.218 5.15-2.672 14.85 2.541 23.114 1.864 2.958 4.358 6.275 7.623 6.312h.06c2.838 0 3.681-1.928 7.587-1.952h.06c3.847 0 4.619 1.94 7.445 1.94h.059c3.265-.036 5.889-3.713 7.753-6.659 1.342-2.12 1.84-3.185 2.873-5.581-7.54-2.97-8.751-14.059-1.294-18.311zm-18.155-4.371c2.529 0 5.118-1.581 6.625-3.605 1.461-1.928 2.565-4.658 2.162-7.461-2.375.168-5.141 1.736-6.768 3.784-1.472 1.856-2.683 4.611-2.208 7.282h.189z"></path> <!--[if lte IE 8 ]><image src="//puui.qpic.cn/vupload/0/20190105_svg_icon_mac.png/0" xlink:href="" /><![endif]--> </svg>
+						<span class="text_icon">Mac版</span>
+					</a>
+				
+					<a class="item" target="_blank" href="http://v.qq.com/download.html#pad" _stat="page_footer:download_4">
+						<svg class="svg_icon svg_icon_ipad" viewBox="0 0 50 50" width="50" height="50"> <path d="M46 8h-42c-1.657 0-3 1.343-3 3v28c0 1.657 1.343 3 3 3h42c1.657 0 3-1.343 3-3v-28c0-1.657-1.343-3-3-3zm-2 32h-38v-30h38v30z"></path> <!--[if lte IE 8 ]><image src="//puui.qpic.cn/vupload/0/20190105_svg_icon_ipad.png/0" xlink:href="" /><![endif]--> </svg>
+						<span class="text_icon">iPad版</span>
+					</a>
+				
+					<a class="item" target="_blank" href="http://v.qq.com/download.html#tv" _stat="page_footer:download_5">
+						<svg class="svg_icon svg_icon_tv" viewBox="0 0 50 50" width="50" height="50"> <path d="M2 11h44v10h2v-11c0-.552-.448-1-1-1h-46c-.552 0-1 .448-1 1v27c0 .552.448 1 1 1h11v2c0 .552.448 1 1 1h22c.552 0 1-.448 1-1v-2h4v-2h-38v-25zm46 12h-4c-1.105 0-2 .895-2 2v14c0 1.105.895 2 2 2h4c1.105 0 2-.895 2-2v-14c0-1.105-.895-2-2-2zm-2 13c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3zm0-5c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2z"></path> <!--[if lte IE 8 ]><image src="//puui.qpic.cn/vupload/0/20190105_svg_icon_tv.png/0" xlink:href="" /><![endif]--> </svg>
+						<span class="text_icon">TV版</span>
+					</a>
+				
+			</div>
+		</div>
+		<div class="contentinfo_column contentinfo_service">
+			<div class="contentinfo_title">服务</div>
+			<div class="contentinfo_ul">
+				
+					<div class="foot_item"><a class="foot_link" href="http://kf.qq.com/product/QQlive.html" target="_blank" title="客服" _stat="page_footer:service_1">客服</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://support.qq.com/products/2208" target="_blank" title="反馈" _stat="page_footer:service_2">反馈</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://v.qq.com/biu/tort" target="_blank" title="侵权投诉" _stat="page_footer:service_3">侵权投诉</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://v.qq.com/open/" target="_blank" title="免广告合作" _stat="page_footer:service_4">免广告合作</a></div>
+				
+					<div class="foot_item"><a class="foot_link" href="https://dcm.qq.com/txsp.html#/" target="_blank" title="VIP采购" _stat="page_footer:service_5">VIP采购</a></div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="mod_footer">
+		<div class="copyright_zheng">
+			<a href="https://www.qq.com/culture.shtml" target="_blank" rel="nofollow">粤网文[2017]6138-1456号</a>
+			<!-- | <a href="https://www.qq.com/cbst.shtml" target="_blank" rel="nofollow">网络视听许可证1904073号</a> -->
+			| 增值电信业务经营许可证：<a href="https://www.qq.com/icp.shtml" target="_blank" rel="nofollow">粤B2-20090059</a> | <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030002000001" rel="nofollow">粤公网安备 44030002000001号</a>
+		</div>
+		<div class="footermenu">
+			<a href="http://www.tencent.com/" rel="nofollow" target="_blank">关于腾讯</a> | <a href="http://www.tencent.com/index_e.shtml" rel="nofollow" target="_blank">About Tencent</a> | <a href="http://www.qq.com/contract.shtml" rel="nofollow" target="_blank">服务条款</a> | <a href="http://www.tencentmind.com/" rel="nofollow" target="_blank">广告服务</a> | <a href="http://hr.tencent.com/" rel="nofollow" target="_blank">腾讯招聘</a> | <a href="http://kf.qq.com/product/QQlive.html" rel="nofollow" target="_blank">客服中心</a> | <a href="http://www.qq.com/map/" rel="nofollow" target="_blank">网站导航</a>
+		</div>
+		<div class="copyrighten">Copyright © 1998 - <span><script>document.write(new Date().getFullYear());</script></span> Tencent. <a target="_blank" href="https://www.tencent.com/en-us/statement.html" rel="nofollow">All Rights Reserved.</a></div>
+		<div class="copyrightzh">腾讯公司 <a target="_blank" href="https://www.tencent.com/zh-cn/statement.html" rel="nofollow">版权所有</a></div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+    window.V_PAGE_INFO = {
+        page: 'sports',
+        adType: 'index',
+        channel: 'sports'
+    }
+    var doc_el = document.compatMode == 'BackCompat' ? document.body : document.documentElement;
+    txv.common.initPage({
+        boss: {
+            app: '频道页',
+            page: '体育频道',
+            isRecalc: true
+        },
+        lazyload: {
+            getScreenShowHeight: (function (doc) {
+                return function () {
+                    var scrollTop = window.pageYOffset || doc_el.scrollTop;
+                    return doc.clientHeight + scrollTop + 600;
+                }
+            })(doc_el)
+        }
+    });
+</script>
+<script src="//vm.gtimg.cn/tencentvideo/script/vchannel/index.614b.js"></script>
+
+<script tpye="text/javascript" src="//js.aq.qq.com/js/aq_common.js" defer async></script>
+<script src="//ra.gtimg.com/sc/vqq/crystal-min.js" id="l_qq_com" arguments="{'mo_page_ratio':0.02,'mo_ping_ratio':0.01,'mo_ping_script':'//ra.gtimg.com/sc/mo_ping-min.js'}">
+</script>
+<script tpye="text/javascript" src="//vm.gtimg.cn/c/=/tencentvideo/script/index2017/public_comps/shortcut.min.js,/tencentvideo/script/module/floatpanel.js">
+</script>
+<script type="text/javascript" src="//vm.gtimg.cn/tencentvideo/script/quick-open/quick_open.min.js" defer async>
+</script>
+</body>
+<script type="text/javascript">
+    window.floatPanel({
+        page: window.channelName,
+        channel: function (t) {
+            return t && t.el && t.el.parents(".mod_row_box").attr("id");
+        },
+    });
+    window.guangping_crystal && window.guangping_crystal();
+    window.shortcut && window.shortcut.init({
+        download: true, // 下载
+        top: true, // 回到顶部
+        usersign: true, // 签到
+        feedback: true // 意见反馈
+    })
+</script>
+</body>
+
+</html>

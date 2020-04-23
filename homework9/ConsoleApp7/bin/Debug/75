@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="gbk">
+	<meta name="robots" content="all">
+	<meta name="author" content="Tencent-TGideas">
+	<meta name="Copyright" content="Tencent">
+	<meta name="description" content="����CFM�����꣬����101�죬���ǽ�����Ϸ�汾������һ�γ��׵ġ���ݵĸ����Ż�������ϣ���ܸ����ٵĸ��ߴ�����ǵ��Ż����ݺ�Ч������ʱ���㹵ͨ�����跴�������ע������ȫƽ̨������ͬ������������ĸ��ֳ��룡">
+	<meta name="keywords" content="���ļƻ�,101,CF����������,CFM,CF����,��Խ��������,��Խ�������ι���,CF����ٷ�����,��Խ��������,��Ѷ��Խ����">
+	<title>����С����-��Խ����ǹս����-CF����ٷ�����-�ٷ���վ-��Ѷ��Ϸ</title>
+    	<script type="text/javascript">
+		(function () {
+			function b(a) {
+				if (window.sessionStorage) sessionStorage.setItem("channel", a);
+				else {
+					var b = b || 0,
+						c = "";
+					0 != b && (c = new Date, c.setTime(c.getTime() + 1E3 * b), c = "; expires=" + c.toGMTString());
+					document.cookie = "channel=" + escape(a) + c + "; path=/"
+				}
+			}
+			var a = navigator.userAgent;
+			if (-1 != a.indexOf("iPhone") || -1 != a.indexOf("iPad") || -1 != a.indexOf("iPod") || -1 != a.indexOf("Android")) a =
+				document.referrer, -1 < a.indexOf("baidu.com") ? b("seo_baidu") : -1 < a.indexOf("sogou.com") ? b("seo_sogou") : -
+				1 < a.indexOf("sm.cn") ? b("seo_sm") : -1 < a.indexOf("so.com") ? b("seo_360") : -1 < a.indexOf("bing.com") ? b(
+					"seo_bing") : -1 < a.indexOf("google.com") && b("seo_google"), self.location = "/m/index.shtml"
+		})();
+
+	</script>
+    <link rel="stylesheet" href="//game.gtimg.cn/images/cfm/cp/a20180927vacation/reset.css">
+    <link rel="stylesheet" href="//game.gtimg.cn/images/cfm/cp/a20180927vacation/style.css">
+</head>
+    
+<style>
+.top-nav {height: 75px;background-color: #232323;}
+.topbox {width: 1200px;margin: 0px auto;position: relative;}
+.top-nav .logobox {width: 310px;line-height: 1.6;padding-top: 14px;background: url(//game.gtimg.cn/images/cfm/web201606/top-sp.png) 0 75px no-repeat;height: 105px;position: absolute;left: 0;top: 0;z-index: 9999;}
+.top-nav .logo {float: left;padding: 0 18px 0 28px;}
+.top-nav .logobox strong {display: block;padding-top: 3px;font-size: 16px;font-weight: 700;color: #fff}
+.top-nav .txt {font-size: 12px;color: #5c5c5c}
+.navlist{position: absolute;right: 0;top: 0;}
+.top-nav .item {width: 169px;float: left}
+.top-nav .item .lnk {display: block;height: 75px;line-height: 75px;text-align: center;color: #fff}
+.top-nav .item:hover {font-weight: 700;background: url(//game.gtimg.cn/images/cfm/web201606/top-sp.png) 50% 43px no-repeat}
+.gamedown {background: url(//game.gtimg.cn/images/cfm/cp/a20180130juntuan/btn1.png) no-repeat;width: 169px;height: 51px;display: block;margin-top: 10px;}</style>
+<body>
+<!-- //game.gtimg.cn/images/cfm/cp/a20180927vacation -->
+<div class="top-nav" id="top">
+    <div class="topbox">
+        <div class="logobox">
+            <em class="logo"><a href="//cfm.qq.com/" target="_blank"><img src="//game.gtimg.cn/images/cfm/web201801/logo.png" width="74" height="74" alt=""/></a></em>
+            <div class="txt">
+                <strong>��Խ����-ǹս����</strong>
+                <em>CF����FPS����</em>
+            </div>
+        </div>
+        <ul class="navlist">
+            <li class="item"><a href="//cfm.qq.com/main.shtml" class="gamedown lnk" target="_blank" title="�������" onclick="PTTSendClick('btn','gamedown','�������')"></a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="wrap">
+    <div class="bg">
+        <div class="bg1"></div>
+    </div>
+    <div class="content">
+        <div class="main">
+            <div class="href">
+                <a class="a1"href="//cfm.qq.com/d/?device=iphone"target="_blank" title="App Store����" onclick="PTTSendClick('btn','logo1','App Store����');"></a>
+                <a class="a2" href="//cfm.qq.com/d/?device=android" target="_blank"title="��׿����" onclick="PTTSendClick('btn','logo2','��׿����');"></a>
+            </div>
+           <!-- ����ʮ�� ��ϲ��begin -->
+           <div class="part1">
+               <div class="title"></div>
+               <div class="part1_con">
+                   <div class="title"></div>
+                   <ul class="list">
+                       <li>
+                           <img src="//game.gtimg.cn/images/cfm/cp/a20180927vacation/pic1.png" alt="���ó�ɫ����������">
+                           <p class="p1">���ó�ɫ����������</p>
+                           <p class="p2">10/1-10/2</p>
+                       </li>
+                       <li>
+                           <img src="//game.gtimg.cn/images/cfm/cp/a20180927vacation/pic2.png" alt="��¼���� ϡ��������������">
+                           <p class="p1">��¼���� ϡ��������������</p>
+                           <p class="p2">10/1-10/7</p>
+                       </li>
+                       <li class="last">
+                           <img src="//game.gtimg.cn/images/cfm/cp/a20180927vacation/pic3.png" alt="ƴ�Ŵ�ս �ֽ����Ͳ�ͣ">
+                           <p class="p1">ƴ�Ŵ�ս �ֽ����Ͳ�ͣ</p>
+                           <p class="p2">10/1-10/8</p>
+                       </li>
+                   </ul>
+               </div>
+               <div class="part1_con2">
+                   <div class="title"></div>
+                   <img src="//game.gtimg.cn/images/cfm/cp/a20180927vacation/pic4.png" alt="С�ں�">
+               </div>
+               <div class="part1_con3">
+                   <div class="title"></div>
+                    <div class="box"><a class="add" href="//cfm.qq.com/cp/a20180927zsgf/index.html " target="_blank" ontouchend="PTTSendClick('btn','more','�鿴����');">�鿴����&gt;&gt;</a></div>
+                   <ul class="small">
+                        <li class="active"><img class="big" src="//game.gtimg.cn/images/cfm/cp/a20180927vacation/big1.png" alt=""></li> 
+                        <li><img src="//game.gtimg.cn/images/cfm/cp/a20180927vacation/small2.png" alt=""></li>
+                        <li class="last"><img src="//game.gtimg.cn/images/cfm/cp/a20180927vacation/small3.png" alt=""></li>
+                   </ul>
+                   <ul class="big">
+                        <li><img src="//game.gtimg.cn/images/cfm/cp/a20180927vacation/big1.png" alt=""></li> 
+                        <li><img src="//game.gtimg.cn/images/cfm/cp/a20180927vacation/big2.png" alt=""></li>
+                        <li class="last"><img src="//game.gtimg.cn/images/cfm/cp/a20180927vacation/big3.png" alt=""></li>
+                   </ul>
+               </div>
+           </div>
+           <!-- ����ʮ�� ��ϲ��end -->
+           <!-- ����ս�� ������Ϯbegin  -->
+           <div class="part2">
+               <div class="title"></div>
+               <div class="box"><a class="add" href="//cfm.qq.com/cp/a20180927zsgf/index.html " target="_blank" ontouchend="PTTSendClick('btn','more','�鿴����');">�鿴����&gt;&gt;</a></div>
+               <div class="flash">
+                    <ul class="list4">
+                        <li class="one show"></li>  
+                        <li class="two"></li>  
+                        <li class="three"></li>  
+                        <li class="four"></li>  
+                    </ul>
+                </div>
+           </div>
+           <!-- ����ս�� ������Ϯend -->
+           <!-- ���ĳ��� ����ǰ��begin -->
+           <div class="part3">
+               <div class="title"></div>
+               <img src="//game.gtimg.cn/images/cfm/cp/a20180927vacation/pic5.png" alt="">
+               <a class="a3" href="//cfm.qq.com/cp/a20180917annual/index.html   " target="_blank"title="���ļƻ�" onclick="PTTSendClick('btn','btn1','���ļƻ�');"></a>
+           </div>
+           <!-- ���ĳ��� ����ǰ��end -->
+        </div>
+    </div>
+</div>
+</body>
+<script src="//ossweb-img.qq.com/images/js/title.js"></script>
+<script src="//game.gtimg.cn/images/js/2018foot/foot.js"></script>
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>
+
+<script>    
+
+ //ʵ���ַ��ٹ���
+    $(".list4 li").click(function(){
+        $(this).addClass('show').siblings().removeClass('show');
+        
+    });
+
+    $('.small li').click(function(){
+        $(this).addClass('active').siblings().removeClass('active')
+        sm_index=$(this).index();
+        $('.small li').eq(0).find('img').attr('src','//game.gtimg.cn/images/cfm/cp/a20180927vacation/small1.png')
+        $('.small li').eq(1).find('img').attr('src','//game.gtimg.cn/images/cfm/cp/a20180927vacation/small2.png')
+        $('.small li').eq(2).find('img').attr('src','//game.gtimg.cn/images/cfm/cp/a20180927vacation/small3.png')
+        var _sm_img = $(this).find('img').attr('src')
+        _big_img = $('.big li').eq(sm_index).find('img').attr('src');
+         $(this).find('img').attr('src',_big_img)
+    })
+
+</script>
+
+
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script>
+//�˶δ��벻�ܷŵ�����JS�У�
+var setSite={ //������վ���� 
+    siteType:"a20180927vacation", //������:"os"�����ǹ�����������ǣ�����дactName����a20160701xxx 
+    pageType:"index", //������:��ҳ��Ķ�λ������ҳ�溬����д����main||list||detail||download||share||page1||pageN 
+    pageName:"��ҳ", //������:ҳ�������� 
+    project:"", //ѡ����:����ǹ���ģ�����Ǳ���;����ģ�����ݣ���д�̶��Ķ�Ӧֵ;ԭ������base;΢����ingame;ͬ��վdoujin;����match;����վstory;�Ļ�վhistory;��˿վfans;����վcoming;��̳bbs;
+    osact:0, //ѡ����:�Ƿ��ǹ���ר��(�ڹ�����Ӫ��ר��)boolean��Ĭ����0�������������ϼ������osact=1���������
+    stayTime:0, //ѡ����:�Ƿ���Ҫͳ��ͣ��ʱ��boolean��Ĭ����0
+};
+if(typeof(pgvMain)=='function')pgvMain();//ǧ�������ǣ�
+</script>
+</html>

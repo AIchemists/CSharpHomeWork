@@ -1,0 +1,764 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="gb2312">
+	<meta name="robots" content="all" />
+	<meta name="author" content="Tencent-TGideas" />
+	<meta name="Copyright" content="Tencent" />
+	<meta name="Description" content="����ս����Ϊ��Ѷ�׿�����ǹս���Σ��������3������죬ȡ�ö����ͻ�ơ����滪�����������ּ򵥣�֧��ˬ������Ķ��˶�ս���ڶ���PVEģʽ�У���ҿɲٿػ���սʿ����ʻ��װֱ������ʹ�õ�⡢����������������ǹ�������BOSSչ����ɱ��ȫ���淨���ݴ����" />
+	<meta name="Keywords" content="��ս,��ս��Ӱ,��սͬ������,NZ��ս,��ս����,��ս��Ϸ,��ս��Ϸ����,��ս����,��ս������,��սqvod,QQ��ս,QQNZ,NZ����,NZ,NZ��վ,��ս�ٷ���վ,FPS������Ϸ,��Ѷ��Ϸ,���,����,���,�Ž�,������,���3,UE3,FPS,�����з�,����" />
+	<title>��ս�ٷ���վ-ȫģʽ���ƽ̨����-��Ѷ��Ϸ</title>
+	<script>
+		var isMobile = (function () {
+			var ua = navigator.userAgent.toLowerCase() ;
+			return (/android|webos|iphone|ipod|blackberry|iemobile|opera mini/i.test(ua)) ;
+		})();
+		if (isMobile) { var ui=location.href.indexOf("vm=2017");
+			if(ui<0){
+				location.href = '//nz.qq.com/m/index.shtml';
+			}
+		}
+	</script>
+	<!--��ƣ�yuanerwang| �ع���yao | ������2016-07-05 | �ŶӲ��ͣ�//tgideas.qq.com/ -->
+	<!--<link href="web201606/comm.css" type="text/css" rel="stylesheet"><script>var _speedMark =d0 = new Date(),timePoints=[];</script>-->
+	<link href="web201606/comm.css" type="text/css" rel="stylesheet"><script>var _speedMark =d0 = new Date(),timePoints=[];</script>
+</head>
+<body>
+<div class="header">
+	<div class="nav"  exposure-tag="nav,������">
+	<div class="nav_con">
+		<h1 class="nav_title"><a href="//nz.qq.com/main.shtml">��ս�ٷ���վ</a></h1>
+		<div class="nav_list">
+			<ul class="clearfix">
+				<li>
+					<strong><a href="//nz.qq.com/main.shtml" onclick="pgvSendClick({hottag:'main.link.topNavHome'})" class="nav_home">��ҳ</a></strong>
+				</li>
+
+				<li>
+					<strong><a href="/webplat/info/news_version3/1421/2253/2254/m2163/list_1.shtml" onclick="pgvSendClick({hottag:'main.link.topNavNews'})" class="nav_news">��������</a></strong>
+					<a href="/webplat/info/news_version3/1421/2253/2254/m2163/list_1.shtml" onclick="pgvSendClick({hottag:'main.link.topNavNews01'})">ͷ������</a>
+					<a href="/webplat/info/news_version3/1421/2253/2254/2256/m2163/list_1.shtml" onclick="pgvSendClick({hottag:'main.link.topNavNews02'})">��������</a>
+					<a href="/webplat/info/news_version3/1421/2253/2254/6870/m2163/list_1.shtml" onclick="pgvSendClick({hottag:'main.link.topNavNews03'})">��������</a>
+					<a href="/webplat/info/news_version3/1421/2253/2254/2258/m2163/list_1.shtml" onclick="pgvSendClick({hottag:'main.link.topNavNews04'})">ý������</a>
+				</li>
+				<li>
+					<strong><a href="//nz.qq.com/download.shtml" onclick="pgvSendClick({hottag:'main.link.topNavDownload'})" class="nav_down">��������</a></strong>
+					<a href="//nz.qq.com/download.shtml" class="light" onclick="pgvSendClick({hottag:'main.link.topNavDownload01'})"><i class="hot_icon"></i>������Ϸ</a>
+					<a href="//nz.qq.com/download.shtml#tab=2" class="light" onclick="pgvSendClick({hottag:'main.link.topNavDownload02'})"><i class="hot_icon"></i>���ز���</a>
+					<a href="//nz.qq.com/web201606/wallpaper.shtml" onclick="pgvSendClick({hottag:'main.link.topNavWallpaper'})">������ֽ</a>
+				</li>
+				<li>
+					<strong><a href="/web201606/guide01.shtml" class="nav_data">��Ϸ����</a></strong>
+					<a href="/web201606/guide01.shtml">��������</a><a href="//nz.qq.com/v/" target="_blank">��Ƶ����</a><a href="//nz.qq.com/cp/a20180614nz_pc/index.html" target="_blank">����վ</a>
+				</li>
+				<li>
+					<strong><a href="//nz.qq.com/web201606/task/index.shtml" onclick="pgvSendClick({hottag:'main.link.topNavActions'})" class="nav_active">�����</a></strong>
+
+					<a href="//nz.qq.com/web201606/task/index.shtml" class="light" onclick="pgvSendClick({hottag:'main.link.topNavActions01'})"><i class="hot_icon"></i>����ר��</a>
+					<a href="//nz.qq.com/web201606/version.shtml" class="light" onclick="pgvSendClick({hottag:'main.link.topNavVersion'})"><i class="hot_icon"></i>�汾ר��</a>
+					<a href="//nz.qq.com/web201606/event.shtml" onclick="pgvSendClick({hottag:'main.link.topNavRace'})">����ר��</a>
+					<a href="//nz.qq.com/web201606/active.shtml" onclick="pgvSendClick({hottag:'main.link.topNavCoprAct'})">�ר��</a>
+					<a href="//nz.qq.com/web201606/community.shtml" onclick="pgvSendClick({hottag:'main.link.topNavCommunity'})">�����</a>
+				</li>
+				<li>
+					<strong><a href="javascript:;" onclick="pgvSendClick({hottag:'main.link.topNavServer'})" class="nav_service">��������</a></strong>
+					<a href="//nz.qq.com/web201606/cdkey.shtml" class="light" onclick="pgvSendClick({hottag:'main.link.topNavCdkey'})"><i class="hot_icon"></i>CDK�һ�</a>
+					<a href="//nz.qq.com/cp/a20170814safe/index.shtml" target="_blank" class="light" onclick="pgvSendClick({hottag:'main.link.topNavLockout'})"><i class="hot_icon"></i>��ȫ����</a>
+					<a href="//bang.qq.com/gl/zhuanlan/tool/nz" target="_blank" onclick="pgvSendClick({hottag:'main.link.topNavQyou'})">��������</a>
+					<a href="//jiazhang.qq.com/zk/home.html" target="_blank" onclick="pgvSendClick({hottag:'main.link.topNavAuthenticate'})">ʵ����֤</a>
+				</li>
+				<li>
+					<strong><a href="//nz.gamebbs.qq.com/forum.php" onclick="pgvSendClick({hottag:'main.link.topNavForum'})" target="_blank" class="nav_player">��һ���</a></strong>
+					<a href="//bbs.nz.qq.com/" onclick="pgvSendClick({hottag:'main.link.topNavForum01'})" target="_blank" class="light"><i class="hot_icon"></i>�ٷ���̳</a>
+					<a href="https://weibo.com/u/6059274929?topnav=1&wvr=6&topsug=1&is_hot=1#1568617952330" onclick="pgvSendClick({hottag:'main.link.topNavWeibo'})" target="_blank">�ٷ�΢��</a>
+					<a href="//nz.qq.com/cp/a20170327zm/" onclick="pgvSendClick({hottag:'main.link.topNavCsf'})" target="_blank">���Է�</a>
+					<a href="//nz.qq.com/cp/a20181128personal/upload.shtml#getct" onclick="pgvSendClick({hottag:'main.link.topNavTgzx'})" target="_blank">Ͷ������</a>
+				</li>
+				<li>
+					<strong><a href="//kf.qq.com/product/nz.html" onclick="pgvSendClick({hottag:'main.link.topNavKefu'})" target="_blank" class="nav_customer">��Ѷ�ͷ�</a></strong>
+					<a href="//kf.qq.com/product/nz.html" onclick="pgvSendClick({hottag:'main.link.topNavKefu01'})" target="_blank">�ٷ��ͷ�</a>
+					<a href="//game.qq.com/contract.shtml" onclick="pgvSendClick({hottag:'main.link.topNavAgreement'})" target="_blank">�û�Э��</a>
+					<a href="//jiazhang.qq.com/zk/home.html" onclick="pgvSendClick({hottag:'main.link.topNavFCM'})" target="_blank">��������֤</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+	<div class="header_back"><a class="header_nz_ver" href="//nz.qq.com/cp/a20200324zerobuy/index.html" target="_blank" onclick="pgvSendClick({hottag:'main.link.nzVer'})"></a></div>
+
+</div>
+
+<div class="main clearfix">
+	<div class="login_con">
+		<div  id="unlogin" class="login">
+			<p>�װ���NZer<br/>��ӭ[<a href="javascript:LoginManager.login();">��¼</a>]</p>
+		</div>
+		<div id="logined" class="logined">
+			<div id="loginedFace" class="logined_face"><span><img src="" width="98" height="98"><b><a href="javascript:LoginManager.logout();NZcomm.delUserData();">[ע��]</a><a id="loginArea" href="javascript:NZcomm.bindArea();">[��]</a></b></span></div>
+			<div class="logined_details">
+				<p class="clearfix">
+					<span>ɱ����<strong id="killNumber"></strong></span>
+					<span>K/D<strong id="killBekilled"></strong></span>
+					<span>ʤ��<strong id="killWin"></strong></span>
+					<span>ʤ��<strong id="killWinLose"></strong></span>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="sidebar">
+		<div class="sidebar_con"  exposure-tag="btns,��ఴť">
+	<a class="side_down" href="//nz.qq.com/download.shtml" onclick="pgvSendClick({hottag:'main.link.leftDownload'})"><b class="side_down_icon"></b><b class="side_down_ms">������Ϸ</b><i class="sd_ribbon"><i></i></i></a>
+	<a class="side_active" href="//nz.qq.com/web201606/active.shtml" onclick="pgvSendClick({hottag:'main.link.leftActions'})"><b></b><span class="sa_text">�����</span></a>
+	<a class="side_guide" href="//nz.qq.com/web201606/guide01.shtml" onclick="pgvSendClick({hottag:'main.link.leftGuide'})"><b></b><span class="sg_text">����ָ��</span></a>
+	<a class="side_report" href="//nz.qq.com/cp/a20170814safe/index.shtml" target="_blank" onclick="pgvSendClick({hottag:'main.link.leftReport'})"><b></b><span class="sr_text">�ٱ����</span></a>
+	<!--���� s-->
+	<div class="side_down_b"><span></span><i class="sd_up"></i><i class="sd_down"></i></div>
+	<div class="side_active_b"><i></i><b></b></div>
+	<div class="side_pieces"><i></i></div>
+	<i class="sc_box"></i><i class="sc_screws"></i>
+	<!--���� e-->
+</div>
+
+<!--���ù���-->
+<div class="tools"  exposure-tag="tools,���ù���">
+	<h2 class="m_title"><i></i>���ù���</h2>
+	<div class="gj_search">
+		<input type="search" class="gj_input" id="gjInput">
+		<a class="gj_do" href="javascript:void(0)" id="gjSearch"></a>
+	</div>
+	<ul class="clearfix">
+		<li><a href="//bbs.nz.qq.com/" target="_blank" onclick="pgvSendClick({hottag:'main.link.leftForum'})" class="tools_lt"><span><!--<i></i>--></span><b>�ٷ���̳</b></a></li>
+		<li><a href="//bang.qq.com/gl/index/nz" target="_blank" onclick="pgvSendClick({hottag:'main.link.leftBangbang'})" class="tools_bb"><span><!--<i></i>--></span><b>��Ϸ���</b></a></li>
+		<li><a href="//nz.qq.com/v/" target="_blank" onclick="pgvSendClick({hottag:'main.link.leftVideoZone'})" class="tools_sp"><span><!--<i></i>--></span><b>��Ƶר��</b></a></li>
+		<li><a href="//nz.qq.com/cp/a20160613cooperation/index.shtml" target="_blank" onclick="pgvSendClick({hottag:'main.link.leftPrivilegeAct'})" class="tools_tq"><span><!--<i></i>--></span><b>��Ȩ�</b></a></li>
+		<li><a href="//nz.qq.com/web201606/cdkey.shtml" target="_blank" onclick="pgvSendClick({hottag:'main.link.leftCdkey'})" class="tools_cd"><span><!--<i></i>--></span><b>CDK�һ�</b></a></li>
+		<li><a href="//nz.qq.com/cp/a20180731nzphone/index.html" target="_blank" onclick="pgvSendClick({hottag:'main.link.leftFukuan '})" class="tools_fk"><span><!--<i></i>--></span><b>������</b></a></li>
+		<li><a href="//nz.qq.com/comm-htdocs/pay/new_index.htm?t=nz" target="_blank" onclick="pgvSendClick({hottag:'main.link.leftAccounts'})" class="tools_cz"><span><!--<i></i>--></span><b>�˻���ֵ</b></a></li>
+		<li><a href="//daoju.qq.com/nz/" target="_blank" onclick="pgvSendClick({hottag:'main.link.leftDaoju'})" class="tools_sc"><span><!--<i></i>--></span><b>�����̳�</b></a></li>
+		<li><a href="//nzmall.qq.com/" target="_blank" onclick="pgvSendClick({hottag:'main.link.leftNamall'})" class="tools_zb"><span><!--<i></i>--></span><b>�ܱ��̳�</b></a></li>
+	</ul>
+	<img class="tools_pic" src="//game.gtimg.cn/images/nz/web201606/sidebar_app.jpg" width="378" height="108" alt="��ս����APP">
+</div>
+
+
+		<a id="monomerAd0" class="side_advert" href="javascript:;" onclick="pgvSendClick({hottag:'main.link.monomerAd0'})" target="_blank"><img src="//game.gtimg.cn/images/nz/web201606/advert01.jpg" width="380" height="140" alt="�������"></a>
+
+		<div class="brand" exposure-tag="brand,Ʒ�ƻ">
+			<h2 class="m_title"><i></i>Ʒ�ƻ</h2>
+			<ul>
+				<li><a id="brand0" href="#" onclick="pgvSendClick({hottag:'main.link.leftBrand0'})" target="_blank"><img src="//game.gtimg.cn/images/nz/web201606/brand01.jpg"  alt="��ս2.0"></a></li>
+				<li><a id="brand1" href="#" onclick="pgvSendClick({hottag:'main.link.leftBrand1'})" target="_blank"><img src="//game.gtimg.cn/images/nz/web201606/brand02.jpg"  alt="��ս2.0"></a></li>
+				<li><a id="brand2" href="#" onclick="pgvSendClick({hottag:'main.link.leftBrand2'})" target="_blank"><img src="//game.gtimg.cn/images/nz/web201606/brand03.jpg"  alt="��ս2.0"></a></li>
+			</ul>
+		</div>
+
+		<div class="partners" exposure-tag="partners,�������">
+			<h2 class="m_title"><i></i>�������</h2>
+			<div class="partners_con">
+				<h3>�������</h3>
+				<p class="partners_links">
+					<a href="https://gigabytezj.tmall.com/shop/view_shop.htm" onclick="pgvSendClick({hottag:'main.link.business0'})" target="_blank" class="l"></a>
+					<!--<a href="//www.amd.com/zh-cn" onclick="pgvSendClick({hottag:'main.link.business1'})" target="_blank" class="r"></a>-->
+				</p>
+				<h3>����ý��</h3>
+				<div class="media">
+					<div class="media_def">
+						<span>�������ý��</span><a href="javascript:;"><i></i></a>
+					</div>
+					<div class="media_list">
+						<p>
+							<a href="//guanjia.qq.com/game/nz/" onclick="pgvSendClick({hottag:'main.link.mideaDngj'})" target="_blank" title="���Թܼ���Ϸ����">���Թܼ���Ϸ����</a>
+							<a href="//www.te5.com/nz/" onclick="pgvSendClick({hottag:'main.link.mediaTw'})" target="_blank" title="����">����</a>
+							<a href="//wangyou.pcgames.com.cn/zhuanti/nz/" onclick="pgvSendClick({hottag:'main.link.mediaTpy'})" target="_blank" title="̫ƽ����Ϸ��">̫ƽ����Ϸ��</a>
+							<a href="//nz.ooqiu.com/" onclick="pgvSendClick({hottag:'main.link.mediaOoqiu'})" target="_blank" title="ȫ��羺��">ȫ��羺��</a>
+							<a href="//nz.aipai.com/" onclick="pgvSendClick({hottag:'main.link.mediaAipai'})" target="_blank" title="����">����</a><a href="//nz.17173.com/" onclick="pgvSendClick({hottag:'main.link.media17173'})" target="_blank" title="17173��Ϸ��սר��">17173��Ϸ</a>
+							<a href="//nz.yzz.cn/" onclick="pgvSendClick({hottag:'main.link.mediaYzz'})" target="_blank" title="Ҷ������սר��">Ҷ����</a>
+							<a href="//nz.duowan.com/" onclick="pgvSendClick({hottag:'main.link.mediaDuowan'})" target="_blank" title="������Ϸ��սר��">������Ϸ</a>
+							<a href="//nz.178.com/" onclick="pgvSendClick({hottag:'main.link.media178'})" target="_blank" title="178��Ϸ��սר��">178��Ϸ</a>
+							<a href="//game.zol.com.cn/nizhan/" onclick="pgvSendClick({hottag:'main.link.mediaZgc'})" target="_blank" title="�йش���Ϸ��սר��">�йش���Ϸ</a>
+							<a href="//gamevip.qq.com/act/a20130130hxn/index.shtml" onclick="pgvSendClick({hottag:'main.link.mediaLz'})" target="_blank" title="����">����</a>
+							<a href="//nz.gamedk.com/" onclick="pgvSendClick({hottag:'main.link.mediaDK'})" target="_blank" title="��Ϸ��">��Ϸ��</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="roll">
+			<div id="rollTab" class="roll_tab">
+				<a href="javascript:;" class="current">�ٷ�</a>
+				<a href="javascript:;">����</a>
+			</div>
+			<!--�ٷ�-->
+			<div id="official" class="roll_mod official_mod" exposure-tag="avds,���">
+				<ul id="officialMod" class="roll_con">
+					<li onclick="PTTSendClick('btn','avd0','���0');"><a data-tgadieg="15217,16232" href="#" onclick="pgvSendClick({hottag:'main.link.gg0'})"  target="_blank"></a></li>
+					<li onclick='PTTSendClick("btn","avd1","���1");'><a data-tgadieg="15217,16233" href="#" onclick='pgvSendClick({hottag:"main.rotate.gg1"})'  target="_blank"></a></li>
+					<li onclick='PTTSendClick("btn","avd2","���2");'><a data-tgadieg="15217,16234" href="#" onclick='pgvSendClick({hottag:"main.rotate.gg2"})'  target="_blank"></a></li>
+					<li onclick='PTTSendClick("btn","avd3","���3");'><a data-tgadieg="15217,16235" href="#" onclick='pgvSendClick({hottag:"main.rotate.gg3"})'  target="_blank"></a></li>
+					<li onclick='PTTSendClick("btn","avd4","���4");'><a data-tgadieg="15217,16236" href="#" onclick='pgvSendClick({hottag:"main.rotate.gg4"})'  target="_blank"></a></li>
+					<li onclick='PTTSendClick("btn","avd5","���5");'><a data-tgadieg="15217,16237" href="#" onclick='pgvSendClick({hottag:"main.rotate.gg5"})'  target="_blank"></a></li>
+					<li onclick='PTTSendClick("btn","avd6","���6");'><a data-tgadieg="15217,16238" href="#" onclick='pgvSendClick({hottag:"main.rotate.gg6"})'  target="_blank"></a></li>
+				</ul>
+				<div id="officialNav" class="roll_nav">
+					<p class="clearfix">
+						<!--						<span class="current">DIY����</span>
+                                                <span>DIY����</span>-->
+					</p>
+				</div>
+			</div>
+			<!--����-->
+			<div id="cooper" class="roll_mod">
+				<ul id="cooperMod" class="roll_con">
+					<li><a data-tgad="15217,16239,1" href="#" onclick='pgvSendClick({hottag:"main.rotate.gg7"})'  target="_blank"></a></li>
+					<li><a data-tgad="15217,16240,1" href="#" onclick='pgvSendClick({hottag:"main.rotate.gg8"})'  target="_blank"></a></li>
+					<li><a data-tgad="15217,16657,1" href="#" onclick='pgvSendClick({hottag:"main.rotate.gg9"})'  target="_blank"></a></li>
+				</ul>
+				<div id="cooperNav" class="roll_nav">
+					<p class="clearfix">
+						<!--						<span class="current">DIY����</span>
+                                                <span>DIY����</span>-->
+					</p>
+				</div>
+			</div>
+		</div>
+		<!--����ר��-->
+		<div class="news" onclick=""  exposure-tag="news,����ר��">
+			<h2 class="m_title"><i></i>����ר��</h2>
+			<div id="newsNav" class="tab_comm">
+				<ul class="clearfix">
+					<li><a href="javascript:;" class="current">ͷ��</a></li>
+					<li><a href="javascript:;">����</a></li>
+					<li><a href="javascript:;">ý��</a></li>
+					<li><a href="javascript:;">����</a></li>
+				</ul>
+				<i></i>
+			</div>
+			<a class="more" onclick="pgvSendClick({hottag:'main.link.newsMore'})" href="//nz.qq.com/webplat/info/news_version3/1421/2253/2254/2255/m2163/list_1.shtml" target="_blank">����<i></i></a>
+			<div class="news_first">
+				<a class="news_first_links" onclick="pgvSendClick({hottag:'main.link.newsAD'})" href="javascript:;" target="_blank"><img src="//game.gtimg.cn/images/nz/web201606/news_ad.jpg" width="380" height="110" alt=""></a>
+				<p><i></i><a href="javascript:;" onclick="pgvSendClick({hottag:'main.link.newsAD'})" target="_blank" class="new_first_txt"></a></p>
+			</div>
+			<div id="newsCon" class="news_con">
+				<ul class="current" onclick="pgvSendClick({hottag:'main.link.newsTt'})">
+					<!--<ul>-->
+	<li><i></i><b>[ͷ��]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2255/m2161/202004/854861.shtml" target="_blank">¹�����BUG˵������</a><span>04/16</span></li>
+	<li><i></i><b>[ͷ��]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2255/m2161/202004/855104.shtml" target="_blank">�����������418������ȫ�������ͣ���</a><span>04/17</span></li>
+	<li><i></i><b>[ͷ��]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2255/m2161/202004/854611.shtml" target="_blank">ǧ������������ 4.18�ó���Ը</a><span>04/15</span></li>
+	<li><i></i><b>[ͷ��]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2255/m2161/202004/854123.shtml" target="_blank">����ս�ӻ��������쳣����</a><span>04/09</span></li>
+	<li><i></i><b>[ͷ��]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2255/m2161/202004/854045.shtml" target="_blank">4��9�տ���&��Ϸ��ս����ʾS2�������⹫��</a><span>04/09</span></li>
+	<li><i></i><b>[ͷ��]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2255/m2161/202004/853940.shtml" target="_blank">����ս��4��9��1.0.1.74�汾ͣ��ά������</a><span>04/08</span></li>
+<!--</ul>-->
+
+				</ul>
+				<ul onclick="pgvSendClick({hottag:'main.link.newsGg'})">
+					<!--<ul>-->
+	<li><i></i><b>[����]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2256/m2161/202004/854861.shtml" target="_blank">¹�����BUG˵������</a><span>04/16</span></li>
+	<li><i></i><b>[����]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2256/m2161/201912/842453.shtml" target="_blank">������Ը��н���Ա���棨�������£�</a><span>12/24</span></li>
+	<li><i></i><b>[����]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2256/m2161/202004/854137.shtml" target="_blank">��ս��������ļ���桾��ʱ��</a><span>04/09</span></li>
+	<li><i></i><b>[����]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2256/m2161/202004/854123.shtml" target="_blank">����ս�ӻ��������쳣����</a><span>04/09</span></li>
+	<li><i></i><b>[����]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2256/m2161/202004/854045.shtml" target="_blank">4��9�տ���&��Ϸ��ս����ʾS2�������⹫��</a><span>04/09</span></li>
+	<li><i></i><b>[����]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2256/m2161/202004/853940.shtml" target="_blank">����ս��4��9��1.0.1.74�汾ͣ��ά������</a><span>04/08</span></li>
+<!--</ul>-->
+
+				</ul>
+				<ul onclick="pgvSendClick({hottag:'main.link.newsMt'})">
+					<!--<ul>-->
+	<li><i></i><b>[ý��]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2258/m2161/202004/855278.shtml" target="_blank">NZer��־�ɳ������� 488����������Ԫ��</a><span>04/22</span></li>
+	<li><i></i><b>[ý��]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2258/m2161/202004/855104.shtml" target="_blank">�����������418������ȫ�������ͣ���</a><span>04/17</span></li>
+	<li><i></i><b>[ý��]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2258/m2161/202004/854611.shtml" target="_blank">ǧ������������ 4.18�ó���Ը</a><span>04/15</span></li>
+	<li><i></i><b>[ý��]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2258/m2161/202001/845573.shtml" target="_blank">�ٴ�������Դ֮Ӱ�𺳳��� ��ǿ���Գ۳�ս����������</a><span>01/17</span></li>
+	<li><i></i><b>[ý��]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2258/m2161/202001/845209.shtml" target="_blank">����Ƽ����ռ���ײ ��������ƻ�ĩ������</a><span>01/15</span></li>
+	<li><i></i><b>[ý��]</b> <a href="/webplat/info/news_version3/1421/2253/2254/2258/m2161/202001/844449.shtml" target="_blank">1��18��ϲӭС���ֿ� ��ս�̳�ȫ�ⵥ</a><span>01/09</span></li>
+<!--</ul>-->
+
+				</ul>
+				<ul onclick="pgvSendClick({hottag:'main.link.newsSs'})">
+					<!--<ul>-->
+	<li><i></i><b>[����]</b> <a href="/webplat/info/news_version3/1421/2253/2254/6870/m2161/201907/818902.shtml" target="_blank">���������������ϴ��������̵㣬�����߽�ս��̨ǰĻ��</a><span>07/10</span></li>
+	<li><i></i><b>[����]</b> <a href="/webplat/info/news_version3/1421/2253/2254/6870/m2161/201907/818203.shtml" target="_blank">����������¥�ҵ񹲺��ϴ�����������������Ŵ����ں�</a><span>07/05</span></li>
+	<li><i></i><b>[����]</b> <a href="/webplat/info/news_version3/1421/2253/2254/6870/m2161/201906/815661.shtml" target="_blank">�������������������ܴ��̵㣬�����ֳ�������̬</a><span>06/26</span></li>
+	<li><i></i><b>[����]</b> <a href="/webplat/info/news_version3/1421/2253/2254/6870/m2161/201906/815659.shtml" target="_blank">������������������վ��Ļ�������һ׷�����ݴ���ת</a><span>06/26</span></li>
+	<li><i></i><b>[����]</b> <a href="/webplat/info/news_version3/1421/2253/2254/6870/m2161/201906/815656.shtml" target="_blank">������������������վ��Ļ��������ʤЯ�ֽ���</a><span>06/26</span></li>
+	<li><i></i><b>[����]</b> <a href="/webplat/info/news_version3/1421/2253/2254/6870/m2161/201906/815655.shtml" target="_blank">������������������վ��Ļ��������ʤЯ�ֽ���</a><span>06/26</span></li>
+<!--</ul>-->
+
+				</ul>
+			</div>
+		</div>
+
+		<!--���ר��-->
+		<div class="player news" exposure-tag="player,���ר��">
+			<h2 class="m_title"><i></i>���ר��</h2>
+			<div id="playerNav" class="tab_comm player_comm">
+				<ul class="clearfix">
+					<li><a href="javascript:;" class="current">PVE</a></li>
+					<li><a href="javascript:;">PVP</a></li>
+					<li><a href="javascript:;">����</a></li>
+				</ul>
+				<i></i>
+			</div>
+			<a class="more" onclick="pgvSendClick({hottag:'main.link.playerMore'})" href="//nz.qq.com/gicp/news/586/2/9776/1.html" target="_blank">����<i></i></a>
+			<div class="player_first">
+				<p>
+					<a id="player_ad0" onclick="pgvSendClick({hottag:'main.link.playerAD01'})" href="javascript:;" target="_blank"><img src="//game.gtimg.cn/images/nz/web201606/player01.jpg" width="180" height="140" alt=""></a>
+					<a id="player_ad1" onclick="pgvSendClick({hottag:'main.link.playerAD02'})" href="javascript:;" target="_blank"><img src="//game.gtimg.cn/images/nz/web201606/player02.jpg" width="180" height="140" alt=""></a>
+				</p>
+			</div>
+			<div id="playerCon" class="news_con">
+				<ul class="current" onclick="pgvSendClick({hottag:'main.link.playerPVE'})">
+					<li><i></i>
+    <b>[PVE]</b>
+    <a href="/gicp/news/584/10177787.html" target="_blank">��������������룡�����ǽҿ�ȫ����������ɴ��</a>
+    <span>04-20</span>
+</li>
+<li><i></i>
+    <b>[PVE]</b>
+    <a href="/gicp/news/584/10177805.html" target="_blank">������������°汾������Ϯ��������˸����з��</a>
+    <span>04-20</span>
+</li>
+<li><i></i>
+    <b>[PVE]</b>
+    <a href="/gicp/news/584/10177807.html" target="_blank">���������������еġ������к�������֪������Щ��</a>
+    <span>04-20</span>
+</li>
+<li><i></i>
+    <b>[PVE]</b>
+    <a href="/gicp/news/584/10177844.html" target="_blank">�����������ս��ʢ��,����MSR-���������죡</a>
+    <span>04-20</span>
+</li>
+
+				</ul>
+				<ul onclick="pgvSendClick({hottag:'main.link.playerPVP'})">
+					<li><i></i>
+    <b>[PVP]</b>
+    <a href="/gicp/news/584/10177772.html" target="_blank">������������Ӣ�ۣ����������µ�Ӣ��ģʽ�ĵ�����գ�</a>
+    <span>04-20</span>
+</li>
+<li><i></i>
+    <b>[PVP]</b>
+    <a href="/gicp/news/584/10177773.html" target="_blank">�����������һ�ʣ���Щ��������лص����ܵ������㶼֪����</a>
+    <span>04-20</span>
+</li>
+<li><i></i>
+    <b>[PVP]</b>
+    <a href="/gicp/news/584/10177809.html" target="_blank">�������׼��Ϊ�� ��������籬�ƾѻ�ָ�������</a>
+    <span>04-20</span>
+</li>
+<li><i></i>
+    <b>[PVP]</b>
+    <a href="/gicp/news/584/10153838.html" target="_blank">���������ǳ������������ר���ǹ��ϰָ�������</a>
+    <span>04-17</span>
+</li>
+
+				</ul>
+				<ul onclick="pgvSendClick({hottag:'main.link.playerWq'})">
+					<li><i></i>
+    <b>[����]</b>
+    <a href="/gicp/news/584/10177771.html" target="_blank">���������ս��Щ�����й���Ľ�ս�������㶼֪����</a>
+    <span>04-20</span>
+</li>
+<li><i></i>
+    <b>[����]</b>
+    <a href="/gicp/news/584/10177810.html" target="_blank">���������ο����õ���������������Ҫ����ô�����¶���</a>
+    <span>04-20</span>
+</li>
+<li><i></i>
+    <b>[����]</b>
+    <a href="/gicp/news/584/10158661.html" target="_blank">����������Ҳ���棡�̵���Щ����ս���͵ĸ�������</a>
+    <span>04-17</span>
+</li>
+<li><i></i>
+    <b>[����]</b>
+    <a href="/gicp/news/584/10158663.html" target="_blank">����������������˽�������װ��4��18�տɾ�ֱ����ѳ�����Ӵ��</a>
+    <span>04-17</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+
+		<div class="monomer clearfix">
+			<a id="monomerAd1" class="side_advert ad_advert" href="javascript:;" onclick="pgvSendClick({hottag:'main.link.monomerAd1'})" target="_blank"><img src="//game.gtimg.cn/images/nz/web201606/advert02.jpg" width="380" height="140" alt="�������"></a>
+			<a id="monomerAd2" class="side_advert ad_advert2" href="javascript:;" onclick="pgvSendClick({hottag:'main.link.monomerAd2'})" target="_blank"><img src="//game.gtimg.cn/images/nz/web201606/advert02.jpg" width="380" height="140" alt="�������"></a>
+		</div>
+
+		<div class="video" exposure-tag="video,��Ƶ����">
+			<h2 class="m_title"><i></i>��Ƶ����</h2>
+			<div id="videoNav" class="tab_comm video_comm">
+				<ul class="clearfix">
+					<li><a href="javascript:;" class="current">ͷ��</a></li>
+					<li><a href="javascript:;">����</a></li>
+					<li><a href="javascript:;">����</a></li>
+					<!--<li><a href="javascript:;">ֱ��</a></li>-->
+					<li><a href="javascript:;">����</a></li>
+				</ul>
+				<i></i>
+			</div>
+			<a class="more" href="//nz.qq.com/v/" onclick="pgvSendClick({hottag:'main.link.videoMore'})" target="_blank">����<i></i></a>
+			<div id="videoCon" class="video_con">
+				<ul id="videoTop" class="clearfix current" onclick="pgvSendClick({hottag:'main.link.videocontt'})">
+					<li>
+<a target="_blank" href="/gicp/video/33/8099192.html">
+    <span class="video_pic"><img src="//shp.qpic.cn/cfwebcap/0/4a13295f4ecfed3f451fce7a278b1068/0/?width=190&height=105" width="250" height="110" alt="������������ˡ���10�ڣ���ս������������˫�ڵ�������" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>������������ˡ���10�ڣ���ս������������˫�ڵ�������</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/6360710.html">
+    <span class="video_pic"><img src="//shp.qpic.cn/cfwebcap/0/9e7ecc0b28df6ef792c8124b08c967cd/0/?width=190&height=105" width="250" height="110" alt="����ս����ս2019���¼�ȫ�ع�" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>����ս����ս2019���¼�ȫ�ع�</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/4270966.html">
+    <span class="video_pic"><img src="//shp.qpic.cn/cfwebcap/0/8221f0adb5db3bc55bb77e87b3df3b1f/0/?width=190&height=105" width="250" height="110" alt="������ʢ�䡿ǧ��С����Ȼ�����ɸ�С��һ������Ϸ���������" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>������ʢ�䡿ǧ��С����Ȼ�����ɸ�С��һ������Ϸ���������</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/2944601.html">
+    <span class="video_pic"><img src="//shp.qpic.cn/cfwebcap/0/ab267b144af5f34c11f9c496895cb91c/0/?width=190&height=105" width="250" height="110" alt="��ս��ÿ���㡿��11�ڣ������ǹ���ˢ���" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>��ս��ÿ���㡿��11�ڣ������ǹ���ˢ���</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/1210137.html">
+    <span class="video_pic"><img src="//puui.qpic.cn/vpic/0/e08948d6em2.png/0" width="250" height="110" alt="������������ˡ���2�ڣ�������汾�����" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>������������ˡ���2�ڣ�������汾�����</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/376118.html">
+    <span class="video_pic"><img src="//puui.qpic.cn/qqvideo_ori/0/m08433jklx4_228_128/0" width="250" height="110" alt="��磺��ս���������ʷ�ϵ�һ�������õĳ���ս�������˧����" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>��磺��ս���������ʷ�ϵ�һ�������õĳ���ս�������˧����</p>
+</a>
+</li>
+
+					<!--					<li><a href="#"><span class="video_pic"><img src="//game.gtimg.cn/images/nz/web201606/video.jpg" width="250"  height="110" alt=""></span><span class="video_shade"></span><span class="video_btn"><b></b><i></i></span><p>111���ֽ�˵��ԭ�����������һ��</p></a></li>
+                                        <li><a href="#"><span class="video_pic"><img src="//game.gtimg.cn/images/nz/web201606/video.jpg" width="250"  height="110" alt=""></span><span class="video_shade"></span><span class="video_btn"><b></b><i></i></span><p>���ֽ�˵��ԭ�����������һ��</p></a></li>
+                                        <li><a href="#"><span class="video_pic"><img src="//game.gtimg.cn/images/nz/web201606/video.jpg" width="250"  height="110" alt=""></span><span class="video_shade"></span><span class="video_btn"><b></b><i></i></span><p>���ֽ�˵��ԭ�����������һ��</p></a></li>
+                                        <li><a href="#"><span class="video_pic"><img src="//game.gtimg.cn/images/nz/web201606/video.jpg" width="250"  height="110" alt=""></span><span class="video_shade"></span><span class="video_btn"><b></b><i></i></span><p>���ֽ�˵��ԭ�����������һ��</p></a></li>
+                                        <li><a href="#"><span class="video_pic"><img src="//game.gtimg.cn/images/nz/web201606/video.jpg" width="250"  height="110" alt=""></span><span class="video_shade"></span><span class="video_btn"><b></b><i></i></span><p>���ֽ�˵��ԭ�����������һ��</p></a></li>
+                                        <li><a href="#"><span class="video_pic"><img src="//game.gtimg.cn/images/nz/web201606/video.jpg" width="250"  height="110" alt=""></span><span class="video_shade"></span><span class="video_btn"><b></b><i></i></span><p>���ֽ�˵��ԭ�����������һ��</p></a></li>-->
+				</ul>
+				<ul id="videoStrategy" class="clearfix" onclick="pgvSendClick({hottag:'main.link.videocongl'})">
+					<li>
+<a target="_blank" href="/gicp/video/33/9657165.html">
+    <span class="video_pic"><img src="//puui.qpic.cn/qqvideo_ori/0/t0954ldxbqh_228_128/0" width="250" height="110" alt="����ս֮��������ѩɽ������Ů��򵥱����ļ���" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>����ս֮��������ѩɽ������Ů��򵥱����ļ���</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/9619682.html">
+    <span class="video_pic"><img src="//puui.qpic.cn/qqvideo_ori/0/u0953hmlofc_228_128/0" width="250" height="110" alt="����ս֮��������ѩɽ����̩����˹����" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>����ս֮��������ѩɽ����̩����˹����</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/9545604.html">
+    <span class="video_pic"><img src="//puui.qpic.cn/qqvideo_ori/0/l0952hlcbu5_228_128/0" width="250" height="110" alt="����ս֮���� ʥɽ��˵¹�����" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>����ս֮���� ʥɽ��˵¹�����</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/9545603.html">
+    <span class="video_pic"><img src="//puui.qpic.cn/qqvideo_ori/0/e0952cilqi4_228_128/0" width="250" height="110" alt="����ս֮��������ɯ֮��ȫ�½�ָ�" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>����ս֮��������ɯ֮��ȫ�½�ָ�</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/9565114.html">
+    <span class="video_pic"><img src="//shp.qpic.cn/cfwebcap/0/b62d8d23500908dff6988ca2f74d1a23/0/?width=190&height=105" width="250" height="110" alt="����սϺ���°汾��488����0Ԫ�����������������" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>����սϺ���°汾��488����0Ԫ�����������������</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/9535105.html">
+    <span class="video_pic"><img src="//shp.qpic.cn/cfwebcap/0/2b554a550a18a11fec5a61aabab6eb5f/0/?width=190&height=105" width="250" height="110" alt="����սϺ�������䡿�㲻��������������ϰ����� ����֮������." /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>����սϺ�������䡿�㲻��������������ϰ����� ����֮������.</p>
+</a>
+</li>
+
+				</ul>
+				<ul id="videoEntertainment" class="clearfix" onclick="pgvSendClick({hottag:'main.link.videoconyl'})">
+					<li>
+<a target="_blank" href="/gicp/video/33/9678474.html">
+    <span class="video_pic"><img src="//shp.qpic.cn/cfwebcap/0/e980fe56c08ce8361002111727b07fa8/0/?width=190&height=105" width="250" height="110" alt="������ս���¡���28�ڣ�С�����´��ؿߣ���������Լ��" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>������ս���¡���28�ڣ�С�����´��ؿߣ���������Լ��</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/9647154.html">
+    <span class="video_pic"><img src="//shp.qpic.cn/cfwebcap/0/ff542fd0d41effd4e1287145e76df4d8/0/?width=190&height=105" width="250" height="110" alt="������˵��ս����սͯ����Ӱ����ë�������ˣ�" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>������˵��ս����սͯ����Ӱ����ë�������ˣ�</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/9646975.html">
+    <span class="video_pic"><img src="//shp.qpic.cn/cfwebcap/0/dda8ef330a0710d82c1fff95fbc0b15f/0/?width=190&height=105" width="250" height="110" alt="������˵��ս����սǧ��ٹ֣���ƿ�������ˣ�" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>������˵��ս����սǧ��ٹ֣���ƿ�������ˣ�</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/9619836.html">
+    <span class="video_pic"><img src="//shp.qpic.cn/cfwebcap/0/68d588bba3ccd6bd008edee4788b1853/0/?width=190&height=105" width="250" height="110" alt="������˵��ս����ս�����ųǾ�ȡ��������" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>������˵��ս����ս�����ųǾ�ȡ��������</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/9619837.html">
+    <span class="video_pic"><img src="//shp.qpic.cn/cfwebcap/0/0eb728f9482f239c74e181680c4ad331/0/?width=190&height=105" width="250" height="110" alt="������˵��ս������ս������������ͼ��" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>������˵��ս������ս������������ͼ��</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/9532074.html">
+    <span class="video_pic"><img src="//shp.qpic.cn/cfwebcap/0/9087d885c29ec209e895e24cf859161b/0/?width=190&height=105" width="250" height="110" alt="�� ����˵��ս�����ò�˥����ս����" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>�� ����˵��ս�����ò�˥����ս����</p>
+</a>
+</li>
+
+				</ul>
+				<!--<ul id="videoLive" class="clearfix" onclick="pgvSendClick({hottag:'main.link.videoconzb'})">-->
+
+				<!--</ul>-->
+				<ul id="videoEvent" class="clearfix" onclick="pgvSendClick({hottag:'main.link.videoconss'})">
+					<li>
+<a target="_blank" href="/gicp/video/33/1222253.html">
+    <span class="video_pic"><img src="//shp.qpic.cn/cfwebcap/0/e258c3be91bd66e534b918959e3cf00d/0/?width=190&height=105" width="250" height="110" alt="��ս�������ϴ���" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>��ս�������ϴ���</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/1142185.html">
+    <span class="video_pic"><img src="//puui.qpic.cn/vpic/0/q0884ue99sm.png/0" width="250" height="110" alt="��ս��������������������" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>��ս��������������������</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/1168718.html">
+    <span class="video_pic"><img src="//shp.qpic.cn/cfwebcap/0/8065c845858e276c0c07c72f06dc285b/0/?width=190&height=105" width="250" height="110" alt="��ս��������������" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>��ս��������������</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/1168721.html">
+    <span class="video_pic"><img src="//shp.qpic.cn/cfwebcap/0/a3cb4d27c2363ea8e24b80e70ff3a323/0/?width=190&height=105" width="250" height="110" alt="��ս�������人����" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>��ս�������人����</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/1168710.html">
+    <span class="video_pic"><img src="//shp.qpic.cn/cfwebcap/0/c140fde33dc03af1d8c55aca8b538dcf/0/?width=190&height=105" width="250" height="110" alt="��ս��������������" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>��ս��������������</p>
+</a>
+</li>
+<li>
+<a target="_blank" href="/gicp/video/33/783244.html">
+    <span class="video_pic"><img src="//puui.qpic.cn/vpic/0/w08745jijgv.png/0" width="250" height="110" alt="��ս���������������߹�ʱ��" /></span>
+    <span class="video_shade"></span>
+    <span class="video_btn"><b></b><i></i></span>
+    <p>��ս���������������߹�ʱ��</p>
+</a>
+</li>
+
+				</ul>
+			</div>
+		</div>
+
+		<div class="event" exposure-tag="event,����ר��">
+			<h2 class="m_title"><i></i>����ר��</h2>
+			<div id="eventNav" class="tab_comm event_comm">
+				<ul class="clearfix">
+					<li><a href="javascript:;" class="current">������</a></li>
+					<li><a href="javascript:;">NSL</a></li>
+					<li><a href="javascript:;">TGA</a></li>
+				</ul>
+				<i></i>
+			</div>
+			<a class="more" onclick="pgvSendClick({hottag:'main.link.eventMore'})" href="//nz.qq.com/gicp/news/587/2/9780/1.html" target="_blank">����<i></i></a>
+			<div id="eventCon" class="event_con">
+				<a id="eventLinks" onclick="pgvSendClick({hottag:'main.link.eventAD'})" class="event_links" href="javascript:;" target="_blank"><img src="//game.gtimg.cn/images/nz/web201606/event01.jpg" width="380" height="206" alt=""></a>
+				<div class="event_list">
+					<ul class="current" onclick="pgvSendClick({hottag:'main.link.eventNLS'})">
+						
+<li class="first"><i></i><a href="/gicp/news/584/9553388.html" target="_blank">����ս�����á�2019�����õ�����ʾ</a></li>
+
+
+<li><i></i><b>[������]</b> <a href="/gicp/news/584/8949971.html" target="_blank">�������＾���ܽ���˳����سɶ�</a><span>12-05</span></li>
+
+
+<li><i></i><b>[������]</b> <a href="/gicp/news/584/8603109.html" target="_blank">[������ļ]��ս���������Ż�����ļ~</a><span>11-04</span></li>
+
+
+<li><i></i><b>[������]</b> <a href="/gicp/news/584/7631537.html" target="_blank">6������ҵ��������ܾ����ۺ�� �������ļ���ǰ��</a><span>07-30</span></li>
+
+
+<li><i></i><b>[������]</b> <a href="/gicp/news/584/7503102.html" target="_blank">���������������ϴ�����ȫ���ע������̨�Ż���վ�뷢��</a><span>07-10</span></li>
+
+
+					</ul>
+					<ul onclick="pgvSendClick({hottag:'main.link.eventNSL'})">
+						
+<li class="first"><i></i><a href="/gicp/news/584/9228133.html" target="_blank">NSLS5Բ����Ļ��AG�ɾ������ڣ��ٴ�����ʱ��</a></li>
+
+
+<li><i></i><b>[NSL]</b> <a href="/gicp/news/584/9223219.html" target="_blank">NSLS5ս����AG��սPE���ɾ�������</a><span>12-29</span></li>
+
+
+<li><i></i><b>[NSL]</b> <a href="/gicp/news/584/9170748.html" target="_blank">NSLS5�ܾ����������죬��֤�����ߵĵ���</a><span>12-24</span></li>
+
+
+<li><i></i><b>[NSL]</b> <a href="/gicp/news/584/9169608.html" target="_blank">NSL S5�عˣ���ǿ���ԣ�3C���ഺն��ȫ������</a><span>12-24</span></li>
+
+
+<li><i></i><b>[NSL]</b> <a href="/gicp/news/584/9169282.html" target="_blank">NSLS5ս����3C���ഺսʤCQV���¶�ȫ������</a><span>12-24</span></li>
+
+
+					</ul>
+					<ul onclick="pgvSendClick({hottag:'main.link.eventTGA'})">
+						
+<li class="first"><i></i><a href="/gicp/news/584/6698903.html" target="_blank">TGA�ھ����violenceר�ã���ǰ�������������</a></li>
+
+
+<li><i></i><b>[TGA]</b> <a href="/gicp/news/584/6698941.html" target="_blank">����ع� ����������-TGA�ܾ����̵㣨�ϣ�</a><span>05-15</span></li>
+
+
+<li><i></i><b>[TGA]</b> <a href="/gicp/news/584/6698943.html" target="_blank">����ع� ����������-TGA�ܾ����̵㣨�£�</a><span>05-15</span></li>
+
+
+<li><i></i><b>[TGA]</b> <a href="/gicp/news/584/6698945.html" target="_blank">��ս2018TGA�����ع� ���violence���ѵ��ʶ�֮·</a><span>05-15</span></li>
+
+
+<li><i></i><b>[TGA]</b> <a href="/gicp/news/584/6698949.html" target="_blank">��ս2018TGA����Բ���չ� ��񷡢ӣ����ֻ�PVP��PVE�ھ�</a><span>05-15</span></li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="advice">
+	<div class="advice_con">
+		<div class="advice_info clearfix">
+			<p class="advice_01"><i></i><strong>�������Ʋ�ɱ����һ���</strong></p>
+			<p class="advice_02"><i></i><strong>TGA5����ʽ������Ŀ</strong></p>
+			<p class="advice_03"><i></i><strong>17173��������������</strong></p>
+			<p class="advice_04"><i></i><strong>NSL��ս��������</strong></p>
+		</div>
+		<div class="advice_ms">
+			<p>������Ϸ�Ҹ�:<i></i>���Ʋ�����Ϸ<i></i>�ܾ�������Ϸ<i></i>ע�����ұ���<i></i>����ƭ�ϵ�<i></i>�ʶ���Ϸ����<i></i>������Ϸ����<i></i>�������ʱ��<i></i>���ܽ�������</p>
+		</div>
+	</div>
+</div>
+<div id="gfooter" ams="1421/35010/m1503" age="10" dark="0" ieg-logo="1">
+	<a title="�������Ϲ�����" class="foot_left foot_jade" target="_blank" href="//jade.qq.com/">�������Ϲ�����</a>
+	<a title="����������" class="foot_left foot_timi" target="_blank" href="//timi.qq.com">����������</a></div>
+</div>
+<script src="//game.gtimg.cn/images/js/2018foot/foot.js"></script>
+<script src="//stdl.qq.com/stdl/qqbrowser/floatlayer/js/floatlayer-nz.js"></script>
+
+<!--�ʾ����-->
+<!--<div class="v_tips">
+	<div class="v_tips_con">
+		<p class="v_tips_title">��սС����</p>
+		<a class="v_tips_close" href="javascript:;">�ر�</a>
+		<div class="v_tips_main">
+			������������ӣ��μӡ���սС���С���<br/>��л����֧�֣�
+		</div>
+		<a class="v_tips_check" href="//ue.qq.com/mur?a=survey&b=9726&c=1&d=16e8ae628ecbd3b3568677ecda611ab6" target="_blank">����鿴</a>
+	</div>
+</div>-->
+</body>
+<script>timePoints[0]=new Date();</script>
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/roleselector/roleselectorv3.js" type="text/javascript"></script>
+<script src="//ams.qq.com/wmp/sys/v2.0/js/wmpCommon_v2.js"></script>
+<script src="//ossweb-img.qq.com/images/js/eas/eas.js"></script>
+<script src="//nz.qq.com/web201606/NZcomm.js"></script>
+<script>
+	timePoints[1]=new Date();NZcomm.speedReport(1);NZcomm.loginSatus();NZcomm.roll();NZcomm.sideAnimation();
+	var G_biz=14,lHtml = '';
+	// $.getJSON("//api.plu.cn/tga/streams?game=14&callback=?",function(json){
+	//     var len=json.data.items.length;if(len>6){len=6}
+	//     for(var i=0;i<len;i++){
+	//         lHtml+='<li><a href="'+json.data.items[i].channel.url+"?ADTAG=media.nizhangw"+'"><span class="video_pic"><img src="'+json.data.items[i].preview+'" width="250"  height="110" alt="'+json.data.items[i].channel.status+'"></span><span class="video_shade"></span><span class="video_btn"><b></b><i></i></span><p>'+json.data.items[i].channel.status+'</p></a></li>';
+	//     }
+	//     $('#videoLive').html(lHtml);
+	// });//ֱ��
+
+	//�ʾ����
+	//NZcomm.nzSurvey();
+	gpmLoadScript=function(url,callback){var script=document.createElement('script');script.type="text/javascript";if(script.readyState){script.onreadystatechange=function(){if(script.readyState=="loaded"||script.readyState=="complete"){script.onreadystatechange=null;if(callback){callback()}}}}else{script.onload=function(){if(callback){callback()}}}script.src=url;document.body.appendChild(script)};
+	setTimeout(function(){gpmLoadScript('//ossweb-img.qq.com/images/clientpop/js/gpmtips.js',function(){});},3000);
+	window.gpmAdProcess = function(){
+		//console.log("��������666");
+		NZcomm.carouselMain();
+	}
+</script>
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script>
+	//�˶δ��벻�ܷŵ�����JS�У�
+	var setSite={ //������վ����
+		siteType:"os", //������:"os"�����ǹ�����������ǣ�����дactName����a20160701xxx
+		pageType:"index", //������:��ҳ��Ķ�λ������ҳ�溬����д����main||list||detail||download||share||page1||pageN,��֧�ֵ�(.)���»���(_)
+		pageName:"��ҳ", //������:ҳ��������
+		project:"other", //ѡ����:����ǹ���ģ�����Ǳ���;����ģ�����ݣ���д�̶��Ķ�Ӧֵ;����΢����base;ͬ��վdoujin;����match;����վstory;�Ļ�վhistory;��˿վfans;����վcoming;��̳bbs;Ƥ��skin;Ĭ��other;
+		osact:'pc' //ѡ����:Ĭ����0��osact=0��ʾ�ǹ���ר�⣻osact=pc��ʾpc����/pc����ר�⣻osact=m��ʾ�ƶ�����/�ƶ�����ר�⣻osact=ingame��ʾ΢����/΢����ר��
+	};
+	if(typeof(pgvMain)=='function')pgvMain();//ǧ�������ǣ�
+</script>
+<script src="//ossweb-img.qq.com/images/clientpop/js/tgadshow.min.js "></script>
+</html>

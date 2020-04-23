@@ -1,0 +1,920 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="GBK">
+<meta name="robots" content="all">
+<meta name="author" content="Tencent-CP">
+<meta name="Copyright" content="Tencent">
+<meta name="Keywords"
+	  content="ħ����֮Ӣ���޵У�Ӣ���޵�ս����Ԫ��Ӣ���޵У�ħ���ţ�ս����Ԫ������IP�����̣�������Ȩ������������Σ��������Σ�������Ϸ���������Σ����Կ��ƣ�Ӣ���޵����Σ�Ӣ���޵�ս����Ԫ���ι�����Ӣ���޵����ι�����Ӣ���޵��������ţ�Ӣ���޵�������Ѷ��Ӣ���޵����ι��棬�һ��飬�������������Ƕ�ħ����񣬱��ɾ��ޣ����۾��ˣ��۽̣���������ľ��ʿ������������ɪ�գ������£������׵£�ķ���ˣ�������������£��޵¹��أ�ά�����ȣ�ɽ��³����³��������񣬿��壬������˹����ϣ�ޣ���Լ��">
+<meta name="Description"
+	  content="��ħ����֮Ӣ���޵У�ս����Ԫ�������̹ٷ�������Ȩ�Ĳ��Կ������Σ���Ϸ���̾���ħ����֮Ӣ���޵�3������ڣ���ԭ����ħ����֮Ӣ���޵е�����Ӣ�ۣ����԰ټƵ�������������׷������ħ�����ܺͿ�ʯ���Ӣ�۽��棬���ԶԾ���ս��û����ǿ���ţ�ֻ����ǿ���ԡ�">
+    
+    <meta charset="GBK">
+    <title>��ħ����֮Ӣ���޵У�ս����Ԫ�����ιٷ���վ��Ӣ���޵о������-��Ѷ��Ϸ</title>
+    <link href="//game.gtimg.cn/images/yxwd/cp/a20170925home/main.css" rel="stylesheet">
+    <link href="//game.gtimg.cn/images/yxwd/cp/a20170925home/swiper-3.4.2.min.css" rel="stylesheet">
+	<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <!-- ҳ����ƣ�cp | ҳ��������cp | ������2017-09-19 -->
+    <style>
+        .main .main_content .index_side_bar .index_side_bar_tittle a .box span.tittle {font-size: 20px;width: 140px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+        .main .main_content .news_part_wrap2 .news_wrap .news_list ul li{padding: 0 5px;height:50px;line-height:50px;}
+        .main .main_content .news_part_wrap2 .news_wrap .news_list ul li span.time {float: right;color: #000;}
+        .main .main_content .news_part_wrap2 .news_wrap .news_list ul li a{width:500px;float:left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+        .ggBox { width:590px; height:299px;}/*�޸ĳɹ��ͼƬ�ĳߴ缴��*/
+        .ggBox { position:relative; background:#0e97dc; overflow:hidden;width: 580px;float: left;margin-left: 20px;}
+        .adPic { position:absolute; width:100%; height:100%; left:0; top:0}
+        .adPic a { display:block; width:100%; height:100%; overflow:hidden; position:absolute; left:0; top:0; background:#0e97dc}
+        .adPic img { width:100%; height:100%; position:absolute; top:0; left:0}
+        .adBtn { position:absolute; z-index:2; right:10px; bottom:5px; height:20px}
+        .adBtn a { display:block; float:left; text-indent:-5000px;  margin-left:10px; overflow:hidden; width:10px; height:10px;background:#686868;opacity:.5;}/*С��ť��ʽ*/
+        .adBtn a.on {opacity:1;background:#fff;}/*��ǰ֡��ʽ*/
+        .server_plan .box {overflow: hidden;}
+        /*�ͷ���ť���*/
+            .fixed_box.fixed_left_box .bottom ul li:nth-child(7) a:before {
+                width: 28px;
+                height: 28px;
+                display: block;
+                margin: 5px auto;
+                content: '';
+                background: url(//game.gtimg.cn/images/yxwd/cp/a20170925home/playlogo-07.png) no-repeat left top/100% 100%;
+            }
+
+            .service_code {
+                display: none;
+                height:180px;
+                bottom:30px;
+            }
+            .service_code img{
+                width:80%;
+                margin:15px auto 10px;
+            }
+            .service_code p{
+                padding:0;
+                height: 16px;
+            }
+        /*�ͷ���ť��� end*/
+        
+    </style>
+ <script>
+        (function(){function b(a){if(window.sessionStorage)sessionStorage.setItem("channel",a);else{var b=b||0,c="";0!=b&&(c=new Date,c.setTime(c.getTime()+1E3*b),c="; expires="+c.toGMTString());document.cookie="channel="+escape(a)+c+"; path=/"}}var a=navigator.userAgent;if(-1!=a.indexOf("iPhone")||-1!=a.indexOf("iPad")||-1!=a.indexOf("iPod")||-1!=a.indexOf("Android"))a=document.referrer,-1<a.indexOf("baidu.com")?b("seo_baidu"):-1<a.indexOf("sogou.com")?b("seo_sogou"):-1<a.indexOf("sm.cn")?b("seo_sm"):-1<a.indexOf("so.com")?b("seo_360"):-1<a.indexOf("bing.com")?b("seo_bing"):-1<a.indexOf("google.com")&&b("seo_google"),self.location="/m/"})();
+</script>
+</head>
+<body>
+<div class="head_nav" id="top_bar">
+    <div class="first_nav">
+        <div class="logo">
+            <a href="/cp/a20170925home/index.shtml" onclick="PTTSendClick('head_nav','logo','��ҳ')">
+                <img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/logo.png">
+            </a>
+        </div>
+        <div class="contain">
+            <div class="left_part">
+			<a href="/cp/a20170925home/index.shtml" onclick="PTTSendClick('head_nav','logo','��ҳ')">
+                <img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/xywdlogo.png" alt="">
+            </a>
+
+                <div class="left_part_text">
+                    <p class="red">ħ����֮Ӣ���޵У�ս����Ԫ</p>
+                    <p>����������Ȩ���Կ�������</p>
+                </div>
+            </div>
+            <div class="right_part">
+                <ul>
+                    <li>
+                        <a href="/cp/a20170925home/index.shtml" onclick="PTTSendClick('head_nav','nav','nav1')">������ҳ</a>
+                        <span class="nav_hg"></span>
+                    </li>
+                    <li>
+                        <a href="/webplat/info/news_version3/27759/27760/27761/m18902/list_1.shtml" onclick="PTTSendClick('head_nav','nav','nav2')">������Ѷ</a>
+                        <span class="nav_hg"></span>
+                    </li>
+                    <li>
+                        <a href="/webplat/info/news_version3/27759/27760/32211/m18904/list_1.shtml" onclick="PTTSendClick('head_nav','nav','nav3')">���ݴ���</a>
+                        <span class="nav_hg"></span>
+                    </li>
+                    <li>
+                        <a href="/webplat/info/news_version3/27759/27760/27765/29330/m18910/list_1.shtml" onclick="PTTSendClick('head_nav','nav','nav4')">��������</a>
+                        <span class="nav_hg"></span>
+                    </li>
+                    <li>
+                        <a href="/cp/a20170925home/list.shtml" onclick="PTTSendClick('head_nav','nav','nav5')">��Ϸ����</a>
+                        <span class="nav_hg"></span>
+                    </li>
+                    <li>
+                        <a href="/webplat/info/news_version3/27759/27760/29288/m18923/list_1.shtml" onclick="PTTSendClick('head_nav','nav','nav6')">��Ƶ����</a>
+						<span class="nav_hg"></span>
+                    </li>
+                    <li>
+                        <a href="//yxwd.qq.com/webplat/info/news_version3/27759/27760/27761/27762/m18903/201706/597758.shtml" onclick="PTTSendClick('head_nav','nav','nav6')">CDKEY�һ�</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="sub_nav">
+        <div class="contain">
+            <div class="uls">
+                <ul>
+                    <li><a href="consultation.shtml" target="_blank" title="">�� ��</a></li>
+                    <li><a href="consultation.shtml" target="_blank" title="">�� ��</a></li>
+                    <li><a href="consultation.shtml" target="_blank" title="">�� ��</a></li>
+                    <li><a href="consultation.shtml" target="_blank" title="">�� ��</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" target="_blank" title="">����ѵ����</a></li>
+                    <li><a href="#" target="_blank" title="">�汾���</a></li>
+                    <li><a href="javascript:alert('�����ڴ���')" target="_blank" title="">ս���ֲ�</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/cp/a20170925home/list.shtml" target="_blank" title="">Ӣ ��</a></li>
+                    <li><a href="/cp/a20170925home/list.shtml?type=1" target="_blank" title="">�� ��</a></li>
+                </ul>
+                <ul>
+                    <li><a href="javascript:showCodeWc();" title="΢�Ź��ں�">΢�Ź��ں�</a></li>
+                    <li><a href="javascript:showCodeQ();" title="��Q ��Ϸ��">��Q ��Ϸ��</a></li>
+                    <li><a href="https://buluo.qq.com/mobile/barindex.html?_bid=128&amp;_wv=1027&amp;bid=354791"
+                           target="_blank" title="��Ȥ����">��Ȥ����</a></li>
+                    <li>
+                        <a href="https://tieba.baidu.com/f?kw=%E8%8B%B1%E9%9B%84%E6%97%A0%E6%95%8C%E6%88%98%E4%BA%89%E7%BA%AA%E5%85%83&amp;ie=utf-8"
+                           target="_blank" title="�ٷ�����">�ٷ�����</a></li>
+                    <li><a href="//bbs.g.qq.com/forum-57584-1.html" target="_blank" title="�ٷ���̳">�ٷ���̳</a></li>
+                    <li><a href="//weibo.com/6081534739/" target="_blank" title="�ٷ�΢��">�ٷ�΢��</a></li>
+                </ul>
+                <ul>
+                    <li><a href="javascript:showCodeKf();" title="">��Ѷ��Ϸ�ͷ�</a></li>
+                    <li><a href="#" title="">CDKEY�һ�</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main"  id="boss">
+    <div class="main_banner">
+        <div class="role-swiper">
+            <div class="con">
+                <div class="slide">
+                    <span class="r1"><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/indexbanner-1.png" alt=""></span>
+                    <span class="r2"><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/indexbanner-2.png" alt=""></span>
+                </div>
+                <div class="slide">
+                    <span class="r1"><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/indexbanner-3.png" alt=""></span>
+                    <span class="r2"><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/indexbanner-4.png" alt=""></span>
+                </div>
+            </div>
+            <a class="next active" id="nextHero"href="javascript:void(0);"><i></i></a>
+            <div class="wave">
+                <div class="wave-group group-1">
+                    <img class="wave-1" src="//game.gtimg.cn/images/yxwd/cp/a20170925home/wave.png" alt="����">
+                    <img class="wave-2" src="//game.gtimg.cn/images/yxwd/cp/a20170925home/wave.png" alt="����">
+                    <img class="wave-3" src="//game.gtimg.cn/images/yxwd/cp/a20170925home/wave.png" alt="����">
+                </div>
+                <div class="wave-group group-2">
+                    <img class="wave-1" src="//game.gtimg.cn/images/yxwd/cp/a20170925home/wave.png" alt="����">
+                    <img class="wave-2" src="//game.gtimg.cn/images/yxwd/cp/a20170925home/wave.png" alt="����">
+                    <img class="wave-3" src="//game.gtimg.cn/images/yxwd/cp/a20170925home/wave.png" alt="����">
+                </div>
+                <div class="wave-group group-3">
+                    <img class="wave-1" src="//game.gtimg.cn/images/yxwd/cp/a20170925home/wave.png" alt="����">
+                    <img class="wave-2" src="//game.gtimg.cn/images/yxwd/cp/a20170925home/wave.png" alt="����">
+                    <img class="wave-3" src="//game.gtimg.cn/images/yxwd/cp/a20170925home/wave.png" alt="����">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main_box">
+        <div class="main_content">
+            <div class="index_side_bar">
+                <div class="index_side_bar_tittle">
+                    	<a href="/webplat/info/news_version3/27759/27760/32216/m18903/201709/641798.shtml" title="�����"  onclick="PTTSendClick('list','�����','�Ͼ���ʯֱ��')">
+		<img src="//ossweb-img.qq.com/upload/webplat/info/yxwd/20170930/63872656730320.png" alt="">
+		<div class="box">
+		<span class="tittle">�Ͼ���ʯֱ��</span>
+		<span>3��26��-3��27��
+<br />��ʯ�ػ�����Ż������������ϼ�ֱ���̵꣬�����Լ۱�������ս��</span>
+		</div>
+	</a>
+	<a href="/webplat/info/news_version3/27759/27760/32216/m18903/201709/641788.shtml" title="�����"  onclick="PTTSendClick('list','�����','��������˫��')">
+		<img src="//ossweb-img.qq.com/upload/webplat/info/yxwd/20170930/76213650582997.png" alt="">
+		<div class="box">
+		<span class="tittle">��������˫��</span>
+		<span>3��26��-3��28��
+<br/>��ڼ䣬��������������������x2��
+</span>
+		</div>
+	</a>
+	<a href="/webplat/info/news_version3/27759/27760/32216/m18903/201709/641790.shtml" title="�����"  onclick="PTTSendClick('list','�����','���ر���')">
+		<img src="//ossweb-img.qq.com/upload/webplat/info/yxwd/20170930/71651137023029.png" alt="">
+		<div class="box">
+		<span class="tittle">���ر���</span>
+		<span>3��26��-3��28��
+<br />��ڼ䣬Ͷ�����ӿ���С�����ж����ɴ�������Ȥζ�¼�������÷������</span>
+		</div>
+	</a>
+	<a href="/webplat/info/news_version3/27759/27760/32216/m18903/201709/641791.shtml" title="�����"  onclick="PTTSendClick('list','�����','�Ծ�����')">
+		<img src="//ossweb-img.qq.com/upload/webplat/info/yxwd/20170930/71829537869889.png" alt="">
+		<div class="box">
+		<span class="tittle">�Ծ�����</span>
+		<span>3��26��-3��28��
+<br />��ڼ䣬�ھ��Ծ������Ӧ�����������ɻ����Ӧ�Ľ����������ҡ�ռ���������Һͻƽ�Կ�׵��㾡�����С�</span>
+		</div>
+	</a>
+	<a href="/webplat/info/news_version3/27759/27760/32216/m18903/201709/641792.shtml" title="�����"  onclick="PTTSendClick('list','�����','��ʯ�һ�')">
+		<img src="//ossweb-img.qq.com/upload/webplat/info/yxwd/20170930/56861256761055.png" alt="">
+		<div class="box">
+		<span class="tittle">��ʯ�һ�</span>
+		<span>3��26��-3��28��
+<br />��ڼ䣬����Ԫ�ؾ�ʯ���ɶһ�Ԫ����Ӫ��������Ƭ��Ӣ�۰�������Ƭ�������䱦��ӥ��������䡣</span>
+		</div>
+	</a>
+	<a href="/webplat/info/news_version3/27759/27760/32216/m18903/201709/641793.shtml" title="�����"  onclick="PTTSendClick('list','�����','Ԫ����Լ')">
+		<img src="//ossweb-img.qq.com/upload/webplat/info/yxwd/20170930/73660475987604.png" alt="">
+		<div class="box">
+		<span class="tittle">Ԫ����Լ</span>
+		<span>3��26��-3��28��
+<br />��ڼ䣬�ﵽָ���������ɻ��Ԫ�ؾ�ʯ�����⻹�д����ƽ��Ԫ����Ӫ����������졣</span>
+		</div>
+	</a>
+	<a href="/webplat/info/news_version3/27759/27760/32216/m18903/201709/641794.shtml" title="�����"  onclick="PTTSendClick('list','�����','ÿ�ճ�ֵ')">
+		<img src="//ossweb-img.qq.com/upload/webplat/info/yxwd/20170930/13887908882002.png" alt="">
+		<div class="box">
+		<span class="tittle">ÿ�ճ�ֵ</span>
+		<span>3��26��-4��1��
+<br />��ڼ䣬���ճ�ֵ6Ԫ���ۼ�5�켴����ϡ�ر�����������֮���������������֮�ף�</span>
+		</div>
+	</a>
+	<a href="/webplat/info/news_version3/27759/27760/32216/m18903/201709/641795.shtml" title="�����"  onclick="PTTSendClick('list','�����','Ԫ��֮��')">
+		<img src="//ossweb-img.qq.com/upload/webplat/info/yxwd/20170930/479311382875623.png" alt="">
+		<div class="box">
+		<span class="tittle">Ԫ��֮��</span>
+		<span>3��26��-4��1��
+<br />��ڼ䣬������¼���ɻ�÷������Ԫ����Ӫ�����ŵ��㾡�����¡�</span>
+		</div>
+	</a>
+	<a href="/webplat/info/news_version3/27759/27760/32216/m18903/201709/641797.shtml" title="�����"  onclick="PTTSendClick('list','�����','��Ӫ��Դֱ��')">
+		<img src="//ossweb-img.qq.com/upload/webplat/info/yxwd/20170930/287916381234.png" alt="">
+		<div class="box">
+		<span class="tittle">��Ӫ��Դֱ��</span>
+		<span>3��27��-3��28��
+<br />��ڼ䣬��Ӫ��Դ�����ۿ��������ۣ�������ǧ��Ҫ���Ŷ��</span>
+		</div>
+	</a>
+
+                </div>
+            </div>
+            <div class="news_part_wrap news_part_wrap1">
+                <div class="server_plan">
+                    <div class="tittle">
+                        <select name="severaddre" id="severaddre">
+                            <option value="0">˫ƽ̨QQ��</option>
+                            <option value="1">˫ƽ̨΢����</option>
+                        </select>
+                    </div>
+                    <div class="fkjh_head">
+                        <img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/kfjh_head.png" alt="" class="bg_fk">
+                        <ul class="slide_kf">
+                            <li><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/cjem_sk1.png" alt=""></li>
+                            <li><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/bsr_sk1.png" alt=""></li>
+                            <li class="on"><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/zdar_sk4.png" alt=""></li>
+                            <li><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/zd_sk1.png" alt=""></li>
+                            <li><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/yyfm-01.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <div class="swiper-container2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a href='#' class="imgKFJS hide" data-TGAD='15921,19855'></a></div>
+                                <div class="swiper-slide"><a href='#' class="imgKFJS hide" data-TGAD='15921,19856'></a></div>
+                                <div class="swiper-slide"><a href='#' class="imgKFJS hide" data-TGAD='15921,19857'></a></div>
+                                <div class="swiper-slide"><a href='#' class="imgKFJS hide" data-TGAD='15921,19858'></a></div>
+                                <div class="swiper-slide"><a href='#' class="imgKFJS hide" data-TGAD='15921,19859'></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ggBox" id="ggBox"></div>
+            </div>
+            <div class="news_part_wrap news_part_wrap2">
+                <div class="notice">
+                    <div class="tittle"></div>
+                    <div class="test">
+                        <p>�װ���������:</p>
+                        <p></p>
+<a href="/webplat/info/news_version3/27759/27760/27761/27762/m18903/202004/855425.shtml" title="����"  onclick="PTTSendClick('list','����','4��22��ͣ��ά������')">�鿴����</a>
+
+                    </div>
+                </div>
+                <div class="news_wrap" id="atack0">
+                    <div class="news_tabs">
+                        <ul>
+                            <li class="active">����</li>
+                            <li>����</li>
+                            <li>�</li>
+                            <li>����</li>
+                            <li><a href="//yxwd.qq.com/webplat/info/news_version3/27759/27760/27761/m18902/list_1.shtml"><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/more.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="news_list">
+                        <ul>
+                            <li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/27762/m18903/202004/855425.shtml" title="����"  onclick="PTTSendClick('list','����','4��22��ͣ��ά������')">
+		<span class="type">����</span>4��22��ͣ��ά������
+	</a><span class="time">04/22</span>
+</li>
+
+
+<li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/27762/m18903/202004/855045.shtml" title="����"  onclick="PTTSendClick('list','����','4��20���賿ͣ��ά������')">
+		<span class="type">����</span>4��20���賿ͣ��ά������
+	</a><span class="time">04/17</span>
+</li>
+
+
+<li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/27762/m18903/202004/855042.shtml" title="����"  onclick="PTTSendClick('list','����','4��20�շ��������ݻ�ͨ����')">
+		<span class="type">����</span>4��20�շ��������ݻ�ͨ����
+	</a><span class="time">04/17</span>
+</li>
+
+
+<li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/27762/m18903/202004/854661.shtml" title="����"  onclick="PTTSendClick('list','����','4��15�ղ�ͣ�����¹���')">
+		<span class="type">����</span>4��15�ղ�ͣ�����¹���
+	</a><span class="time">04/15</span>
+</li>
+
+
+<li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/27762/m18903/202004/854254.shtml" title="����"  onclick="PTTSendClick('list','����','4��10����ʱС�汾���¹���')">
+		<span class="type">����</span>4��10����ʱС�汾���¹���
+	</a><span class="time">04/10</span>
+</li>
+
+
+
+                        </ul>
+                        <ul>
+                            <li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/27763/m18903/201808/754199.shtml" title="����"  onclick="PTTSendClick('list','����','����&��ʹ�ְ�����������������������н�����')">
+		<span class="type">����</span>����&��ʹ�ְ�����������������������н�����
+	</a><span class="time">08/24</span>
+</li>
+
+
+<li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/27763/m18903/201808/751505.shtml" title="����"  onclick="PTTSendClick('list','����','���й��͸��������ñ��ų��ְ�')">
+		<span class="type">����</span>���й��͸��������ñ��ų��ְ�
+	</a><span class="time">08/16</span>
+</li>
+
+
+<li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/27763/m18903/201808/746914.shtml" title="����"  onclick="PTTSendClick('list','����','��������������У��й���������ս�������Ǵ�½��')">
+		<span class="type">����</span>��������������У��й���������ս�������Ǵ�½��
+	</a><span class="time">08/02</span>
+</li>
+
+
+<li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/27763/m18903/201804/712300.shtml" title="����"  onclick="PTTSendClick('list','����','������ߣ���ɫ����')">
+		<span class="type">����</span>������ߣ���ɫ����
+	</a><span class="time">04/23</span>
+</li>
+
+
+<li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/27763/m18903/201804/711599.shtml" title="����"  onclick="PTTSendClick('list','����','ħ��������������ͧǿ����Ϯ')">
+		<span class="type">����</span>ħ��������������ͧǿ����Ϯ
+	</a><span class="time">04/20</span>
+</li>
+
+
+
+                        </ul>
+                        <ul>
+                            <li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/29287/m18903/201912/843166.shtml" title="�"  onclick="PTTSendClick('list','�','����Ա�����ʹ�ʾ')">
+		<span class="type">�</span>����Ա�����ʹ�ʾ
+	</a><span class="time">12/30</span>
+</li>
+
+
+<li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/29287/m18903/201809/761379.shtml" title="�"  onclick="PTTSendClick('list','�','��ѽں������ͣ�ӭ�������Ĺ���ʱ')">
+		<span class="type">�</span>��ѽں������ͣ�ӭ�������Ĺ���ʱ
+	</a><span class="time">09/20</span>
+</li>
+
+
+<li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/29287/m18903/201808/755663.shtml" title="�"  onclick="PTTSendClick('list','�','��ɫʥ�ճ�ֵ���ۣ�ħ����Ƥ����ʱֱ��')">
+		<span class="type">�</span>��ɫʥ�ճ�ֵ���ۣ�ħ����Ƥ����ʱֱ��
+	</a><span class="time">08/29</span>
+</li>
+
+
+<li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/29287/m18903/201808/751497.shtml" title="�"  onclick="PTTSendClick('list','�','��ʱ��Ը��ȫ�±������йٻ�����Ϯ')">
+		<span class="type">�</span>��ʱ��Ը��ȫ�±������йٻ�����Ϯ
+	</a><span class="time">08/16</span>
+</li>
+
+
+<li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/29287/m18903/201803/703506.shtml" title="�"  onclick="PTTSendClick('list','�','�Ͼ���ʯ��ʱ�ػݣ���Ӫ��Դ��ֵ���ۣ�')">
+		<span class="type">�</span>�Ͼ���ʯ��ʱ�ػݣ���Ӫ��Դ��ֵ���ۣ�
+	</a><span class="time">03/26</span>
+</li>
+
+
+
+                        </ul>
+                        <ul>
+                            <li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/27762/m18903/202004/855425.shtml" title="����"  onclick="PTTSendClick('list','����','4��22��ͣ��ά������')">
+		<span class="type">����</span>4��22��ͣ��ά������
+	</a><span class="time">04/22</span>
+</li>
+
+
+<li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/27762/m18903/202004/855045.shtml" title="����"  onclick="PTTSendClick('list','����','4��20���賿ͣ��ά������')">
+		<span class="type">����</span>4��20���賿ͣ��ά������
+	</a><span class="time">04/17</span>
+</li>
+
+
+<li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/27762/m18903/202004/855042.shtml" title="����"  onclick="PTTSendClick('list','����','4��20�շ��������ݻ�ͨ����')">
+		<span class="type">����</span>4��20�շ��������ݻ�ͨ����
+	</a><span class="time">04/17</span>
+</li>
+
+
+<li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/27762/m18903/202004/854661.shtml" title="����"  onclick="PTTSendClick('list','����','4��15�ղ�ͣ�����¹���')">
+		<span class="type">����</span>4��15�ղ�ͣ�����¹���
+	</a><span class="time">04/15</span>
+</li>
+
+
+<li>
+	<a href="/webplat/info/news_version3/27759/27760/27761/27762/m18903/202004/854254.shtml" title="����"  onclick="PTTSendClick('list','����','4��10����ʱС�汾���¹���')">
+		<span class="type">����</span>4��10����ʱС�汾���¹���
+	</a><span class="time">04/10</span>
+</li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="news_part_wrap news_part_wrap3">
+                <div class="linevp" id="atack1">
+                    <div class="tittle"></div>
+                    <div class="linevp_bar">
+                        <ul>
+                            <li class="linevp_slid active">
+                                <div class="wrap">
+                                    <div class="linevp_left">
+                                        <p><span>�����</span>���ݴ���</p>
+                                    </div>
+                                    <div class="linevp_right">
+                                        <div class="linevp_tabs">
+                                            <ul>
+                                                <li class="active">��������</li>
+                                                <li>�����׶�</li>
+                                                <li>������</li>
+                                                <li>��������</li>
+                                                <a href="/webplat/info/news_version3/27759/27760/32211/m18904/list_1.shtml"><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/more.png" alt=""></a>
+                                            </ul>
+                                        </div>
+                                        <div class="linevp_content" id="'bigteam">
+                                            <div class="list">
+                                                <div class="list_tabs"><img data="dzh" src="//game.gtimg.cn/images/yxwd/cp/a20170925home/dzh-01.png" alt=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="linevp_slid">
+                                <div class="wrap">
+                                    <div class="linevp_left">
+                                        <p><span>�ֲ�����</span>���ݴ���</p>
+                                    </div>
+                                    <div class="linevp_right">
+                                        <div class="linevp_tabs">
+                                            <ul>
+                                                <li class="active">��ɱ���</li>
+                                                <li>��Ѫ�ж����</li>
+                                                <li>ǿ������</li>
+                                                <li>�˺�����</li>
+                                                <a href="/webplat/info/news_version3/27759/27760/32211/m18904/list_1.shtml"><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/more.png" alt=""></a>
+                                            </ul>
+                                        </div>
+                                        <div class="linevp_content">
+                                            <div class="list">
+                                                <div class="list_tabs">
+                                                    <img data="jb"  src="//game.gtimg.cn/images/yxwd/cp/a20170925home/jb-01.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="linevp_slid">
+                                <div class="wrap">
+                                    <div class="linevp_left">
+                                        <p><span>��������</span>���ݴ���</p>
+                                    </div>
+                                    <div class="linevp_right">
+                                        <div class="linevp_tabs">
+                                            <ul>
+                                                <li class="active">�����������</li>
+                                                <li>�������</li>
+                                                <li>�������</li>
+                                                <li>����������</li>
+                                                <a href="/webplat/info/news_version3/27759/27760/32211/m18904/list_1.shtml"><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/more.png" alt=""></a>
+                                            </ul>
+                                        </div>
+                                        <div class="linevp_content">
+                                            <div class="list">
+                                                <div class="list_tabs">
+                                                    <img data="sc" src="//game.gtimg.cn/images/yxwd/cp/a20170925home/sc-01.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="news_part_wrap news_part_wrap4" id="atack2">
+                <div class="tittle">
+                    <div class="raiders_tabs">
+                        <ul>
+                            <li class="active">���� <em></em></li>
+                            <li>���� <em></em></li>
+                            <li>����<em></em></li>
+                            <li>���� <em></em></li>
+                            <li style="display: none">
+                                <input type="text" placeholder="������㽡����������" id="raidersInput">
+                                <a href="javascript:void(0);" id="raidersFind"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="raiders_box">
+
+                    <div class="raiders_type">
+                        <ul>
+                            <li></li>
+                            <li><a href="/webplat/info/news_version3/27759/27760/27765/29330/m18910/list_1.shtml" onclick="PTTSendClick('head_nav','nav','nav4')">����</a></li>
+                        </ul>
+                    </div>
+                    <div class="raiders_type_ex">
+                        <div class="type_ex_left"><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/yszb.png" alt=""></div>
+                        <div class="type_ex_right">
+                            <div class="type_ex_right_scroll">
+                                <div class="scrollh"></div>
+                            </div>
+                            <div class="img_box fh_top"><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/fh.png" alt=""></div>
+                            <div class="right_test">
+                                <div class="right_testcont">
+                                </div>
+                            </div>
+                            <div class="img_box fh_bottom"><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/fh.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news_part_wrap news_part_wrap5" id="atack3">
+                <div class="tittle">
+                    <ul class="herochose">
+                        <li class="active" data_num="0">Ӣ�� <em></em></li>
+                        <li data_num="0">���� <em></em></li>
+                    </ul>
+                </div>
+                <div class="introduction">
+                    <div class="introduction_lf">
+                        <div class="intor_box" id="intor_box_head"></div>
+                        <div class="intor_more">
+                            <div class="prev" style=""><em></em></div>
+                            <div class="next"><em></em></div>
+                        </div>
+                    </div>
+                    <div class="introduction_lr">
+                        <div class="introlr_box">
+                            <div class="introduction_base heroBase">
+                                <div class="name">�ƶ���</div>
+                                <div class="type">
+                                    <em style="display: none"><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/typelogo.png" alt=""></em>
+                                    <span>��ʿ</span>
+                                    <span>�ۺ���</span>
+                                </div>
+                                <div class="power">
+                                    <ul>
+                                        <li>
+                                            <div class="power_type">����</div>
+                                            <div class="persent">
+                                                <div class="persent_true"></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="power_type">����</div>
+                                            <div class="persent">
+                                                <div class="persent_true"></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="power_type">����</div>
+                                            <div class="persent">
+                                                <div class="persent_true"></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="power_type">֪ʶ</div>
+                                            <div class="persent">
+                                                <div class="persent_true"></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="introduction_more_btn">
+                                    <a href="/cp/a20170925home/hero_details.shtml??heroindex=0">�鿴����<em></em></a>
+                                </div>
+                            </div>
+                            <img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/hero.png" alt="" class="introduction_hero">
+                        </div>
+                    </div>
+                    <div style="display: none" class="introduction_lr">
+                        <div class="introlr_box">
+                            <div class="introduction_base corpsBase">
+                                <div class="name">�ƶ���</div>
+                                <div class="type">
+                                    <em><img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/typelogo.png" alt=""></em>
+                                    <span>��ʿ</span>
+                                    <span>�ۺ���</span>
+                                </div>
+                                <div class="power">
+                                    <ul>
+                                        <li>
+                                            <div class="power_type">����</div>
+                                            <div class="persent">
+                                                <div class="persent_true"></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="power_type">����</div>
+                                            <div class="persent">
+                                                <div class="persent_true"></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="power_type">����</div>
+                                            <div class="persent">
+                                                <div class="persent_true"></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="power_type">֪ʶ</div>
+                                            <div class="persent">
+                                                <div class="persent_true"></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="introduction_more_btn">
+                                    <a href="/cp/a20170925home/hero_details.shtml??heroindex=0">�鿴����<em></em></a>
+                                </div>
+                            </div>
+                            <img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/hero.png" alt="" class="introduction_hero">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news_part_wrap news_part_wrap6" id="atack4">
+                <div class="tittle"></div>
+                <div class="game_features">
+                    <div class="contain">
+                        <ul class="ban">
+                            <li>
+                                <a href="javascript:void(0);" title="" target="_blank">
+                                    <img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/gf_banner1.png" alt="Ӣ���޵����ε���ɫ�ǲ���Ϊ��">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" title="" target="_blank">
+                                    <img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/gf_banner2.png" alt="����������Ȩ�����ξ�������">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" title="" target="_blank">
+                                    <img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/gf_banner3.png" alt="Ӣ���޵����ε���ɫ�ǹ�ƽ����">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" title="" target="_blank">
+                                    <img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/gf_banner4.png" alt="Ӣ���޵����ε���ɫ�Ǻ�ΰ��ͼ">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" title="" target="_blank">
+                                    <img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/gf_banner5.png" alt="Ӣ���޵����ε���ɫ�Ǻ�ΰ��ͼ">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="keys">
+                            <i class="left"></i>
+                            <i class="right"></i>
+                        </div>
+                        <div class="icons">
+                            <i class="on"></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fixed_left_box fixed_box" id="fixed_left_box">
+    <div class="top">
+        <ul>
+            <li><a href="//yxwd.qq.com/cp/a20171025home/index.shtml">����վ</a></li>
+            <li><a target="_blank" href="//yxwd.qq.com/cp/a20170607newtopic/index.shtml">���ֽ̳�</a></li>
+            <li><a href="###" class="downbtn">������Ϸ</a></li>
+        </ul>
+    </div>
+    <div class="center">
+        <ul>
+            <li><a href="#atack0">������Ѷ</a></li>
+            <li><a href="#atack1">���ݴ���</a></li>
+            <li><a href="#atack2">��Ϸ����</a></li>
+            <li><a href="#atack3">��Ϸ����</a></li>
+            <li><a href="#atack4">��Ϸ��ɫ</a></li>
+        </ul>
+    </div>
+    <div class="bottom">
+        <p>�������</p>
+        <ul>
+            <li class="codehover"><a href="javascript:void(0);">΢�Ź��ں�</a></li>
+            <li class="codehover"><a href="javascript:void(0);">��Q��Ϸ��</a></li>
+            <li><a target="_blank" href="https://buluo.qq.com/mobile/barindex.html?_bid=128&_wv=1027&bid=354791">��Ȥ����</a></li>
+            <li><a target="_blank" href="https://tieba.baidu.com/f?kw=%E8%8B%B1%E9%9B%84%E6%97%A0%E6%95%8C%E6%88%98%E4%BA%89%E7%BA%AA%E5%85%83&ie=utf-8">�ٷ�����</a></li>
+            <li><a target="_blank" href="http://bbs.g.qq.com/forum-57584-1.html">�ٷ���̳</a></li>
+            <li><a target="_blank" href="//weibo.com/6081534739/">�ٷ�΢��</a></li>
+            <li class = "serviceCodeBtn"><a target="_blank" href="javascript:;">�ͷ�</a></li>
+        </ul>
+    </div>
+    <div class="code"  style="display:none;">
+        <img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/li3_code.png">
+    </div>
+    <div class="code" style="display:none;">
+        <img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/li2_code.png">
+    </div>
+    <div class="code service_code">
+        <img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/service_QR_code.png">
+        <p>΢��ɨ���ά��</p>
+        <p>�����˹��ͷ�</p>
+    </div>
+</div>
+<div class="fixed_right_box fixed_box">
+    <p>App Store ����</p>
+    <p>Android ����</p>
+    <img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/maskcode.png" alt="">
+</div>
+<div class='downmask'>
+    <div class="downmaskbox">
+        <div class="downmaskbox_wrap">
+            <p>��ѡ���������� </p>
+            <span class="closemaskbtn"></span>
+            <div class="box">
+                <img src="//game.gtimg.cn/images/yxwd/cp/a20170925home/maskcode.png" alt="">
+                <div class="pop_down_game">
+                    <div class="keys">
+                        <a href="/d/?device=iphone" title="iOS����"><div class="key1"></div></a>
+                        <a href="/d/?device=android" title="Android����"><div class="key2"></div></a>
+                        <a href="//dlied6.qq.com/invc/xfspeed/qqpcmgr/download/GameDownload_yxwdqpt_208.exe" title="PCģ��������"><div class="key3"></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="foot">
+<div class="container">
+<div class="left">
+<div class="foot_logo">
+<span><img src="//game.gtimg.cn/images/yxwd/web201702/footerlogo.png"/></span>
+<span><img src="//game.gtimg.cn/images/yxwd/web201702/ubisoftlogo.png"/></span>
+<span><img src="//game.gtimg.cn/images/yxwd/web201702/zqlogo.png"/></span>
+<span><img src="//game.gtimg.cn/images/yxwd/web201702/wxlogo.png"/></span>
+</div>
+<div class="notice">
+<P>���Ʋ�����Ϸ&nbsp;�ܾ�������Ϸ&nbsp;ע�����ұ���&nbsp;������ƭ�ϵ�</p>
+<p>�ʶ���Ϸ����&nbsp;������Ϸ����&nbsp;�������ʱ��&nbsp;���ܽ�������</p>
+</div>
+</div>
+<div class="right">
+<p>
+<a target="_blank" href="//ieg.tencent.com" onclick="PTTSendClick('header','footerTx_btn','��Ѷ��������');">��Ѷ��������</a> |
+<a target="_blank" href="//game.qq.com/contract.shtml" onclick="PTTSendClick('header','footerServerTerm_btn','��������');">��������</a> |
+<a target="_blank" href="//adver.qq.com/" onclick="PTTSendClick('header','footerAdver_btn','������');">������</a> |
+<a target="_blank" href="//game.qq.com/hr/" onclick="PTTSendClick('header','footerGanmeJob_btn','��Ѷ��Ϸ��Ƹ');">��Ѷ��Ϸ��Ƹ</a> |
+<a target="_blank" href="//kf.qq.com" onclick="PTTSendClick('header','footerGanmeService_btn','��Ѷ��Ϸ�ͷ�');">��Ѷ��Ϸ�ͷ�</a> |
+<a target="_blank" href="//game.qq.com/gnav" onclick="PTTSendClick('header','footerGanmeMap_btn','��Ϸ��ͼ');">��Ϸ��ͼ</a> |
+<a target="_blank" href="//tgact.qq.com/" onclick="PTTSendClick('header','footerGanmeAcyivity_btn','��Ϸ�');">��Ϸ�</a> |
+<a target="_blank" href="//game.qq.com/brand/business.htm" onclick="PTTSendClick('header','footerParyner_btn','�������');">�������</a> |
+<a target="_blank" href="//www.qq.com/map/" onclick="PTTSendClick('header','footerWebMap_btn','��վ����');">��վ����</a>  |
+<a target="_blank" href="//sq.ccm.gov.cn:80/ccnt/sczr/service/business/emark/gameNetTag/4028c08b57e69ea10157f5cb55b619e2" onclick="PTTSendClick('header','footerWebMap_btn','��Ϸ���ӱ�ǩ');">��Ϸ���ӱ�ǩ</a>
+</p>
+<p>
+COPYRIGHT &copy; 1998 �C 2017 TENCENT. ALL RIGHTS RESERVED.
+<a target="_blank" href="//www.tencent.com/law/mo_law.shtml?/law/copyright.htm" class="fr" onclick="PTTSendClick('header','footerCopyright_btn','��Ѷ��˾ ��Ȩ����');">��Ѷ��˾ ��Ȩ����</a>
+</p>
+<p>
+&copy;2017 Ubisoft Entertainment. All Rights Reserved. Might & Magic, Heroes, Ubisoft and the Ubisoft logo are trademarks of Ubisoft Entertainment in the U.S. and/or other countries.
+</p>
+<p>
+<a target="_blank" href="//www.qq.com/culture.shtml" onclick="PTTSendClick('header','footerCulture_btn','������[2017]6138-1456��');">������[2017]6138-1456��</a> |
+<a target="_blank" href="//game.qq.com/culture2.htm" onclick="PTTSendClick('header','footerCulture2_btn','���ܣ�����֤�������ֵ�057��');">���ܣ�����֤�������ֵ�057��</a> |
+<a target="_blank" href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/gameNetTag/4028c08b57e69ea10157f5cb55b619e2" onclick="PTTSendClick('footer','footerRecord','�����α���');"><img src="//game.gtimg.cn/images/yxwd/web201702/icplogo.png" width="13" height="15"/> �����α���[2016]M-RPG 7089</a>
+</p>
+<p>ȫ���Ļ��г�ͳһ�ٱ��绰��12318 | ��׼�ĺţ��¹����[2017]31�� | ������ţ�ISBN 978-7-7979-4017-7</p>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/title.js"></script>
+<script src="//ossweb-img.qq.com/images/js/swiper/swiper-3.4.2.min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/comm/tgAds.min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/comm/tgadshow.min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script src="/cp/a20170925home/js/localTeam.json.js"></script>
+<script src="/cp/a20170925home/js/hero_json.js"></script>
+<script src="/cp/a20170925home/js/corps_json.js"></script>
+<script src="/cp/a20170925home/js/conmen.js"></script>
+<script src="/cp/a20170925home/js/index.js"></script>
+<script>
+    var test=new tgAds({
+        ggID:'15921' //��������Ƶ��ID
+        ,info:'20170928' //,info:'201206'
+        ,box:'ggBox' //��д���ù���div��ID
+        ,pgv:'mainAd' //[��ѡ����]��������ƣ���Ż��Զ���
+        ,mouse:false //[��ѡ����]����С��ť��ҳ�ǵ��������꾭��
+    })
+    //�˶δ��벻�ܷŵ�����JS�У���Ҫ�������ӻ���ɾ�Ķ�������
+    var setSite = { //������վ����
+        siteType: "os", //������:������д"os"���ר����д�Ŀ¼�����磺"a20160701xxx"��
+        pageType: "list", //������:��ҳ��Ķ�λ������ҳ�溬����д����main||list||detail||download||share||page1||pageN
+        pageName: "Ӣ���޵���ҳ", //������:ҳ��������
+        osact: 0, //ѡ����:�Ƿ��ǹ���ר��(�ڹ�����Ӫ��ר��)boolean��Ĭ����0�������������ϼ������osact=1���������
+        ingame: 0, //ѡ����:�Ƿ�Ͷ������ϷAPP��boolean��Ĭ����0�������������ϼ������ingame=1���������
+        stayTime: 0 //ѡ����:�Ƿ���Ҫͳ��ͣ��ʱ��boolean��Ĭ����0
+    };
+    if (typeof(pgvMain) == 'function')pgvMain();//ǧ�������ǣ�
+</script>
+<script>
+    $(".downbtn").on('click',function(){
+        $(".downmask").show();
+    })
+
+    $(".closemaskbtn").on('click',function(){
+        $(".downmask").hide();
+    })
+    $(window).scroll(function () {
+        var o = $(window).scrollTop(), s = $("#top_bar") ,j = $("#fixed_left_box"), t = $('.logo');
+        if (o >= 55) {
+            s.addClass("fiexd");
+            j.addClass("on");
+            t.hide();
+        } else {
+            s.removeClass("fiexd");
+            j.removeClass("on");
+            t.show()
+        }
+    });
+
+    $(".bl").on('click',function(){
+        alert('�����ڴ�')
+    })
+
+    // �ͷ���ť����
+    $(".serviceCodeBtn").hover(function(){
+        $(".service_code").show();
+    },function(){
+        $(".service_code").hide();
+    });
+    // �ͷ���ť���� end
+</script>
+</body>
+</html>

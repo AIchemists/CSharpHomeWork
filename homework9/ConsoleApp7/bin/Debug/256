@@ -1,0 +1,1285 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>广东省通信管理局</title>
+
+
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript">
+	var bizpath = "https://gdca.miit.gov.cn:443/biz"
+	var rootpath = "https://gdca.miit.gov.cn:443";
+	var basepath = "https://gdca.miit.gov.cn:443/framenet";
+	var childbasepath = "https://gdca.miit.gov.cn:443/framenet";
+	var documentPath = "https://gdca.miit.gov.cn:443/document"
+	var gdcmsnetpath = "https://gdca.miit.gov.cn:443/gdcmsnet"
+	var sessionUserId = "null";
+	var sessionUserName = "null";
+</script>
+<!--[if IE 8]><link rel="stylesheet" href="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/css/forie8.css"/><![endif]-->
+<style type="text/css">
+/* body{background:url(/assets/webIndex/images/bg.jpg) repeat top left #eeeeee} */
+/* datatable 分页条样式 */
+.framework_datatable_page .dataTables_length {
+	margin-left:10px;
+	padding-top:9px;
+}
+.popover-content{
+	color:red;
+}
+.toolbar {
+	margin-right: 3px;
+}
+.select2-search--dropdown{
+	width:100%;
+	display: inline-block;
+	position: relative;
+	padding-left: 6px;
+    padding-right: 24px;
+    padding-top:5px;
+}
+.select2-search__field{
+    margin-left: 0px!important;
+    width: 100%;
+}
+.select2-search:after{
+	display:none !important;
+}
+.select2-container{
+	width: 100% !important;
+	padding-left: 0px;
+    padding-right: 0px;
+}
+.error{
+	    border: 1px solid red !important;
+}
+
+.mydisabled{background-color: white!important;border: 0px!important;-webkit-appearance:none!important;}
+.disnone{ display: none;}
+.bordernone{border: 0px!important;}
+.none::-webkit-resizer { display: none;}
+select::-ms-expand { display: none; } 
+.page-more {cursor: pointer;}
+.nav li a{text-decoration: none!important;}
+
+ </style> 
+
+<title>Insert title here</title>
+<link rel="shortcut icon" href="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/logintitle.ico">
+<link rel="Bookmark" href="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/logintitle.ico">
+<link rel="stylesheet"	href="https://gdca.miit.gov.cn:443/framenet/assets/css/font-awesome.min.css" />
+<script type="text/javascript">
+window.console = window.console || (function(){ 
+	var c = {}; c.log = c.warn = c.debug = c.info = c.error = c.time = c.dir = c.profile 
+	= c.clear = c.exception = c.trace = c.assert = function(){}; 
+	return c; 
+})();
+</script>
+</head>
+<body>
+
+</body>
+</html>
+<script src="https://gdca.miit.gov.cn:443/framenet/assets/js/jquery/jquery-1.9.1.min.js"></script> 
+<script src="https://gdca.miit.gov.cn:443/framenet/assets/js/plugins/xss/xss.min.js"></script>   
+
+<link rel="stylesheet" href="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/css/communication_index.css"/>
+<link rel="stylesheet" href="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/css/portal_style.css"/>
+<link rel="stylesheet" href="https://gdca.miit.gov.cn:443/framenet/assets/js/plugins/slideBox/css/jquery.slideBox.css" />
+<link rel = "stylesheet" href ="https://gdca.miit.gov.cn:443/framenet/assets/js/plugins/scroll/myScroll.css"/>
+<script src="https://gdca.miit.gov.cn:443/framenet/assets/js/bootstrap.min.js"></script> 
+<script src="https://gdca.miit.gov.cn:443/framenet/assets/js/layer/layer.js"></script> 
+<script src ="https://gdca.miit.gov.cn:443/framenet/assets/js/plugins/pligins.ext.js"></script>
+<script type="text/javascript" src="https://gdca.miit.gov.cn:443/framenet/assets/js/plugins/slideBox/js/jquery.slideBox.min.js"></script>
+<script src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/js/plug-in.js"></script> 
+<script src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/js/plug-in-mess.js"></script>
+<style type="text/css">
+.huangcy {
+	width: 303px;border: 1px solid #ddd;
+}
+.huangcy a{
+ text-overflow: ellipsis;
+white-space: nowrap;
+display: inline-block;
+font-size: 14px;
+color: #323232;
+padding: 8px 6px;
+width:50%;
+box-sizing: border-box;
+text-align:center;
+}
+.huangcy .a_right_line{
+	border-right:1px solid #ddd;
+
+}
+.line{border-bottom:1px solid #ddd;width:305px;height:1px;}
+.cy_title{
+	width:305px;
+	height:42px;
+	background:#cae1f1; 
+/* 	background:#004e97; */
+	overflow: hidden;
+	}
+.cy_title .cy_box{ background:#004e97;font-size:14px; text-align:center;color:#fff;margin: 5px;
+height: 32px;}
+.cy_title .cy_box a{ display: inline-block;line-height:32px;height:32px;}
+.cy_title .cy_box a img{ float:left;}
+
+.cy_title .cy_box a span{ font-size:14px; color:#fff;}
+.modules{padding: 23px 30px 0 0;}
+div.slideBox div.tips div.title{max-width:580px;}
+div.slideBox div.tips div.title a{font-size:14px;}
+div.slideBox div.tips{height:30px;width:620px;}
+div.slideBox div.tips div.title a{line-height: 30px;}
+div.slideBox div.tips div.nums a{margin:10px 10px 0px 0px;width:10px;height:10px;}
+div.slideBox ul.items li a{width: 620px!important;height: 380px!important;}
+/* div.slideBox ul.items li a{width:530px;height:300px;} */
+div.slideBox ul.items li a img{width:100%;height:100%;}
+
+.new_search input{width: 160px !important;}
+.active_tab_left{width:351px;}
+/* .a_plate_right_right{width:340px!important;margin-left:10px;} */I
+.a_plate_left .act_title_right{padding-top:0px;} 
+.no-margin-left{margin-left:0px!important;}
+.scroll-content ul li a{text-overflow: ellipsis;    white-space: nowrap;    overflow: hidden;    width: 250px;}
+/* .logo_dortal img{height:60px!important;} */
+.hot_top_service{
+    width: 350px;
+    height: 315px;
+    float: left;
+    margin-left: 10px;
+    /* border: 1px solid #ddd; */
+}
+.active_tab_width{width:351px;}
+.panel_bottom{
+    width: 347px;
+    float: right;
+    height: 210px;
+    /* border: 1px solid #ddd; */
+    }
+   .disnone{display:none!important;}
+   .select {
+ border: solid 1px #ddd;
+appearance: none;
+-moz-appearance: none;
+-webkit-appearance: none;
+background-size: 13px !important;
+cursor: pointer;
+height: 30px;
+padding: 4px 25px 4px 4px;
+min-width: 75px;
+border-radius: 4px;
+font-size: 12px;
+background: url("https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/select-dorpdown.png") no-repeat  right 5px center #fff;
+
+}
+ .qp_code{
+    	    border: none;
+   width: 145px;
+height: 203px;
+    background: #fff;
+    box-shadow: 2px 2px 2px #999;
+    position: fixed;
+    top: 280px;
+    margin-right: 510px;
+    right:50%;
+    }
+    .qp_code_left{
+    	border: none;
+	   width: 145px;
+height: 203px;
+	    background: #fff;
+	    box-shadow: 2px 2px 2px #999;
+	    position: fixed;
+	    top: 280px;
+	    margin-left: 510px;
+	    left:50%;
+    }
+    .advert_pic{
+    width: 145px;
+height: 203px;
+    }
+    .advert_close{
+    	position: absolute;
+    	right:10px;top:10px;
+    	cursor: pointer;
+    }
+    .advert_top{position: relative;}
+
+.select::-ms-expand { display: none; }
+
+   
+</style>
+<script type="text/javascript">
+ layer.config({
+	scrollbar: false,
+	moveOut: true
+	}); 
+	 function initCms(code,target,maxnum,row,flag){
+		 var html = "<ul>";
+    	 var now = 0;
+    	 if(!row)row =1;
+    	 if(!maxnum)maxnum = 10;
+    	 var asyncflag = true;
+    	 
+    	 var nowdate = new Date().Format('yyyy-MM-dd hh:mm:ss');
+    	 if(flag=="false")asyncflag = false;
+    	 $.ajax({
+    		 	type:"post",
+    			url:basepath+"/web/index/getWebIndexData.api",
+    			data:{catogoryId:code,publicTime:nowdate,isNet:1},
+    			async:asyncflag,
+    			success:function(data){
+    				var cmsDatas = data.data;
+    				$.each(cmsDatas,function(i){
+    		     		 /* if(this.catogoryId == code){  */
+    		     			html+=" <div title='"+this.title+"'><li><a target='_blank' href="+gdcmsnetpath+this.address+">"+this.title+" </a><span style='font-size:13px;'>"+
+    		     			    new Date(this.publicTime).Format("MM-dd")+"</span></li><div>"
+    		     			now++;
+    		     			if(now == maxnum && row == 1){
+    		     				return false;
+    		     			}else if(now == maxnum && row == 2){
+    		     				html+= "</ul><ul>";
+    		     			}else if(now == 2 * maxnum){
+    		     				return false;
+    		     			}
+    		     		/* } */
+    		     	});
+    		     	 html += "</ul>";
+    		     	$(target).html(html);
+    		    }	
+    			
+    		});
+	 }
+	/* <p style="font-size:16px;">sadfasdfsadfdsaf</p>
+		<marquee direction="up" height="210px;" behavior="scroll" scrollamount="2" scrolldelay="0" loop="-1"  hspace="10" vspace="10">
+		 <p>指整个Marquee对齐方式;</p>
+		 <p> (2)behavior:设置滚动的方式: scroll:表示由一端滚动到另一端,会重复,缺陷是不能无缝滚动。</p>
+		  <p> slide:表示由一段滚动到另一端,不会重复...</p>
+		</marquee>  */
+ 	function upDevolope(){
+		$.ajax({
+			type:"post",
+			url:basepath+"/web/index/getWebIndexData.api?catogoryId=297",/* 256 */
+			async:true,
+			success:function(data){
+				var sdata = data.data;
+				var html = "<div class='huangcy'>";
+				if(data){
+					for(var i = 0 ; i < 4 ; i++){
+						var title = "";
+						if(sdata[i]){
+							title = sdata[i].title.length > 8 ? sdata[i].title.substring(0,8)+"..." : sdata[i].title;
+							if(i == "0" || i == "2"){
+								html+="<div style='display:inline;' title='"+sdata[i].title+"'><a target='_blank' class='a_right_line' href='"+gdcmsnetpath+sdata[i].address+"'>"+title+"</a></div>";
+							}
+							if(i == "1"){
+								html+="<div style='display:inline;' title='"+sdata[i].title+"'><a target='_blank' href='"+gdcmsnetpath+sdata[i].address+"'>"+title+"</a></div><div class='line'></div>";
+							}
+							if(i == "3"){
+								html+="<div style='display:inline;' title='"+sdata[i].title+"'><a target='_blank' href='"+gdcmsnetpath+sdata[i].address+"'>"+title+"</a></div>";
+							}
+						}
+					}
+				}
+				html+="</div>";
+				$("#scroll-content-title").html(html); 
+				
+			}
+		}); 
+	} 
+	 function initDevolope(code,target,maxnum,row,flag){
+		 var html = "<ul>";
+    	 var now = 0;
+    	 if(!row)row =1;
+    	 if(!maxnum)maxnum = 10;
+    	 var asyncflag = true;
+    	 var nowdate = new Date().Format('yyyy-MM-dd')+" 00:00:00";
+    	 if(flag=="false")asyncflag = false;
+    	 $.ajax({
+    		 	type:"post",
+    			url:basepath+"/web/index/getDetailContent.api",
+    			data:{catogoryId:code,publicTime:nowdate},
+    			async:asyncflag,
+    			success:function(data){
+    				var cmsDatas = data.data;
+    				$.each(cmsDatas,function(i){
+    		     		 if(this.catogoryId == code){ 
+/*     		     			 var htmltitle = '<p style="font-size:17px;color:#066ab5;padding: 28px;border-bottom:1px solid #ddd;">'+this.title+'</p>'; 
+    		     			$("#scroll-content-title").html(htmltitle); */
+    		     			/* html += '<p style="font-size:16px;background: #f5f5f5;padding: 4px;">'+this.title+'</p>'; */
+    		     			 html+= '<div class="list_lh"><ul style="margin-top :0px;"><li>'
+    		     			/* html += '<marquee direction="up" height="210px;" onmouseover=this.stop() onmouseout=this.start() behavior="scroll" scrollamount="2" scrolldelay="0" loop="-1"  hspace="10" vspace="10">'; */
+    		     			html += this.content;
+    		     			html += '</li></ul></div>';
+    		     		}
+    		     	});
+    		     	 html += "</ul>";
+    		     	$(target).html(html);
+    		     	var vheight = $(".list_lh ul li").height();
+    		     	if(vheight > 300){
+    		     		vheight = vheight - 30;
+    		     	}else{
+    		     		vheight = 300;
+    		     	}
+/*     				$("div.list_lh").myScroll({
+    					speed:40, //数值越大，速度越慢
+    				 	rowHeight:vheight //li的高度 
+    				}); */
+    		    }	
+    			
+    		});
+	 }
+</script>
+</head>
+
+<body class="body_bj">
+
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>广东省通信管理局</title>
+
+
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript">
+	var bizpath = "https://gdca.miit.gov.cn:443/biz"
+	var rootpath = "https://gdca.miit.gov.cn:443";
+	var basepath = "https://gdca.miit.gov.cn:443/framenet";
+	var childbasepath = "https://gdca.miit.gov.cn:443/framenet";
+	var documentPath = "https://gdca.miit.gov.cn:443/document"
+	var gdcmsnetpath = "https://gdca.miit.gov.cn:443/gdcmsnet"
+	var sessionUserId = "null";
+	var sessionUserName = "null";
+</script>
+<!--[if IE 8]><link rel="stylesheet" href="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/css/forie8.css"/><![endif]-->
+<style type="text/css">
+/* body{background:url(/assets/webIndex/images/bg.jpg) repeat top left #eeeeee} */
+/* datatable 分页条样式 */
+.framework_datatable_page .dataTables_length {
+	margin-left:10px;
+	padding-top:9px;
+}
+.popover-content{
+	color:red;
+}
+.toolbar {
+	margin-right: 3px;
+}
+.select2-search--dropdown{
+	width:100%;
+	display: inline-block;
+	position: relative;
+	padding-left: 6px;
+    padding-right: 24px;
+    padding-top:5px;
+}
+.select2-search__field{
+    margin-left: 0px!important;
+    width: 100%;
+}
+.select2-search:after{
+	display:none !important;
+}
+.select2-container{
+	width: 100% !important;
+	padding-left: 0px;
+    padding-right: 0px;
+}
+.error{
+	    border: 1px solid red !important;
+}
+
+.mydisabled{background-color: white!important;border: 0px!important;-webkit-appearance:none!important;}
+.disnone{ display: none;}
+.bordernone{border: 0px!important;}
+.none::-webkit-resizer { display: none;}
+select::-ms-expand { display: none; } 
+.page-more {cursor: pointer;}
+.nav li a{text-decoration: none!important;}
+
+ </style> 
+
+<title>Insert title here</title>
+<link rel="shortcut icon" href="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/logintitle.ico">
+<link rel="Bookmark" href="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/logintitle.ico">
+<link rel="stylesheet"	href="https://gdca.miit.gov.cn:443/framenet/assets/css/font-awesome.min.css" />
+<script type="text/javascript">
+window.console = window.console || (function(){ 
+	var c = {}; c.log = c.warn = c.debug = c.info = c.error = c.time = c.dir = c.profile 
+	= c.clear = c.exception = c.trace = c.assert = function(){}; 
+	return c; 
+})();
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+<link rel="stylesheet" href="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/css/communication_index.css"/>
+<style type="text/css">
+
+#page-content #page-content{margin-top:0px;}
+.top-line{font-size:14px;}
+.top-line a{text-decoration: none;margin-left:5px;cursor: pointer;color:#fff;font-size:14px;}   
+.top-line a:hover{color:#fff;text-decoration:underline;} 
+.menuActive{background-color: #fff!important;}
+.menuActive a{
+	color:#004e97!important;
+	font-weight: bold;
+}
+.center_menu_left > ul{min-height: 400px;}
+table.dataTable tbody tr{border-bottom: 1px dashed #e3e3e3;}
+
+a:hover, a:focus{color: #ff0000;}   
+/* mainbody{
+	max-width:1440px;
+	margin-left: auto;
+	margin-right: auto;"
+} */
+
+//预览样式
+
+.mydisabled{background-color: white!important;border: 0px!important;-webkit-appearance:none!important;}
+.disnone{ display: none;}
+.bordernone{border: 0px!important;}
+.none::-webkit-resizer { display: none;}
+select::-ms-expand { display: none; }
+.nav-list li.active>a:after{display:none!important;border: 2px solid #8CC2EC}
+.nav-list>li.active:after{display:none!important;border: 2px solid #8CC2EC}
+li.active{font-size: 14px;}
+
+select[data-type=select2] ~ span .select2-selection{border:1px solid #d5d5d5;border-radius: 0;}
+.error[data-type=select2] ~ span .select2-selection{border:1px dotted red;}
+.error{
+	    border: 1px solid red !important;
+}
+
+select,input,textarea{border:1px solid #b5b5b5;border-radius:0;}
+
+.label-required:before {
+	content:"*";
+	color:red;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+/* 改变ie滚动条样式 */
+html, body {
+    -ms-overflow-style: scrollbar;
+}
+
+.ds-left{margin-left:6px;min-width: 18px;margin-right: 2px;}
+.dataTable thead tr th{white-space:nowrap ; vertical-align: middle;padding-left:0px;padding-right:0px; }
+.dataTable tbody tr td{    vertical-align: middle;}
+.dataTable tbody tr .left-align{text-align:left;}
+.dataTable{width:100% !important;}
+.search-btn-group {
+	border-top: 1px dotted #6ea6cc;
+    padding-top: 10px;
+    float: left;
+    padding-right: 0px;
+}
+.search-btn-group > div{
+float: right;
+}
+
+.search-content-group{
+	padding-bottom:0px;
+}
+.layui-layer-title{
+	font-size: 16px;
+    font-family: 微软雅黑;
+    color: #fff;
+    background-color: #5aa0d4;
+    background: -webkit-linear-gradient(top, #5aa0d4, #5294c4)
+}
+.layui-layer-setwin .layui-layer-min cite{background-color: #fff;}
+.layui-layer-max{background: url(../assets/images/max.png) no-repeat; background-position: 0px 0px !important;}
+.layui-layer-close1 {
+    background: url(../assets/images/close.png) no-repeat ;
+        background-position: 0px 0px !important;
+}
+.layui-layer-maxmin{background: url(../assets/images/maxmin.png) no-repeat; background-position: 0px 0px !important;}
+.layui-layer-btn{background-color: #eff2f7;font-size: 14px;}
+.layui-layer-content{padding: 10px;}
+/* .layui-layer-content > div {    border: 1px solid #ddd;background: #fafafa; }  */
+
+  .layui-layer-content .layui-layer-wrap{
+    	border: 1px solid #ddd;
+    	background: #fafafa;gin-right:10px;
+    }
+
+
+
+.table-head{
+	font-size: 18px;
+    text-align: left;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.clearfix{margin: 0 auto;display: inline-block;}
+.rzy-home .rzy-func-blk {
+    text-align: center;
+}
+
+.rzy-func-one {
+    cursor: pointer;
+    float: left;
+    color: #646464;
+    text-align: center;
+    font-size: 16px;
+}
+.rzy-func-one .icon-left {
+    line-height: 35px;
+    height: 35px;
+    width: 100px;
+    background-image: url('zxbs/img/home-left.png');
+
+    font-size: 16px;
+    font-weight: 100;
+    border-right: 1px solid #ddd;
+    display: inline-block;
+    }
+.rzy-func-one .icon-left.active{
+	background-image: url('zxbs/img/home-active-left.png');
+
+	color: #ffffff;
+	display: inline-block;
+}   
+.rzy-func-one .icon-center {
+    line-height: 35px;
+    height: 35px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 100;
+    background-image: url('zxbs/img/home-center.png'); 
+
+    border-right: 1px solid #ddd;
+    display: inline-block;
+}
+.rzy-func-one .icon-center.active{
+	background-image: url('zxbs/img/home-active-center.png');
+
+	color: #ffffff;
+	display: inline-block;
+} 
+.rzy-func-one .icon-right {
+    line-height: 35px;
+    height: 35px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 100;
+    background: url('zxbs/img/home-right.png') right no-repeat;
+
+    margin: 0 auto;
+    display: inline-block;
+}
+.rzy-func-one .icon-right.active{
+	background: url('zxbs/img/home-active-right.png') right no-repeat;
+	color: #ffffff;
+
+	display: inline-block;
+} 
+.headline-self{padding: 10px 0;border-bottom:0px!important;text-align: center;}
+ 
+ #page-main-table-content{    padding: 10px;
+    border: 1px solid #ddd;
+    width: 710px;
+    min-height:550px;
+    }
+</style>
+<script type="text/javascript">
+	
+	function welcome(id){
+		var now = new Date(),hour = now.getHours();
+		var dayNames = new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六"); 
+		var welcome =now.getFullYear() + "年"+(now.getMonth() + 1) +"月"+now.getDate()+ "日"+ " " + dayNames[now.getDay()] +" ";
+		if(hour < 6){document.write("凌晨好！")} 
+		else if (hour < 9) {welcome+="早上好！"} 
+		else if (hour < 12){welcome+="上午好！"} 
+		else if (hour < 14){welcome+="中午好！"} 
+		else if (hour < 17){welcome+="下午好！"} 
+		else if (hour < 19){welcome+="傍晚好！"} 
+		else if (hour < 22){welcome+="晚上好！"} 
+		else {welcome+="深夜好！"};
+		$(id).html(welcome);
+	}
+</script>
+</head>
+<body>
+<div class="top_bj_1">
+<div class="header" style="border-bottom:0px;">
+  <div class="header_box"> <a href="https://gdca.miit.gov.cn:443/framenet/web/index.jsp" class="logo_dortal"><img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/logo_dortal.png"/></a>
+    <div class="modules">
+	    <!-- <span>2016年04月06日 星期三    上午好！</span>
+	    <a class="person_name">李明</a> -->
+	    
+	    
+	    	<!-- <span class="top-line"><a  href="index.jsp">首页</a></span><span class="top-line"><a class="top-line" href="./login/login.jsp">登录</a></span> -->
+	    	<span class="top-line"><a class="top-line" href="https://gdca.miit.gov.cn:443/framenet/web/login/login.jsp" style="font-size:12px;" >企业登录</a></span>
+	    	<span class="top-line"><a class="top-line" href="https://mail.gdca.gov.cn/owa"  target="_blank" style="font-size:12px;">邮箱登录</a></span>
+	    	
+	    	
+	    
+    </div>
+  </div> 
+</div>
+<div class="nav">
+  <ul class="top-web-nav">
+   <li><a href="https://gdca.miit.gov.cn:443/framenet/web/index.jsp" data-res="index.jsp" style="text-align: center;
+padding: 12px 34px;" >首 页</a></li>
+    <li><a href="https://gdca.miit.gov.cn:443/framenet/web/NewsFeatures.jsp" data-res="NewsFeatures.jsp">新闻动态</a></li>
+    <li><a href ="https://gdca.miit.gov.cn:443/framenet/web/Infomation.jsp" data-res="Infomation.jsp">政务公开</a></li>
+    <li><a href ="https://gdca.miit.gov.cn:443/framenet/web/LawRule.jsp" data-res="LawRule.jsp">法律法规</a></li>
+    <li><a href="https://gdca.miit.gov.cn:443/framenet/web/InternetLaw.jsp" data-res="InternetLaw.jsp">在线办事</a></li>
+    <li><a href ="https://gdca.miit.gov.cn:443/framenet/web/FeatureClass.view"  data-res="FeatureClass.jsp">专题专栏</a></li>
+    
+  </ul>
+ 
+ <div class="new_search">
+    <input type="text" class="search_input" id="content_search_input" style="font-size: 14px;font-family: inherit;height: 30px;!important;    margin: 0 0;" placeholder="请输入搜索内容..."/>
+    <img id="content_search_input_img" src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/grabble.png"/>
+    </div> 
+</div>
+</div>
+
+<script type="text/javascript" src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/js/changelist.js"></script>
+ <script type="text/javascript">
+  	var requestUrl ="/framenet/web/index.jsp";
+  	$.each($(".top-web-nav li a"),function(i){
+  		/* if($(this).attr("href")==requestUrl.substring(requestUrl.lastIndexOf("/")+1)){ */
+  		if($(this).attr("href")==requestUrl.substring(requestUrl.lastIndexOf("/")+1)){
+  			$(this).addClass("pitch_up");
+  		}else if(requestUrl.indexOf("index.jsp") != -1){
+  			$("[data-res='index.jsp']").addClass("pitch_up");
+  		}else if(requestUrl.indexOf("NewsFeatures.jsp") != -1){
+  			$("[data-res='NewsFeatures.jsp']").addClass("pitch_up");
+  		}else if(requestUrl.indexOf("Infomation.jsp") != -1){
+  			$("[data-res='Infomation.jsp']").addClass("pitch_up");
+  		}else if(requestUrl.indexOf("LawRule.jsp") != -1){
+  			$("[data-res='LawRule.jsp']").addClass("pitch_up");
+  		}else if(requestUrl.indexOf("InternetLaw.jsp") != -1){
+  			$("[data-res='InternetLaw.jsp']").addClass("pitch_up");
+  		}else if(requestUrl.indexOf("FeatureClass.jsp") != -1){
+  			$("[data-res='FeatureClass.jsp']").addClass("pitch_up");
+  		}else if(requestUrl.indexOf("Enterprises.jsp") != -1){
+  			$("[data-res='Enterprises.jsp']").addClass("pitch_up");
+  		}
+  	})
+  		
+  </script>
+</body>
+</html>
+
+<div class="content index-page-content" >
+  <div class="a_plate">
+      <div class="">
+      <div class="section-focus-pic" id="section-focus-pic">
+        <div class="slideBox" id="index-pic-news"></div>
+        <script type="text/javascript">
+        	$.ajax({
+        		url:basepath + "/web/getHomePicNews?type=1",
+        		success:function(data){
+        			var html = "<ul class='items'>";
+        			$.each(data.data,function(i){
+        				var url = "";
+        				if(this.picsrc){
+        					url = this.picsrc.replace("/framework/ueditor/upload?","/framenet/ueditor/upload?");
+        				}
+		      	        html += '<li><a target="_blank" href="'+ this.picurl +'" title="'+this.title +'"><img src="'+ url +'"></a></li>';
+        			})
+        			html += "</ul>";
+        			$("#index-pic-news").html(html);
+        			 $('#index-pic-news').slideBox({
+        			        delay : 8,//滚动延迟时间，单位：秒
+        			        hideClickBar : false,//不自动隐藏点选按键
+        			        asing: 'linear', 
+        			        clickBarRadius : 8,
+        			        duration: 0.3, 
+        			        startIndex : 0,//初始焦点顺序
+        			        width:'620',
+        			        height:'380'
+			 			}); 
+        		}
+        	});
+        	$.ajax({
+        		url:basepath + "/web/getHomePicNews?type=2",
+        		success:function(data){
+       				var url = "";
+       				if(data.data && data.data[0]){
+       					url1 = data.data[0].picsrc.replace("/framework/ueditor/upload?","/framenet/ueditor/upload?");
+       					$("#pic1").attr("src",url1);
+       					$("#pic1").parent().attr("target","_blank");
+       					$("#pic1").parent().attr("href",data.data[0].picurl);
+       					$("#float-pic1").show();
+       				}
+       				if(data.data && data.data[1]){
+       					url2 = data.data[1].picsrc.replace("/framework/ueditor/upload?","/framenet/ueditor/upload?");
+       					$("#pic2").attr("src",url2);
+       					$("#pic2").parent().attr("target","_blank");
+       					$("#pic2").parent().attr("href",data.data[0].picurl);
+       					$("#float-pic2").show();
+       				}
+        		}
+        	});
+        	
+        	$.ajax({
+        		url:basepath + "/web/getHomePicNews?type=3",
+        		success:function(data){
+        			var sdata = data.data;
+        			var html = "";
+        			if(sdata){
+        				for(var i = 0 ; i < sdata.length ; i++)
+        				if(i%2 == 0 & i < 6){
+        					html+='<li class="page-more no-margin-left" data-target="'+sdata[i].picurl+'"><a><img src="'+sdata[i].picsrc+'"/>'+sdata[i].title+'</a></li>'
+        				}
+        				else if(i%2 != 0 & i < 6){
+							html+='<li class="page-more " data-target="'+sdata[i].picurl+'"><a><img src="'+sdata[i].picsrc+'"/>'+sdata[i].title+'</a></li>'
+        				}
+						
+						$("#zfgkxf").html(html);
+					}
+        		}
+        	});
+        	
+        	$.ajax({
+        		url:basepath + "/web/getHomePicNews?type=4",
+        		success:function(data){
+        			var sdata = data.data;
+        			var html = "";
+        			if(sdata){
+        				for(var i = 0 ; i < sdata.length ; i++){
+        					if(i < 5){
+        						html+='<p ><img  class="page-more" data-target="'+sdata[i].picurl+'" src="'+sdata[i].picsrc+'"/></p>'
+        					}
+        					
+        				}
+							
+						$("#gzdtxf").html(html);
+					}
+        		}
+        	});
+        </script>
+      </div>
+     
+    </div>
+    <div class="a_plate_left">
+      <!-- <div class="headline_title">
+        <h2 >工作动态</h2>
+         <div class="act_title_right page-more"  data-target="/web/NewsFeatures.jsp"> <span>更多>></span> </div>
+      </div> -->
+     <div class="active_tab active_tab_left" id="outer3">
+      <ul class="act_title_left" id="tab3">
+        <li class="act_active page-more-list" data-mid="54" data-title="工作动态" style="width:117px;"> <a>工作动态</a> </li>
+        <li  class="page-more-list" data-mid="101" data-title="通知公告" style="width:117px;"> <a >公告栏</a> </li>
+        <li class="page-more-list" data-mid="56" data-title="行业要闻" style="width:117px;"> <a >行业要闻</a> </li>
+      </ul>
+ 	<div class="act_title_right disnone"  id = "pagemore3"  data-target="/web/InternetLaw.jsp">
+	       <span class="page-more-list" data-mid="54" data-title="工作动态" style="display:block;">更多>></span> 
+	       <span class="page-more-list" data-mid="101" data-title="通知公告" style="display:none;">更多>></span> 
+	       <span class="page-more-list" data-mid="56" data-title="行业要闻" style="display:none;">更多>></span> 
+      </div> 
+      <div class="clear"></div>
+    </div>
+    <div id="content3"  class="active_list">
+      <div style="display:block;" class="switchover3" id="gzdtcms">
+      </div>
+      <div class="switchover3" style="display:none;" id = "ggcms">
+      </div>
+      <div class="switchover3" style="display:none;" id="hyxxcms">
+      </div>
+    </div>
+      <script type="text/javascript">
+       	 	initCms(54,"#gzdtcms",11,1);
+        </script>
+    <!--   <div class="newsletters">
+        <ul id = "gzdtcms">
+        </ul>
+        <script type="text/javascript">
+       	 	initCms(54,"#gzdtcms",11,1);
+        </script>
+      </div> -->
+    </div>
+
+  </div>
+  <div class="two_plates">
+    <div class="development_situation">
+      <div class="headline_title" style="margin-bottom:0px;">
+        <h2 data-title="统计信息" data-mid="156" >统计信息</h2>
+        <div class="act_title_right page-more-list" data-title="统计信息" data-mid="156" > <span>更多>></span> </div>
+      </div>
+    	<div class="scroll-content-title" id = "scroll-content-title">
+    	</div>
+     	<div class="scroll-content" id = "scroll-content">
+     		<!-- <p style="font-size:16px;">sadfasdfsadfdsaf</p>
+			<marquee direction="up" height="210px;" behavior="scroll" scrollamount="2" scrolldelay="0" loop="-1"  hspace="10" vspace="10">
+			 <p>指整个Marquee对齐方式;</p>
+			 <p> (2)behavior:设置滚动的方式: scroll:表示由一端滚动到另一端,会重复,缺陷是不能无缝滚动。</p>
+			  <p> slide:表示由一段滚动到另一端,不会重复...</p>
+			</marquee> -->
+		</div>
+      
+      
+   
+    </div>
+        <div class="a_plate_right ">
+   
+       <div class="headline_title">
+        <div class="cy_title"><div class="cy_box"><a class="page-more" data-target="/web/Infomation.jsp?mid=11"><img  src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/zfxxgkrl.png"/><span>政府信息公开专栏</span></a></div></div>
+        
+      </div>
+      <p style="padding:7px;"></p>
+      <ul id="zfgkxf">
+        
+      </ul>
+      <div class="useful_telephone">
+	  <!-- http://www.gov.cn/hudong/100dudian/index.htm-->
+      <a href="http://www.gov.cn/xinwen/2018-09/20/content_5323786.htm" target="_blank"><img  src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/specialTopicImage/0001.png" /></a>
+   </div>
+         </div>
+    
+      <div class="hot_top_service">
+<!--       <div class="headline_title">
+        <h2 >热门专题</h2>
+      </div> -->
+      <div id="gzdtxf" class="entrance">
+      	<!--<p ><img  class="page-more" data-target="/web/FeatureClass.view?mid=202" src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/specialTopicImage/wlaqz.png" /></p> 
+	      
+	      
+	      <p ><img  class="page-more" data-target="/web/FeatureClass.view?mid=262" src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/specialTopicImage/kdpjts.jpg" /></p>
+	      <p ><img  class="page-more" data-target="/web/FeatureClass.view?mid=87" src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/specialTopicImage/xxaq.jpg" /></p>
+
+	      <p ><img  class="page-more" data-target="/web/FeatureClass.view?mid=88" src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/specialTopicImage/wgpg.jpg" /></p>
+	      <p ><img  class="page-more" data-target="/web/FeatureClass.view?mid=91" src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/specialTopicImage/zbgg.jpg" /></p> -->
+	   </div>
+    </div>
+	
+
+  </div>
+    <div class="three_plate"> <img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/banner1.jpg" /> </div>
+    <div class="three_plate"> <img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/banner2.jpg" onclick = "this.src='https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/banner29.jpg'"/> </div>
+    <div class="three_plate"> <img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/banner30.gif" /> </div>
+    <div class="three_plate"> <img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/banner300.gif" /> </div>
+    <div class="Four_plates">
+ <!--  <div class="quality_center">
+    <div class="active_tab" id="outer">
+      <ul class="act_title_left" id="tab">
+        <li class="act_active"> <a >质检中心</a> </li>
+        <li> <a >技鉴中心</a> </li>
+      </ul>
+      <div class="act_title_right2 " id="pagemore1"   data-target="/web/InternetLaw.jsp"> 
+      	<span class="page-more-list" data-mid="111" data-title="质检中心" style="display:block;">更多>></span> 
+	    <span class="page-more-list" data-mid="112" data-title="技鉴中心" style="display:none;">更多>></span> 
+	    </div>
+      <div class="clear"></div>
+    </div>
+    <div id="content"  class="active_list">
+      
+      <div class="switchover" style="display:block;" id = "zjzxcms">
+      </div>
+      <div class="switchover" style="display:none;" id="jjzxcms">
+      </div>
+    </div>
+    </div> -->
+      <div class="laws_and_regulations">
+    <div class="active_tab" id="outer2">
+      <ul class="act_title_left" id="tab2">
+      	<li class="act_active page-more-list"  data-title="法规" data-mid="58"> <a >法规</a> </li>
+        <li class="page-more-list"   data-title="法律" data-mid="57"> <a >法律</a> </li>
+        <li class="page-more-list "   data-title="司法解释" data-mid="59"> <a >司法解释</a> </li>
+        <li class="page-more-list "   data-title="行政规章" data-mid="60"> <a >行政规章</a> </li>
+		<li class="page-more-list "   data-title="政策解读" data-mid="537"> <a >政策解读</a> </li>
+      </ul>
+
+      <div class="act_title_right2 disnone"  id = "pagemore2" data-target="/web/LawRule.jsp">
+        <span class="page-more-list" data-mid="58" data-title="法规" style="display:block;">更多>></span> 
+        <span class="page-more-list" data-mid="57" data-title="法律" style="display:block;">更多>></span> 
+	    <span class="page-more-list" data-mid="59" data-title="司法解释" style="display:none;">更多>></span> 
+	    <span class="page-more-list" data-mid="60" data-title="行政规章" style="display:none;">更多>></span>
+		<span class="page-more-list" data-mid="537" data-title="政策解读" style="display:none;">更多>></span>
+	    </div>
+      <div class="clear"></div>
+    </div>
+    <div id="content2"  class="active_list">
+      <div style="display:block;" class="switchover2" id="flfg_fl">
+      </div>
+       <div class="switchover2" style="display:none;" id="flfgcms">
+      </div>
+      <div class="switchover2" style="display:none;" id="sfjscms">
+      </div>
+      <div class="switchover2" style="display:none;" id="xzgzcms">
+      </div>
+	  <div class="switchover2" style="display:none;" id="policy_interpret">
+      </div>
+    </div>
+    </div>
+    <div class="on_line_service">
+      <div class="headline_title">
+        <h2 class="page-more" data-target="/web/InternetLaw.jsp">在线办事</h2>
+        <div class="act_title_right page-more disnone" data-target="/web/InternetLaw.jsp"> <span>更多>></span> </div>
+      </div>
+      <ul>
+      	<li  class="page-more "  data-target="/web/InternetLaw.jsp?mid=626"> <a href="#"><img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/在线办事/信访管理.png" />信访申请</a> </li>        
+        <li  class="page-more no-margin-left"  data-target="/web/InternetLaw.jsp?mid=106"> <a href="#"><img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/在线办事/互联网管理.png" />互联网管理</a> </li>
+        <li  class="page-more "  data-target="/web/InternetLaw.jsp?mid=107"> <a href="#"><img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/在线办事/数据报送.png" />数据报送</a> </li>
+        <li  class="page-more no-margin-left"  data-target="/web/InternetLaw.jsp?mid=108"> <a href="#"><img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/在线办事/号码申请.png" />码号申请</a> </li>
+        <li  class="page-more "  data-target="/web/InternetLaw.jsp?mid=109"> <a href="#"><img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/在线办事/用户投诉.png" />用户申诉</a> </li>
+        <li  class="page-more no-margin-left"  data-target="/web/InternetLaw.jsp?mid=64"> <a href="#"><img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/在线办事/资费信息报送.png" />电信资费</a> </li>
+        <li  class="page-more "  data-target="/web/InternetLaw.jsp?mid=237"> <a href="#"><img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/在线办事/行业职业技能鉴定.png" />经营许可</a> </li>
+        <li  class="page-more no-margin-left" data-target="/web/OnlineMessage.jsp"> <a href="#" ><img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/在线办事/留言专栏.png" />留言专栏</a> </li>
+      </ul>
+    </div>
+    
+  </div>
+  <div class="Five_plates">
+   <div class="quality_center">
+    <div class="active_tab" id="outer">
+      <ul class="act_title_left" id="tab">
+        <li class="act_active page-more-list page-more"  data-target="/web/InternetLaw.jsp?mid=257"> <a href="#">工程质量监督</a> </li>
+        <li class="page-more-list page-more" data-target="/web/InternetLaw.jsp?mid=258"> <a href="#">行业技能鉴定</a> </li>
+        <!-- <li class="page-more-list page-more" data-target="/web/InternetLaw.jsp?mid=259" style="width: 160px;"> <a href="#">广州互联网交换中心</a> </li> -->
+      </ul>
+      <div class="act_title_right2 disnone" > 
+      	<span class="page-more-list" data-target="/web/InternetLaw.jsp?mid=257" style="display:block;">更多>></span> 
+	    <span class="page-more-list" data-target="/web/InternetLaw.jsp?mid=258" style="display:none;">更多>></span> 
+	    <span class="page-more-list" data-target="/web/InternetLaw.jsp?mid=259" style="display:none;">更多>></span> 
+	   </div>
+      <div class="clear"></div>
+    </div>
+    <div id="content"  class="active_list">
+      
+      <div class="switchover" style="display:block;" id = "zjzxcms">
+      </div>
+      <div class="switchover" style="display:none;" id="jjzxcms">
+      </div>
+      <div class="switchover" style="display:none;" id="gzzxcms">
+      </div>
+    </div>
+    </div>
+
+  <!--   <div class="service_hotline">
+      <ul>
+        <li><a >备案咨询
+          020-87626831</a></li>
+        <li><a >信访政务公开
+          020-87305305</a></li>
+        <li><a >电信用户申诉
+          02012300</a></li>
+        <li><a >许可证咨询
+020-87626826</a></li>
+      </ul>
+    </div> -->
+    <div class="panel_bottom">
+     <div class="active_tab active_tab_width" id="outer10">
+      <ul class="act_title_left active_tab_width" id="tab10">
+        <li class="act_active page-more-list" data-mid="158" data-title="服务监督" style="width:117px;"> <a>服务监督</a> </li>
+        <li  class="page-more-list" data-mid="230" data-title="运营企业" style="display:none;"> <a >运营企业</a> </li>
+        <li  class="page-more-list" data-mid="159" data-title="意见收集" style="width:117px;"> <a >意见收集</a> </li>
+        
+      </ul>
+      <div class="act_title_right disnone"  id = "pagemore10"  data-target="/web/InternetLaw.jsp">
+	       <span class="page-more-list" data-mid="158" data-title="政务咨询" style="display:block;">更多>></span> 
+	       <span class="page-more-list" data-mid="230" data-title="运营企业" style="display:none;">更多>></span> 
+	       <span class="page-more-list" data-mid="159" data-title="意见收集" style="display:none;">更多>></span> 
+	       
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div id="content10"  class="active_list">
+      <div style="display:block;" class="switchover10" id="zwzx">
+      </div>
+      <div class="switchover10" style="display:none;" id = "yyqy">
+      </div>
+      <div class="switchover10" style="display:none;" id = "yjsj">
+      </div>
+      
+        <!-- 深圳市通管局图片 -->
+
+    </div>
+    
+  
+      <script type="text/javascript">
+       	 	initCms(54,"#gzdtcms",11,1);
+        </script>
+    </div>
+  </div>
+  
+  <div class="modules_six">
+    <div class="modules_six_left"><a href="http://www.miit.gov.cn/" target="_blank"><img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/gxingbu.jpg" /></a><a href="http://www.gd.gov.cn/" target="_blank"><img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/rmengzf.jpg" /></a></div>
+    <div class="modules_six_right">
+    	<select class="select_dropdown select select_outwebsite"  style="width:130px;">
+    		 <option value="#">各省通信管理局</option>
+             <option value="http://bjca.miit.gov.cn/">北京市通信管理局</option>
+             <option value="http://shca.miit.gov.cn">上海市通信管理局</option>
+             <option value="http://tjca.miit.gov.cn">天津市通信管理局</option>
+             <option value="http://cqca.miit.gov.cn">重庆市通信管理局</option>
+             <option value="http://sxca.miit.gov.cn">山西省通信管理局</option>
+             <option value="http://nmca.miit.gov.cn">内蒙古通信管理局</option>
+             <option value="http://jlca.miit.gov.cn">吉林省通信管理局</option>
+             <option value="http://sdca.miit.gov.cn">山东省通信管理局</option>
+             <option value="http://jsca.miit.gov.cn">江苏省通信管理局</option>
+             <option value="http://fjca.miit.gov.cn">福建省通信管理局</option>
+             <option value="http://jxca.miit.gov.cn">江西省通信管理局</option>
+             <option value="http://gzca.miit.gov.cn">贵州省通信管理局</option>
+             <option value="http://hnca.miit.gov.cn">海南省通信管理局</option>
+             <option value="http://scca.miit.gov.cn">四川省通信管理局</option>
+             <option value="http://ynca.miit.gov.cn">云南省通信管理局</option>
+             <option value="http://gsca.miit.gov.cn">甘肃省通信管理局</option>
+             <option value="http://qhca.miit.gov.cn">青海省通信管理局</option>
+             <option value="http://xjca.miit.gov.cn">新疆通信管理局</option>
+             <option value="http://gxca.miit.gov.cn">广西通信管理局</option>
+             <option value="http://www.nxca.gov.cn">宁夏通信管理局</option>
+             <option value="http://xzca.miit.gov.cn">西藏通信管理局</option>
+             <option value="http://hca.miit.gov.cn">河南省通信管理局</option>
+             <option value="http://lnca.miit.gov.cn">辽宁省通信管理局</option>
+             <option value="http://hubca.miit.gov.cn">湖北省通信管理局</option>
+             <option value="http://shxca.miit.gov.cn">陕西通信管理局</option>
+             <option value="http://hunca.miit.gov.cn">湖南省通信管理局</option>
+             <option value="http://zjca.miit.gov.cn">浙江省通信管理局</option>
+             <option value="http://hljca.miit.gov.cn">黑龙江通信管理局</option>
+             <option value="http://ahca.miit.gov.cn">安徽省通信管理局</option>
+             <option value="http://hbca.miit.gov.cn">河北省通信管理局</option>
+    	</select>
+    	<select class="select_dropdown select select_outwebsite" style="width:85px;" >
+    		 <option value="#">电信企业&nbsp;&nbsp;&nbsp;&nbsp; </option>
+             <option value="http://www.189.cn/gd/">广东电信</option>
+             <option value="http://gd.10086.cn/service/">广东移动</option>
+             <option value="http://www.10010.com/gd/">广东联通</option>
+             <!-- <option value="http://www.cttgd.com/">广东铁通</option> -->
+             <option value="">广东铁塔</option>
+             <!-- <option value="http://www.10010.com/mall-web/busiNotice/content?noticeId=18072546">中国联通</option> -->
+    	</select>
+    	<select class="select_dropdown select select_outwebsite select" style="width:130px;">
+    		 <option value="" >省内通信行业组织</option>
+			  <option value="http://www.gdcia.cn/" >广东省通信行业协会 </option>
+			  <option value="http://www.gdis.cn/">广东省互联网协会</option> 
+			  <option value="http://www.gdtxxh.cn/"> 广东通信学会</option>
+			
+    	</select>
+      	<select class="select_dropdown select select_outwebsite select"  style="width:170px">
+    		 <option value="#">各市通信建设管理办公室</option>
+			  <option value="#">广州市通信建设管理办公室</option>
+			  <option value="http://sztjb.gdca.gov.cn">深圳市通信建设管理办公室</option>
+			  <!-- <option value="http://zhtjb.gdca.gov.cn">珠海市通信建设管理办公室</option>
+			  <option value="http://sttjb.gdca.gov.cn">汕头市通信建设管理办公室</option> -->
+			  <option value="#">珠海市通信建设管理办公室</option>
+			  <option value="#">汕头市通信建设管理办公室</option>
+			  <option value="#">佛山市通信建设管理办公室</option>
+			  <option value="#">韶关市通信建设管理办公室</option>
+			  <option value="#">河源市通信建设管理办公室</option>
+			  <option value="#">梅州市通信建设管理办公室</option>
+			  <option value="http://hztjb.gdca.gov.cn">惠州市通信建设管理办公室</option>
+			  <option value="#">汕尾市通信建设管理办公室</option>
+			  <option value="#">东莞市通信建设管理办公室</option>
+			  <option value="http://zstjb.gdca.gov.cn">中山市通信建设管理办公室</option>
+			  <option value="#">江门市通信建设管理办公室</option>
+			  <option value="#">阳江市通信建设管理办公室</option>
+			  <option value="#">湛江市通信建设管理办公室</option>
+			  <option value="#">茂名市通信建设管理办公室</option>
+			  <option value="#">肇庆市通信建设管理办公室</option>
+			  <option value="#">清远市通信建设管理办公室</option>
+			  <option value="#">潮州市通信建设管理办公室</option>
+			  <option value="#">揭阳市通信建设管理办公室</option>
+			  <option value="#">云浮市通信建设管理办公室</option>
+    	</select>  
+    </div>
+  </div>
+</div>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<style type="text/css">
+.foot_bj{background:url(https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/gxbdibu.png) repeat-x;
+width:100%;
+height:215px;
+min-width:1000px;}</style>
+<body>
+<!-- <div class="new_copyright"> -->
+<div class="foot_bj">
+  <div class="new_copyright_box">
+  <div style="text-align: center;">
+  <span ><img style="width:70px; height:70px; margin-left:20px;" src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/微信二维码.jpg" /></span> 
+  		<a target="_blank" href="http://bszs.conac.cn/sitename?method=show&id=16E0218BE1F351BBE053012819AC1A4A" ><img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/党政机关.png" style="margin-left: 20px;margin-right: 20px;" /> </a>
+		<span  onclick="jiucuo()"><img style="" src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/images/jiucuo.png" /></span>
+		
+
+  </div>
+  
+  <div class="new_copyright_center">
+  
+    <div class="new_copyright_right" style="width: 100%;text-align: center;">
+    <br>
+      <p>
+        版权所有： <a target="_blank" href="#" style="ext-decoration: underline!important;">广东省通信管理局</a> | 
+        	 <a target="_blank" href="#" style="ext-decoration: underline!important;">网站声明</a> | 
+        	 <a target="_blank" href="https://gdca.miit.gov.cn:443/gdcmsnet/gdcms/content/staticView?path=/79/1649.html&id=628" style="ext-decoration: underline!important;">联系我们</a> 
+        	 <a target="_blank" href="http://beian.miit.gov.cn">粤ICP备05000001号</a>
+        	 <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010402001833">
+        	 <img style="width:20px; height:20px; margin-left:10px;" src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/images/policeBadge.png" />
+        	 粤公网安备 44010402001833号</a>
+      </p>
+      <p>网站标识码bm07190001 地址： 广州市执信南路3号广东通建大楼     邮编： 510080</p>
+      
+    </div>
+  </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+	function jiucuo(){
+		var url = window.top.location.href;
+		
+		window.open("http://121.43.68.40/exposure/jiucuo.html?site_code=bm07190001&url=" + encodeURIComponent(url));
+}
+</script>
+</html>
+<script type="text/javascript" src ="https://gdca.miit.gov.cn:443/framenet/assets/js/plugins/scroll/myScroll.js" ></script>
+
+
+<script type="text/javascript">
+	
+	initCms(101,"#ggcms",11);
+	initCms(56,"#hyxxcms",11);
+	initCms(125,"#zjzxcms",11);
+	initCms(128,"#jjzxcms",11);
+	
+	initCms(458,"#gzzxcms",11);
+	
+	initCms(57,"#flfgcms",9);
+	initCms(58,"#flfg_fl",9);
+	
+	initCms(59,"#sfjscms",9);
+	initCms(60,"#xzgzcms",9);
+	initCms(537,"#policy_interpret",9);
+	
+	initCms(158,"#zwzx",5,1);
+	initCms(159,"#yjsj",5,1);
+	initCms(230,"#yyqy",5,1);
+	upDevolope();
+	initDevolope(157,"#scroll-content",2);
+	
+	$(".select_outwebsite").on("change",function(){
+		if(this.value)window.open(this.value);
+	})
+</script>
+<script>
+	$(function(){
+		
+		window.onload = function()
+		{
+			var $tab_li = $('#tab li');
+			var $tabul = $('#content .switchover');
+			var $pagemore1 = $("#pagemore1 span");
+			
+			var $tab_li_entrance = $('#tab2 li');
+			var $tabul_entrance = $('#content2 .switchover2');	
+			var $pagemore2 = $("#pagemore2 span");
+			
+			
+			var $tab_li_tab3 = $('#tab3 li');
+			var $tabul_tab3 = $('#content3 .switchover3');	
+			var $pagemore3 = $("#pagemore3 span");
+			
+			var $tab_li_tab10 = $('#tab10 li');
+			var $tabul_tab10 = $('#content10 .switchover10');	
+			var $pagemore10 = $("#pagemore10 span");
+			
+			
+			$tab_li.mouseover(function(){
+				var $this = $(this);
+				var $t = $this.index();
+				$tab_li.removeClass('act_active');
+				$this.addClass('act_active');
+				$tabul.css('display','none');
+				$tabul.eq($t).css('display','block');
+				
+				$pagemore1.css('display','none');
+				$pagemore1.eq($t).css('display','block');
+			})
+			$tab_li_entrance.mouseover(function(){
+				var $this_entrance = $(this);
+				var $t_entrance = $this_entrance.index();
+				$tab_li_entrance.removeClass('act_active');
+				$this_entrance.addClass('act_active');
+				$tabul_entrance.css('display','none');
+				$tabul_entrance.eq($t_entrance).css('display','block');
+				
+				$pagemore2.css('display','none');
+				$pagemore2.eq($t_entrance).css('display','block');
+				
+			})
+			
+			$tab_li_tab3.mouseover(function(){
+				var $this_entrance = $(this);
+				
+				var $t_entrance = $this_entrance.index();
+				$tab_li_tab3.removeClass('act_active');
+				$this_entrance.addClass('act_active');
+				$tabul_tab3.css('display','none');
+				$tabul_tab3.eq($t_entrance).css('display','block');
+				
+				
+				$pagemore3.css('display','none');
+				$pagemore3.eq($t_entrance).css('display','block');
+			})
+			
+			$tab_li_tab10.mouseover(function(){
+				var $this_entrance = $(this);
+				
+				var $t_entrance = $this_entrance.index();
+				$tab_li_tab10.removeClass('act_active');
+				$this_entrance.addClass('act_active');
+				$tabul_tab10.css('display','none');
+				$tabul_tab10.eq($t_entrance).css('display','block');
+				
+				
+				$pagemore10.css('display','none');
+				$pagemore10.eq($t_entrance).css('display','block');
+			})
+		}
+	});  
+	
+	//绑定首页更多点击跳转事件
+	//在需要调整的dom对象上配置 data-type="more"  data-mid=实际要跳转模块的id或者code就可以实现跳转
+	$(".index-page-content").on("click",".page-more",function(){
+		
+		window.location.href = basepath +$(this).data("target");
+		/* $.get(basepath+"/index/getToParentsMenus",{id:$(this).data("mid")},function(data){
+			window.location.href = basepath +"/index?id="+data.id+"&code="+data.code+"&mid="+data.mid;
+		}); */
+	});
+	
+
+
+	
+</script>
+
+<div class="qp_code advert_div" id="float-pic1" style="display:none;"><div class="advert_top" ><a class="advert_close" ><img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/advert/close_1.png"></a><a><img id="pic1" class="advert_pic"></a></div></div>
+<div class="qp_code_left advert_div" id="float-pic2" style="display:none;"><div class="advert_top" ><a class="advert_close" ><img src="https://gdca.miit.gov.cn:443/framenet/assets/webIndex/advert/close_1.png"></a><a><img id="pic2" class="advert_pic" ></a></div></div>
+<script type="text/javascript">
+	$(".advert_close").on("click",function(){
+		$(this).parents(".advert_div").hide();
+	})
+</script>
+</body>
+</html>

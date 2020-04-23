@@ -1,0 +1,1415 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>腾讯软件中心-海量软件高速下载</title>
+<meta name="baidu-site-verification" content="jYeTDF4VnI" />
+<meta name="keywords" content="下载,免费软件,软件下载,免费下载,腾讯软件中心,腾讯电脑管家,手机软件中心,电脑软件中心" />
+<meta name="description" content="腾讯软件中心提拱海量免费软件安全下载，全部软件都已经过安全杀毒检测。手机、电脑客户端版应用软件大全，最新最快速的软件下载中心。" />
+
+<link rel="dns-prefetch" href="//pc1.gtimg.com" />
+<link rel="dns-prefetch" href="//pc2.gtimg.com" />
+<link rel="dns-prefetch" href="//pc3.gtimg.com" />
+<link rel="dns-prefetch" href="//pc4.gtimg.com" />
+<link rel="icon" href="//pc1.gtimg.com/finance/softweb/fav/favicon_32x32.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="//pc1.gtimg.com/finance/softweb/fav/favicon_32x32.ico" type="image/x-icon" />
+<meta name="baidu-site-verification" content="xyQY6UMyLZ" />
+<meta name="sogou_site_verification" content="2xq3xkmmpm"/>
+<link rel="stylesheet" type="text/css" href="//pc1.gtimg.com/finance/softweb/dist/css/style-69b496d3c9.css" />
+<script type="text/javascript">
+function imgError(that) {
+that.onerror=null;
+that.src='//pc3.gtimg.com/softmgr/logo/v3_default.png';
+return true;
+}
+window.hideList = [6702,6726,12336,13443,18307,18553,18627,18628,21939,22027,22645,23182,90008,91283,91528,91530,91576,91625,92044,92048,92049,92051,92133,92205,92206,92207,92208,92245,92394,92427,92552,92553,92695,92780,92971,92980,93077,150803,160808,161224,161350,161707,161973,162104,162445,162471,162613,162758,162803,162859,162943,162961,162963,163678,164080,164195,164469,164891,181155,360491,360494,18045,161667,162375,180384,150336,181019,22115,180952,150177,150698,10223,6703,181013];
+window.channelPkg = {"1841":{"SoftID":"1841","Url":"https:\/\/sm.myapp.com\/original\/channelpkg\/qqpcmgr_v13.5.20525.234_1349_0.exe","FileSize":"78588496"},"1810":{"SoftID":"1810","Url":"https:\/\/sm.myapp.com\/original\/channelpkg\/qqpcmgr_v12.15.19676.234_1324_0.exe","FileSize":"78658128"}};
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "//hm.baidu.com/hm.js?c4ea5c1d6d843b14dd8ec8dfb736c36d";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script type="text/javascript">
+function isMacintosh() {
+var isMac = navigator.platform.indexOf('Mac') > -1;
+if(isMac){
+var k = '_fromold';
+if(document.cookie.indexOf(k)>-1){
+return false;
+}
+if(location.href.indexOf(k)>-1){
+document.cookie = k+'=1';
+return false;
+}
+}
+return isMac;
+}
+
+var isMac = isMacintosh();
+if (isMac) {
+location.href = 'http://pc.qq.com/archive/mac.html';
+}
+</script>
+<style type="text/css">
+.banmgr-box{margin:0 auto; background: url('//pc2.gtimg.com/softmgr/picture/v3/subject/47937044f464ac59003dae1436250c13.png') no-repeat center 0; background-color: #4b68f9;}
+.banmgr-box .banmgr-content{height: 315px; margin-top: 57px;}
+.banmgr-box .finfo{margin-left: 30px; color: #fff; cursor: default;}
+.banmgr-box .finfo .title{font-size: 41px; line-height: 60px; margin-top: 25px;}
+.banmgr-box .finfo .desc{font-size: 23px; line-height: 36px;}
+.banmgr-box .finfo .btnbox{margin-top: 45px;}
+.banmgr-box .finfo .btn{display: block; width: 153px; height: 47px; line-height: 48px; background-color: #0bd055; color: #fff; text-align: center; border-radius: 2px; font-size: 22px;}
+.banmgr-box .finfo .btn:hover{background-color: #10db5c;}
+.banmgr-box .finfo .btn:active{background-color: #0ec452;}
+.banmgr-box .finfo .notice{font-size: 14px; margin-top: 24px;}
+.banpaid-box{margin:0 auto; background: url('//pc2.gtimg.com/softmgr/picture/v3/subject/30d4a1c160a9fdb10748f112fcff3a9a.png') no-repeat center 0; background-color: #fe8f46;}
+.tbr-bigbox{position: relative; width: 100%; height: 429px; }
+.tbr-bigbox .cslide-box{overflow: hidden; width: 100%; height: 429px; position: absolute; left: 0;}
+.tbr-bigbox, .cslide-box .slide-item{overflow: hidden; width: 100%;}
+.cslide-box .slide-item{width: 100%; height: 429px; float: left; }
+</style>
+</head>
+<body>
+
+
+
+<div class="header bottom-shadow">
+<div class="container_12 clearfix">
+<div class="grid_12">
+<a href="/" class="logo">腾讯软件中心-海量软件，轻松下载</a>
+<div class="nav-wrap">
+<ul class="nav">
+<li class="nav-link">
+<a class="nav-a" href="/">首页</a>
+<span class="inline"></span>
+</li>
+<li class="nav-link">
+<a class="nav-a multi" href="/category/c0.html">分类<i class="sprite sprite-nav"></i></a>
+<span class="inline"></span>
+<div class="nav-cat-wrapper">
+<ul class="nav-cat-list">
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c0.html" data-catid="0"><i class="sprite-cat sprite-cat-all"></i>全部</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c99.html" data-catid="99"><i class="sprite-cat sprite-cat-tx"></i>腾讯专区</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c16.html" data-catid="16"><i class="sprite-cat sprite-cat-game"></i>游戏</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c5.html" data-catid="5"><i class="sprite-cat sprite-cat-video"></i>视频</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c3.html" data-catid="3"><i class="sprite-cat sprite-cat-browser"></i>浏览器</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c1.html" data-catid="1"><i class="sprite-cat sprite-cat-chat"></i>聊天</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c2.html" data-catid="2"><i class="sprite-cat sprite-cat-input"></i>输入法</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c4.html" data-catid="4"><i class="sprite-cat sprite-cat-download"></i>下载</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c6.html" data-catid="6"><i class="sprite-cat sprite-cat-music"></i>音乐</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c7.html" data-catid="7"><i class="sprite-cat sprite-cat-image"></i>图片</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c8.html" data-catid="8"><i class="sprite-cat sprite-cat-safe"></i>安全</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c9.html" data-catid="9"><i class="sprite-cat sprite-cat-zip"></i>解压刻录</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c10.html" data-catid="10"><i class="sprite-cat sprite-cat-system"></i>系统</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c11.html" data-catid="11"><i class="sprite-cat sprite-cat-driver"></i>驱动</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c12.html" data-catid="12"><i class="sprite-cat sprite-cat-office"></i>办公</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c13.html" data-catid="13"><i class="sprite-cat sprite-cat-code"></i>编程</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c14.html" data-catid="14"><i class="sprite-cat sprite-cat-stock"></i>股票网银</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c15.html" data-catid="15"><i class="sprite-cat sprite-cat-film"></i>剪辑</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c17.html" data-catid="17"><i class="sprite-cat sprite-cat-network"></i>网络</a></li>
+<li class="nav-cat-item"><a class="nav-cat-a" href="/category/c18.html" data-catid="18"><i class="sprite-cat sprite-cat-desktop"></i>桌面</a></li>
+</ul>
+</div>
+</li>
+<li class="nav-link">
+<a target="_blank" class="nav-a" href="/paidsoft.html" data-hottag="paidsoft.tab">软件购买</a>
+<span class="inline"></span>
+</li>
+</ul>
+</div>
+<form class="search" id="J_search_form">
+<label for="keyword">
+<input type="text" class="input-search" id="J_search_input" name="keyword" placeholder="在这里输入你要找的软件" maxlength="20" size="20" autocomplete="off" />
+<button class="btn-search" type="submit" id="J_search_btn"></button>
+</label>
+<ul class="search-suggest" id="J_search_keywords">
+</ul>
+</form>
+<div class="back" id="J_old_version">
+<a href="http://pc.qq.com/archive/index.html" target="_blank" class="btn-back" rel="nofollow">返回旧版</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="tbr-bigbox">
+<div class="cslide-box" id="J-big-banner-box">
+<div class="banmgr-box slide-item" id="J_banmgrbox">
+<div class="container_12 banmgr-content clearfix">
+<div class="fl fimg"><img src="//pc2.gtimg.com/softmgr/picture/v3/subject/a2d57e34169d61e0f95df0c39c4705e8.png"></div>
+<div class="fl finfo">
+<div class="title">腾讯软件管理官方版</div>
+<div class="desc">装机必备软件，免费下载</div>
+<div class="btnbox">
+<a class="btn" data-hottag="softweb.topmgr.download" target="_blank" href="//dlied6.qq.com/invc/xfspeed/qqpcmgr/download/QQPCDownload1671.exe">立即体验</a>
+</div>
+<div class="notice">下载腾讯电脑管家及软件中心</div>
+</div>
+</div>
+</div>
+</div>
+<ul class="tbr-bigbox-flag" id="J-big-banner-flag"></ul>
+</div>
+<div class="banner-wrap">
+<ul class="banner-list container_12 clearfix">
+<li class="banner-item grid_3 bottom-shadow">
+<div class="banner-info">
+<div class="banner-img">
+<a href="/detail/2/detail_2.html" title="QQ" target="_blank" data-hottag="detail.index.toubu.2"><img src="//pc3.gtimg.com/softmgr/picture/web/banner/ac4f91ae41cda43113f855d70743e6a3.png" alt="QQ" /></a>
+</div>
+<div class="banner-txt">
+<h2 class="banner-name"><a href="/detail/2/detail_2.html" title="QQ">QQ</a><span class="banner-time">2020-04-15</span></h2>
+<p class="banner-desc">免费的即时通讯平台，带来更多沟通乐趣</p>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_2@.exe" target="_blank" class="btn-download J_qq_download" data-hottag="download.index.toubu.2" data-id="2">
+<i class="sprite sprite-download"></i><span>高速下载</span></a>
+</div>
+</div>
+</li>
+<li class="banner-item grid_3 bottom-shadow">
+<div class="banner-info">
+<div class="banner-img">
+<a href="/detail/8/detail_23988.html" title="腾讯网游加速器" target="_blank" data-hottag="detail.index.toubu.23988"><img src="//pc3.gtimg.com/softmgr/picture/web/banner/5f62da690dfce0f2697dc1d5e02e9e86.png" alt="腾讯网游加速器" /></a>
+</div>
+<div class="banner-txt">
+<h2 class="banner-name"><a href="/detail/8/detail_23988.html" title="腾讯网游加速器">腾讯网游加速器</a><span class="banner-time">2020-04-02</span></h2>
+<p class="banner-desc">海外游戏免费网络加速</p>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_23988@.exe" target="_blank" class="btn-download J_qq_download" data-hottag="download.index.toubu.23988" data-id="23988">
+<i class="sprite sprite-download"></i><span>高速下载</span></a>
+</div>
+</div>
+</li>
+<li class="banner-item grid_3 bottom-shadow">
+<div class="banner-info">
+<div class="banner-img">
+<a href="/detail/12/detail_12.html" title="腾讯视频" target="_blank" data-hottag="detail.index.toubu.12"><img src="//pc3.gtimg.com/softmgr/picture/web/banner/40312784b351c6925ed6f0295cc29a9f.jpg" alt="腾讯视频" /></a>
+</div>
+<div class="banner-txt">
+<h2 class="banner-name"><a href="/detail/12/detail_12.html" title="腾讯视频">腾讯视频</a><span class="banner-time">2020-04-16</span></h2>
+<p class="banner-desc">在线观看直播和点播节目，视界无限精彩</p>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_12@.exe" target="_blank" class="btn-download J_qq_download" data-hottag="download.index.toubu.12" data-id="12">
+<i class="sprite sprite-download"></i><span>高速下载</span></a>
+</div>
+</div>
+</li>
+<li class="banner-item grid_3 bottom-shadow">
+<div class="banner-info">
+<div class="banner-img">
+<a href="/detail/1/detail_1841.html" title="电脑管家" target="_blank" data-hottag="detail.index.toubu.1841"><img src="//pc3.gtimg.com/softmgr/picture/web/banner/69518df1f17d472b6f399c88aa197246.png" alt="电脑管家" /></a>
+</div>
+<div class="banner-txt">
+<h2 class="banner-name"><a href="/detail/1/detail_1841.html" title="电脑管家">电脑管家</a><span class="banner-time">2020-02-21</span></h2>
+<p class="banner-desc">智能、贴心的电脑管理工具，全面解决安全、系统、软件难题</p>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_1841@.exe" target="_blank" class="btn-download J_qq_download" data-hottag="download.index.toubu.1841" data-id="1841">
+<i class="sprite sprite-download"></i><span>高速下载</span></a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="content-wrap">
+<div class="container_12 clearfix">
+<div class="content grid_9">
+<div class="recommend">
+<h1 class="title-header"><i class="title-ico recommend-ico"></i>小编推荐</h1>
+<div class="recommend-wrap">
+<ul class="recommend-list clearfix auto-height">
+<li class="recommend-item bottom-shadow">
+<a href="/detail/11/detail_351.html" title="QQ浏览器" target="_blank" class="recommend-info" data-hottag="detail.index.xiaobian.351">
+<div class="recommend-logo">
+<img onerror="imgError(this);" src="//pc3.gtimg.com/softmgr/logo/48/351_48_1390531994.png" />
+</div>
+<div class="recommend-txt">
+<h2 class="recommend-name">QQ浏览器<span class="recommend-time">2020-03-25</span></h2>
+<p class="recommend-desc">更快，更稳定，更好用的浏览器</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_351@.exe" target="_blank" class="btn-download-recom J_qq_download" data-hottag="download.index.xiaobian.351" data-id="351"><i class="sprite sprite-download"></i><span>高速下载</span></a>
+</li>
+<li class="recommend-item bottom-shadow">
+<a href="/detail/13/detail_8033.html" title="QQ游戏" target="_blank" class="recommend-info" data-hottag="detail.index.xiaobian.8033">
+<div class="recommend-logo">
+<img onerror="imgError(this);" src="//pc3.gtimg.com/softmgr/logo/48/8033_48_1477983163.png" />
+</div>
+<div class="recommend-txt">
+<h2 class="recommend-name">QQ游戏<span class="recommend-time">2020-03-31</span></h2>
+<p class="recommend-desc">全球最大休闲游戏平台，上亿网民陪您玩游戏</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_8033@.exe" target="_blank" class="btn-download-recom J_qq_download" data-hottag="download.index.xiaobian.8033" data-id="8033"><i class="sprite sprite-download"></i><span>高速下载</span></a>
+</li>
+<li class="recommend-item bottom-shadow">
+<a href="/detail/8/detail_11488.html" title="微信电脑版" target="_blank" class="recommend-info" data-hottag="detail.index.xiaobian.11488">
+<div class="recommend-logo">
+<img onerror="imgError(this);" src="//pc3.gtimg.com/softmgr/logo/48/11488_48_1421390511.png" />
+</div>
+<div class="recommend-txt">
+<h2 class="recommend-name">微信电脑版<span class="recommend-time">2020-04-20</span></h2>
+<p class="recommend-desc">微信，是一个生活方式</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_11488@.exe" target="_blank" class="btn-download-recom J_qq_download" data-hottag="download.index.xiaobian.11488" data-id="11488"><i class="sprite sprite-download"></i><span>高速下载</span></a>
+</li>
+<li class="recommend-item bottom-shadow">
+<a href="/detail/14/detail_22554.html" title="企业微信 - 智慧办公软件" target="_blank" class="recommend-info" data-hottag="detail.index.xiaobian.22554">
+<div class="recommend-logo">
+<img onerror="imgError(this);" src="//pc3.gtimg.com/softmgr/logo/48/22554_48_1534129265.png" />
+</div>
+<div class="recommend-txt">
+<h2 class="recommend-name">企业微信 - 智慧办公软件<span class="recommend-time">2020-04-15</span></h2>
+<p class="recommend-desc">让每个企业都有自己的微信</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_22554@.exe" target="_blank" class="btn-download-recom J_qq_download" data-hottag="download.index.xiaobian.22554" data-id="22554"><i class="sprite sprite-download"></i><span>高速下载</span></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sidebar grid_3">
+<div class="top">
+<h1 class="title-header"><i class="title-ico top-ico"></i>榜单排行</h1>
+<div class="top-wrap">
+<h2 class="title-header top-header sprite sprite-bg1"><i class="title-ico top-download-ico"></i>下载总榜</h2>
+<ul class="top-list bottom-shadow top-list-small">
+<li class="top-item top1">
+<a href="/detail/2/detail_2.html" title="QQ" target="_blank" class="top-link" data-hottag="detail.index.softrank.2">
+<div class="top-index">
+<i>1</i>
+</div>
+<div class="top-img">
+<img src="//pc3.gtimg.com/softmgr/logo/48/2_48_1482283025.png" onerror="imgError(this);" />
+</div>
+<div class="top-name">QQ</div>
+<div class="top-num">970&nbsp;万下载</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_2@.exe" target="_blank" class="btn-download-top J_qq_download" data-hottag="download.index.softrank.2" data-id="2">高速下载</a>
+</li>
+<li class="top-item top2">
+<a href="/detail/12/detail_12.html" title="腾讯视频" target="_blank" class="top-link" data-hottag="detail.index.softrank.12">
+<div class="top-index">
+<i>2</i>
+</div>
+<div class="top-img">
+<img src="//pc3.gtimg.com/softmgr/logo/48/12_48_1481853731.png" onerror="imgError(this);" />
+</div>
+<div class="top-name">腾讯视频</div>
+<div class="top-num">536&nbsp;万下载</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_12@.exe" target="_blank" class="btn-download-top J_qq_download" data-hottag="download.index.softrank.12" data-id="12">高速下载</a>
+</li>
+<li class="top-item top3">
+<a href="/detail/8/detail_11488.html" title="微信电脑版" target="_blank" class="top-link" data-hottag="detail.index.softrank.11488">
+<div class="top-index">
+<i>3</i>
+</div>
+<div class="top-img">
+<img src="//pc3.gtimg.com/softmgr/logo/48/11488_48_1421390511.png" onerror="imgError(this);" />
+</div>
+<div class="top-name">微信电脑版</div>
+<div class="top-num">437&nbsp;万下载</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_11488@.exe" target="_blank" class="btn-download-top J_qq_download" data-hottag="download.index.softrank.11488" data-id="11488">高速下载</a>
+</li>
+<li class="top-item top4 top-item-small">
+<a href="/detail/10/detail_10.html" title="QQ音乐" target="_blank" class="top-link" data-hottag="detail.index.softrank.10">
+<div class="top-index">
+<i>4</i>
+</div>
+<div class="top-name">QQ音乐</div>
+<div class="top-num">434&nbsp;万下载</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_10@.exe" target="_blank" class="btn-download-top J_qq_download" data-hottag="download.index.softrank.10" data-id="10">高速下载</a>
+</li>
+<li class="top-item top5 top-item-small">
+<a href="/detail/11/detail_351.html" title="QQ浏览器" target="_blank" class="top-link" data-hottag="detail.index.softrank.351">
+<div class="top-index">
+<i>5</i>
+</div>
+<div class="top-name">QQ浏览器</div>
+<div class="top-num">362&nbsp;万下载</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_351@.exe" target="_blank" class="btn-download-top J_qq_download" data-hottag="download.index.softrank.351" data-id="351">高速下载</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container_12 clearfix">
+<div class="content grid_9">
+<div class="recommend recommend-webgame">
+<h1 class="title-header">
+<a class="tencent-more" target="_blank" href="/game/" data-hottag="yeyou.more">前往游戏中心&nbsp;></a>
+<i class="title-ico hotwebgame-ico"></i>热门页游
+</h1>
+<div class="recommend-wrap">
+<ul class="recommend-list clearfix auto-height">
+<li class="recommend-item bottom-shadow">
+<a href="http://qqgame.qq.com/webappframe/?appid=11118&ifid=17&ipid=2" title="魔刹（QQ游戏版）" target="_blank" class="recommend-info" data-hottag="yeyou.detail.26267">
+<div class="recommend-logo">
+<img onerror="imgError(this);" src="//pc3.gtimg.com/softmgr/logo/48/26267_48_1583812575.png" />
+</div>
+<div class="recommend-txt">
+<h2 class="recommend-name">魔刹（QQ游戏版）<span class="recommend-time">2020-03-10</span></h2>
+<p class="recommend-desc recommend-play" title="魔刹（QQ游戏版）">开始游戏&nbsp;&gt;</p>
+<p class="recommend-desc" title="VIP上线免费送，在线回收送元宝">VIP上线免费送，在线回收送元宝</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_26267@.exe" target="_blank" class="btn-download-recom" data-hottag="yeyou.download.26267"><i class="sprite sprite-download"></i><span>高速下载</span></a>
+</li>
+<li class="recommend-item bottom-shadow">
+<a href="http://qqgame.qq.com/webappframe/?appid=11069&ifid=17&ipid=2" title="神戒（QQ游戏版）" target="_blank" class="recommend-info" data-hottag="yeyou.detail.26179">
+<div class="recommend-logo">
+<img onerror="imgError(this);" src="//pc3.gtimg.com/softmgr/logo/48/26179_48_1577329014.png" />
+</div>
+<div class="recommend-txt">
+<h2 class="recommend-name">神戒（QQ游戏版）<span class="recommend-time">2019-12-26</span></h2>
+<p class="recommend-desc recommend-play" title="神戒（QQ游戏版）">开始游戏&nbsp;&gt;</p>
+<p class="recommend-desc" title="打Boss掉红包 顶V免费送">打Boss掉红包 顶V免费送</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_26179@.exe" target="_blank" class="btn-download-recom" data-hottag="yeyou.download.26179"><i class="sprite sprite-download"></i><span>高速下载</span></a>
+</li>
+<li class="recommend-item bottom-shadow">
+<a href="http://qqgame.qq.com/webappframe/?appid=10190&ifid=17&ipid=2" title="火影忍者ONLINE（QQ游戏版）" target="_blank" class="recommend-info" data-hottag="yeyou.detail.22832">
+<div class="recommend-logo">
+<img onerror="imgError(this);" src="//pc3.gtimg.com/softmgr/logo/48/22832_48_1576222708.png" />
+</div>
+<div class="recommend-txt">
+<h2 class="recommend-name">火影忍者ONLINE（QQ游戏版）<span class="recommend-time">2019-12-13</span></h2>
+<p class="recommend-desc recommend-play" title="火影忍者ONLINE（QQ游戏版）">开始游戏&nbsp;&gt;</p>
+<p class="recommend-desc" title="还原真实忍者世界，创造极致战斗体验">还原真实忍者世界，创造极致战斗体验</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_22832@.exe" target="_blank" class="btn-download-recom" data-hottag="yeyou.download.22832"><i class="sprite sprite-download"></i><span>高速下载</span></a>
+</li>
+<li class="recommend-item bottom-shadow">
+<a href="http://qqgame.qq.com/webappframe/?appid=10995&ifid=17&ipid=2" title="猛将天下（QQ游戏版）" target="_blank" class="recommend-info" data-hottag="yeyou.detail.25324">
+<div class="recommend-logo">
+<img onerror="imgError(this);" src="//pc3.gtimg.com/softmgr/logo/48/25324_48_1576655957.png" />
+</div>
+<div class="recommend-txt">
+<h2 class="recommend-name">猛将天下（QQ游戏版）<span class="recommend-time">2019-12-18</span></h2>
+<p class="recommend-desc recommend-play" title="猛将天下（QQ游戏版）">开始游戏&nbsp;&gt;</p>
+<p class="recommend-desc" title="2019良心RPG页游，高端品质让你爽翻天">2019良心RPG页游，高端品质让你爽翻天</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_25324@.exe" target="_blank" class="btn-download-recom" data-hottag="yeyou.download.25324"><i class="sprite sprite-download"></i><span>高速下载</span></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sidebar grid_3">
+<div class="top webgamerank-box">
+<h1 class="title-header gamedown-header"><i class="title-ico top-ico"></i>榜单排行</h1>
+<div class="top-wrap">
+<h2 class="title-header gamedown-header2"><i class="title-ico gamedown-download-ico hotwebgame-download-ico"></i>人气页游榜</h2>
+<ul class="top-list bottom-shadow top-list-small webgamerank-list">
+<li class="top-item top1 top-item-small">
+<a href="http://qqgame.qq.com/webappframe/?appid=10057&ifid=17&ipid=2" title="寻侠（QQ游戏版）" target="_blank" class="top-link" data-hottag="yeyou.detail.26163">
+<div class="top-index">
+<i>1</i>
+</div>
+<div class="top-name">寻侠（QQ游戏版）</div>
+<div class="top-num">6.3万人在玩</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_26163@.exe" target="_blank" class="btn-download-top" data-hottag="yeyou.download.26163">高速下载</a>
+</li>
+<li class="top-item top2 top-item-small">
+<a href="http://qqgame.qq.com/webappframe/?appid=10856&ifid=17&ipid=2" title="葫芦娃（QQ游戏版）" target="_blank" class="top-link" data-hottag="yeyou.detail.26158">
+<div class="top-index">
+<i>2</i>
+</div>
+<div class="top-name">葫芦娃（QQ游戏版）</div>
+<div class="top-num">5.1万人在玩</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_26158@.exe" target="_blank" class="btn-download-top" data-hottag="yeyou.download.26158">高速下载</a>
+</li>
+<li class="top-item top3 top-item-small">
+<a href="http://qqgame.qq.com/webappframe/?appid=11034&ifid=17&ipid=2" title="热血战歌（QQ游戏版）" target="_blank" class="top-link" data-hottag="yeyou.detail.26178">
+<div class="top-index">
+<i>3</i>
+</div>
+<div class="top-name">热血战歌（QQ游戏版）</div>
+<div class="top-num">4.7万人在玩</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_26178@.exe" target="_blank" class="btn-download-top" data-hottag="yeyou.download.26178">高速下载</a>
+</li>
+<li class="top-item top4 top-item-small">
+<a href="http://qqgame.qq.com/webappframe/?appid=10874&ifid=17&ipid=2" title="三国之志2（QQ游戏版）" target="_blank" class="top-link" data-hottag="yeyou.detail.26156">
+<div class="top-index">
+<i>4</i>
+</div>
+<div class="top-name">三国之志2（QQ游戏版）</div>
+<div class="top-num">4.4万在玩</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_26156@.exe" target="_blank" class="btn-download-top" data-hottag="yeyou.download.26156">高速下载</a>
+</li>
+<li class="top-item top5 top-item-small">
+<a href="http://qqgame.qq.com/webappframe/?appid=10469&ifid=17&ipid=2" title="完美漂移（QQ游戏版）" target="_blank" class="top-link" data-hottag="yeyou.detail.26155">
+<div class="top-index">
+<i>5</i>
+</div>
+<div class="top-name">完美漂移（QQ游戏版）</div>
+<div class="top-num">3.9万人在玩</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_26155@.exe" target="_blank" class="btn-download-top" data-hottag="yeyou.download.26155">高速下载</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="container_12 clearfix">
+<div class="content grid_9">
+<div class="tencent">
+<h1 class="title-header"><a class="tencent-more" target="_blank" href="/category/c99.html" data-hottag="index.tencent.more">更多></a><i class="title-ico tencent-ico"></i>腾讯专区</h1>
+<div class="tencent-wrap">
+<ul class="tencent-list clearfix">
+<li class="tencent-item bottom-shadow">
+<a href="/detail/12/detail_12.html" title="腾讯视频" target="_blank" class="tencent-info" data-hottag="detail.index.tencent.12">
+<div class="tencent-logo">
+<img onerror="imgError(this);" class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/12_48_1481853731.png" />
+</div>
+<div class="tencent-txt">
+<h2 class="tencent-name ellipsis">腾讯视频</h2>
+<p class="tencent-time">2020-04-16</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_12@.exe" target="_blank" class="btn-download-tencent J_qq_download" data-hottag="download.index.tencent.12" data-id="12">高速下载</a>
+</li>
+<li class="tencent-item bottom-shadow">
+<a href="/detail/14/detail_22554.html" title="企业微信" target="_blank" class="tencent-info" data-hottag="detail.index.tencent.22554">
+<div class="tencent-logo">
+<img onerror="imgError(this);" class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/22554_48_1534129265.png" />
+</div>
+<div class="tencent-txt">
+<h2 class="tencent-name ellipsis">企业微信</h2>
+<p class="tencent-time">2020-04-15</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_22554@.exe" target="_blank" class="btn-download-tencent J_qq_download" data-hottag="download.index.tencent.22554" data-id="22554">高速下载</a>
+</li>
+<li class="tencent-item bottom-shadow">
+<a href="/detail/1/detail_1841.html" title="电脑管家" target="_blank" class="tencent-info" data-hottag="detail.index.tencent.1841">
+<div class="tencent-logo">
+<img onerror="imgError(this);" class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/1841_48_1470904061.png" />
+</div>
+<div class="tencent-txt">
+<h2 class="tencent-name ellipsis">电脑管家</h2>
+<p class="tencent-time">2020-02-21</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_1841@.exe" target="_blank" class="btn-download-tencent J_qq_download" data-hottag="download.index.tencent.1841" data-id="1841">高速下载</a>
+</li>
+<li class="tencent-item bottom-shadow">
+<a href="/detail/11/detail_351.html" title="QQ浏览器" target="_blank" class="tencent-info" data-hottag="detail.index.tencent.351">
+<div class="tencent-logo">
+<img onerror="imgError(this);" class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/351_48_1390531994.png" />
+</div>
+<div class="tencent-txt">
+<h2 class="tencent-name ellipsis">QQ浏览器</h2>
+<p class="tencent-time">2020-03-25</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_351@.exe" target="_blank" class="btn-download-tencent J_qq_download" data-hottag="download.index.tencent.351" data-id="351">高速下载</a>
+</li>
+<li class="tencent-item bottom-shadow">
+<a href="/detail/18/detail_23258.html" title="TIM" target="_blank" class="tencent-info" data-hottag="detail.index.tencent.23258">
+<div class="tencent-logo">
+<img onerror="imgError(this);" class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/23258_48_1585706547.png" />
+</div>
+<div class="tencent-txt">
+<h2 class="tencent-name ellipsis">TIM</h2>
+<p class="tencent-time">2020-03-31</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_23258@.exe" target="_blank" class="btn-download-tencent J_qq_download" data-hottag="download.index.tencent.23258" data-id="23258">高速下载</a>
+</li>
+<li class="tencent-item bottom-shadow">
+<a href="/detail/15/detail_22095.html" title="腾讯手游助手" target="_blank" class="tencent-info" data-hottag="detail.index.tencent.22095">
+<div class="tencent-logo">
+<img onerror="imgError(this);" class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/22095_48_1565343546.png" />
+</div>
+<div class="tencent-txt">
+<h2 class="tencent-name ellipsis">腾讯手游助手</h2>
+<p class="tencent-time">2020-03-09</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_22095@.exe" target="_blank" class="btn-download-tencent J_qq_download" data-hottag="download.index.tencent.22095" data-id="22095">高速下载</a>
+</li>
+<li class="tencent-item bottom-shadow">
+<a href="/detail/13/detail_8033.html" title="QQ游戏" target="_blank" class="tencent-info" data-hottag="detail.index.tencent.8033">
+<div class="tencent-logo">
+<img onerror="imgError(this);" class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/8033_48_1477983163.png" />
+</div>
+<div class="tencent-txt">
+<h2 class="tencent-name ellipsis">QQ游戏</h2>
+<p class="tencent-time">2020-03-31</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_8033@.exe" target="_blank" class="btn-download-tencent J_qq_download" data-hottag="download.index.tencent.8033" data-id="8033">高速下载</a>
+</li>
+<li class="tencent-item bottom-shadow">
+<a href="/detail/5/detail_23125.html" title="腾讯桌面整理" target="_blank" class="tencent-info" data-hottag="detail.index.tencent.23125">
+<div class="tencent-logo">
+<img onerror="imgError(this);" class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/23125_48_1479364559.png" />
+</div>
+<div class="tencent-txt">
+<h2 class="tencent-name ellipsis">腾讯桌面整理</h2>
+<p class="tencent-time">2019-06-17</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_23125@.exe" target="_blank" class="btn-download-tencent J_qq_download" data-hottag="download.index.tencent.23125" data-id="23125">高速下载</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sidebar grid_3">
+<div class="top gamedown">
+<h1 class="title-header gamedown-header"><i class="title-ico top-ico"></i>榜单排行</h1>
+<div class="top-wrap">
+<h2 class="title-header gamedown-header2 sprite sprite-bg2"><i class="title-ico gamedown-download-ico"></i>热门游戏下载</h2>
+<ul class="top-list bottom-shadow top-list-small">
+<li class="top-item top1">
+<a href="/detail/13/detail_8033.html" title="QQ游戏" target="_blank" class="top-link" data-hottag="detail.index.gamerank.8033">
+<div class="top-index">
+<i>1</i>
+</div>
+<div class="top-img">
+<img src="//pc3.gtimg.com/softmgr/logo/48/8033_48_1477983163.png" onerror="imgError(this);" />
+</div>
+<div class="top-name">QQ游戏</div>
+<div class="top-num">244&nbsp;万下载</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_8033@.exe" target="_blank" class="btn-download-top J_qq_download" data-hottag="download.index.gamerank.8033" data-id="8033">高速下载</a>
+</li>
+<li class="top-item top2">
+<a href="/detail/1/detail_23761.html" title="WeGame（原TGP）" target="_blank" class="top-link" data-hottag="detail.index.gamerank.23761">
+<div class="top-index">
+<i>2</i>
+</div>
+<div class="top-img">
+<img src="//pc3.gtimg.com/softmgr/logo/48/23761_48_1504168216.png" onerror="imgError(this);" />
+</div>
+<div class="top-name">WeGame（原TGP）</div>
+<div class="top-num">125&nbsp;万下载</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_23761@.exe" target="_blank" class="btn-download-top J_qq_download" data-hottag="download.index.gamerank.23761" data-id="23761">高速下载</a>
+</li>
+<li class="top-item top3">
+<a href="/detail/9/detail_24169.html" title="和平精英（手游电脑版）" target="_blank" class="top-link" data-hottag="detail.index.gamerank.24169">
+<div class="top-index">
+<i>3</i>
+</div>
+<div class="top-img">
+<img src="//pc3.gtimg.com/softmgr/logo/48/24169_48_1585794935.png" onerror="imgError(this);" />
+</div>
+<div class="top-name">和平精英（手游电脑版）</div>
+<div class="top-num">84.2&nbsp;万下载</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_24169@.exe" target="_blank" class="btn-download-top J_qq_download" data-hottag="download.index.gamerank.24169" data-id="24169">高速下载</a>
+</li>
+<li class="top-item top4 top-item-small">
+<a href="/detail/15/detail_22095.html" title="腾讯手游助手" target="_blank" class="top-link" data-hottag="detail.index.gamerank.22095">
+<div class="top-index">
+<i>4</i>
+</div>
+<div class="top-name">腾讯手游助手</div>
+<div class="top-num">69.5&nbsp;万下载</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_22095@.exe" target="_blank" class="btn-download-top J_qq_download" data-hottag="download.index.gamerank.22095" data-id="22095">高速下载</a>
+</li>
+<li class="top-item top5 top-item-small">
+<a href="/detail/0/detail_6120.html" title="英雄联盟" target="_blank" class="top-link" data-hottag="detail.index.gamerank.6120">
+<div class="top-index">
+<i>5</i>
+</div>
+<div class="top-name">英雄联盟</div>
+<div class="top-num">36.3&nbsp;万下载</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_6120@.exe" target="_blank" class="btn-download-top J_qq_download" data-hottag="download.index.gamerank.6120" data-id="6120">高速下载</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="container_12 clearfix">
+<div class="content grid_9">
+<div class="category">
+<h1 class="title-header"><i class="title-ico category-ico"></i>分类热门</h1>
+<div class="category-inner">
+<div class="category-menu clearfix bottom-shadow">
+<ul class="category-class" id="J_cat_class_ul"><!-- category-all -->
+<li class="category-class-item curr J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="0" data-hottag="index.recomcate.menu.0">全部</a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="16" data-hottag="index.recomcate.menu.16">游戏</a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="5" data-hottag="index.recomcate.menu.5">视频</a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="3" data-hottag="index.recomcate.menu.3">浏览器</a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="1" data-hottag="index.recomcate.menu.1">聊天</a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="2" data-hottag="index.recomcate.menu.2">输入法</a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="4" data-hottag="index.recomcate.menu.4">下载</a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="6" data-hottag="index.recomcate.menu.6">音乐</a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="7" data-hottag="index.recomcate.menu.7">图片</a></li>
+<li class="category-class-item category-more"><a id="J_cat_class_more" href="javascript:;">展开更多<i class="sprite sprite-more" data-hottag="index.recomcate.menu.more"></i></a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="9" data-hottag="index.recomcate.menu.9">解压刻录</a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="10" data-hottag="index.recomcate.menu.10">系统</a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="11" data-hottag="index.recomcate.menu.11">驱动</a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="12" data-hottag="index.recomcate.menu.12">办公</a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="13" data-hottag="index.recomcate.menu.13">编程</a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="14" data-hottag="index.recomcate.menu.14">股票网银</a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="15" data-hottag="index.recomcate.menu.15">剪辑</a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="17" data-hottag="index.recomcate.menu.17">网络</a></li>
+<li class="category-class-item J_cat_class_item"><a href="javascript:;" class="J_cat_class" data-catid="18" data-hottag="index.recomcate.menu.18">桌面</a></li>
+</ul>
+</div>
+<div class="J_cat_list" data-total="9535" data-catid="0" id="J_cat_list_0">
+<ul class="category-list clearfix">
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/2/detail_2.html" target="_blank" title="QQ" class="category-info" data-hottag="detail.index.recomcate.2">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/2_48_1482283025.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">QQ</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 73%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_2@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.2" data-id="2">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/11/detail_351.html" target="_blank" title="QQ浏览器" class="category-info" data-hottag="detail.index.recomcate.351">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/351_48_1390531994.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">QQ浏览器</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 75%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_351@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.351" data-id="351">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/12/detail_12.html" target="_blank" title="腾讯视频" class="category-info" data-hottag="detail.index.recomcate.12">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/12_48_1481853731.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">腾讯视频</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 61%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_12@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.12" data-id="12">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/8/detail_23988.html" target="_blank" title="腾讯网游加速器" class="category-info" data-hottag="detail.index.recomcate.23988">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/23988_48_1514032253.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">腾讯网游加速器</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 76%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_23988@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.23988" data-id="23988">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/18/detail_26218.html" target="_blank" title="腾讯会议" class="category-info" data-hottag="detail.index.recomcate.26218">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/26218_48_1579089719.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">腾讯会议</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 80%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_26218@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.26218" data-id="26218">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/9/detail_12489.html" target="_blank" title="搜狗拼音输入法" class="category-info" data-hottag="detail.index.recomcate.12489">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/12489_48_1470986051.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">搜狗拼音输入法</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 63%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_12489@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.12489" data-id="12489">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/8/detail_11488.html" target="_blank" title="微信电脑版" class="category-info" data-hottag="detail.index.recomcate.11488">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/11488_48_1421390511.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">微信电脑版</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 70%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_11488@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.11488" data-id="11488">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/10/detail_10.html" target="_blank" title="QQ音乐" class="category-info" data-hottag="detail.index.recomcate.10">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/10_48_1539156989.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">QQ音乐</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 85%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_10@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.10" data-id="10">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/1/detail_2661.html" target="_blank" title="谷歌浏览器 稳定版" class="category-info" data-hottag="detail.index.recomcate.2661">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/2661_48_1450768944.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">谷歌浏览器 稳定版</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 82%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_2661@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.2661" data-id="2661">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/2/detail_56622.html" target="_blank" title="优酷PC客户端" class="category-info" data-hottag="detail.index.recomcate.56622">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/56622_48_1563768363.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">优酷PC客户端</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 60%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_56622@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.56622" data-id="56622">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/1/detail_23761.html" target="_blank" title="WeGame（原TGP）" class="category-info" data-hottag="detail.index.recomcate.23761">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/23761_48_1504168216.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">WeGame（原TGP）</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 64%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_23761@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.23761" data-id="23761">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/5/detail_23125.html" target="_blank" title="腾讯桌面整理" class="category-info" data-hottag="detail.index.recomcate.23125">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/23125_48_1479364559.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">腾讯桌面整理</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 61%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_23125@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.23125" data-id="23125">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/2/detail_120142.html" target="_blank" title="洋葱头云重装" class="category-info" data-hottag="detail.index.recomcate.120142">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/120142_48_1556521969.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">洋葱头云重装</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 78%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_120142@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.120142" data-id="120142">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/17/detail_24777.html" target="_blank" title="小智双核浏览器" class="category-info" data-hottag="detail.index.recomcate.24777">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/24777_48_1557039168.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">小智双核浏览器</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 80%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_24777@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.24777" data-id="24777">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/7/detail_4507.html" target="_blank" title="爱奇艺视频" class="category-info" data-hottag="detail.index.recomcate.4507">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/4507_48_1444698032.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">爱奇艺视频</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 56%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_4507@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.4507" data-id="4507">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/7/detail_22127.html" target="_blank" title="搜狗高速浏览器" class="category-info" data-hottag="detail.index.recomcate.22127">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/22127_48_1445490075.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">搜狗高速浏览器</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 74%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_22127@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.22127" data-id="22127">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/8/detail_22748.html" target="_blank" title="迅雷X" class="category-info" data-hottag="detail.index.recomcate.22748">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/22748_48_1535515621.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">迅雷X</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 30%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_22748@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.22748" data-id="22748">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/18/detail_21258.html" target="_blank" title="谷歌浏览器 稳定版" class="category-info" data-hottag="detail.index.recomcate.21258">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/21258_48_1450768968.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">谷歌浏览器 稳定版</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 81%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_21258@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.21258" data-id="21258">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/13/detail_8033.html" target="_blank" title="QQ游戏" class="category-info" data-hottag="detail.index.recomcate.8033">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/8033_48_1477983163.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">QQ游戏</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 65%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_8033@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.8033" data-id="8033">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/16/detail_116.html" target="_blank" title="YY 语音" class="category-info" data-hottag="detail.index.recomcate.116">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/116_48_1454405297.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">YY 语音</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 74%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_116@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.116" data-id="116">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/2/detail_6002.html" target="_blank" title="应用宝" class="category-info" data-hottag="detail.index.recomcate.6002">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/6002_48_1493084875.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">应用宝</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 56%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_6002@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.6002" data-id="6002">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/1/detail_22861.html" target="_blank" title="美图秀秀" class="category-info" data-hottag="detail.index.recomcate.22861">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/22861_48_1535529557.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">美图秀秀</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 42%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_22861@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.22861" data-id="22861">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/7/detail_7.html" target="_blank" title="QQ拼音输入法" class="category-info" data-hottag="detail.index.recomcate.7">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/7_48_1458184328.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">QQ拼音输入法</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 81%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_7@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.7" data-id="7">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/14/detail_24034.html" target="_blank" title="斗鱼直播" class="category-info" data-hottag="detail.index.recomcate.24034">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/24034_48_1515486359.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">斗鱼直播</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 76%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_24034@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.24034" data-id="24034">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/19/detail_24359.html" target="_blank" title="浩辰CAD看图王" class="category-info" data-hottag="detail.index.recomcate.24359">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/24359_48_1537339994.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">浩辰CAD看图王</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 65%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_24359@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.24359" data-id="24359">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/0/detail_24360.html" target="_blank" title="浩辰CAD看图王" class="category-info" data-hottag="detail.index.recomcate.24360">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/24360_48_1537340481.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">浩辰CAD看图王</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 66%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_24360@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.24360" data-id="24360">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/0/detail_6120.html" target="_blank" title="英雄联盟" class="category-info" data-hottag="detail.index.recomcate.6120">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/6120_48_1502678732.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">英雄联盟</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 81%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_6120@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.6120" data-id="6120">高速下载</a>
+</li>
+<li class="category-item bottom-shadow J_cat_item">
+<a href="/detail/14/detail_4514.html" target="_blank" title="酷狗音乐" class="category-info" data-hottag="detail.index.recomcate.4514">
+<div class="category-logo">
+<img class="lazyload" data-original="//pc3.gtimg.com/softmgr/logo/48/4514_48_1546068717.png" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">酷狗音乐</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: 79%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_4514@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.4514" data-id="4514">高速下载</a>
+</li>
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+</div>
+<div class="J_cat_list" data-total="1920" data-catid="16" id="J_cat_list_16" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="224" data-catid="5" id="J_cat_list_5" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="216" data-catid="3" id="J_cat_list_3" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="199" data-catid="1" id="J_cat_list_1" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="94" data-catid="2" id="J_cat_list_2" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="135" data-catid="4" id="J_cat_list_4" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="189" data-catid="6" id="J_cat_list_6" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="457" data-catid="7" id="J_cat_list_7" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="81" data-catid="8" id="J_cat_list_8" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="96" data-catid="9" id="J_cat_list_9" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="926" data-catid="10" id="J_cat_list_10" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="99" data-catid="11" id="J_cat_list_11" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="2071" data-catid="12" id="J_cat_list_12" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="334" data-catid="13" id="J_cat_list_13" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="295" data-catid="14" id="J_cat_list_14" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="551" data-catid="15" id="J_cat_list_15" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="1514" data-catid="17" id="J_cat_list_17" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+<div class="J_cat_list" data-total="134" data-catid="18" id="J_cat_list_18" style="display: none;">
+<ul class="category-list clearfix">
+</ul>
+<div class="list-more bottom-shadow">
+<a href="javascript:;" class="J_cat_list_more" data-hottag="index.recomcate.load.more">查看更多</a>
+</div>
+<div class="list-more list-no-more J_cat_no_more">这会真没有了</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sidebar grid_3">
+<div class="top special">
+<h1 class="title-header"><i class="title-ico top-ico"></i>专题合集</h1>
+<div class="special-wrap">
+<ul class="special-list">
+<li class="special-item">
+<a href="/category/c16.html" title="游戏" target="_blank" class="special-link" data-hottag="index.subject.1">
+<img src="//pc2.gtimg.com/guanjia/gjalpha/file/ad/8f/ad8fd894d18b1c1b5d593ad554534883.png" alt="游戏">
+</a>
+</li>
+<li class="special-item">
+<a href="/category/c6.html" title="音乐" target="_blank" class="special-link" data-hottag="index.subject.2">
+<img src="//pc2.gtimg.com/guanjia/gjalpha/file/e7/ff/e7ff8e8fb4c231caf6fcf003ab22ed0a.png" alt="音乐">
+</a>
+</li>
+<li class="special-item">
+<a href="/category/c7.html" title="图片" target="_blank" class="special-link" data-hottag="index.subject.3">
+<img src="//pc2.gtimg.com/guanjia/gjalpha/file/dc/94/dc94095d4fe979089b326d52b520a195.png" alt="图片">
+</a>
+</li>
+<li class="special-item">
+<a href="/category/c13.html" title="编程" target="_blank" class="special-link" data-hottag="index.subject.4">
+<img src="//pc2.gtimg.com/guanjia/gjalpha/file/30/ca/30ca3d72e13a6c02e0b23d3e780b7f4c.png" alt="编程">
+</a>
+</li>
+<li class="special-item">
+<a href="/category/c15.html" title="剪辑" target="_blank" class="special-link" data-hottag="index.subject.5">
+<img src="//pc2.gtimg.com/guanjia/gjalpha/file/25/61/2561ac91f35fe9b508f48b2c9e338b5c.png" alt="剪辑">
+</a>
+</li>
+<li class="special-item">
+<a href="/category/c18.html" title="桌面" target="_blank" class="special-link" data-hottag="index.subject.6">
+<img src="//pc2.gtimg.com/guanjia/gjalpha/file/3e/46/3e46205ced195d1ab560438530c24a3e.png" alt="桌面">
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="link container_12">
+<ul class="ui-sortable grid_12">
+<li><a title="腾讯网" href="http://www.qq.com/" target="_blank" rel="nofollow" data-hottag="weblink.0">腾讯网</a></li>
+<li><a title="杀毒软件" href="https://guanjia.qq.com/" target="_blank" data-hottag="weblink.1">杀毒软件</a></li>
+<li><a title="91下载" href="http://www.91xiazai.com" target="_blank" rel="nofollow" data-hottag="weblink.2">91下载</a></li>
+<li><a title="西西下载" href="http://www.down.cc" target="_blank" rel="nofollow" data-hottag="weblink.3">西西下载</a></li>
+<li><a title="当快软件园" href="http://www.downkuai.com" target="_blank" rel="nofollow" data-hottag="weblink.4">当快软件园</a></li>
+<li><a title="最笨下载" href="http://www.zuiben.com" target="_blank" rel="nofollow" data-hottag="weblink.5">最笨下载</a></li>
+<li><a title="光速虚拟机" href="https://www.gsxnj.cn/index?adtag=guanjia" target="_blank" data-hottag="weblink.6">光速虚拟机</a></li>
+</ul>
+</div>
+
+<div id="footer" class="footer">
+<p>
+<a target="_blank" href="http://www.tencent.com/zh-cn/index.shtml" rel="nofollow">腾讯公司</a>|
+<a target="_blank" href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml" rel="nofollow">版权所有</a>|
+<a target="_blank" href="http://guanjia.qq.com/market.html" rel="nofollow">市场合作</a>|
+<a target="_blank" href="http://bbs.guanjia.qq.com/forum.php?mod=forumdisplay&fid=84" rel="nofollow">投诉建议</a>|
+<a target="_blank" href="http://guanjia.qq.com/about/about.html" rel="nofollow">关于管家</a>
+</p>
+<p class="copyright">Copyright &#169; 1998 - 2020 Tencent. All Rights Reserved. </p>
+</div>
+
+<div id="J_back_to_top_div">
+<a href="javascript:;" class="scrollup_btn sprite sprite-scrollup" id="J_back_to_top" data-hottag="index.footer.top">返回顶部</a>
+</div>
+
+<!-- 引导软件管理下载弹窗 -->
+<div class="softmgrguide-box" id="J_softmgrguide-box">
+<div class="mask"></div>
+<div class="contbox">
+<div class="tips">您是电脑管家用户，将为您打开软件管理加速下载。</div>
+<a href="javascript:void(0);" class="xbtn-close" id="J_xbtn-close">&#10005;</a>
+<a href="javascript:void(0);" class="xbtn-download" id="J_xbtn-download">开始体验</a>
+</div>
+</div>
+
+<script id="j_item_tpl" type="text/html">
+{{each list}}
+<li class="category-item bottom-shadow J_cat_item">
+<a href="{{$value.detailUrl}}" title="{{$value.sn}}" target="_blank" class="category-info" data-hottag="detail.index.recomcate.{{$value.s}}">
+<div class="category-logo">
+<img src="{{$value.lg}}" onerror="imgError(this);" />
+</div>
+<div class="category-txt">
+<h2 class="category-name ellipsis">{{$value.sn}}</h2>
+<p class="category-time">
+<span class="star-wrap">
+<i class="star" style="width: {{$value.star}}%;"></i>
+</span>
+</p>
+</div>
+</a>
+<a href="//pm.myapp.com/invc/xfspeed/qqsoftmgr/QQSoftDownloader_v1.1_webnew_{{$value.s}}@.exe" target="_blank" class="btn-download-category J_qq_download" data-hottag="download.index.recomcate.{{$value.s}}" data-id="{{$value.s}}">高速下载</a>
+</li>
+{{/each}}
+</script>
+
+<script type="text/javascript" src="//pc1.gtimg.com/softmgr/js/pcmgrhttp-1.19.min.js"></script>
+<script type="text/javascript" src="//pc1.gtimg.com/finance/softweb/dist/js/lib-23be167eca.js"></script>
+<script type="text/javascript">
+var ownStyle = location.protocol + '//pc1.gtimg.com/finance/softweb/dist/css/comment-faf6f6f668.css';
+seajs.config({
+base : "//pc1.gtimg.com/finance/softweb/dist/js/",
+alias: {
+"mod.common"    : "common-4e04012e8b.js",
+"mod.index"     : "index-aa7e033dca.js",
+"mod.category"  : "category-d75e7faf05.js",
+"mod.search"    : "search-9879a4e0ee.js",
+"mod.detail"    : "detail-4bb54a158b.js"
+}
+});
+</script>
+<script type="text/javascript" src="//tajs.qq.com/stats?sId=59225261" charset="UTF-8" async></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "https://hm.baidu.com/hm.js?0e50f682b61a664e36298f4c2ef0886d";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script type="text/javascript">
+$(function () {
+seajs.use(["mod.common", "mod.index"], function (commonObj, indexObj) {
+commonObj.init();
+indexObj.init();
+});
+});
+</script>
+</body>
+</html>
