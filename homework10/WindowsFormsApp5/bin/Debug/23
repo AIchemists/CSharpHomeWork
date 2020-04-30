@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>晓飞的算法工程笔记 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=Z9Vw4btcgJmrpUEjY_SgebmTmDXJ_hPFoST7ad2aJp4" />
+    <link id="MainCss" rel="stylesheet" href="/skins/coffee/bundle-coffee.min.css?v=pdMIVgsH8kXt-vOWnlL0N20TlHt3UyP9HzGgocfsP4s" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee-mobile.min.css?v=na9bpAY4yh7uEWCcrXj3vfJM3VBse8YtU6-5fUUQPz0" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/VincentLee/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/VincentLee/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/VincentLee/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
+    <script>
+        var currentBlogId = 215477;
+        var currentBlogApp = 'VincentLee';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'coffee';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a href="https://www.cnblogs.com/VincentLee/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/VincentLee/">晓飞的算法工程笔记</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+	<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/VincentLee/">
+首页</a>
+</li>
+	<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+	<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E6%99%93%E9%A3%9E%E7%9A%84%E7%AE%97%E6%B3%95%E5%B7%A5%E7%A8%8B%E7%AC%94%E8%AE%B0">
+联系</a></li>
+	<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+	<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/VincentLee/rss/">
+订阅</a>
+	
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/VincentLee/rss/">
+    <img src="/skins/coffee/images/xml.gif" alt="订阅" />
+</a></li>
+</ul>
+
+
+
+			<div class="blogStats">
+				
+				<!--done-->
+随笔- 
+30&nbsp;
+文章- 
+0&nbsp;
+评论- 
+2&nbsp;
+
+
+
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		
+<!--done-->
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/VincentLee/archive/2020/04/30.html">2020年4月30日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/VincentLee/p/12810569.html">
+    Deep Snake : 基于轮廓调整的SOTA实例分割方法，速度32.3fps | CVPR 2020
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：论文提出基于轮廓的实例分割方法Deep snake，轮廓调整是个很不错的方向，引入循环卷积，不仅提升了性能还减少了计算量，保持了实时性，但是Deep snake的大体结构不够优雅，应该还有一些工作可以补，推荐大家阅读 来源：晓飞的算法工程笔记 公众号 论文: Deep Snake for Real             <a href="https://www.cnblogs.com/VincentLee/p/12810569.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-30 18:18 晓飞的算法工程笔记 阅读 (31) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12810569" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/VincentLee/p/12808199.html">
+    ATSS : 目标检测的自适应正负anchor选择，很扎实的trick | CVPR 2020
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：论文指出one stage anchor based和center based anchor free检测算法间的差异主要来自于正负样本的选择，基于此提出ATSS(Adaptive Training Sample Selection)方法，该方法能够自动根据GT的相关统计特征选择合适的anchor             <a href="https://www.cnblogs.com/VincentLee/p/12808199.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-30 12:52 晓飞的算法工程笔记 阅读 (6) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12808199" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/VincentLee/p/12806922.html">
+    增量学习不只有finetune，三星AI提出增量式少样本目标检测算法ONCE | CVPR 2020
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：论文提出增量式少样本目标检测算法ONCE，与主流的少样本目标检测算法不太一样，目前很多性能高的方法大都基于比对的方式进行有目标的检测，并且需要大量的数据进行模型训练再应用到新类中，要检测所有的类别则需要全部进行比对，十分耗时。而论文是增量式添加类别到模型，以常规的推理形式直接检测，十分高效且数据需求            <a href="https://www.cnblogs.com/VincentLee/p/12806922.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-30 09:45 晓飞的算法工程笔记 阅读 (75) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12806922" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/VincentLee/archive/2020/04/27.html">2020年4月27日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/VincentLee/p/12784793.html">
+    Spiking-YOLO : 前沿性研究，脉冲神经网络在目标检测的首次尝试 | AAAI 2020
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：论文提出Spiking YOLO，是脉冲神经网络在目标检测领域的首次成功尝试，实现了与卷积神经网络相当的性能，而能源消耗极低。论文内容新颖，比较前沿，推荐给大家阅读 来源：晓飞的算法工程笔记 公众号 论文: Spiking YOLO: Spiking Neural Network for Energ            <a href="https://www.cnblogs.com/VincentLee/p/12784793.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-27 10:06 晓飞的算法工程笔记 阅读 (147) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12784793" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/VincentLee/archive/2020/04/26.html">2020年4月26日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/VincentLee/p/12780637.html">
+    ACNet: 特别的想法，腾讯提出结合注意力卷积的二叉神经树进行细粒度分类 | CVPR 2020
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：论文提出了结合注意力卷积的二叉神经树进行弱监督的细粒度分类，在树结构的边上结合了注意力卷积操作，在每个节点使用路由函数来定义从根节点到叶子节点的计算路径，结合所有叶子节点的预测值进行最终的预测，论文的创意和效果来看都十分不错 来源：晓飞的算法工程笔记 公众号 论文: Attention Convol            <a href="https://www.cnblogs.com/VincentLee/p/12780637.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-26 16:40 晓飞的算法工程笔记 阅读 (140) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12780637" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/VincentLee/archive/2020/04/23.html">2020年4月23日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/VincentLee/p/12759057.html">
+    腾讯推出超强少样本目标检测算法，公开千类少样本检测训练集FSOD | CVPR 2020
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：论文提出了新的少样本目标检测算法，创新点包括Attention RPN、多关系检测器以及对比训练策略，另外还构建了包含1000类的少样本检测数据集FSOD，在FSOD上训练得到的论文模型能够直接迁移到新类别的检测中，不需要fine tune 来源：晓飞的算法工程笔记 公众号 论文: Few Shot            <a href="https://www.cnblogs.com/VincentLee/p/12759057.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-23 10:33 晓飞的算法工程笔记 阅读 (239) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12759057" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/VincentLee/archive/2020/04/20.html">2020年4月20日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/VincentLee/p/12738008.html">
+    Gaussian YOLOv3 : 对bbox预测值进行高斯建模输出不确定性，效果拔群 | ICCV 2019
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：在自动驾驶中，检测模型的速度和准确率都很重要，出于这个原因，论文提出Gaussian YOLOv3。该算法在保持实时性的情况下，通过高斯建模、损失函数重建来学习bbox预测值的不确定性，从而提高准确率和TP，能够显著地降低FP，在KITTI和BDD数据集上分别提升了3.09mAP和3.5mAP。整体            <a href="https://www.cnblogs.com/VincentLee/p/12738008.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-20 15:21 晓飞的算法工程笔记 阅读 (27) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12738008" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/VincentLee/p/12736375.html">
+    化繁为简，弱监督目标定位领域的新SOTA - 伪监督目标定位方法(PSOL) | CVPR 2020
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：论文提出伪监督目标定位方法(PSOL)来解决目前弱监督目标定位方法的问题，该方法将定位与分类分开成两个独立的网络，然后在训练集上使用Deep descriptor transformation(DDT)生成伪GT进行训练，整体效果达到SOTA，论文化繁为简，值得学习 来源：晓飞的算法工程笔记 公众号            <a href="https://www.cnblogs.com/VincentLee/p/12736375.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-20 10:43 晓飞的算法工程笔记 阅读 (77) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12736375" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/VincentLee/archive/2020/04/15.html">2020年4月15日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/VincentLee/p/12707625.html">
+    CARS: 华为提出基于进化算法和权值共享的神经网络结构搜索，CIFAR-10上仅需单卡半天 | CVPR 2020
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：为了优化进化算法在神经网络结构搜索时候选网络训练过长的问题，参考ENAS和NSGA III，论文提出连续进化结构搜索方法(continuous evolution architecture search, CARS)，最大化利用学习到的知识，如上一轮进化的结构和参数。首先构造用于参数共享的超网，从超            <a href="https://www.cnblogs.com/VincentLee/p/12707625.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-15 19:57 晓飞的算法工程笔记 阅读 (58) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12707625" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/VincentLee/p/12703666.html">
+    GhostNet: 使用简单的线性变换生成特征图，超越MobileNetV3的轻量级网络 | CVPR 2020
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：为了减少神经网络的计算消耗，论文提出Ghost模块来构建高效的网络结果。该模块将原始的卷积层分成两部分，先使用更少的卷积核来生成少量内在特征图，然后通过简单的线性变化操作来进一步高效地生成ghost特征图。从实验来看，对比其它模型，GhostNet的压缩效果最好，且准确率保持也很不错，论文思想十分值            <a href="https://www.cnblogs.com/VincentLee/p/12703666.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-15 10:36 晓飞的算法工程笔记 阅读 (177) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12703666" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/VincentLee/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script></div>
+			
+			<DIV id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</DIV>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 晓飞的算法工程笔记
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

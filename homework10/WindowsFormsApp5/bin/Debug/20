@@ -1,0 +1,451 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="一、SDS 1、SDS结构体 redis3.2之前 ：不管buf的字节数有多少，都用 4字节的len来储存长度 ，对于只存短字符串那么优点 浪费空间 ，比如只存 ，则 则只需要一个字节8位即可表示 r" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>[redis]SDS和链表 - Biningo - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=Z9Vw4btcgJmrpUEjY_SgebmTmDXJ_hPFoST7ad2aJp4" />
+    <link id="MainCss" rel="stylesheet" href="/skins/simplememory/bundle-simplememory.min.css?v=OL4qeo1LNGlN1rKIhv5UctANvt0M6Nx6kLzr_ffx3Xk" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory-mobile.min.css" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/biningooginind/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/biningooginind/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/biningooginind/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
+    <script>
+        var currentBlogId = 559704;
+        var currentBlogApp = 'biningooginind';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'SimpleMemory';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/biningooginind/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/biningooginind/">Biningo</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/biningooginind/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/Biningo">
+联系</a></li>
+<li>
+
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+26&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+10</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/biningooginind/p/12810833.html">[redis]SDS和链表</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <h1 id="一、sds">一、SDS</h1>
+<h2 id="1、sds结构体">1、SDS结构体</h2>
+<p><strong>redis3.2之前</strong>：不管buf的字节数有多少，都用 <strong>4字节的len来储存长度</strong>，对于只存短字符串那么优点<strong>浪费空间</strong>，比如只存 <code>name</code>，则<code>len=4</code>  则只需要一个字节8位即可表示</p>
+<pre><code class="language-c">struct sdshdr {
+    unsigned int len; // buf中已占字节数
+    unsigned int free; // buf中剩余字节数
+    char buf[]; // 数据空间
+};
+</code></pre>
+<p><strong>redis3.2之后：</strong></p>
+<pre><code class="language-c">struct __attribute__ ((__packed__)) sdshdr8 {
+    uint8_t len; //已分配字节数
+    uint8_t alloc; //剩余字节数
+    unsigned char flags; //标识属于那种类型的SDS  低3存类型，高5不使用
+    char buf[]; 
+};
+//........16、32、64
+</code></pre>
+<blockquote>
+<p>_<em>attribute</em>_ ((_<em>packed</em>_))  关键字是为了取消字节对齐</p>
+<pre><code class="language-c">struct test1 {
+ char c;
+ int i;
+};
+
+struct __attribute__ ((__packed__)) test2 {
+ char c;
+ int i;
+};
+
+int main()
+{
+ cout &lt;&lt; &quot;size of test1:&quot; &lt;&lt; sizeof(struct test1) &lt;&lt; endl;
+ cout &lt;&lt; &quot;size of test2:&quot; &lt;&lt; sizeof(struct test2) &lt;&lt; endl;
+}
+</code></pre>
+</blockquote>
+<p><strong>注意，这些结构都存在一个 char[]内，通过偏移来访问</strong></p>
+<p>buf指针在char数组开头位置，方便直接访问</p>
+<div class="mermaid">graph TB
+subgraph 
+header--&gt;buf
+end
+</div><hr>
+<br>
+<br>
+<h2 id="2、重要函数解析">2、重要函数解析</h2>
+<h4 id="sdsreqtype">sdsReqType</h4>
+<p><strong>确定类型</strong>：sdsReqType根据传入的 char[] 长度来缺点应该用哪种类型的 SDS结构体来描述</p>
+<pre><code class="language-c">static inline char sdsReqType(size_t string_size) {
+    if (string_size &lt; 1&lt;&lt;5)
+        return SDS_TYPE_5;
+    if (string_size &lt; 1&lt;&lt;8) //8位 表示长度范围 0-256
+        return SDS_TYPE_8;
+    if (string_size &lt; 1&lt;&lt;16) //16位 
+        return SDS_TYPE_16;
+#if (LONG_MAX == LLONG_MAX)
+    if (string_size &lt; 1ll&lt;&lt;32)
+        return SDS_TYPE_32;
+    return SDS_TYPE_64;
+#else
+    return SDS_TYPE_32;
+#endif
+}
+</code></pre>
+<br>
+<h4 id="sdsnewlen">sdsnewlen</h4>
+<p>根据长度结构化 char数组，创建一个 长度为 <strong>str本身长度+head长度</strong>的数组， <strong>sdsnew就是调用这个来创建sds字节数组的</strong></p>
+<pre><code class="language-c">sds sdsnewlen(const void *init, size_t initlen) {
+    void *sh; //存放sds header数据的头指针
+    sds s; //char* s
+    char type = sdsReqType(initlen); //根据str长度 确定SDS header类型
+    if (type == SDS_TYPE_5 &amp;&amp; initlen == 0) type = SDS_TYPE_8;
+    int hdrlen = sdsHdrSize(type); //header 长度
+    unsigned char *fp; //类型指针
+
+    sh = s_malloc(hdrlen+initlen+1); //分配 str长度+header长度的内存空间
+    ...
+    memset(sh, 0, hdrlen+initlen+1); //初始化空间
+    s = (char*)sh+hdrlen; //移动到header之后的buf首地址位置
+    fp = ((unsigned char*)s)-1; //移动到header的尾部 标识sds header类型
+    switch(type) {
+       ....
+        case SDS_TYPE_8: {
+//#define SDS_HDR_VAR(T,s) struct sdshdr##T *sh = (void*)((s)-(sizeof(struct sdshdr##T)));  
+  //sh指向header空间头部位置 s代表buf首地址  下面将sh移动到header的首地址
+        SDS_HDR_VAR(8,s); //struct sdshdr8* sh = (void*)(s-sizeof(header))
+        sh-&gt;len = initlen; //填充数据
+        sh-&gt;alloc = initlen; 
+        *fp = type;//类型数据填充
+        break;
+       }
+       ......
+    }
+    if (initlen &amp;&amp; init)
+        memcpy(s, init, initlen); //将str数据复制到buf中
+    s[initlen] = '\0';
+    return s;
+}
+</code></pre>
+<br>
+<h4 id="sdslen、sdsavail">sdslen、sdsavail</h4>
+<p>返回使用和未使用的空间。 **根据头部类型转化指针，然后直接 sh-&gt;len  和 sh-&gt;alloc-sh-&gt;len   **即可求出</p>
+<br>
+<h4 id="sdscat、sdscatlen、sdsmakeroomfor">sdscat、sdscatlen、sdsMakeRoomFor</h4>
+<p>将 <code>t</code>拼接到 <code>s</code> 中，</p>
+<pre><code class="language-c">sds sdscatsds(sds s, const sds t) {
+    return sdscatlen(s, t, sdslen(t));
+}
+sds sdscatlen(sds s, const void *t, size_t len) {
+    size_t curlen = sdslen(s);
+
+    s = sdsMakeRoomFor(s,len); //保证空间充足
+    if (s == NULL) return NULL;
+    memcpy(s+curlen, t, len); //直接copy
+    sdssetlen(s, curlen+len); //设置新的长度
+    s[curlen+len] = '\0';
+    return s;
+}
+</code></pre>
+<p><code>sdsMakeRoomFor</code>是为了保证空间充足，如果不充足进行扩容，下面就是newlen的核心代码，会扩容大于需要的长度，防止多次扩容。体现了 <strong>预先分配</strong></p>
+<p><strong>扩容是一个耗时的操作</strong></p>
+<pre><code class="language-c">    if (avail &gt;= addlen) return s;
+
+    len = sdslen(s);
+    sh = (char*)s-sdsHdrSize(oldtype);
+    newlen = (len+addlen);
+    if (newlen &lt; SDS_MAX_PREALLOC) //#define SDS_MAX_PREALLOC (1024*1024)
+        newlen *= 2;
+    else
+        newlen += SDS_MAX_PREALLOC;
+</code></pre>
+<br>
+<h4 id="sdstrim">sdstrim</h4>
+<p>将cset中在s出现的删除，这个函数就体现了 <strong>惰性释放</strong> ，不会缩减空间，仅仅改变 <strong>len</strong>，同时也体现了 和 c的<strong>兼容性</strong>，可以用 系统strings函数来操作 sds</p>
+<pre><code class="language-c">sds sdstrim(sds s, const char *cset) {
+    char *start, *end, *sp, *ep;
+    size_t len;
+
+    sp = start = s;
+    ep = end = s+sdslen(s)-1;
+    while(sp &lt;= end &amp;&amp; strchr(cset, *sp)) sp++;
+    while(ep &gt; sp &amp;&amp; strchr(cset, *ep)) ep--;
+    len = (sp &gt; ep) ? 0 : ((ep-sp)+1);
+    if (s != sp) memmove(s, sp, len);
+    s[len] = '\0';
+    sdssetlen(s,len);
+    return s;
+}
+</code></pre>
+<br>
+<hr>
+<br>
+<br>
+<h2 id="3、优点">3、优点</h2>
+<h4 id="a获取长度方便">A.获取长度方便</h4>
+<p>c字符串获取长度需要便利char数组，O(n)，而SDS结构体记录了长度，不需要char数组即可知道长度。</p>
+<br>
+<h4 id="b防止溢出">B.防止溢出</h4>
+<p>char数组不知道还有多少空间空余，可能会在两个字符串拼接的时候溢出，而SDS记录了未使用的空间，可以有效的分配扩容，防止溢出。</p>
+<br>
+<h4 id="c内存分配方便和使用高效">C.内存分配方便和使用高效</h4>
+<p>传统c的char数组，如果空间不足，需要手动扩容，然后复制原数据，截断时，也需要缩减空间，来防止内存泄漏。但是SDS可以进行  <strong>空间预分配、惰性释放</strong> 等策略来搞效的使用内存。</p>
+<ul>
+<li>
+<p><strong>空间预分配</strong>:</p>
+<p>预先分配足够的空间，减少扩容次数</p>
+</li>
+<li>
+<p><strong>惰性释放</strong></p>
+<p>因为SDS记录了 <strong>free未分配空间字段</strong>，所以截断字符串的时候不需要立即复制元素进行缩减，直接增加 <strong>free</strong> 数值，减少 <strong>len</strong>即可，后面要增加字符串只增加len，减少free ，覆盖写入即可。（free = alloc-len）</p>
+</li>
+</ul>
+<br>
+<h4 id="d兼容c">D.兼容C</h4>
+<p>SDS只是增加了两个字段，其实数据还是存在 char[] buf里面的，所以可以使用 c内置的字符串处理函数来处理 SDS底层字节数组。</p>
+<pre><code class="language-c">typedef char *sds;
+</code></pre>
+<p>所以在处理 字符串的API里只是传入了 char* 来处理字符串。空间是否充足都有额外的信息来描述。</p>
+<hr>
+<br>
+<br>
+<h1 id="二、链表">二、链表</h1>
+<p>链表的话可以参考我的 <a href="https://www.cnblogs.com/biningooginind/p/12553163.html"> https://www.cnblogs.com/biningooginind/p/12553163.html </a></p>
+<p>基本参照了redis的链表操作。</p>
+<h2 id="1、结构体">1、结构体</h2>
+<pre><code class="language-c">typedef struct listNode {
+    struct listNode *prev;
+    struct listNode *next;
+    void *value; //void* 指针 可以存放任意类型的数据
+} listNode;
+</code></pre>
+<br>
+<br>
+<h2 id="2、特点">2、特点</h2>
+<blockquote>
+<p>链表的特点：</p>
+<ul>
+<li>删除、插入 O(1)</li>
+<li>遍历访问 O(n)</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>有head和tail指针，将访问最后一个元素复杂度降低到O(1)</strong></li>
+<li><strong>带有 len长度，方便知道链表的长度</strong></li>
+<li><strong>双链表结构，前后遍历都方便</strong></li>
+<li><strong>无环</strong></li>
+<li><em><em>多态：数据用 void</em> 来指向，可以存放任意类型数据，不用为每个类型都写一个链表</em>*</li>
+<li><strong>迭代器模式</strong>，<strong>链表有一个迭代器，方便遍历节点</strong></li>
+</ul>
+<pre><code class="language-c">typedef struct listIter {
+    listNode *next; //下一个节点
+    int direction; //遍历方向 forward or backward
+} listIter;
+</code></pre>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-04-30 19:29</span>&nbsp;
+<a href="https://www.cnblogs.com/biningooginind/">Biningo</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12810833" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12810833);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 559704, cb_blogApp = 'biningooginind', cb_blogUserGuid = '668ccb89-9f21-4682-8e6d-08d765b2412c';
+    var cb_entryId = 12810833, cb_entryCreatedDate = '2020-04-30 19:29', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 Biningo
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

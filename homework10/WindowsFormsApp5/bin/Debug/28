@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="关于VUE3.0 由于vue3.0语法跟vue2.x的语法几乎是完全兼容的，本文主要介绍了如何使用 ，主要分以下几个方面来讲 使用vite体验vue3.0 composition api解决了什么问题" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Vue3.0新版API之composition-api入坑指南 - 请叫我宋某某 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=Z9Vw4btcgJmrpUEjY_SgebmTmDXJ_hPFoST7ad2aJp4" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=hlpQ1CJDwwJXDxv2HNauUmW3NjyWzoMaw1uER19SLT0" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/songbw/custom.css?v=4suxF2DCFKUtpu3aR8agdjNOCMI=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=XjHfryC9ctsatIZz1dHn7TsRIqmwz9c3aj_6SCfHSDM" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/songbw/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/songbw/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/songbw/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
+    <script>
+        var currentBlogId = 385130;
+        var currentBlogApp = 'songbw';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'CodingLife';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/songbw/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/songbw/">请叫我宋某某</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/songbw/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E8%AF%B7%E5%8F%AB%E6%88%91%E5%AE%8B%E6%9F%90%E6%9F%90">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/songbw/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+10&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+1</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/songbw/p/12809691.html">Vue3.0新版API之composition-api入坑指南</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <h2 id="关于vue30">关于VUE3.0</h2>
+<p>由于vue3.0语法跟vue2.x的语法几乎是完全兼容的，本文主要介绍了如何使用<code>composition-api</code>，主要分以下几个方面来讲</p>
+<ul>
+<li>使用vite体验vue3.0</li>
+<li>composition-api解决了什么问题</li>
+<li>语法糖介绍</li>
+</ul>
+<h3 id="vite的安装使用">vite的安装使用</h3>
+<p>vite仓库地址 <a href="https://github.com/vuejs/vite">https://github.com/vuejs/vite</a> 上面有详细的安装使用教程，按照步骤安装即可</p>
+<h3 id="composition-api解决了什么问题">composition-api解决了什么问题</h3>
+<ol>
+<li>使用传统的option配置方法写组件的时候问题，随着业务复杂度越来越高，代码量会不断的加大；由于相关业务的代码需要遵循option的配置写到特定的区域，导致后续维护非常的复杂，同时代码可复用性不高，而composition-api就是为了解决这个问题而生的</li>
+</ol>
+<h3 id="语法糖介绍">语法糖介绍</h3>
+<p>compositon-api提供了一下几个函数</p>
+<ul>
+<li>reactive</li>
+<li>watchEffect</li>
+<li>computed</li>
+<li>ref</li>
+<li>toRefs</li>
+<li>生命周期的hooks</li>
+</ul>
+<h4 id="reactive">reactive</h4>
+<pre><code class="language-javascript"> import { reactive, computed } from 'vue'
+
+  export default {
+    setup() {
+      const state = reactive({
+        count: 0
+      })
+      
+      function increment() {
+        state.count++
+      }
+      
+      return {
+        state,
+        increment
+      }
+    }
+  }
+
+</code></pre>
+<p>Reactive 相当于当前的 Vue.observable () API，经过reactive处理后的函数能变成响应式的数据，类似于option api里面的data属性的值</p>
+<h4 id="watcheffect">watchEffect</h4>
+<pre><code class="language-javascript">import { reactive, computed, watchEffect } from 'vue'
+
+export default {
+    setup() {
+      const state = reactive({
+        count: 0
+      })
+
+      const double = computed(() =&gt; state.count * 2)
+
+      function increment() {
+        state.count++
+      }
+
+      watchEffect(() =&gt; {
+        console.log(double.value)
+      })
+      return {
+        state,
+        increment
+      }
+    }
+}
+</code></pre>
+<p>Vue 中检测状态变化的方法，我们可以在渲染期间使用它。 由于依赖关系跟踪，当反应状态发生变化时，视图会自动更新。 在 DOM 中呈现某些内容被认为是一种“副作用” : 我们的程序在程序本身(DOM)之外修改状态。 要应用并自动重新应用基于反应状态的副作用，我们可以使用 watchEffect API</p>
+<h4 id="computed">computed</h4>
+<pre><code class="language-javascript">import { reactive, computed } from 'vue'
+
+export default {
+    setup() {
+      const state = reactive({
+        count: 0
+      })
+    
+      const double = computed(() =&gt; state.count * 2)
+    
+      function increment() {
+        state.count++
+      }
+    
+      return {
+        state,
+        increment
+      }
+    }
+}
+</code></pre>
+<p>有时我们需要依赖于其他状态的状态——在 Vue 中，这是通过计算属性来处理的。 要直接创建一个计算值，我们可以使用<code>computed</code> API</p>
+<h4 id="ref">ref</h4>
+<p>上面计算属性返回计算结果是什么？ 如果我们猜测一下内部是如何实现 computed 的，我们可能会得出这样的结论</p>
+<pre><code class="language-javascript">function computed(getter) {
+  let value
+  watchEffect(() =&gt; {
+    value = getter()
+  })
+  return value
+}
+</code></pre>
+<p>但是我们知道这是行不通的: 如果 value 是一个类似 number 的基本类型，那么一旦返回，它与 <code>computed</code> 内部的更新逻辑的连接就会丢失。 这是因为 JavaScript 基本类型是按值传递的，而不是按引用传递的</p>
+<p>当一个值作为属性分配给一个对象时，同样的问题也会发生。 如果被赋为属性或从函数返回时，反应值不能保持其响应性，那么它就没有多大用处。 为了确保我们总是可以读取计算的最新值，我们需要将实际值包装在一个对象中，然后返回该对象</p>
+<pre><code class="language-javascript">function computed(getter) {
+  const ref = {
+    value: null
+  }
+  watchEffect(() =&gt; {
+    ref.value = getter()
+  })
+  return ref
+}
+
+</code></pre>
+<p>所以要拿到ref与computed的值应该是那返回值下面的value</p>
+<pre><code class="language-javascript">let count = ref(1)
+
+console.log(count.value) // 1
+
+let double = computed(() =&gt; count.value * 2) // 2
+</code></pre>
+<p>值得注意，当我们在template里面使用ref或者computed的时候，vue会自动把它们用reactive处理无需用count.value或者double.value的值，既<code>&lt;div&gt;{{ count }} {{ double }}&lt;/div&gt;</code>即可</p>
+<h4 id="torefs">toRefs</h4>
+<p>toRefs API提供了一个方法可以把reactive的值处理为ref</p>
+<h4 id="生命周期的hooks">生命周期的hooks</h4>
+<p>方法与option api基本一致</p>
+<pre><code class="language-javascript">
+import { onBeforeMount, onMounted, reactive, watchEffect } from 'vue'
+
+export default {
+    setup() {
+      const state = reactive({
+        count: 0
+      })
+
+      const double = computed(() =&gt; state.count * 2)
+
+      function increment() {
+        state.count++
+      }
+
+      watchEffect(() =&gt; {
+        console.log(double.value)
+      })
+      
+      onMounted(() =&gt; {
+        document.title = 'hello'
+      })
+      return {
+        state,
+        increment
+      }
+    }
+}
+
+</code></pre>
+<h3 id="最后讲讲关于使用composition-api如何组织代码">最后讲讲关于使用composition api如何组织代码</h3>
+<p>往往是把一个功能的所有状态、方法、都封装到一个函数里面，方便统一管理，如果你按照这种方式来写代码，那么代码的结构大致如下</p>
+<pre><code class="language-javascript">export default {
+  setup() { // ...
+  }
+}
+
+function useCurrentFolderData(networkState) { // ...
+}
+
+function useFolderNavigation({ networkState, currentFolderData }) { // ...
+}
+
+function useFavoriteFolder(currentFolderData) { // ...
+}
+
+function useHiddenFolders() { // ...
+}
+
+function useCreateFolder(openFolder) { // ...
+}
+</code></pre>
+<p>当我们哪个功能需要再其他组件被复用的时候，直接把相关的方法提取出去，然后再引用进来就可以了</p>
+<p>可以看出composition api的面向人群主要是经常写轮子或者框架的开发者，因为他更灵活，可以写出高内聚、低耦合的代码</p>
+<p>使用vue3的过程中也不是一定要用composition api的，如果业务不是很复杂使用option api也是没什么问题的。</p>
+<p>结束，谢谢观看~~~~</p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-04-30 16:39</span>&nbsp;
+<a href="https://www.cnblogs.com/songbw/">请叫我宋某某</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12809691" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12809691);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 385130, cb_blogApp = 'songbw', cb_blogUserGuid = 'c6e60ab2-1033-4742-f6cf-08d4ef52ecb5';
+    var cb_entryId = 12809691, cb_entryCreatedDate = '2020-04-30 16:39', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 请叫我宋某某
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

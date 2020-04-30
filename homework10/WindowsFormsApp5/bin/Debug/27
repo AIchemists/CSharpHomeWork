@@ -1,0 +1,502 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>小林coding - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=Z9Vw4btcgJmrpUEjY_SgebmTmDXJ_hPFoST7ad2aJp4" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=hlpQ1CJDwwJXDxv2HNauUmW3NjyWzoMaw1uER19SLT0" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=XjHfryC9ctsatIZz1dHn7TsRIqmwz9c3aj_6SCfHSDM" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/xiaolincoding/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/xiaolincoding/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/xiaolincoding/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
+    <script>
+        var currentBlogId = 534487;
+        var currentBlogApp = 'xiaolincoding';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'CodingLife';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/xiaolincoding/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/xiaolincoding/">小林coding</a>
+</h1>
+<h2>
+公众号：「小林coding」 用简洁的方式，分享编程小知识。
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/xiaolincoding/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%B0%8F%E6%9E%97coding">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/xiaolincoding/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+44&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+32</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<!--done-->
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/04/30.html">2020年4月30日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12809812.html">
+    写了Bug，误执行 rm -fr /*，我删删删删库了，要跑路吗？
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：每日英语，每天进步一点点（偷笑）： 前言 临近五一节，想到有 5 天假期，小林开始飘了。 写个简单的 Bash 脚本都不上心了，写完连检查都不检查，直接拖到到实体服务器跑。 结果一跑起来，发生不对劲，怎么一个简单脚本跑了 10 秒还没结束，于是立马直接 ctrl + c 一顿操作停掉了运行中脚本。             <a href="https://www.cnblogs.com/xiaolincoding/p/12809812.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-30 16:54 小林coding 阅读 (422) 评论 (7)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12809812" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/04/19.html">2020年4月19日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12732052.html">
+    【图解】你还在为 TCP 重传、滑动窗口、流量控制、拥塞控制发愁吗？看完图解就不愁了
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：每日一句英语学习，每天进步一点点： 前言 前一篇「硬不硬你说了算！近 40 张图解被问千百遍的 TCP 三次握手和四次挥手面试题」得到了很多读者的认可，在此特别感谢你们的认可，大家都暖暖的。 来了，今天又来图解 TCP 了，小林可能会迟到，但不会缺席。 迟到的原因，主要是 TCP 巨复杂，它为了保证            <a href="https://www.cnblogs.com/xiaolincoding/p/12732052.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-19 16:22 小林coding 阅读 (383) 评论 (2)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12732052" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/04/05.html">2020年4月5日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12638546.html">
+    硬不硬你说了算！35 张图解被问千百遍的 TCP 三次握手和四次挥手面试题
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：每日一句英语学习，每天进步一点点： 前言 不管面试 Java 、C/C++、Python 等开发岗位， TCP 的知识点可以说是的必问的了。 任 TCP 虐我千百遍，我仍待 TCP 如初恋。 遥想小林当年校招时常因 TCP 面试题被刷，真是又爱又狠…. 过去不会没关系，今天就让我们来消除这份恐惧，微            <a href="https://www.cnblogs.com/xiaolincoding/p/12638546.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-05 19:10 小林coding 阅读 (445) 评论 (4)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12638546" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/03/25.html">2020年3月25日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12571184.html">
+    【面试必备】用了那么多次 ping，是时候知道 ping 是如何工作的了！
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：每日一句英语学习，每天进步一点点： 前言 在日常生活或工作中，我们在判断与对方网络是否畅通，使用的最多的莫过于 ping 命令了。 “那你知道 ping 是如何工作的吗？” —— 来自小林的灵魂拷问 可能有的小伙伴奇怪的问：“我虽然不明白它的工作，但 ping 我也用的贼 6 阿！” 你用的是 6             <a href="https://www.cnblogs.com/xiaolincoding/p/12571184.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-03-25 22:40 小林coding 阅读 (428) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12571184" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/03/17.html">2020年3月17日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12508499.html">
+    【面试必备】探究！一个数据包在网络中的心路历程
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：每日一句英语学习，每天进步一点点： 前言 想必不少小伙伴面试过程中，会遇到「当键入网址后，到网页显示，其间发生了什么」的面试题。 还别说，这真是挺常问的这题，前几天坐在我旁边的主管电话面试应聘者的时候，也问了这个问题。 这次，小林我带大家一起探究下，一个数据包在网络中的心路历程。 每个阶段都有数据包            <a href="https://www.cnblogs.com/xiaolincoding/p/12508499.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-03-17 08:51 小林coding 阅读 (393) 评论 (3)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12508499" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/03/08.html">2020年3月8日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12442435.html">
+    【面试必备】硬核！30 张图解 HTTP 常见的面试题
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：每日一句英语学习，每天进步一点点： 前言 在面试过程中，HTTP 被提问的概率还是比较高的。小林我搜集了 5 大类 HTTP 面试常问的题目，同时这 5 大类题跟 HTTP 的发展和演变关联性是比较大的，通过问答 + 图解的形式由浅入深的方式帮助大家进一步的学习和理解 HTTP 。 HTTP 基本概            <a href="https://www.cnblogs.com/xiaolincoding/p/12442435.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-03-08 14:14 小林coding 阅读 (2283) 评论 (18)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12442435" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/02/26.html">2020年2月26日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12369300.html">
+    「C++ 」借来的资源，何如还的潇洒？
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：有借有还是好习惯！            <a href="https://www.cnblogs.com/xiaolincoding/p/12369300.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-02-26 21:49 小林coding 阅读 (305) 评论 (3)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12369300" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/02/15.html">2020年2月15日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12311371.html">
+    「C++ 篇」答应我，别再if/else走天下了可以吗
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：再写出 if/else 连环，就锤自己！            <a href="https://www.cnblogs.com/xiaolincoding/p/12311371.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-02-15 13:09 小林coding 阅读 (391) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12311371" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/02/12.html">2020年2月12日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12300745.html">
+    学过 C++ 的你，不得不知的这 10 条细节！
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：每日一句英语学习，每天进步一点点： “Action may not always bring happiness; but there is no happiness without action.” 「行动不见得一定带来快乐，但没有行动就没有快乐。」 前言 我在阅读 《Effective C++             <a href="https://www.cnblogs.com/xiaolincoding/p/12300745.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-02-12 20:33 小林coding 阅读 (488) 评论 (2)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12300745" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/02/09.html">2020年2月9日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12288924.html">
+    精心整理「服务器Linux C/C++」 成长路程（附思维导图）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 我不是名校毕业，更没有大厂的背景，我只是一个毕业不到 2 年的普普通通的程序员，在摸爬滚打的工作这段时间里，深知了有一个「完整的知识体系」是非常重要的。当事人非常后悔没有在大学期间知道这个道理…… 众多大厂招人的需求也是非常注重此方面，毕竟我们不能单单只是一个只会写代码的程序员，更应该成为一个            <a href="https://www.cnblogs.com/xiaolincoding/p/12288924.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-02-09 21:44 小林coding 阅读 (389) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12288924" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/xiaolincoding/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 小林coding
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

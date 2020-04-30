@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="因为项目中需要用到大量动画效果，前期尝试过几种方案，比如GIF、帧动画、lottie、SVGA等格式的动画渲染方案，发现都存在各式各样的问题。比如： 1，GIF格式。5秒的动画，一张图大小可能就会达到" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>对于WebP格式入门解读 - cryAllen - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=Z9Vw4btcgJmrpUEjY_SgebmTmDXJ_hPFoST7ad2aJp4" />
+    <link id="MainCss" rel="stylesheet" href="/skins/coffee/bundle-coffee.min.css?v=pdMIVgsH8kXt-vOWnlL0N20TlHt3UyP9HzGgocfsP4s" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/cr330326/custom.css?v=pedPGQ7SZsca0ZIvWWvrLLeJaxA=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee-mobile.min.css?v=na9bpAY4yh7uEWCcrXj3vfJM3VBse8YtU6-5fUUQPz0" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/cr330326/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/cr330326/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/cr330326/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
+    <script>
+        var currentBlogId = 97441;
+        var currentBlogApp = 'cr330326';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'coffee';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    <div id="page_begin_html">
+        <script>loadPageBeginHtml();</script>
+    </div>
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a href="https://www.cnblogs.com/cr330326/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/cr330326/">、、cryAllen</a>
+</h1>
+<h2>
+应用之美在于药到病除，不管黑猫白猫，能解决问题就是好猫。
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+	<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/cr330326/">
+首页</a>
+</li>
+	<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+	<li>
+</li>
+	<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+	<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/cr330326/rss/">
+订阅</a>
+	
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/cr330326/rss/">
+    <img src="/skins/coffee/images/xml.gif" alt="订阅" />
+</a></li>
+</ul>
+
+
+
+			<div class="blogStats">
+				
+				<!--done-->
+随笔- 
+74&nbsp;
+文章- 
+2&nbsp;
+评论- 
+123&nbsp;
+
+
+
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class = "postTitle">
+			
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/cr330326/p/12809418.html">对于WebP格式入门解读</a>
+
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p>因为项目中需要用到大量动画效果，前期尝试过几种方案，比如GIF、帧动画、lottie、SVGA等格式的动画渲染方案，发现都存在各式各样的问题。比如：</p>
+<p>1，GIF格式。5秒的动画，一张图大小可能就会达到5-10M，然后UI那边制作背景需要透明的效果做不了，打包下载压缩包所需要更多的流量。</p>
+<p>2，帧动画。简单说就是把GIF图片给拆开为一张张图，比如一秒20帧的GIF图被拆开为20张静态图，然后用程序代码组成一帧一帧渲染效果动画，但是缺点也是很明显，做不到动态更新，只能提前集成在本地资源中，这个方案也被否决掉。</p>
+<p>3，第三方动画渲染库。比如基于Airbnb开源的lottie库和YY出品的SVGA解析库，lottie解析格式是以后缀为.json文件，相比GIF文件，大小是小10倍以上，但是在CPU占用上却奇高无比。因为我们的项目针对没有GPU能力的车机系统，车机上的内置芯片性能比目前主流手机性能差很多。同样SVGA库也是因为CPU占用率高的问题被否决掉。</p>
+<p>基于目前已有的硬件条件，可能最希望是升级硬件设备，那样的话无论是对于UI和开发来说，都是皆大欢喜，UI可基于lottie做炫酷的动效，而开发也不会因为性能问题而进行各种评估。但现实往往是残酷的，只能基于目前车机条件进行开发，那么作为开发人员，当然是得想各种方法去满足产品需求了，那就把目光转移，后来转移到一种叫做「<strong>WebP</strong>」格式的图片。</p>
+<p>基于<strong>WebP</strong>格式做出来的图片，UI那边可以做透明的背景动效，我们开发这边测了下性能，发现CPU和内存占用也满足产品测的要求，正好折中是我们想要选择的解决方案。既然之前是没怎么听过，那么就有必须去了解下「<strong>WebP</strong>」是什么东西了。</p>
+<h3 id="介绍">介绍</h3>
+<p>对于之前没接触过的知识点，首先第一步是打Google，输入webp这四个字母，Google搜索出来的首页就会告诉你这是什么了，也就是What的定义。引用「<strong>WebP</strong>」官网定义的一句话：</p>
+<blockquote>
+<p>WebP is a modern <strong>image format</strong> that provides superior <strong>lossless and lossy</strong> compression for images on the web. Using WebP, webmasters and web developers can create smaller, richer images that make the web faster.</p>
+</blockquote>
+<p>进一步说，「<strong>WebP</strong>」是一种新的图片格式，可提供出色的无损和有损压缩，对于Web开发来说，可以创建更小和更丰富的图像。根据官网测试，WebP无损压缩的图片比PNG格式图片，文件大小上少 26%，WebP有损图片在同样 <a href="https://en.wikipedia.org/wiki/Structural_similarity">SSIM</a> 质量指标上比JPEG格式图片少25~34%，SSIM是一种衡量两张数字影像相似的指标。</p>
+<p>官网给出有损压缩测试方法：</p>
+<ol>
+<li>将PNG图片设置不同的压缩参数压缩成JPEG图片，记录压缩后的对比的SSIM。</li>
+<li>将同一张PNG图片压缩成WebP图片，压缩的WebP图片的SSIM指标必须比1中记录的SSIM高。</li>
+</ol>
+<p>对比图如下：</p>
+<p><img src="https://img2020.cnblogs.com/blog/331079/202004/331079-20200430160359180-761780346.png" alt="对比图"></p>
+<p>同样WebP与JPG格式进行加载时间对比，可以发现WebP优秀很多。</p>
+<p><img src="https://img2020.cnblogs.com/blog/331079/202004/331079-20200430160420287-760448363.jpg" alt="图片数量"></p>
+<p><img src="https://img2020.cnblogs.com/blog/331079/202004/331079-20200430160428228-1201018205.jpg" alt="加载时间"></p>
+<p>从图中可以看到大小和图片加载速度上比jpg格式优胜很多，对于web页面来说，文件体积减少了，加载时间缩短了，那么页面的渲染速度加快了，特别是图片越来越多的情况下，能对性能进行提升和带宽节省。</p>
+<h3 id="对比gif">对比GIF</h3>
+<p>对于项目中要用到各种动效图片，大部分人首先想到是GIF格式的图片，那么相比GIF，WebP有什么优势呢？</p>
+<ol>
+<li>支持有损和无损压缩，并且可以合并有损和无损图片帧。</li>
+<li>体积会更小，这点是很关键，亲测下来有损的图片可以减少60%的体积，而无损可以减少20%的体积。</li>
+<li>与GIF的8位颜色和1位alpha相比，支持24-bitRGB颜色和Alpha通道，对于UI设计来说更友好和更少限制，做出更炫酷的动效。</li>
+<li>有动画、关键帧、metadate、颜色配置文件等数据，有损压缩是调节的。</li>
+</ol>
+<h3 id="webp一些劣势">WebP一些劣势</h3>
+<ol>
+<li>WebP的直线解码比GIF占用更多的CPU资源，有损WebP的解码时间是GIF的2.2倍，而无损WebP的解码时间是GIF的1.5倍，因此在客户端来说，对比GIF格式，WebP解码需要更多CPU计算资源。</li>
+<li>相比GIF来说，使用的普遍性不高，相关资料比较少，需要去解读官方文档。</li>
+<li>各个端支持情况不一，需要自己写个解释器去渲染WebP格式的图片。</li>
+<li>如果要迁移的话，迁移成本较大，需要对所有图片重新编码，考虑到对旧版的支持，需要额外开辟空间存两种格式的图片。</li>
+</ol>
+<h3 id="解码器设计">解码器设计</h3>
+<p>对于Android系统来说，WebP 在Android 4.0及以上原生支持，对于4.0以下可以使用官方提供提供的<a href="https://github.com/alexey-pelykh/webp-android-backport">编解码库</a>，但现在主流的手机上，Android 4.0以下已经可以忽略不计了，反而对于在IOT设备上，则有可能存在低版本，因此对于此类开发项目，如果选择WebP格式则需要事先评估下了。</p>
+<p>从官网的描述来看，WebP是使用VP8关键帧编码以有损方式进行图像数据压缩，也就是说如果要支持解码的话，我们需要对这个VP8算法进行解码。WebP容器，也就是WebP的RIFF容器是支持在WebP的基本用例的功能。</p>
+<p>WebP文件格式基于RIFF（资源交换文件格式）文档格式。具体格式定义如下：</p>
+<pre><code class="language-java"> 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                         Chunk FourCC                          |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                          Chunk Size                           |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                         Chunk Payload                         |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</code></pre>
+<p>RIFF文件的基本元素是一个块。它包括了Chunk FourCC 、  Chunk Size、  Chunk Payload三部分 。其中Chunk FourCC是一个32位ASCII编码的块文件的唯一标识。 Chunk Size则代表该块文件的大小， Chunk Payload则是数据有效承载，如果“块大小”为奇数，则添加一个填充字节（应为0）。</p>
+<p>我们常用<strong>ChunkHeader('ABCD')</strong>来描述RIFF文件，这里ABCD则是FourCC单个块，则该元素大小为8个字节。</p>
+<p>那么接下去看WebP文件头，具体格式如下：</p>
+<pre><code class="language-java"> 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|      'R'      |      'I'      |      'F'      |      'F'      |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                           File Size                           |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|      'W'      |      'E'      |      'B'      |      'P'      |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</code></pre>
+<p>1，<strong>'RIFF': 32 bits</strong>：32位 ASCII字符“ R”，“ I”，“ F”，“ F”。</p>
+<p>2，文件大小，32位，从偏移量8开始的文件大小，以字节为单位。此字段的最大值为2 ^ 32减去10个字节，因此，整个文件的大小最多为4GiB减去2个字节。</p>
+<p>3，<strong>'WEBP': 32 bits</strong>：ASCII字符“ W”，“ E”，“ B”，“ P”。</p>
+<p>那么对于包含多帧动画为主的图片，它的头文件如何呢，具体如下：</p>
+<pre><code class="language-java"> 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                      ChunkHeader('ANIM')                      |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                       Background Color                        |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|          Loop Count           |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</code></pre>
+<p>Background Color：画布的默认背景颜色，以[B，G，R，Alpha]字节顺序排列，此颜色可用于填充框架周围画布上未使用的空间，以及第一帧的透明像素。处置方法为1时也使用背景色。</p>
+<p>Loop Count：循环播放动画的次数。 0表示无限循环。</p>
+<p>除了这几个文件头格式之外，还有其他几个文件头格式，比如VP8X、VP8、VP8L、ANMF、ICCP等，具体格式可以在 <a href="https://developers.google.cn/speed/webp/docs/riff_container#extended_file_format">Extended File Format</a> 查看。基于Android系统的话，主要是以VP8X、VP8、VP8算法解码，对块文件进行解析，代码如下：</p>
+<pre><code class="language-java">static BaseChunk parseChunk(WebPReader reader) throws IOException {
+        //@link {https://developers.google.com/speed/webp/docs/riff_container#riff_file_format}
+        int offset = reader.position();
+        int chunkFourCC = reader.getFourCC();
+        int chunkSize = reader.getUInt32();
+        BaseChunk chunk;
+        if (VP8XChunk.ID == chunkFourCC) {
+            chunk = new VP8XChunk();
+        } else if (ANIMChunk.ID == chunkFourCC) {
+            chunk = new ANIMChunk();
+        } else if (ANMFChunk.ID == chunkFourCC) {
+            chunk = new ANMFChunk();
+        } else if (ALPHChunk.ID == chunkFourCC) {
+            chunk = new ALPHChunk();
+        } else if (VP8Chunk.ID == chunkFourCC) {
+            chunk = new VP8Chunk();
+        } else if (VP8LChunk.ID == chunkFourCC) {
+            chunk = new VP8LChunk();
+        } else if (ICCPChunk.ID == chunkFourCC) {
+            chunk = new ICCPChunk();
+        } else if (XMPChunk.ID == chunkFourCC) {
+            chunk = new XMPChunk();
+        } else if (EXIFChunk.ID == chunkFourCC) {
+            chunk = new EXIFChunk();
+        } else {
+            chunk = new BaseChunk();
+        }
+        chunk.chunkFourCC = chunkFourCC;
+        chunk.payloadSize = chunkSize;
+        chunk.offset = offset;
+        chunk.parse(reader);
+        return chunk;
+    }
+</code></pre>
+<p>在对算法解码之前，需要把WebP格式文件加载到内存中去，此时就需要用到Reader这个读写器，我们从官网的定义可以看到，读取WebP文件的代码称为读取器，而写入WebP文件的代码称为写入器。那么这个涉及到文件I/O的读写，数据流的读取和写入问题。</p>
+<p>具体定义读取器的接口代码如下：</p>
+<pre><code class="language-java">public interface Reader {
+    long skip(long total) throws IOException;
+
+    byte peek() throws IOException;
+
+    void reset() throws IOException;
+
+    int position();
+
+    int read(byte[] buffer, int start, int byteCount) throws IOException;
+
+    int available() throws IOException;
+
+    /**
+     * close io
+     */
+    void close() throws IOException;
+
+    InputStream toInputStream() throws IOException;
+}
+</code></pre>
+<p>具体文件读取可以从文件、字节流等地方获取。读取数据之后，就需要对数据进行解析，我们知道如果是动画效果的图片，本质是以帧集合组成的内容，无论是GIF图支持WebP格式的动画图，本质也是一帧一帧进行渲染。好比我们看到的Android渲染视图是以一秒60帧，所以我们看到如果每帧超过16ms的话，就容易引起卡顿的原因。</p>
+<p>因此对于帧渲染接口的定义就显得很关键了，具体接口定义如下：</p>
+<pre><code class="language-java">public abstract class Frame&lt;R extends Reader, W extends Writer&gt; {
+    protected final R reader;
+    public int frameWidth;
+    public int frameHeight;
+    public int frameX;
+    public int frameY;
+    public int frameDuration;
+
+    public Frame(R reader) {
+        this.reader = reader;
+    }
+
+    public abstract Bitmap draw(Canvas canvas, Paint paint, int sampleSize, Bitmap reusedBitmap, W writer);
+}
+</code></pre>
+<p>一帧可以理解为一张静态图，如果有20帧组成的动画，可以理解成有20张图片按照连贯顺序一张张过一遍，那就形成了有动画的效果。所以我们要解析动画，本质是还是去解析每张静态图，通过每张图的绘制，把整个动画给绘制出来。这一张图片就包括宽度、高度、在屏幕上的横向、纵向坐标、运行时间等，但最关键还是需要把图会绘制出来，这里面就是draw方法的重写。</p>
+<p>关于draw方法重载，还是以绘制图片为主，具体代码如下：</p>
+<pre><code class="language-java">public Bitmap draw(Canvas canvas, Paint paint, int sampleSize, Bitmap reusedBitmap, WebPWriter writer) {
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = false;
+        options.inSampleSize = sampleSize;
+        options.inMutable = true;
+        options.inBitmap = reusedBitmap;
+        int length = encode(writer);
+        byte[] bytes = writer.toByteArray();
+        Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, length, options);
+        assert bitmap != null;
+        if (blendingMethod) {
+            paint.setXfermode(null);
+        } else {
+            paint.setXfermode(PORTERDUFF_XFERMODE_SRC_OVER);
+        }
+        canvas.drawBitmap(bitmap, (float) frameX * 2 / sampleSize, (float) frameY * 2 / sampleSize, paint);
+        return bitmap;
+    }
+</code></pre>
+<p>我们知道Bitmap在Android中指的是一张图片，可以是png格式也可以是jpg等其他常见的图片格式。BitmapFactory类提供了四类方法：decodeFile、decodeResource、decodeStream和decodeByteArray，分别用于支持从文件系统、资源、输入流以及字节数组中加载出一个Bitmap对象，其中decodeFile和decodeResource又间接调用了decodeStream方法，这四类方法最终是在Android的底层实现的，对应着BitmapFactory类的几个native方法。</p>
+<p>那么该高效地加载Bitmap呢，其实核心思也很简单，就是采用BitmapFactory.Options来加载所需尺寸的图片。主要是用到它的inSampleSize参数，即采样率。当inSampleSize为1时，采样后的图片大小为图片的原始大小，当inSampleSize大于1时，比如为2，那么采样后的图片其宽/宽均为原图大小的1/2，而像素数为原图的1/4，其占有的内存大小也为原图的1/4。从最新官方文档中指出，inSampleSize的取值应该是2的指数，比如1、2、4、8、16等等。</p>
+<p>通过采样率即可有效地加载图片，那么到底如何获取采样率呢，获取采样率也很简单，循序如下流程：</p>
+<ul>
+<li>将BitmapFactory.Options的inJustDecodeBounds参数设为True并加载图片</li>
+<li>从BitmapFactory.Options中取出图片的原始宽高信息，他们对应于outWidth和outHeight参数</li>
+<li>根据采样率的规则并结合目标View的所需大小计算出采样率inSampleSize</li>
+<li>将BitmapFactory.Options的inJustDecodeBounds参数设为False，然后重新加载图片。</li>
+</ul>
+<p>你看设计到最后，本质还是把由很多帧组成的动画格式，拆分到具体每一帧的图片，针对图片进行图片帧绘制，进而把动画的效果给渲染出来。</p>
+<h3 id="总结">总结</h3>
+<p>总的来说，不同图片显示选择是根据具体业务场景来做评估，像我们最近在开发的项目中，主要是以图片形象为主，那么就会过多关注有关图片的CPU使用率和内存占用率的比例。如果发现常规的图片格式不满足需求，那么就是需要调研和寻找不同的解决方案。这本来就是没有固定的一套解决方案，只有相对合适的解决方案，因此，无论是从UI角度，还是从开发角度，甚至是产品角度，都得寻得整个产品中平衡度，寻找合适点，是能满足各方需求，进而打造更完善的产品应用。</p>
+<p>参考地址：</p>
+<p>1，<a href="https://developers.google.cn/speed/webp">https://developers.google.cn/speed/webp</a></p>
+<p>2，<a href="https://developers.google.cn/speed/webp/docs/riff_container">https://developers.google.cn/speed/webp/docs/riff_container</a></p>
+<p>2，<a href="https://github.com/penfeizhou/APNG4Android">https://github.com/penfeizhou/APNG4Android</a></p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+		</div>
+		<div class="postDesc">posted @ 
+<span id="post-date">2020-04-30 16:06</span>&nbsp;
+<a href="https://www.cnblogs.com/cr330326/">cryAllen</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12809418" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12809418);return false;">收藏</a></div>
+	</div>
+	
+	
+</div><!--end: topics 文章、评论容器-->
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 97441, cb_blogApp = 'cr330326', cb_blogUserGuid = '274fe940-ddd9-e011-8ee0-842b2b196315';
+    var cb_entryId = 12809418, cb_entryCreatedDate = '2020-04-30 16:06', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div></div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script></div>
+			
+			<DIV id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</DIV>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 cryAllen
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    <div id="page_end_html">
+        <!--评论，生成气泡效果标签代码-->
+  <script type="text/javascript" language="javascript"> 
+      $(document).ready(function() {
+          var commentTime = setInterval(function(){if($("#comments_pager_bottom").length>0){CommentBubble();clearTimeout(commentTime);}},50);
+      }); 
+      function CommentBubble()
+      {
+  var w1 = '<div class="list">' +
+          '<table class="out" border="0" cellspacing="0" cellpadding="0"> ' +
+             '<tr>' +
+                 '<td class="icontd" align="right" valign="bottom">' +
+                     '<img src="https://pic.cnblogs.com/avatar/a331079.jpg" width="70px" height="57px"/>' +
+                 '</td>' +
+                 '<td align="left" valign="bottom" class="q">' +
+                     '<table border="0" cellpadding="0" cellspacing="0" style=""> ' +
+                         '<tr><td class="topleft"></td><td class="top"></td><td class="topright"></td></tr> ' +
+                         '<tr><td class="left"></td> <td align="left" class="conmts"><p>';
+  
+  
+         var w2 = '</p> </td> <td class="right"></td></tr> ' +
+                         '<tr><td class="bottomleft"></td><td class="bottom"></td><td class="bottomright"></td></tr> ' +
+                     '</table>' +
+                 '</td> ' +
+             '</tr> ' +
+         '</table> ' +
+     '</div>';
+  
+         $.each($(".blog_comment_body"), function(i, t) {
+             $(t).html(w1 + $(t).html() + w2);
+         });
+ $(".louzhu").closest(".feedbackItem").find(".out").removeClass("out").addClass("inc");
+         /*.find(".q").attr("align","right");*/
+         }
+ </script>
+    </div>
+</body>
+</html>

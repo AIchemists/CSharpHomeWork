@@ -1,0 +1,940 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="最近被安排开发文件存储微服务，要求是能够通过配置来无缝切换我们公司内部研发的文件存储系统，FastDFS，MongDb GridFS，阿里云OSS，腾讯云OSS等。根据任务紧急度暂时先完成了通过配置来" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>用asp.net core结合fastdfs打造分布式文件存储系统 - 依乐祝 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=Z9Vw4btcgJmrpUEjY_SgebmTmDXJ_hPFoST7ad2aJp4" />
+    <link id="MainCss" rel="stylesheet" href="/skins/simplememory/bundle-simplememory.min.css?v=OL4qeo1LNGlN1rKIhv5UctANvt0M6Nx6kLzr_ffx3Xk" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/yilezhu/custom.css?v=G4kmIzxNvZpsGA3Z2E38nZPElbU=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory-mobile.min.css" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/yilezhu/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/yilezhu/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/yilezhu/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
+    <script>
+        var currentBlogId = 435194;
+        var currentBlogApp = 'yilezhu';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'SimpleMemory';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    <div id="page_begin_html">
+        <div class="c-portrait">
+  <img src="https://pic.cnblogs.com/avatar/1377250/20180629145832.png" alt="依乐祝" />
+  <h1><a href="https://www.cnblogs.com/yilezhu/">依乐祝</a></h1>
+  <h2>    授之以鱼，不如授之以渔！右侧微信扫描二维码关注我们“DotNetCore实战”吧。另附.NET Core实战项目交流群：637326624 欢迎大家加群相互交流！</h2>
+  <div class="c-social">
+    <a href="https://github.com/yilezhu" target="_blank">
+      <svg height="28" width="28" style="fill: currentColor;" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+      </svg>
+    </a>
+  </div>
+</div>
+    </div>
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/yilezhu/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/yilezhu/">依乐祝（祝雷）</a>
+</h1>
+<h2>
+授之以鱼，不如授之以渔！右侧微信扫描二维码关注我们“DotNetCore实战”吧。另附.NET Core实战项目交流群：637326624 欢迎大家加群相互交流！
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/yilezhu/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E4%BE%9D%E4%B9%90%E7%A5%9D">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/yilezhu/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+94&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+1503</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/yilezhu/p/12797543.html">用asp.net core结合fastdfs打造分布式文件存储系统</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p>最近被安排开发文件存储微服务，要求是能够通过配置来无缝切换我们公司内部研发的文件存储系统，FastDFS，MongDb GridFS，阿里云OSS，腾讯云OSS等。根据任务紧急度暂时先完成了通过配置来无缝切换内部文件系统以及FastDFS。至于MongDb GridFS，阿里云OSS，腾讯云OSS等则后期需要的话再开发对应的提供者程序集合。</p>
+<blockquote>
+<p>作者：依乐祝<br>
+首发公众号：DotNetCore实战<br>
+原文链接： <a href="https://www.cnblogs.com/yilezhu/p/12797543.html">https://www.cnblogs.com/yilezhu/p/12797543.html</a></p>
+</blockquote>
+<p>今天主要是对开发过程，以及对FastDFS这个通用的分布式文件存储服务的单机及集群安装部署过程做个总结。希望对想要自建分布式文件系统的朋友有所帮助。</p>
+<h3 id="什么是fastdfs">什么是FastDFS</h3>
+<p>这里先简单介绍下分布式文件存储系统。<br>
+FastDFS 是一个开源的高性能分布式文件系统（DFS）。 它的主要功能包括：文件存储，文件同步和文件访问，以及高容量和负载平衡。主要解决了海量数据存储问题，特别适合以中小文件（建议范围：4KB &lt; file_size &lt;500MB）为载体的在线服务。<br>
+FastDFS 系统有三个角色：跟踪服务器(Tracker Server)、存储服务器(Storage Server)和客户端(Client)。<br>
+<strong>　　Tracker Server</strong>：跟踪服务器，主要做调度工作，起到均衡的作用；负责管理所有的 storage server和 group，每个 storage 在启动后会连接 Tracker，告知自己所属 group 等信息，并保持周期性心跳。<br>
+<strong>　　Storage Server</strong>：存储服务器，主要提供容量和备份服务；以 group 为单位，每个 group 内可以有多台 storage server，数据互为备份。<br>
+<strong>　　Client</strong>：客户端，上传下载数据的服务器，也就是我们自己的项目所部署在的服务器。<br>
+<img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091524930-142326034.png" alt=""></p>
+<p>FastDFS开源地址：<a href="https://github.com/happyfish100">https://github.com/happyfish100</a></p>
+<h3 id="fastdfs的单机版安装">FastDFS的单机版安装</h3>
+<p>这里先简单介绍下单机版的安装，跟着做你也可以从0还是搭建一个单机版的FastDFS。集群版也是在单机版基础上安装的。</p>
+<h4 id="第一步-安装相关工具">第一步 安装相关工具</h4>
+<p>如果已经安装和wget可以跳过这一步</p>
+<pre><code class="language-shell">yum -y install vim wget unzip
+</code></pre>
+<p>-y：不经过询问直接同意所有操作<br>
+vim：linux上面一个比较好用的文本编辑软件<br>
+wget：linux上文件下载工具</p>
+<h4 id="第二步-安装相关依赖">第二步 安装相关依赖</h4>
+<pre><code class="language-shell">yum install -y gcc-c++ perl
+</code></pre>
+<h4 id="第三步-安装libfastcommon">第三步 安装libfastcommon</h4>
+<p>大家可以直接到github上面先找到ibfastcommon。这里为了大家方便查找。我已经把把链接给大家整理好了<br>
+<a href="https://github.com/happyfish100/libfastcommon">libfastcommon</a><br>
+这里大家可以先下载到本地，然后再传至服务器上面。这里我使用的是FinalShell。具体操作就不在这里详细说了。<br>
+这里目录为：/root/fastdfs/<br>
+下载下来的是zip格式压缩包，然后，我们解压zip</p>
+<pre><code class="language-shell">unzip libfastcommon-master.zip
+</code></pre>
+<p>进入到刚刚解压的文件里面</p>
+<pre><code class="language-shell">cd libfastcommon-master/
+</code></pre>
+<p>进行编译安装</p>
+<pre><code class="language-shell">./make.sh &amp;&amp; ./make.sh install
+</code></pre>
+<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091548577-1102516514.png" alt=""><br>
+``shell<br>
+./make.sh &amp;&amp; ./make.sh install</p>
+<pre><code>
+
+#### 第五步 修改配置文件
+切换到配置文件目录下
+```shell
+cd /etc/fdfs/
+</code></pre>
+<p>查看所有配置文件<br>
+使用ls命令就行了<br>
+<img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091614818-3875521.png" alt=""></p>
+<p>去除所有的.sample后缀</p>
+<pre><code class="language-shell">cp client.conf.sample client.conf
+cp storage.conf.sample storage.conf
+cp storage_ids.conf.sample storage_ids.conf
+cp tracker.conf.sample tracker.conf
+</code></pre>
+<p>我们再次使用ls命令查看<br>
+<img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091639473-1656227136.png" alt=""></p>
+<p>可以看到我们已经去除了所有的.sample后缀<br>
+下一步，创建文件夹，分别创建client，storage，tracker文件夹</p>
+<pre><code class="language-shell">mkdir -p /home/software/fastfdfs/data/client
+mkdir -p /home/software/fastfdfs/data/storage
+mkdir -p /home/software/fastfdfs/data/tracker
+</code></pre>
+<h5 id="clientconfig配置">client.config配置</h5>
+<p>下面我们开始配置文件修改，首先修改的是clietn.conf,使用vim编辑器进行文件的编辑</p>
+<pre><code class="language-shell">vim client.conf
+</code></pre>
+<p>使用 :set number 显示行数<br>
+修改第11行，确定日志文件的存储路径，这里用我们刚刚创建client文件夹路径</p>
+<blockquote>
+<p>base_path = /home/software/fastdfs/data/client</p>
+</blockquote>
+<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091705532-570380366.png" alt=""></p>
+<p>修改第22 行，tracker的地址与端口，根据实际情况进行修改，我的是192.168.1.14。</p>
+<blockquote>
+<p>这里貌似有两个tracker_server,毕竟是单机版部署因此我这里注释了一个<br>
+tracker_server = 192.168.1.14:22122</p>
+</blockquote>
+<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091718027-569367786.png" alt=""></p>
+<p>修改号之后记得保存修改！</p>
+<h5 id="storageconf修改">storage.conf修改</h5>
+<p>下面我们修改storage.conf。同上是用vim进行修改<br>
+首先我们修改下11行的分组设置</p>
+<blockquote>
+<p>group_name = group1</p>
+</blockquote>
+<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091744851-196551674.png" alt=""></p>
+<p>接下来修改49行的基础路径，这里也用上面我们已经创建的路径</p>
+<blockquote>
+<p>base_path = /home/software/fastdfs/data/storage</p>
+</blockquote>
+<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091807631-161315846.png" alt=""></p>
+<p>修改第129行的storage路径。</p>
+<blockquote>
+<p>store_path0 = /home/software/fastdfs/data/storage<br>
+注意：这里提示下：存储路径的顺序很重要，不要弄乱了，<br>
+基础路径应该独立于存储路径，即尽量让这两个路径不一样。这里我设置了一样</p>
+</blockquote>
+<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091823136-1792880224.png" alt=""></p>
+<p>修改第145行 ，配置tracker的IP地址与端口。至于如何填写这个地址，上面配置client.conf的时候，我们就已经说过了。</p>
+<blockquote>
+<p>tracker_server = 192.168.1.14:22122</p>
+</blockquote>
+<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091832977-1282205837.png" alt=""></p>
+<h5 id="trackerconf-配置">tracker.conf 配置</h5>
+<p>现在修改tracker.conf文件<br>
+修改第23行，修改tracker的基础路径。这个路径的文件夹我们刚刚在上面已经创建过了</p>
+<blockquote>
+<p>base_path = /home/software/fastdfs/data/tracker</p>
+</blockquote>
+<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091844369-581951350.png" alt=""></p>
+<p>修改第57行 归属组设置</p>
+<blockquote>
+<p>store_group = group1</p>
+</blockquote>
+<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091856512-1718476879.png" alt=""></p>
+<h4 id="第六步-启动tracker-与storage">第六步 启动tracker 与storage</h4>
+<p>启动tracker</p>
+<pre><code class="language-shell">fdfs_trackerd /etc/fdfs/tracker.conf start
+</code></pre>
+<p>启动storage</p>
+<pre><code class="language-shell">fdfs_storaged /etc/fdfs/storage.conf start
+</code></pre>
+<p>测试是否启动成功，我们尝试上传文件。我的root文件夹下有一张图片</p>
+<pre><code class="language-shell">fdfs_test /etc/fdfs/client.conf upload /root/fastdfs/test.jpeg
+</code></pre>
+<p>如上图所示表示上传成功。</p>
+<h4 id="第七步-安装nginx访问图片">第七步 安装nginx访问图片</h4>
+<p>这里由于服务器已经安装了nginx，因此需要在现有的nginx的版本基础上安装新的fastdfs的模块。，安装方法可能略有不同<br>
+首先查看下nginx的版本</p>
+<pre><code class="language-shell">nginx -V
+</code></pre>
+<p>这里需要注意一下，如果你服务器上没有安装过nginx则需要先安装nginx的依赖，然后再进行安装</p>
+<pre><code class="language-shell">yum -y install gcc-c++ zlib-devel pcre-devel
+</code></pre>
+<p>如下图所示：<br>
+<img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091911162-1340095861.png" alt=""></p>
+<p>因此我们需要下载对应版本的源码</p>
+<pre><code class="language-shell">wget http://nginx.org/download/nginx-1.16.1.tar.gz
+</code></pre>
+<p>解压安装包</p>
+<pre><code class="language-shell">tar zxvf nginx-1.14.0.tar.gz
+</code></pre>
+<p>下载nginx的fastdfs模块，这里我已经帮大家把这个项目github地址整理好了。<br>
+<a href="https://github.com/happyfish100/fastdfs-nginx-module">astdfs-nginx-module</a><br>
+这这里我们可以先下载到自己电脑上，再上传服务器。<br>
+进行解压</p>
+<pre><code class="language-shell">unzip fastdfs-nginx-module-master.zip
+</code></pre>
+<p>这里由于我们已经安装了nginx，因此需要备份之前的nginx防止出现问题进行还原</p>
+<pre><code class="language-shell">mv /usr/sbin/nginx /usr/sbin/nginx.back
+cp -rf /etc/nginx/ /etc/nginx.back
+</code></pre>
+<p>切换到nginx压缩包的解压目录里面去</p>
+<pre><code class="language-shell">cd nginx-1.16.1
+</code></pre>
+<p>进行配置检测并且添加模块</p>
+<pre><code class="language-shell">./configure --prefix=/etc/nginx/ --sbin-path=/usr/sbin/nginx --add-module=/root/fastdfs/fastdfs-nginx-module-master/src/
+</code></pre>
+<blockquote>
+<p>--prefix : nginx的安装目录<br>
+--add-module：解压后模块所在目录，记得要加上src</p>
+</blockquote>
+<p>执行如下命令进行nginx的重新编译,如果之前已经安装了nginx则不能执行install，否则会覆盖之前的配置文件,也可以在安装后再把之前的配置覆盖过来。</p>
+<pre><code class="language-shell">make &amp;&amp; make install
+</code></pre>
+<p>拷贝编译后的nginx到原来的安装目录</p>
+<pre><code class="language-shell">cp objs/nginx /usr/sbin/nginx
+</code></pre>
+<p>重启nginx</p>
+<pre><code class="language-shell">systemctl restart nginx
+//第二种方式
+nginx -s reload
+
+//第一次安装,直接输入nginx
+nginx
+</code></pre>
+<p>切换至fastdfs的解压包里面去</p>
+<pre><code class="language-shell">cd /root/fastfdfs/fastdfs-master
+</code></pre>
+<p>进行文件的复制</p>
+<pre><code class="language-shell">cp conf/http.conf /etc/fdfs/
+cp conf/mime.types /etc/fdfs/
+</code></pre>
+<p>切换至fastdfs-nginx-module的解压目录下面</p>
+<pre><code class="language-shell">cd /root/fastdfs/fastdfs-nginx-module-master
+</code></pre>
+<p>进行配置文件的复制</p>
+<pre><code class="language-shell">cp src/mod_fastdfs.conf /etc/fdfs/
+</code></pre>
+<h5 id="mod_fastdfsconf配置">mod_fastdfs.conf配置</h5>
+<p>修改/etc/fdfs下面的mod_fastdfs.conf配置文件</p>
+<pre><code class="language-shell">vim /etc/fdfs/mod_fastdfs.conf
+</code></pre>
+<p>修改 40行，更改tracker的ip地址与端口</p>
+<blockquote>
+<p>tracker_server=192.168.1.14:22122</p>
+</blockquote>
+<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091931359-380216879.png" alt=""></p>
+<p>修改48行的group_name</p>
+<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091941138-439674347.png" alt=""></p>
+<p>修改53行 url地址中是否包含组名，如果链接中包含group则需要设置为true</p>
+<pre><code class="language-shell">url_have_group_name = true
+</code></pre>
+<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091952755-599123795.png" alt=""></p>
+<p>修改62行 storage所在目录</p>
+<pre><code class="language-shell">store_path0=/home/software/fastdfs/data/storage
+</code></pre>
+<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429092003044-2116938706.png" alt=""></p>
+<p>保存修改。</p>
+<h5 id="nginx修改">nginx修改</h5>
+<p>这里注意，每个笨的配置文件存储的方式不同，此步骤可能有所不同。<br>
+进行nginx配置文件的修改，我们可以切换到nginx的安装目录下面。也可以直接输入如下命令</p>
+<blockquote>
+<p>注意：这里我的nginx版本为1.16.1，配置文件为conf.d下面的所有的*.conf文件。因此我的输入命令如下：</p>
+</blockquote>
+<pre><code class="language-shell">vim /etc/nginx/conf.d/default.conf 
+</code></pre>
+<p>进行nginx.conf的修改，如下图所示：</p>
+<pre><code class="language-shell">      server {
+          listen       8888;
+          server_name  192.168.1.93;
+          
+          location ~/group([0-9])/M00 {
+              #root   html;
+              #index  index.html index.htm;
+              root    /home/software/fastdfs/data/storage/data;
+              ngx_fastdfs_module;
+          }
+      }
+</code></pre>
+<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429092014256-714610819.png" alt=""></p>
+<p>多个group的配置</p>
+<p>当配置多个组，且mod_fastdfs.conf 里面指定了url_have_group_name= true 时，配置方式:</p>
+<pre><code class="language-shell">location ~  /group([0-9]) /M00 {
+     root /home/software/fastdfs/data/storage/data;
+     ngx_fastdfs_module;
+}
+</code></pre>
+<p>比如:在group1上的 nginx 的nginx.conf 配置是</p>
+<pre><code class="language-shell">location  /group1/M00 {
+     root /home/software/fastdfs/data/storage/data;
+     ngx_fastdfs_module;
+}
+</code></pre>
+<p>比如:在group2上的 nginx 的nginx.conf 配置是</p>
+<pre><code class="language-shell">location   /group2/M00 {
+     root /home/software/fastdfs/data/storage/data;
+     ngx_fastdfs_module;
+}
+</code></pre>
+<p>查看nginx的配置文件是否有效</p>
+<pre><code class="language-shell">nginx -t
+
+</code></pre>
+<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429092027303-541329474.png" alt=""></p>
+<p>显示 is ok没有任何问题，现在启动nginx。这里我配置为开机自动启动</p>
+<pre><code class="language-shell">systemctl restart nginx
+// 第二种方式
+nginx -s reload
+</code></pre>
+<p>依照上面的方式，我们重新上传一张图片。并进行访问<br>
+测试是否启动成功，我们尝试上传文件。我的root文件夹下有一张图片</p>
+<pre><code>fdfs_test /etc/fdfs/client.conf upload /root/fastdfs/test.jpeg
+</code></pre>
+<p>上传成功，访问下面的地址<br>
+<img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429092037928-1967663304.png" alt=""></p>
+<h4 id="路径说明">路径说明</h4>
+<p>group1：表示这张图片被保存在了哪个组当中，<br>
+M00：代表磁盘目录，如果电脑只有一个磁盘那就只有M00， 如果有多个磁盘，那就M01、M02...等等。<br>
+00/00：代表磁盘上的两级目录，每级目录下是从00到FF共256个文件夹，两级就是256*256个。<br>
+wKgBE1r-fICAcd3kAAHY-4ojheI481.jpeg表示被存储到storage上的test.jpeg被重命名的名字，这样做的目的是为了防止图片名字重复。<br>
+我们到单机版的数据目录下查看一下是否有我们刚才上传的图片，发现是有的返回的图片信息中明确说明了存储在了group1下面。</p>
+<h3 id="fastdfs集群版的安装">FastDFS集群版的安装</h3>
+<p>这里集群版的安装是在单机版的基础上安装的。</p>
+<h4 id="机器准备">机器准备</h4>
+<table>
+<thead>
+<tr>
+<th>IP</th>
+<th>作用</th>
+<th>模块</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>192.168.1.14</td>
+<td>storage(group1)    tracker1</td>
+<td>fastdfs+nginx+fastdfs-nginx-module</td>
+</tr>
+<tr>
+<td>192.168.1.15</td>
+<td>storage(group1)</td>
+<td>fastdfs+nginx+fastdfs-nginx-module</td>
+</tr>
+<tr>
+<td>192.168.1.16</td>
+<td>storage(group2)   tracker2</td>
+<td>fastdfs+nginx+fastdfs-nginx-module</td>
+</tr>
+<tr>
+<td>192.168.1.93</td>
+<td>storage(group2)</td>
+<td>fastdfs+nginx+fastdfs-nginx-module</td>
+</tr>
+<tr>
+<td>192.168.1.197</td>
+<td>VIP（对外提供服务）</td>
+<td>nginx</td>
+</tr>
+</tbody>
+</table>
+<h4 id="安装步骤">安装步骤</h4>
+<h5 id="软件准备">软件准备</h5>
+<p>在所有服务器上创建如下目录用来存储需要安装的软件包</p>
+<pre><code class="language-shell">mkdir -p ~/fastdfs/
+</code></pre>
+<p>在tracker1上下载所需要的软件安装包，并放在如下目录下</p>
+<pre><code class="language-shell">~/fastdfs/
+</code></pre>
+<p>查看如下所示：<br>
+<img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429092051719-1686105740.png" alt=""></p>
+<p>进入对应的文件夹并拷贝对应的文件到其他几台服务器上：</p>
+<pre><code class="language-shell">scp ./* root@192.168.1.15:~/fastdfs/
+scp ./* root@192.168.1.16:~/fastdfs/
+scp ./* root@192.168.1.93:~/fastdfs/
+scp ./* root@192.168.1.197:~/fastdfs/
+</code></pre>
+<p>在storage服务器及tracker服务器都创建如下的文件夹，用来存放fastdfs的数据及日志文件</p>
+<pre><code class="language-shell">mkdir -p /home/software/fastfdfs/client
+mkdir -p /home/software/fastfdfs/storage
+mkdir -p /home/software/fastfdfs/tracker
+</code></pre>
+<p>在所有服务器上执行·如下命令安装相关工具</p>
+<pre><code class="language-shell">yum -y install vim wget unzip
+</code></pre>
+<p>在所有sotrage及tracker服务器上执行如下命令安装相关依赖</p>
+<pre><code class="language-shell">yum install -y gcc-c++ perl
+</code></pre>
+<h5 id="安装">安装</h5>
+<p>这些操作需要在所有storage及tracker服务器上都进行操作</p>
+<h5 id="storage及tracker服务器安装libfastcommon">storage及tracker服务器安装libfastcommon</h5>
+<p>在需要安装fastdfs的storage及tracker服务器上安装libfastcommon<br>
+这里我们进入安装文件目录~/fastdfs/，执行如下命令，解压并编译安装：</p>
+<pre><code class="language-shell">unzip libfastcommon-master.zip
+cd libfastcommon-master/
+./make.sh &amp;&amp; ./make.sh install
+</code></pre>
+<p>出现如下图所示则表示安装成功<br>
+<img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429092107917-1852051008.png" alt=""></p>
+<h5 id="storage及tracker服务器安装fastdfs">storage及tracker服务器安装fastdfs</h5>
+<p>在需要安装fastdfs的storage及tracker服务器上安装fastdfs<br>
+这里我们进入安装文件目录~/fastdfs/，执行如下命令，解压并编译安装：</p>
+<pre><code class="language-shell">unzip fastdfs-master.zip
+cd fastdfs-master/
+./make.sh &amp;&amp; ./make.sh install
+cp conf/http.conf /etc/fdfs/
+cp conf/mime.types /etc/fdfs/
+</code></pre>
+<p>进行文件的复制</p>
+<pre><code class="language-shell">cp conf/http.conf /etc/fdfs/
+cp conf/mime.types /etc/fdfs/
+</code></pre>
+<h5 id="修改配置文件">修改配置文件</h5>
+<p>切换到配置文件目录，并执行如下命令去除所有的.sample后缀：</p>
+<pre><code class="language-shell">cd /etc/fdfs/
+cp client.conf.sample client.conf
+cp storage.conf.sample storage.conf
+cp storage_ids.conf.sample storage_ids.conf
+cp tracker.conf.sample tracker.conf
+</code></pre>
+<p>修改client.config配置</p>
+<blockquote>
+<p>需要测试的时候才需要配置此client.conf配置</p>
+</blockquote>
+<pre><code class="language-shell">vim client.conf
+</code></pre>
+<p>修改内容如下：</p>
+<pre><code class="language-shell">11 base_path = /home/software/fastdfs/client
+22 tracker_server = 192.168.1.14:22122
+</code></pre>
+<p>vim修改storage.conf <br>
+修改内容如下：</p>
+<pre><code class="language-shell">11  group_name = group1
+49  base_path = /home/software/fastdfs/storage
+129 /home/software/fastdfs/data/storage
+145 tracker_server = 192.168.1.14:22122
+</code></pre>
+<p>vim修改tracker.conf配置</p>
+<blockquote>
+<p>这里只有tracker服务器才需要配置此配置及 14跟16</p>
+</blockquote>
+<p>修改内容如下：</p>
+<pre><code class="language-shell">23   base_path = /home/software/fastdfs/tracker
+57   store_group = group1
+</code></pre>
+<h5 id="安装nginx">安装nginx</h5>
+<p>只有sotrage服务器及vip服务器需要安装nginx用来提供文件的访问<br>
+在安装nginx前需要安装相关的依赖并下载对应的源码，执行如下命令。此文件也保存到文件安装目录</p>
+<pre><code class="language-shell">yum -y install gcc-c++ zlib-devel pcre-devel
+wget http://nginx.org/download/nginx-1.16.1.tar.gz
+tar zxvf nginx-1.14.0.tar.gz
+</code></pre>
+<p>解压nginx的fastdfs模块,并进入到文件夹下进行配置文件的复制</p>
+<blockquote>
+<p>nginx的fastdfs模块在所有storage服务器上进行安装</p>
+</blockquote>
+<pre><code class="language-shell">unzip fastdfs-nginx-module-master.zip
+cd ~/fastdfs/fastdfs-nginx-module-master
+cp src/mod_fastdfs.conf /etc/fdfs/
+</code></pre>
+<p>进入到nginx源码目录，进行配置检测并添加对应的fastdfs模块。然后进行nginx的安装</p>
+<pre><code class="language-shell">./configure --prefix=/etc/nginx/ --sbin-path=/usr/sbin/nginx --add-module=/root/fastdfs/fastdfs-nginx-module-master/src/
+make &amp;&amp; make install
+#如有需要可以拷贝nginx到sbin目录
+cp objs/nginx /usr/sbin/nginx
+</code></pre>
+<h5 id="mod_fastdfsconf配置-2">mod_fastdfs.conf配置</h5>
+<p>vim修改/etc/fdfs下面的mod_fastdfs.conf配置文件</p>
+<pre><code class="language-shell">40   tracker_server=192.168.1.14:22122
+48   group_name=group1
+53   url_have_group_name = true
+62   store_path0=/home/software/fastdfs/storage
+</code></pre>
+<h5 id="nginx配置修改">nginx配置修改</h5>
+<p>只有sotrage服务器及vip服务器需要安装，<br>
+group1的服务器需要新增如下server配置，root路径为storage的data路径</p>
+<pre><code class="language-shell">      server {
+          listen       8888;
+          server_name  192.168.1.93;
+          
+          location /group1/M00 {
+              #root   html;
+              #index  index.html index.htm;
+              root    /home/software/fastdfs/storage/data;
+              ngx_fastdfs_module;
+          }
+      }
+</code></pre>
+<p>group2的服务器上新增如下server配置，root路径为storage的data路径</p>
+<pre><code class="language-shell">      server {
+          listen       8888;
+          server_name  192.168.1.93;
+          
+          location /group2/M00 {
+              #root   html;
+              #index  index.html index.htm;
+              root    /home/software/fastdfs/storage/data;
+              ngx_fastdfs_module;
+          }
+      }
+</code></pre>
+<p>vip服务器的nginx配置如下：</p>
+<pre><code class="language-shell">#设置 group1 的服务器
+upstream fdfs_group1 {
+    server 192.168.1.14:8888 weight=1 max_fails=2 fail_timeout=30s;
+    server 192.168.1.15:8888 weight=1 max_fails=2 fail_timeout=30s;
+}
+
+#设置 group2 的服务器
+upstream fdfs_group2 {
+    server 192.168.1.16:8888 weight=1 max_fails=2 fail_timeout=30s;
+    server 192.168.1.93:8888 weight=1 max_fails=2 fail_timeout=30s;
+}
+
+server {
+    listen       80;
+    server_name  192.168.1.197;
+
+    #charset koi8-r;
+    #access_log  /var/log/nginx/host.access.log  main;
+	
+	#设置默认路径
+    location / {
+        root   html;
+        index  index.html index.htm;
+    }
+
+	#设置 group 的负载均衡参数
+    location /group1/M00 {
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_pass http://fdfs_group1;
+    }
+
+    location /group2/M00 {
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_pass http://fdfs_group2;
+    }
+}
+</code></pre>
+<p>查看nginx的配置文件是否有效</p>
+<pre><code class="language-shell">nginx -t
+</code></pre>
+<p>显示 is ok没有任何问题，现在启动nginx。这里我配置为开机自动启动</p>
+<pre><code class="language-shell"># 服务形式的nginx重启方式
+systemctl restart nginx
+//第二种方式
+nginx -s reload
+
+//第一次安装,直接输入nginx
+nginx
+</code></pre>
+<p>依照上面的方式，我们重新上传一张图片。并进行访问<br>
+测试是否启动成功，我们尝试上传文件。我的root文件夹下有一张图片</p>
+<pre><code>fdfs_test /etc/fdfs/client.conf upload /root/fastdfs/test.jpeg
+</code></pre>
+<p>上传成功，访问下面的地址<br>
+<img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429092129990-1135321420.png" alt=""></p>
+<h3 id="aspnet-core操作fastdfs">asp.net core操作FastDFS</h3>
+<p>这里的微服务是基于abp vnext的。只是在应用层进行相关的服务开发。这里需要说明下，这里我是使用工厂模式，根据配置来创建对应的文件操作提供者，进而对对应的文件服务器上的文件进行操作的。这里我只摘录FastDFS相关的代码供大家参考。</p>
+<h4 id="第一步-安装对应的nuget包">第一步 安装对应的nuget包</h4>
+<p>这里我用的是更新时间相对比较近下载量相对比较多的作者的nuget包，</p>
+<pre><code class="language-powershell">Install-Package FastDFSNetCore -Version 1.2.5
+</code></pre>
+<h4 id="第二步，编写一个fastdfsprovider">第二步，编写一个FastDFSProvider</h4>
+<p>具体的代码如下所示：</p>
+<pre><code class="language-csharp"> /// &lt;summary&gt;
+    /// 功能介绍:FastDFS提供者
+    /// 作者:lzhu
+    /// 创建日期:2020/4/23 19:54:35
+    /// &lt;/summary&gt;
+public class FastDFSProvider : IStorageProvider, ITransientDependency
+    {
+        /// &lt;summary&gt;
+        /// 提供程序名称
+        /// &lt;/summary&gt;
+        public string ProviderName =&gt; &quot;FastDFS&quot;;
+
+        //配置
+        private readonly FastDFSConfig _fastDFSConfig;
+
+
+        /// &lt;summary&gt;
+        /// 构造函数
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;fastDFSConfig&quot;&gt;注入配置数据&lt;/param&gt;
+        public FastDFSProvider(FastDFSConfig fastDFSConfig)
+        {
+            _fastDFSConfig = fastDFSConfig ?? throw new ArgumentNullException(nameof(fastDFSConfig));
+            string[] trackers = fastDFSConfig.Trackers.Split(',', StringSplitOptions.RemoveEmptyEntries);
+            var trackerIPs = new List&lt;IPEndPoint&gt;();
+            foreach (var onetracker in trackers)
+            {
+                trackerIPs.Add(new IPEndPoint(IPAddress.Parse(onetracker), fastDFSConfig.Port));
+            }
+            ConnectionManager.Initialize(trackerIPs);
+        }
+
+        /// &lt;summary&gt;
+        /// 通过文件名删除对应的文件
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;objectName&quot;&gt;对象名称&lt;/param&gt;
+        /// &lt;param name=&quot;groupName&quot;&gt;分组名称&lt;/param&gt;
+        /// &lt;returns&gt;是否成功&lt;/returns&gt;
+        public async Task&lt;bool&gt; DeleteObjectByNameAsync(string objectName, string groupName = &quot;&quot;)
+        {
+            RestoreFileName(objectName, out string fileName, out groupName);
+            await FastDFSClient.RemoveFileAsync(groupName, fileName);
+            return true;
+        }
+
+        /// &lt;summary&gt;
+        /// 获取网关连接
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;网关连接&lt;/returns&gt;
+        public Task&lt;string&gt; GetGateWayUrl() =&gt; Task.FromResult(_fastDFSConfig.GateWayUrl);
+
+        /// &lt;summary&gt;
+        /// 获取对象二进制数组
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;groupName&quot;&gt;组名称&lt;/param&gt;
+        /// &lt;param name=&quot;objectName&quot;&gt;对象名称&lt;/param&gt;
+        /// &lt;returns&gt;对象的二进制数组&lt;/returns&gt;
+        public async Task&lt;byte[]&gt; GetObjectByteAsync(string objectName, string groupName = &quot;&quot;)
+        {
+            RestoreFileName(objectName, out string fileName, out groupName);
+            var storageNode = await GetStorageNodeAsync(groupName);
+            return await FastDFSClient.DownloadFileAsync(storageNode, fileName);
+        }
+
+        /// &lt;summary&gt;
+        /// 获取对象流
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;groupName&quot;&gt;组名称&lt;/param&gt;
+        /// &lt;param name=&quot;objectName&quot;&gt;对象名称&lt;/param&gt;
+        /// &lt;returns&gt;对象流&lt;/returns&gt;
+        public async Task&lt;Stream&gt; GetObjectStreamAsync(string objectName, string groupName = &quot;&quot;)
+        {
+            RestoreFileName(objectName, out string fileName, out groupName);
+            var storageNode = await GetStorageNodeAsync(groupName);
+            FDFSFileInfo fileInfo = await FastDFSClient.GetFileInfoAsync(storageNode, fileName);
+            Stream stream = new MemoryStream();
+            int limit = 1024 * 100;//每次获取100KB的数据
+
+            //如果文件大小大于100KB  分次写入
+            if (fileInfo.FileSize &gt;= limit)
+            {
+                long offset = 0;
+                long len = limit;
+                while (len &gt; 0)
+                {
+                    byte[] buffer = await FastDFSClient.DownloadFileAsync(storageNode, fileName, offset, len);
+                    stream.Write(buffer, 0, int.Parse(len.ToString()));
+                    stream.Flush();
+                    offset += len;
+                    len = (fileInfo.FileSize - offset) &gt;= limit ? limit : (fileInfo.FileSize - offset);
+                }
+
+            }
+            else
+            {
+                //如果文件大小小小于100KB  直接写入文件
+                byte[] buffer = await FastDFSClient.DownloadFileAsync(storageNode, fileName);
+                stream.Write(buffer, 0, buffer.Length);
+                stream.Flush();
+            }
+
+            stream.Seek(0, SeekOrigin.Begin);
+            return stream;
+        }
+
+        /// &lt;summary&gt;
+        /// 存储文件
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;objectByte&quot;&gt;对象&lt;/param&gt;
+        /// &lt;param name=&quot;objectName&quot;&gt;对象名&lt;/param&gt;
+        /// &lt;param name=&quot;groupName&quot;&gt;分组&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public async Task&lt;string&gt; StoreObjectByteAsync(byte[] objectByte, string objectName, string groupName = &quot;&quot;)
+        {
+            var storageNode = await GetStorageNodeAsync(&quot;&quot;);
+            var filePath = await FastDFSClient.UploadFileAsync(storageNode, objectByte, Path.GetExtension(objectName));
+            return storageNode.GroupName + &quot;/&quot; + filePath;
+        }
+
+        /// &lt;summary&gt;
+        /// 存储文件
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;objectStream&quot;&gt;文件流&lt;/param&gt;
+        /// &lt;param name=&quot;objectName&quot;&gt;对象名&lt;/param&gt;
+        /// &lt;param name=&quot;groupName&quot;&gt;分组&lt;/param&gt;
+        /// &lt;returns&gt;文件路径&lt;/returns&gt;
+        public async Task&lt;string&gt; StoreObjectStreamAsync(Stream objectStream, string objectName, string groupName = &quot;&quot;)
+        {
+            var storageNode = await GetStorageNodeAsync(&quot;&quot;);
+            var filePath = await FastDFSClient.UploadFileAsync(storageNode, objectStream, Path.GetExtension(objectName));
+            return storageNode.GroupName + &quot;/&quot; + filePath;
+        }
+    }
+</code></pre>
+<h4 id="第三步-在分布式配置中心中进行配置">第三步 在分布式配置中心中进行配置</h4>
+<p>这里的分布式配置中心中进行FastDFS的配置如下：</p>
+<pre><code class="language-csharp">&quot;ObjectStorage&quot;: {
+    &quot;StoreType&quot;: &quot;FastDFS&quot;,
+    &quot;FastDFS&quot;: {
+      &quot;Trackers&quot;: &quot;192.168.1.14,192.168.1.16&quot;,
+      &quot;Port&quot;: 22122,
+      &quot;GateWayUrl&quot;: &quot;http://192.168.1.197&quot;
+    }
+  }
+</code></pre>
+<h4 id="第四步-文件提供者工厂方法中加入fastdfs的处理">第四步 文件提供者工厂方法中加入FastDFS的处理</h4>
+<p>工厂方法根据上面配置中的<code>StoreType</code>从而知道对应的存储是往FastDFS集群进行存储的，进而再加载对应的FastDFS的配置，然后创建上面的FastDFSProvider。<br>
+主要代码摘录如下：</p>
+<pre><code class="language-csharp">  case &quot;RondsDFS&quot;:
+   	 {
+    var rondsDFSSection = _configuration.GetSection(&quot;ObjectStorage:RondsDFS&quot;);
+
+    if (rondsDFSSection == null)
+       throw new ArgumentNullException(&quot;RondsDFS is not configured![OObjectStorage:RondsDFS]&quot;);
+
+        StorageProvider = _serviceProvider.GetRequiredService&lt;RondsDFSProvider&gt;();
+        break;
+     }
+</code></pre>
+<h3 id="总结">总结</h3>
+<p>今天首先给大家讲解了如何搭建FastDFS单机版及集群版，然后讲解了如何通过asp.net core对FastDFS进行操作。当然由于我的文件系统对应多个文件存储程序，因此这里只是把FastDFS作为其中一个提供者进行处理。大伙可以只参考其中的操作方法即可。本来想录个视频的，毕竟安装过程稍显复杂，奈何机器不允许，Pass了！有问题可以加QQ两千人群637326624进行交流。</p>
+<h3 id="参考文章">参考文章</h3>
+<p><a href="https://zhuanlan.zhihu.com/p/80256918">https://zhuanlan.zhihu.com/p/80256918</a><br>
+<a href="https://blog.51cto.com/13712476/2130525">https://blog.51cto.com/13712476/2130525</a><br>
+<a href="https://www.cnblogs.com/youzhibing/p/9187765.html">https://www.cnblogs.com/youzhibing/p/9187765.html</a><br>
+<a href="https://github.com/happyfish100/fastdfs/wiki">https://github.com/happyfish100/fastdfs/wiki</a></p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-04-29 09:02</span>&nbsp;
+<a href="https://www.cnblogs.com/yilezhu/">依乐祝</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12797543" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12797543);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 435194, cb_blogApp = 'yilezhu', cb_blogUserGuid = 'ea3b6c73-32fd-485b-d04c-08d5866282ce';
+    var cb_entryId = 12797543, cb_entryCreatedDate = '2020-04-29 09:02', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 依乐祝
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

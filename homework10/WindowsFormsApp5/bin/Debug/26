@@ -1,0 +1,411 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="never" />
+    <meta property="og:description" content="每日英语，每天进步一点点（偷笑）： 前言 临近五一节，想到有 5 天假期，小林开始飘了。 写个简单的 Bash 脚本都不上心了，写完连检查都不检查，直接拖到到实体服务器跑。 结果一跑起来，发生不对劲，" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>写了Bug，误执行 rm -fr /*，我删删删删库了，要跑路吗？ - 小林coding - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=Z9Vw4btcgJmrpUEjY_SgebmTmDXJ_hPFoST7ad2aJp4" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=hlpQ1CJDwwJXDxv2HNauUmW3NjyWzoMaw1uER19SLT0" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=XjHfryC9ctsatIZz1dHn7TsRIqmwz9c3aj_6SCfHSDM" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/xiaolincoding/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/xiaolincoding/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/xiaolincoding/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
+    <script>
+        var currentBlogId = 534487;
+        var currentBlogApp = 'xiaolincoding';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'CodingLife';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/xiaolincoding/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/xiaolincoding/">小林coding</a>
+</h1>
+<h2>
+公众号：「小林coding」 用简洁的方式，分享编程小知识。
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/xiaolincoding/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%B0%8F%E6%9E%97coding">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/xiaolincoding/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+44&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+32</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12809812.html">写了Bug，误执行 rm -fr /*，我删删删删库了，要跑路吗？</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <div id="output_wrapper_id" class="output_wrapper" style="font-size: 15px; color: #3e3e3e; line-height: 1.8; word-spacing: 2px; letter-spacing: 2px; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif; background-image: linear-gradient(90deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%), linear-gradient(360deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%); background-size: 20px 20px; background-position: center center;">
+<h5 id="h" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.6em 0px; font-weight: bold; font-size: 1em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">每日英语，每天进步一点点（偷笑）：</span></h5>
+<h2 id="hhttpsimgkrcnbjufileoscombb92e74caba14b26b416e7290e260b58jpg" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.6em 0px; font-weight: bold; font-size: 1.4em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img style="font-size: inherit; color: inherit; line-height: inherit; padding: 0; display: block; margin: 0 auto; max-width: 100%" title="" src="https://imgkr.cn-bj.ufileos.com/bb92e74c-aba1-4b26-b416-e7290e260b58.jpg" alt=""></span></h2>
+<h2 id="h-1" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.6em 0px; font-weight: bold; font-size: 1.4em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">前言</span></h2>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">临近五一节，想到有 5 天假期，小林开始飘了。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">写个简单的 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">Bash</code> 脚本都不上心了，写完连检查都不检查，直接拖到到实体服务器跑。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">结果一跑起来，发生不对劲，怎么一个简单脚本跑了 10 秒还没结束，于是<strong style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold; color: #304ffe;">立马</strong>直接 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">ctrl + c</code> 一顿操作停掉了运行中脚本。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">接着，习惯性的输入了 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">ls</code>，结果 what？ 找不到 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">ls</code> 命令？</p>
+<img style="font-size: inherit; color: inherit; line-height: inherit; padding: 0; display: block; margin: 0 auto; max-width: 100%" title="" src="https://imgkr.cn-bj.ufileos.com/4f4c9b5d-6bc9-4064-be27-a0c8ce2b7616.png" alt="">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">瞬间背后一凉，慌慌张张打开了脚本。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">发现问题了，小林我写了个巨蠢的 Bug，间接执行了 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">rm -fr /*</code> ，这不意味着我<strong style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold; color: #304ffe;">删库</strong>了？</p>
+<img style="font-size: inherit; color: inherit; line-height: inherit; padding: 0; display: block; margin: 0 auto; max-width: 100%" title="" src="https://imgkr.cn-bj.ufileos.com/2549a404-2a82-492e-bf1b-dfa98ed4b5f4.jpg" alt="">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">这台是公司的授权服务器呀，被小林这么一整，公司历史的授权记录和其他重要信息不就丢了？</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">心里慌的一批的小林，跟我的朋友们说了这件事，朋友建议我<strong style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold; color: #304ffe;">先第一时间上报给 leader，不要把删库的事情瞒着</strong>。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">于是，小林就向 leader 说了我删库事情，本以为会被痛批一顿。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">结果 leader <strong style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold; color: #304ffe;">笑着</strong>说：&ldquo;没事，你先看看重要的文件还在不在。不过你这么一整，我突然想起编译服务器半年没备份，我先备份一下我的编译服务器，防止哪天也被你们删库了。&rdquo;</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">我：&ldquo;？？？？&rdquo;</p>
+<blockquote style="line-height: inherit; display: block; padding: 15px 15px 15px 1rem; font-size: 0.9em; margin: 1em 0px; color: #000000; border-left: 5px solid #6495ed; background: #e3f2fd; overflow: auto; word-wrap: normal; word-break: normal;">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 0px;">吃瓜的小伙伴，是不是觉得小林要删库跑路了？哈哈哈，小林没跑路，反而是恢复了回来，所以接下来说说小林是如何「从删库到恢复」的。</p>
+</blockquote>
+<h2 id="h-2" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.6em 0px; font-weight: bold; font-size: 1.4em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">正文</span></h2>
+<h3 id="h-3" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.6em 0px; font-weight: bold; border-bottom: 2px solid #4169e1; font-size: 1.3em;"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: #4169e1; color: #ffffff; padding: 3px 10px 1px; border-top-right-radius: 3px; border-top-left-radius: 3px; margin-right: 3px;">初探案发现场</span></h3>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">来看看小林写的垃圾代码，是如何引发这次的删库。</p>
+<img style="font-size: inherit; color: inherit; line-height: inherit; padding: 0; display: block; margin: 0 auto; max-width: 100%" title="" src="https://imgkr.cn-bj.ufileos.com/b01663b6-b33a-4b86-9153-2e9cda9d601f.jpg" alt="">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">既然发生了 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">rm -fr /*</code> 的现象，那必然 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">new_lic_dir</code> 这个变量是空的。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">所以导致执行 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">rm -fr $new_lic_dir/*</code> 这条语句的时候，变成了 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">rm -fr /*</code> 删库语句。很好，凶器找到了。</p>
+<blockquote style="line-height: inherit; display: block; padding: 15px 15px 15px 1rem; font-size: 0.9em; margin: 1em 0px; color: #000000; border-left: 5px solid #6495ed; background: #e3f2fd; overflow: auto; word-wrap: normal; word-break: normal;">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 0px;">那为什么 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">new_lic_dir</code> 会是空的呢？</p>
+</blockquote>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">细心的小伙伴肯定察觉出来了，是因为给 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">new_lic_dir</code> 变量赋值的时使用了<strong style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold; color: #304ffe;">反引号</strong>。</p>
+<img style="font-size: inherit; color: inherit; line-height: inherit; padding: 0; display: block; margin: 0 auto; max-width: 100%" title="" src="https://imgkr.cn-bj.ufileos.com/8d36cd9e-a45e-4143-bee5-a10b6a72524a.jpg" alt="">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">没错，就是反引号的原因。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">反引号在 Linux Shell 命令行中有特殊的含义：反引号间的内容，会被 Shell 先执行。其输出被放入主命令后，主命令再被执行。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">也就是说， <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">new_lic_dir</code> 的值是 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">${lic_path}/new_license</code> 这条命令执行的结果，问题这哪是命令啊，所以肯定返回空值给 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">new_lic_dir</code> 变量。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">小林写的那么温柔的代码，竟然变成了穷凶极恶的<strong style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold; color: #304ffe;">删库代码</strong>。</p>
+<img style="font-size: inherit; color: inherit; line-height: inherit; padding: 0; display: block; margin: 0 auto; max-width: 100%" title="" src="https://imgkr.cn-bj.ufileos.com/c4b73966-1c3a-4b47-8cb3-a35bac95a5c2.jpg" alt="">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">这下原因是找到了，反引号应该改成<strong style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold; color: #304ffe;">双引号</strong>才对。</p>
+<blockquote style="line-height: inherit; display: block; padding: 15px 15px 15px 1rem; font-size: 0.9em; margin: 1em 0px; color: #000000; border-left: 5px solid #6495ed; background: #e3f2fd; overflow: auto; word-wrap: normal; word-break: normal;">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 0px;">小林你真菜呀，那么简单的赋值命令都写错。</p>
+</blockquote>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">哈哈哈，确实菜，都说了嘛，快五一了，小林是飘着写这份代码的。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">所以习惯性开启程序员内容的第一大武功：<code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">crtl+c</code> 和 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">crtl+v</code>。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">把第一条赋值 lic_path=`pwd` 语句，复制粘贴了，然后只改了变量名，没注意反引号要修改成双引号，所以造成了删库的悲剧。</p>
+<hr style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; height: 1px; margin: 1.5rem 0px; border-right: none; border-bottom: none; border-left: none; border-image: initial; border-top: 1px dashed #a5a5a5;" />
+<h3 id="h-4" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.6em 0px; font-weight: bold; border-bottom: 2px solid #4169e1; font-size: 1.3em;"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: #4169e1; color: #ffffff; padding: 3px 10px 1px; border-top-right-radius: 3px; border-top-left-radius: 3px; margin-right: 3px;">保留案发现场</span></h3>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">既然发生了删库的事情，千万不要重启服务器，也不要关闭 ssh 连接的会话，而是要保留案发现场，接着查查还剩什么。</p>
+<blockquote style="line-height: inherit; display: block; padding: 15px 15px 15px 1rem; font-size: 0.9em; margin: 1em 0px; color: #000000; border-left: 5px solid #6495ed; background: #e3f2fd; overflow: auto; word-wrap: normal; word-break: normal;">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 0px;">小林，这不是吹大炮嘛？ <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">ls</code> 都没了，还怎么查？</p>
+</blockquote>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">还好这次是比较幸运，因为在执行脚本的时候，第一时间发现不对劲，<strong style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold; color: #304ffe;">立马掐断</strong>了还在运行的脚本，所以并非 Linux 所有文件都被删除了。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;"><strong style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold; color: #304ffe;">只要我掐的快，rm -fr /* 就干不死我。</strong></p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">虽然 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">ls</code> 被删了，但所幸发现 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">cd</code> 命令还能用。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">只要 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">cd</code> 用的好，它也能用出的 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">ls</code> 效果。很简单，只需 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">cd + Tab</code> 键就会自动出现指定目录下的所有文件。</p>
+<img style="font-size: inherit; color: inherit; line-height: inherit; padding: 0; display: block; margin: 0 auto; max-width: 100%" title="" src="https://imgkr.cn-bj.ufileos.com/15b26c9b-fe7b-4f71-b489-eabd8472a44d.png" alt="">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">有了 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">cd + Tab</code> 键，我们就可以查看每个目录下的文件，于是就可以一步一步来确认哪些系统文件被删了。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">通过一番的确认和对比后，发现主要被删除的有四个目录分别是</p>
+<ul style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; padding-left: 32px; list-style-type: disc;">
+<li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/bin</code> 、<code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/boot</code> 、<code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/dev</code> 这三个目录整个都被删除了</li>
+<li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/lib</code> 目录里的动态库部分被删除</li>
+</ul>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">来复习下上面这四个目录主要是存放了什么：</p>
+<ul style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; padding-left: 32px; list-style-type: disc;">
+<li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/bin</code> 存放常用系统命令，<code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">ls、cp、rm、chmod</code> 等常用命令都在此目录；</li>
+<li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/boot</code> 系统启动目录，保存与系统启动相关的文件，如内核文件和启动引导程序；</li>
+<li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/dev</code> 设备文件保存位置；</li>
+<li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/lib</code> 存放程序所需的动态库和静态库文件；</li>
+</ul>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;"><code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/boot</code> 都被删除了，还好小林没有重启服务器，要是重启了服务器，就完犊子了，系统肯定起不来了。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;"><code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">cd</code> 命令是在 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/sin</code> 目录下，<code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/sin</code> 还健全，所以 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">cd</code> 是可以正常使用。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">所幸重要的数据库信息和文件都还没删除，所以小林首要的目标是要恢复 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/bin、/boot、/dev</code>、<code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/lib</code> 这四个目录。</p>
+<hr style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; height: 1px; margin: 1.5rem 0px; border-right: none; border-bottom: none; border-left: none; border-image: initial; border-top: 1px dashed #a5a5a5;" />
+<h3 id="h-5" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.6em 0px; font-weight: bold; border-bottom: 2px solid #4169e1; font-size: 1.3em;"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: #4169e1; color: #ffffff; padding: 3px 10px 1px; border-top-right-radius: 3px; border-top-left-radius: 3px; margin-right: 3px;">还原文件</span></h3>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">由于 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/bin</code> 目录 和 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/lib</code> 部分动态文件被删除，常用的传递文件的方式是无法使用的，如 ftp、scp、mount 等。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">小林摸索了很久，竟然发现 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">wget</code> 可以使用，<code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">wget</code> 命令是在 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/usr/bin</code> 目录，所幸 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/usr/bin</code> 还健全。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">于是，用了取巧的方法，先另一台正常的服务器，把 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/bin</code> 目录放到了 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">Web</code> 服务器的 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">Web</code> 目录，接着通过 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">wget</code> 进行下载。</p>
+<img style="font-size: inherit; color: inherit; line-height: inherit; padding: 0; display: block; margin: 0 auto; max-width: 100%" title="" src="https://imgkr.cn-bj.ufileos.com/88edb6b7-2daa-4270-b69d-170bba277e60.png" alt="">
+<blockquote style="line-height: inherit; display: block; padding: 15px 15px 15px 1rem; font-size: 0.9em; margin: 1em 0px; color: #000000; border-left: 5px solid #6495ed; background: #e3f2fd; overflow: auto; word-wrap: normal; word-break: normal;">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 0px;">有戏，看到了成功的曙光。</p>
+</blockquote>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">但是新的问题就来了，我下载过来的命令文件，是没有执行权限的。</p>
+<img style="font-size: inherit; color: inherit; line-height: inherit; padding: 0; display: block; margin: 0 auto; max-width: 100%" title="" src="https://imgkr.cn-bj.ufileos.com/18ce8f5e-2a45-4736-9e4d-db23829398e1.png" alt="">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">而 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">chmod</code> 命令是在 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/bin</code> 目录的，它同样也被删除了，无法使用它来给予文件权限。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">还在，在网上搜到了一个伟大命令 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">perl</code>，可以通过它来给予文件权限：</p>
+<pre><code class="bash language-bash hljs" style="margin: 0px 2px; line-height: 18px; font-size: 14px; font-weight: normal; word-spacing: 0px; letter-spacing: 0px; font-family: Consolas, Inconsolata, Courier, monospace; border-radius: 0px; color: #a9b7c6; background: #282b2e; overflow-x: auto; padding: 0.5em; white-space: pre !important; word-wrap: normal !important; word-break: normal !important; overflow: auto !important; display: -webkit-box !important;">perl&nbsp;-e&nbsp;<span class="hljs-string" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #eedc70; word-wrap: inherit !important; word-break: inherit !important;">"chmod&nbsp;777,&nbsp;'ls'"</span><br /></code></pre>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">真是个神奇的命令。</p>
+<blockquote style="line-height: inherit; display: block; padding: 15px 15px 15px 1rem; font-size: 0.9em; margin: 1em 0px; color: #000000; border-left: 5px solid #6495ed; background: #e3f2fd; overflow: auto; word-wrap: normal; word-break: normal;">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 0px;">好了，这下赋值权限问题也解决了，成功在望了。</p>
+</blockquote>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;"><code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">wget</code> 是无法直接把 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/bin</code> 目录下载下来的，只能下载一个文件。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">但是小林我不可能一个一个去下载来进行恢复，这得要何年何月才能完成。。。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">小林就想到了一个方法：</p>
+<ul style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; padding-left: 32px; list-style-type: disc;">
+<li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;">先通过 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">wget</code> 的方式下载 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">tar</code> 命令，并通过 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">perl</code> 给予 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">tar</code> 命令权限</li>
+<li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;">接着把另一台服务器把 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/bin</code> 目录打包成压缩文件，然后通过 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">wget</code> 下载 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">bin</code> 目录的压缩包文件</li>
+<li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;">最后通过 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">tar</code> 命令把 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">bin</code> 压缩包解压出来</li>
+</ul>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;"><code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/bin</code> 就这样恢复回来啦，剩余的其他目录 也是通过同样的操作恢复了回来。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">小林的笑容渐渐恢复了回来，哈哈哈哈哈哈哈哈哈哈哈哈</p>
+<img style="font-size: inherit; color: inherit; line-height: inherit; padding: 0; display: block; margin: 0 auto; max-width: 100%" title="" src="https://imgkr.cn-bj.ufileos.com/503c47c1-9700-4a6c-87ba-c810ceb06739.jpg" alt="">
+<blockquote style="line-height: inherit; display: block; padding: 15px 15px 15px 1rem; font-size: 0.9em; margin: 1em 0px; color: #000000; border-left: 5px solid #6495ed; background: #e3f2fd; overflow: auto; word-wrap: normal; word-break: normal;">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 0px;">遇到 rm -fr /* 删库事件发生，一定要沉住气，稳住心态</p>
+</blockquote>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">本次删库事件，之所以小林能幸运的恢复回来，有非常关键两点：</p>
+<ul style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; padding-left: 32px; list-style-type: disc;">
+<li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">小林发现脚本执行不正常，果断立马的掐断它，没有造成重要的数据库信息被删除，如果掐断的时候再晚一点，可能就真没了。</span></li>
+<li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">小林发现常用命令无法使用的时候，没有重启服务器，不然服务器就起不来了，也没有关闭 ssh 会话，不然无法在重新连接 ssh 会话了，也就无法进行操作了。</span></li>
+</ul>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">如果以上两点都没做好，服务器恢复的难度就加大了很多，更严重的是五一节就没的过了。</p>
+<img style="font-size: inherit; color: inherit; line-height: inherit; padding: 0; display: block; margin: 0 auto; max-width: 100%" title="" src="https://imgkr.cn-bj.ufileos.com/19ca4b91-fd5d-4d73-9f98-c57de7a64fc9.jpg" alt=""><hr style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; height: 1px; margin: 1.5rem 0px; border-right: none; border-bottom: none; border-left: none; border-image: initial; border-top: 1px dashed #a5a5a5;" />
+<h3 id="hrmfr" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.6em 0px; font-weight: bold; border-bottom: 2px solid #4169e1; font-size: 1.3em;"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: #4169e1; color: #ffffff; padding: 3px 10px 1px; border-top-right-radius: 3px; border-top-left-radius: 3px; margin-right: 3px;">预防误执行 rm -fr /*</span></h3>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">既然 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">rm -fr /*</code> 是残忍的凶器，那么预防它是很有必要的，接下来跟大家讨论讨论预防它的几种方案。</p>
+<blockquote style="line-height: inherit; display: block; padding: 15px 15px 15px 1rem; font-size: 0.9em; margin: 1em 0px; color: #000000; border-left: 5px solid #6495ed; background: #e3f2fd; overflow: auto; word-wrap: normal; word-break: normal;">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 0px;">方案一：rm -rf 删除目录时要判断目录</p>
+</blockquote>
+<pre><code class="bash language-bash hljs" style="margin: 0px 2px; line-height: 18px; font-size: 14px; font-weight: normal; word-spacing: 0px; letter-spacing: 0px; font-family: Consolas, Inconsolata, Courier, monospace; border-radius: 0px; color: #a9b7c6; background: #282b2e; overflow-x: auto; padding: 0.5em; white-space: pre !important; word-wrap: normal !important; word-break: normal !important; overflow: auto !important; display: -webkit-box !important;"><span class="hljs-meta" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #5bdaed; word-wrap: inherit !important; word-break: inherit !important;">#!/bin/bash<br /></span><br />work_path=`<span class="hljs-built_in" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #f82375; word-wrap: inherit !important; word-break: inherit !important;">pwd</span>`<br /><br /><span class="hljs-comment" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #808080; word-wrap: inherit !important; word-break: inherit !important;">#如果目录不为空，才执行删除操作</span><br /><span class="hljs-keyword" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #f82375; word-wrap: inherit !important; word-break: inherit !important;">if</span>&nbsp;[&nbsp;<span class="hljs-variable" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #629755; word-wrap: inherit !important; word-break: inherit !important;">${work_path}</span>&nbsp;!=&nbsp;<span class="hljs-string" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #eedc70; word-wrap: inherit !important; word-break: inherit !important;">""</span>&nbsp;];<span class="hljs-keyword" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #f82375; word-wrap: inherit !important; word-break: inherit !important;">then</span><br />&nbsp;&nbsp;&nbsp;&nbsp;rm&nbsp;-fr&nbsp;<span class="hljs-variable" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #629755; word-wrap: inherit !important; word-break: inherit !important;">${work_path}</span>/*<br /><span class="hljs-keyword" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #f82375; word-wrap: inherit !important; word-break: inherit !important;">fi</span><br /></code></pre>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">在执行删除目录操作前，先判断要删除的目录是否为空，不为空才执行删除操作。</p>
+<blockquote style="line-height: inherit; display: block; padding: 15px 15px 15px 1rem; font-size: 0.9em; margin: 1em 0px; color: #000000; border-left: 5px solid #6495ed; background: #e3f2fd; overflow: auto; word-wrap: normal; word-break: normal;">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 0px;">方案二：Shell 脚本指定 set -u</p>
+</blockquote>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">执行脚本的时候，如果遇到不存在的变量，Bash 默认忽略它。</p>
+<pre><code class="bash language-bash hljs" style="margin: 0px 2px; line-height: 18px; font-size: 14px; font-weight: normal; word-spacing: 0px; letter-spacing: 0px; font-family: Consolas, Inconsolata, Courier, monospace; border-radius: 0px; color: #a9b7c6; background: #282b2e; overflow-x: auto; padding: 0.5em; white-space: pre !important; word-wrap: normal !important; word-break: normal !important; overflow: auto !important; display: -webkit-box !important;"><span class="hljs-meta" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #5bdaed; word-wrap: inherit !important; word-break: inherit !important;">#!/bin/bash<br /></span><br /><span class="hljs-built_in" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #f82375; word-wrap: inherit !important; word-break: inherit !important;">echo</span>&nbsp;<span class="hljs-variable" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #629755; word-wrap: inherit !important; word-break: inherit !important;">$a</span><br /><span class="hljs-built_in" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #f82375; word-wrap: inherit !important; word-break: inherit !important;">echo</span>&nbsp;hello<br /></code></pre>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">上面代码中，<code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">$a</code> 是一个不存在的变量，执行结果如下。</p>
+<pre><code class="bash language-bash hljs" style="margin: 0px 2px; line-height: 18px; font-size: 14px; font-weight: normal; word-spacing: 0px; letter-spacing: 0px; font-family: Consolas, Inconsolata, Courier, monospace; border-radius: 0px; color: #a9b7c6; background: #282b2e; overflow-x: auto; padding: 0.5em; white-space: pre !important; word-wrap: normal !important; word-break: normal !important; overflow: auto !important; display: -webkit-box !important;">$&nbsp;bash&nbsp;test.sh<br /><br />hello<br /></code></pre>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">可以发现，<code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">echo $a</code> 输出了一个空行，<code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">Bash</code> 忽略了不存在的 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">$a</code>，然后继续执行 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">echo hello</code>。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">最好是遇到变量不存在，脚本应该报错，而不是一声不响地往下执行。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;"><code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">set -u</code> 就用来改变这种行为，在脚本加上它，遇到不存在的变量就会报错，并停止执行。</p>
+<pre><code class="bash language-bash hljs" style="margin: 0px 2px; line-height: 18px; font-size: 14px; font-weight: normal; word-spacing: 0px; letter-spacing: 0px; font-family: Consolas, Inconsolata, Courier, monospace; border-radius: 0px; color: #a9b7c6; background: #282b2e; overflow-x: auto; padding: 0.5em; white-space: pre !important; word-wrap: normal !important; word-break: normal !important; overflow: auto !important; display: -webkit-box !important;"><span class="hljs-meta" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #5bdaed; word-wrap: inherit !important; word-break: inherit !important;">#!/bin/bash</span><br /><span class="hljs-built_in" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #f82375; word-wrap: inherit !important; word-break: inherit !important;">set</span>&nbsp;-u<br /><br />rm&nbsp;-fr&nbsp;<span class="hljs-variable" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #629755; word-wrap: inherit !important; word-break: inherit !important;">$a</span>/*<br /><span class="hljs-built_in" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #f82375; word-wrap: inherit !important; word-break: inherit !important;">echo</span>&nbsp;hello<br /></code></pre>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">运行结果如下:</p>
+<pre><code class="bash language-bash hljs" style="margin: 0px 2px; line-height: 18px; font-size: 14px; font-weight: normal; word-spacing: 0px; letter-spacing: 0px; font-family: Consolas, Inconsolata, Courier, monospace; border-radius: 0px; color: #a9b7c6; background: #282b2e; overflow-x: auto; padding: 0.5em; white-space: pre !important; word-wrap: normal !important; word-break: normal !important; overflow: auto !important; display: -webkit-box !important;">$&nbsp;bash&nbsp;test.sh<br />test.sh:&nbsp;line&nbsp;4:&nbsp;a:&nbsp;unbound&nbsp;variable<br /></code></pre>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">可以看到，因为 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">a</code> 是未定义变量，脚本报错了，并且不再执行后面的语句。</p>
+<blockquote style="line-height: inherit; display: block; padding: 15px 15px 15px 1rem; font-size: 0.9em; margin: 1em 0px; color: #000000; border-left: 5px solid #6495ed; background: #e3f2fd; overflow: auto; word-wrap: normal; word-break: normal;">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 0px;">方案三：safe-rm 替换 rm</p>
+</blockquote>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;"><code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">safe-rm</code> 是一个开源软件工具，这名字听起来就很安全嘛，所以它是用来替代不太安全的 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">rm</code>。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">它可以在 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/etc/safe-rm.conf</code> 中配置路径黑名单，定义哪些不能被 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">safe-rm</code> 删除。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">我们可以将 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">safe-rm</code> 更名为 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">rm</code>，假设定义了 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/etc/</code> 无能被删除，那么删除 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/etc</code> 时就会报错：</p>
+<pre><code class="bash language-bash hljs" style="margin: 0px 2px; line-height: 18px; font-size: 14px; font-weight: normal; word-spacing: 0px; letter-spacing: 0px; font-family: Consolas, Inconsolata, Courier, monospace; border-radius: 0px; color: #a9b7c6; background: #282b2e; overflow-x: auto; padding: 0.5em; white-space: pre !important; word-wrap: normal !important; word-break: normal !important; overflow: auto !important; display: -webkit-box !important;">$&nbsp;rm&nbsp;-rf&nbsp;/etc/<br />safe-rm:&nbsp;skipping&nbsp;/etc/<br /></code></pre>
+<blockquote style="line-height: inherit; display: block; padding: 15px 15px 15px 1rem; font-size: 0.9em; margin: 1em 0px; color: #000000; border-left: 5px solid #6495ed; background: #e3f2fd; overflow: auto; word-wrap: normal; word-break: normal;">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 0px;">方案四：建立回收站机制</p>
+</blockquote>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">Windows 是有回收站的，即使误删了，也可以在回收站恢复。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">所以，我们也可以在 Linux 实现回收站的机制。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">实现思路：</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">删除文件时，它并不真正执行删除操作，而是将文件移动到一个特定目录，可以设置定时清楚回收站，或者在回收站里面的文件大小达到一定容量时（或者用时间做判断）执行删除操作以腾出空间。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">可以写个 Shell 脚本替换 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">rm</code> 命令，或者在需要删除文件的时候使用 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">mv</code> 命令将文件移动到回收站。　　</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">① 创建回收站目录</p>
+<pre><code class="bash language-bash hljs" style="margin: 0px 2px; line-height: 18px; font-size: 14px; font-weight: normal; word-spacing: 0px; letter-spacing: 0px; font-family: Consolas, Inconsolata, Courier, monospace; border-radius: 0px; color: #a9b7c6; background: #282b2e; overflow-x: auto; padding: 0.5em; white-space: pre !important; word-wrap: normal !important; word-break: normal !important; overflow: auto !important; display: -webkit-box !important;">mkdir&nbsp;/home/.trash<br /></code></pre>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">② 编写 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">remove.sh</code> 脚本，内容如下</p>
+<img style="font-size: inherit; color: inherit; line-height: inherit; padding: 0; display: block; margin: 0 auto; max-width: 100%" title="" src="https://imgkr.cn-bj.ufileos.com/7c042195-c5ac-4992-b163-ae0a7aec7bd7.png" alt="">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">③ 修改 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">~/.bashrc</code>， 用我们自建的 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">remove.sh</code> 替代 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">rm</code> 命令</p>
+<pre><code class="bash language-bash hljs" style="margin: 0px 2px; line-height: 18px; font-size: 14px; font-weight: normal; word-spacing: 0px; letter-spacing: 0px; font-family: Consolas, Inconsolata, Courier, monospace; border-radius: 0px; color: #a9b7c6; background: #282b2e; overflow-x: auto; padding: 0.5em; white-space: pre !important; word-wrap: normal !important; word-break: normal !important; overflow: auto !important; display: -webkit-box !important;"><span class="hljs-built_in" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #f82375; word-wrap: inherit !important; word-break: inherit !important;">alias</span>&nbsp;rm=<span class="hljs-string" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #eedc70; word-wrap: inherit !important; word-break: inherit !important;">"sh&nbsp;/home/remove.sh"</span><br /></code></pre>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">④ 设置 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">crontab</code>，定期清空垃圾箱，如每天 0 点清空垃圾箱：</p>
+<pre><code class="bash language-bash hljs" style="margin: 0px 2px; line-height: 18px; font-size: 14px; font-weight: normal; word-spacing: 0px; letter-spacing: 0px; font-family: Consolas, Inconsolata, Courier, monospace; border-radius: 0px; color: #a9b7c6; background: #282b2e; overflow-x: auto; padding: 0.5em; white-space: pre !important; word-wrap: normal !important; word-break: normal !important; overflow: auto !important; display: -webkit-box !important;">0&nbsp;0&nbsp;*&nbsp;*&nbsp;*&nbsp;rm&nbsp;-rf&nbsp;/home/.trash/*<br /></code></pre>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">⑤ 最后，执行以下命令，使之生效</p>
+<pre><code class="bash language-bash hljs" style="margin: 0px 2px; line-height: 18px; font-size: 14px; font-weight: normal; word-spacing: 0px; letter-spacing: 0px; font-family: Consolas, Inconsolata, Courier, monospace; border-radius: 0px; color: #a9b7c6; background: #282b2e; overflow-x: auto; padding: 0.5em; white-space: pre !important; word-wrap: normal !important; word-break: normal !important; overflow: auto !important; display: -webkit-box !important;"><span class="hljs-built_in" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; color: #f82375; word-wrap: inherit !important; word-break: inherit !important;">source</span>&nbsp;~/.bashrc&nbsp;<br /></code></pre>
+<blockquote style="line-height: inherit; display: block; padding: 15px 15px 15px 1rem; font-size: 0.9em; margin: 1em 0px; color: #000000; border-left: 5px solid #6495ed; background: #e3f2fd; overflow: auto; word-wrap: normal; word-break: normal;">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 0px;">方案五：根文件挂载成只读</p>
+</blockquote>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">在 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/etc/fstab</code> 文件，把 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">/</code> 文件系统挂载成只读的方式。</p>
+<img style="font-size: inherit; color: inherit; line-height: inherit; padding: 0; display: block; margin: 0 auto; max-width: 100%" title="" src="https://imgkr.cn-bj.ufileos.com/ba510d54-ed20-4773-910a-1f02f6185a5c.png" alt="">
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">其中 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">remount,ro</code>，就表示只读的方式挂载。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">只读的方式挂载后，进行删除操作是无法成功的：</p>
+<img style="font-size: inherit; color: inherit; line-height: inherit; padding: 0; display: block; margin: 0 auto; max-width: 100%" title="" src="https://imgkr.cn-bj.ufileos.com/43f0dffc-1cc7-4518-a96c-55e00dbe3bca.png" alt=""><hr style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; height: 1px; margin: 1.5rem 0px; border-right: none; border-bottom: none; border-left: none; border-image: initial; border-top: 1px dashed #a5a5a5;" />
+<h3 id="h-6" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.6em 0px; font-weight: bold; border-bottom: 2px solid #4169e1; font-size: 1.3em;"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: #4169e1; color: #ffffff; padding: 3px 10px 1px; border-top-right-radius: 3px; border-top-left-radius: 3px; margin-right: 3px;">事后反思</span></h3>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">涉及到 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">rm -fr</code> 命令的代码，要留个心眼，要反复检查，要做好预防误执行 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">rm -fr /*</code>，并在测试机验证完后，再拖到实体机上跑，千万不可大意。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">就算的发生了 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">rm -fr /*</code>，要第一时间停掉它，并且要做到三不要：</p>
+<ul style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; padding-left: 32px; list-style-type: disc;">
+<li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">不要慌，不要心跳爆炸（稳住稳住）</span></li>
+<li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">不要隐瞒删库事件（不丢人）</span></li>
+<li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">不要重启服务器或断开 ssh 会话（保留现场）</span></li>
+</ul>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">只要立马掐断 <code style="font-size: inherit; line-height: inherit; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: #f82375; background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;">rm -fr /*</code> ，它是干不死我们的。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;">利用当下环境剩有的命令，冷静分析，是有机会恢复的。</p>
+<p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.7em 0px;"><strong style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold; color: #304ffe;">小林现在是一个删过库没跑路的男人了，Goodbye， 我们下次见。</strong></p>
+</div>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-04-30 16:54</span>&nbsp;
+<a href="https://www.cnblogs.com/xiaolincoding/">小林coding</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12809812" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12809812);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 534487, cb_blogApp = 'xiaolincoding', cb_blogUserGuid = '78b47f55-b4d5-4552-a830-08d7205a5b91';
+    var cb_entryId = 12809812, cb_entryCreatedDate = '2020-04-30 16:54', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 小林coding
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

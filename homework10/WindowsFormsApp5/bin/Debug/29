@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>请叫我宋某某 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=Z9Vw4btcgJmrpUEjY_SgebmTmDXJ_hPFoST7ad2aJp4" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=hlpQ1CJDwwJXDxv2HNauUmW3NjyWzoMaw1uER19SLT0" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/songbw/custom.css?v=4suxF2DCFKUtpu3aR8agdjNOCMI=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=XjHfryC9ctsatIZz1dHn7TsRIqmwz9c3aj_6SCfHSDM" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/songbw/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/songbw/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/songbw/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
+    <script>
+        var currentBlogId = 385130;
+        var currentBlogApp = 'songbw';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'CodingLife';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/songbw/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/songbw/">请叫我宋某某</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/songbw/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E8%AF%B7%E5%8F%AB%E6%88%91%E5%AE%8B%E6%9F%90%E6%9F%90">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/songbw/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+10&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+1</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<!--done-->
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/songbw/archive/2020/04/30.html">2020年4月30日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/songbw/p/12809691.html">
+    Vue3.0新版API之composition-api入坑指南
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：关于VUE3.0 由于vue3.0语法跟vue2.x的语法几乎是完全兼容的，本文主要介绍了如何使用 ，主要分以下几个方面来讲 使用vite体验vue3.0 composition api解决了什么问题 语法糖介绍 vite的安装使用 vite仓库地址 https://github.com/vuejs            <a href="https://www.cnblogs.com/songbw/p/12809691.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-30 16:39 请叫我宋某某 阅读 (146) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12809691" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/songbw/archive/2019/11/13.html">2019年11月13日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/songbw/p/11848632.html">
+    vue 开发规范
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：本文档为前端 vue 开发规范 规范目的 命名规范 结构化规范 注释规范 编码规范 CSS 规范 规范目的 为提高团队协作效率 便于后台人员添加功能及前端后期优化维护 输出高质量的文档 命名规范 为了让大家书写可维护的代码，而不是一次性的代码 让团队当中其他人看你的代码能一目了然 甚至一段时间时候后            <a href="https://www.cnblogs.com/songbw/p/11848632.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-11-13 14:26 请叫我宋某某 阅读 (321) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11848632" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/songbw/archive/2019/11/06.html">2019年11月6日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/songbw/p/11807460.html">
+    提高首屏页面加载速度，解决vue-cli打包后单个文件过大的问题
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：本教程是针对vue cli3以上的版本，其实原理都大同小异，这个demo为vue cli直接创建的项目，并在main.js中引入了 、`element ui lodash` 首先看demo打包后生成的文件大小，这个demo里面什么业务都没写、仅仅引入了几个包，chunk vendors.js就达到了            <a href="https://www.cnblogs.com/songbw/p/11807460.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-11-06 19:12 请叫我宋某某 阅读 (906) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11807460" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/songbw/archive/2019/10/28.html">2019年10月28日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/songbw/p/11751928.html">
+    学习笔记：flutter项目搭建(mac版)
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：什么是flutter Flutter是谷歌的移动UI框架，可以快速在iOS和Android上构建高质量的原生用户界面。 Flutter可以与现有的代码一起工作。在全世界，Flutter正在被越来越多的开发者和组织使用，并且Flutter是完全免费、开源的。 flutter具有以下几个优点 快速开发(            <a href="https://www.cnblogs.com/songbw/p/11751928.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-10-28 15:02 请叫我宋某某 阅读 (273) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11751928" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/songbw/archive/2019/10/12.html">2019年10月12日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/songbw/p/11662783.html">
+    前端页面如何实现下拉刷新
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：页面的滚动区域本来是用的插件vue scroller，但是由于在一些低端安卓机中页面略有卡动，可能是GPU不给力造成的，这里尝试用原生的 来测试一下滚动效果，发现效果不错，但是在ios设备中就发现了了滚动没有惯性很死板的体验，这里可以在滚动容器中写一行css属性 ，这样就有原生的滚动体验啦，接下来就            <a href="https://www.cnblogs.com/songbw/p/11662783.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-10-12 17:18 请叫我宋某某 阅读 (1560) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11662783" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/songbw/archive/2019/09/30.html">2019年9月30日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/songbw/p/11613869.html">
+    性能优化：虚拟列表，如何渲染10万条数据的dom，页面同时不卡顿
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：最近做的一个需求，当列表大概有2万条数据，又不让做成分页，如果页面直接渲染2万条数据，在一些低配电脑上可能会照成页面卡死，基于这个需求，我们来手写一个虚拟列表 思路 1. 列表中固定只显示少量的数据，比如60条 2. 在列表滚动的时候不断的去插入删除dom 3. startIndex、endInde            <a href="https://www.cnblogs.com/songbw/p/11613869.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-09-30 18:35 请叫我宋某某 阅读 (1525) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11613869" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/songbw/archive/2019/07/01.html">2019年7月1日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/songbw/p/11115370.html">
+    reset.css
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：转载： &quot;CSS Tools: Reset CSS&quot;            <a href="https://www.cnblogs.com/songbw/p/11115370.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-07-01 17:20 请叫我宋某某 阅读 (562) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11115370" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/songbw/archive/2019/06/21.html">2019年6月21日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/songbw/p/11065561.html">
+    学习笔记：javascript中的Generator函数
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：最近在学习redux saga，由于redux saga需要使用Generator函数，所以下来就回顾了一下Generator Generator 函数是 ES6 提供的一种异步编程解决方案，语法行为与传统函数完全不同 写法上Generator函数与普通函数没什么区别，只是在 关键字后面多了一个 号            <a href="https://www.cnblogs.com/songbw/p/11065561.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-06-21 16:53 请叫我宋某某 阅读 (259) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11065561" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/songbw/archive/2019/05/30.html">2019年5月30日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/songbw/p/10951352.html">
+    强迫症！一行代码拿到url特定query的值
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：简单的说一下背景，看到小伙伴给我发的项目中有一段获取当前url特定query值的代码，本着能写1行代码就不写5行代码的原则，我把这个获取方法给改了一下 之前的代码如下： 花了这么大工夫就为了拿到query中name字段的值，其实有更简单的方法，一行代码就可以搞定 巧用正则match 我们来看一下一行            <a href="https://www.cnblogs.com/songbw/p/10951352.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-05-30 18:37 请叫我宋某某 阅读 (398) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10951352" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/songbw/p/10950684.html">
+    如何用SVG写一个环形进度条以及动画
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：本次案例主要使用了svg的三个元素，分别为 、`text path`，关于svg的介绍大家可以看MDN上的相关教程， &quot;传送门&quot; 由于svg可以写到HTML中，所以这里我们就可以很方便的做进度条加载动画啦，这次案例以vue来做数据交互 svg的viewBox viewBox属性定义了画布上可以显示的            <a href="https://www.cnblogs.com/songbw/p/10950684.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-05-30 17:04 请叫我宋某某 阅读 (181) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10950684" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 请叫我宋某某
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

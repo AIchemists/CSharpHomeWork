@@ -1,0 +1,492 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>JavaGuide - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=Z9Vw4btcgJmrpUEjY_SgebmTmDXJ_hPFoST7ad2aJp4" />
+    <link id="MainCss" rel="stylesheet" href="/skins/bluesky/bundle-bluesky.min.css?v=nIYPSqBALS6DuGAjaXk5hWfDv_C8bPXulypjfPAZ-d4" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/bluesky/bundle-bluesky-mobile.min.css?v=s2piIyFV3NYqZWTmizb6uafQjmZFRhUBr8YMAdV85mA" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/javaguide/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/javaguide/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/javaguide/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
+    <script>
+        var currentBlogId = 554712;
+        var currentBlogApp = 'javaguide';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'BlueSky';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/javaguide/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/javaguide/">JavaGuide</a>
+</h1>
+<h2>
+开源项目—JavaGuide （59k+Star）作者运营维护。专注Java后端学习！内容涵盖Java面试指南、Spring Boot、Dubbo、Zookeeper、Redis、Nginx、消息队列、系统设计、架构、编程规范等内容。
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/javaguide/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/JavaGuide">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/javaguide/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+36&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+30</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<!--done-->
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/javaguide/archive/2020/04/30.html">2020年4月30日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/javaguide/p/spring-annotations.html">
+    接近8000字的Spring/SpringBoot常用注解总结！安排！
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：0.前言 _大家好，我是 Guide 哥！这是我的 221 篇优质原创文章。如需转载，请在文首注明地址，蟹蟹！_ 本文已经收录进我的 75K Star 的 Java 开源项目 JavaGuide： &quot;https://github.com/Snailclimb/JavaGuide&quot; 相关阅读： &quot;V2            <a href="https://www.cnblogs.com/javaguide/p/spring-annotations.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-30 17:17 JavaGuide 阅读 (195) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12809981" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/javaguide/archive/2020/04/22.html">2020年4月22日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/javaguide/p/12751779.html">
+    阿里面试官让我实现一个线程安全并且可以设置过期时间的LRU缓存，我蒙了！
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：[toc] 最近被读者问到“不用LinkedHashMap的话，如何实现一个线程安全的 LRU 缓存？网上的代码太杂太乱，Guide哥哥能不能帮忙写一个？”。 相关阅读： &quot;V2.0 版本的 《JavaGuide面试突击版》来啦！带着它的在线阅读版本来啦！&quot; 划重点，手写一个 LRU 缓存在面试中还            <a href="https://www.cnblogs.com/javaguide/p/12751779.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-22 14:15 JavaGuide 阅读 (455) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12751779" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/javaguide/archive/2020/04/03.html">2020年4月3日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/javaguide/p/operating-system.html">
+    我和面试官之间关于操作系统的一场对弈！写了很久，希望对你有帮助！
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：大家好，我是 Guide 哥！很多读者抱怨计算操作系统的知识点比较繁杂，自己也没有多少耐心去看，但是面试的时候又经常会遇到。所以，我带着我整理好的操作系统的常见问题来啦！这篇文章总结了一些我觉得比较重要的操作系统相关的问题比如 进程管理 、 内存管理 、 虚拟内存 等等。 文章形式通过大部分比较喜欢            <a href="https://www.cnblogs.com/javaguide/p/operating-system.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-03 13:37 JavaGuide 阅读 (1149) 评论 (4)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12625976" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/javaguide/archive/2020/03/31.html">2020年3月31日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/javaguide/p/12603673.html">
+    避免自己写的 url 被diss！建议看看这篇RestFul API简明教程！
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：大家好我是 Guide 哥！这是我的第 210 篇优质原创！这篇文章主要分享了后端程序员必备的 RestFul API 相关的知识。 RestFul API 是每个程序员都应该了解并掌握的基本知识，我们在开发过程中设计 API 的时候也应该至少要满足 RestFul API 的最基本的要求（比如接口            <a href="https://www.cnblogs.com/javaguide/p/12603673.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-03-31 10:57 JavaGuide 阅读 (709) 评论 (2)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12603673" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/javaguide/archive/2020/03/20.html">2020年3月20日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/javaguide/p/12531199.html">
+    爱了爱了！推荐一个Github 70k+点赞的Java学习指南！
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：大家好，我是 Guide 哥！今天给大家推荐一个非常不错的 Java 教程类开源项目— &quot;JavaGuide&quot; ,Github 地址： &quot;https://github.com/Snailclimb/JavaGuide&quot; ，相信对于你学习 Java 以及准备 Java 方向的面试都很有帮助！正如作者说            <a href="https://www.cnblogs.com/javaguide/p/12531199.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-03-20 13:44 JavaGuide 阅读 (249) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12531199" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/javaguide/archive/2020/03/16.html">2020年3月16日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/javaguide/p/java-interview-prepare.html">
+    4000字干货长文！从校招和社招的角度说说如何准备Java后端大厂面试？
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：插个题外话，为了写好这篇文章内容，我自己前前后后花了一周的时间来总结完善，文章内容应该适用于每一个学习 Java 的朋友！我觉得这篇文章的很多东西也是我自己写给自己的，比如从大厂招聘要求中我们能看到哪些重要的能力，我们该朝什么方向努力？ 共勉！ 下面的文章的部分内容在我早期文章中出现过，老读者应该一            <a href="https://www.cnblogs.com/javaguide/p/java-interview-prepare.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-03-16 17:08 JavaGuide 阅读 (361) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12505057" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/javaguide/archive/2020/01/20.html">2020年1月20日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/javaguide/p/12216564.html">
+    如何设计一个高可用系统？要考虑哪些地方？
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：本文已经收录自笔者开源的 JavaGuide: &quot;https://github.com/Snailclimb&quot; (69k+Star【Java学习+面试指南】 一份涵盖大部分Java程序员所需要掌握的核心知识)如果觉得不错的还，不妨去点个Star，鼓励一下! 一篇短小的文章，面试经常遇到的这个问题。本            <a href="https://www.cnblogs.com/javaguide/p/12216564.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-01-20 08:48 JavaGuide 阅读 (845) 评论 (2)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12216564" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/javaguide/archive/2020/01/14.html">2020年1月14日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/javaguide/p/12191441.html">
+    老生常谈！数据库如何存储时间？你真的知道吗？
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：我们平时开发中不可避免的就是要存储时间，比如我们要记录操作表中这条记录的时间、记录转账的交易时间、记录出发时间等等。你会发现这个时间这个东西与我们开发的联系还是非常紧密的，用的好与不好会给我们的业务甚至功能带来很大的影响。所以，我们有必要重新出发，好好认识一下这个东西。 这是一篇短小精悍的文章，仔细            <a href="https://www.cnblogs.com/javaguide/p/12191441.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-01-14 12:53 JavaGuide 阅读 (1555) 评论 (5)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12191441" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/javaguide/archive/2020/01/10.html">2020年1月10日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/javaguide/p/12178366.html">
+    应届生/社招面试最爱问的几道Java基础问题
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：本文已经收录自笔者开源的 JavaGuide: &quot;https://github.com/Snailclimb&quot; (【Java学习+面试指南】 一份涵盖大部分Java程序员所需要掌握的核心知识)如果觉得不错的还，不妨去点个Star，鼓励一下! 一 为什么 Java 中只有值传递？ 首先回顾一下在程序设            <a href="https://www.cnblogs.com/javaguide/p/12178366.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-01-10 22:18 JavaGuide 阅读 (258) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12178366" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/javaguide/p/12177405.html">
+    良心推荐，我珍藏的一些Chrome插件
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：上次搬家的时候，发了一个朋友圈，附带的照片中不小心暴露了自己的 Chrome 浏览器插件之多，于是就有小伙伴评论说分享一下我觉得还不错的浏览器插件。 我下面就把我日常工作和学习中经常用到的一些 Chrome 浏览器插件分享给大家，随便一个都能提高你的“生活品质”和工作效率。 Markdown Her            <a href="https://www.cnblogs.com/javaguide/p/12177405.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-01-10 17:46 JavaGuide 阅读 (128) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12177405" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/javaguide/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 JavaGuide
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

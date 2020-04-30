@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="never" />
+    <meta property="og:description" content="论文提出基于轮廓的实例分割方法Deep snake，轮廓调整是个很不错的方向，引入循环卷积，不仅提升了性能还减少了计算量，保持了实时性，但是Deep snake的大体结构不够优雅，应该还有一些工作可以" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Deep Snake : 基于轮廓调整的SOTA实例分割方法，速度32.3fps | CVPR 2020 - 晓飞的算法工程笔记 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=Z9Vw4btcgJmrpUEjY_SgebmTmDXJ_hPFoST7ad2aJp4" />
+    <link id="MainCss" rel="stylesheet" href="/skins/coffee/bundle-coffee.min.css?v=pdMIVgsH8kXt-vOWnlL0N20TlHt3UyP9HzGgocfsP4s" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee-mobile.min.css?v=na9bpAY4yh7uEWCcrXj3vfJM3VBse8YtU6-5fUUQPz0" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/VincentLee/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/VincentLee/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/VincentLee/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
+    <script>
+        var currentBlogId = 215477;
+        var currentBlogApp = 'VincentLee';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'coffee';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a href="https://www.cnblogs.com/VincentLee/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/VincentLee/">晓飞的算法工程笔记</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+	<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/VincentLee/">
+首页</a>
+</li>
+	<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+	<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E6%99%93%E9%A3%9E%E7%9A%84%E7%AE%97%E6%B3%95%E5%B7%A5%E7%A8%8B%E7%AC%94%E8%AE%B0">
+联系</a></li>
+	<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+	<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/VincentLee/rss/">
+订阅</a>
+	
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/VincentLee/rss/">
+    <img src="/skins/coffee/images/xml.gif" alt="订阅" />
+</a></li>
+</ul>
+
+
+
+			<div class="blogStats">
+				
+				<!--done-->
+随笔- 
+30&nbsp;
+文章- 
+0&nbsp;
+评论- 
+2&nbsp;
+
+
+
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class = "postTitle">
+			
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/VincentLee/p/12810569.html">Deep Snake : 基于轮廓调整的SOTA实例分割方法，速度32.3fps | CVPR 2020</a>
+
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <blockquote>
+<p>论文提出基于轮廓的实例分割方法Deep snake，轮廓调整是个很不错的方向，引入循环卷积，不仅提升了性能还减少了计算量，保持了实时性，但是Deep snake的大体结构不够优雅，应该还有一些工作可以补，推荐大家阅读<br>
+ <br>
+来源：晓飞的算法工程笔记 公众号</p>
+</blockquote>
+<p><strong>论文: Deep Snake for Real-Time Instance Segmentation</strong></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-47d1665e09d63781.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<ul>
+<li><strong>论文地址：<a href="https://arxiv.org/abs/2001.01629">https://arxiv.org/abs/2001.01629</a></strong></li>
+<li><strong>论文代码：<a href="https://github.com/zju3dv/snake/">https://github.com/zju3dv/snake/</a></strong></li>
+</ul>
+<h1 id="introduction">Introduction</h1>
+<hr>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-59c6a7ecb9c64521.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>  实例分割是许多计算机视觉任务中的重要手段，目前大多数的算法都采用在给定的bbox中进行pixel-wise分割的方法。受snake算法和Curve-GCN的启发，论文采用基于轮廓的逐步调整策略，提出了Deep snake算法进行实时实例分割，该算法将初始轮廓逐渐优化为目标的边界，如图1所示，达到很好的性能且依然保持很高的实时性(32.3fps)。<br>
+  论文的主要贡献如下：</p>
+<ul>
+<li>提出基于学习的snake算法用于实时实例分割，对初始轮廓调整至目标边界，并且引入循环卷积(circular convolution)进行轮廓特征的学习。</li>
+<li>提出two-stage流程进行实例分割，先初始化轮廓再调整轮廓，两个步骤均可以用于修正初始定位的误差。</li>
+<li>Deep snake能在多个实例分割数据集上达到SOTA，对于512的图片输入能达到32.3fps。</li>
+</ul>
+<h1 id="proposed-approach">Proposed approach</h1>
+<hr>
+<p>  Deep snake方法将初始轮廓逐渐优化为目标的边界来进行目标分割，即将物体轮廓作为输入，基于CNN主干特征预测每个顶点的偏移量。为了充分利用轮廓拓扑结构，论文使用循环卷积(circular convolution)进行顶点特征的学习，有助于学习轮廓的优化，并基于deep snake提出了一套实时实例分割的流程。</p>
+<h3 id="learning-based-snake-algorithm">Learning-based snake algorithm</h3>
+<p>  传统的snake算法将顶点的坐标作为变量来优化人工设计的能量函数(energy function)，通过最小化能量函数来拟合目标边界。由于能量函数通常是非凸的，而且需要基于低维图像特征进行人工设计，通常会陷于局部最优解。<br>
+  而deep snake则是直接从数据学习如何微调轮廓，对于$N$个顶点${ x_i | i=1, ..., N}$，首先构造每个顶点的特征向量，顶点$x_i$的特征$f_i$为对应的网络特征和顶点坐标的concate$[F(x_i);x_i<sup>{'}]$，其中$F$为主干网络输出的特征图，$F(x_i)$为顶点$x_i$处的双线性差值输出，附加的$x_i</sup>{'}$用于描述顶点间的位置关系，$x_i^{'}$是平移不变的，由每个顶点坐标减去轮廓中所有顶点的最小$x$和$y$得到相对坐标。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-0e303db4c8d2bacd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-04e008a58015c5eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>  在获得顶点特征后，需要对轮廓特征进一步学习，顶点的特征可以视作1-D离散信号$f:\mathbb{Z}\to \mathbb{R}^D$，然后使用标准卷积对顶点逐个进行处理，但这样会破坏轮廓的拓扑结构。因此，将顶点特征定义为公式1的周期信号，然后使用公式2的循环卷积进行特征学习，$k:[-r,r]\to \mathbb{R}^D$为可学习的卷积核，$*$为标准卷积操作。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-51eb9cfbe02be2d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>  循环卷积操作如图2所示，与标准的卷积操作类似，可以很简单地集成到目前的网络中。在特征学习后，对每个顶点使用3个$1\times 1$卷积层进行偏移的输出，实验中循环卷积的核大小固定为9。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-14c3d22d74030a05.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>  图a展示了deep snake的细节结构，输入为初始轮廓，主干包含8个&quot;CirConv-Bn-ReLU&quot;层，每层都使用残差连接，Fusion block用于融合主干网络中的多尺度轮廓特征，Prediction head使用3个$1\times 1$卷积输出每个顶点的偏移。</p>
+<h3 id="deep-snake-for-instance-segmentation">Deep snake for instance segmentation</h3>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-cc2a08b32d30b1b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>  将deep snake加入到目标检测模型中进行实例分割，流程如图b所示。模型首先产生目标框，将其构建成菱形框，然后使用deep snake算法将菱形顶点调整为目标极点，构造八边形轮廓，最后进行迭代式deep snake轮廓调整得到目标形状</p>
+<ul>
+<li>
+<h5 id="initial-contour-proposal">Initial contour proposal</h5>
+</li>
+</ul>
+<p>  论文采用ExtreNet的极点思想，能够很好地包围物体。在得到矩形框后，获取4条边的中心点${x_i^{bb} | i=1,2,3,4 }$连成菱形轮廓，使用deep snake对菱形轮廓调整成极点${x_i^{ex} | i=1,2,3,4 }$，然后每个极点放置一条边，连接边构造多边形，每个极点的边为其对应的bbox边的$1/4$，若边超过原bbox范围会被截断。在实际使用时，菱形轮廓输入deep snake前会平均上采样到40个点(有助于deep snake计算)，但损失函数计算只考虑$x_i^{bb}$的对应偏移</p>
+<ul>
+<li>
+<h5 id="contour-deformation">Contour deformation</h5>
+</li>
+</ul>
+<p>  对八边形平均采样$N$个点，将上极点$x_1<sup>{ex}$作为起点，同样地，GT轮廓对物体边缘平均采样$N$个点，将靠近$x_1</sup>{ex}$的点作为起点，$N$一般为128。如果顶点离GT很远，很难直接正确调整，于是采用迭代式地进行deep snake调整，实验采用的迭代次数为3次。<br>
+  轮廓是目标空间位置的一种扩展表示方法，通过调整轮廓到物体边缘能够帮助解决detector的定位误差</p>
+<ul>
+<li>
+<h5 id="handling-multi-component-objects">Handling multi-component objects</h5>
+</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-c56eaf56a50a1a06.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>  由于遮挡，一个实例可能包含多个组件，然而一个轮廓只能勾勒出bbox内的一个组件。为了解决这个问题，使用RoIAlign来提取初始bbox特征，然后配合detector来检测组件的box，再对每个box进行上述的轮廓调整，最后结合初始bbox内相同类别的组件输出最终的物体形状。</p>
+<h1 id="implementation-details">Implementation details</h1>
+<hr>
+<h3 id="training-strategy">Training strategy</h3>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-e822fba12488ef30.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>  极点的损失函数如公式3，$\tilde{x}_i^{ex}$为预测的极点。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-37d462789df4488f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>  迭代轮廓调整的损失函数如公式4，$\tilde{x}_i$为调整后的顶点，$x_i^{gt}$为对应的GT边缘点。对于检测部分，则采用跟原检测函数一样的损失函数。</p>
+<h3 id="detector">Detector</h3>
+<p>  使用CenterNet作为检测器，对于物体检测，使用跟原来一样的设定输出类别相关的box，而对于组件检测，则使用类不可知的CenterNet，对于$H\times W\times C$的特征图，输出$H\times W\times 1$的中心点heatmap和$H\times W\times 2$的box大小特征图。</p>
+<h1 id="experiments">Experiments</h1>
+<hr>
+<h3 id="ablation-studies">Ablation studies</h3>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-ceb7b9b8fbd94252.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>  Baseline将轮廓视为图结构，然后使用GCN进行轮廓调整，初始轮廓为围绕bbox的椭圆，Arichitecture加入Fusion block，Initial proposal加入论文的轮廓初始化方法，最后是将GCN修改为循环卷积，可以看到每个步骤都对AP有提升。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-f62cdcce7cbcc1bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>  论文也对比了卷积类型以及迭代次数对结构的影响，可以看到循环卷积的结果比GCN要好。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-04e62b9839b60ad0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="comparison-with-the-state-of-the-art-methods">Comparison with the state-of-the-art methods</h3>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-037f24d0bea73b06.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-28f07c658fbc4ccd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-0b3dcb44c21d87e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-7dea4a3d99c51aa4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-4770c29923a3cc9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>  论文在不同的数据集上都取得了不错的效果，作者在每个数据集上的训练参数都有点不一样，具体参数可以看看原文</p>
+<h3 id="running-time">Running time</h3>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-bbad953bc7dc4b2f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h1 id="conclusion">Conclusion</h1>
+<hr>
+<p>  论文提出基于轮廓的实例分割方法Deep snake，轮廓调整是个很不错的方向，引入循环卷积，不仅提升了性能还减少了计算量，保持了实时性，但是Deep snake的大体结构不够优雅，应该还有一些工作可以补，推荐大家阅读</p>
+<p> </p>
+<h3 id="参考内容">参考内容</h3>
+<ul>
+<li>Snakes: Active Contour Models - <a href="http://www.cs.ait.ac.th/~mdailey/cvreadings/Kass-Snakes.pdf">http://www.cs.ait.ac.th/~mdailey/cvreadings/Kass-Snakes.pdf</a></li>
+<li>Fast Interactive Object Annotation with Curve-GCN - <a href="https://arxiv.org/pdf/1903.06874.pdf">https://arxiv.org/pdf/1903.06874.pdf</a></li>
+</ul>
+<p> <br>
+ <br>
+ </p>
+<blockquote>
+<p>如果本文对你有帮助，麻烦点个赞或在看呗～<br>
+更多内容请关注 微信公众号【晓飞的算法工程笔记】</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/20428708-7156c0e4a2f49bd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="work-life balance."></p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+		</div>
+		<div class="postDesc">posted @ 
+<span id="post-date">2020-04-30 18:18</span>&nbsp;
+<a href="https://www.cnblogs.com/VincentLee/">晓飞的算法工程笔记</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12810569" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12810569);return false;">收藏</a></div>
+	</div>
+	
+	
+</div><!--end: topics 文章、评论容器-->
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 215477, cb_blogApp = 'VincentLee', cb_blogUserGuid = '0d9ecd5d-98a6-e411-b908-9dcfd8948a71';
+    var cb_entryId = 12810569, cb_entryCreatedDate = '2020-04-30 18:18', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div></div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script></div>
+			
+			<DIV id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</DIV>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 晓飞的算法工程笔记
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

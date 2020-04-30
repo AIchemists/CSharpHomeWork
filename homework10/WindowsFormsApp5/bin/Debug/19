@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="前言 现在有人谈起webform 一般都会说这种技术已经过时了，毫无用处。 因为我们在日常开发中已经不会去开发哪种几个简单的网页的程序，我们的业务更加复杂，这种拖动式的过于死板。 但是是否毫无用处呢？" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>webform 最后的黄昏之力 - 石马圣手(兵人) - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=Z9Vw4btcgJmrpUEjY_SgebmTmDXJ_hPFoST7ad2aJp4" />
+    <link id="MainCss" rel="stylesheet" href="/skins/simpleblue/bundle-simpleblue.min.css?v=MH15aYd6DmX-6TABpA2xkiKENy3GAhiM2dh5rOPH89I" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/simpleblue/bundle-simpleblue-mobile.min.css?v=X7swQJ1TyCJAf6FMVjDPbYhUAiMdNFddEy1-m0_TbFQ" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/aoximin/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/aoximin/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/aoximin/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
+    <script>
+        var currentBlogId = 452033;
+        var currentBlogApp = 'aoximin';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'SimpleBlue';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    <div id="page_begin_html">
+        <link href="https://files.cnblogs.com/files/aoximin/cnblog-scroller.css" type="text/css" rel="stylesheet">
+<script src="https://files.cnblogs.com/files/aoximin/scrollspy.js" type="text/javascript" defer></script>
+<script src="https://files.cnblogs.com/files/aoximin/stickUp.min.js" type="text/javascript" defer></script>
+<script src="https://files.cnblogs.com/files/aoximin/cnblog-scroller.js" type="text/javascript" defer></script>
+    </div>
+    <div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/aoximin/">从事授医工作，为石马服务</a>
+</div>
+<div class="subtitle">
+此生夙愿，平定中东
+</div>
+
+        </div>
+        <div id="navigator">
+            
+<ul id="navList">
+    <li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+    <li id="nav_myhome">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/aoximin/">
+首页</a>
+</li>
+    <li id="nav_newpost">
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+    <li id="nav_contact">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%9F%B3%E9%A9%AC%E5%9C%A3%E6%89%8B%28%E5%85%B5%E4%BA%BA%29">
+联系</a></li>
+    <li id="nav_rss">
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/aoximin/rss/">
+订阅</a></li>
+    <li id="nav_admin">
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+            <div class="blogStats">
+                
+<span id="stats_post_count">随笔 - 
+162&nbsp;</span>
+<span id="stats_article_count">文章 - 
+1&nbsp;</span>
+<!-- <span id="stats-comment_count"></span> -->
+<span id="stats_comment_count">评论 - 
+33</span>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                <div id="post_detail">
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/aoximin/p/12804050.html">webform 最后的黄昏之力</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <h3 id="前言">前言</h3>
+<p>现在有人谈起webform 一般都会说这种技术已经过时了，毫无用处。</p>
+<p>因为我们在日常开发中已经不会去开发哪种几个简单的网页的程序，我们的业务更加复杂，这种拖动式的过于死板。</p>
+<p>但是是否毫无用处呢？其他的我不知道，但是如果做一个简单的工具类网页还是感觉非常清晰的，然后日常写一些东西的时候我们需要一个界面去展示我们测试的数据，那么我还是觉得这东西挺方便的。</p>
+<p>以前学习webform的时候是在上学期间，做项目用了一个学期(好吧，非常古老了)，后来都是mvc了。下面我阐述一些自己做工具和日常在控制台不好显示的时候使用webform的一个好处。</p>
+<h3 id="正文">正文</h3>
+<h4 id="更新页面不刷新">更新页面不刷新</h4>
+<p>我觉得无论作为工具，还是测试，现在页面我希望页面更新的时候，是不希望刷新页面的。</p>
+<p>那么webfrom是如何实现的。</p>
+<p>有两种方式:</p>
+<p>第一种:</p>
+<pre><code>&lt;body&gt;
+    &lt;form id=&quot;form1&quot; runat=&quot;server&quot;&gt;
+        &lt;asp:ScriptManager ID=&quot;ScriptManager1&quot; runat=&quot;server&quot;&gt;
+        &lt;/asp:ScriptManager&gt;
+        &lt;asp:UpdatePanel ID=&quot;UpdatePanel2&quot; runat=&quot;server&quot;&gt;
+            &lt;ContentTemplate&gt;
+                &lt;asp:Label ID=&quot;Time1&quot; runat=&quot;server&quot; Text=&quot;Timel&quot;&gt;&lt;/asp:Label&gt;
+                &lt;asp:Button runat=&quot;server&quot; Text=&quot;按钮1&quot; OnClick=&quot;OnClick&quot; /&gt;
+            &lt;/ContentTemplate&gt;
+        &lt;/asp:UpdatePanel&gt;
+        &lt;asp:UpdatePanel ID=&quot;UpdatePanel1&quot; runat=&quot;server&quot;&gt;
+            &lt;ContentTemplate&gt;
+                &lt;asp:Label ID=&quot;Time2&quot; runat=&quot;server&quot; Text=&quot;Time2&quot;&gt;&lt;/asp:Label&gt;
+                &lt;asp:Button runat=&quot;server&quot; Text=&quot;按钮2&quot; OnClick=&quot;OnClick&quot; /&gt;
+            &lt;/ContentTemplate&gt;
+        &lt;/asp:UpdatePanel&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<p>显示界面如下：</p>
+<p><img src="https://img2020.cnblogs.com/blog/1289794/202004/1289794-20200430085537142-1704423994.png" alt=""></p>
+<p>你需要引入:ScriptManager  组件，ScriptManager  一定要在form中，一般form会包裹整个网站的html。</p>
+<p>然后你仅仅需要在UpdatePanel中写入你需要更新的元素。</p>
+<p>比如第一个按钮一，有一个事件onclick。那么这个事件会对应后台的:</p>
+<pre><code>protected void OnClick(object sender, EventArgs e)
+{
+	this.Time1.Text = System.DateTime.Now.ToString();
+	this.Time2.Text = System.DateTime.Now.AddDays(1).ToString();
+}
+</code></pre>
+<p>我仅仅需要设置this.Time1和this.Time2的值，那么他们就会刷新，也不会刷新整个页面。</p>
+<p><img src="https://img2020.cnblogs.com/blog/1289794/202004/1289794-20200430090033541-1186126422.png" alt=""></p>
+<p>看一下原理:</p>
+<p>它会去做一个请求:</p>
+<p><img src="https://img2020.cnblogs.com/blog/1289794/202004/1289794-20200430090218949-736893326.png" alt=""></p>
+<p><img src="https://img2020.cnblogs.com/blog/1289794/202004/1289794-20200430090249229-332049530.png" alt=""></p>
+<p>然后获得到我们需要刷新的部分:</p>
+<p><img src="https://img2020.cnblogs.com/blog/1289794/202004/1289794-20200430090337106-813458922.png" alt=""></p>
+<p>我觉得不需要过多的去关注着如何刷新，因为已经非常成熟，加上其现在用了做工具。</p>
+<p>这时候有人问了，做工具或者测试的时候也需要自定义一些复杂的回调啊。那么这时候pageMethods可以帮你实现，你不需要去引入任何库，因为webfrom自带。</p>
+<p>第二种:</p>
+<pre><code>&lt;body&gt;
+    &lt;form id=&quot;form1&quot; runat=&quot;server&quot;&gt;
+        &lt;div&gt;
+            &lt;asp:ScriptManager ID=&quot;ScriptManager1&quot; runat=&quot;server&quot; EnablePageMethods=&quot;true&quot;&gt;
+            &lt;/asp:ScriptManager&gt;
+            &lt;script type=&quot;text/javascript&quot;&gt;
+                PageMethods.set_path(&quot;About.aspx&quot;);
+                function tips() {
+                    var txt = document.getElementById(&quot;TextBox1&quot;).value;
+                    PageMethods.callmethod(txt, funRight);
+
+                }
+                function funRight(val, value2)       //回调函数，用val接受后台代码aa的执行结果    
+                {
+                    alert(val);
+                }
+            &lt;/script&gt;
+            &lt;asp:Label ID=&quot;Label1&quot; runat=&quot;server&quot; Text=&quot;请输入信息：&quot;&gt;&lt;/asp:Label&gt;
+            &lt;asp:TextBox ID=&quot;TextBox1&quot; runat=&quot;server&quot;&gt;&lt;/asp:TextBox&gt;
+            &lt;input type=&quot;button&quot; value=&quot;转发我输入的内容&quot; onclick='tips()' id=&quot;btnGetServerTime&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<p>效果:</p>
+<p><img src="https://img2020.cnblogs.com/blog/1289794/202004/1289794-20200430091126825-1784587048.png" alt=""></p>
+<p>其实重点看tips就好，PageMethods.callmethod(txt, funRight);</p>
+<p>这个PageMethods是渲染引擎引入的，后面我会介绍。</p>
+<p>那么这个会执行后台的callmethod方法，txt是传入的参数，funRight是成功回调。</p>
+<p>看下后台:</p>
+<pre><code>[WebMethod]
+//[ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+public static string callmethod(string str)
+{
+	return &quot;您输入的是:&quot;+ str;
+}
+</code></pre>
+<p>拿到数据后，加上“您输入的是:”，然后返回。</p>
+<p>效果:</p>
+<p><img src="https://img2020.cnblogs.com/blog/1289794/202004/1289794-20200430091805246-1202801682.png" alt=""></p>
+<p>介绍一下原理:</p>
+<p>它会去后台调用callmethod方法，</p>
+<p><img src="https://img2020.cnblogs.com/blog/1289794/202004/1289794-20200430092008984-1237953673.png" alt=""></p>
+<p>然后会返回:</p>
+<p><img src="https://img2020.cnblogs.com/blog/1289794/202004/1289794-20200430092033418-1764275823.png" alt=""></p>
+<p>那么看下PageMethods.callmethod为什么会去调用到我们后台的方法：</p>
+<p><img src="https://img2020.cnblogs.com/blog/1289794/202004/1289794-20200430092242366-656696901.png" alt=""></p>
+<p>上图我们看到这个会帮我们生成callmethod方法，然后调用对应的接口，这让我们的代码看起来清爽。</p>
+<h4 id="数据绑定">数据绑定</h4>
+<p>后台加上有一个类:</p>
+<pre><code>/// &lt;summary&gt;
+/// Users 的摘要说明
+/// &lt;/summary&gt;
+public class Users
+{
+	private string Nickame;
+
+	private string Sex;
+	public Users(string nickName,string sex)
+	{
+		this.Nickame = nickName;
+		this.Sex = sex;
+	}
+
+	public string Sex1 { get =&gt; Sex; set =&gt; Sex = value; }
+	public string Nickame1 { get =&gt; Nickame; set =&gt; Nickame = value; }
+}
+</code></pre>
+<p>然后前台：</p>
+<pre><code>&lt;body&gt;
+    &lt;form id=&quot;form1&quot; runat=&quot;server&quot;&gt;
+        &lt;div&gt;
+            &lt;table&gt;
+                &lt;%--创建一个表格--%&gt;
+                &lt;thead&gt;
+                    &lt;%--表格的表头--%&gt;
+                    &lt;tr&gt;
+                        &lt;%--每一列的列名--%&gt;
+                        &lt;td&gt;用户&lt;/td&gt;
+                        &lt;td&gt;性别&lt;/td&gt;
+                        &lt; /tr&gt; &lt;/thead&gt; &lt;tbody&gt;
+                            &lt;%--表格的主体--%&gt;
+                            &lt;asp:Repeater ID=&quot;Repeater1&quot; runat=&quot;server&quot;&gt;
+                                &lt;%--循环数据--%&gt;
+                                &lt;ItemTemplate&gt;
+                    &lt;tr&gt;
+                        &lt;%--括号内为属性名--%&gt;
+                        &lt;td&gt;&lt;%#Eval(&quot;Nickame1&quot;) %&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;%#Eval(&quot;Sex1&quot;) %&gt;&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;/ItemTemplate&gt;
+                    &lt;/asp:Repeater&gt;
+                    &lt;/tbody&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<p>那么如何绑定:</p>
+<pre><code>List&lt;Users&gt; users = new List&lt;Users&gt; {
+	new Users(&quot;张三&quot;,&quot;男&quot;),new Users(&quot;李四&quot;,&quot;女&quot;)
+};
+Repeater1.DataSource = users;//指定数据源
+Repeater1.DataBind();//绑定数据源
+</code></pre>
+<p>效果:</p>
+<p><img src="https://img2020.cnblogs.com/blog/1289794/202004/1289794-20200430103115116-1925040198.png" alt=""></p>
+<p>这样就可以直接绑定我们的数据了。</p>
+<h4 id="关于ui">关于ui</h4>
+<p>ui的话，直接找个库，最好找一个纯的css库。</p>
+<h3 id="总结">总结</h3>
+<p>webform的确不适合我们的一些中大型和一些复杂的页面了。</p>
+<p>但是webform用来做测试或者日常的控制台替代品还是比较好的，可以看到其实webform做一些小的东西，还是非常清爽的，做小型工具的话，上面这些完全够用。</p>
+<p>我们可以不用过多的js代码(伤眼睛)，注重的更多的是逻辑,我们可以把我们的关注点转移到功能实现上去。</p>
+<p>上面只是个人观点，如有不同的观点，请包容指正。</p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-04-30 10:40</span>&nbsp;
+<a href="https://www.cnblogs.com/aoximin/">石马圣手(兵人)</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12804050" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12804050);return false;">收藏</a></div>
+        </div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 452033, cb_blogApp = 'aoximin', cb_blogUserGuid = '6609fa20-e319-43a3-34b5-08d52fc34315';
+    var cb_entryId = 12804050, cb_entryCreatedDate = '2020-04-30 10:40', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>    </div>
+</div>
+            </div>
+        </div>
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+                
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+                <div id="calendar"><div id="blog-calendar" style="display:none"></div></div>                
+                <script>loadBlogDefaultCalendar();</script>
+                <div id="leftcontentcontainer">
+                    <!-- begin:SingleColumn -->
+                    <div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+                    <!-- end:  SingleColumn -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer">
+        <!--done-->
+Copyright &copy; 2020 石马圣手(兵人)
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+    </div>
+</div>
+
+    
+</body>
+</html>
