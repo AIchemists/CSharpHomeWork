@@ -4,28 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="origin" />
-    <meta property="og:description" content="最近被安排开发文件存储微服务，要求是能够通过配置来无缝切换我们公司内部研发的文件存储系统，FastDFS，MongDb GridFS，阿里云OSS，腾讯云OSS等。根据任务紧急度暂时先完成了通过配置来" />
+    <meta property="og:description" content="一：背景 1. 讲故事 我们有一家top级的淘品牌店铺，为了后续的加速计算，在程序启动的时候灌入她家的核心数据到内存中，灌入完成后内存高达100G，虽然云上的机器内存有256G，然被这么划掉一半看着还" />
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>用asp.net core结合fastdfs打造分布式文件存储系统 - 依乐祝 - 博客园</title>
+    <title>内存迟迟下不去，可能你就差一个GC.Collect - 一线码农 - 博客园</title>
     
-    <link rel="stylesheet" href="/css/blog-common.min.css?v=Z9Vw4btcgJmrpUEjY_SgebmTmDXJ_hPFoST7ad2aJp4" />
-    <link id="MainCss" rel="stylesheet" href="/skins/simplememory/bundle-simplememory.min.css?v=OL4qeo1LNGlN1rKIhv5UctANvt0M6Nx6kLzr_ffx3Xk" />
-    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/yilezhu/custom.css?v=G4kmIzxNvZpsGA3Z2E38nZPElbU=" />
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory-mobile.min.css" />
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/imetro_hd/bundle-imetro_hd.min.css?v=gS0FloTY-RBJQcN3GCAKG6fAr6HHKtDMTw60VxjN79c" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/huangxincheng/custom.css?v=z0WD6a4nBgoSBHjlq93cyLFnQd8=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/imetro_hd/bundle-imetro_hd-mobile.min.css?v=VacchHeVg6bp3gCO8NqMH8D8fhA8iyRbb0JgoDUvn4o" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/yilezhu/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/yilezhu/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/yilezhu/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/huangxincheng/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/huangxincheng/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/huangxincheng/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 435194;
-        var currentBlogApp = 'yilezhu';
+        var currentBlogId = 85195;
+        var currentBlogApp = 'huangxincheng';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'SimpleMemory';
+        var skinName = 'iMetro_HD';
     </script>
     
     
@@ -33,32 +33,19 @@
 </head>
 <body>
     <a name="top"></a>
-    <div id="page_begin_html">
-        <div class="c-portrait">
-  <img src="https://pic.cnblogs.com/avatar/1377250/20180629145832.png" alt="依乐祝" />
-  <h1><a href="https://www.cnblogs.com/yilezhu/">依乐祝</a></h1>
-  <h2>    授之以鱼，不如授之以渔！右侧微信扫描二维码关注我们“DotNetCore实战”吧。另附.NET Core实战项目交流群：637326624 欢迎大家加群相互交流！</h2>
-  <div class="c-social">
-    <a href="https://github.com/yilezhu" target="_blank">
-      <svg height="28" width="28" style="fill: currentColor;" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-      </svg>
-    </a>
-  </div>
-</div>
-    </div>
+    
     
 <!--done-->
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/yilezhu/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/huangxincheng/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/yilezhu/">依乐祝（祝雷）</a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/huangxincheng/"></a>
 </h1>
 <h2>
-授之以鱼，不如授之以渔！右侧微信扫描二维码关注我们“DotNetCore实战”吧。另附.NET Core实战项目交流群：637326624 欢迎大家加群相互交流！
+
 </h2>
 
 
@@ -73,7 +60,7 @@
 博客园</a>
 </li>
 <li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/yilezhu/">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/huangxincheng/">
 首页</a>
 </li>
 <li>
@@ -82,10 +69,10 @@
 新随笔</a>
 </li>
 <li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E4%BE%9D%E4%B9%90%E7%A5%9D">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E4%B8%80%E7%BA%BF%E7%A0%81%E5%86%9C">
 联系</a></li>
 <li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/yilezhu/rss/">
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/huangxincheng/rss/">
 订阅</a>
 <!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
 <li>
@@ -98,11 +85,11 @@
 		<div class="blogStats">
 			
 			<span id="stats_post_count">随笔 - 
-94&nbsp; </span>
+295&nbsp; </span>
 <span id="stats_article_count">文章 - 
-0&nbsp; </span>
+1&nbsp; </span>
 <span id="stats-comment_count">评论 - 
-1503</span>
+4956</span>
 
 			
 		</div><!--end: blogStats -->
@@ -118,703 +105,282 @@
         <div class="post">
             <h1 class = "postTitle">
                 
-<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/yilezhu/p/12797543.html">用asp.net core结合fastdfs打造分布式文件存储系统</a>
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/huangxincheng/p/12839160.html">内存迟迟下不去，可能你就差一个GC.Collect</a>
 
             </h1>
             <div class="clear"></div>
             <div class="postBody">
                 
 <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
-    <p>最近被安排开发文件存储微服务，要求是能够通过配置来无缝切换我们公司内部研发的文件存储系统，FastDFS，MongDb GridFS，阿里云OSS，腾讯云OSS等。根据任务紧急度暂时先完成了通过配置来无缝切换内部文件系统以及FastDFS。至于MongDb GridFS，阿里云OSS，腾讯云OSS等则后期需要的话再开发对应的提供者程序集合。</p>
+    <h1 id="一：背景">一：背景</h1>
+<h2 id="1-讲故事">1. 讲故事</h2>
+<p>我们有一家top级的淘品牌店铺，为了后续的加速计算，在程序启动的时候灌入她家的核心数据到内存中，灌入完成后内存高达100G，虽然云上的机器内存有256G，然被这么划掉一半看着还是有一点心疼的，可怜那些被挤压的小啰啰程序😄😄😄，本以为是那些List，HashSet，Dictionary需要动态扩容虚占了很多内存，也就没当一回事，后来过了一天发现内存回到了大概70多G，卧槽，不是所谓的集合虚占，而是GC没给我回收呀。。。</p>
+<h2 id="2-windbg验证一下">2. windbg验证一下</h2>
+<p>为了验证我的说法，我就不去生产抓这个庞然大物的dump了，去测试环境给大家抓一个，晚上清蒸。</p>
 <blockquote>
-<p>作者：依乐祝<br>
-首发公众号：DotNetCore实战<br>
-原文链接： <a href="https://www.cnblogs.com/yilezhu/p/12797543.html">https://www.cnblogs.com/yilezhu/p/12797543.html</a></p>
+<p>!eeheap -gc   查看gc信息</p>
 </blockquote>
-<p>今天主要是对开发过程，以及对FastDFS这个通用的分布式文件存储服务的单机及集群安装部署过程做个总结。希望对想要自建分布式文件系统的朋友有所帮助。</p>
-<h3 id="什么是fastdfs">什么是FastDFS</h3>
-<p>这里先简单介绍下分布式文件存储系统。<br>
-FastDFS 是一个开源的高性能分布式文件系统（DFS）。 它的主要功能包括：文件存储，文件同步和文件访问，以及高容量和负载平衡。主要解决了海量数据存储问题，特别适合以中小文件（建议范围：4KB &lt; file_size &lt;500MB）为载体的在线服务。<br>
-FastDFS 系统有三个角色：跟踪服务器(Tracker Server)、存储服务器(Storage Server)和客户端(Client)。<br>
-<strong>　　Tracker Server</strong>：跟踪服务器，主要做调度工作，起到均衡的作用；负责管理所有的 storage server和 group，每个 storage 在启动后会连接 Tracker，告知自己所属 group 等信息，并保持周期性心跳。<br>
-<strong>　　Storage Server</strong>：存储服务器，主要提供容量和备份服务；以 group 为单位，每个 group 内可以有多台 storage server，数据互为备份。<br>
-<strong>　　Client</strong>：客户端，上传下载数据的服务器，也就是我们自己的项目所部署在的服务器。<br>
-<img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091524930-142326034.png" alt=""></p>
-<p>FastDFS开源地址：<a href="https://github.com/happyfish100">https://github.com/happyfish100</a></p>
-<h3 id="fastdfs的单机版安装">FastDFS的单机版安装</h3>
-<p>这里先简单介绍下单机版的安装，跟着做你也可以从0还是搭建一个单机版的FastDFS。集群版也是在单机版基础上安装的。</p>
-<h4 id="第一步-安装相关工具">第一步 安装相关工具</h4>
-<p>如果已经安装和wget可以跳过这一步</p>
-<pre><code class="language-shell">yum -y install vim wget unzip
-</code></pre>
-<p>-y：不经过询问直接同意所有操作<br>
-vim：linux上面一个比较好用的文本编辑软件<br>
-wget：linux上文件下载工具</p>
-<h4 id="第二步-安装相关依赖">第二步 安装相关依赖</h4>
-<pre><code class="language-shell">yum install -y gcc-c++ perl
-</code></pre>
-<h4 id="第三步-安装libfastcommon">第三步 安装libfastcommon</h4>
-<p>大家可以直接到github上面先找到ibfastcommon。这里为了大家方便查找。我已经把把链接给大家整理好了<br>
-<a href="https://github.com/happyfish100/libfastcommon">libfastcommon</a><br>
-这里大家可以先下载到本地，然后再传至服务器上面。这里我使用的是FinalShell。具体操作就不在这里详细说了。<br>
-这里目录为：/root/fastdfs/<br>
-下载下来的是zip格式压缩包，然后，我们解压zip</p>
-<pre><code class="language-shell">unzip libfastcommon-master.zip
-</code></pre>
-<p>进入到刚刚解压的文件里面</p>
-<pre><code class="language-shell">cd libfastcommon-master/
-</code></pre>
-<p>进行编译安装</p>
-<pre><code class="language-shell">./make.sh &amp;&amp; ./make.sh install
-</code></pre>
-<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091548577-1102516514.png" alt=""><br>
-``shell<br>
-./make.sh &amp;&amp; ./make.sh install</p>
-<pre><code>
-
-#### 第五步 修改配置文件
-切换到配置文件目录下
-```shell
-cd /etc/fdfs/
-</code></pre>
-<p>查看所有配置文件<br>
-使用ls命令就行了<br>
-<img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091614818-3875521.png" alt=""></p>
-<p>去除所有的.sample后缀</p>
-<pre><code class="language-shell">cp client.conf.sample client.conf
-cp storage.conf.sample storage.conf
-cp storage_ids.conf.sample storage_ids.conf
-cp tracker.conf.sample tracker.conf
-</code></pre>
-<p>我们再次使用ls命令查看<br>
-<img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091639473-1656227136.png" alt=""></p>
-<p>可以看到我们已经去除了所有的.sample后缀<br>
-下一步，创建文件夹，分别创建client，storage，tracker文件夹</p>
-<pre><code class="language-shell">mkdir -p /home/software/fastfdfs/data/client
-mkdir -p /home/software/fastfdfs/data/storage
-mkdir -p /home/software/fastfdfs/data/tracker
-</code></pre>
-<h5 id="clientconfig配置">client.config配置</h5>
-<p>下面我们开始配置文件修改，首先修改的是clietn.conf,使用vim编辑器进行文件的编辑</p>
-<pre><code class="language-shell">vim client.conf
-</code></pre>
-<p>使用 :set number 显示行数<br>
-修改第11行，确定日志文件的存储路径，这里用我们刚刚创建client文件夹路径</p>
-<blockquote>
-<p>base_path = /home/software/fastdfs/data/client</p>
-</blockquote>
-<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091705532-570380366.png" alt=""></p>
-<p>修改第22 行，tracker的地址与端口，根据实际情况进行修改，我的是192.168.1.14。</p>
-<blockquote>
-<p>这里貌似有两个tracker_server,毕竟是单机版部署因此我这里注释了一个<br>
-tracker_server = 192.168.1.14:22122</p>
-</blockquote>
-<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091718027-569367786.png" alt=""></p>
-<p>修改号之后记得保存修改！</p>
-<h5 id="storageconf修改">storage.conf修改</h5>
-<p>下面我们修改storage.conf。同上是用vim进行修改<br>
-首先我们修改下11行的分组设置</p>
-<blockquote>
-<p>group_name = group1</p>
-</blockquote>
-<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091744851-196551674.png" alt=""></p>
-<p>接下来修改49行的基础路径，这里也用上面我们已经创建的路径</p>
-<blockquote>
-<p>base_path = /home/software/fastdfs/data/storage</p>
-</blockquote>
-<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091807631-161315846.png" alt=""></p>
-<p>修改第129行的storage路径。</p>
-<blockquote>
-<p>store_path0 = /home/software/fastdfs/data/storage<br>
-注意：这里提示下：存储路径的顺序很重要，不要弄乱了，<br>
-基础路径应该独立于存储路径，即尽量让这两个路径不一样。这里我设置了一样</p>
-</blockquote>
-<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091823136-1792880224.png" alt=""></p>
-<p>修改第145行 ，配置tracker的IP地址与端口。至于如何填写这个地址，上面配置client.conf的时候，我们就已经说过了。</p>
-<blockquote>
-<p>tracker_server = 192.168.1.14:22122</p>
-</blockquote>
-<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091832977-1282205837.png" alt=""></p>
-<h5 id="trackerconf-配置">tracker.conf 配置</h5>
-<p>现在修改tracker.conf文件<br>
-修改第23行，修改tracker的基础路径。这个路径的文件夹我们刚刚在上面已经创建过了</p>
-<blockquote>
-<p>base_path = /home/software/fastdfs/data/tracker</p>
-</blockquote>
-<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091844369-581951350.png" alt=""></p>
-<p>修改第57行 归属组设置</p>
-<blockquote>
-<p>store_group = group1</p>
-</blockquote>
-<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091856512-1718476879.png" alt=""></p>
-<h4 id="第六步-启动tracker-与storage">第六步 启动tracker 与storage</h4>
-<p>启动tracker</p>
-<pre><code class="language-shell">fdfs_trackerd /etc/fdfs/tracker.conf start
-</code></pre>
-<p>启动storage</p>
-<pre><code class="language-shell">fdfs_storaged /etc/fdfs/storage.conf start
-</code></pre>
-<p>测试是否启动成功，我们尝试上传文件。我的root文件夹下有一张图片</p>
-<pre><code class="language-shell">fdfs_test /etc/fdfs/client.conf upload /root/fastdfs/test.jpeg
-</code></pre>
-<p>如上图所示表示上传成功。</p>
-<h4 id="第七步-安装nginx访问图片">第七步 安装nginx访问图片</h4>
-<p>这里由于服务器已经安装了nginx，因此需要在现有的nginx的版本基础上安装新的fastdfs的模块。，安装方法可能略有不同<br>
-首先查看下nginx的版本</p>
-<pre><code class="language-shell">nginx -V
-</code></pre>
-<p>这里需要注意一下，如果你服务器上没有安装过nginx则需要先安装nginx的依赖，然后再进行安装</p>
-<pre><code class="language-shell">yum -y install gcc-c++ zlib-devel pcre-devel
-</code></pre>
-<p>如下图所示：<br>
-<img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091911162-1340095861.png" alt=""></p>
-<p>因此我们需要下载对应版本的源码</p>
-<pre><code class="language-shell">wget http://nginx.org/download/nginx-1.16.1.tar.gz
-</code></pre>
-<p>解压安装包</p>
-<pre><code class="language-shell">tar zxvf nginx-1.14.0.tar.gz
-</code></pre>
-<p>下载nginx的fastdfs模块，这里我已经帮大家把这个项目github地址整理好了。<br>
-<a href="https://github.com/happyfish100/fastdfs-nginx-module">astdfs-nginx-module</a><br>
-这这里我们可以先下载到自己电脑上，再上传服务器。<br>
-进行解压</p>
-<pre><code class="language-shell">unzip fastdfs-nginx-module-master.zip
-</code></pre>
-<p>这里由于我们已经安装了nginx，因此需要备份之前的nginx防止出现问题进行还原</p>
-<pre><code class="language-shell">mv /usr/sbin/nginx /usr/sbin/nginx.back
-cp -rf /etc/nginx/ /etc/nginx.back
-</code></pre>
-<p>切换到nginx压缩包的解压目录里面去</p>
-<pre><code class="language-shell">cd nginx-1.16.1
-</code></pre>
-<p>进行配置检测并且添加模块</p>
-<pre><code class="language-shell">./configure --prefix=/etc/nginx/ --sbin-path=/usr/sbin/nginx --add-module=/root/fastdfs/fastdfs-nginx-module-master/src/
-</code></pre>
-<blockquote>
-<p>--prefix : nginx的安装目录<br>
---add-module：解压后模块所在目录，记得要加上src</p>
-</blockquote>
-<p>执行如下命令进行nginx的重新编译,如果之前已经安装了nginx则不能执行install，否则会覆盖之前的配置文件,也可以在安装后再把之前的配置覆盖过来。</p>
-<pre><code class="language-shell">make &amp;&amp; make install
-</code></pre>
-<p>拷贝编译后的nginx到原来的安装目录</p>
-<pre><code class="language-shell">cp objs/nginx /usr/sbin/nginx
-</code></pre>
-<p>重启nginx</p>
-<pre><code class="language-shell">systemctl restart nginx
-//第二种方式
-nginx -s reload
-
-//第一次安装,直接输入nginx
-nginx
-</code></pre>
-<p>切换至fastdfs的解压包里面去</p>
-<pre><code class="language-shell">cd /root/fastfdfs/fastdfs-master
-</code></pre>
-<p>进行文件的复制</p>
-<pre><code class="language-shell">cp conf/http.conf /etc/fdfs/
-cp conf/mime.types /etc/fdfs/
-</code></pre>
-<p>切换至fastdfs-nginx-module的解压目录下面</p>
-<pre><code class="language-shell">cd /root/fastdfs/fastdfs-nginx-module-master
-</code></pre>
-<p>进行配置文件的复制</p>
-<pre><code class="language-shell">cp src/mod_fastdfs.conf /etc/fdfs/
-</code></pre>
-<h5 id="mod_fastdfsconf配置">mod_fastdfs.conf配置</h5>
-<p>修改/etc/fdfs下面的mod_fastdfs.conf配置文件</p>
-<pre><code class="language-shell">vim /etc/fdfs/mod_fastdfs.conf
-</code></pre>
-<p>修改 40行，更改tracker的ip地址与端口</p>
-<blockquote>
-<p>tracker_server=192.168.1.14:22122</p>
-</blockquote>
-<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091931359-380216879.png" alt=""></p>
-<p>修改48行的group_name</p>
-<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091941138-439674347.png" alt=""></p>
-<p>修改53行 url地址中是否包含组名，如果链接中包含group则需要设置为true</p>
-<pre><code class="language-shell">url_have_group_name = true
-</code></pre>
-<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429091952755-599123795.png" alt=""></p>
-<p>修改62行 storage所在目录</p>
-<pre><code class="language-shell">store_path0=/home/software/fastdfs/data/storage
-</code></pre>
-<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429092003044-2116938706.png" alt=""></p>
-<p>保存修改。</p>
-<h5 id="nginx修改">nginx修改</h5>
-<p>这里注意，每个笨的配置文件存储的方式不同，此步骤可能有所不同。<br>
-进行nginx配置文件的修改，我们可以切换到nginx的安装目录下面。也可以直接输入如下命令</p>
-<blockquote>
-<p>注意：这里我的nginx版本为1.16.1，配置文件为conf.d下面的所有的*.conf文件。因此我的输入命令如下：</p>
-</blockquote>
-<pre><code class="language-shell">vim /etc/nginx/conf.d/default.conf 
-</code></pre>
-<p>进行nginx.conf的修改，如下图所示：</p>
-<pre><code class="language-shell">      server {
-          listen       8888;
-          server_name  192.168.1.93;
-          
-          location ~/group([0-9])/M00 {
-              #root   html;
-              #index  index.html index.htm;
-              root    /home/software/fastdfs/data/storage/data;
-              ngx_fastdfs_module;
-          }
-      }
-</code></pre>
-<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429092014256-714610819.png" alt=""></p>
-<p>多个group的配置</p>
-<p>当配置多个组，且mod_fastdfs.conf 里面指定了url_have_group_name= true 时，配置方式:</p>
-<pre><code class="language-shell">location ~  /group([0-9]) /M00 {
-     root /home/software/fastdfs/data/storage/data;
-     ngx_fastdfs_module;
-}
-</code></pre>
-<p>比如:在group1上的 nginx 的nginx.conf 配置是</p>
-<pre><code class="language-shell">location  /group1/M00 {
-     root /home/software/fastdfs/data/storage/data;
-     ngx_fastdfs_module;
-}
-</code></pre>
-<p>比如:在group2上的 nginx 的nginx.conf 配置是</p>
-<pre><code class="language-shell">location   /group2/M00 {
-     root /home/software/fastdfs/data/storage/data;
-     ngx_fastdfs_module;
-}
-</code></pre>
-<p>查看nginx的配置文件是否有效</p>
-<pre><code class="language-shell">nginx -t
+<pre><code class="language-C#">
+0:000&gt; !eeheap -gc
+Number of GC Heaps: 1
+generation 0 starts at 0x0000019b0fc66b48
+generation 1 starts at 0x0000019b0f73b138
+generation 2 starts at 0x0000019a5da81000
+ephemeral segment allocation context: none
+         segment             begin         allocated              size
+0000019a5da80000  0000019a5da81000  0000019a6da7ffb8  0xfffefb8(268431288)
+0000019a00000000  0000019a00001000  0000019a0ffffe90  0xfffee90(268430992)
+0000019a10000000  0000019a10001000  0000019a1ffffeb0  0xfffeeb0(268431024)
+0000019a20000000  0000019a20001000  0000019a2fffffb0  0xfffefb0(268431280)
+0000019a30000000  0000019a30001000  0000019a3ffffc50  0xfffec50(268430416)
+0000019a40000000  0000019a40001000  0000019a4fffffc8  0xfffefc8(268431304)
+0000019a7aad0000  0000019a7aad1000  0000019a8aacfd60  0xfffed60(268430688)
+0000019a8cbf0000  0000019a8cbf1000  0000019a9cbefe10  0xfffee10(268430864)
+0000019a9cbf0000  0000019a9cbf1000  0000019aacbefcb8  0xfffecb8(268430520)
+0000019aacbf0000  0000019aacbf1000  0000019abcbefd18  0xfffed18(268430616)
+0000019abcbf0000  0000019abcbf1000  0000019accbefd68  0xfffed68(268430696)
+0000019accbf0000  0000019accbf1000  0000019adcbefcf8  0xfffecf8(268430584)
+0000019adcbf0000  0000019adcbf1000  0000019aecbefdc0  0xfffedc0(268430784)
+0000019af0e20000  0000019af0e21000  0000019b00e1ff28  0xfffef28(268431144)
+0000019b00e20000  0000019b00e21000  0000019b10047178  0xf226178(253911416)
+Large object heap starts at 0x0000019a6da81000
+         segment             begin         allocated              size
+0000019a6da80000  0000019a6da81000  0000019a756d0480  0x7c4f480(130348160)
+0000019b10e20000  0000019b10e21000  0000019b133ca330  0x25a9330(39490352)
+Total Size:              Size: 0xf940ee70 (4181782128) bytes.
+------------------------------
+GC Heap Size:            Size: 0xf940ee70 (4181782128) bytes.
 
 </code></pre>
-<p><img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429092027303-541329474.png" alt=""></p>
-<p>显示 is ok没有任何问题，现在启动nginx。这里我配置为开机自动启动</p>
-<pre><code class="language-shell">systemctl restart nginx
-// 第二种方式
-nginx -s reload
-</code></pre>
-<p>依照上面的方式，我们重新上传一张图片。并进行访问<br>
-测试是否启动成功，我们尝试上传文件。我的root文件夹下有一张图片</p>
-<pre><code>fdfs_test /etc/fdfs/client.conf upload /root/fastdfs/test.jpeg
-</code></pre>
-<p>上传成功，访问下面的地址<br>
-<img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429092037928-1967663304.png" alt=""></p>
-<h4 id="路径说明">路径说明</h4>
-<p>group1：表示这张图片被保存在了哪个组当中，<br>
-M00：代表磁盘目录，如果电脑只有一个磁盘那就只有M00， 如果有多个磁盘，那就M01、M02...等等。<br>
-00/00：代表磁盘上的两级目录，每级目录下是从00到FF共256个文件夹，两级就是256*256个。<br>
-wKgBE1r-fICAcd3kAAHY-4ojheI481.jpeg表示被存储到storage上的test.jpeg被重命名的名字，这样做的目的是为了防止图片名字重复。<br>
-我们到单机版的数据目录下查看一下是否有我们刚才上传的图片，发现是有的返回的图片信息中明确说明了存储在了group1下面。</p>
-<h3 id="fastdfs集群版的安装">FastDFS集群版的安装</h3>
-<p>这里集群版的安装是在单机版的基础上安装的。</p>
-<h4 id="机器准备">机器准备</h4>
-<table>
-<thead>
-<tr>
-<th>IP</th>
-<th>作用</th>
-<th>模块</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>192.168.1.14</td>
-<td>storage(group1)    tracker1</td>
-<td>fastdfs+nginx+fastdfs-nginx-module</td>
-</tr>
-<tr>
-<td>192.168.1.15</td>
-<td>storage(group1)</td>
-<td>fastdfs+nginx+fastdfs-nginx-module</td>
-</tr>
-<tr>
-<td>192.168.1.16</td>
-<td>storage(group2)   tracker2</td>
-<td>fastdfs+nginx+fastdfs-nginx-module</td>
-</tr>
-<tr>
-<td>192.168.1.93</td>
-<td>storage(group2)</td>
-<td>fastdfs+nginx+fastdfs-nginx-module</td>
-</tr>
-<tr>
-<td>192.168.1.197</td>
-<td>VIP（对外提供服务）</td>
-<td>nginx</td>
-</tr>
-</tbody>
-</table>
-<h4 id="安装步骤">安装步骤</h4>
-<h5 id="软件准备">软件准备</h5>
-<p>在所有服务器上创建如下目录用来存储需要安装的软件包</p>
-<pre><code class="language-shell">mkdir -p ~/fastdfs/
-</code></pre>
-<p>在tracker1上下载所需要的软件安装包，并放在如下目录下</p>
-<pre><code class="language-shell">~/fastdfs/
-</code></pre>
-<p>查看如下所示：<br>
-<img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429092051719-1686105740.png" alt=""></p>
-<p>进入对应的文件夹并拷贝对应的文件到其他几台服务器上：</p>
-<pre><code class="language-shell">scp ./* root@192.168.1.15:~/fastdfs/
-scp ./* root@192.168.1.16:~/fastdfs/
-scp ./* root@192.168.1.93:~/fastdfs/
-scp ./* root@192.168.1.197:~/fastdfs/
-</code></pre>
-<p>在storage服务器及tracker服务器都创建如下的文件夹，用来存放fastdfs的数据及日志文件</p>
-<pre><code class="language-shell">mkdir -p /home/software/fastfdfs/client
-mkdir -p /home/software/fastfdfs/storage
-mkdir -p /home/software/fastfdfs/tracker
-</code></pre>
-<p>在所有服务器上执行·如下命令安装相关工具</p>
-<pre><code class="language-shell">yum -y install vim wget unzip
-</code></pre>
-<p>在所有sotrage及tracker服务器上执行如下命令安装相关依赖</p>
-<pre><code class="language-shell">yum install -y gcc-c++ perl
-</code></pre>
-<h5 id="安装">安装</h5>
-<p>这些操作需要在所有storage及tracker服务器上都进行操作</p>
-<h5 id="storage及tracker服务器安装libfastcommon">storage及tracker服务器安装libfastcommon</h5>
-<p>在需要安装fastdfs的storage及tracker服务器上安装libfastcommon<br>
-这里我们进入安装文件目录~/fastdfs/，执行如下命令，解压并编译安装：</p>
-<pre><code class="language-shell">unzip libfastcommon-master.zip
-cd libfastcommon-master/
-./make.sh &amp;&amp; ./make.sh install
-</code></pre>
-<p>出现如下图所示则表示安装成功<br>
-<img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429092107917-1852051008.png" alt=""></p>
-<h5 id="storage及tracker服务器安装fastdfs">storage及tracker服务器安装fastdfs</h5>
-<p>在需要安装fastdfs的storage及tracker服务器上安装fastdfs<br>
-这里我们进入安装文件目录~/fastdfs/，执行如下命令，解压并编译安装：</p>
-<pre><code class="language-shell">unzip fastdfs-master.zip
-cd fastdfs-master/
-./make.sh &amp;&amp; ./make.sh install
-cp conf/http.conf /etc/fdfs/
-cp conf/mime.types /etc/fdfs/
-</code></pre>
-<p>进行文件的复制</p>
-<pre><code class="language-shell">cp conf/http.conf /etc/fdfs/
-cp conf/mime.types /etc/fdfs/
-</code></pre>
-<h5 id="修改配置文件">修改配置文件</h5>
-<p>切换到配置文件目录，并执行如下命令去除所有的.sample后缀：</p>
-<pre><code class="language-shell">cd /etc/fdfs/
-cp client.conf.sample client.conf
-cp storage.conf.sample storage.conf
-cp storage_ids.conf.sample storage_ids.conf
-cp tracker.conf.sample tracker.conf
-</code></pre>
-<p>修改client.config配置</p>
+<p>从最后一行可以看到堆大小： <code>GC Heap Size: Size: 0xf940ee70 (4181782128) bytes.</code> 然后将4181782128 byte 转化为GB： <code>4181782128/1024/1024/1024= 3.89G</code>。</p>
+<p>再来看一下3代中有多少free空闲块，占了多少空间，为了方便查看，大家可以用一下sosex扩展，提供了很多方便的方法。</p>
 <blockquote>
-<p>需要测试的时候才需要配置此client.conf配置</p>
+<p>!dumpgen xxxx  依次把0，1，2 三个代中的free空间统计出来。</p>
 </blockquote>
-<pre><code class="language-shell">vim client.conf
-</code></pre>
-<p>修改内容如下：</p>
-<pre><code class="language-shell">11 base_path = /home/software/fastdfs/client
-22 tracker_server = 192.168.1.14:22122
-</code></pre>
-<p>vim修改storage.conf <br>
-修改内容如下：</p>
-<pre><code class="language-shell">11  group_name = group1
-49  base_path = /home/software/fastdfs/storage
-129 /home/software/fastdfs/data/storage
-145 tracker_server = 192.168.1.14:22122
-</code></pre>
-<p>vim修改tracker.conf配置</p>
-<blockquote>
-<p>这里只有tracker服务器才需要配置此配置及 14跟16</p>
-</blockquote>
-<p>修改内容如下：</p>
-<pre><code class="language-shell">23   base_path = /home/software/fastdfs/tracker
-57   store_group = group1
-</code></pre>
-<h5 id="安装nginx">安装nginx</h5>
-<p>只有sotrage服务器及vip服务器需要安装nginx用来提供文件的访问<br>
-在安装nginx前需要安装相关的依赖并下载对应的源码，执行如下命令。此文件也保存到文件安装目录</p>
-<pre><code class="language-shell">yum -y install gcc-c++ zlib-devel pcre-devel
-wget http://nginx.org/download/nginx-1.16.1.tar.gz
-tar zxvf nginx-1.14.0.tar.gz
-</code></pre>
-<p>解压nginx的fastdfs模块,并进入到文件夹下进行配置文件的复制</p>
-<blockquote>
-<p>nginx的fastdfs模块在所有storage服务器上进行安装</p>
-</blockquote>
-<pre><code class="language-shell">unzip fastdfs-nginx-module-master.zip
-cd ~/fastdfs/fastdfs-nginx-module-master
-cp src/mod_fastdfs.conf /etc/fdfs/
-</code></pre>
-<p>进入到nginx源码目录，进行配置检测并添加对应的fastdfs模块。然后进行nginx的安装</p>
-<pre><code class="language-shell">./configure --prefix=/etc/nginx/ --sbin-path=/usr/sbin/nginx --add-module=/root/fastdfs/fastdfs-nginx-module-master/src/
-make &amp;&amp; make install
-#如有需要可以拷贝nginx到sbin目录
-cp objs/nginx /usr/sbin/nginx
-</code></pre>
-<h5 id="mod_fastdfsconf配置-2">mod_fastdfs.conf配置</h5>
-<p>vim修改/etc/fdfs下面的mod_fastdfs.conf配置文件</p>
-<pre><code class="language-shell">40   tracker_server=192.168.1.14:22122
-48   group_name=group1
-53   url_have_group_name = true
-62   store_path0=/home/software/fastdfs/storage
-</code></pre>
-<h5 id="nginx配置修改">nginx配置修改</h5>
-<p>只有sotrage服务器及vip服务器需要安装，<br>
-group1的服务器需要新增如下server配置，root路径为storage的data路径</p>
-<pre><code class="language-shell">      server {
-          listen       8888;
-          server_name  192.168.1.93;
-          
-          location /group1/M00 {
-              #root   html;
-              #index  index.html index.htm;
-              root    /home/software/fastdfs/storage/data;
-              ngx_fastdfs_module;
-          }
-      }
-</code></pre>
-<p>group2的服务器上新增如下server配置，root路径为storage的data路径</p>
-<pre><code class="language-shell">      server {
-          listen       8888;
-          server_name  192.168.1.93;
-          
-          location /group2/M00 {
-              #root   html;
-              #index  index.html index.htm;
-              root    /home/software/fastdfs/storage/data;
-              ngx_fastdfs_module;
-          }
-      }
-</code></pre>
-<p>vip服务器的nginx配置如下：</p>
-<pre><code class="language-shell">#设置 group1 的服务器
-upstream fdfs_group1 {
-    server 192.168.1.14:8888 weight=1 max_fails=2 fail_timeout=30s;
-    server 192.168.1.15:8888 weight=1 max_fails=2 fail_timeout=30s;
-}
+<pre><code class="language-C#">
+0:000&gt; !dumpgen 0 -free -stat
+       Count      Total Size      Type
+-------------------------------------------------
+         168      1,120,008   **** FREE ****
 
-#设置 group2 的服务器
-upstream fdfs_group2 {
-    server 192.168.1.16:8888 weight=1 max_fails=2 fail_timeout=30s;
-    server 192.168.1.93:8888 weight=1 max_fails=2 fail_timeout=30s;
-}
+168 objects, 1,120,008 bytes
 
-server {
-    listen       80;
-    server_name  192.168.1.197;
+0:000&gt; !dumpgen 1 -free -stat
+       Count      Total Size      Type
+-------------------------------------------------
+         368          8,096   **** FREE ****
 
-    #charset koi8-r;
-    #access_log  /var/log/nginx/host.access.log  main;
-	
-	#设置默认路径
-    location / {
-        root   html;
-        index  index.html index.htm;
+368 objects, 8,096 bytes
+
+0:000&gt; !dumpgen 2 -free -stat
+       Count      Total Size      Type
+-------------------------------------------------
+  11,857,034  1,052,310,524   **** FREE ****
+
+11,857,034 objects, 1,052,310,524 bytes
+
+
+</code></pre>
+<p>从上面输出可以看到，三个代free objects的信息：</p>
+<p>空闲块个数:<code>168 + 368 + 11857034 = 11857570个</code>，</p>
+<p>空闲块空间：<code>1120008 + 8096 + 1052310524 = 1053438628 byte =&gt; 0.98G</code>。</p>
+<p>惊讶吧~， 3.89G的堆，等待被释放的空间就有0.98G,占比高达25%，再看看第2代中有高达1185万个空闲块，说明堆碎片有多么严重。。。</p>
+<p>所以等GC自己启动回收压缩释放不知道猴年马月，为了高效利用内存，不得已自己先给程序点个火，手工调用一下GC.Collect，让程序内存降到了 <code>3.89 - 0.98 = 2.91 G</code>。</p>
+<h1 id="二：对gc代机制的理解">二：对GC代机制的理解</h1>
+<p>有不少程序员对gc中的代管理机制不是特别清楚，或者看过书之后理解也停留在理论上，没法去验证书中所说，其实我也不是特别理解，😄😄😄，作为一个准备好好玩自媒体人，不能让您白来一趟哈。</p>
+<h2 id="1-clr堆模型">1. CLR堆模型</h2>
+<p>当CLR不小心错入程序世界的时候，会给你分配两个堆，一个叫做小对象堆，一个叫做大对象堆，默认是以83k作为大小堆的分界线，当然你也可以自定义配置，堆上的空间由很多的内存段拼成的,可能你有点蒙，我画张图吧。</p>
+<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215049318-142033641.png" alt=""></p>
+<h2 id="2-对临时内存段的解释">2. 对临时内存段的解释</h2>
+<p>看完上图，可能大家有两个疑问：</p>
+<h3 id="1--为啥小对象堆中有一个临时内存段？">&lt;1&gt;  为啥小对象堆中有一个临时内存段？</h3>
+<p>这是因为CLR做了很多假设，它假设在gen0和gen1上回收的对象会特别多，所以没事就上去转转，CLR为了方便GC快速清理回收压缩。。。就将gen0和gen1都放置在这个临时内存段上。</p>
+<p>你可能要问，有证据吗？？？ 我就拿刚才的4G程序说话吧。</p>
+<pre><code class="language-C#">
+0:000&gt; !eeheap -gc
+Number of GC Heaps: 1
+generation 0 starts at 0x0000019b0fc66b48
+generation 1 starts at 0x0000019b0f73b138
+generation 2 starts at 0x0000019a5da81000
+ephemeral segment allocation context: none
+         segment             begin         allocated              size
+0000019a5da80000  0000019a5da81000  0000019a6da7ffb8  0xfffefb8(268431288)
+0000019a00000000  0000019a00001000  0000019a0ffffe90  0xfffee90(268430992)
+0000019a10000000  0000019a10001000  0000019a1ffffeb0  0xfffeeb0(268431024)
+0000019a20000000  0000019a20001000  0000019a2fffffb0  0xfffefb0(268431280)
+0000019a30000000  0000019a30001000  0000019a3ffffc50  0xfffec50(268430416)
+0000019a40000000  0000019a40001000  0000019a4fffffc8  0xfffefc8(268431304)
+0000019a7aad0000  0000019a7aad1000  0000019a8aacfd60  0xfffed60(268430688)
+0000019a8cbf0000  0000019a8cbf1000  0000019a9cbefe10  0xfffee10(268430864)
+0000019a9cbf0000  0000019a9cbf1000  0000019aacbefcb8  0xfffecb8(268430520)
+0000019aacbf0000  0000019aacbf1000  0000019abcbefd18  0xfffed18(268430616)
+0000019abcbf0000  0000019abcbf1000  0000019accbefd68  0xfffed68(268430696)
+0000019accbf0000  0000019accbf1000  0000019adcbefcf8  0xfffecf8(268430584)
+0000019adcbf0000  0000019adcbf1000  0000019aecbefdc0  0xfffedc0(268430784)
+0000019af0e20000  0000019af0e21000  0000019b00e1ff28  0xfffef28(268431144)
+0000019b00e20000  0000019b00e21000  0000019b10047178  0xf226178(253911416)
+Large object heap starts at 0x0000019a6da81000
+         segment             begin         allocated              size
+0000019a6da80000  0000019a6da81000  0000019a756d0480  0x7c4f480(130348160)
+0000019b10e20000  0000019b10e21000  0000019b133ca330  0x25a9330(39490352)
+Total Size:              Size: 0xf940ee70 (4181782128) bytes.
+------------------------------
+GC Heap Size:            Size: 0xf940ee70 (4181782128) bytes.
+
+</code></pre>
+<p>从上面gc信息中可以看到小对象堆中目前有 15个内存段， 大对象堆有2个内存段, gen0的起始地址为<code>0x0000019b0fc66b48</code>,gen1的起始地址为<code>0x0000019b0f73b138</code>, 都落在了第15个内存段内 <code>0000019b00e20000  0000019b00e21000  0000019b10047178  0xf226178(253911416)</code>，其余内存段都被 gen2 占领，如果大家有点乱，先多看几遍，等一下看我的演示。</p>
+<h3 id="2--临时内存段大小是多少？">&lt;2&gt;  临时内存段大小是多少？</h3>
+<p>这个段的大小，需要看是x64还是x86机器，还要看GC是工作站模式还是服务器模式，不过msdn帮我们总结了，<a href="https://docs.microsoft.com/zh-cn/dotnet/standard/garbage-collection/fundamentals">https://docs.microsoft.com/zh-cn/dotnet/standard/garbage-collection/fundamentals</a> ， 截个图给大家看一下。</p>
+<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215112401-1589821210.png" alt=""></p>
+<p>我的本机是x64版本,工作站模式，可以通过 <code>!eeversion</code> 查看一下。</p>
+<pre><code class="language-C#">
+0:000&gt; !eeversion
+4.8.3801.0 free
+Workstation mode
+SOS Version: 4.8.3801.0 retail build
+
+</code></pre>
+<p>对应图中，我的临时内存段的最大内存是256M，再回过头用4G程序的来验证一下内存段大小，用 <code>allocated - begin</code> 即可。</p>
+<pre><code class="language-C#">
+ephemeral segment allocation context: none
+         segment             begin         allocated              size
+0000019b00e20000  0000019b00e21000  0000019b10047178  0xf226178(253911416)
+
+0:000&gt; ? 0000019b10047178 - 0000019b00e21000
+Evaluate expression: 253911416 = 00000000`0f226178
+
+</code></pre>
+<p>两者差值为 <code>253911416 byte =&gt; 242M</code> ，可以看出离256M不远了，等到了256M又要触发GC啦。。。。</p>
+<h2 id="3-代机制简介">3. 代机制简介</h2>
+<p>有了上面的基础，我觉得你对GC的gen机制应该明白了，由于3个gen运行时预定空间是随GC触发随时变动，所以就不知道某个时刻各个gen当时的空间触发阈值。</p>
+<p>接下来说一下三代的原理：当gen0满了会触发GC回收，将gen0中活对象送到gen1中，死的就消灭掉，当某时候gen1满了，gen1的活对象会被送到gen2中，当下个某一次gen2满了，就向操作系统申请新的内存段，所以你看到了4G程序占用了多达14个内存段，就是这么一个道理，没什么复杂的。</p>
+<h1 id="三：代机制原理的代码演示">三：代机制原理的代码演示</h1>
+<p>我刚才也说了，很多人知道这个理论，不知道怎么去验证，这里我就演示一下，先上代码：</p>
+<pre><code class="language-C#">
+        public static void Main(string[] args)
+        {
+            Student student1 = new Student() { UserName = &quot;cnblogs&quot;, Email = &quot;cnblogs@qq.com&quot; };
+            Student student2 = new Student() { UserName = &quot;csdn&quot;, Email = &quot;csdn@qq.com&quot; };
+
+            Console.WriteLine(&quot;两个对象已创建！双双进入 Gen0&quot;);
+            Console.Read();
+
+            student1 = null;
+            GC.Collect();
+
+            Console.WriteLine(&quot;Student1 已从Gen0中抹掉，助力Student2上Gen1，是否继续？&quot;);
+            Console.ReadKey();
+
+            GC.Collect();
+            Console.WriteLine(&quot;再次助力Student2上Gen2&quot;);
+            Console.ReadKey();
+
+            Console.WriteLine(&quot;全部执行结束！&quot;);
+            Console.ReadLine();
+        }
     }
 
-	#设置 group 的负载均衡参数
-    location /group1/M00 {
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_pass http://fdfs_group1;
-    }
-
-    location /group2/M00 {
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_pass http://fdfs_group2;
-    }
-}
-</code></pre>
-<p>查看nginx的配置文件是否有效</p>
-<pre><code class="language-shell">nginx -t
-</code></pre>
-<p>显示 is ok没有任何问题，现在启动nginx。这里我配置为开机自动启动</p>
-<pre><code class="language-shell"># 服务形式的nginx重启方式
-systemctl restart nginx
-//第二种方式
-nginx -s reload
-
-//第一次安装,直接输入nginx
-nginx
-</code></pre>
-<p>依照上面的方式，我们重新上传一张图片。并进行访问<br>
-测试是否启动成功，我们尝试上传文件。我的root文件夹下有一张图片</p>
-<pre><code>fdfs_test /etc/fdfs/client.conf upload /root/fastdfs/test.jpeg
-</code></pre>
-<p>上传成功，访问下面的地址<br>
-<img src="https://img2020.cnblogs.com/blog/1377250/202004/1377250-20200429092129990-1135321420.png" alt=""></p>
-<h3 id="aspnet-core操作fastdfs">asp.net core操作FastDFS</h3>
-<p>这里的微服务是基于abp vnext的。只是在应用层进行相关的服务开发。这里需要说明下，这里我是使用工厂模式，根据配置来创建对应的文件操作提供者，进而对对应的文件服务器上的文件进行操作的。这里我只摘录FastDFS相关的代码供大家参考。</p>
-<h4 id="第一步-安装对应的nuget包">第一步 安装对应的nuget包</h4>
-<p>这里我用的是更新时间相对比较近下载量相对比较多的作者的nuget包，</p>
-<pre><code class="language-powershell">Install-Package FastDFSNetCore -Version 1.2.5
-</code></pre>
-<h4 id="第二步，编写一个fastdfsprovider">第二步，编写一个FastDFSProvider</h4>
-<p>具体的代码如下所示：</p>
-<pre><code class="language-csharp"> /// &lt;summary&gt;
-    /// 功能介绍:FastDFS提供者
-    /// 作者:lzhu
-    /// 创建日期:2020/4/23 19:54:35
-    /// &lt;/summary&gt;
-public class FastDFSProvider : IStorageProvider, ITransientDependency
+    public class Student
     {
-        /// &lt;summary&gt;
-        /// 提供程序名称
-        /// &lt;/summary&gt;
-        public string ProviderName =&gt; &quot;FastDFS&quot;;
-
-        //配置
-        private readonly FastDFSConfig _fastDFSConfig;
-
-
-        /// &lt;summary&gt;
-        /// 构造函数
-        /// &lt;/summary&gt;
-        /// &lt;param name=&quot;fastDFSConfig&quot;&gt;注入配置数据&lt;/param&gt;
-        public FastDFSProvider(FastDFSConfig fastDFSConfig)
-        {
-            _fastDFSConfig = fastDFSConfig ?? throw new ArgumentNullException(nameof(fastDFSConfig));
-            string[] trackers = fastDFSConfig.Trackers.Split(',', StringSplitOptions.RemoveEmptyEntries);
-            var trackerIPs = new List&lt;IPEndPoint&gt;();
-            foreach (var onetracker in trackers)
-            {
-                trackerIPs.Add(new IPEndPoint(IPAddress.Parse(onetracker), fastDFSConfig.Port));
-            }
-            ConnectionManager.Initialize(trackerIPs);
-        }
-
-        /// &lt;summary&gt;
-        /// 通过文件名删除对应的文件
-        /// &lt;/summary&gt;
-        /// &lt;param name=&quot;objectName&quot;&gt;对象名称&lt;/param&gt;
-        /// &lt;param name=&quot;groupName&quot;&gt;分组名称&lt;/param&gt;
-        /// &lt;returns&gt;是否成功&lt;/returns&gt;
-        public async Task&lt;bool&gt; DeleteObjectByNameAsync(string objectName, string groupName = &quot;&quot;)
-        {
-            RestoreFileName(objectName, out string fileName, out groupName);
-            await FastDFSClient.RemoveFileAsync(groupName, fileName);
-            return true;
-        }
-
-        /// &lt;summary&gt;
-        /// 获取网关连接
-        /// &lt;/summary&gt;
-        /// &lt;returns&gt;网关连接&lt;/returns&gt;
-        public Task&lt;string&gt; GetGateWayUrl() =&gt; Task.FromResult(_fastDFSConfig.GateWayUrl);
-
-        /// &lt;summary&gt;
-        /// 获取对象二进制数组
-        /// &lt;/summary&gt;
-        /// &lt;param name=&quot;groupName&quot;&gt;组名称&lt;/param&gt;
-        /// &lt;param name=&quot;objectName&quot;&gt;对象名称&lt;/param&gt;
-        /// &lt;returns&gt;对象的二进制数组&lt;/returns&gt;
-        public async Task&lt;byte[]&gt; GetObjectByteAsync(string objectName, string groupName = &quot;&quot;)
-        {
-            RestoreFileName(objectName, out string fileName, out groupName);
-            var storageNode = await GetStorageNodeAsync(groupName);
-            return await FastDFSClient.DownloadFileAsync(storageNode, fileName);
-        }
-
-        /// &lt;summary&gt;
-        /// 获取对象流
-        /// &lt;/summary&gt;
-        /// &lt;param name=&quot;groupName&quot;&gt;组名称&lt;/param&gt;
-        /// &lt;param name=&quot;objectName&quot;&gt;对象名称&lt;/param&gt;
-        /// &lt;returns&gt;对象流&lt;/returns&gt;
-        public async Task&lt;Stream&gt; GetObjectStreamAsync(string objectName, string groupName = &quot;&quot;)
-        {
-            RestoreFileName(objectName, out string fileName, out groupName);
-            var storageNode = await GetStorageNodeAsync(groupName);
-            FDFSFileInfo fileInfo = await FastDFSClient.GetFileInfoAsync(storageNode, fileName);
-            Stream stream = new MemoryStream();
-            int limit = 1024 * 100;//每次获取100KB的数据
-
-            //如果文件大小大于100KB  分次写入
-            if (fileInfo.FileSize &gt;= limit)
-            {
-                long offset = 0;
-                long len = limit;
-                while (len &gt; 0)
-                {
-                    byte[] buffer = await FastDFSClient.DownloadFileAsync(storageNode, fileName, offset, len);
-                    stream.Write(buffer, 0, int.Parse(len.ToString()));
-                    stream.Flush();
-                    offset += len;
-                    len = (fileInfo.FileSize - offset) &gt;= limit ? limit : (fileInfo.FileSize - offset);
-                }
-
-            }
-            else
-            {
-                //如果文件大小小小于100KB  直接写入文件
-                byte[] buffer = await FastDFSClient.DownloadFileAsync(storageNode, fileName);
-                stream.Write(buffer, 0, buffer.Length);
-                stream.Flush();
-            }
-
-            stream.Seek(0, SeekOrigin.Begin);
-            return stream;
-        }
-
-        /// &lt;summary&gt;
-        /// 存储文件
-        /// &lt;/summary&gt;
-        /// &lt;param name=&quot;objectByte&quot;&gt;对象&lt;/param&gt;
-        /// &lt;param name=&quot;objectName&quot;&gt;对象名&lt;/param&gt;
-        /// &lt;param name=&quot;groupName&quot;&gt;分组&lt;/param&gt;
-        /// &lt;returns&gt;&lt;/returns&gt;
-        public async Task&lt;string&gt; StoreObjectByteAsync(byte[] objectByte, string objectName, string groupName = &quot;&quot;)
-        {
-            var storageNode = await GetStorageNodeAsync(&quot;&quot;);
-            var filePath = await FastDFSClient.UploadFileAsync(storageNode, objectByte, Path.GetExtension(objectName));
-            return storageNode.GroupName + &quot;/&quot; + filePath;
-        }
-
-        /// &lt;summary&gt;
-        /// 存储文件
-        /// &lt;/summary&gt;
-        /// &lt;param name=&quot;objectStream&quot;&gt;文件流&lt;/param&gt;
-        /// &lt;param name=&quot;objectName&quot;&gt;对象名&lt;/param&gt;
-        /// &lt;param name=&quot;groupName&quot;&gt;分组&lt;/param&gt;
-        /// &lt;returns&gt;文件路径&lt;/returns&gt;
-        public async Task&lt;string&gt; StoreObjectStreamAsync(Stream objectStream, string objectName, string groupName = &quot;&quot;)
-        {
-            var storageNode = await GetStorageNodeAsync(&quot;&quot;);
-            var filePath = await FastDFSClient.UploadFileAsync(storageNode, objectStream, Path.GetExtension(objectName));
-            return storageNode.GroupName + &quot;/&quot; + filePath;
-        }
+        public string UserName { get; set; }
+        public string Email { get; set; }
     }
-</code></pre>
-<h4 id="第三步-在分布式配置中心中进行配置">第三步 在分布式配置中心中进行配置</h4>
-<p>这里的分布式配置中心中进行FastDFS的配置如下：</p>
-<pre><code class="language-csharp">&quot;ObjectStorage&quot;: {
-    &quot;StoreType&quot;: &quot;FastDFS&quot;,
-    &quot;FastDFS&quot;: {
-      &quot;Trackers&quot;: &quot;192.168.1.14,192.168.1.16&quot;,
-      &quot;Port&quot;: 22122,
-      &quot;GateWayUrl&quot;: &quot;http://192.168.1.197&quot;
-    }
-  }
-</code></pre>
-<h4 id="第四步-文件提供者工厂方法中加入fastdfs的处理">第四步 文件提供者工厂方法中加入FastDFS的处理</h4>
-<p>工厂方法根据上面配置中的<code>StoreType</code>从而知道对应的存储是往FastDFS集群进行存储的，进而再加载对应的FastDFS的配置，然后创建上面的FastDFSProvider。<br>
-主要代码摘录如下：</p>
-<pre><code class="language-csharp">  case &quot;RondsDFS&quot;:
-   	 {
-    var rondsDFSSection = _configuration.GetSection(&quot;ObjectStorage:RondsDFS&quot;);
 
-    if (rondsDFSSection == null)
-       throw new ArgumentNullException(&quot;RondsDFS is not configured![OObjectStorage:RondsDFS]&quot;);
-
-        StorageProvider = _serviceProvider.GetRequiredService&lt;RondsDFSProvider&gt;();
-        break;
-     }
 </code></pre>
-<h3 id="总结">总结</h3>
-<p>今天首先给大家讲解了如何搭建FastDFS单机版及集群版，然后讲解了如何通过asp.net core对FastDFS进行操作。当然由于我的文件系统对应多个文件存储程序，因此这里只是把FastDFS作为其中一个提供者进行处理。大伙可以只参考其中的操作方法即可。本来想录个视频的，毕竟安装过程稍显复杂，奈何机器不允许，Pass了！有问题可以加QQ两千人群637326624进行交流。</p>
-<h3 id="参考文章">参考文章</h3>
-<p><a href="https://zhuanlan.zhihu.com/p/80256918">https://zhuanlan.zhihu.com/p/80256918</a><br>
-<a href="https://blog.51cto.com/13712476/2130525">https://blog.51cto.com/13712476/2130525</a><br>
-<a href="https://www.cnblogs.com/youzhibing/p/9187765.html">https://www.cnblogs.com/youzhibing/p/9187765.html</a><br>
-<a href="https://github.com/happyfish100/fastdfs/wiki">https://github.com/happyfish100/fastdfs/wiki</a></p>
+<p>代码很简单，就是想让你看一下student1和student2如何在gen0，gen1，gen2中游荡，并且给你精准找出来。</p>
+<h2 id="1-探究-gen0-上的student1-和-studnet2">1. 探究 gen0 上的student1 和 studnet2</h2>
+<p>先启动程序，抓一下dump文件。</p>
+<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215126452-1424714957.png" alt=""></p>
+<pre><code class="language-C#">0:000&gt; !clrstack -l
+
+ConsoleApp4.Program.Main(System.String[]) [C:\dream\Csharp\ConsoleApp1\ConsoleApp4\Program.cs @ 18]
+    LOCALS:
+        0x000000017d7feeb8 = 0x000001d0962c2f28
+        0x000000017d7feeb0 = 0x000001d0962c2f48
+
+0:000&gt; !eeheap -gc
+Number of GC Heaps: 1
+generation 0 starts at 0x000001d0962c1030
+generation 1 starts at 0x000001d0962c1018
+generation 2 starts at 0x000001d0962c1000
+ephemeral segment allocation context: none
+         segment             begin         allocated              size
+000001d0962c0000  000001d0962c1000  000001d0962c7fe8  0x6fe8(28648)
+Large object heap starts at 0x000001d0a62c1000
+         segment             begin         allocated              size
+000001d0a62c0000  000001d0a62c1000  000001d0a62c9a68  0x8a68(35432)
+Total Size:              Size: 0xfa50 (64080) bytes.
+------------------------------
+GC Heap Size:            Size: 0xfa50 (64080) bytes.
+
+
+</code></pre>
+<p>仔细看上面的输出，从主线程的堆栈上可以看到student1和studnet2的地址依次为<code>0x000001d0962c2f28, 0x000001d0962c2f48</code>，而gen0的起始地址为：<code>0x000001d0962c1030</code>，刚好落在 gen0 的区间内，可能你有点蒙，我画一张图。</p>
+<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215135616-1589844551.png" alt=""></p>
+<h2 id="2-探究-student1-被消灭，student2进入gen1">2. 探究 student1 被消灭，student2进入gen1</h2>
+<p>按下Enter键，执行后续代码将student1=null，再执行GC操作，看下堆中又是如何？</p>
+<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215144593-1710776429.png" alt=""></p>
+<pre><code class="language-C#">
+0:000&gt; !clrstack -l
+ConsoleApp4.Program.Main(System.String[]) [C:\dream\Csharp\ConsoleApp1\ConsoleApp4\Program.cs @ 24]
+    LOCALS:
+        0x000000607e9fea50 = 0x0000000000000000
+        0x000000607e9fea48 = 0x0000017f0dff2f38
+
+000000607e9fec88 00007ff8e9396c93 [GCFrame: 000000607e9fec88] 
+0:000&gt; !eeheap -gc
+Number of GC Heaps: 1
+generation 0 starts at 0x0000017f0dff6ea0
+generation 1 starts at 0x0000017f0dff1018
+generation 2 starts at 0x0000017f0dff1000
+ephemeral segment allocation context: none
+         segment             begin         allocated              size
+0000017f0dff0000  0000017f0dff1000  0000017f0dff8eb8  0x7eb8(32440)
+Large object heap starts at 0x0000017f1dff1000
+         segment             begin         allocated              size
+0000017f1dff0000  0000017f1dff1000  0000017f1dff9a68  0x8a68(35432)
+Total Size:              Size: 0x10920 (67872) bytes.
+------------------------------
+GC Heap Size:            Size: 0x10920 (67872) bytes.
+
+</code></pre>
+<p>如果弄明白了上一个案例，看这里就很简单了，很清楚的看到studnet2落在了gen1区间段，不过从起始地址上看，gen1的空间变大了。。。我继续画一张图。</p>
+<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215156496-1714251679.png" alt=""></p>
+<h1 id="3-探究student2-送上了-gen2">3. 探究student2 送上了 gen2</h1>
+<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215206673-574190963.png" alt=""></p>
+<pre><code class="language-C#">
+0:000&gt; !clrstack -l
+ConsoleApp4.Program.Main(System.String[]) [C:\dream\Csharp\ConsoleApp1\ConsoleApp4\Program.cs @ 28]
+    LOCALS:
+        0x000000d340bfebb0 = 0x0000000000000000
+        0x000000d340bfeba8 = 0x00000217b5df2f38
+
+000000d340bfede8 00007ff8e9396c93 [GCFrame: 000000d340bfede8] 
+0:000&gt; !eeheap -gc
+Number of GC Heaps: 1
+generation 0 starts at 0x00000217b5df6f40
+generation 1 starts at 0x00000217b5df6ea0
+generation 2 starts at 0x00000217b5df1000
+ephemeral segment allocation context: none
+         segment             begin         allocated              size
+00000217b5df0000  00000217b5df1000  00000217b5df8f58  0x7f58(32600)
+Large object heap starts at 0x00000217c5df1000
+         segment             begin         allocated              size
+00000217c5df0000  00000217c5df1000  00000217c5df9a68  0x8a68(35432)
+Total Size:              Size: 0x109c0 (68032) bytes.
+------------------------------
+GC Heap Size:            Size: 0x109c0 (68032) bytes.
+
+
+</code></pre>
+<p>很简单，我就不画图了哈，student2的内存地址可是落在 gen2上哦~😄😄😄</p>
+<h1 id="四：总结">四：总结</h1>
+<p>GC.Collect尽量少用，省的把内部的分配和回收算法搞乱了，非要用的话也要理解之后再根据自己的场景使用哈。</p>
+<p>本篇就说到这里，希望对你有帮助</p>
+<hr>
+<h3 id="如您有更多问题与我互动，扫描下方进来吧">如您有更多问题与我互动，扫描下方进来吧~</h3>
+<hr>
+<p><img src="https://images.cnblogs.com/cnblogs_com/huangxincheng/345039/o_200414062434170x170.jpg" alt=""><img src="https://images.cnblogs.com/cnblogs_com/huangxincheng/345039/o_200414065053baijiahao.jpg" alt=""></p>
 
 </div>
 <div id="MySignature"></div>
@@ -826,12 +392,12 @@ public class FastDFSProvider : IStorageProvider, ITransientDependency
 </div>
             </div>
             <div class="postDesc">posted @ 
-<span id="post-date">2020-04-29 09:02</span>&nbsp;
-<a href="https://www.cnblogs.com/yilezhu/">依乐祝</a>&nbsp;
+<span id="post-date">2020-05-06 21:50</span>&nbsp;
+<a href="https://www.cnblogs.com/huangxincheng/">一线码农</a>&nbsp;
 阅读(<span id="post_view_count">...</span>)&nbsp;
 评论(<span id="post_comment_count">...</span>)&nbsp;
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12797543" rel="nofollow">编辑</a>&nbsp;
-<a href="javascript:void(0)" onclick="AddToWz(12797543);return false;">收藏</a></div>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12839160" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12839160);return false;">收藏</a></div>
         </div>
 	    
 	    
@@ -840,8 +406,8 @@ public class FastDFSProvider : IStorageProvider, ITransientDependency
 <script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
 <script>markdown_highlight();</script>
 <script>
-    var allowComments = true, cb_blogId = 435194, cb_blogApp = 'yilezhu', cb_blogUserGuid = 'ea3b6c73-32fd-485b-d04c-08d5866282ce';
-    var cb_entryId = 12797543, cb_entryCreatedDate = '2020-04-29 09:02', cb_postType = 1; 
+    var allowComments = true, cb_blogId = 85195, cb_blogApp = 'huangxincheng', cb_blogUserGuid = '40a06552-abf8-df11-ac81-842b2b196315';
+    var cb_entryId = 12839160, cb_entryCreatedDate = '2020-05-06 21:50', cb_postType = 1; 
     loadViewCount(cb_entryId);
     loadSideColumnAd();
 </script><a name="!comments"></a>
@@ -926,7 +492,7 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 依乐祝
+Copyright &copy; 2020 一线码农
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 

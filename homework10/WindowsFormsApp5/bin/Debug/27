@@ -8,24 +8,24 @@
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>小林coding - 博客园</title>
+    <title>平头哥的技术博文 - 博客园</title>
     
-    <link rel="stylesheet" href="/css/blog-common.min.css?v=Z9Vw4btcgJmrpUEjY_SgebmTmDXJ_hPFoST7ad2aJp4" />
-    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=hlpQ1CJDwwJXDxv2HNauUmW3NjyWzoMaw1uER19SLT0" />
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/blacklowkey/bundle-blacklowkey.min.css?v=_B1ixsexV8tpUJyj4tVsjnDwkM8eRY6ZCwGSi1TrV7s" />
     
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=XjHfryC9ctsatIZz1dHn7TsRIqmwz9c3aj_6SCfHSDM" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/blacklowkey/bundle-blacklowkey-mobile.min.css?v=cYvlxMu_nd6MVfg-vi7YqOC6FaZ7VHFsDM166vO_ekA" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/xiaolincoding/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/xiaolincoding/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/xiaolincoding/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/jamaler/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/jamaler/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/jamaler/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 534487;
-        var currentBlogApp = 'xiaolincoding';
+        var currentBlogId = 535728;
+        var currentBlogApp = 'jamaler';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'CodingLife';
+        var skinName = 'BlackLowKey';
     </script>
     
     
@@ -39,13 +39,13 @@
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/xiaolincoding/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/jamaler/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/xiaolincoding/">小林coding</a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/jamaler/">平头哥的技术博文</a>
 </h1>
 <h2>
-公众号：「小林coding」 用简洁的方式，分享编程小知识。
+
 </h2>
 
 
@@ -60,7 +60,7 @@
 博客园</a>
 </li>
 <li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/xiaolincoding/">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/jamaler/">
 首页</a>
 </li>
 <li>
@@ -69,10 +69,10 @@
 新随笔</a>
 </li>
 <li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%B0%8F%E6%9E%97coding">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%B9%B3%E5%A4%B4%E5%93%A5%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E6%96%87">
 联系</a></li>
 <li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/xiaolincoding/rss/">
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/jamaler/rss/">
 订阅</a>
 <!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
 <li>
@@ -85,11 +85,11 @@
 		<div class="blogStats">
 			
 			<span id="stats_post_count">随笔 - 
-44&nbsp; </span>
+64&nbsp; </span>
 <span id="stats_article_count">文章 - 
 0&nbsp; </span>
 <span id="stats-comment_count">评论 - 
-32</span>
+70</span>
 
 			
 		</div><!--end: blogStats -->
@@ -110,28 +110,28 @@
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/04/30.html">2020年4月30日</a>
+        <a href="https://www.cnblogs.com/jamaler/archive/2020/05/07.html">2020年5月7日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12809812.html">
-    写了Bug，误执行 rm -fr /*，我删删删删库了，要跑路吗？
+<a class="postTitle2" href="https://www.cnblogs.com/jamaler/p/12843126.html">
+    Java 经典面试题：聊一聊 JUC 下的 CopyOnWriteArrayList
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：每日英语，每天进步一点点（偷笑）： 前言 临近五一节，想到有 5 天假期，小林开始飘了。 写个简单的 Bash 脚本都不上心了，写完连检查都不检查，直接拖到到实体服务器跑。 结果一跑起来，发生不对劲，怎么一个简单脚本跑了 10 秒还没结束，于是立马直接 ctrl + c 一顿操作停掉了运行中脚本。             <a href="https://www.cnblogs.com/xiaolincoding/p/12809812.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：ArrayList 是我们常用的工具类之一，但是在多线程的情况下，ArrayList 作为共享变量时，并不是线程安全的。主要有以下两个原因： 1、 ArrayList 自身的 elementData、size、modCount 在进行操作的时候，都没有加锁； 2、这些变量没有被 volatile 修            <a href="https://www.cnblogs.com/jamaler/p/12843126.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-04-30 16:54 小林coding 阅读 (422) 评论 (7)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12809812" rel="nofollow">
+posted @ 2020-05-07 15:01 平头哥的技术博文 阅读 (38) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12843126" rel="nofollow">
     编辑
 </a>
 </div>
@@ -144,28 +144,28 @@ posted @ 2020-04-30 16:54 小林coding 阅读 (422) 评论 (7)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/04/19.html">2020年4月19日</a>
+        <a href="https://www.cnblogs.com/jamaler/archive/2020/04/21.html">2020年4月21日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12732052.html">
-    【图解】你还在为 TCP 重传、滑动窗口、流量控制、拥塞控制发愁吗？看完图解就不愁了
+<a class="postTitle2" href="https://www.cnblogs.com/jamaler/p/12742361.html">
+    漫谈分布式事务的那些解决方案
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：每日一句英语学习，每天进步一点点： 前言 前一篇「硬不硬你说了算！近 40 张图解被问千百遍的 TCP 三次握手和四次挥手面试题」得到了很多读者的认可，在此特别感谢你们的认可，大家都暖暖的。 来了，今天又来图解 TCP 了，小林可能会迟到，但不会缺席。 迟到的原因，主要是 TCP 巨复杂，它为了保证            <a href="https://www.cnblogs.com/xiaolincoding/p/12732052.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：事务我们都不陌生，我们常说的事务一般都是指单机事务，即本地事务。那分布式事务是什么？ 分布式事务就是由多个本地事务组合而成的事务 ，一般在分布式场景下才会出现。 比如电商平台中，我们在购物的时候，下单支付这个过程看上去是一气呵成的，但是背后可能是多个系统的分工合作。订单系统、支付系统、物流系统等。这            <a href="https://www.cnblogs.com/jamaler/p/12742361.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-04-19 16:22 小林coding 阅读 (383) 评论 (2)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12732052" rel="nofollow">
+posted @ 2020-04-21 09:22 平头哥的技术博文 阅读 (299) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12742361" rel="nofollow">
     编辑
 </a>
 </div>
@@ -178,28 +178,28 @@ posted @ 2020-04-19 16:22 小林coding 阅读 (383) 评论 (2)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/04/05.html">2020年4月5日</a>
+        <a href="https://www.cnblogs.com/jamaler/archive/2020/04/10.html">2020年4月10日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12638546.html">
-    硬不硬你说了算！35 张图解被问千百遍的 TCP 三次握手和四次挥手面试题
+<a class="postTitle2" href="https://www.cnblogs.com/jamaler/p/12671184.html">
+    RocketMQ 源码分析之路由中心(NameServer)
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：每日一句英语学习，每天进步一点点： 前言 不管面试 Java 、C/C++、Python 等开发岗位， TCP 的知识点可以说是的必问的了。 任 TCP 虐我千百遍，我仍待 TCP 如初恋。 遥想小林当年校招时常因 TCP 面试题被刷，真是又爱又狠…. 过去不会没关系，今天就让我们来消除这份恐惧，微            <a href="https://www.cnblogs.com/xiaolincoding/p/12638546.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：你可能没有看过 RocketMQ 的架构图，没关系，一起来学习一下，RocketMQ 架构图如下： 在 RocketMQ 中，有四个角色： Producer ：消息的生产者，每个 MQ 中间件都有。 Consumer ：消息的消费者，每个 MQ 中间件都有。 NameServer ：RocketMQ            <a href="https://www.cnblogs.com/jamaler/p/12671184.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-04-05 19:10 小林coding 阅读 (445) 评论 (4)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12638546" rel="nofollow">
+posted @ 2020-04-10 09:13 平头哥的技术博文 阅读 (159) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12671184" rel="nofollow">
     编辑
 </a>
 </div>
@@ -212,28 +212,28 @@ posted @ 2020-04-05 19:10 小林coding 阅读 (445) 评论 (4)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/03/25.html">2020年3月25日</a>
+        <a href="https://www.cnblogs.com/jamaler/archive/2020/04/09.html">2020年4月9日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12571184.html">
-    【面试必备】用了那么多次 ping，是时候知道 ping 是如何工作的了！
+<a class="postTitle2" href="https://www.cnblogs.com/jamaler/p/12664576.html">
+    探秘 RocketMQ 消息持久化机制
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：每日一句英语学习，每天进步一点点： 前言 在日常生活或工作中，我们在判断与对方网络是否畅通，使用的最多的莫过于 ping 命令了。 “那你知道 ping 是如何工作的吗？” —— 来自小林的灵魂拷问 可能有的小伙伴奇怪的问：“我虽然不明白它的工作，但 ping 我也用的贼 6 阿！” 你用的是 6             <a href="https://www.cnblogs.com/xiaolincoding/p/12571184.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：我们知道 RocketMQ 是一款高性能、高可靠的分布式消息中间件，高性能和高可靠是很难兼得的。因为要保证高可靠，那么数据就必须持久化到磁盘上，将数据持久化到磁盘，那么可能就不能保证高性能了。 RocketMQ 在兼容这两方面做的不错，先从磁盘说起， 现代的磁盘都是高性能的，写速度并不一定比网络的数            <a href="https://www.cnblogs.com/jamaler/p/12664576.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-03-25 22:40 小林coding 阅读 (428) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12571184" rel="nofollow">
+posted @ 2020-04-09 09:13 平头哥的技术博文 阅读 (329) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12664576" rel="nofollow">
     编辑
 </a>
 </div>
@@ -246,28 +246,28 @@ posted @ 2020-03-25 22:40 小林coding 阅读 (428) 评论 (0)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/03/17.html">2020年3月17日</a>
+        <a href="https://www.cnblogs.com/jamaler/archive/2020/04/05.html">2020年4月5日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12508499.html">
-    【面试必备】探究！一个数据包在网络中的心路历程
+<a class="postTitle2" href="https://www.cnblogs.com/jamaler/p/12635948.html">
+    除专业知识外，你还需要具备的几种能力
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：每日一句英语学习，每天进步一点点： 前言 想必不少小伙伴面试过程中，会遇到「当键入网址后，到网页显示，其间发生了什么」的面试题。 还别说，这真是挺常问的这题，前几天坐在我旁边的主管电话面试应聘者的时候，也问了这个问题。 这次，小林我带大家一起探究下，一个数据包在网络中的心路历程。 每个阶段都有数据包            <a href="https://www.cnblogs.com/xiaolincoding/p/12508499.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：在职场上，我们首先需要过硬的专业知识，它是我们的生存之本。但是人是惰性的，很多时候并不会主动输入，那么大学所学的那些专业知识，其实不足以对抗漫长的职业生活。 想要在职场上走的好，除了专业知识之外，我们还需要具备哪些能力？最近在看吴军老师的《谷歌方法论》，在里面找到了相应的答案。除了专业知识之外，我们            <a href="https://www.cnblogs.com/jamaler/p/12635948.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-03-17 08:51 小林coding 阅读 (393) 评论 (3)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12508499" rel="nofollow">
+posted @ 2020-04-05 09:49 平头哥的技术博文 阅读 (58) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12635948" rel="nofollow">
     编辑
 </a>
 </div>
@@ -280,28 +280,28 @@ posted @ 2020-03-17 08:51 小林coding 阅读 (393) 评论 (3)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/03/08.html">2020年3月8日</a>
+        <a href="https://www.cnblogs.com/jamaler/archive/2020/04/01.html">2020年4月1日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12442435.html">
-    【面试必备】硬核！30 张图解 HTTP 常见的面试题
+<a class="postTitle2" href="https://www.cnblogs.com/jamaler/p/12610349.html">
+    聊一聊二维码扫描登录原理
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：每日一句英语学习，每天进步一点点： 前言 在面试过程中，HTTP 被提问的概率还是比较高的。小林我搜集了 5 大类 HTTP 面试常问的题目，同时这 5 大类题跟 HTTP 的发展和演变关联性是比较大的，通过问答 + 图解的形式由浅入深的方式帮助大家进一步的学习和理解 HTTP 。 HTTP 基本概            <a href="https://www.cnblogs.com/xiaolincoding/p/12442435.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：扫二维码登录现在比较常见，比如微信、支付宝等 PC 端登录，并且好像每款 APP 都支持扫码登录，不搞个扫码登录都不好意思。作为技术人员，不知道您对这背后的实现逻辑是否敢兴趣，反正我是一直都对这背后实现好奇。最近刚好看到一个关于扫码登录原理的视频，于是就整理出来了这篇文章，希望对您有所帮助。 本文共            <a href="https://www.cnblogs.com/jamaler/p/12610349.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-03-08 14:14 小林coding 阅读 (2283) 评论 (18)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12442435" rel="nofollow">
+posted @ 2020-04-01 09:01 平头哥的技术博文 阅读 (1458) 评论 (2)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12610349" rel="nofollow">
     编辑
 </a>
 </div>
@@ -314,28 +314,28 @@ posted @ 2020-03-08 14:14 小林coding 阅读 (2283) 评论 (18)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/02/26.html">2020年2月26日</a>
+        <a href="https://www.cnblogs.com/jamaler/archive/2020/03/31.html">2020年3月31日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12369300.html">
-    「C++ 」借来的资源，何如还的潇洒？
+<a class="postTitle2" href="https://www.cnblogs.com/jamaler/p/12603081.html">
+    JUC 中提供的限流利器-Semaphore（信号量）
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：有借有还是好习惯！            <a href="https://www.cnblogs.com/xiaolincoding/p/12369300.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：在 JUC 包下，有一个 Semaphore 类，翻译成信号量，Semaphore（信号量）是用来控制同时访问特定资源的线程数量，它通过协调各个线程，以保证合理的使用公共资源。Semaphore 跟锁（synchronized、Lock）有点相似，不同的地方是，锁同一时刻只允许一个线程访问某一资源，            <a href="https://www.cnblogs.com/jamaler/p/12603081.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-02-26 21:49 小林coding 阅读 (305) 评论 (3)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12369300" rel="nofollow">
+posted @ 2020-03-31 09:31 平头哥的技术博文 阅读 (141) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12603081" rel="nofollow">
     编辑
 </a>
 </div>
@@ -348,28 +348,28 @@ posted @ 2020-02-26 21:49 小林coding 阅读 (305) 评论 (3)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/02/15.html">2020年2月15日</a>
+        <a href="https://www.cnblogs.com/jamaler/archive/2020/03/27.html">2020年3月27日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12311371.html">
-    「C++ 篇」答应我，别再if/else走天下了可以吗
+<a class="postTitle2" href="https://www.cnblogs.com/jamaler/p/12579416.html">
+    为什么 select count(*) from t，在 InnoDB 引擎中比 MyISAM 慢？
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：再写出 if/else 连环，就锤自己！            <a href="https://www.cnblogs.com/xiaolincoding/p/12311371.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：统计一张表的总数量，是我们开发中常有的业务需求，通常情况下，我们都是使用 SQL 语句来完成。随着业务数据的增加，你会发现这条语句执行的速度越来越慢，为什么它会变慢呢？ 为什么会变慢？想要得到答案就需要知道 MySQL 是如何统计总数量的，先说一个前提吧， 的具体实现是由存储引擎实现的，也就是说不同            <a href="https://www.cnblogs.com/jamaler/p/12579416.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-02-15 13:09 小林coding 阅读 (391) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12311371" rel="nofollow">
+posted @ 2020-03-27 09:50 平头哥的技术博文 阅读 (309) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12579416" rel="nofollow">
     编辑
 </a>
 </div>
@@ -382,28 +382,28 @@ posted @ 2020-02-15 13:09 小林coding 阅读 (391) 评论 (0)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/02/12.html">2020年2月12日</a>
+        <a href="https://www.cnblogs.com/jamaler/archive/2020/03/14.html">2020年3月14日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12300745.html">
-    学过 C++ 的你，不得不知的这 10 条细节！
+<a class="postTitle2" href="https://www.cnblogs.com/jamaler/p/12490839.html">
+    工作的本质是解决问题
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：每日一句英语学习，每天进步一点点： “Action may not always bring happiness; but there is no happiness without action.” 「行动不见得一定带来快乐，但没有行动就没有快乐。」 前言 我在阅读 《Effective C++             <a href="https://www.cnblogs.com/xiaolincoding/p/12300745.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：不知道你是否会经常产生： 感觉在公司技术上得不到提升，想跳槽的想法 ，但是你会发现一个有趣的规律，换了一家新公司，三五个月之后，你又会有同样的想法，它会进入到一个死循环中。 任何一件事情，做过两三遍之后，都可以用粘贴复制来解决。对于一家公司来说，公司的业务是比较固定，它并不是为你量身定做的。当你的成            <a href="https://www.cnblogs.com/jamaler/p/12490839.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-02-12 20:33 小林coding 阅读 (488) 评论 (2)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12300745" rel="nofollow">
+posted @ 2020-03-14 10:32 平头哥的技术博文 阅读 (549) 评论 (2)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12490839" rel="nofollow">
     编辑
 </a>
 </div>
@@ -416,28 +416,28 @@ posted @ 2020-02-12 20:33 小林coding 阅读 (488) 评论 (2)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/xiaolincoding/archive/2020/02/09.html">2020年2月9日</a>
+        <a href="https://www.cnblogs.com/jamaler/archive/2020/03/12.html">2020年3月12日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/xiaolincoding/p/12288924.html">
-    精心整理「服务器Linux C/C++」 成长路程（附思维导图）
+<a class="postTitle2" href="https://www.cnblogs.com/jamaler/p/12467206.html">
+    使用消息中间件时，如何保证消息仅仅被消费一次？
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：前言 我不是名校毕业，更没有大厂的背景，我只是一个毕业不到 2 年的普普通通的程序员，在摸爬滚打的工作这段时间里，深知了有一个「完整的知识体系」是非常重要的。当事人非常后悔没有在大学期间知道这个道理…… 众多大厂招人的需求也是非常注重此方面，毕竟我们不能单单只是一个只会写代码的程序员，更应该成为一个            <a href="https://www.cnblogs.com/xiaolincoding/p/12288924.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：消息中间件使用广泛，常用来削峰填谷、系统解耦、异步处理。异步处理可能是使用的最多的场景了，比如现在的技术博客网站，都采用积分制，用户发表一篇文章后，可以获取想要的积分，为了提升系统的性能，给用户加积分的操作可以异步处理，并不需要放在同步流程中。 我们可以把用户ID，需要增加的积分封装成一条消息投递到            <a href="https://www.cnblogs.com/jamaler/p/12467206.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-02-09 21:44 小林coding 阅读 (389) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12288924" rel="nofollow">
+posted @ 2020-03-12 09:32 平头哥的技术博文 阅读 (621) 评论 (3)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12467206" rel="nofollow">
     编辑
 </a>
 </div>
@@ -449,7 +449,7 @@ posted @ 2020-02-09 21:44 小林coding 阅读 (389) 评论 (0)
 <div class="topicListFooter">
     <div id="nav_next_page">
         
-    <a href="https://www.cnblogs.com/xiaolincoding/default.html?page=2">
+    <a href="https://www.cnblogs.com/jamaler/default.html?page=2">
         下一页
     </a>
 
@@ -488,7 +488,7 @@ posted @ 2020-02-09 21:44 小林coding 阅读 (389) 评论 (0)
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 小林coding
+Copyright &copy; 2020 平头哥的技术博文
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 

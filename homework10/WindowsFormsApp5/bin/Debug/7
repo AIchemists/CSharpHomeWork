@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>2005 年 3月 6 日 随笔档案 - 拓荒者 - 博客园</title>
     
-    <link rel="stylesheet" href="/css/blog-common.min.css?v=Z9Vw4btcgJmrpUEjY_SgebmTmDXJ_hPFoST7ad2aJp4" />
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
     <link id="MainCss" rel="stylesheet" href="/skins/anothereon001/bundle-anothereon001.min.css?v=vmUk-3Bh8LDsKXwjNHs2GDiFna-ZMTUgOJzjUaXTlPA" />
     
     <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/anothereon001/bundle-anothereon001-mobile.min.css?v=cJiDsI1JAuHHd-OAUWJeyE5JMXXsG4mmuUi2rVmEK1c" />
@@ -110,7 +110,7 @@ posted @ 2005-03-06 08:55 拓荒者 阅读 (418) 评论 (2)
 			<p class="postfoot">		
 			
 
-posted @ 2005-03-06 00:56 拓荒者 阅读 (1505) 评论 (5)
+posted @ 2005-03-06 00:56 拓荒者 阅读 (1506) 评论 (5)
 <a href="https://i.cnblogs.com/EditPosts.aspx?postid=113761" rel="nofollow">
     编辑
 </a>
@@ -189,8 +189,7 @@ posted @ 2005-03-06 00:56 拓荒者 阅读 (1505) 评论 (5)
 	Powered by: 
 	<br />
 	
-	
-<a href="https://www.cnblogs.com/" id="Footer1_Hyperlink3" style="font-size: 12px; font-family: Verdana">博客园</a>
+	<a href="https://www.cnblogs.com/" id="footer_site_link">博客园</a>
 	<br />
 	Copyright &copy; 2020 拓荒者
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>

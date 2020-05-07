@@ -38,28 +38,29 @@ namespace WindowsFormsApp5
         {
             crawlingPocess += "开始爬行了.... \r\n";
             textBox2.Text = crawlingPocess;
+            List<Task> tasks = new List<Task>();
             while (pending.Count > 0 && count < crawler.maxPage)
             {
                 string current = null;
-                string html="";
+                string html = "";
                 int downloadCount = pending.Count;
-                while (pending.Count > 0&&count<crawler.maxPage)
+
+                while (pending.Count > 0 && count < crawler.maxPage)
                 {
                     current = pending.Dequeue();
-                    Task<string> task = Task.Run(() => DownLoad(current));
                     count++;
-                  Thread.Sleep(200);                                //不知道为什么下载时会随机出现下面这一句，而且有时候数量也不对
-                             //文件“C:\Users\Deng\source\repos\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\6”正由另一进程使用，因此该进程无法访问此文件。
+                    Task<string> task = Task.Run(() => DownLoad(current));
+                    tasks.Add(task);
+                    Thread.Sleep(300);
                 }
-                while (downloadPending.Count<downloadCount && crawlSuccessCount+crawlErrorCount<crawler.maxPage)
-                { continue; }
+                Task.WaitAll(tasks.ToArray()); //等待剩余任务全部执行完毕
 
-                if(count<crawler.maxPage)
+                if (count < crawler.maxPage)
                 {
-                    while (downloadPending.Count>0)
+                    while (downloadPending.Count > 0)
                     {
                         html = downloadPending.Dequeue();
-                        if (html == "") { crawler.urls[current] = true;  }
+                        if (html == "") { crawler.urls[current] = true; }
                         else
                         {
 

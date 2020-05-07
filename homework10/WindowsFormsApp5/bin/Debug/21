@@ -8,24 +8,24 @@
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Biningo - 博客园</title>
+    <title>TMusketeer - 博客园</title>
     
-    <link rel="stylesheet" href="/css/blog-common.min.css?v=Z9Vw4btcgJmrpUEjY_SgebmTmDXJ_hPFoST7ad2aJp4" />
-    <link id="MainCss" rel="stylesheet" href="/skins/simplememory/bundle-simplememory.min.css?v=OL4qeo1LNGlN1rKIhv5UctANvt0M6Nx6kLzr_ffx3Xk" />
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/sea/bundle-sea.min.css?v=Jpv_XRZqv7HnW0FXxHohZmb1TG6nYuWdNSwqJML5lHA" />
     
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory-mobile.min.css" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/sea/bundle-sea-mobile.min.css?v=GEzW0neGdNE-VMws0ftJENKA__n-moeEPmS2Y9XCJis" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/biningooginind/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/biningooginind/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/biningooginind/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/cmusketeer/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/cmusketeer/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/cmusketeer/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 559704;
-        var currentBlogApp = 'biningooginind';
+        var currentBlogId = 388360;
+        var currentBlogApp = 'cmusketeer';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'SimpleMemory';
+        var skinName = 'sea';
     </script>
     
     
@@ -34,71 +34,66 @@
 <body>
     <a name="top"></a>
     
-    
-<!--done-->
-<div id="home">
+    <!--done-->
 <div id="header">
-	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/biningooginind/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
-		
+	
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/biningooginind/">Biningo</a>
-</h1>
-<h2>
-
-</h2>
-
-
-
-
+<div class="header">
+	<div class="headerText">
+		<a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/cmusketeer/">TMusketeer-刘志通</a>
+<br>
 		
-	</div><!--end: blogTitle 博客的标题和副标题 -->
-	<div id="navigator">
-		
-<ul id="navList">
-<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+
+
+	</div>
+</div>
+
+
+</div>
+
+<div id="mytopmenu">
+	
+		<div id="mylinks">
+<a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
 博客园</a>
-</li>
-<li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/biningooginind/">
+ &nbsp;
+
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/cmusketeer/">
 首页</a>
-</li>
-<li>
+ &nbsp;
+
 
 <a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
 新随笔</a>
-</li>
-<li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/Biningo">
-联系</a></li>
-<li>
+ &nbsp;
 
-<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
-<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/TMusketeer">
+联系</a> &nbsp;
+
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/cmusketeer/rss/">
+订阅</a>
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/cmusketeer/rss/">
+    <img src="/skins/sea/images/xml.gif" alt="订阅" />
+</a>&nbsp;
+
 <a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
 管理</a>
-</li>
-</ul>
 
 
-		<div class="blogStats">
-			
-			<span id="stats_post_count">随笔 - 
-26&nbsp; </span>
-<span id="stats_article_count">文章 - 
-0&nbsp; </span>
-<span id="stats-comment_count">评论 - 
-10</span>
+</div>
+		<DIV id="mystats">随笔-
+47&nbsp;
+评论-
+59&nbsp;
+文章-
+2&nbsp;
+<!--trackbacks-<partial name="./Shared/_PingTrackCount.cshtml" model="BlogServer.Web.Models.HomeBlogPage" />-->
 
-			
-		</div><!--end: blogStats -->
-	</div><!--end: navigator 博客导航栏 -->
-</div><!--end: header 头部 -->
-
-<div id="main">
-	<div id="mainContent">
-	<div class="forFlow">
-		
+</DIV>
+	
+</div>
+<div id="centercontent">
+	
 <!--done-->
 
 
@@ -108,33 +103,37 @@
 
 
 <div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/biningooginind/archive/2020/03/01.html">2020年3月1日</a>
-    </div>
+	<div class="dayTitle">
+        <a href="https://www.cnblogs.com/cmusketeer/archive/2020/05/07.html">
+            <img src="/skins/sea/images/title_post.gif" border=0 align="absmiddle" />
+        </a>
+		&nbsp;
+		2020年5月7日		  
+	</div>
 
-        <div class="postTitle">
-            
+	
+			<div class="postTitle">
+				
 
-<a class="postTitle2" href="https://www.cnblogs.com/biningooginind/p/12388467.html">
-[置顶]    一款属于自己的笔记本【vue+gin+elementUI前后端分离开发部署开源项目】
+<a class="postTitle2" href="https://www.cnblogs.com/cmusketeer/p/12843367.html">
+    自定义View实战
 </a>
 
-        </div>
-        <div class="postCon">
+			</div>
+			
 
     <div class="c_b_p_desc">
-摘要：前言 我为什么要写一个个人的云笔记？ (⊙o⊙)…额额额&#128516;。。。这件事儿还得从一只蝙蝠说起...... 好了_(:з」∠)_不想扯了...... ~~有以下几个原因：~~ 1. 突然发现有道云笔记不是自己的 我的隐私都在别人的库里&#128561;。并且一直想有一个自己的云笔记。 2. 打开全球最大同性交友平台            <a href="https://www.cnblogs.com/biningooginind/p/12388467.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：PS：上一篇从0开始学自定义View有博友给我留言说要看实战，今天我特意写了几个例子，供大家参考，所画的图案加上动画看着确实让人舒服，喜欢的博友可以直接拿到自己的项目中去使用，由于我这个写的是demo，代码格式写的有些乱，所以，要自己封装一下才可以使用，当然你如果真的不想封装，可以直接使用，也可以给            <a href="https://www.cnblogs.com/cmusketeer/p/12843367.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
 
-posted @ 2020-03-01 10:04 Biningo 阅读 (912) 评论 (10)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12388467" rel="nofollow">
+			<div class="postDesc">
+
+posted @ 2020-05-07 15:29 TMusketeer 阅读 (14) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12843367" rel="nofollow">
     编辑
 </a>
 </div>
-        <div class="clear"></div>
+
 </div>
 
 
@@ -142,33 +141,37 @@ posted @ 2020-03-01 10:04 Biningo 阅读 (912) 评论 (10)
 
 
 <div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/biningooginind/archive/2020/04/30.html">2020年4月30日</a>
-    </div>
+	<div class="dayTitle">
+        <a href="https://www.cnblogs.com/cmusketeer/archive/2020/05/06.html">
+            <img src="/skins/sea/images/title_post.gif" border=0 align="absmiddle" />
+        </a>
+		&nbsp;
+		2020年5月6日		  
+	</div>
 
-        <div class="postTitle">
-            
+	
+			<div class="postTitle">
+				
 
-<a class="postTitle2" href="https://www.cnblogs.com/biningooginind/p/12810833.html">
-    [redis]SDS和链表
+<a class="postTitle2" href="https://www.cnblogs.com/cmusketeer/p/12837076.html">
+    从0开始学自定义View -1
 </a>
 
-        </div>
-        <div class="postCon">
+			</div>
+			
 
     <div class="c_b_p_desc">
-摘要：一、SDS 1、SDS结构体 redis3.2之前 ：不管buf的字节数有多少，都用 4字节的len来储存长度 ，对于只存短字符串那么优点 浪费空间 ，比如只存 ，则 则只需要一个字节8位即可表示 redis3.2之后： \__attribute__ ((\__packed__)) 关键字是为了取消            <a href="https://www.cnblogs.com/biningooginind/p/12810833.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：PS:好久没有写博客了，之前的东西有所忘记，百度一下竟然查到了自己的写过的博客，访问量还可以，一开始的写博客的初衷是把自己不会的记录下来，现在没想到也有博友会关注我，这就给了我动力，工作之余把零零碎碎的东西总结一下，供大家参考。下面的博文是我自己的总结再加上博友的一些见解整合而成，共同进步。 初识V            <a href="https://www.cnblogs.com/cmusketeer/p/12837076.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
 
-posted @ 2020-04-30 19:29 Biningo 阅读 (12) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12810833" rel="nofollow">
+			<div class="postDesc">
+
+posted @ 2020-05-06 17:35 TMusketeer 阅读 (106) 评论 (2)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12837076" rel="nofollow">
     编辑
 </a>
 </div>
-        <div class="clear"></div>
+
 </div>
 
 
@@ -176,57 +179,59 @@ posted @ 2020-04-30 19:29 Biningo 阅读 (12) 评论 (0)
 
 
 <div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/biningooginind/archive/2020/04/29.html">2020年4月29日</a>
-    </div>
+	<div class="dayTitle">
+        <a href="https://www.cnblogs.com/cmusketeer/archive/2019/08/20.html">
+            <img src="/skins/sea/images/title_post.gif" border=0 align="absmiddle" />
+        </a>
+		&nbsp;
+		2019年8月20日		  
+	</div>
 
-        <div class="postTitle">
-            
+	
+			<div class="postTitle">
+				
 
-<a class="postTitle2" href="https://www.cnblogs.com/biningooginind/p/12800400.html">
-    [go]包和工程管理
+<a class="postTitle2" href="https://www.cnblogs.com/cmusketeer/p/11384036.html">
+    自定义BubbleDialog---实现优美对话框，气泡对话框
 </a>
 
-        </div>
-        <div class="postCon">
+			</div>
+			
 
     <div class="c_b_p_desc">
-摘要：一、系统环境变量 GOROOT 指定go的安装目录，win是在 C\\Go\\ ，Linux在 /usr/local/go 下，如果不是默认的目录，则需要指定 GOROOT环境变量，否则不需要 GOPATH 工作目录，可以指定多个，环境变量中用 分割 go get下载目录的时候默认会下载到第一个GO            <a href="https://www.cnblogs.com/biningooginind/p/12800400.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：PS:自定义dialog，一些系统的dialog已经不能满足开发人员的需求了，所以，我们需要自定义一个属于并且适合自己项目的对话框，无论是颜色还是功能需求上都是和自己的项目紧密相关的，一些系统的对话框的使用请看博客：https://www.cnblogs.com/codingblock/p/4721            <a href="https://www.cnblogs.com/cmusketeer/p/11384036.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
 
-posted @ 2020-04-29 10:19 Biningo 阅读 (31) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12800400" rel="nofollow">
+			<div class="postDesc">
+
+posted @ 2019-08-20 17:25 TMusketeer 阅读 (568) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11384036" rel="nofollow">
     编辑
 </a>
 </div>
-        <div class="clear"></div>
-            <div class="postSeparator"></div>
-        <div class="postTitle">
-            
+			<div class="postSeparator"></div>
+			<div class="postTitle">
+				
 
-<a class="postTitle2" href="https://www.cnblogs.com/biningooginind/p/12800383.html">
-    [java]Comparable和Comparator
+<a class="postTitle2" href="https://www.cnblogs.com/cmusketeer/p/11383037.html">
+    RecyclerView实现混合布局
 </a>
 
-        </div>
-        <div class="postCon">
+			</div>
+			
 
     <div class="c_b_p_desc">
-摘要：1、Comparable 这是一个接口，要让对象拥有比较能力，那么就可以继承这个接口，实现 compareTo 方法。 comparaTo返回1则排在后面，返回 1排前面 2、Comparator Comparator 相当于一个比较器，可以对一类对象进行排序而无需继承 Comparable 接口             <a href="https://www.cnblogs.com/biningooginind/p/12800383.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：PS:好长时间不写博客了，起初是不知道写些什么，后来接触了到了很多东西，原本看似简单的东西，背后都隐藏着巨大的秘密，想handler的使用，一般情况下会引起内存泄漏问题，想着找到方法结局不就得了吗，可是谁想查阅资料发现，这个东西没想到牵扯的这么深，&#160;Activity -&gt; handler -&gt; me            <a href="https://www.cnblogs.com/cmusketeer/p/11383037.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
 
-posted @ 2020-04-29 10:16 Biningo 阅读 (23) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12800383" rel="nofollow">
+			<div class="postDesc">
+
+posted @ 2019-08-20 15:47 TMusketeer 阅读 (1053) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11383037" rel="nofollow">
     编辑
 </a>
 </div>
-        <div class="clear"></div>
+
 </div>
 
 
@@ -234,33 +239,37 @@ posted @ 2020-04-29 10:16 Biningo 阅读 (23) 评论 (0)
 
 
 <div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/biningooginind/archive/2020/04/24.html">2020年4月24日</a>
-    </div>
+	<div class="dayTitle">
+        <a href="https://www.cnblogs.com/cmusketeer/archive/2019/01/28.html">
+            <img src="/skins/sea/images/title_post.gif" border=0 align="absmiddle" />
+        </a>
+		&nbsp;
+		2019年1月28日		  
+	</div>
 
-        <div class="postTitle">
-            
+	
+			<div class="postTitle">
+				
 
-<a class="postTitle2" href="https://www.cnblogs.com/biningooginind/p/12769505.html">
-    [go]反射
+<a class="postTitle2" href="https://www.cnblogs.com/cmusketeer/p/10331450.html">
+    数据结构与算法 - 图的邻接表 （思想以及实现方式）
 </a>
 
-        </div>
-        <div class="postCon">
+			</div>
+			
 
     <div class="c_b_p_desc">
-摘要：一、reflect.Typeof() 如果传入的是一个接口，如果是动态绑定了一个实现结构体的，则显示具体结构体的Type，否则是接口的名字。这个方法返回的是一个Type接口，其实就是返回了 绑定类型的rtype，这个指针在Value这个结构体有 Typeof返回的是一个Type接口下面看看Type接            <a href="https://www.cnblogs.com/biningooginind/p/12769505.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：PS：邻接表，存储方法跟树的孩子链表示法相类似，是一种顺序分配和链式分配相结合的存储结构。如这个表头结点所对应的顶点存在相邻顶点，则把相邻顶点依次存放于表头结点所指向的单向链表中。图的邻接表储存方式相对于邻接矩阵比较节约空间，对于邻接矩阵需要分别把顶点和边（顶点之间的关系）用一维数组和二维数组储存起            <a href="https://www.cnblogs.com/cmusketeer/p/10331450.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
 
-posted @ 2020-04-24 19:12 Biningo 阅读 (30) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12769505" rel="nofollow">
+			<div class="postDesc">
+
+posted @ 2019-01-28 19:12 TMusketeer 阅读 (7352) 评论 (4)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10331450" rel="nofollow">
     编辑
 </a>
 </div>
-        <div class="clear"></div>
+
 </div>
 
 
@@ -268,33 +277,37 @@ posted @ 2020-04-24 19:12 Biningo 阅读 (30) 评论 (0)
 
 
 <div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/biningooginind/archive/2020/04/23.html">2020年4月23日</a>
-    </div>
+	<div class="dayTitle">
+        <a href="https://www.cnblogs.com/cmusketeer/archive/2019/01/21.html">
+            <img src="/skins/sea/images/title_post.gif" border=0 align="absmiddle" />
+        </a>
+		&nbsp;
+		2019年1月21日		  
+	</div>
 
-        <div class="postTitle">
-            
+	
+			<div class="postTitle">
+				
 
-<a class="postTitle2" href="https://www.cnblogs.com/biningooginind/p/12763155.html">
-    循环队列-双端和单端
+<a class="postTitle2" href="https://www.cnblogs.com/cmusketeer/p/10300318.html">
+    数据结构与算法 -- 图（邻接矩阵）原理详解
 </a>
 
-        </div>
-        <div class="postCon">
+			</div>
+			
 
     <div class="c_b_p_desc">
-摘要：单循环队列 q ：用数组来记录数据 cap：代表数组的长度 len：代表元素的个数，取尾部元素可以根据头元素指针和这个值来进行计算 (queue head+queue len)%queue cap ， 取余是为了在规定范围内循环使用有限空间 head：头元素的指针 出队：出头元素只需要将head往前            <a href="https://www.cnblogs.com/biningooginind/p/12763155.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：PS：图在数据结构中有着非常大的分量，它比树有着更为复杂的形式结构，这里就不再说图的基本概念，直接就说图的存储结构，邻接矩阵和邻接表。图是有方向的，有方向的叫做弧，无方向的叫做边。存储图中各顶点本身数据，使用一维数组就足够了；存储顶点之间的关系时，要记录每个顶点和其它所有顶点之间的关系，所以需要使用            <a href="https://www.cnblogs.com/cmusketeer/p/10300318.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
 
-posted @ 2020-04-23 20:01 Biningo 阅读 (17) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12763155" rel="nofollow">
+			<div class="postDesc">
+
+posted @ 2019-01-21 18:29 TMusketeer 阅读 (2177) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10300318" rel="nofollow">
     编辑
 </a>
 </div>
-        <div class="clear"></div>
+
 </div>
 
 
@@ -302,33 +315,37 @@ posted @ 2020-04-23 20:01 Biningo 阅读 (17) 评论 (0)
 
 
 <div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/biningooginind/archive/2020/04/15.html">2020年4月15日</a>
-    </div>
+	<div class="dayTitle">
+        <a href="https://www.cnblogs.com/cmusketeer/archive/2018/12/30.html">
+            <img src="/skins/sea/images/title_post.gif" border=0 align="absmiddle" />
+        </a>
+		&nbsp;
+		2018年12月30日		  
+	</div>
 
-        <div class="postTitle">
-            
+	
+			<div class="postTitle">
+				
 
-<a class="postTitle2" href="https://www.cnblogs.com/biningooginind/p/12703006.html">
-    [go]map基本使用和底层原理
+<a class="postTitle2" href="https://www.cnblogs.com/cmusketeer/p/10199706.html">
+    数据结构与算法 -- 哈夫曼树思想与创建详解1
 </a>
 
-        </div>
-        <div class="postCon">
+			</div>
+			
 
     <div class="c_b_p_desc">
-摘要：1、map基本使用 map声明 创建 判断值是否存在 只接受一个的话默认返回的是value，两个的话有exists map遍历 删除 2、map和set go没有内置set类型，但是可以用map很轻松模仿， 因为map的key是唯一的 3、map底层结构 借鉴了如下博客。写的很好 &quot; 深入Go的Ma            <a href="https://www.cnblogs.com/biningooginind/p/12703006.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：PS:什么是哈夫曼树？ 给定n个权值作为n个叶子结点，构造一棵二叉树，若该树的带权路径长度达到最小，称这样的二叉树为最优二叉树，也称为哈夫曼树(Huffman Tree)。哈夫曼树是带权路径长度最短的树，权值较大的结点离根较近。 计算规则： 假设一组权值，一个权值是一个结点，12 34 2 5 7             <a href="https://www.cnblogs.com/cmusketeer/p/10199706.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
 
-posted @ 2020-04-15 08:55 Biningo 阅读 (73) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12703006" rel="nofollow">
+			<div class="postDesc">
+
+posted @ 2018-12-30 15:59 TMusketeer 阅读 (1356) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10199706" rel="nofollow">
     编辑
 </a>
 </div>
-        <div class="clear"></div>
+
 </div>
 
 
@@ -336,33 +353,37 @@ posted @ 2020-04-15 08:55 Biningo 阅读 (73) 评论 (0)
 
 
 <div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/biningooginind/archive/2020/04/12.html">2020年4月12日</a>
-    </div>
+	<div class="dayTitle">
+        <a href="https://www.cnblogs.com/cmusketeer/archive/2018/11/27.html">
+            <img src="/skins/sea/images/title_post.gif" border=0 align="absmiddle" />
+        </a>
+		&nbsp;
+		2018年11月27日		  
+	</div>
 
-        <div class="postTitle">
-            
+	
+			<div class="postTitle">
+				
 
-<a class="postTitle2" href="https://www.cnblogs.com/biningooginind/p/12685406.html">
-    [go]指针
+<a class="postTitle2" href="https://www.cnblogs.com/cmusketeer/p/10026050.html">
+    JAVA基本数据类型、引用数据类型-参数传递详解
 </a>
 
-        </div>
-        <div class="postCon">
+			</div>
+			
 
     <div class="c_b_p_desc">
-摘要：一、三种指针类型 1. 普通指针 2. 非类型安全指针 unsafe.Pointer（类似c的 void ） 3. 内置类型指针 uintpter（其实就是一个整数，代表地址，支持运算） 普通指针和unsafe.Pointer类型的指针都能代表引用一个地址，被GC发现。但是uintptr是不代表引用            <a href="https://www.cnblogs.com/biningooginind/p/12685406.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：1：基本类型的参数传值 对于基本数据类型，修改这个值并不会影响作为参数传进来的那个变量,因为你修改的是方法的局部变量,是一个副本。实参的精度级别应等于或低于形参的精度级别，否则报错。 2:引用类型的参数传值 引用类型包括类、数组以及后面将要学习的接口。当形参是引用类型时，实参传给形参的值是对象的引用            <a href="https://www.cnblogs.com/cmusketeer/p/10026050.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
 
-posted @ 2020-04-12 15:23 Biningo 阅读 (50) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12685406" rel="nofollow">
+			<div class="postDesc">
+
+posted @ 2018-11-27 14:08 TMusketeer 阅读 (1935) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10026050" rel="nofollow">
     编辑
 </a>
 </div>
-        <div class="clear"></div>
+
 </div>
 
 
@@ -370,33 +391,37 @@ posted @ 2020-04-12 15:23 Biningo 阅读 (50) 评论 (0)
 
 
 <div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/biningooginind/archive/2020/04/03.html">2020年4月3日</a>
-    </div>
+	<div class="dayTitle">
+        <a href="https://www.cnblogs.com/cmusketeer/archive/2018/11/11.html">
+            <img src="/skins/sea/images/title_post.gif" border=0 align="absmiddle" />
+        </a>
+		&nbsp;
+		2018年11月11日		  
+	</div>
 
-        <div class="postTitle">
-            
+	
+			<div class="postTitle">
+				
 
-<a class="postTitle2" href="https://www.cnblogs.com/biningooginind/p/12625321.html">
-    nginx使用手册+基本原理+优缺点
+<a class="postTitle2" href="https://www.cnblogs.com/cmusketeer/p/9940183.html">
+    数据结构与算法 -- 二叉树链式详解（（非）/递归遍历，叶子个数，深度计算）
 </a>
 
-        </div>
-        <div class="postCon">
+			</div>
+			
 
     <div class="c_b_p_desc">
-摘要：一、nginx优点 1.反向代理 1、正向代理 ： 客户端和原始服务器(origin server)之间的服务器，为了从原始服务器取得内容，客户端向代理发送一个请求并指定目标(原始服务器)，然后代理向原始服务器转交请求并将获得的内容返回给客户端。 server不知道client是谁 2、反向代理：             <a href="https://www.cnblogs.com/biningooginind/p/12625321.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：前言 PS：树型结构是一种重要的非线性数据结构，教科书上一般都是树与二叉树，由此可见，树和二叉树是有区别和联系的，网上有人说二叉树是树的一种特殊形式，但经过查资料，树和二叉树没有一个肯定的说法，但唯一可以肯定都是树型结构。但是按照定义来看二叉树并不是树的一种特殊形式（下面解释）。树型数据结构的作用可            <a href="https://www.cnblogs.com/cmusketeer/p/9940183.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
 
-posted @ 2020-04-03 11:16 Biningo 阅读 (589) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12625321" rel="nofollow">
+			<div class="postDesc">
+
+posted @ 2018-11-11 22:15 TMusketeer 阅读 (981) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=9940183" rel="nofollow">
     编辑
 </a>
 </div>
-        <div class="clear"></div>
+
 </div>
 
 
@@ -404,67 +429,37 @@ posted @ 2020-04-03 11:16 Biningo 阅读 (589) 评论 (0)
 
 
 <div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/biningooginind/archive/2020/03/31.html">2020年3月31日</a>
-    </div>
+	<div class="dayTitle">
+        <a href="https://www.cnblogs.com/cmusketeer/archive/2018/11/01.html">
+            <img src="/skins/sea/images/title_post.gif" border=0 align="absmiddle" />
+        </a>
+		&nbsp;
+		2018年11月1日		  
+	</div>
 
-        <div class="postTitle">
-            
+	
+			<div class="postTitle">
+				
 
-<a class="postTitle2" href="https://www.cnblogs.com/biningooginind/p/12609262.html">
-    缓存问题[雪崩、击穿]
+<a class="postTitle2" href="https://www.cnblogs.com/cmusketeer/p/9890343.html">
+    数据结构与算法 -- 栈的应用（进制转换、括号匹配）
 </a>
 
-        </div>
-        <div class="postCon">
+			</div>
+			
 
     <div class="c_b_p_desc">
-摘要：缓存穿透 查询缓存步骤： 1. 查询K V数据库缓存。存在返回 2. 如果数据不存在，则查询后端sql数据库 缓存穿透 ： 恶意请求会故意查询在redis等缓存数据库里面不存在的Key，来引发后端数据库的查询。 如果数据量很大，则会增加后端的压力。这就是 ~~缓存穿透~~ 如何避免？ 1. 请求过滤            <a href="https://www.cnblogs.com/biningooginind/p/12609262.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：栈的应用 ps：用栈很简单实现的应用有很多，比如说进制转换，括号匹配等。学计算机的都知道，2进制，8进制，10进制，16进制等，进制之间的转换也是需要掌握的，以备不时之需，所以我们可以自己写一段程序如果会android的话，可以直接打包成APK。下面就按照这两个应用稍微写一点C语言的代码。 进制转换            <a href="https://www.cnblogs.com/cmusketeer/p/9890343.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
 
-posted @ 2020-03-31 22:43 Biningo 阅读 (62) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12609262" rel="nofollow">
+			<div class="postDesc">
+
+posted @ 2018-11-01 17:32 TMusketeer 阅读 (4439) 评论 (2)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=9890343" rel="nofollow">
     编辑
 </a>
 </div>
-        <div class="clear"></div>
-</div>
 
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/biningooginind/archive/2020/03/23.html">2020年3月23日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/biningooginind/p/12555729.html">
-    字典
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：字典在很多高级语言里都有，比如 1. js的对象结构可以当字典来用 2. python的字典 3. go的map 4. ...................... 但是你们知道字典是怎么实现的吗？本文来实现一个简单的字典。 python的字典 先来看python的字典是怎样的 c语言实现 参考了             <a href="https://www.cnblogs.com/biningooginind/p/12555729.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-03-23 22:26 Biningo 阅读 (19) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12555729" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
 </div>
 
 
@@ -472,7 +467,7 @@ posted @ 2020-03-23 22:26 Biningo 阅读 (19) 评论 (0)
 <div class="topicListFooter">
     <div id="nav_next_page">
         
-    <a href="https://www.cnblogs.com/biningooginind/default.html?page=2">
+    <a href="https://www.cnblogs.com/cmusketeer/default.html?page=2">
         下一页
     </a>
 
@@ -486,38 +481,33 @@ posted @ 2020-03-23 22:26 Biningo 阅读 (19) 评论 (0)
 
 
 
-	</div><!--end: forFlow -->
-	</div><!--end: mainContent 主体内容容器-->
-
-	<div id="sideBar">
-		<div id="sideBarMain">
+</div>
+<div id="leftcontent">
+	
+		<DIV id="leftcontentcontainer">
 			
 <div id="sidebar_news" class="newsItem">
             <script>loadBlogNews();</script>
 </div>
 
 <div id="sidebar_ad"></div>
-			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
-			
-			<div id="leftcontentcontainer">
-				<div id="blog-sidecolumn"></div>
-                    <script>loadBlogSideColumn();</script>
-			</div>
-			
-		</div><!--end: sideBarMain -->
-	</div><!--end: sideBar 侧边栏容器 -->
-	<div class="clear"></div>
-	</div><!--end: main -->
-	<div class="clear"></div>
-	<div id="footer">
-		<!--done-->
-Copyright &copy; 2020 Biningo
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div></div>                
+                    <script>loadBlogDefaultCalendar();</script><br>
+			<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script></DIV>
+	
+</div>
+<!--done-->
+<div class="footer">
+	Powered by: <a href="http://www.cnblogs.com">博客园</a>
+	Copyright &copy; 2020 TMusketeer
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
+</div>
 
 
-	</div><!--end: footer -->
-</div><!--end: home 自定义的最大容器 -->
+
+
 
 
     

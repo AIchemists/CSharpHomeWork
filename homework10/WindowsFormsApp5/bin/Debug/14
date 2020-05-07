@@ -67,7 +67,7 @@
             </div>
             <div class="rss_link" id="rss_block">
 <span id="posts_refresh_tips"></span><a id="posts_refresh" href="#" class="refresh" title="刷新博文列表" onclick="aggSite.loadCategoryPostList();return false">刷新</a><a href="http://feed.cnblogs.com/blog/picked/rss"><img src="//common.cnblogs.com/images/icon_rss.gif" alt="点击订阅" style="position:relative;top:2px;" title="订阅博客园文章" /></a>            </div>
-                <div id="headline_block" class="headline"><ul><li class="editor_pick"><a href="https://www.cnblogs.com/yilezhu/p/12797543.html" id="editor_pick_lnk" target="_blank">【编辑推荐】用 asp.net core 结合 fastdfs 打造分布式文件存储系统<span id="editor_pick_count"></span></a> <a href="/aggsite/headline" title="查看更多编辑推荐" class="right_more">»</a></li><li><a href="https://www.cnblogs.com/linvanda/p/12807047.html" target="_blank" title="阅读525, 评论11, 推荐9">[最多推荐]phper：敢问路在何方(11/525)</a> <a href="/aggsite/topdigged24h" title="查看24小时推荐排行" class="right_more">»</a></li><li><a href="https://www.cnblogs.com/aoximin/p/12804050.html" target="_blank" title="阅读1872, 评论28, 推荐2">[最多评论]webform 最后的黄昏之力(28/1872)</a> <a href="/aggsite/topcommented24h" title="查看24小时评论排行" class="right_more">»</a></li><li><a href="https://news.cnblogs.com/n/660913/" target="_blank" title="阅读1742, 评论23, 推荐1">[新闻头条]快递柜收费，难救“穷疯”的丰巢(23/1742)</a> <a href="https://news.cnblogs.com/" title="查看更多新闻" class="right_more">»</a></li><li><a href="https://news.cnblogs.com/n/660955/" target="_blank" title="阅读378, 评论0, 推荐3">[推荐新闻]连呼吸机都能搭起来，还有什么是树莓派做不了的吗？(0/378)</a> <a href="https://news.cnblogs.com/n/recommend" title="查看更多推荐新闻" class="right_more">»</a></li></ul></div>
+                <div id="headline_block" class="headline"><ul><li class="editor_pick"><a href="https://www.cnblogs.com/tianqing/p/12815747.html" id="editor_pick_lnk" target="_blank">【编辑推荐】.NET Core 技术研究 - 通过 Roslyn 代码分析技术规范提升代码质量<span id="editor_pick_count"></span></a> <a href="/aggsite/headline" title="查看更多编辑推荐" class="right_more">»</a></li><li><a href="https://www.cnblogs.com/huangxincheng/p/12839160.html" target="_blank" title="阅读1514, 评论30, 推荐19">[最多推荐]内存迟迟下不去，可能你就差一个GC.Collect(30/1514)</a> <a href="/aggsite/topdigged24h" title="查看24小时推荐排行" class="right_more">»</a></li><li><a href="https://www.cnblogs.com/Rwing/p/csharp-9-0-preview-target-typed-new.html" target="_blank" title="阅读1698, 评论26, 推荐15">[最多评论]C# 9.0 新特性预览 - 类型推导的 new(26/1698)</a> <a href="/aggsite/topcommented24h" title="查看24小时评论排行" class="right_more">»</a></li><li><a href="https://news.cnblogs.com/n/661275/" target="_blank" title="阅读2904, 评论12, 推荐26">[新闻头条]什么能毁掉程序员的一生？(12/2904)</a> <a href="https://news.cnblogs.com/" title="查看更多新闻" class="right_more">»</a></li><li><a href="https://news.cnblogs.com/n/661288/" target="_blank" title="阅读910, 评论0, 推荐3">[推荐新闻]一部手机，成功实现 &quot;跨界&quot; 复制粘贴 ，这位设计师把AR玩出了新花样(0/910)</a> <a href="https://news.cnblogs.com/n/recommend" title="查看更多推荐新闻" class="right_more">»</a></li></ul></div>
 
             <div id="pager_top" style="display:none"></div>
             <div id="post_list_tips" class="hide"></div>
@@ -76,7 +76,7 @@
                 <div class="post_item">
 <div class="digg">
     <div class="diggit" onclick="DiggPost('techflow',12310669,569749,1)"> 
-	<span class="diggnum" id="digg_count_12310669">22</span>
+	<span class="diggnum" id="digg_count_12310669">23</span>
 	</div>
 	<div class="clear"></div>
     <div id="digg_tip_12310669" class="digg_tip">
@@ -92,14 +92,14 @@
     <a href="https://www.cnblogs.com/techflow/" class="lightblue">TechFlow2019</a> 
     发布于 2020-02-15 09:22 
     <span class="article_comment"><a href="https://www.cnblogs.com/techflow/p/12310669.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(17)</a></span><span class="article_view"><a href="https://www.cnblogs.com/techflow/p/12310669.html" class="gray">阅读(4900)</a></span></div>
+        评论(16)</a></span><span class="article_view"><a href="https://www.cnblogs.com/techflow/p/12310669.html" class="gray">阅读(5191)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
 <div class="post_item">
 <div class="digg">
     <div class="diggit" onclick="DiggPost('alisystemsoftware',12221622,435351,1)"> 
-	<span class="diggnum" id="digg_count_12221622">16</span>
+	<span class="diggnum" id="digg_count_12221622">17</span>
 	</div>
 	<div class="clear"></div>
     <div id="digg_tip_12221622" class="digg_tip">
@@ -115,14 +115,14 @@
     <a href="https://www.cnblogs.com/alisystemsoftware/" class="lightblue">阿里巴巴云原生</a> 
     发布于 2020-01-21 14:27 
     <span class="article_comment"><a href="https://www.cnblogs.com/alisystemsoftware/p/12221622.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(5)</a></span><span class="article_view"><a href="https://www.cnblogs.com/alisystemsoftware/p/12221622.html" class="gray">阅读(5596)</a></span></div>
+        评论(5)</a></span><span class="article_view"><a href="https://www.cnblogs.com/alisystemsoftware/p/12221622.html" class="gray">阅读(5785)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
 <div class="post_item">
 <div class="digg">
     <div class="diggit" onclick="DiggPost('alisystemsoftware',12016601,435351,1)"> 
-	<span class="diggnum" id="digg_count_12016601">11</span>
+	<span class="diggnum" id="digg_count_12016601">12</span>
 	</div>
 	<div class="clear"></div>
     <div id="digg_tip_12016601" class="digg_tip">
@@ -138,14 +138,14 @@
     <a href="https://www.cnblogs.com/alisystemsoftware/" class="lightblue">阿里巴巴云原生</a> 
     发布于 2019-12-10 14:47 
     <span class="article_comment"><a href="https://www.cnblogs.com/alisystemsoftware/p/12016601.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(4)</a></span><span class="article_view"><a href="https://www.cnblogs.com/alisystemsoftware/p/12016601.html" class="gray">阅读(4082)</a></span></div>
+        评论(4)</a></span><span class="article_view"><a href="https://www.cnblogs.com/alisystemsoftware/p/12016601.html" class="gray">阅读(4203)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
 <div class="post_item">
 <div class="digg">
     <div class="diggit" onclick="DiggPost('xiaoyangjia',11535486,34640,1)"> 
-	<span class="diggnum" id="digg_count_11535486">237</span>
+	<span class="diggnum" id="digg_count_11535486">243</span>
 	</div>
 	<div class="clear"></div>
     <div id="digg_tip_11535486" class="digg_tip">
@@ -161,14 +161,14 @@
     <a href="https://www.cnblogs.com/xiaoyangjia/" class="lightblue">编码砖家</a> 
     发布于 2019-11-14 17:37 
     <span class="article_comment"><a href="https://www.cnblogs.com/xiaoyangjia/p/11535486.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(96)</a></span><span class="article_view"><a href="https://www.cnblogs.com/xiaoyangjia/p/11535486.html" class="gray">阅读(20178)</a></span></div>
+        评论(97)</a></span><span class="article_view"><a href="https://www.cnblogs.com/xiaoyangjia/p/11535486.html" class="gray">阅读(20504)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
 <div class="post_item">
 <div class="digg">
     <div class="diggit" onclick="DiggPost('zer0Black',11819696,190607,1)"> 
-	<span class="diggnum" id="digg_count_11819696">147</span>
+	<span class="diggnum" id="digg_count_11819696">149</span>
 	</div>
 	<div class="clear"></div>
     <div id="digg_tip_11819696" class="digg_tip">
@@ -184,7 +184,7 @@
     <a href="https://www.cnblogs.com/zer0Black/" class="lightblue">zer0black</a> 
     发布于 2019-11-08 13:45 
     <span class="article_comment"><a href="https://www.cnblogs.com/zer0Black/p/11819696.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(156)</a></span><span class="article_view"><a href="https://www.cnblogs.com/zer0Black/p/11819696.html" class="gray">阅读(17901)</a></span></div>
+        评论(156)</a></span><span class="article_view"><a href="https://www.cnblogs.com/zer0Black/p/11819696.html" class="gray">阅读(18126)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -207,14 +207,14 @@
     <a href="https://www.cnblogs.com/gaorong/" class="lightblue">gaorong404</a> 
     发布于 2019-10-20 21:59 
     <span class="article_comment"><a href="https://www.cnblogs.com/gaorong/p/11710246.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(1)</a></span><span class="article_view"><a href="https://www.cnblogs.com/gaorong/p/11710246.html" class="gray">阅读(2092)</a></span></div>
+        评论(1)</a></span><span class="article_view"><a href="https://www.cnblogs.com/gaorong/p/11710246.html" class="gray">阅读(2148)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
 <div class="post_item">
 <div class="digg">
     <div class="diggit" onclick="DiggPost('skabyy',11396571,166858,1)"> 
-	<span class="diggnum" id="digg_count_11396571">405</span>
+	<span class="diggnum" id="digg_count_11396571">406</span>
 	</div>
 	<div class="clear"></div>
     <div id="digg_tip_11396571" class="digg_tip">
@@ -230,7 +230,7 @@
     <a href="https://www.cnblogs.com/skabyy/" class="lightblue">古霜卡比</a> 
     发布于 2019-08-23 08:45 
     <span class="article_comment"><a href="https://www.cnblogs.com/skabyy/p/11396571.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(119)</a></span><span class="article_view"><a href="https://www.cnblogs.com/skabyy/p/11396571.html" class="gray">阅读(29748)</a></span></div>
+        评论(119)</a></span><span class="article_view"><a href="https://www.cnblogs.com/skabyy/p/11396571.html" class="gray">阅读(30053)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -253,14 +253,14 @@
     <a href="https://www.cnblogs.com/CoderAyu/" class="lightblue">码农阿宇</a> 
     发布于 2019-08-19 08:14 
     <span class="article_comment"><a href="https://www.cnblogs.com/CoderAyu/p/11375088.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(73)</a></span><span class="article_view"><a href="https://www.cnblogs.com/CoderAyu/p/11375088.html" class="gray">阅读(14892)</a></span></div>
+        评论(73)</a></span><span class="article_view"><a href="https://www.cnblogs.com/CoderAyu/p/11375088.html" class="gray">阅读(15002)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
 <div class="post_item">
 <div class="digg">
     <div class="diggit" onclick="DiggPost('dotey',11216430,926,1)"> 
-	<span class="diggnum" id="digg_count_11216430">63</span>
+	<span class="diggnum" id="digg_count_11216430">64</span>
 	</div>
 	<div class="clear"></div>
     <div id="digg_tip_11216430" class="digg_tip">
@@ -276,14 +276,14 @@
     <a href="https://www.cnblogs.com/dotey/" class="lightblue">宝玉</a> 
     发布于 2019-07-20 01:35 
     <span class="article_comment"><a href="https://www.cnblogs.com/dotey/p/11216430.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(31)</a></span><span class="article_view"><a href="https://www.cnblogs.com/dotey/p/11216430.html" class="gray">阅读(13480)</a></span></div>
+        评论(31)</a></span><span class="article_view"><a href="https://www.cnblogs.com/dotey/p/11216430.html" class="gray">阅读(13605)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
 <div class="post_item">
 <div class="digg">
     <div class="diggit" onclick="DiggPost('chaosyang',11189445,517048,1)"> 
-	<span class="diggnum" id="digg_count_11189445">88</span>
+	<span class="diggnum" id="digg_count_11189445">89</span>
 	</div>
 	<div class="clear"></div>
     <div id="digg_tip_11189445" class="digg_tip">
@@ -299,7 +299,7 @@
     <a href="https://www.cnblogs.com/chaosyang/" class="lightblue">ChaosYang1987</a> 
     发布于 2019-07-15 16:02 
     <span class="article_comment"><a href="https://www.cnblogs.com/chaosyang/p/11189445.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(25)</a></span><span class="article_view"><a href="https://www.cnblogs.com/chaosyang/p/11189445.html" class="gray">阅读(13159)</a></span></div>
+        评论(26)</a></span><span class="article_view"><a href="https://www.cnblogs.com/chaosyang/p/11189445.html" class="gray">阅读(13248)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -322,7 +322,7 @@
     <a href="https://www.cnblogs.com/wchukai/" class="lightblue">初开</a> 
     发布于 2019-07-12 09:36 
     <span class="article_comment"><a href="https://www.cnblogs.com/wchukai/p/11174189.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(17)</a></span><span class="article_view"><a href="https://www.cnblogs.com/wchukai/p/11174189.html" class="gray">阅读(13143)</a></span></div>
+        评论(17)</a></span><span class="article_view"><a href="https://www.cnblogs.com/wchukai/p/11174189.html" class="gray">阅读(13208)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -345,7 +345,7 @@
     <a href="https://www.cnblogs.com/sujing/" class="lightblue">苏苏喂</a> 
     发布于 2019-07-08 09:45 
     <span class="article_comment"><a href="https://www.cnblogs.com/sujing/p/11110292.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(85)</a></span><span class="article_view"><a href="https://www.cnblogs.com/sujing/p/11110292.html" class="gray">阅读(20393)</a></span></div>
+        评论(85)</a></span><span class="article_view"><a href="https://www.cnblogs.com/sujing/p/11110292.html" class="gray">阅读(20515)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -368,7 +368,7 @@
     <a href="https://www.cnblogs.com/JavaArchitect/" class="lightblue">hsm_computer</a> 
     发布于 2019-07-04 09:06 
     <span class="article_comment"><a href="https://www.cnblogs.com/JavaArchitect/p/11062713.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(61)</a></span><span class="article_view"><a href="https://www.cnblogs.com/JavaArchitect/p/11062713.html" class="gray">阅读(15762)</a></span></div>
+        评论(61)</a></span><span class="article_view"><a href="https://www.cnblogs.com/JavaArchitect/p/11062713.html" class="gray">阅读(15819)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -391,7 +391,7 @@
     <a href="https://www.cnblogs.com/zhu-wj/" class="lightblue">hkant</a> 
     发布于 2019-07-01 23:33 
     <span class="article_comment"><a href="https://www.cnblogs.com/zhu-wj/p/11117541.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(16)</a></span><span class="article_view"><a href="https://www.cnblogs.com/zhu-wj/p/11117541.html" class="gray">阅读(5349)</a></span></div>
+        评论(16)</a></span><span class="article_view"><a href="https://www.cnblogs.com/zhu-wj/p/11117541.html" class="gray">阅读(5388)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -414,7 +414,7 @@
     <a href="https://www.cnblogs.com/sujing/" class="lightblue">苏苏喂</a> 
     发布于 2019-06-24 09:48 
     <span class="article_comment"><a href="https://www.cnblogs.com/sujing/p/11006424.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(103)</a></span><span class="article_view"><a href="https://www.cnblogs.com/sujing/p/11006424.html" class="gray">阅读(17693)</a></span></div>
+        评论(103)</a></span><span class="article_view"><a href="https://www.cnblogs.com/sujing/p/11006424.html" class="gray">阅读(17763)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -437,7 +437,7 @@
     <a href="https://www.cnblogs.com/lixinjie/" class="lightblue">编程新说(李新杰)</a> 
     发布于 2019-06-16 22:01 
     <span class="article_comment"><a href="https://www.cnblogs.com/lixinjie/p/11033062.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(35)</a></span><span class="article_view"><a href="https://www.cnblogs.com/lixinjie/p/11033062.html" class="gray">阅读(9476)</a></span></div>
+        评论(35)</a></span><span class="article_view"><a href="https://www.cnblogs.com/lixinjie/p/11033062.html" class="gray">阅读(9517)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -460,7 +460,7 @@
     <a href="https://www.cnblogs.com/youring2/" class="lightblue">拓荒者-NET</a> 
     发布于 2019-06-15 18:14 
     <span class="article_comment"><a href="https://www.cnblogs.com/youring2/p/11028419.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(21)</a></span><span class="article_view"><a href="https://www.cnblogs.com/youring2/p/11028419.html" class="gray">阅读(5891)</a></span></div>
+        评论(21)</a></span><span class="article_view"><a href="https://www.cnblogs.com/youring2/p/11028419.html" class="gray">阅读(5925)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -483,7 +483,7 @@
     <a href="https://www.cnblogs.com/lixinjie/" class="lightblue">编程新说(李新杰)</a> 
     发布于 2019-05-07 09:57 
     <span class="article_comment"><a href="https://www.cnblogs.com/lixinjie/p/10817860.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(183)</a></span><span class="article_view"><a href="https://www.cnblogs.com/lixinjie/p/10817860.html" class="gray">阅读(25770)</a></span></div>
+        评论(183)</a></span><span class="article_view"><a href="https://www.cnblogs.com/lixinjie/p/10817860.html" class="gray">阅读(25873)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -506,7 +506,7 @@
     <a href="https://www.cnblogs.com/lixinjie/" class="lightblue">编程新说(李新杰)</a> 
     发布于 2019-05-05 09:31 
     <span class="article_comment"><a href="https://www.cnblogs.com/lixinjie/p/10811219.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(85)</a></span><span class="article_view"><a href="https://www.cnblogs.com/lixinjie/p/10811219.html" class="gray">阅读(19217)</a></span></div>
+        评论(85)</a></span><span class="article_view"><a href="https://www.cnblogs.com/lixinjie/p/10811219.html" class="gray">阅读(19313)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -529,7 +529,7 @@
     <a href="https://www.cnblogs.com/Zachary-Fan/" class="lightblue">Zachary_Fan</a> 
     发布于 2019-03-27 08:47 
     <span class="article_comment"><a href="https://www.cnblogs.com/Zachary-Fan/p/10582230.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(38)</a></span><span class="article_view"><a href="https://www.cnblogs.com/Zachary-Fan/p/10582230.html" class="gray">阅读(15469)</a></span></div>
+        评论(38)</a></span><span class="article_view"><a href="https://www.cnblogs.com/Zachary-Fan/p/10582230.html" class="gray">阅读(15523)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -548,40 +548,40 @@
 <div id="cate_title_title"><div class="cate_title">网站分类</div></div>
 <ul id="cate_item">
 <li id="cate_item_108698" onmouseover="cateShow(108698)" onmouseout="cateHidden(108698)">
-<a href="/cate/108698/">.NET技术(5)</a>
+<a href="/cate/108698/">.NET技术(6)</a>
 </li>
 <li id="cate_item_2" onmouseover="cateShow(2)" onmouseout="cateHidden(2)">
-<a href="/cate/2/">编程语言(49)</a>
+<a href="/cate/2/">编程语言(37)</a>
 </li>
 <li id="cate_item_108701" onmouseover="cateShow(108701)" onmouseout="cateHidden(108701)">
 <a href="/cate/108701/">软件设计(2)</a>
 </li>
 <li id="cate_item_108703" onmouseover="cateShow(108703)" onmouseout="cateHidden(108703)">
-<a href="/cate/108703/">Web前端(7)</a>
+<a href="/cate/108703/">Web前端(14)</a>
 </li>
 <li id="cate_item_108704" onmouseover="cateShow(108704)" onmouseout="cateHidden(108704)">
 <a href="/cate/108704/">企业信息化(1)</a>
 </li>
 <li id="cate_item_108705" onmouseover="cateShow(108705)" onmouseout="cateHidden(108705)">
-<a href="/cate/108705/">手机开发(13)</a>
+<a href="/cate/108705/">手机开发(1)</a>
 </li>
 <li id="cate_item_108709" onmouseover="cateShow(108709)" onmouseout="cateHidden(108709)">
-<a href="/cate/108709/">软件工程(0)</a>
+<a href="/cate/108709/">软件工程(4)</a>
 </li>
 <li id="cate_item_108712" onmouseover="cateShow(108712)" onmouseout="cateHidden(108712)">
-<a href="/cate/108712/">数据库技术(8)</a>
+<a href="/cate/108712/">数据库技术(7)</a>
 </li>
 <li id="cate_item_108724" onmouseover="cateShow(108724)" onmouseout="cateHidden(108724)">
-<a href="/cate/108724/">操作系统(5)</a>
+<a href="/cate/108724/">操作系统(2)</a>
 </li>
 <li id="cate_item_4" onmouseover="cateShow(4)" onmouseout="cateHidden(4)">
-<a href="/cate/4/">其他分类(12)</a>
+<a href="/cate/4/">其他分类(9)</a>
 </li>
 <li id="cate_item_0" onmouseover="cateShow(0)" onmouseout="cateHidden(0)">
-<a href="/cate/all/">所有随笔(3133)</a>
+<a href="/cate/all/">所有随笔(1836)</a>
 </li>
 <li id="cate_item_-1" onmouseover="cateShow(-1)" onmouseout="cateHidden(-1)">
-<a href="/comment/">所有评论(589)</a>
+<a href="/comment/">所有评论(458)</a>
 </li>
 </ul>
 <div class="cate_bottom"></div>

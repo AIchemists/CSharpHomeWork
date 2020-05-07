@@ -4,28 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="origin" />
-    <meta property="og:description" content="一、SDS 1、SDS结构体 redis3.2之前 ：不管buf的字节数有多少，都用 4字节的len来储存长度 ，对于只存短字符串那么优点 浪费空间 ，比如只存 ，则 则只需要一个字节8位即可表示 r" />
+    <meta property="og:description" content="PS：上一篇从0开始学自定义View有博友给我留言说要看实战，今天我特意写了几个例子，供大家参考，所画的图案加上动画看着确实让人舒服，喜欢的博友可以直接拿到自己的项目中去使用，由于我这个写的是demo" />
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>[redis]SDS和链表 - Biningo - 博客园</title>
+    <title>自定义View实战 - TMusketeer - 博客园</title>
     
-    <link rel="stylesheet" href="/css/blog-common.min.css?v=Z9Vw4btcgJmrpUEjY_SgebmTmDXJ_hPFoST7ad2aJp4" />
-    <link id="MainCss" rel="stylesheet" href="/skins/simplememory/bundle-simplememory.min.css?v=OL4qeo1LNGlN1rKIhv5UctANvt0M6Nx6kLzr_ffx3Xk" />
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/sea/bundle-sea.min.css?v=Jpv_XRZqv7HnW0FXxHohZmb1TG6nYuWdNSwqJML5lHA" />
     
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory-mobile.min.css" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/sea/bundle-sea-mobile.min.css?v=GEzW0neGdNE-VMws0ftJENKA__n-moeEPmS2Y9XCJis" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/biningooginind/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/biningooginind/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/biningooginind/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/cmusketeer/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/cmusketeer/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/cmusketeer/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 559704;
-        var currentBlogApp = 'biningooginind';
+        var currentBlogId = 388360;
+        var currentBlogApp = 'cmusketeer';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'SimpleMemory';
+        var skinName = 'sea';
     </script>
     
     
@@ -34,299 +34,241 @@
 <body>
     <a name="top"></a>
     
-    
-<!--done-->
-<div id="home">
+    <!--done-->
 <div id="header">
-	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/biningooginind/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
-		
+	
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/biningooginind/">Biningo</a>
-</h1>
-<h2>
-
-</h2>
-
-
-
-
+<div class="header">
+	<div class="headerText">
+		<a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/cmusketeer/">TMusketeer-刘志通</a>
+<br>
 		
-	</div><!--end: blogTitle 博客的标题和副标题 -->
-	<div id="navigator">
-		
-<ul id="navList">
-<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+
+
+	</div>
+</div>
+
+
+</div>
+
+<div id="mytopmenu">
+	
+		<div id="mylinks">
+<a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
 博客园</a>
-</li>
-<li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/biningooginind/">
+ &nbsp;
+
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/cmusketeer/">
 首页</a>
-</li>
-<li>
+ &nbsp;
+
 
 <a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
 新随笔</a>
-</li>
-<li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/Biningo">
-联系</a></li>
-<li>
+ &nbsp;
 
-<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
-<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/TMusketeer">
+联系</a> &nbsp;
+
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/cmusketeer/rss/">
+订阅</a>
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/cmusketeer/rss/">
+    <img src="/skins/sea/images/xml.gif" alt="订阅" />
+</a>&nbsp;
+
 <a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
 管理</a>
-</li>
-</ul>
 
 
-		<div class="blogStats">
-			
-			<span id="stats_post_count">随笔 - 
-26&nbsp; </span>
-<span id="stats_article_count">文章 - 
-0&nbsp; </span>
-<span id="stats-comment_count">评论 - 
-10</span>
+</div>
+		<DIV id="mystats">随笔-
+47&nbsp;
+评论-
+59&nbsp;
+文章-
+2&nbsp;
+<!--trackbacks-<partial name="./Shared/_PingTrackCount.cshtml" model="BlogServer.Web.Models.DetailBlogPage" />-->
 
-			
-		</div><!--end: blogStats -->
-	</div><!--end: navigator 博客导航栏 -->
-</div><!--end: header 头部 -->
-
-<div id="main">
-	<div id="mainContent">
-	<div class="forFlow">
-		<div id="post_detail">
-    <!--done-->
-    <div id="topics">
-        <div class="post">
-            <h1 class = "postTitle">
-                
-<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/biningooginind/p/12810833.html">[redis]SDS和链表</a>
-
-            </h1>
-            <div class="clear"></div>
-            <div class="postBody">
-                
-<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
-    <h1 id="一、sds">一、SDS</h1>
-<h2 id="1、sds结构体">1、SDS结构体</h2>
-<p><strong>redis3.2之前</strong>：不管buf的字节数有多少，都用 <strong>4字节的len来储存长度</strong>，对于只存短字符串那么优点<strong>浪费空间</strong>，比如只存 <code>name</code>，则<code>len=4</code>  则只需要一个字节8位即可表示</p>
-<pre><code class="language-c">struct sdshdr {
-    unsigned int len; // buf中已占字节数
-    unsigned int free; // buf中剩余字节数
-    char buf[]; // 数据空间
-};
-</code></pre>
-<p><strong>redis3.2之后：</strong></p>
-<pre><code class="language-c">struct __attribute__ ((__packed__)) sdshdr8 {
-    uint8_t len; //已分配字节数
-    uint8_t alloc; //剩余字节数
-    unsigned char flags; //标识属于那种类型的SDS  低3存类型，高5不使用
-    char buf[]; 
-};
-//........16、32、64
-</code></pre>
-<blockquote>
-<p>_<em>attribute</em>_ ((_<em>packed</em>_))  关键字是为了取消字节对齐</p>
-<pre><code class="language-c">struct test1 {
- char c;
- int i;
-};
-
-struct __attribute__ ((__packed__)) test2 {
- char c;
- int i;
-};
-
-int main()
-{
- cout &lt;&lt; &quot;size of test1:&quot; &lt;&lt; sizeof(struct test1) &lt;&lt; endl;
- cout &lt;&lt; &quot;size of test2:&quot; &lt;&lt; sizeof(struct test2) &lt;&lt; endl;
-}
-</code></pre>
+</DIV>
+	
+</div>
+<div id="centercontent">
+	<div id="post_detail">
+<div class="post">
+	<h1 class = "postTitle">
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/cmusketeer/p/12843367.html">自定义View实战</a>
+</h1>
+	
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <blockquote>
+<p>PS：上一篇<a href="https://www.cnblogs.com/cmusketeer/p/12837076.html" target="_blank">从0开始学自定义View</a>有博友给我留言说要看实战，今天我特意写了几个例子，供大家参考，所画的图案加上动画看着确实让人舒服，喜欢的博友可以直接拿到自己的项目中去使用，由于我这个写的是demo，代码格式写的有些乱，所以，要自己封装一下才可以使用，当然你如果真的不想封装，可以直接使用，也可以给我留言，我封装好放在github上供大家参考，也会做成依赖让大家直接添加即可</p>
 </blockquote>
-<p><strong>注意，这些结构都存在一个 char[]内，通过偏移来访问</strong></p>
-<p>buf指针在char数组开头位置，方便直接访问</p>
-<div class="mermaid">graph TB
-subgraph 
-header--&gt;buf
-end
-</div><hr>
-<br>
-<br>
-<h2 id="2、重要函数解析">2、重要函数解析</h2>
-<h4 id="sdsreqtype">sdsReqType</h4>
-<p><strong>确定类型</strong>：sdsReqType根据传入的 char[] 长度来缺点应该用哪种类型的 SDS结构体来描述</p>
-<pre><code class="language-c">static inline char sdsReqType(size_t string_size) {
-    if (string_size &lt; 1&lt;&lt;5)
-        return SDS_TYPE_5;
-    if (string_size &lt; 1&lt;&lt;8) //8位 表示长度范围 0-256
-        return SDS_TYPE_8;
-    if (string_size &lt; 1&lt;&lt;16) //16位 
-        return SDS_TYPE_16;
-#if (LONG_MAX == LLONG_MAX)
-    if (string_size &lt; 1ll&lt;&lt;32)
-        return SDS_TYPE_32;
-    return SDS_TYPE_64;
-#else
-    return SDS_TYPE_32;
-#endif
-}
-</code></pre>
-<br>
-<h4 id="sdsnewlen">sdsnewlen</h4>
-<p>根据长度结构化 char数组，创建一个 长度为 <strong>str本身长度+head长度</strong>的数组， <strong>sdsnew就是调用这个来创建sds字节数组的</strong></p>
-<pre><code class="language-c">sds sdsnewlen(const void *init, size_t initlen) {
-    void *sh; //存放sds header数据的头指针
-    sds s; //char* s
-    char type = sdsReqType(initlen); //根据str长度 确定SDS header类型
-    if (type == SDS_TYPE_5 &amp;&amp; initlen == 0) type = SDS_TYPE_8;
-    int hdrlen = sdsHdrSize(type); //header 长度
-    unsigned char *fp; //类型指针
+<p>先上图再分析</p>
+<p><img src="https://img2020.cnblogs.com/blog/1258190/202005/1258190-20200507144401614-623716641.gif" alt=""></p>
+<p>可以看出图中有三种样式</p>
+<ul>
+<li>第一种是普通的一个label，使用场景：商品过期，促销等展示。</li>
+<li>第二种是圆形进度条， &nbsp; &nbsp; &nbsp;使用场景：下载文件进度，加载视频进度，耗电量进度.....</li>
+<li>第三种是条形进度条， &nbsp; &nbsp; &nbsp;使用场景：滑动调值，手机音效大小...</li>
+</ul>
+<p>上面的三种，均是demo，考虑使用场景并不完善，比如说第三种条形进度条还可以加上刻度，滑动到两边需要判断越界等。那就先拿第三个来吧</p>
+<h2>条形进度条-可拖动</h2>
+<p>分析：我们想要做一个类似的控件，需要考虑的问题不只是眼睛看的到的，看不到的就好比我只能点击小红球才可以滑动，我点击其他区域是不能有任何操作的，这个时候就要判断手指down的时候是否落在了小球上。</p>
+<ul>
+<li>线条 ： 渐变颜色，线帽格式，长度，宽度设置，父布局宽高格式设置格式设置，子view宽高格式设置</li>
+<li>球 ：颜色，起始位置和终止位置要在线上，尺寸</li>
+</ul>
+<p>在做之前我们先一个一个知识点解析，首先是线的渐变颜色，单独拿出</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008000;">/**</span><span style="color: #008000;">
+     * 设置进度圆环颜色(支持渐变色)
+     *
+     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> colorArray 渐变色集合
+     </span><span style="color: #008000;">*/</span>
+    <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">int</span>[] mColorArray;  <span style="color: #008000;">//</span><span style="color: #008000;"> 圆环渐变色</span>
+    <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span> setProgColor(@ColorRes <span style="color: #0000ff;">int</span><span style="color: #000000;">[] colorArray) {
+        </span><span style="color: #0000ff;">if</span> (colorArray == <span style="color: #0000ff;">null</span> || colorArray.length &lt; 2) <span style="color: #0000ff;">return</span><span style="color: #000000;">;
+        mColorArray </span>= <span style="color: #0000ff;">new</span> <span style="color: #0000ff;">int</span><span style="color: #000000;">[colorArray.length];
+        </span><span style="color: #0000ff;">for</span> (<span style="color: #0000ff;">int</span> index = 0; index &lt; colorArray.length; index++<span style="color: #000000;">)
+            mColorArray[index] </span>=<span style="color: #000000;"> ContextCompat.getColor(getContext(), colorArray[index]);
+        paint.setShader(</span><span style="color: #0000ff;">new</span> LinearGradient(0, 0, getMeasuredWidth(),0 , mColorArray, <span style="color: #0000ff;">new</span> <span style="color: #0000ff;">float</span>[]{0<span style="color: #000000;">,.3F,.6F,.9F}, Shader.TileMode.MIRROR));
+        invalidate();
+    }</span></pre>
+</div>
+<p>我们可以看到我封装成了一个方法，通过paint.setShader进行着色，方法传入的是LinearGradient对象，我们看源码，解释参数</p>
+<div class="cnblogs_code">
+<pre> <span style="color: #008000;">/**</span><span style="color: #008000;">
+     * Create a shader that draws a linear gradient along a line.
+     *
+     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> x0           The x-coordinate for the start of the gradient line
+     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> y0           The y-coordinate for the start of the gradient line
+     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> x1           The x-coordinate for the end of the gradient line
+     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> y1           The y-coordinate for the end of the gradient line
+     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> colors       The colors to be distributed along the gradient line
+     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> positions    May be null. The relative positions [0..1] of
+     *                     each corresponding color in the colors array. If this is null,
+     *                     the the colors are distributed evenly along the gradient line.
+     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> tile         The Shader tiling mode
+    </span><span style="color: #008000;">*/</span>
+    <span style="color: #0000ff;">public</span> LinearGradient(<span style="color: #0000ff;">float</span> x0, <span style="color: #0000ff;">float</span> y0, <span style="color: #0000ff;">float</span> x1, <span style="color: #0000ff;">float</span> y1, @NonNull @ColorInt <span style="color: #0000ff;">int</span><span style="color: #000000;"> colors[],
+            @Nullable </span><span style="color: #0000ff;">float</span><span style="color: #000000;"> positions[], @NonNull TileMode tile) {
+        </span><span style="color: #0000ff;">if</span> (colors.length &lt; 2<span style="color: #000000;">) {
+            </span><span style="color: #0000ff;">throw</span> <span style="color: #0000ff;">new</span> IllegalArgumentException("needs &gt;= 2 number of colors"<span style="color: #000000;">);
+        }
+        </span><span style="color: #0000ff;">if</span> (positions != <span style="color: #0000ff;">null</span> &amp;&amp; colors.length !=<span style="color: #000000;"> positions.length) {
+            </span><span style="color: #0000ff;">throw</span> <span style="color: #0000ff;">new</span> IllegalArgumentException("color and position arrays must be of equal length"<span style="color: #000000;">);
+        }
+        mType </span>=<span style="color: #000000;"> TYPE_COLORS_AND_POSITIONS;
+        mX0 </span>=<span style="color: #000000;"> x0;
+        mY0 </span>=<span style="color: #000000;"> y0;
+        mX1 </span>=<span style="color: #000000;"> x1;
+        mY1 </span>=<span style="color: #000000;"> y1;
+        mColors </span>=<span style="color: #000000;"> colors.clone();
+        mPositions </span>= positions != <span style="color: #0000ff;">null</span> ? positions.clone() : <span style="color: #0000ff;">null</span><span style="color: #000000;">;
+        mTileMode </span>=<span style="color: #000000;"> tile;
+    }</span></pre>
+</div>
+<p>参数</p>
+<ol>
+<li>x0,y0着色的起始位置</li>
+<li>x1，y1终止位置</li>
+<li>colors区域内着色的颜色集</li>
+<li>positions区域内部划分模块，逐一着色，如：区域1-100划分为4块，第一块1-25红色，26-50蓝色..。系统会默认在两种颜色不一样的情况下进行颜色过度渲染，达到渐变的效果，所以我们不用担心出现红蓝划分明显的情况。</li>
+<li>TileMode 模式选择<ol>
+<li>　　CLAMP：当图片小于绘制尺寸时要进行边界拉伸来填充</li>
+<li>　　REPEAT：当图片小于绘制尺寸时重复平铺</li>
+<li>　　MIRROR：当图片小于绘制尺寸时镜像平铺</li>
+</ol></li>
+</ol>
+<p>好了，下面我们就先画线和红点，如果有看不懂的博友，可以先看上一篇<a href="https://www.cnblogs.com/cmusketeer/p/12837076.html" target="_blank">从0开始学自定义View</a>。</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> init(){
+        paint </span>= <span style="color: #0000ff;">new</span><span style="color: #000000;"> Paint();
+        paint.setStrokeWidth(</span>20);<span style="color: #008000;">//</span><span style="color: #008000;">画笔宽度</span>
+        paint.setStyle(Paint.Style.FILL);<span style="color: #008000;">//</span><span style="color: #008000;">填充类型</span>
+        paint.setAntiAlias(<span style="color: #0000ff;">true</span><span style="color: #000000;">);
+        paint.setStrokeCap(Paint.Cap.ROUND);</span><span style="color: #008000;">//</span><span style="color: #008000;">线帽，半圆</span>
+        paintCircle2 = <span style="color: #0000ff;">new</span><span style="color: #000000;"> Paint();
+        paintCircle2.setColor(Color.RED);
+        paintCircle2.setStrokeWidth(</span>5<span style="color: #000000;">);
+        paintCircle2.setStyle(Paint.Style.FILL);
+        paintCircle2.setAntiAlias(</span><span style="color: #0000ff;">true</span><span style="color: #000000;">);
+    }<br /></span></pre>
+</div>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;"> @Override
+    </span><span style="color: #0000ff;">protected</span> <span style="color: #0000ff;">void</span> onMeasure(<span style="color: #0000ff;">int</span> widthMeasureSpec, <span style="color: #0000ff;">int</span><span style="color: #000000;"> heightMeasureSpec) {
+        </span><span style="color: #0000ff;">super</span><span style="color: #000000;">.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        width </span>=<span style="color: #000000;"> MeasureSpec.getSize(widthMeasureSpec);
+        heigth </span>=<span style="color: #000000;">  MeasureSpec.getSize(heightMeasureSpec);
+        Log.e(</span>"heigth -- width ",heigth+"  -- "+<span style="color: #000000;">width);
+        circleX</span>=width/2;<span style="color: #008000;">//</span><span style="color: #008000;">初始化红点坐标位置</span>
+        circleY=20<span style="color: #000000;">;
+    }</span></pre>
+</div>
+<div class="cnblogs_code">
+<pre> <span style="color: #0000ff;">int</span>[] colors=<span style="color: #000000;">{R.color.colorPrimary,R.color.colorAccent,R.color.color_environment_serious,R.color.color_environment_mild};
+    @Override
+    </span><span style="color: #0000ff;">protected</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> onDraw(Canvas canvas) {
 
-    sh = s_malloc(hdrlen+initlen+1); //分配 str长度+header长度的内存空间
-    ...
-    memset(sh, 0, hdrlen+initlen+1); //初始化空间
-    s = (char*)sh+hdrlen; //移动到header之后的buf首地址位置
-    fp = ((unsigned char*)s)-1; //移动到header的尾部 标识sds header类型
-    switch(type) {
-       ....
-        case SDS_TYPE_8: {
-//#define SDS_HDR_VAR(T,s) struct sdshdr##T *sh = (void*)((s)-(sizeof(struct sdshdr##T)));  
-  //sh指向header空间头部位置 s代表buf首地址  下面将sh移动到header的首地址
-        SDS_HDR_VAR(8,s); //struct sdshdr8* sh = (void*)(s-sizeof(header))
-        sh-&gt;len = initlen; //填充数据
-        sh-&gt;alloc = initlen; 
-        *fp = type;//类型数据填充
-        break;
-       }
-       ......
+        </span><span style="color: #0000ff;">super</span><span style="color: #000000;">.onDraw(canvas);
+        setProgColor(colors);
+        </span><span style="color: #008000;">//</span><span style="color: #008000;">绘制一条线，线帽为半圆</span>
+        canvas.drawLine(50,20,width-50,20<span style="color: #000000;">,paint);
+        canvas.drawCircle(circleX,circleY,</span>15<span style="color: #000000;">,paintCircle2);
+    }</span></pre>
+</div>
+<p>到这里，线和点就已经做好了，只是静态的，下面是如何拖动，就要在onTouchEvent方法中去写了，代码都已经添加了注释 &nbsp;Math.abs(dhx)&lt;50&amp;&amp;Math.abs(dhy)&lt;50 &nbsp;是证明down的坐标点和原始球的坐标点相差范围在50内，如果小球在屏幕200，200的位置，而我们手指down的点在800，800，那么相差如此巨大，肯定不是我们想要的结果，所以，我们就认为down的坐标减去球的坐标差值最小（50内）才是我们想要的结果，这个时候我们再设置小球move的坐标（让小球跟随手指移动）。</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008000;">/**</span><span style="color: #008000;">
+     * 判断所按压的坐标和红点坐标的关系
+     * 如果手指按在了红点的下方，那么down-红点y坐标的绝对值如果等于或者小于半径，也就是说目前按压的就是红点，
+     *
+     * </span><span style="color: #008000;">*/</span>
+    <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">boolean</span> clickCircle(<span style="color: #0000ff;">int</span> downHeigth,<span style="color: #0000ff;">int</span><span style="color: #000000;"> downWidth){
+        </span><span style="color: #0000ff;">int</span> dhy = downHeigth -<span style="color: #000000;"> circleY;
+        </span><span style="color: #0000ff;">int</span> dhx = downWidth -<span style="color: #000000;"> circleX;
+        </span><span style="color: #008000;">//</span><span style="color: #008000;">证明按压的是原点</span>
+        <span style="color: #0000ff;">if</span>(Math.abs(dhx)&lt;50&amp;&amp;Math.abs(dhy)&lt;50<span style="color: #000000;">){
+            </span><span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span><span style="color: #000000;">;
+        }
+        </span><span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span><span style="color: #000000;">;
     }
-    if (initlen &amp;&amp; init)
-        memcpy(s, init, initlen); //将str数据复制到buf中
-    s[initlen] = '\0';
-    return s;
-}
-</code></pre>
-<br>
-<h4 id="sdslen、sdsavail">sdslen、sdsavail</h4>
-<p>返回使用和未使用的空间。 **根据头部类型转化指针，然后直接 sh-&gt;len  和 sh-&gt;alloc-sh-&gt;len   **即可求出</p>
-<br>
-<h4 id="sdscat、sdscatlen、sdsmakeroomfor">sdscat、sdscatlen、sdsMakeRoomFor</h4>
-<p>将 <code>t</code>拼接到 <code>s</code> 中，</p>
-<pre><code class="language-c">sds sdscatsds(sds s, const sds t) {
-    return sdscatlen(s, t, sdslen(t));
-}
-sds sdscatlen(sds s, const void *t, size_t len) {
-    size_t curlen = sdslen(s);
-
-    s = sdsMakeRoomFor(s,len); //保证空间充足
-    if (s == NULL) return NULL;
-    memcpy(s+curlen, t, len); //直接copy
-    sdssetlen(s, curlen+len); //设置新的长度
-    s[curlen+len] = '\0';
-    return s;
-}
-</code></pre>
-<p><code>sdsMakeRoomFor</code>是为了保证空间充足，如果不充足进行扩容，下面就是newlen的核心代码，会扩容大于需要的长度，防止多次扩容。体现了 <strong>预先分配</strong></p>
-<p><strong>扩容是一个耗时的操作</strong></p>
-<pre><code class="language-c">    if (avail &gt;= addlen) return s;
-
-    len = sdslen(s);
-    sh = (char*)s-sdsHdrSize(oldtype);
-    newlen = (len+addlen);
-    if (newlen &lt; SDS_MAX_PREALLOC) //#define SDS_MAX_PREALLOC (1024*1024)
-        newlen *= 2;
-    else
-        newlen += SDS_MAX_PREALLOC;
-</code></pre>
-<br>
-<h4 id="sdstrim">sdstrim</h4>
-<p>将cset中在s出现的删除，这个函数就体现了 <strong>惰性释放</strong> ，不会缩减空间，仅仅改变 <strong>len</strong>，同时也体现了 和 c的<strong>兼容性</strong>，可以用 系统strings函数来操作 sds</p>
-<pre><code class="language-c">sds sdstrim(sds s, const char *cset) {
-    char *start, *end, *sp, *ep;
-    size_t len;
-
-    sp = start = s;
-    ep = end = s+sdslen(s)-1;
-    while(sp &lt;= end &amp;&amp; strchr(cset, *sp)) sp++;
-    while(ep &gt; sp &amp;&amp; strchr(cset, *ep)) ep--;
-    len = (sp &gt; ep) ? 0 : ((ep-sp)+1);
-    if (s != sp) memmove(s, sp, len);
-    s[len] = '\0';
-    sdssetlen(s,len);
-    return s;
-}
-</code></pre>
-<br>
-<hr>
-<br>
-<br>
-<h2 id="3、优点">3、优点</h2>
-<h4 id="a获取长度方便">A.获取长度方便</h4>
-<p>c字符串获取长度需要便利char数组，O(n)，而SDS结构体记录了长度，不需要char数组即可知道长度。</p>
-<br>
-<h4 id="b防止溢出">B.防止溢出</h4>
-<p>char数组不知道还有多少空间空余，可能会在两个字符串拼接的时候溢出，而SDS记录了未使用的空间，可以有效的分配扩容，防止溢出。</p>
-<br>
-<h4 id="c内存分配方便和使用高效">C.内存分配方便和使用高效</h4>
-<p>传统c的char数组，如果空间不足，需要手动扩容，然后复制原数据，截断时，也需要缩减空间，来防止内存泄漏。但是SDS可以进行  <strong>空间预分配、惰性释放</strong> 等策略来搞效的使用内存。</p>
-<ul>
-<li>
-<p><strong>空间预分配</strong>:</p>
-<p>预先分配足够的空间，减少扩容次数</p>
-</li>
-<li>
-<p><strong>惰性释放</strong></p>
-<p>因为SDS记录了 <strong>free未分配空间字段</strong>，所以截断字符串的时候不需要立即复制元素进行缩减，直接增加 <strong>free</strong> 数值，减少 <strong>len</strong>即可，后面要增加字符串只增加len，减少free ，覆盖写入即可。（free = alloc-len）</p>
-</li>
-</ul>
-<br>
-<h4 id="d兼容c">D.兼容C</h4>
-<p>SDS只是增加了两个字段，其实数据还是存在 char[] buf里面的，所以可以使用 c内置的字符串处理函数来处理 SDS底层字节数组。</p>
-<pre><code class="language-c">typedef char *sds;
-</code></pre>
-<p>所以在处理 字符串的API里只是传入了 char* 来处理字符串。空间是否充足都有额外的信息来描述。</p>
-<hr>
-<br>
-<br>
-<h1 id="二、链表">二、链表</h1>
-<p>链表的话可以参考我的 <a href="https://www.cnblogs.com/biningooginind/p/12553163.html"> https://www.cnblogs.com/biningooginind/p/12553163.html </a></p>
-<p>基本参照了redis的链表操作。</p>
-<h2 id="1、结构体">1、结构体</h2>
-<pre><code class="language-c">typedef struct listNode {
-    struct listNode *prev;
-    struct listNode *next;
-    void *value; //void* 指针 可以存放任意类型的数据
-} listNode;
-</code></pre>
-<br>
-<br>
-<h2 id="2、特点">2、特点</h2>
-<blockquote>
-<p>链表的特点：</p>
-<ul>
-<li>删除、插入 O(1)</li>
-<li>遍历访问 O(n)</li>
-</ul>
-</blockquote>
-<ul>
-<li><strong>有head和tail指针，将访问最后一个元素复杂度降低到O(1)</strong></li>
-<li><strong>带有 len长度，方便知道链表的长度</strong></li>
-<li><strong>双链表结构，前后遍历都方便</strong></li>
-<li><strong>无环</strong></li>
-<li><em><em>多态：数据用 void</em> 来指向，可以存放任意类型数据，不用为每个类型都写一个链表</em>*</li>
-<li><strong>迭代器模式</strong>，<strong>链表有一个迭代器，方便遍历节点</strong></li>
-</ul>
-<pre><code class="language-c">typedef struct listIter {
-    listNode *next; //下一个节点
-    int direction; //遍历方向 forward or backward
-} listIter;
-</code></pre>
-
+    @Override
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">boolean</span><span style="color: #000000;"> dispatchTouchEvent(MotionEvent event) {
+        </span><span style="color: #0000ff;">return</span> <span style="color: #0000ff;">super</span><span style="color: #000000;">.dispatchTouchEvent(event);
+    }
+    </span><span style="color: #0000ff;">boolean</span> isFlag=<span style="color: #0000ff;">false</span><span style="color: #000000;">;
+    @Override
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">boolean</span><span style="color: #000000;"> onTouchEvent(MotionEvent event) {
+        </span><span style="color: #0000ff;">int</span> rawX = (<span style="color: #0000ff;">int</span><span style="color: #000000;">) event.getX();
+        </span><span style="color: #0000ff;">int</span> rawY = (<span style="color: #0000ff;">int</span>) event.getY();<span style="color: #008000;">//</span><span style="color: #008000;">获取到视图坐标，想对于外部viewgroup来说。</span>
+        Log.e("raw",rawX+"  ---  "+<span style="color: #000000;">rawY);
+        Log.e(</span>"rawwww",circleX+"  ---  "+<span style="color: #000000;">circleY);
+        </span><span style="color: #0000ff;">switch</span><span style="color: #000000;"> (event.getAction()){
+            </span><span style="color: #0000ff;">case</span><span style="color: #000000;"> MotionEvent.ACTION_DOWN:
+                </span><span style="color: #008000;">//</span><span style="color: #008000;">如果是手指down在了红点上，move时可重绘</span>
+                <span style="color: #0000ff;">if</span><span style="color: #000000;">(clickCircle(rawY,rawX)) {
+                    circleX </span>=<span style="color: #000000;"> rawX;
+                    isFlag</span>=<span style="color: #0000ff;">true</span><span style="color: #000000;">;
+                }</span><span style="color: #0000ff;">else</span><span style="color: #000000;">{
+                    isFlag</span>=<span style="color: #0000ff;">false</span><span style="color: #000000;">;
+                }
+                </span><span style="color: #0000ff;">break</span><span style="color: #000000;">;
+            </span><span style="color: #0000ff;">case</span><span style="color: #000000;"> MotionEvent.ACTION_MOVE:
+                </span><span style="color: #0000ff;">if</span><span style="color: #000000;">(isFlag){
+                    circleX </span>=<span style="color: #000000;"> rawX;
+                    invalidate();
+                }
+                </span><span style="color: #0000ff;">break</span><span style="color: #000000;">;
+            </span><span style="color: #0000ff;">case</span><span style="color: #000000;"> MotionEvent.ACTION_UP:
+                isFlag</span>=<span style="color: #0000ff;">false</span>;<span style="color: #008000;">//</span><span style="color: #008000;">抬起手指，状态恢复</span>
+                <span style="color: #0000ff;">break</span><span style="color: #000000;">;
+        }
+        </span><span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span>;<span style="color: #008000;">//</span><span style="color: #008000;">自己消费</span>
+    }</pre>
+</div>
+<p>下一篇是圆形进度条</p>
 </div>
 <div id="MySignature"></div>
 <div class="clear"></div>
@@ -335,24 +277,21 @@ sds sdscatlen(sds s, const void *t, size_t len) {
     <div class="clear"></div>
     <div id="post_next_prev"></div>
 </div>
-            </div>
-            <div class="postDesc">posted @ 
-<span id="post-date">2020-04-30 19:29</span>&nbsp;
-<a href="https://www.cnblogs.com/biningooginind/">Biningo</a>&nbsp;
+	<div class="postDesc">posted on 
+<span id="post-date">2020-05-07 15:29</span>&nbsp;
+<a href="https://www.cnblogs.com/cmusketeer/">TMusketeer</a>&nbsp;
 阅读(<span id="post_view_count">...</span>)&nbsp;
 评论(<span id="post_comment_count">...</span>)&nbsp;
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12810833" rel="nofollow">编辑</a>&nbsp;
-<a href="javascript:void(0)" onclick="AddToWz(12810833);return false;">收藏</a></div>
-        </div>
-	    
-	    
-    </div><!--end: topics 文章、评论容器-->
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12843367" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12843367);return false;">收藏</a></div>
 </div>
+
+
 <script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
 <script>markdown_highlight();</script>
 <script>
-    var allowComments = true, cb_blogId = 559704, cb_blogApp = 'biningooginind', cb_blogUserGuid = '668ccb89-9f21-4682-8e6d-08d765b2412c';
-    var cb_entryId = 12810833, cb_entryCreatedDate = '2020-04-30 19:29', cb_postType = 1; 
+    var allowComments = true, cb_blogId = 388360, cb_blogApp = 'cmusketeer', cb_blogUserGuid = '2af63623-717d-4c5d-21e6-08d4ef52ecb6';
+    var cb_entryId = 12843367, cb_entryCreatedDate = '2020-05-07 15:29', cb_postType = 1; 
     loadViewCount(cb_entryId);
     loadSideColumnAd();
 </script><a name="!comments"></a>
@@ -411,39 +350,36 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
         loadOptUnderPost();
         GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
     </script>
-</div>
-	</div><!--end: forFlow -->
-	</div><!--end: mainContent 主体内容容器-->
+</div></div>
 
-	<div id="sideBar">
-		<div id="sideBarMain">
+
+</div>
+<div id="leftcontent">
+	
+		<DIV id="leftcontentcontainer">
 			
 <div id="sidebar_news" class="newsItem">
             <script>loadBlogNews();</script>
 </div>
 
 <div id="sidebar_ad"></div>
-			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
-			
-			<div id="leftcontentcontainer">
-				<div id="blog-sidecolumn"></div>
-                    <script>loadBlogSideColumn();</script>
-			</div>
-			
-		</div><!--end: sideBarMain -->
-	</div><!--end: sideBar 侧边栏容器 -->
-	<div class="clear"></div>
-	</div><!--end: main -->
-	<div class="clear"></div>
-	<div id="footer">
-		<!--done-->
-Copyright &copy; 2020 Biningo
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div></div>                
+                    <script>loadBlogDefaultCalendar();</script><br>
+			<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script></DIV>
+	
+</div>
+<!--done-->
+<div class="footer">
+	Powered by: <a href="http://www.cnblogs.com">博客园</a>
+	Copyright &copy; 2020 TMusketeer
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
+</div>
 
 
-	</div><!--end: footer -->
-</div><!--end: home 自定义的最大容器 -->
+
+
 
 
     
