@@ -14,8 +14,8 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp5
 {
-    public partial class Form1 : Form
-    {
+    public partial class Form1 : Form                 //因为在ui界面显示爬行过程的方式用的是textbox.text=xxx这种手动刷新的方式，所以把爬行过程放在了form里。。
+    {                                                   //用数据绑定的话无法实时更新爬行信息
         private int count = 0;
         private int pagecount = 0;                                 //记录爬取页面数
         private int crawlErrorCount = 0;
