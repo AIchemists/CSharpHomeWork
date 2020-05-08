@@ -1,83 +1,289 @@
 ﻿<!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-cn">
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>用户登录 - 博客园</title>
-    <link rel="shortcut icon" href="//common.cnblogs.com/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="一、啰嗦几句 好几年不写博客了，一是工作计算机都加密了没法编辑提交；二是各种语言混用，什么都会就是什么都不会，delphi、c#、vb、python、c&#x2B;&#x2B;要说我精通啥，啥也不精，所以不敢乱写。 最近" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>关于使用ffmpeg的一些牢骚 - pythonic - 博客园</title>
     
-    <script src="/assets/auth/signin-iconfont.js?v=LZEirjgFiEQHD1zXtZAwp5RN1VbploOCAz_k2itaQnI"></script>
-
-    <link rel="stylesheet" href="/assets/commons.bundle.css?v=nNKmP76bZzat_qQJxJjAS-_HXFD1OFqCp4B3dD68Zus" />
-    <link rel="stylesheet" href="/assets/shared/_card.css?v=ZhvhCOaGAbcMXONJVzp3sISsPQcfpOrAn9G7NqbwPAQ" />
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/cogitation/bundle-cogitation.min.css?v=PJ48NAY_dmbjZZ0ZTev3Avl3BcTMJe39d3Pc83CPcig" />
     
-    <link rel="stylesheet" href="/assets/auth/signin.css?v=qAftVAj2D6KWk-QbO8Wz-drBxU2CTxAQOjKZLdvPHlc" />
-
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/cogitation/bundle-cogitation-mobile.min.css?v=jLHKTG0H_smj72y-Z2j0JGYUmhBVGTu4_QpAGb1B_sA" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/shelwinnee/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/shelwinnee/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/shelwinnee/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
+    <script>
+        var currentBlogId = 194599;
+        var currentBlogApp = 'shelwinnee';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'Cogitation';
+    </script>
+    
+    
+    
 </head>
 <body>
-    <!--[if IE]>
-    <div class="unsupported-browser">
-        该页面不支持 Internet Explorer 浏览器，建议使用
-        <a href="https://www.google.cn/intl/zh-CN/chrome/">Google Chrome</a>,
-        <a href="https://www.mozilla.org/zh-CN/firefox/">Firefox</a> 或
-        <a href="https://www.microsoftedgeinsider.com/zh-CN/">Microsoft Edge</a>
-    </div>
-<![endif]-->
-    <div class="center-container ">
-        <div class="center-body card  h-sm-100">
-            <div class="card-body">
-                
+    <a name="top"></a>
+    
+    <div id="top">
+	
+<div>
+	<table>
+		<tr>
+			<td class="HeaderTitles">
+				<h1 class="HeaderTitle"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/shelwinnee/">pythonic</a>
+</h1>
+				<p id="tagline">
 
-
-<div class="login-top text-center">
-    <span class="login-title">博客园用户登录</span>
-    <a href="https://www.cnblogs.com/">
-        <svg class="login-sign">
-            <use xlink:href="#icon-login-sign"></use>
-        </svg>
-    </a>
-    <div class="login-info">代码改变世界</div>
+</p>
+			</td>
+		</tr>
+	</table>
 </div>
-<form id="loginForm" method="post" onsubmit="return false">
-    
-        <div class="form-group">
-            <input tabindex="1" class="form-control" placeholder="登录用户名 / 邮箱" autofocus type="text" data-val="true" data-val-required="请输入登录用户名" id="LoginName" name="LoginName" value="">
-            <span class="invalid-feedback field-validation-valid" data-valmsg-for="LoginName" data-valmsg-replace="true"></span>
-            <a class="txt-forget-sign" href="/forgotloginname">忘记登录用户名</a>
-        </div>
-        <div class="form-group">
-            <input tabindex="2" class="form-control" placeholder="密码" type="password" data-val="true" data-val-required="请输入密码" id="Password" name="Password">
-            <span class="invalid-feedback field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
-            <a class="txt-forget-sign" href="/resetpassword">忘记密码</a>
-        </div>
-        <div class="form-remember custom-control custom-checkbox">
-            <input tabindex="3" type="checkbox" id="IsRemember" name="IsRemember" value="true" class="custom-control-input">
-            <label class="custom-control-label" for="IsRemember">记住我</label>
-        </div>
+<div class="HeaderBar">
+	<table id="HeaderBar" class="HeaderBar" cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="HeaderBarTab" nowrap>
+&nbsp;
+<a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+ ::
 
-        <button tabindex="4" id="submitBtn" type="submit" class="btn-login btn btn-primary btn-sm ladda-button px-4" data-style="slide-down">
-            <span class="ladda-label">登录</span>
-        </button>
-        <div class="login-footer">
-            <div class="ajax-error-box">
-                <div class="ajax-error mb-2"></div>
-            </div>
-            <span>没有账户，<a href="/signup">立即注册</a></span>
-        </div>
-    
-<input name="__RequestVerificationToken" type="hidden" value="CfDJ8B9DwO68dQFBg9xIizKsC6QF5zQFYwocWlUn_TUtypMNM-SD776a_it6sGI5jdtu5KvyF6lpQ5UVtrctKIZIpKO5VXUt2502Ou8iNaMxKN0L7LomQ4CKa787B3Wl8agEQExoFNqvwWlY3CpcDJhQb5U" /></form>
-
-<input type="hidden" id="PublicKey" name="PublicKey" value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCp0wHYbg/NOPO3nzMD3dndwS0MccuMeXCHgVlGOoYyFwLdS24Im2e7YyhB0wrUsyYf0/nhzCzBK8ZC9eCWqd0aHbdgOQT6CuFQBMjbyGYvlVYU2ZP7kG9Ft6YV6oc9ambuO7nPZh&#x2B;bvXH0zDKfi02prknrScAKC0XhadTHT3Al0QIDAQAB" />
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/shelwinnee/">
+首页</a>
+ ::
+<a href="http://q.cnblogs.com" class="menu">博问</a> ::
+<a href="http://home.cnblogs.com/ing/" class="menu">闪存</a> ::
 
 
-            </div>
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+ ::
+
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/pythonic">
+联系</a> ::
+
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/shelwinnee/rss/">
+订阅</a>
+
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/shelwinnee/rss/">
+    <img src="/skins/cogitation/images/xml.gif" alt="订阅" />
+</a> ::
+
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+ ::
+
+
+</td>
+			<td><img id="Header1_BlueTab" src="/skins/cogitation/images/BlueTabRight.gif" align="absmiddle" alt=""/></td>
+			<td class="HeaderBarTabBack" nowrap width="100%">
+				<div class="BlogStatsBar">
+	<table class="BlogStatsBar">
+		<tr>
+			<td width="100%">
+			</td>
+			<td class="BlogStatsBar" nowrap>
+				&nbsp;
+				
+6 
+				随笔&nbsp;::
+				
+2 文章
+				::
+				
+10 评论
+				::
+				
+0 引用
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+</div>
+<div id="leftmenu">	
+
+	    <div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+		
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+		<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+	
+</div>
+<div id="main">
+	<div id="post_detail">
+<div class="post">
+	<div class="postTitle">
+		
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/shelwinnee/p/12849798.html">关于使用ffmpeg的一些牢骚</a>
+
+	</div>
+	
+	<div class="postText">
+		
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <p>&nbsp;</p>
+<p><strong>一、啰嗦几句</strong></p>
+<p>好几年不写博客了，一是工作计算机都加密了没法编辑提交；二是各种语言混用，什么都会就是什么都不会，delphi、c#、vb、python、c++要说我精通啥，啥也不精，所以不敢乱写。</p>
+<p>最近做一个关于视频处理的项目，用到ffmpeg，实在是憋不住，在此记录一下摸索的过程。可以毫不夸张的说，网上关于ffmpeg的使用，大部分用命令行方式，调用api方式的很少，而且盲目抄袭甚盛，斗胆妄言，罪过罪过。</p>
+<p>&nbsp;</p>
+<p><strong>二、感谢</strong></p>
+<p>我是通过学习雷神的博客逐渐掌握了ffmpeg的一些东西，好歹把项目做完了，效果很好，在此向雷神由衷的表示感谢。雷神由浅入深的介绍了ffmpeg的使用方法，有理论有实践，可以说网上的很多文章很难与雷神媲美，而且国内这方面的文章太少了，这么多做视频方面的，怎么就没有这方面的优质文章，在此是个疑点。可惜的是雷神花费了大量时间开放自己的学习探索的心得，当逐步的到达核心地带时，戛然而止，雷神去世了，天妒英才呐。在此沉痛缅怀并致以崇高的敬意！</p>
+<p>在本文中，没有直接可运行的代码，一是加密，无法拷贝；二是提倡动手实践，先把雷神的实例代码挨个学习调试，自会有极大的提高；</p>
+<p>&nbsp;</p>
+<p><strong>三、项目背景</strong></p>
+<p>核心一句话：接收高清视频流（H264+mp3 TS流），每30分钟存储一个mp4文件，相邻两个文件的播放要顺畅不能丢帧。为啥说是高清呢，30分钟文件就有5个G。</p>
+<p>编程语言c++</p>
+<p>&nbsp;</p>
+<p><strong>四、踩过的坑</strong></p>
+<p>4.1进程方式</p>
+<p>网上很多文章都是用命令行的，这种方式只能说测试还行，真正项目应用差点意思了，因为你要管理这个进程，他是个什么状态，你不知，但你又不能不管，关键做不到前后两个视频无缝衔接，咋整，鸡肋啊，做个测试、验证等可以，做项目不行。用api吧，资料太少，项目组意见不一，最后举个例子达成一致了，前面有个碉堡，我们明知道用手榴弹不行，还坚持让大家扔手榴弹，这是瞎耽误工夫；拿zha yao肯定行，但是有人得牺牲（扔手榴弹站在远处扔就行，zha yao包得有人扛到跟前），要想彻底解决就得用彻底的办法。所以很多时候我们缺少的就是沉下心的耐力和扛zha yao包的勇气，溃痈虽痛胜于养毒，把雷神用api的例子全部从头调试一遍，总结出流程，都需要哪些要素，时间基、采样率、音视频流是啥用来做啥，搞明白就完事了。</p>
+<p>4.2 ffmpeg rtp</p>
+<p>ffmpeg可以直接接收RTP，也有提供转换MP4的方法，要注意的是接收和处理放在一个线程中有问题，容易丢帧，因为UDP通信必须设置缓存大小，但是一旦处理堵住了，数据绝对会丢失。程序在现场长时间不间断运行，很难保证不出现丢帧的情况，经简单测试，直接抛弃该方式。</p>
+<p><strong>五、我的实现方法</strong></p>
+<p>1、使用UDP方式接收组播视频流，并写入文件中，文件按时间命名。</p>
+<p>2、当检测到够30分钟时，停止写入当前文件，开始写入另一个文件。</p>
+<p>3、通知视频转换线程，处理当前写完的文件。</p>
+<p>4、视频转换线程，读取文件，</p>
+<p>打开输入文件流（avformat_open_input），</p>
+<p>创建输出上下文（avformat_alloc_output_context2），我们要根据文件转成mp4。</p>
+<p>查找视频信息（avformat_find_stream_info），查找输入的码流：视频流、音频流、字幕流。</p>
+<p>根据输入码流创建输出码流，流的参数拷贝就行（avcodec_parameters_copy），特别要注意的是输入输出流的时间基（time_base）。</p>
+<p>打开输出流，写入文件头，设定一个文件结尾的阈值，当输入流剩余字节数小于该值时并且找到最后一个关键帧，则写入到输出流后，将剩余输入文件的结尾置换到下一个文件的开头中，这样前后两个文件无缝衔接，第一个文件最后一个关键帧是第二个文件开头的第一帧，所以无缝衔接了。</p>
+<p>循环读取输入流（av_read_frame）根据流索引确定是音频还是视频流，如果是视频流写入文件的第一帧必须是关键帧。写入时特别注意音频和视频的pkt的时间（pts、dts、duration）需要根据自己的时间基重新换算（av_rescale_q_rnd），并记录第一帧的时间戳pts，换算后的pts和dts要减去第一帧的pts，这样每个文件播放就是从头开始了。写入输出流用av_interleaved_write_frame。</p>
+<p>读取文件转换成mp4，在现场机器（高速缓存设备）上总共需要不到15秒钟。</p>
+<p><strong>六、最终效果</strong></p>
+<p>项目部署5个多月，内存（103M左右，峰值180M）、cpu（3%--8%），非常稳定，无异常崩溃退出，视频无马赛克、前后视频衔接很棒。</p>
+<p>&nbsp;</p>
+<p><strong>七、总结</strong></p>
+<p>坚持实践就是硬道理，无论什么职位、角色都不能眼高手低。</p>
+<p>抄别人代码一千遍不如自己动手调一遍。</p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+	</div>
+	
+	<div class="postfoot">
+		posted on 
+<span id="post-date">2020-05-08 12:43</span>&nbsp;
+<a href="https://www.cnblogs.com/shelwinnee/">pythonic</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12849798" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12849798);return false;">收藏</a>
+	</div>
+</div>
+
+
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 194599, cb_blogApp = 'shelwinnee', cb_blogUserGuid = '5a94a50f-3321-e411-8d02-90b11c0b17d6';
+    var cb_entryId = 12849798, cb_entryCreatedDate = '2020-05-08 12:43', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
         </div>
     </div>
-    <script src="/assets/commons.bundle.js?v=iyHhejVAv5PY1mNHWEfLl8qDn8gUFLpEAjgd4h1VJo4"></script>
-    <script src="/assets/shared/_withoutnav.js?v=6AtNmA7OLeOCu0W01-iEdEjDXiE9BdHbayLV3TUm4kw"></script>
-    
-    <script src="/assets/auth/signin.js?v=VoDqbInObxFY3X3TXQn9LlBfCOmSks2hSldl-LzTUMI"></script>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div></div>
 
+
+</div>
+<div class="footer">
+<p id="footer">
+	Powered by: 
+	<br />
+	
+	<a href="https://www.cnblogs.com/" id="footer_site_link">博客园</a>
+	<br />
+	Copyright &copy; 2020 pythonic
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+</p>
+
+
+</div>
+
+
+    
 </body>
 </html>

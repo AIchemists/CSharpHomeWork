@@ -4,63 +4,48 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="origin" />
-    <meta property="og:description" content="这两天弄了一下android相册的相关功能。还是花了挺长时间的，这里总结一下，避免以后再踩坑。同时也在这篇文章里面补齐一些android开发的基础支持 打开Android相册并选一个图片进行显示 分为" />
+    <meta property="og:description" content="前言 我之前的工作中一直在用 Elastic Job 来做任务调度。这也是大家为什么能在我的书籍《Spring Cloud 微服务 入门 实战与进阶》中看到 Elastic Job 的章节。 从 20" />
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Qt for Android （三） 打开Android相册并选一个图片进行显示 - 鬼谷子com - 博客园</title>
+    <title>笑话：大厂都在用的任务调度框架我能不知道吗？？？ - 猿天地 - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
-    <link id="MainCss" rel="stylesheet" href="/skins/coffee/bundle-coffee.min.css?v=KPz7rj-c2sTAV1_ck1aDmbZcuCG3KBhyLnfvzf6nn94" />
+    <link id="MainCss" rel="stylesheet" href="/skins/banlieue13/bundle-banlieue13.min.css?v=1J0RP_opHZcWv1yy974pRZewfj9S0p6tTP1QNRnmMiI" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/yinjihuan/custom.css?v=NtBRJkJK6PFpkDxbnwTt8TkWAMc=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/banlieue13/bundle-banlieue13-mobile.min.css?v=cTNtJQ6_6SB1QXNeWlP0QHJBE4K5SDodawH8t2CtJ3Y" />
     
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee-mobile.min.css?v=na9bpAY4yh7uEWCcrXj3vfJM3VBse8YtU6-5fUUQPz0" />
-    
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/wzxNote/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/wzxNote/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/wzxNote/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/yinjihuan/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/yinjihuan/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/yinjihuan/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 252253;
-        var currentBlogApp = 'wzxNote';
-        var cb_enable_mathjax = true;
+        var currentBlogId = 496691;
+        var currentBlogApp = 'yinjihuan';
+        var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'coffee';
+        var skinName = 'Banlieue13';
     </script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
-        TeX: {
-        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
-        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
-        Macros: {bm: "\\boldsymbol"}
-        },
-        'HTML-CSS': { linebreaks: { automatic: true } },
-        SVG: { linebreaks: { automatic: true } }
-        });
-    </script>
-    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
+    
+    
     
 </head>
 <body>
     <a name="top"></a>
-    <div id="page_begin_html">
-        <a href="https://info.flagcounter.com/pQC8"><img src="https://s11.flagcounter.com/count2/pQC8/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
-    </div>
+    
     
 <!--done-->
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-	<a href="https://www.cnblogs.com/wzxNote/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>			
+	<a href="https://www.cnblogs.com/yinjihuan/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>			
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/wzxNote/">鬼谷子com</a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/yinjihuan/">猿天地</a>
 </h1>
 <h2>
-你见，或者不见我/我就在那里/不悲不喜    你念，或者不念我/情就在那里/不来不去<br>
-你爱，或者不爱我/爱就在那里/不增不减    你跟，或者不跟我/我的手就在你手里/不舍不弃<br>
-来我的怀里/或者/让我住进你的心里        默然/相爱/寂静/欢喜
+
 </h2>
 
 
@@ -80,7 +65,7 @@
 博客园</a>
 </li>
 	<li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/wzxNote/">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/yinjihuan/">
 首页</a>
 </li>
 	<li>
@@ -89,18 +74,18 @@
 新随笔</a>
 </li>
 	<li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E9%AC%BC%E8%B0%B7%E5%AD%90com">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%8C%BF%E5%A4%A9%E5%9C%B0">
 联系</a></li>
 	<li>
 <a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
 管理</a>
 </li>
 	<li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/wzxNote/rss/">
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/yinjihuan/rss/">
 订阅</a>
 	
-<a id="blog_nav_rss_image" href="https://www.cnblogs.com/wzxNote/rss/">
-    <img src="/skins/coffee/images/xml.gif" alt="订阅" />
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/yinjihuan/rss/">
+    <img src="/skins/banlieue13/images/xml.gif" alt="订阅" />
 </a></li>
 </ul>
 
@@ -110,11 +95,11 @@
 				
 				<!--done-->
 随笔- 
-110&nbsp;
+71&nbsp;
 文章- 
 0&nbsp;
 评论- 
-75&nbsp;
+34&nbsp;
 
 
 
@@ -127,183 +112,95 @@
 	<div class="post">
 		<h1 class = "postTitle">
 			
-<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12849461.html">Qt for Android （三） 打开Android相册并选一个图片进行显示</a>
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/yinjihuan/p/12849787.html">笑话：大厂都在用的任务调度框架我能不知道吗？？？</a>
 
 		</h1>
 		<div class="clear"></div>
 		<div class="postBody">
 			
 <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
-    <p>这两天弄了一下android相册的相关功能。还是花了挺长时间的，这里总结一下，避免以后再踩坑。同时也在这篇文章里面补齐一些android开发的基础支持</p>
-<h2 id="打开android相册并选一个图片进行显示">打开Android相册并选一个图片进行显示</h2>
-<p><strong>分为几个步骤:</strong></p>
-<ol>
-<li>
-<p>QtCreator新建Android工程</p>
-<p>本例使用的是arm64-v8 Android开发套件。</p>
-</li>
-<li>
-<p>构建工程并在构建目录中找到AndroidManifest.xml</p>
-<p>创建的Android工程build之后都会在<strong>android-build</strong>根目录下生成一个AndroidManifest.xml文件。这个文件是android开发很重要个的一个文件，是应用清单。项目中引用的java包、app的横屏和竖屏、app的是否全屏等等很多功能都是在里面设置的。下面有一些详细的参考文章：</p>
-<p><a href="https://www.jianshu.com/p/3b5b89d4e154">AndroidManifest.xml详解</a></p>
-</li>
-<li>
-<p>在工程中添加AndroidManifest.xml和java文件。</p>
-<p>java文件是自己创建的用来写一些java代码调用android原生功能的相当于c++中的一个类的文件。</p>
-<p>java文件可以从网上找一个来参考着写。等会我会附上gitee的地址供大家参考。</p>
-<p>放出java的代码简单看一下吧：</p>
-<pre><code class="language-java">public class OpenAndroidAlbum extends QtActivity
-{
-
-    public static native void fileSelected(String fileName);
-
-    static final int REQUEST_OPEN_IMAGE = 1;
-    public String lastCameraFileUri;
-    static final int REQUEST_CAPTURE_IMAGE = 2;
-
-    private static OpenAndroidAlbum m_instance;
-
-    public OpenAndroidAlbum()
-    {
-        m_instance = this;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
-    protected void onDestroy()
-    {
-        super.onDestroy();
-    }
-
-    static void openAnImage()
-    {
-        m_instance.dispatchOpenGallery();
-    }
- @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
-    System.out.println(&quot;===dispatchOpenGallery1===&quot;);
-       if (resultCode == RESULT_OK)
-        {
-	    if(requestCode == REQUEST_OPEN_IMAGE)
-	    {
-		String filePath = getRealPathFromURI(getApplicationContext(), data.getData());
-		fileSelected(filePath);
-		}
-	}
-        else
-	{
-//	    fileSelected(&quot;:(&quot;);
-        }
-
-        super.onActivityResult(requestCode, resultCode, data);
-    }
-
-    private void dispatchOpenGallery()
-    {
-	Intent intent = new Intent(Intent.ACTION_PICK);
-	intent.setType(&quot;image/*&quot;);
-	startActivityForResult(intent, REQUEST_OPEN_IMAGE);
-    }
-
-    public String getRealPathFromURI(Context context, Uri contentUri)
-    {
-	Cursor cursor = null;
-	try
-	{
-	    String[] proj = { MediaStore.Images.Media.DATA };
-	    cursor = context.getContentResolver().query(contentUri,  proj, null, null, null);
-	    int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-	    cursor.moveToFirst();
-	     System.out.println(column_index);
-	    return cursor.getString(column_index);
-	}
-        finally
-	{
-	    if (cursor != null)
-	    {
-		cursor.close();
-		}
-	}
-    }
-
-}
-</code></pre>
-</li>
-</ol>
+    <h2 id="前言">前言</h2>
+<p>我之前的工作中一直在用 Elastic-Job 来做任务调度。这也是大家为什么能在我的书籍《Spring Cloud 微服务 入门 实战与进阶》中看到 Elastic-Job 的章节。</p>
+<p>从 2017 的 2.1.5 版本之后 Elastic-Job 没再更新过。我们在做技术选型的时候，对框架的使用范围和社区的活跃度都会比较看重，当然首先是功能点能够满足业务需求。</p>
+<p>今天给大家新推荐一个任务调度框架，也许很多人听过甚至目前已经使用了很久。不过没关系，这也不影响你今天阅读本文章。</p>
+<p>这个框架就是 XXL-JOB，一个轻量级分布式任务调度平台。最近在我的开源项目 Kitty-Cloud 中就采用了 XXL-JOB，还有一个原因是我目前任职的公司也一直在使用 XXL-JOB。</p>
+<h2 id="xxl-job-的前世今生">XXL-JOB 的前世今生</h2>
+<p>XXL-JOB 是一个分布式任务调度平台，其核心设计目标是开发迅速、学习简单、轻量级、易扩展。现已开放源代码并接入多家公司线上产品线，开箱即用。</p>
+<p>2015-11 月，XXL-JOB RELEASE 了第一个大版本 V1.0，在后面的几年里一直在更新。目前最新的版本是今年更新的 2.2.0。</p>
+<h3 id="功能特性">功能特性</h3>
 <ul>
-<li>
-<p><strong>fileSelected</strong>这个静态函数是我们在c++代码中定义的。java和c++的混合编程是通过JNI来实现的，</p>
-<pre><code class="language-c++">#ifdef Q_OS_ANDROID
-#ifdef __cplusplus
-extern &quot;C&quot; {
-#endif
-
-
-JNIEXPORT void JNICALL
-Java_org_qtproject_example_OpenAndroidAlbum_OpenAndroidAlbum_fileSelected(JNIEnv */*env*/,
-                                                                          jobject /*obj*/,
-                                                                          jstring results)
-{
-    selectedFileName = QAndroidJniObject(results).toString();
-    qDebug() &lt;&lt; &quot;fileName = &quot; &lt;&lt; selectedFileName;
-}
-#ifdef __cplusplus
-}
-#endif
-#endif
-</code></pre>
-<p>名字看起来很长<em>Java</em>是固定头部，<em>org_qtproject_example_OpenAndroidAlbum</em>这个是java包名，<em>OpenAndroidAlbum</em>是类名，最后<em>fileSelected</em>这个才是函数名。需要注意的是<strong>由于jni函数名映射成java函数名的时候是依靠“<em>”来间隔包、类、方法的，如果你的函数中有“</em>”字符的话，jni必须能够区分函数名中的“_”是字符还是分隔符，所以在函数名前面需要加1用于区分。</strong></p>
-<p>由于JNI的函数是c函数，所以要加上<code>extern &quot;C&quot;</code>。这样定义好之后的函数就可以在java中直接调用了，还是很方便的。</p>
-</li>
-<li>
-<p><strong>openAnImage</strong>是我们定义打开图片按钮的响应函数</p>
-<p>java中定义的函数在c++中调用的方法是通过Qt的<strong>QAndroidJniObject</strong>类的一个静态方法实现的：</p>
-<pre><code class="language-c++">QAndroidJniObject::callStaticMethod&lt;void&gt;(&quot;org/qtproject/example/OpenAndroidAlbum/OpenAndroidAlbum&quot;,
-                                              &quot;openAnImage&quot;,
-                                              &quot;()V&quot;);
-</code></pre>
-<p>第一个参数是类名其实也是包名，是在java文件中通过</p>
-<p><code>package org.qtproject.example.OpenAndroidAlbum;</code></p>
-<p>定义的。</p>
-</li>
-<li>
-<p><strong>dispatchOpenGallery</strong>这个方法用来调用相册</p>
-<p>通过<em>Intent</em>对象和<em>startActivityForResult</em>实现调用。这里有一个坑，<code>Intent intent = new Intent(Intent.ACTION_PICK);</code>创建对象的时候<strong>ACTION_PICK</strong>这个枚举要用对，4.4以后的版本好像要用这个，我也是之前怎么都打不开相册，改了这个枚举之后就可以了。</p>
-</li>
-<li>
-<p><strong>onActivityResult</strong>在相册中选中一张图片之后会调用这个回调</p>
-<p>很自然就会想到我们在c++中定义的<em>fileSelected</em>函数要在这个地方调用了。把路径转换成java的String类型，调用<code>fileSelected(filePath)</code>就可以在Qt代码中处理图片路径了。</p>
-</li>
+<li>调度中心 HA（中心式）</li>
+<li>执行器 HA（分布式）</li>
+<li>执行器弹性扩容缩容</li>
+<li>丰富的路由策略支持</li>
+<li>支持高度容错故障转移</li>
+<li>任务超时控制</li>
+<li>任务失败重试</li>
+<li>任务失败告警</li>
+<li>任务动态分片</li>
+<li>脚本任务</li>
+<li>等等。。。</li>
 </ul>
-<ol start="4">
-<li>
-<p>在Qt代码中调用java的打开相册的方法，同时利用JNI定义一个c++的处理方法</p>
-<p>这个我们在上一条中也提到了。这里提一下编码中容易出错的地方</p>
-<pre><code class="language-c++">    QAndroidJniObject::callStaticMethod&lt;void&gt;(&quot;org/qtproject/example/OpenAndroidAlbum/OpenAndroidAlbum&quot;,
-                                              &quot;openAnImage&quot;,
-                                              &quot;()V&quot;);
+<h3 id="丰富的-web-后台">丰富的 WEB 后台</h3>
+<p><strong>运行报表</strong></p>
+<p><img src="https://img2020.cnblogs.com/blog/1618095/202005/1618095-20200508122856046-334768119.png" alt=""></p>
+<p><strong>任务管理</strong></p>
+<p><img src="https://img2020.cnblogs.com/blog/1618095/202005/1618095-20200508122905275-365469341.png" alt=""></p>
+<p><strong>WEB IDE</strong></p>
+<p><img src="https://img2020.cnblogs.com/blog/1618095/202005/1618095-20200508122915219-1330997548.png" alt=""></p>
+<h3 id="xxl-job-使用场景">XXL-JOB 使用场景</h3>
+<ul>
+<li>订单超时取消</li>
+<li>用户生日关怀短信发送</li>
+<li>定时进行数据异构</li>
+<li>每日商家结算</li>
+<li>定时刷新缓存</li>
+<li>....................</li>
+</ul>
+<h3 id="xxl-job-架构设计">XXL-JOB 架构设计</h3>
+<p>XXL-JOB 将调度行为抽象形成“调度中心”公共平台，而平台自身并不承担业务逻辑，“调度中心”负责发起调度请求。</p>
+<p>将任务抽象成分散的 JobHandler，交由“执行器”统一管理，“执行器”负责接收调度请求并执行对应的 JobHandler 中业务逻辑。</p>
+<p>调度 和 任务 两部分可以相互解耦，提高系统整体稳定性和扩展性；</p>
+<p>如下图，任务和调度是分开的，相互解耦。</p>
+<p><img src="https://img2020.cnblogs.com/blog/1618095/202005/1618095-20200508122927060-414962813.png" alt=""></p>
+<p>执行器嵌入在应用中，负责接收调度请求并执行任务逻辑。应用启动的时候会注册到调度中心，在后台有执行器管理功能，也可以手动添加执行器。</p>
+<p><img src="https://img2020.cnblogs.com/blog/1618095/202005/1618095-20200508122937314-283698984.png" alt=""></p>
+<p>XXL-JOB 整体架构如下图所示，调度中心分为任务管理，执行器管理，日志管理等模块。</p>
+<p>任务管理主要对任务的一些操作，包括添加任务，编辑任务，暂停任务，启动任务等功能。</p>
+<p>执行器管理主要对执行器的一些操作，查看机器列表，管理在线执行器等。</p>
+<p>日志管理负责所有日志<em>相关的存储和展示。</em></p>
+<p>其他模块包括了一些任务执行的报表，任务失败告警等功能。</p>
+<p>执行器内部会暴露 Http 协议，调度中心在任务调度的时候，会向对应的执行器发起 Http 请求，执行器接收到请求后开始执行任务逻辑，执行器会回调调度中心，反馈任务执行的结果。</p>
+<p><img src="https://img2020.cnblogs.com/blog/1618095/202005/1618095-20200508122945900-274430727.png" alt=""></p>
+<h2 id="xxl-job-使用小技巧">XXL-JOB 使用小技巧</h2>
+<h3 id="日志自动清理">日志自动清理</h3>
+<p>XXL-JOB 中有调度日志和任务执行日志。如果任务多，调度频繁的话日志的数据量也挺大的，目前日志是存储在 Mysql 中，对应的表是 xxl_job_log。</p>
+<p>在一开始用的时候发现 XXL-JOB 的后台直接有清理日志的按钮，直接在界面上操作非常即可，可以选择时间段清理，也还算方便。</p>
+<p><img src="https://img2020.cnblogs.com/blog/1618095/202005/1618095-20200508122954917-1015138757.png" alt=""></p>
+<p>通过手动的方式去操作必然会带来一个问题，就是忘记了，等到哪天卡的不行才会去清理一次，不智能。</p>
+<p>当时就直接写了一个清理日志的任务，直接对 xxl_job_log 这张表进行删除操作，定时清理，这样就不用人工干预了。</p>
+<p>后面发现 XXL-JOB 居然有自动清理的配置，这就是没仔细看文档的后果呀，通过下面的配置来决定执行器日志文件保存天数。</p>
+<p>xxl.job.executor.logretentiondays=30</p>
+<h3 id="任务自动注册">任务自动注册</h3>
+<p>默认情况下，我们开发了一个任务需要到 XXL-JOB 的后台手动去添加一个任务。如果你想偷点懒的话我教你一个方式。</p>
+<p>可以自己定义一个注解，然后项目启动的时候扫描注解，获取注解里的配置，调用 XXL-JOB 后的 API 接口直接插入，这样新加的任务在你启动后就自动创建了。</p>
+<h3 id="扩展监控支持短信和钉钉">扩展监控支持短信和钉钉</h3>
+<p>XXL-JOB 对任务的失败告警默认只支持邮件的方式，但是提供了扩展的方式，需要对后台的代码进行扩展才行。</p>
+<p>可以自己动手扩展监控告警，比如支持钉钉消息，短信等告警方式。</p>
+<p>扩展代码位置：JobFailMonitorHelper.failAlarm</p>
+<p>数据格式：</p>
+<pre><code>{
+	&quot;emails&quot;: [&quot;xxx.mail.com&quot;, &quot;xxx.mail.com&quot;],
+	&quot;dingdings&quot;: [{
+		&quot;access_token&quot;: &quot; &quot;,
+		&quot;secret&quot;: &quot;&quot;
+	}],
+	&quot;mobiles&quot;: [&quot;18211110000&quot;]
+}
 </code></pre>
-<p>第一个字符串代表java包，相当于一个c++的类。如果遇到编译过程中遇到<strong>“找不到类&quot;</strong>的类似错误提示检查一下第一个字符串，最后是以<strong>OpenAndroidAlbum.java</strong>包的前缀结尾的，切记！！！</p>
-</li>
-<li>
-<p>AndroidManifest.xml要做相应的修改</p>
-<p>上面也提到了，这个文件是清单列表可以用来指定要调用j的ava包</p>
-<pre><code class="language-XML">&lt;manifest package=&quot;org.qtproject.example.OpenAndroidAlbum&quot; xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:versionName=&quot;1.0&quot; android:versionCode=&quot;1&quot; android:installLocation=&quot;auto&quot;&gt;
-    &lt;uses-sdk android:minSdkVersion=&quot;16&quot; android:targetSdkVersion=&quot;28&quot;/&gt;
-</code></pre>
-<p>把<strong>package=</strong>这个包名的属性做对应的修改。</p>
-</li>
-<li>
-<p>完成了上述5点之后还要修改软件的权限，获取<strong>允许打开相册</strong>的权限之后才能正常的打开相册图片</p>
-</li>
-</ol>
-<p>gitee地址：<a href="https://gitee.com/guiguzicom/Demo/tree/master/OpenAndroidAlbum">https://gitee.com/guiguzicom/Demo/tree/master/OpenAndroidAlbum</a></p>
+<p>上面定义的 Json 数据格式我们可以直接用后台目前已有的监控邮箱的文本框进行输入，然后在</p>
+<p>JobFailMonitorHelper 进行解析，选择对应的发送方式即可。</p>
+<p>做的更友好的方式就直接把后台的那个编辑页面改掉，增加几个单独的短信，钉钉文本输入框。</p>
 
 </div>
 <div id="MySignature"></div>
@@ -315,12 +212,12 @@ Java_org_qtproject_example_OpenAndroidAlbum_OpenAndroidAlbum_fileSelected(JNIEnv
 </div>
 		</div>
 		<div class="postDesc">posted @ 
-<span id="post-date">2020-05-08 11:26</span>&nbsp;
-<a href="https://www.cnblogs.com/wzxNote/">鬼谷子com</a>&nbsp;
+<span id="post-date">2020-05-08 12:31</span>&nbsp;
+<a href="https://www.cnblogs.com/yinjihuan/">猿天地</a>&nbsp;
 阅读(<span id="post_view_count">...</span>)&nbsp;
 评论(<span id="post_comment_count">...</span>)&nbsp;
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12849461" rel="nofollow">编辑</a>&nbsp;
-<a href="javascript:void(0)" onclick="AddToWz(12849461);return false;">收藏</a></div>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12849787" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12849787);return false;">收藏</a></div>
 	</div>
 	
 	
@@ -328,8 +225,8 @@ Java_org_qtproject_example_OpenAndroidAlbum_OpenAndroidAlbum_fileSelected(JNIEnv
 <script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
 <script>markdown_highlight();</script>
 <script>
-    var allowComments = true, cb_blogId = 252253, cb_blogApp = 'wzxNote', cb_blogUserGuid = '2177f1aa-e386-e211-9984-842b2b196315';
-    var cb_entryId = 12849461, cb_entryCreatedDate = '2020-05-08 11:26', cb_postType = 1; 
+    var allowComments = true, cb_blogId = 496691, cb_blogApp = 'yinjihuan', cb_blogUserGuid = '42e3e585-54fd-4252-72d3-08d69f02802c';
+    var cb_entryId = 12849787, cb_entryCreatedDate = '2020-05-08 12:31', cb_postType = 1; 
     loadViewCount(cb_entryId);
     loadSideColumnAd();
 </script><a name="!comments"></a>
@@ -416,7 +313,7 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 鬼谷子com
+Copyright &copy; 2020 猿天地
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 

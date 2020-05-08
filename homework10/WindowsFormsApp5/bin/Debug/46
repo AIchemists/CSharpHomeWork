@@ -8,24 +8,24 @@
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>极客挖掘机 - 博客园</title>
+    <title>削微寒 - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
-    <link id="MainCss" rel="stylesheet" href="/skins/simplememory/bundle-simplememory.min.css?v=OL4qeo1LNGlN1rKIhv5UctANvt0M6Nx6kLzr_ffx3Xk" />
-    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/babycomeon/custom.css?v=U1O5CRU9t/iVLoUCVHLTE38GFDE=" />
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory-mobile.min.css" />
+    <link id="MainCss" rel="stylesheet" href="/skins/blacklowkey/bundle-blacklowkey.min.css?v=_B1ixsexV8tpUJyj4tVsjnDwkM8eRY6ZCwGSi1TrV7s" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/xueweihan/custom.css?v=RRRtuZg9tgADpy&#x2B;UPLStdn026o0=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/blacklowkey/bundle-blacklowkey-mobile.min.css?v=cYvlxMu_nd6MVfg-vi7YqOC6FaZ7VHFsDM166vO_ekA" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/babycomeon/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/babycomeon/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/babycomeon/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/xueweihan/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/xueweihan/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/xueweihan/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 271437;
-        var currentBlogApp = 'babycomeon';
+        var currentBlogId = 228315;
+        var currentBlogApp = 'xueweihan';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'SimpleMemory';
+        var skinName = 'BlackLowKey';
     </script>
     
     
@@ -33,19 +33,21 @@
 </head>
 <body>
     <a name="top"></a>
-    
+    <div id="page_begin_html">
+        <a href="https://github.com/521xueweihan/HelloGitHub/"><img style="position: absolute; top: 0; right: 0; border: 0" src="https://images.cnblogs.com/cnblogs_com/xueweihan/859919/o_200129100904forkme_right_green_007200.png" alt="Fork me on GitHub" data-canonical-src="https://images.cnblogs.com/cnblogs_com/xueweihan/859919/o_200129100904forkme_right_green_007200.png"></a>
+    </div>
     
 <!--done-->
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/babycomeon/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/xueweihan/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/babycomeon/">极客挖掘机</a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/xueweihan/">削微寒的程序员之路</a>
 </h1>
 <h2>
-
+谦逊、专注，才能成长。
 </h2>
 
 
@@ -60,19 +62,17 @@
 博客园</a>
 </li>
 <li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/babycomeon/">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/xueweihan/">
 首页</a>
 </li>
 <li>
 
-<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
-新随笔</a>
+
 </li>
 <li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E6%9E%81%E5%AE%A2%E6%8C%96%E6%8E%98%E6%9C%BA">
-联系</a></li>
+</li>
 <li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/babycomeon/rss/">
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/xueweihan/rss/">
 订阅</a>
 <!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
 <li>
@@ -85,11 +85,11 @@
 		<div class="blogStats">
 			
 			<span id="stats_post_count">随笔 - 
-192&nbsp; </span>
+327&nbsp; </span>
 <span id="stats_article_count">文章 - 
 0&nbsp; </span>
 <span id="stats-comment_count">评论 - 
-145</span>
+1149</span>
 
 			
 		</div><!--end: blogStats -->
@@ -110,28 +110,28 @@
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2019/07/14.html">2019年7月14日</a>
+        <a href="https://www.cnblogs.com/xueweihan/archive/2020/04/28.html">2020年4月28日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/11183133.html">
-[置顶]    跟我学SpringCloud | 终篇：文章汇总(持续更新)
+<a class="postTitle2" href="https://www.cnblogs.com/xueweihan/p/12790339.html">
+[置顶]    《HelloGitHub》第 49 期
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：SpringCloud系列教程 | 终篇：文章汇总(持续更新) 我为什么这些文章？一是巩固自己的知识，二是希望有更加开放和与人分享的心态，三是接受各位大神的批评指教，有任何问题可以联系我: inwsy@hotmail.com。 &quot;Github源码下载&quot; ：https://github.com/met            <a href="https://www.cnblogs.com/babycomeon/p/11183133.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：兴趣是最好的老师， HelloGitHub 就是帮你找到兴趣！ 简介 分享 GitHub 上有趣、入门级的开源项目。 这是一个面向 编程新手 、 热爱编程 、 对开源社区感兴趣 人群的月刊，月刊的内容包括： 各种编程语言的项目 、 让生活变得更美好的工具 、 书籍、学习笔记、教程等 ，这些开源项目大            <a href="https://www.cnblogs.com/xueweihan/p/12790339.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2019-07-14 18:40 极客挖掘机 阅读 (2214) 评论 (1)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11183133" rel="nofollow">
+posted @ 2020-04-28 09:08 削微寒 阅读 (612) 评论 (3)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12790339" rel="nofollow">
     编辑
 </a>
 </div>
@@ -144,28 +144,28 @@ posted @ 2019-07-14 18:40 极客挖掘机 阅读 (2214) 评论 (1)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/05/08.html">2020年5月8日</a>
+        <a href="https://www.cnblogs.com/xueweihan/archive/2019/06/19.html">2019年6月19日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12848388.html">
-    一本正经的聊数据结构（5）：二叉树的存储结构与遍历
+<a class="postTitle2" href="https://www.cnblogs.com/xueweihan/p/11049956.html">
+[置顶]    我和 HelloGitHub
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：前文传送门： &quot;「一本正经的聊数据结构（1）：时间复杂度」&quot; &quot;「一本正经的聊数据结构（2）：数组与向量」&quot; &quot;「一本正经的聊数据结构（3）：栈和队列」&quot; &quot;「一本正经的聊数据结构（4）：树」&quot; 存储结构 前面的内容我们介绍了树和二叉树的一些基础概念，树是数据结构中的重中之重，而二叉树又是树结构中的            <a href="https://www.cnblogs.com/babycomeon/p/12848388.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：我？ 我是一个本科学历、无大厂经历，普通的 Python 程序员。 虽然是计算机专业，但是大学玩了四年（Dota）后，发现自己无一技能傍身，要饿死啦！偶然间接触了 Python 这门编程语言，发现编程还能这么简单！自学了几个月，然后就光荣的成为了一名 Pythoner，终于能开始自己养活自己，那么下            <a href="https://www.cnblogs.com/xueweihan/p/11049956.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-05-08 08:57 极客挖掘机 阅读 (116) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12848388" rel="nofollow">
+posted @ 2019-06-19 10:43 削微寒 阅读 (5357) 评论 (51)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11049956" rel="nofollow">
     编辑
 </a>
 </div>
@@ -178,28 +178,28 @@ posted @ 2020-05-08 08:57 极客挖掘机 阅读 (116) 评论 (0)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/05/03.html">2020年5月3日</a>
+        <a href="https://www.cnblogs.com/xueweihan/archive/2017/07/14.html">2017年7月14日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12821038.html">
-    一本正经的聊数据结构（4）：树
+<a class="postTitle2" href="https://www.cnblogs.com/xueweihan/p/7171480.html">
+[置顶]    HelloGitHub.com 网站开源了
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：前文传送门： &quot;「一本正经的聊数据结构（1）：时间复杂度」&quot; &quot;「一本正经的聊数据结构（2）：数组与向量」&quot; &quot;「一本正经的聊数据结构（3）：栈和队列」&quot; 引言 在前面的文章中，我们已经陆陆续续的介绍了一些数据结构。 根据这些数据结构的实现方式，大体上可以分成两类：基于数组的实现和基于链表的实现。             <a href="https://www.cnblogs.com/babycomeon/p/12821038.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：简介 随着 HelloGitHub 月刊持续更新了一年多，内容变的越来越多。因为内容数据没有结构化，如果还是使用之前的编辑文本的方式编辑月刊内容，会对后面的继续发刊和维护带来了很多问题和多余的工作，例如：查看、查重、分类、排序、修改、同步内容等 最初 是使用本地数据库的方式进行管理数据，通过脚本生成            <a href="https://www.cnblogs.com/xueweihan/p/7171480.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-05-03 10:41 极客挖掘机 阅读 (127) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12821038" rel="nofollow">
+posted @ 2017-07-14 17:16 削微寒 阅读 (3852) 评论 (10)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=7171480" rel="nofollow">
     编辑
 </a>
 </div>
@@ -212,28 +212,28 @@ posted @ 2020-05-03 10:41 极客挖掘机 阅读 (127) 评论 (0)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/04/27.html">2020年4月27日</a>
+        <a href="https://www.cnblogs.com/xueweihan/archive/2016/02/26.html">2016年2月26日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12784649.html">
-    一本正经的聊数据结构（3）：栈和队列
+<a class="postTitle2" href="https://www.cnblogs.com/xueweihan/p/5220513.html">
+[置顶]    什么是真正的程序员？
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：前文传送门： &quot;「一本正经的聊数据结构（1）：时间复杂度」&quot; &quot;「一本正经的聊数据结构（2）：数组与向量」&quot; 引言 前一篇内容我们介绍了数组和向量，虽然说向量是数组的一个升级版，但是在另一个维度上，他们都属于线性结构。 那么什么是线性结构呢？ 线性结构是一个有序数据元素的集合。常用的线性结构有：线性            <a href="https://www.cnblogs.com/babycomeon/p/12784649.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：什么是真正的程序员 这篇文章的原文来自： &amp;quot;A Little Printf Story&amp;quot; 作者仿照《小王子》中的情节，通过小printf遇见的不同类型的程序员，最后悟出什么才是真正的程序员！第一次翻译有很多不妥，欢迎留言指正。 文章略长，但是耐心读完，你肯定会受益良多！ 第一章 （推荐看完整篇文章，            <a href="https://www.cnblogs.com/xueweihan/p/5220513.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-04-27 09:48 极客挖掘机 阅读 (266) 评论 (3)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12784649" rel="nofollow">
+posted @ 2016-02-26 15:12 削微寒 阅读 (32630) 评论 (49)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=5220513" rel="nofollow">
     编辑
 </a>
 </div>
@@ -246,28 +246,28 @@ posted @ 2020-04-27 09:48 极客挖掘机 阅读 (266) 评论 (3)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/04/25.html">2020年4月25日</a>
+        <a href="https://www.cnblogs.com/xueweihan/archive/2020/05/08.html">2020年5月8日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12771624.html">
-    你知道什么是 GitHub Action 么？
+<a class="postTitle2" href="https://www.cnblogs.com/xueweihan/p/12845530.html">
+    第 4 篇：用类视图实现首页 API
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：本文是 GitHub Action 的入门教程，如您已有相关使用经验可以直接关掉。 GitHub Action 是 GitHub 于 2018 年 10 月推出的一个 CI\CD 服务。 之前一直都是 Beta 版本，正式版于 2019 年 11 月正式推出。 首先还是先放几个官方的链接： GitH            <a href="https://www.cnblogs.com/babycomeon/p/12771624.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：作者： &quot;HelloGitHub 追梦人物&quot; 文中所涉及的示例代码，已同步更新到 &quot;HelloGitHub Team 仓库&quot; django rest framework 类视图拓展自 django 的类视图，只是针对数据的序列化和反序列化等逻辑做了封装。 django rest framework             <a href="https://www.cnblogs.com/xueweihan/p/12845530.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-04-25 09:35 极客挖掘机 阅读 (255) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12771624" rel="nofollow">
+posted @ 2020-05-08 09:19 削微寒 阅读 (180) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12845530" rel="nofollow">
     编辑
 </a>
 </div>
@@ -280,28 +280,28 @@ posted @ 2020-04-25 09:35 极客挖掘机 阅读 (255) 评论 (0)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/04/16.html">2020年4月16日</a>
+        <a href="https://www.cnblogs.com/xueweihan/archive/2020/05/06.html">2020年5月6日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12710444.html">
-    一本正经的聊数据结构（2）：数组与向量
+<a class="postTitle2" href="https://www.cnblogs.com/xueweihan/p/12832674.html">
+    GitHub 热点速览 Vol.18：刷 LeetCode 的正确姿势
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：前文传送门： &quot;一本正经的聊数据结构（1）：时间复杂度&quot; 引言 这个系列没有死，我还在更新。 最近事情太多了，这篇文章也是断断续续写了好几天才凑完。 上一篇我们介绍了一个基础概念「时间复杂度」，这篇我们来看第一个真正意义上的数据结构「数组」。 那为什么题目中还会有一个向量呢？这个是什么东西？ 不要急            <a href="https://www.cnblogs.com/babycomeon/p/12710444.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：作者：HelloGitHub 小鱼干 摘要：找对路子，事半功倍，正如本周 GitHub Trending 刷 LeetCode 主题想表达的那般，正确的学习姿势方能让人走得更远，走进大厂 &#127770;。学习除了正确姿势，“脑洞”也很重要，在五一假期掀起 Copy 风的 AR Cut &amp; Paste 凭借所见            <a href="https://www.cnblogs.com/xueweihan/p/12832674.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-04-16 09:18 极客挖掘机 阅读 (199) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12710444" rel="nofollow">
+posted @ 2020-05-06 08:47 削微寒 阅读 (443) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12832674" rel="nofollow">
     编辑
 </a>
 </div>
@@ -314,28 +314,28 @@ posted @ 2020-04-16 09:18 极客挖掘机 阅读 (199) 评论 (0)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/04/06.html">2020年4月6日</a>
+        <a href="https://www.cnblogs.com/xueweihan/archive/2020/05/01.html">2020年5月1日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12641883.html">
-    实锤，无脑定投指数基金真的可以赚钱么？
+<a class="postTitle2" href="https://www.cnblogs.com/xueweihan/p/12809720.html">
+    第 3 篇：实现博客首页文章列表 API
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：投资有风险，入市需谨慎，本文不构成任何投资理财建议，仅做交流学习使用。 不知道大家有没有在网上见过各种理财课程，说什么小白入门最简单的就是定投指数基金，还说人家巴菲特也这么投，这种课程介绍是越写越夸张，后面最夸张说还能打成一个小目标。 过分了啊，如果打成小目标这么简单，那不是中国打成小目标的怎么地也            <a href="https://www.cnblogs.com/babycomeon/p/12641883.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：作者： &quot;HelloGitHub 追梦人物&quot; 文中所涉及的示例代码，已同步更新到 &quot;HelloGitHub Team 仓库&quot; 此前在讨论基于模板引擎的开发方式和 django rest framework 开发的异同时说过，django rest framework 开发和传统的开发方式没有什么不同            <a href="https://www.cnblogs.com/xueweihan/p/12809720.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-04-06 14:04 极客挖掘机 阅读 (103) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12641883" rel="nofollow">
+posted @ 2020-05-01 08:44 削微寒 阅读 (226) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12809720" rel="nofollow">
     编辑
 </a>
 </div>
@@ -348,28 +348,28 @@ posted @ 2020-04-06 14:04 极客挖掘机 阅读 (103) 评论 (0)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/04/05.html">2020年4月5日</a>
+        <a href="https://www.cnblogs.com/xueweihan/archive/2020/04/28.html">2020年4月28日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12636731.html">
-    昨天网站都变灰了，你知道是怎么做的么？
+<a class="postTitle2" href="https://www.cnblogs.com/xueweihan/p/12790339.html">
+    《HelloGitHub》第 49 期
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：昨天是 2020 年 4 月 4 日，清明节。 这个清明节，我想我们很多人在今后的很多年中都不会忘记，这一刻，我们参与了历史，同时成为了历史的见证者。 2020 年从过年到现在，我们的国家遭遇了非常惨痛的经历，很多英雄在救助他人的路上倒下，更有很多烈士保卫人民的安危遇难，全国下降半棋，北京时间上午             <a href="https://www.cnblogs.com/babycomeon/p/12636731.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：兴趣是最好的老师， HelloGitHub 就是帮你找到兴趣！ 简介 分享 GitHub 上有趣、入门级的开源项目。 这是一个面向 编程新手 、 热爱编程 、 对开源社区感兴趣 人群的月刊，月刊的内容包括： 各种编程语言的项目 、 让生活变得更美好的工具 、 书籍、学习笔记、教程等 ，这些开源项目大            <a href="https://www.cnblogs.com/xueweihan/p/12790339.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-04-05 12:47 极客挖掘机 阅读 (1063) 评论 (3)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12636731" rel="nofollow">
+posted @ 2020-04-28 09:08 削微寒 阅读 (612) 评论 (3)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12790339" rel="nofollow">
     编辑
 </a>
 </div>
@@ -382,28 +382,28 @@ posted @ 2020-04-05 12:47 极客挖掘机 阅读 (1063) 评论 (3)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/03/26.html">2020年3月26日</a>
+        <a href="https://www.cnblogs.com/xueweihan/archive/2020/04/27.html">2020年4月27日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12572638.html">
-    小白学 Python 数据分析（21）：pyecharts 好玩的图表（系列终篇）
+<a class="postTitle2" href="https://www.cnblogs.com/xueweihan/p/12783161.html">
+    GitHub 热点速览 Vol.17：在？各家视频会员要不要？
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：人生苦短，我用 Python 前文传送门： &quot;小白学 Python 数据分析（1）：数据分析基础&quot; &quot;小白学 Python 数据分析（2）：Pandas （一）概述&quot; &quot;小白学 Python 数据分析（3）：Pandas （二）数据结构 Series&quot; &quot;小白学 Python 数据分析（4）：Pan            <a href="https://www.cnblogs.com/babycomeon/p/12572638.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：作者：HelloGitHub 小鱼干 摘要：经济实用，用作上周的 GitHub 热点的横批再合适不过。先不说 GitHub Trending 上不止一个的会员共享项目，免你找好友刷脸要会员，这项目实在太好用。也不说 TIL 利用你碎片化时间学习编程技术的项目，光是本周在 GitHub Trendin            <a href="https://www.cnblogs.com/xueweihan/p/12783161.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-03-26 10:30 极客挖掘机 阅读 (339) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12572638" rel="nofollow">
+posted @ 2020-04-27 08:31 削微寒 阅读 (1066) 评论 (3)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12783161" rel="nofollow">
     编辑
 </a>
 </div>
@@ -416,28 +416,28 @@ posted @ 2020-03-26 10:30 极客挖掘机 阅读 (339) 评论 (0)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/03/25.html">2020年3月25日</a>
+        <a href="https://www.cnblogs.com/xueweihan/archive/2020/04/24.html">2020年4月24日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12563911.html">
-    小白学 Python 数据分析（20）：pyecharts 概述
+<a class="postTitle2" href="https://www.cnblogs.com/xueweihan/p/12761430.html">
+    初始化 RESTful API 风格的博客系统
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：人生苦短，我用 Python 前文传送门： &quot;小白学 Python 数据分析（1）：数据分析基础&quot; &quot;小白学 Python 数据分析（2）：Pandas （一）概述&quot; &quot;小白学 Python 数据分析（3）：Pandas （二）数据结构 Series&quot; &quot;小白学 Python 数据分析（4）：Pan            <a href="https://www.cnblogs.com/babycomeon/p/12563911.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：作者： &quot;HelloGitHub 追梦人物&quot; 文中所涉及的示例代码，已同步更新到 &quot;HelloGitHub Team 仓库&quot; 在 HelloDjango 全栈系列教程的第一步—— &quot;Django博客教程（第二版）&quot; 中，我们一步步地开发了一个功能完善的个人博客系统。 接下来，我们将使用 django            <a href="https://www.cnblogs.com/xueweihan/p/12761430.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-03-25 08:54 极客挖掘机 阅读 (304) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12563911" rel="nofollow">
+posted @ 2020-04-24 08:48 削微寒 阅读 (655) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12761430" rel="nofollow">
     编辑
 </a>
 </div>
@@ -450,28 +450,28 @@ posted @ 2020-03-25 08:54 极客挖掘机 阅读 (304) 评论 (0)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/03/24.html">2020年3月24日</a>
+        <a href="https://www.cnblogs.com/xueweihan/archive/2020/04/20.html">2020年4月20日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12556897.html">
-    小白学 Python 数据分析（19）：Matplotlib（四）常用图表（下）
+<a class="postTitle2" href="https://www.cnblogs.com/xueweihan/p/12733520.html">
+    GitHub 热点速览 Vol.16：化身蒙娜丽莎和乔布斯对话
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：人生苦短，我用 Python 前文传送门： &quot;小白学 Python 数据分析（1）：数据分析基础&quot; &quot;小白学 Python 数据分析（2）：Pandas （一）概述&quot; &quot;小白学 Python 数据分析（3）：Pandas （二）数据结构 Series&quot; &quot;小白学 Python 数据分析（4）：Pan            <a href="https://www.cnblogs.com/babycomeon/p/12556897.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：摘要：妙趣横生，上周的 GitHub 热点的关键词。无论是让你化身为爱因斯坦开启会议脑暴模式 avatarify，还是和上周人人都是抠图师项目的同门项目 3D 照片修复：3d photo inpainting 都让人觉得，原来程序可以那么 interesting。除了趣味，本周的热点全靠 nbnhh            <a href="https://www.cnblogs.com/xueweihan/p/12733520.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-03-24 09:23 极客挖掘机 阅读 (145) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12556897" rel="nofollow">
+posted @ 2020-04-20 08:51 削微寒 阅读 (356) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12733520" rel="nofollow">
     编辑
 </a>
 </div>
@@ -484,28 +484,28 @@ posted @ 2020-03-24 09:23 极客挖掘机 阅读 (145) 评论 (0)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/03/23.html">2020年3月23日</a>
+        <a href="https://www.cnblogs.com/xueweihan/archive/2020/04/17.html">2020年4月17日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12550193.html">
-    小白学 Python 数据分析（18）：Matplotlib（三）常用图表（上）
+<a class="postTitle2" href="https://www.cnblogs.com/xueweihan/p/12706064.html">
+    Django-rest-framework 是个什么鬼？
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：人生苦短，我用 Python 前文传送门： &quot;小白学 Python 数据分析（1）：数据分析基础&quot; &quot;小白学 Python 数据分析（2）：Pandas （一）概述&quot; &quot;小白学 Python 数据分析（3）：Pandas （二）数据结构 Series&quot; &quot;小白学 Python 数据分析（4）：Pan            <a href="https://www.cnblogs.com/babycomeon/p/12550193.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：作者： &quot;HelloGitHub 追梦人物&quot; 我们首先来回顾一下传统的基于模板引擎的 django 开发工作流： 1. 绑定 URL 和视图函数。当用户访问某个 URL 时，调用绑定的视图函数进行处理。 2. 编写视图函数的逻辑。视图中通常涉及数据库的操作。 3. 在视图中渲染 HTML 模板，返回            <a href="https://www.cnblogs.com/xueweihan/p/12706064.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-03-23 09:03 极客挖掘机 阅读 (133) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12550193" rel="nofollow">
+posted @ 2020-04-17 08:50 削微寒 阅读 (350) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12706064" rel="nofollow">
     编辑
 </a>
 </div>
@@ -518,28 +518,28 @@ posted @ 2020-03-23 09:03 极客挖掘机 阅读 (133) 评论 (0)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/03/20.html">2020年3月20日</a>
+        <a href="https://www.cnblogs.com/xueweihan/archive/2020/04/15.html">2020年4月15日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12529668.html">
-    小白学 Python 数据分析（17）：Matplotlib（二）基础操作
+<a class="postTitle2" href="https://www.cnblogs.com/xueweihan/p/12700394.html">
+    躁！DJ 风格 Java 桌面音乐播放器
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：人生苦短，我用 Python 前文传送门： &quot;小白学 Python 数据分析（1）：数据分析基础&quot; &quot;小白学 Python 数据分析（2）：Pandas （一）概述&quot; &quot;小白学 Python 数据分析（3）：Pandas （二）数据结构 Series&quot; &quot;小白学 Python 数据分析（4）：Pan            <a href="https://www.cnblogs.com/babycomeon/p/12529668.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：本文适合有 Java 基础知识的人群，跟着本文可学习和运行 版桌面 音乐播放器。 本文作者：HelloGitHub 秦人 HelloGitHub 推出的 &quot;《讲解开源项目》&quot; 系列，今天给大家带来一款开源 Java 版桌面 音乐播放器项目——XR3Player，它强大的功能和炫酷的展示效果，你肯定会            <a href="https://www.cnblogs.com/xueweihan/p/12700394.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-03-20 09:29 极客挖掘机 阅读 (235) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12529668" rel="nofollow">
+posted @ 2020-04-15 08:43 削微寒 阅读 (572) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12700394" rel="nofollow">
     编辑
 </a>
 </div>
@@ -552,266 +552,28 @@ posted @ 2020-03-20 09:29 极客挖掘机 阅读 (235) 评论 (0)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/03/18.html">2020年3月18日</a>
+        <a href="https://www.cnblogs.com/xueweihan/archive/2020/04/13.html">2020年4月13日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12515446.html">
-    小白学 Python 数据分析（16）：Matplotlib（一）坐标系
+<a class="postTitle2" href="https://www.cnblogs.com/xueweihan/p/12687908.html">
+     GitHub 热点速览 Vol.15：Background-Matting 让你秒变专业抠图师
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：人生苦短，我用 Python 前文传送门： &quot;小白学 Python 数据分析（1）：数据分析基础&quot; &quot;小白学 Python 数据分析（2）：Pandas （一）概述&quot; &quot;小白学 Python 数据分析（3）：Pandas （二）数据结构 Series&quot; &quot;小白学 Python 数据分析（4）：Pan            <a href="https://www.cnblogs.com/babycomeon/p/12515446.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：作者：HelloGitHub 小鱼干 摘要：如果要选一个词来概述上周的热点，春风拂过，应该是一个不错的词。新项目像春天冒出的枝芽，朝气蓬勃，虽然获得的 star 不如之前三维 Vim 抢眼，但胜在多姿多彩，比如周获近 1k star 的抠图项目——Background Matting，手把手教你炒大            <a href="https://www.cnblogs.com/xueweihan/p/12687908.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-03-18 09:33 极客挖掘机 阅读 (216) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12515446" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/03/12.html">2020年3月12日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12467064.html">
-    小白学 Python 数据分析（15）：数据可视化概述
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：人生苦短，我用 Python 前文传送门： &quot;小白学 Python 数据分析（1）：数据分析基础&quot; &quot;小白学 Python 数据分析（2）：Pandas （一）概述&quot; &quot;小白学 Python 数据分析（3）：Pandas （二）数据结构 Series&quot; &quot;小白学 Python 数据分析（4）：Pan            <a href="https://www.cnblogs.com/babycomeon/p/12467064.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-03-12 08:53 极客挖掘机 阅读 (230) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12467064" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/03/10.html">2020年3月10日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12453721.html">
-    如何通过一行代码制作个人专属动态微信二维码？
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：各位同学好，今天又是一个晴空万里的周末，面对外面这么好的天气，不好好在家学习怎么对得起外面的这个天气。 在逛 Github 的时候，发现了一个好玩的二维码制作的库：https://github.com/sylnsfar/qrcode 。这个库的 star 已经超过 7k 了，而且附带了中文文档，各位            <a href="https://www.cnblogs.com/babycomeon/p/12453721.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-03-10 08:58 极客挖掘机 阅读 (241) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12453721" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/03/09.html">2020年3月9日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12447063.html">
-    小白学 Python 数据分析（14）：Pandas （十三）数据导出
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：人生苦短，我用 Python 前文传送门： &quot;小白学 Python 数据分析（1）：数据分析基础&quot; &quot;小白学 Python 数据分析（2）：Pandas （一）概述&quot; &quot;小白学 Python 数据分析（3）：Pandas （二）数据结构 Series&quot; &quot;小白学 Python 数据分析（4）：Pan            <a href="https://www.cnblogs.com/babycomeon/p/12447063.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-03-09 10:14 极客挖掘机 阅读 (62) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12447063" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/03/07.html">2020年3月7日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12432957.html">
-    小白学 Python 数据分析（13）：Pandas （十二）数据表拼接
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：人生苦短，我用 Python 前文传送门： &quot;小白学 Python 数据分析（1）：数据分析基础&quot; &quot;小白学 Python 数据分析（2）：Pandas （一）概述&quot; &quot;小白学 Python 数据分析（3）：Pandas （二）数据结构 Series&quot; &quot;小白学 Python 数据分析（4）：Pan            <a href="https://www.cnblogs.com/babycomeon/p/12432957.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-03-07 10:40 极客挖掘机 阅读 (173) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12432957" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/03/06.html">2020年3月6日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12424812.html">
-    小白学 Python 数据分析（12）：Pandas （十一）数据透视表（pivot_table）
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：人生苦短，我用 Python 前文传送门： &quot;小白学 Python 数据分析（1）：数据分析基础&quot; &quot;小白学 Python 数据分析（2）：Pandas （一）概述&quot; &quot;小白学 Python 数据分析（3）：Pandas （二）数据结构 Series&quot; &quot;小白学 Python 数据分析（4）：Pan            <a href="https://www.cnblogs.com/babycomeon/p/12424812.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-03-06 09:17 极客挖掘机 阅读 (258) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12424812" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/03/04.html">2020年3月4日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12407585.html">
-    小白学 Python 数据分析（11）：Pandas （十）数据分组
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：人生苦短，我用 Python 前文传送门： &quot;小白学 Python 数据分析（1）：数据分析基础&quot; &quot;小白学 Python 数据分析（2）：Pandas （一）概述&quot; &quot;小白学 Python 数据分析（3）：Pandas （二）数据结构 Series&quot; &quot;小白学 Python 数据分析（4）：Pan            <a href="https://www.cnblogs.com/babycomeon/p/12407585.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-03-04 08:58 极客挖掘机 阅读 (254) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12407585" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/babycomeon/archive/2020/03/03.html">2020年3月3日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12400570.html">
-    小白学 Python 数据分析（10）：Pandas （九）数据运算
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：人生苦短，我用 Python 前文传送门： &quot;小白学 Python 数据分析（1）：数据分析基础&quot; &quot;小白学 Python 数据分析（2）：Pandas （一）概述&quot; &quot;小白学 Python 数据分析（3）：Pandas （二）数据结构 Series&quot; &quot;小白学 Python 数据分析（4）：Pan            <a href="https://www.cnblogs.com/babycomeon/p/12400570.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-03-03 09:32 极客挖掘机 阅读 (200) 评论 (1)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12400570" rel="nofollow">
+posted @ 2020-04-13 08:14 削微寒 阅读 (419) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12687908" rel="nofollow">
     编辑
 </a>
 </div>
@@ -823,7 +585,7 @@ posted @ 2020-03-03 09:32 极客挖掘机 阅读 (200) 评论 (1)
 <div class="topicListFooter">
     <div id="nav_next_page">
         
-    <a href="https://www.cnblogs.com/babycomeon/default.html?page=2">
+    <a href="https://www.cnblogs.com/xueweihan/default.html?page=2">
         下一页
     </a>
 
@@ -862,7 +624,7 @@ posted @ 2020-03-03 09:32 极客挖掘机 阅读 (200) 评论 (1)
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 极客挖掘机
+Copyright &copy; 2020 削微寒
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 
@@ -871,17 +633,6 @@ Copyright &copy; 2020 极客挖掘机
 </div><!--end: home 自定义的最大容器 -->
 
 
-    <div id="page_end_html">
-        <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?0b8457e2520fe3afff6f4df6c82109c9";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<script type="text/javascript" src="https://s5.cnzz.com/z_stat.php?id=1277837552&web_id=1277837552"></script>
-    </div>
+    
 </body>
 </html>

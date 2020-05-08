@@ -50,8 +50,8 @@ namespace WindowsFormsApp5
                     else break;
                 }
                 count++;
-                Task<string> task = Task.Run(() => DownloadandParse(current));
-                Thread.Sleep(200);
+                int index = count;
+                Task<string> task = Task.Run(() => DownloadandParse(current,index));
                 tasks.Add(task);
             }
             Task.WaitAll(tasks.ToArray());
@@ -60,14 +60,14 @@ namespace WindowsFormsApp5
             textBox2.Text = crawlingPocess;
         }
 
-        public string DownloadandParse(string url)
+        public string DownloadandParse(string url,int index)
         {
             try
             {
                 System.Net.WebClient webClient = new WebClient();
                 webClient.Encoding = Encoding.UTF8;
                 string html = webClient.DownloadString(url);
-                string fileName = count.ToString();
+                string fileName = index.ToString();
                 File.WriteAllText(fileName, html, Encoding.UTF8);
                 crawlSuccessCount++;
                 crawlingPocess += ("爬行页面!\r\n" + url + "\r\n");

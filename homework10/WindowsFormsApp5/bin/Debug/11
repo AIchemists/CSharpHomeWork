@@ -69,7 +69,7 @@
             </div>
             <div class="rss_link" id="rss_block">
 <span id="posts_refresh_tips"></span><a id="posts_refresh" href="#" class="refresh" title="刷新博文列表" onclick="aggSite.loadCategoryPostList();return false">刷新</a><a href="http://feed.cnblogs.com/blog/sitehome/rss"><img src="//common.cnblogs.com/images/icon_rss.gif" alt="点击订阅" style="position:relative;top:2px;" title="订阅博客园文章" /></a>            </div>
-                <div id="headline_block" class="headline"><ul><li class="editor_pick"><a href="https://www.cnblogs.com/zuoxiaolong/p/12834121.html" id="editor_pick_lnk" target="_blank">【编辑推荐】新人程序员必须知道的<span id="editor_pick_count"></span></a> <a href="/aggsite/headline" title="查看更多编辑推荐" class="right_more">»</a></li><li><a href="https://www.cnblogs.com/c7jie/p/12842459.html" target="_blank" title="阅读872, 评论4, 推荐8">[最多推荐]C# 基础知识系列- 17 实战篇 编写一个小工具（1）(4/872)</a> <a href="/aggsite/topdigged24h" title="查看24小时推荐排行" class="right_more">»</a></li><li><a href="https://news.cnblogs.com/n/661339/" target="_blank" title="阅读2758, 评论18, 推荐7">[新闻头条]任正非：为了胜利必须逼你们，不努力补课就换人！(18/2758)</a> <a href="https://news.cnblogs.com/" title="查看更多新闻" class="right_more">»</a></li><li><a href="https://news.cnblogs.com/n/661406/" target="_blank" title="阅读277, 评论0, 推荐3">[推荐新闻]GitHub 新功能宣布：在线 VS Code 开发环境 Codespaces、论坛等(0/277)</a> <a href="https://news.cnblogs.com/n/recommend" title="查看更多推荐新闻" class="right_more">»</a></li></ul></div>
+                <div id="headline_block" class="headline"><ul><li class="editor_pick"><a href="https://www.cnblogs.com/zuoxiaolong/p/12834121.html" id="editor_pick_lnk" target="_blank">【编辑推荐】新人程序员必须知道的<span id="editor_pick_count"></span></a> <a href="/aggsite/headline" title="查看更多编辑推荐" class="right_more">»</a></li><li><a href="https://www.cnblogs.com/c7jie/p/12842459.html" target="_blank" title="阅读934, 评论4, 推荐8">[最多推荐]C# 基础知识系列- 17 实战篇 编写一个小工具（1）(4/934)</a> <a href="/aggsite/topdigged24h" title="查看24小时推荐排行" class="right_more">»</a></li><li><a href="https://news.cnblogs.com/n/661349/" target="_blank" title="阅读505, 评论0, 推荐3">[新闻头条]笑果没文化，池子没未来(0/505)</a> <a href="https://news.cnblogs.com/" title="查看更多新闻" class="right_more">»</a></li><li><a href="https://news.cnblogs.com/n/661406/" target="_blank" title="阅读414, 评论0, 推荐3">[推荐新闻]GitHub 新功能宣布：在线 VS Code 开发环境 Codespaces、论坛等(0/414)</a> <a href="https://news.cnblogs.com/n/recommend" title="查看更多推荐新闻" class="right_more">»</a></li></ul></div>
 
             <div id="pager_top" style="display:none"></div>
             <div id="post_list_tips" class="hide"></div>
@@ -77,24 +77,47 @@
             <div id="post_list">
                 <div class="post_item">
 <div class="digg">
-    <div class="diggit" onclick="DiggPost('weixk',12849200,522412,1)"> 
-	<span class="diggnum" id="digg_count_12849200">0</span>
+    <div class="diggit" onclick="DiggPost('shelwinnee',12849798,194599,1)"> 
+	<span class="diggnum" id="digg_count_12849798">0</span>
 	</div>
 	<div class="clear"></div>
-    <div id="digg_tip_12849200" class="digg_tip">
+    <div id="digg_tip_12849798" class="digg_tip">
         
     </div>
 </div>      
 <div class="post_item_body">
-	<h3><a class="titlelnk" href="https://www.cnblogs.com/weixk/p/12849200.html" target="_blank">软件设计七大原则</a></h3>               	
+	<h3><a class="titlelnk" href="https://www.cnblogs.com/shelwinnee/p/12849798.html" target="_blank">关于使用ffmpeg的一些牢骚</a></h3>               	
     <p class="post_item_summary">
-    软件设计七大原则 1、 开闭原则 定义：一个软件实体，如类、模块和函数应该对扩展开放，对修改关闭。中心思想：用抽象构建框架，用实现扩展细节。即面向抽象编程。优点：提高软件系统的可复用性和可维护性。举例：很多互联网公司实行弹性制考勤，每天上班8小时，这是不可修改的，但是什么时间上班和下班，是开放的。  ...
+<a href="https://www.cnblogs.com/shelwinnee/" target="_blank"><img width="48" height="48" class="pfs" src="https://pic.cnblogs.com/face/662225/20140811164502.png" alt=""/></a>    一、啰嗦几句 好几年不写博客了，一是工作计算机都加密了没法编辑提交；二是各种语言混用，什么都会就是什么都不会，delphi、c#、vb、python、c++要说我精通啥，啥也不精，所以不敢乱写。 最近做一个关于视频处理的项目，用到ffmpeg，实在是憋不住，在此记录一下摸索的过程。可以毫不夸张的说， ...
     </p>              
     <div class="post_item_foot">                    
-    <a href="https://www.cnblogs.com/weixk/" class="lightblue">weixiaokun</a> 
-    发布于 2020-05-08 12:11 
-    <span class="article_comment"><a href="https://www.cnblogs.com/weixk/p/12849200.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/weixk/p/12849200.html" class="gray">阅读(5)</a></span></div>
+    <a href="https://www.cnblogs.com/shelwinnee/" class="lightblue">pythonic</a> 
+    发布于 2020-05-08 12:43 
+    <span class="article_comment"><a href="https://www.cnblogs.com/shelwinnee/p/12849798.html#commentform" title="2020-05-08 12:53" class="gray">
+        评论(1)</a></span><span class="article_view"><a href="https://www.cnblogs.com/shelwinnee/p/12849798.html" class="gray">阅读(19)</a></span></div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="post_item">
+<div class="digg">
+    <div class="diggit" onclick="DiggPost('yinjihuan',12849787,496691,1)"> 
+	<span class="diggnum" id="digg_count_12849787">0</span>
+	</div>
+	<div class="clear"></div>
+    <div id="digg_tip_12849787" class="digg_tip">
+        
+    </div>
+</div>      
+<div class="post_item_body">
+	<h3><a class="titlelnk" href="https://www.cnblogs.com/yinjihuan/p/12849787.html" target="_blank">笑话：大厂都在用的任务调度框架我能不知道吗？？？</a></h3>               	
+    <p class="post_item_summary">
+    前言 我之前的工作中一直在用 Elastic Job 来做任务调度。这也是大家为什么能在我的书籍《Spring Cloud 微服务 入门 实战与进阶》中看到 Elastic Job 的章节。 从 2017 的 2.1.5 版本之后 Elastic Job 没再更新过。我们在做技术选型的时候，对框架的 ...
+    </p>              
+    <div class="post_item_foot">                    
+    <a href="https://www.cnblogs.com/yinjihuan/" class="lightblue">猿天地</a> 
+    发布于 2020-05-08 12:31 
+    <span class="article_comment"><a href="https://www.cnblogs.com/yinjihuan/p/12849787.html#commentform" title="0001-01-01 08:05" class="gray">
+        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/yinjihuan/p/12849787.html" class="gray">阅读(55)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -117,7 +140,7 @@
     <a href="https://www.cnblogs.com/wzxNote/" class="lightblue">鬼谷子com</a> 
     发布于 2020-05-08 11:26 
     <span class="article_comment"><a href="https://www.cnblogs.com/wzxNote/p/12849461.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/wzxNote/p/12849461.html" class="gray">阅读(41)</a></span></div>
+        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/wzxNote/p/12849461.html" class="gray">阅读(62)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -140,7 +163,7 @@
     <a href="https://www.cnblogs.com/xxbiao/" class="lightblue">甲由崽</a> 
     发布于 2020-05-08 11:12 
     <span class="article_comment"><a href="https://www.cnblogs.com/xxbiao/p/12845636.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/xxbiao/p/12845636.html" class="gray">阅读(92)</a></span></div>
+        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/xxbiao/p/12845636.html" class="gray">阅读(118)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -163,14 +186,14 @@
     <a href="https://www.cnblogs.com/spec-dog/" class="lightblue">【空山新雨】</a> 
     发布于 2020-05-08 11:10 
     <span class="article_comment"><a href="https://www.cnblogs.com/spec-dog/p/12849328.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/spec-dog/p/12849328.html" class="gray">阅读(46)</a></span></div>
+        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/spec-dog/p/12849328.html" class="gray">阅读(61)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
 <div class="post_item">
 <div class="digg">
     <div class="diggit" onclick="DiggPost('cxuanBlog',12849283,517352,1)"> 
-	<span class="diggnum" id="digg_count_12849283">1</span>
+	<span class="diggnum" id="digg_count_12849283">2</span>
 	</div>
 	<div class="clear"></div>
     <div id="digg_tip_12849283" class="digg_tip">
@@ -185,8 +208,8 @@
     <div class="post_item_foot">                    
     <a href="https://www.cnblogs.com/cxuanBlog/" class="lightblue">程序员cxuan</a> 
     发布于 2020-05-08 11:05 
-    <span class="article_comment"><a href="https://www.cnblogs.com/cxuanBlog/p/12849283.html#commentform" title="2020-05-08 11:16" class="gray">
-        评论(1)</a></span><span class="article_view"><a href="https://www.cnblogs.com/cxuanBlog/p/12849283.html" class="gray">阅读(78)</a></span></div>
+    <span class="article_comment"><a href="https://www.cnblogs.com/cxuanBlog/p/12849283.html#commentform" title="2020-05-08 12:17" class="gray">
+        评论(2)</a></span><span class="article_view"><a href="https://www.cnblogs.com/cxuanBlog/p/12849283.html" class="gray">阅读(105)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -209,7 +232,7 @@
     <a href="https://www.cnblogs.com/nebulagraph/" class="lightblue">NebulaGraph</a> 
     发布于 2020-05-08 10:48 
     <span class="article_comment"><a href="https://www.cnblogs.com/nebulagraph/p/12849134.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/nebulagraph/p/12849134.html" class="gray">阅读(85)</a></span></div>
+        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/nebulagraph/p/12849134.html" class="gray">阅读(98)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -232,7 +255,7 @@
     <a href="https://www.cnblogs.com/sanshengshui/" class="lightblue">三升水</a> 
     发布于 2020-05-08 10:31 
     <span class="article_comment"><a href="https://www.cnblogs.com/sanshengshui/p/12849014.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/sanshengshui/p/12849014.html" class="gray">阅读(51)</a></span></div>
+        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/sanshengshui/p/12849014.html" class="gray">阅读(62)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -255,7 +278,7 @@
     <a href="https://www.cnblogs.com/edison0621/" class="lightblue">艾心❤</a> 
     发布于 2020-05-08 10:08 
     <span class="article_comment"><a href="https://www.cnblogs.com/edison0621/p/12846376.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/edison0621/p/12846376.html" class="gray">阅读(145)</a></span></div>
+        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/edison0621/p/12846376.html" class="gray">阅读(164)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -278,7 +301,7 @@
     <a href="https://www.cnblogs.com/starry-skys/" class="lightblue">烟雨星空</a> 
     发布于 2020-05-08 09:55 
     <span class="article_comment"><a href="https://www.cnblogs.com/starry-skys/p/12848747.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/starry-skys/p/12848747.html" class="gray">阅读(130)</a></span></div>
+        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/starry-skys/p/12848747.html" class="gray">阅读(138)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -301,7 +324,7 @@
     <a href="https://www.cnblogs.com/zhangweizhong/" class="lightblue">章为忠</a> 
     发布于 2020-05-08 09:47 
     <span class="article_comment"><a href="https://www.cnblogs.com/zhangweizhong/p/12680873.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/zhangweizhong/p/12680873.html" class="gray">阅读(122)</a></span></div>
+        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/zhangweizhong/p/12680873.html" class="gray">阅读(139)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -324,7 +347,7 @@
     <a href="https://www.cnblogs.com/tree1123/" class="lightblue">独孤风</a> 
     发布于 2020-05-08 09:46 
     <span class="article_comment"><a href="https://www.cnblogs.com/tree1123/p/12848672.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/tree1123/p/12848672.html" class="gray">阅读(62)</a></span></div>
+        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/tree1123/p/12848672.html" class="gray">阅读(71)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -347,7 +370,7 @@
     <a href="https://www.cnblogs.com/heniu/" class="lightblue">和牛</a> 
     发布于 2020-05-08 09:41 
     <span class="article_comment"><a href="https://www.cnblogs.com/heniu/p/12848642.html#commentform" title="2020-05-08 11:49" class="gray">
-        评论(1)</a></span><span class="article_view"><a href="https://www.cnblogs.com/heniu/p/12848642.html" class="gray">阅读(280)</a></span></div>
+        评论(1)</a></span><span class="article_view"><a href="https://www.cnblogs.com/heniu/p/12848642.html" class="gray">阅读(305)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -370,7 +393,7 @@
     <a href="https://www.cnblogs.com/xybaby/" class="lightblue">xybaby</a> 
     发布于 2020-05-08 09:33 
     <span class="article_comment"><a href="https://www.cnblogs.com/xybaby/p/12835980.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/xybaby/p/12835980.html" class="gray">阅读(101)</a></span></div>
+        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/xybaby/p/12835980.html" class="gray">阅读(109)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -393,7 +416,7 @@
     <a href="https://www.cnblogs.com/xueweihan/" class="lightblue">削微寒</a> 
     发布于 2020-05-08 09:19 
     <span class="article_comment"><a href="https://www.cnblogs.com/xueweihan/p/12845530.html#commentform" title="2020-05-08 10:10" class="gray">
-        评论(1)</a></span><span class="article_view"><a href="https://www.cnblogs.com/xueweihan/p/12845530.html" class="gray">阅读(170)</a></span></div>
+        评论(1)</a></span><span class="article_view"><a href="https://www.cnblogs.com/xueweihan/p/12845530.html" class="gray">阅读(180)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -416,7 +439,7 @@
     <a href="https://www.cnblogs.com/javastack/" class="lightblue">Java技术栈</a> 
     发布于 2020-05-08 09:10 
     <span class="article_comment"><a href="https://www.cnblogs.com/javastack/p/12848446.html#commentform" title="2020-05-08 11:44" class="gray">
-        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/javastack/p/12848446.html" class="gray">阅读(324)</a></span></div>
+        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/javastack/p/12848446.html" class="gray">阅读(342)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -439,7 +462,7 @@
     <a href="https://www.cnblogs.com/babycomeon/" class="lightblue">极客挖掘机</a> 
     发布于 2020-05-08 08:57 
     <span class="article_comment"><a href="https://www.cnblogs.com/babycomeon/p/12848388.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/babycomeon/p/12848388.html" class="gray">阅读(116)</a></span></div>
+        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/babycomeon/p/12848388.html" class="gray">阅读(123)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -462,7 +485,7 @@
     <a href="https://www.cnblogs.com/podolski/" class="lightblue">波多尔斯基</a> 
     发布于 2020-05-08 01:45 
     <span class="article_comment"><a href="https://www.cnblogs.com/podolski/p/12847037.html#commentform" title="2020-05-08 08:17" class="gray">
-        评论(1)</a></span><span class="article_view"><a href="https://www.cnblogs.com/podolski/p/12847037.html" class="gray">阅读(476)</a></span></div>
+        评论(1)</a></span><span class="article_view"><a href="https://www.cnblogs.com/podolski/p/12847037.html" class="gray">阅读(490)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -485,7 +508,7 @@
     <a href="https://www.cnblogs.com/jclian91/" class="lightblue">山阴少年</a> 
     发布于 2020-05-07 23:58 
     <span class="article_comment"><a href="https://www.cnblogs.com/jclian91/p/12846772.html#commentform" title="2020-05-08 01:13" class="gray">
-        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/jclian91/p/12846772.html" class="gray">阅读(105)</a></span></div>
+        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/jclian91/p/12846772.html" class="gray">阅读(109)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -508,30 +531,7 @@
     <a href="https://www.cnblogs.com/songjilong/" class="lightblue">农夫三拳有点疼~</a> 
     发布于 2020-05-07 23:57 
     <span class="article_comment"><a href="https://www.cnblogs.com/songjilong/p/12846761.html#commentform" title="2020-05-08 01:24" class="gray">
-        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/songjilong/p/12846761.html" class="gray">阅读(130)</a></span></div>
-</div>
-<div class="clear"></div>
-</div>
-<div class="post_item">
-<div class="digg">
-    <div class="diggit" onclick="DiggPost('bowen404',12846548,564308,1)"> 
-	<span class="diggnum" id="digg_count_12846548">0</span>
-	</div>
-	<div class="clear"></div>
-    <div id="digg_tip_12846548" class="digg_tip">
-        
-    </div>
-</div>      
-<div class="post_item_body">
-	<h3><a class="titlelnk" href="https://www.cnblogs.com/bowen404/p/12846548.html" target="_blank">树莓派4B踩坑指南 - （15）搭建在线python IDE</a></h3>               	
-    <p class="post_item_summary">
-<a href="https://www.cnblogs.com/bowen404/" target="_blank"><img width="48" height="48" class="pfs" src="https://pic.cnblogs.com/face/1044828/20191217111727.png" alt=""/></a>    今天想在树莓派上自己搭一个在线的python IDE，于是找到了一篇教程 Fred913大神的 "从头开始制作OJ 在线IDE的搭建" 自己尝试动手做了一下, 还是发现不少细节需要注意, 记录在此 如果不知道怎么用树莓派搭建网站的可以参考我之前的文章: "树莓派4B踩坑指南 （11）免费搭建网站（宝 ...
-    </p>              
-    <div class="post_item_foot">                    
-    <a href="https://www.cnblogs.com/bowen404/" class="lightblue">Bowen404</a> 
-    发布于 2020-05-07 23:56 
-    <span class="article_comment"><a href="https://www.cnblogs.com/bowen404/p/12846548.html#commentform" title="0001-01-01 08:05" class="gray">
-        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/bowen404/p/12846548.html" class="gray">阅读(241)</a></span></div>
+        评论(0)</a></span><span class="article_view"><a href="https://www.cnblogs.com/songjilong/p/12846761.html" class="gray">阅读(133)</a></span></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -550,16 +550,16 @@
 <div id="cate_title_title"><div class="cate_title">网站分类</div></div>
 <ul id="cate_item">
 <li id="cate_item_108698" onmouseover="cateShow(108698)" onmouseout="cateHidden(108698)">
-<a href="/cate/108698/">.NET技术(4)</a>
+<a href="/cate/108698/">.NET技术(5)</a>
 </li>
 <li id="cate_item_2" onmouseover="cateShow(2)" onmouseout="cateHidden(2)">
-<a href="/cate/2/">编程语言(11)</a>
+<a href="/cate/2/">编程语言(25)</a>
 </li>
 <li id="cate_item_108701" onmouseover="cateShow(108701)" onmouseout="cateHidden(108701)">
 <a href="/cate/108701/">软件设计(1)</a>
 </li>
 <li id="cate_item_108703" onmouseover="cateShow(108703)" onmouseout="cateHidden(108703)">
-<a href="/cate/108703/">Web前端(6)</a>
+<a href="/cate/108703/">Web前端(10)</a>
 </li>
 <li id="cate_item_108704" onmouseover="cateShow(108704)" onmouseout="cateHidden(108704)">
 <a href="/cate/108704/">企业信息化(1)</a>
@@ -571,19 +571,19 @@
 <a href="/cate/108709/">软件工程(0)</a>
 </li>
 <li id="cate_item_108712" onmouseover="cateShow(108712)" onmouseout="cateHidden(108712)">
-<a href="/cate/108712/">数据库技术(2)</a>
+<a href="/cate/108712/">数据库技术(4)</a>
 </li>
 <li id="cate_item_108724" onmouseover="cateShow(108724)" onmouseout="cateHidden(108724)">
 <a href="/cate/108724/">操作系统(0)</a>
 </li>
 <li id="cate_item_4" onmouseover="cateShow(4)" onmouseout="cateHidden(4)">
-<a href="/cate/4/">其他分类(5)</a>
+<a href="/cate/4/">其他分类(10)</a>
 </li>
 <li id="cate_item_0" onmouseover="cateShow(0)" onmouseout="cateHidden(0)">
-<a href="/cate/all/">所有随笔(696)</a>
+<a href="/cate/all/">所有随笔(1410)</a>
 </li>
 <li id="cate_item_-1" onmouseover="cateShow(-1)" onmouseout="cateHidden(-1)">
-<a href="/comment/">所有评论(139)</a>
+<a href="/comment/">所有评论(316)</a>
 </li>
 </ul>
 <div class="cate_bottom"></div>

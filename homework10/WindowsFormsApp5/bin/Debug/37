@@ -3,29 +3,29 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="referrer" content="never" />
-    <meta property="og:description" content="一个学会正则表达式的好机会。" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="前面介绍了Spring Boot 中的整合Mybatis并实现增删改查。不清楚的朋友可以看看之前的文章：https://www.cnblogs.com/zhangweizhong/category/1" />
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>这个教程，真的让我学会了正则表达式 - 和牛 - 博客园</title>
+    <title>Spring Boot入门系列（十三）如何实现事务 - 章为忠 - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
-    <link id="MainCss" rel="stylesheet" href="/skins/blacklowkey/bundle-blacklowkey.min.css?v=_B1ixsexV8tpUJyj4tVsjnDwkM8eRY6ZCwGSi1TrV7s" />
+    <link id="MainCss" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip.min.css?v=1CubIA3L29CO3-6VLJIOrrj2uGfyKeX_-xaumWzHk7o" />
     
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/blacklowkey/bundle-blacklowkey-mobile.min.css?v=cYvlxMu_nd6MVfg-vi7YqOC6FaZ7VHFsDM166vO_ekA" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip-mobile.min.css?v=0pGk3D9Ik_jI4q1TALBT2ybOjIePHS_80_0J4DDOQiY" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/heniu/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/heniu/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/heniu/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/zhangweizhong/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/zhangweizhong/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/zhangweizhong/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 442046;
-        var currentBlogApp = 'heniu';
+        var currentBlogId = 171085;
+        var currentBlogApp = 'zhangweizhong';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'BlackLowKey';
+        var skinName = 'darkgreentrip';
     </script>
     
     
@@ -39,13 +39,14 @@
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/heniu/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/zhangweizhong/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/heniu/">和牛</a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/zhangweizhong/">章为忠</a>
 </h1>
 <h2>
-
+【章小鱼】虽千万人，吾往矣。
+我的博客地址：<a href="http://www.fpeach.com/">www.fpeach.com</a>
 </h2>
 
 
@@ -60,7 +61,7 @@
 博客园</a>
 </li>
 <li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/heniu/">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/zhangweizhong/">
 首页</a>
 </li>
 <li>
@@ -69,10 +70,10 @@
 新随笔</a>
 </li>
 <li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%92%8C%E7%89%9B">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%AB%A0%E4%B8%BA%E5%BF%A0">
 联系</a></li>
 <li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/heniu/rss/">
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/zhangweizhong/rss/">
 订阅</a>
 <!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
 <li>
@@ -85,11 +86,11 @@
 		<div class="blogStats">
 			
 			<span id="stats_post_count">随笔 - 
-19&nbsp; </span>
+180&nbsp; </span>
 <span id="stats_article_count">文章 - 
 0&nbsp; </span>
 <span id="stats-comment_count">评论 - 
-29</span>
+691</span>
 
 			
 		</div><!--end: blogStats -->
@@ -105,754 +106,84 @@
         <div class="post">
             <h1 class = "postTitle">
                 
-<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/heniu/p/12848642.html">这个教程，真的让我学会了正则表达式</a>
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/zhangweizhong/p/12680873.html">Spring Boot入门系列（十三）如何实现事务</a>
 
             </h1>
             <div class="clear"></div>
             <div class="postBody">
                 
-    <div id="cnblogs_post_description" style="display: none">
-        一个学会正则表达式的好机会。
-    </div>
 <div id="cnblogs_post_body" class="blogpost-body ">
-    <h2 style="padding: 0px; font-weight: bold; color: black; font-size: 22px; display: block; text-align: center; background-image: url('https://my-wechat.mdnice.com/mdnice/mountain_2_20191028221337.png'); background-position: center center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 63px; margin-top: 38px; margin-bottom: 10px;" data-tool="mdnice编辑器"><span class="content" style="text-align: center; display: inline-block; height: 38px; line-height: 42px; color: #3c70c6; background-position: left center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-size: 63px; margin-top: 38px; font-size: 18px; margin-bottom: 10px;">这个教程，真的让我学会了正则表达式</span></h2>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">这是一篇翻译文章。我学过很多次正则表达式，总是学了忘，忘了学，一到用的时候还是只能靠搜索引擎。</p>
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">这回看到这个正则教程，感觉非常惊喜。尝试翻译了一遍，译得不好，大家可以看原文，很容易理解。</p>
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">原文地址：https://refrf.shreyasminocha.me/</p>
-</blockquote>
-<h3 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;" data-tool="mdnice编辑器"><span class="content" style="font-size: 16px; font-weight: bold; display: inline-block; margin-left: 8px; color: #3c70c6;">1 介绍</span></h3>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">正则表达式允许定义一种模式，并通过这种模式针对字符串执行对应的操作。与模式匹配的子字符串称为&ldquo;匹配&rdquo;。</p>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">正则表达式是定义搜索模式的一串字符。</p>
-</blockquote>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">正则表达式主要用在如下场景：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li>输入验证</li>
-<li>查找替换操作</li>
-<li>高级字符串操作</li>
-<li>文件搜索或重命名</li>
-<li>白名单和黑名单</li>
-</ul>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">正则表达式不太适合用在这些场景：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li>XML 或 HTML 解析</li>
-<li>完全匹配的日期</li>
-</ul>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">有许多实现正则匹配的引擎，每种都有自己的特性。这本书将避免讨论（不同引擎之间的）特性差异，而是只讨论在大多数情况下不同引擎都共有的特征。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">整本书中的示例使用JavaScript。因此，这本书可能会稍微偏向 JavaScript 的正则引擎。</p>
-<h3 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;" data-tool="mdnice编辑器"><span class="content" style="font-size: 16px; font-weight: bold; display: inline-block; margin-left: 8px; color: #3c70c6;">2 基础</span></h3>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">正则表达式通常格式化为 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/&lt;rules&gt;/&lt;flags&gt;</code>，通常为了简洁而省略后面的 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/&lt;flags&gt;</code>。关于 flag 我们将在下一章详细讨论。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">让我们从<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/p/g</code> 这个正则表达式开始。现在，请将 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/g</code> flag 视为固定不变的。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/p/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://imgkr.cn-bj.ufileos.com/08756489-2a7f-4766-b6da-6aaa190a9785.png" alt=""></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">如我们所见，<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/p/g</code> 匹配所有小写的 p 字符。</p>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">注意</p>
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">默认情况下，正则表达式区分大小写。</p>
-</blockquote>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">在输入字符串中找到的正则表达式模式的实例称为&ldquo;匹配&rdquo;。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/pp/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://imgkr.cn-bj.ufileos.com/7217110b-a14a-4394-81f7-402b264919bc.png" alt=""></p>
-<h3 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;" data-tool="mdnice编辑器"><span class="content" style="font-size: 16px; font-weight: bold; display: inline-block; margin-left: 8px; color: #3c70c6;">3 字符组</span></h3>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">可以从一组字符中匹配一个字符。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/[aeiou]/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://imgkr.cn-bj.ufileos.com/ed7321a7-4fa8-4c74-96a9-222e5a1552d2.png" alt=""></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">[aeiou]/g</code> 匹配输入字符串中的所有元音。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">下面是另一个例子：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/p[aeiou]t/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://imgkr.cn-bj.ufileos.com/f61b3079-901c-4cfd-b53b-989c31dab41f.png" alt=""></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">我们匹配一个 p，后跟一个元音，然后是一个 t。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">有一个更直观的快捷方式，可以在一个连续的范围内匹配一个字符。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/[a-z]/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://imgkr.cn-bj.ufileos.com/80660e5c-0b87-40cf-ad1e-3ef64333e5a1.png" alt=""></p>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">警告</p>
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">表达式 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/[a-z]/g</code> 只匹配一个字符。在上面的示例中，每个字符都有一个单独的匹配项。不是整个字符串匹配。</p>
-</blockquote>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">我们也可以在正则表达式中组合范围和单个字符。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/[A-Za-z0-9_-]/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://imgkr.cn-bj.ufileos.com/aa7015a8-d0dd-4c2b-a90b-01c1379bbda5.png" alt=""></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">我们的正则表达式 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/[A-Za-z0-9_-]/g</code> 匹配一个字符，该字符必须（至少）是以下字符之一：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">A-Z</code></li>
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">a-z</code></li>
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">0-9</code></li>
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">_</code> 或者 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">-</code></li>
-</ul>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">我们也可以&ldquo;否定&rdquo;这些规则：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/[^aeiou]/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://imgkr.cn-bj.ufileos.com/cf09676f-40bf-4e1b-b1e1-8d83d7c9108b.png" alt=""></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/[aeiou]/g</code>与 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/[^aeiou]/g</code> 之间的唯一区别是 ^ 紧跟在左括号之后。其目的是"否定"括号中定义的规则。它表示的意思是：</p>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">匹配任何不属于a、e、i、o和 u 的字符</p>
-</blockquote>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">3.1 例子</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">非法的用户名字符</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/[^a-zA-Z_0-9-]/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://imgkr.cn-bj.ufileos.com/311e7c55-1fb0-4e98-aec6-742e31721db7.png" alt=""></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">指定字符</strong></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/[A-HJ-NP-Za-kmnp-z2-9]/g</code></p>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://imgkr.cn-bj.ufileos.com/92c757e9-b0ee-42ad-9e25-560ecfeac867.png" alt=""></p>
-<h3 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;" data-tool="mdnice编辑器"><span class="content" style="font-size: 16px; font-weight: bold; display: inline-block; margin-left: 8px; color: #3c70c6;">4 字符转义</span></h3>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">字符转义是对某些通用字符类的简略表达方式。</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">4.1 数字字符 <code>\d</code></span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">转义符 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\d</code> 表示匹配数字字符 0-9。等同于 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">[0-9]</code>。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\d/g</code> (这里请仔细看)</li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/JIeq2KDVCphkcQA.png" alt="regular_expression_10-fs8.png">regular_expression_10-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\d\d/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/dg4nuwyUDxNZ6ae.png" alt="regular_expression_11-fs8.png">regular_expression_11-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\D</code>是<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\d</code> 的反面，相当于<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">[^0-9]</code>。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\D/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/NhYQ7DXOdqU3RGc.png" alt="regular_expression_12-fs8.png">regular_expression_12-fs8.png</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">4.2 单词字符 <code>\w</code></span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">转义符 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\w</code> 匹配单词字符。包括：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li>小写字母 a-z</li>
-<li>大写字母 A-Z</li>
-<li>数字 0-9</li>
-<li>下划线 _</li>
-</ul>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">等价于 [a-zA-Z0-9_]</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\w/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/eyK3CnqYz5xwm79.png" alt="regular_expression_13-fs8.png">regular_expression_13-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\W/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/YjNuzh5eR9knEw3.png" alt="regular_expression_14-fs8.png">regular_expression_14-fs8.png</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">4.3 空白字符 <code>\s</code></span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">转义符 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\s</code>匹配空白字符。具体匹配的字符集取决于正则表达式引擎，但大多数至少包括：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li>空格</li>
-<li>tab 制表符 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\t</code></li>
-<li>回车 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\r</code></li>
-<li>换行符 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\n</code></li>
-<li>换页 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\f</code></li>
-</ul>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">其他还可能包括垂直制表符（\v）。Unicode自识别引擎通常匹配分隔符类别中的所有字符。然而，技术细节通常并不重要。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\s/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/rYfKiU6qBlV29cN.png" alt="regular_expression_15-fs8.png">regular_expression_15-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\S/g</code> (大写 s)</li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/ts4vRTGngK2P69M.png" alt="regular_expression_16-fs8.png">regular_expression_16-fs8.png</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">4.4 任意字符 <code>.</code></span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">虽然不是典型的字符转义。<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">.</code> 可以匹配任意1个字符。（除换行符 \n 以外，通过 dotall 修饰符，也可以匹配换行符 \n）</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/./g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/uR8gW41qTo5zxUe.png" alt="regular_expression_17-fs8.png">regular_expression_17-fs8.png</p>
-<h3 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;" data-tool="mdnice编辑器"><span class="content" style="font-size: 16px; font-weight: bold; display: inline-block; margin-left: 8px; color: #3c70c6;">5 转义</span></h3>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">在正则表达式中，有些字符有特殊的含义，我们将在这一章中进行探讨：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">|</code></li>
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">{,}</code></li>
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">(,）</code></li>
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">[,]</code></li>
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">^</code>, <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">$</code></li>
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">+</code>, <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">*</code>, <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">?</code></li>
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\</code></li>
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">.</code> 只在字符类中的字面量。</li>
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">-</code> : 有时是字符类中的特殊字符。</li>
-</ul>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">当我们想通过字面意思匹配这些字符时，我们可以再这些字符前面加 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\</code> &ldquo;转义&rdquo;它们。</p>
-</blockquote>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\(paren\)/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/NTHOAfJ24WC7nEq.png" alt="regular_expression_18-fs8.png">regular_expression_18-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/(paren)/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/gD7MfbzKhPx8XkR.png" alt="regular_expression_19-fs8.png">regular_expression_19-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/example\.com/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/2qcIoUzvDrdbyh7.png" alt="regular_expression_20.png">regular_expression_20.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/example.com/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/EMnCe2QYfhN3udc.png" alt="regular_expression_21.png">regular_expression_21.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/A\+/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/pk6OngdTVLrwDiu.png" alt="regular_expression_22-fs8.png">regular_expression_22-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/A+/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/8CKN5mlp9ODtgwS.png" alt="regular_expression_23-fs8.png">regular_expression_23-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/worth \$5/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/6qkNia1G4QW3XOr.png" alt="regular_expression_24-fs8.png">regular_expression_24-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/worth $5/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/3l1kf5GFqNDHZ7M.png" alt="regular_expression_25-fs8.png">regular_expression_25-fs8.png</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">5.1 例子</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">JavaScript 内联注释</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\/\/.*</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/v4LDRxhbcM9yFEe.png" alt="regular_expression_26-fs8.png">regular_expression_26-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">星号包围的子串</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/*[^\*]*\*</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/WGoCOhkenQcz8bA.png" alt="regular_expression_27-fs8.png">regular_expression_27-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">第一个和最后一个星号是字面上的，所有他们要用 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\*</code> 转义。字符集里面的星号不需要被转义，但为了清楚起见，我还是转义了它。紧跟在字符集后面的星号表示字符集的重复，我们将在后面的章节中对此进行探讨。</p>
-<h3 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;" data-tool="mdnice编辑器"><span class="content" style="font-size: 16px; font-weight: bold; display: inline-block; margin-left: 8px; color: #3c70c6;">6 组</span></h3>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">顾名思义，组是用来&ldquo;组合&rdquo;正则表达式的组件的。这些组可用于：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li>提取匹配的子集</li>
-<li>重复分组任意次数</li>
-<li>参考先前匹配的子字符串</li>
-<li>增强可读性</li>
-<li>允许复杂的替换</li>
-</ul>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">这一章我们先学组如何工作，之后的章节还会有更多例子。</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">6.1 捕获组</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">捕获组用（&hellip;）表示。下面是一个解释性的例子：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/a(bcd)e/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/q23arpHQlDwcu96.png" alt="regular_expression_28-fs8.png">regular_expression_28-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">捕获组允许提取部分匹配项。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\{([^{}]*)\}/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/06/peNifkBC5woOaDF.png" alt="regular_expression_29-fs8.png">regular_expression_29-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">通过语言的正则函数，您将能够提取括号之间匹配的文本。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">捕获组还可以用于对正则表达式进行部分分组，以便于重复。虽然我们将在接下来的章节中详细介绍重复，但这里有一个示例演示了组的实用性。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/a(bcd)+e/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/xnNkjP8DUtiA6Ld.png" alt="regular_expression_30-fs8.png">regular_expression_30-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">其他时候，它们用于对正则表达式的逻辑相似部分进行分组，以提高可读性。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/(\d\d\d\d)-W(\d\d)/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/vgBz4mibaWnljrV.png" alt="regular_expression_31-fs8.png">regular_expression_31-fs8.png</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">6.2 回溯</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">回溯允许引用之前捕获的子字符串。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">匹配第一组可以使用 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\1</code>，匹配第二组可以使用 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\2</code>，依此类推&hellip;</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/([abc])&times;\1&times;\1/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/UiGSTAaNhFEVl8q.png" alt="regular_expression_32-fs8.png">regular_expression_32-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">不能使用回溯来减少正则表达式中的重复。它们指的是组的匹配，而不是模式。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/[abc][abc][abc]/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/wKDyu6fE3Wqlkd5.png" alt="regular_expression_33-fs8.png">regular_expression_33-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/[abc]\1\1/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/FLh2rNyD9lpxUga.png" alt="regular_expression_34-fs8.png">regular_expression_34-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">下面是一个演示常见用例的示例：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\w+([,|])\w+\1\w+/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/LyQm2JDRnhqtHE4.png" alt="regular_expression_35-fs8.png">regular_expression_35-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">这不能通过重复的字符类来实现。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\w+[,|]\w+[,|]\w+/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/MkqozOfUuvdNY9t.png" alt="regular_expression_36-fs8.png">regular_expression_36-fs8.png</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">6.3 非捕获组</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">非捕获组与捕获组非常相似，只是它们不创建&ldquo;捕获&rdquo;。而是采取形式 （?: ...）</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">非捕获组通常与捕获组一起使用。也许您正在尝试使用捕获组提取匹配的某些部分。而你可能希望使用一个组而不扰乱捕获顺序，这时候你应该使用非捕获组。</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">6.4 例子</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">查询字符串参数</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/^\?(\w+)=(\w+)(?:&amp;(\w+)=(\w+))*$/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/i7nLvBtgJ2HsdcK.png" alt="regular_expression_37-fs8.png">regular_expression_37-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">我们单独匹配第一组键值对，因为这可以让我么使用 &amp; 分隔符， 作为重复组的一部分。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">(基础的) HTML 标签</strong></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">根据经验，不要使用正则表达式来匹配 XML/HTML。不过，我还是提供相关的一个例子：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/&lt;([a-z]+)+&gt;(.*)&lt;\/\1&gt;/gi</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/ZOjU7rVMdf4xmKP.png" alt="regular_expression_38-fs8.png">regular_expression_38-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">姓名</strong></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">查找：<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\b(\w+) (\w+)\b</code></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">替换： 1</p>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">在替换操作，经常使用 2；捕获使用 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\1</code>, <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\2</code></p>
-</blockquote>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">替换之前</p>
-<pre class="custom" data-tool="mdnice编辑器"><code class="hljs" style="overflow-x: auto; padding: 16px; color: #333; background: #f8f8f8; display: -webkit-box; font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; border-radius: 0px; font-size: 12px; -webkit-overflow-scrolling: touch;">John Doe
-Jane Doe
-Sven Svensson
-Janez Novak
-Janez Kranjski
-Tim Joe
-</code></pre>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">替换之后</p>
-<pre class="custom" data-tool="mdnice编辑器"><code class="hljs" style="overflow-x: auto; padding: 16px; color: #333; background: #f8f8f8; display: -webkit-box; font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; border-radius: 0px; font-size: 12px; -webkit-overflow-scrolling: touch;">Doe, John
-Doe, Jane
-Svensson, Sven
-Novak, Janez
-Kranjski, Janez
-Joe, Tim
-</code></pre>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">回溯和复数</strong></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">查找: <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\bword(s?)\b</code></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">替换: <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">phrase$1</code></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">替换之前</p>
-<pre class="custom" data-tool="mdnice编辑器"><code class="hljs" style="overflow-x: auto; padding: 16px; color: #333; background: #f8f8f8; display: -webkit-box; font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; border-radius: 0px; font-size: 12px; -webkit-overflow-scrolling: touch;">This is a paragraph with some words.
+    <p>前面介绍了Spring Boot 中的整合Mybatis并实现增删改查。不清楚的朋友可以看看之前的文章：<a href="https://www.cnblogs.com/zhangweizhong/category/1657780.html">https://www.cnblogs.com/zhangweizhong/category/1657780.html</a>。</p>
+<p>Spring Boot 整合完Mybatis，有个特别重要的功能之前忘记讲了：那就是Spring Boot如何实现事物控制。在我们的实际系统中，事务会被经常用到。特别是数据库操作或者是复杂的业务操作时，必须事物执行。必须保证本次业务的处理结果更改要么都成功，要么都失败。那么这种场景下，我们改如何实现呢？</p>
+<p>&nbsp;</p>
+<h2 id="b3_solo_h3_21">为什么要事务</h2>
+<p>以转账业务为例：一次转载业务涉及数据库表的两次更改。为确保业务完整性，需保证这两次更改要么都成功，要么都失败。否则账户金额就做了，后果非常严重。</p>
+<p><img src="https://img2020.cnblogs.com/blog/306976/202004/306976-20200411162841457-388673908.png" alt="" width="328" height="293"></p>
+<p>&nbsp;</p>
+<h2 id="b3_solo_h3_21">事务播行为</h2>
+<pre>Propagation.REQUIRED -- 支持当前事务，如果当前没有事务，就新建一个事务,最常见的选择。</pre>
+<pre>Propagation.SUPPORTS -- 支持当前事务，如果当前没有事务，就以非事务方式执行</pre>
+<pre>Propagation.MANDATORY <em>-- </em>支持当前事务，如果当前没有事务，就抛出异常。</pre>
+<pre>Propagation.REQUIRES_NEW <em>--</em> 新建事务，如果当前存在事务，把当前事务挂起, 两个事务之间没有关系，一个异常，一个提交，不会同时回滚。</pre>
+<pre>Propagation.NOT_SUPPORTED <em>-- </em>以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。</pre>
+<pre>Propagation.NEVER -- 以非事务方式执行，如果当前存在事务，则抛出异常<br /><br /></pre>
+<h2 id="b3_solo_h2_27">如何实现</h2>
+<p>1、首先创建Spring Boot项目，并整合Mybatis相关的依赖。这个之前的文章讲过，大家可以看我这篇文章：《<a class="postTitle2" href="https://www.cnblogs.com/zhangweizhong/p/12434053.html">Spring Boot入门系列（六）Spring Boot如何整合Mybatis【附详细步骤</a><a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/zhangweizhong/p/12434053.html">】</a><a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/zhangweizhong/p/12434053.html"></a>》</p>
+<p>2、在需要事务的方法上添加&nbsp;<code>@Transactional</code>注解，并通过<code>propagation</code>指定事务机制。</p>
+<p>修改UserServiceImpl 类和UserService类，增加&nbsp;saveUserTransactional 方法。</p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;">    @Override
+    @Transactional(propagation </span>=<span style="color: #000000;"> Propagation.REQUIRED)
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> saveUserTransactional(SysUser user) {
 
-Some instances of the word "word" are in their plural form: "words".
+        userMapper.insert(user);
 
-Yet, some are in their singular form: "word".
-</code></pre>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">替换之后</p>
-<pre class="custom" data-tool="mdnice编辑器"><code class="hljs" style="overflow-x: auto; padding: 16px; color: #333; background: #f8f8f8; display: -webkit-box; font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; border-radius: 0px; font-size: 12px; -webkit-overflow-scrolling: touch;">This is a paragraph with some phrases.
+        </span><span style="color: #0000ff;">int</span> a = 1 / 0<span style="color: #000000;">;
 
-Some instances of the phrase "phrase" are in their plural form: "phrases".
+        user.setIsDelete(</span>1<span style="color: #000000;">);
+        userMapper.updateByPrimaryKeySelective(user);
+    }</span></pre>
+</div>
+<p>说明：</p>
+<ul>
+<li><code>propagation = Propagation.REQUIRED</code>是默认的事务机制，若当前有事务则支持当前事务，否则新建事务。</li>
+<li>springboot 开启事物很简单，只需要加注解@Transactional即可。</li>
+<li><code>@Transactional</code>也可以加在类上，则该类所有方法都遵循该注解配置。</li>
+</ul>
+<p>&nbsp;3、测试调用</p>
+<p>在之前的<em style="font-family: 'Courier New'; font-size: 12px;">MyBatisCRUDController</em>增加测试方法：saveUserTransactional。</p>
+<div class="cnblogs_code">
+<pre>    @RequestMapping("/saveUserTransactional"<span style="color: #000000;">)
+    </span><span style="color: #0000ff;">public</span><span style="color: #000000;"> JSONResult saveUserTransactional() {
 
-Yet, some are in their singular form: "phrase".
-</code></pre>
-<h3 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;" data-tool="mdnice编辑器"><span class="content" style="font-size: 16px; font-weight: bold; display: inline-block; margin-left: 8px; color: #3c70c6;">7 重复</span></h3>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">重复是一个强大而普遍的正则表达式特性。在正则表达式中有几种表示重复的方法。</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">7.1 可选项</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">我们可以使用 ？将某一部分设置成可选的（0或者1次）。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/a?/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/i7eKW2pbufTM4HV.png" alt="regular_expression_39-fs8.png">regular_expression_39-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">另一个例子：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/https?/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/x8OgjtNCTV9mfZL.png" alt="regular_expression_40-fs8.png">regular_expression_40-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">我们还可以让捕获组和非捕获组编程可选的。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/url: (www\.)?example\.com/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/hAmoYcZBq17GprE.png" alt="regular_expression_41-fs8.png">regular_expression_41-fs8.png</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">7.2 零次或者多次</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">如果我们希望匹配零个或多个标记，可以用 * 作为后缀。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/a*/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/ci7xbnlP8YEGXkR.png" alt="regular_expression_42-fs8.png">regular_expression_42-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">我们的正则表达式甚至匹配一个空字符串。</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">7.3 一次或者多次</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">如果我们希望匹配 1 个或多个标记，可以用 + 作为后缀。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/a+/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/3Ln2G4JiHMxSP6y.png" alt="regular_expression_43-fs8.png">regular_expression_43-fs8.png</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">7.4 精确的 x 次</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">如果我们希望匹配特定的标记正好x次，我们可以添加{x}后缀。这在功能上等同于复制粘贴该标记 x 次。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/a{3}/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/VOtZfD5YHnioU4J.png" alt="regular_expression_44-fs8.png">regular_expression_44-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">下面是匹配大写的六个字符的十六进制颜色代码的例子。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/#[0-9A-F]{6}/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/reVPxg7EtIsQoO8.png" alt="regular_expression_45-fs8.png">regular_expression_45-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">这里，标记 {6} 应用于字符集 [0-9A-F]。</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">7.5 最小次和最大次之间</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">如果我们希望在最小次和最大次之间匹配一个特定标记，可以在这个标记后添加 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">{min,max}</code>。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/a{2,4}/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/6qXYQzOtjvCxdP8.png" alt="regular_expression_46-fs8.png">regular_expression_46-fs8.png</p>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">警告</p>
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;"><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">{min,max}</code> 中逗号后面不要有空格。</p>
-</blockquote>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">7.6 最少 x 次</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">如果我们希望匹配一个特定的标记最少 x 次，可以在标记后添加 {x,}。 和 {min, max} 类似，只是没有上限了。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/a{2,}/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/cpwX5kPveRbiQNr.png" alt="regular_expression_47-fs8.png">regular_expression_47-fs8.png</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">7.7 贪婪模式的注意事项</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">正则表达式默认使用贪婪模式。在贪婪模式下，会尽可能多的匹配符合要求的字符。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/a*/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/JaymnUgzQI1Ah8M.png" alt="regular_expression_48-fs8.png">regular_expression_48-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/".*"/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/Pihx14eIR7UyMp8.png" alt="regular_expression_49-fs8.png">regular_expression_49-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">在**重复操作符（？，*，+，...）**后面添加 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">？</code>，可以让匹配变&ldquo;懒&rdquo;。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/".*?"/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/8RWzVmoBysPXZ4M.png" alt="regular_expression_50-fs8.png">regular_expression_50-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">在这里，这也可以通过使用<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">[^"]</code>代替。（这是最好的做法）。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/"[^"]*"/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/oZYfwNrP1lQO4vC.png" alt="regular_expression_51-fs8.png">regular_expression_51-fs8.png</p>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">懒惰，意味着只要条件满足，就立即停止；但贪婪意味着只有条件不再满足才停止。</p>
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">-Andrew S on StackOverflow</p>
-</blockquote>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/&lt;.+&gt;/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/KHRNubgDeJPk5CO.png" alt="regular_expression_52-fs8.png">regular_expression_52-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/&lt;.+?&gt;/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/iqZBxFU7l45EVk3.png" alt="regular_expression_53-fs8.png">regular_expression_53-fs8.png</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">7.8 例子</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">比特币地址</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/([13][a-km-zA-HJ-NP-Z0-9]{26,33})/g</code> (思考： {26,33}？呢)</li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/szg1TkqALRWtM3K.png" alt="regular_expression_54-fs8.png">regular_expression_54-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">Youtube 视频</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?.*?v=([^&amp;\s]+).*/gm</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/1tZH3o24shiyGqF.png" alt="regular_expression_55-fs8.png">regular_expression_55-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">我们可以使用锚点调整表达式不让它匹配最后一个不正确的链接，之后我们会接触到。</p>
-<h3 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;" data-tool="mdnice编辑器"><span class="content" style="font-size: 16px; font-weight: bold; display: inline-block; margin-left: 8px; color: #3c70c6;">8 交替</span></h3>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">交替允许匹配几个短语中的一个。这比仅限于单个字符的字符组更加强大。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">使用管道符号 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">|</code> 把多个短语之间分开</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/foo|bar|baz/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/SQ2z71vDTIFWHB4.png" alt="regular_expression_56-fs8.png">regular_expression_56-fs8.png</p>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">匹配 foo, bar, 和 baz 中的一个。</p>
-</blockquote>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">如果正则中只有一部分需要&ldquo;交替&rdquo;，可以使用组进行包裹，捕获组和非捕获组都可以。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/Try (foo|bar|baz)/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/rn4d5QFjEfsazJT.png" alt="regular_expression_57-fs8.png">regular_expression_57-fs8.png</p>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">Try 后面跟着 foo, bar, 和 baz 中的一个。</p>
-</blockquote>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">匹配 100-250 中间的数字：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/1\d\d|2[0-4]\d|250/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/QLdfH3COMlBgUTK.png" alt="regular_expression_58-fs8.png">regular_expression_58-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">这个可以使用 <a style="word-wrap: break-word; font-weight: bold; color: #3c70c6; text-decoration: none; border-bottom: 1px solid #3c70c6;" href="http://gamon.webfactional.com/regexnumericrangegenerator/">Regex Numeric Range Generator</a> 工具生成。</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">例子</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">十六进制颜色</strong></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">让我们改进一下之前十六进制颜色匹配的例子。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/#[0-9A-F]{6}|[0-9A-F]{3}</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/1JQb4Kx3FsckGSH.png" alt="regular_expression_59-fs8.png">regular_expression_59-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">[0-9A-F]{6}</code> 要放在<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">[0-9A-F]{3}</code>的前面，这一点非常重要。否则：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/#([0-9A-F]{3}|[0-9A-F]{6})/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/mFcLfepl9G1DJEq.png" alt="regular_expression_60-fs8.png">regular_expression_60-fs8.png</p>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">小提示</p>
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">正则表达式引擎是从左边到右边的尝试交替的。</p>
-</blockquote>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">罗马数字</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/JC3W8kHPZSIVnsx.png" alt="regular_expression_61-fs8.png">regular_expression_61-fs8.png</p>
-<h3 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;" data-tool="mdnice编辑器"><span class="content" style="font-size: 16px; font-weight: bold; display: inline-block; margin-left: 8px; color: #3c70c6;">9 修饰符</span></h3>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">修饰符允许我们把正则表达式分成不同的 "模式"。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">修饰符是 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/pattern/</code> 后面的部分。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">不同引擎支持不同的修饰符。在这里我们只讨论最常见修饰符。</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">9.1 全局修饰符（g)</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">到现在为止，所有的例子都设置了全局修饰符。如果不启用全局修饰符，正则表达式匹配第一个以后将不再匹配其他任何字符。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/[aeiou]/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/fQqdZUMjSxc2rOz.png" alt="regular_expression_62-fs8.png">regular_expression_62-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/[aeiou]/</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/LN5qQKn3mk6xFaJ.png" alt="regular_expression_63-fs8.png">regular_expression_63-fs8.png</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">9.2 不区分大小写修饰符（i)</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">顾名思义，启用这个修饰符会使正则在匹配时不区分大小写。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/#[0-9A-F]{6}/i</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/n1yPxrpH4EaNA8f.png" alt="regular_expression_64-fs8.png">regular_expression_64-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/#[0-9A-F]{6}/</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/brl24duEXfjKg7T.png" alt="regular_expression_65-fs8.png">regular_expression_65-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/#[0-9A-Fa-f]{6}/</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/VHB5Kb72g6d8NZG.png" alt="regular_expression_66-fs8.png">regular_expression_66-fs8.png</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">9.3 多行模式修饰符（m)</span></h4>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">有限支持</p>
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">在 Ruby 中，m 修饰符是执行其他的函数。</p>
-</blockquote>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">多行修饰符与正在在处理包含换行符的&ldquo;多行&rdquo;字符串时对锚点的处理有关。默认情况下，<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/^foo$/</code>只匹配 &ldquo;foo&rdquo;。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">我们可能希望它在多行字符串中的一行也能匹配 foo。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">我们拿 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">"bar\nfoo\nbaz"</code> 举例子：</p>
-<pre class="custom" data-tool="mdnice编辑器"><code class="hljs" style="overflow-x: auto; padding: 16px; color: #333; background: #f8f8f8; display: -webkit-box; font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; border-radius: 0px; font-size: 12px; -webkit-overflow-scrolling: touch;">bar
-foo
-baz
-</code></pre>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">如果没有 m 修饰符，上面的字符串会被当做单行 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">bar\nfoo\nbaz</code>, 正则表达式 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">^foo$</code> 匹配不到任何字符。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">如果有 m 修饰符，上面的字符串会被当做 3 行。 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">^foo$</code> 可以匹配到中间那一行。</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">9.4 Dot-all修饰符 (s)</span></h4>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">有限支持</p>
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">ES2018 之前的 JavaScript 不支持这个修饰符。 Ruby 也不支持这个修饰，而是用 m 表示。</p>
-</blockquote>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">.</code>通常匹配除换行符以外的任何字符。使用dot all修饰符后，它也可以匹配换行符。</p>
-<h3 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;" data-tool="mdnice编辑器"><span class="content" style="font-size: 16px; font-weight: bold; display: inline-block; margin-left: 8px; color: #3c70c6;">10 锚点</span></h3>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">锚点本身不匹配任何东西。但是，他们会限制匹配出现的位置。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">你可以把锚点当做是 "不可见的字符"。</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">10.1 行首 <code>^</code></span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">在正则开始时插入<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">^</code> 号，使正则其余部分必须从字符串开始的地方匹配。你可以把它当成始终要在字符串开头匹配一个不可见的字符。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/^p/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/SQFmc9UIBuXEh2H.png" alt="regular_expression_67-fs8.png">regular_expression_67-fs8.png</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">10.2 行尾</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">在正则结尾时插入<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">$</code> 号, 类似于行首符。你可以把它当成始终要在字符串结尾匹配一个不可见的字符。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/p$/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/qBy3zAXEucsSLRG.png" alt="regular_expression_68-fs8.png">regular_expression_68-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">^</code>和<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">$</code>锚点经常一起使用，以确保正则和字符串整个匹配，而不仅仅是部分匹配。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/^p$/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/VdTcKjBWtqD5fsb.png" alt="regular_expression_69-fs8.png">regular_expression_69-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">让我们回顾一下重复中的一个例子，并在正则的末尾添加两个锚点。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/^https?$/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/q6fSGJpuUal5yvw.png" alt="regular_expression_70-fs8.png">regular_expression_70-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">如果没有这 2 个锚点， <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">http/2</code> 和 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">shttp</code> 也会被匹配。</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">10.3 字边界 <code>\b</code></span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">字边界是一个字符和非词字符之间的位置。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">字边界锚点 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\b</code>，匹配字符和非词字符之间存在的假想不可见字符。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\bp/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/BqCm8tZ6QJP7YGA.png" alt="regular_expression_71-fs8.png">regular_expression_71-fs8.png</p>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">提示</strong></p>
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">字符包括 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">a-z</code>, <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">A-Z</code>, <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">0-9</code>, 和<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">_</code>.</p>
-</blockquote>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\bp\b/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/Q5m3VoqpiORZX9b.png" alt="regular_expression_72-fs8.png">regular_expression_72-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\bcat\b/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/XVca9k4e1iNOvG7.png" alt="regular_expression_73-fs8.png">regular_expression_73-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">还有一个非字边界锚 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\B</code>。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">顾名思义，它匹配除字边界之外的所有内容。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\Bp/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/IWuG1cbewKYBXyQ.png" alt="regular_expression_74-fs8.png">regular_expression_74-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\Bp\B/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/MwkzZPcYebKs6Wu.png" alt="regular_expression_75-fs8.png">regular_expression_75-fs8.png</p>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">小提示</p>
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;"><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">^&hellip;$</code>和<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">\b&hellip;\b</code>是常见的模式，您几乎总是需要这 2 个防止意外匹配。</p>
-</blockquote>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">10.4 例子</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">尾部空格</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\s+$/gm</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/QYuKfwgTOjGZ9P3.png" alt="regular_expression_76-fs8.png">regular_expression_76-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">markdown 标题</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/^## /gm</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/Gs2NBbnIy9XivWK.png" alt="regular_expression_77-fs8.png">regular_expression_77-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">没有锚点：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/## /gm</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/eUcjZszn5v6pxyb.png" alt="regular_expression_78-fs8.png">regular_expression_78-fs8.png</p>
-<h3 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;" data-tool="mdnice编辑器"><span class="content" style="font-size: 16px; font-weight: bold; display: inline-block; margin-left: 8px; color: #3c70c6;">11 零宽断言（lookaround)</span></h3>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">零宽断言可用于验证条件，而不匹配任何文本。</p>
-<blockquote style="font-size: 0.9em; overflow: auto; overflow-scrolling: touch; background: rgba(0, 0, 0, 0.05); color: #6a737d; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 10px; margin-bottom: 20px; margin-top: 20px; padding: 15px 20px; line-height: 27px; background-color: #efefef; border-left: none; display: block;" data-tool="mdnice编辑器">
-<p style="padding-bottom: 8px; padding-top: 23px; margin: 0px; line-height: 26px; padding: 0px; font-size: 15px; color: #595959;">你只能看，不能动。</p>
-</blockquote>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li>先行断言（lookhead)
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: square;">
-<li>正向<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">(?=&hellip;)</code></li>
-<li>负向<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">（?!&hellip;)</code></li>
-</ul>
-</li>
-<li>先行断言（lookbehind)
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: square;">
-<li>正向<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">(?&lt;=&hellip;)</code></li>
-<li>负向<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">（?&lt;!&hellip;)</code></li>
-</ul>
-</li>
-</ul>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">11.1 先行断言（lookhead)</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">正向（positive)</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/_(?=[aeiou])/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/VxuWD18pwUsihr7.png" alt="regular_expression_79-fs8.png">regular_expression_79-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">注意后面的字符是如何不匹配的。可以通过正面前看得到证实。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/(.+)_(?=[aeiou])(?=\1)/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/jTPDEU39FIMGB2Z.png" alt="regular_expression_80-fs8.png">regular_expression_80-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">正则引擎在 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">_</code> 使用了 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">(?=[aeiou])</code> 和 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">(?=\1)</code> 进行检查。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/(?=.*#).*/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/godwXkBHlChW1rc.png" alt="regular_expression_81-fs8.png">regular_expression_81-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">负向（Negative)</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/_(?![aeiou])/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/36uHtzeAbGh2piJ.png" alt="regular_expression_82-fs8.png">regular_expression_82-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/^(?!.*#).*$/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/AYN1rzJ5kEV2Xpd.png" alt="regular_expression_83-fs8.png">regular_expression_83-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">如果没有锚点，将匹配每个示例中没有#的部分。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">负向的先行断言常常用于防止匹配特定短语。</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/foo(?!bar)/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/DvB1RZIVGkl5mrc.png" alt="regular_expression_84-fs8.png">regular_expression_84-fs8.png</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/---(?:(?!---).)*---/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/NC5FY9xS6zVWbwI.png" alt="regular_expression_85-fs8.png">regular_expression_85-fs8.png</p>
-<h4 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;" data-tool="mdnice编辑器"><span class="content">11.2 例子</span></h4>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">密码验证</strong></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/</code></p>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/nFT297gVaDjNeox.png" alt="regular_expression_86-fs8.png">regular_expression_86-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">零宽断言可用于验证多个条件。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">带引号的字符串</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/(['"])(?:(?!\1).)*\1/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/CL3XzZjQTi2tqrf.png" alt="regular_expression_87-fs8.png">regular_expression_87-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">如果没有先行断言，我们最多只能做到这样：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/(['"])[^'"]*\1/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/pLZOUxirA7T51k4.png" alt="regular_expression_88-fs8.png">regular_expression_88-fs8.png</p>
-<h3 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;" data-tool="mdnice编辑器"><span class="content" style="font-size: 16px; font-weight: bold; display: inline-block; margin-left: 8px; color: #3c70c6;">12 进阶例子</span></h3>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">JavaScript 注释</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\/\*[\s\S]*?\*\/|\/\/.*/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/JmiKpRBnr4E8XaO.png" alt="regular_expression_89-fs8.png">regular_expression_89-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">[\s\S]</code>是一种匹配任何字符（包括换行符）的技巧。我们避免使用dot-all 修饰符，因为我们需要使用<code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">.</code> 表示单行注释。</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">24小时时间</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/Th642uaYClsiXSE.png" alt="regular_expression_90-fs8.png">regular_expression_90-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">IP 地址</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/\b(?:(?:2(?:[0-4][0-9]|5[0-5])|[0-1]?[0-9]?[0-9])\.){3}(?:(?:2([0-4][0-9]|5[0-5])|[0-1]?[0-9]?[0-9]))\b/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/oLhRkKPfj4AOXeg.png" alt="regular_expression_91-fs8.png">regular_expression_91-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">元标签</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/&lt;Example source="(.*?)" flags="(.*?)"&gt;/gm</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/wVgK18Ud7Nz9TtD.png" alt="regular_expression_92-fs8.png">regular_expression_92-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">替换： <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">&lt;Example regex={/$1/$2}&gt;</code></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">浮点数</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;">可选符号</p>
-</li>
-<li>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;">可选整数部分</p>
-</li>
-<li>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;">可选小数部分</p>
-</li>
-<li>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;">可选指数部分</p>
-</li>
-<li>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;"><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/^([+-]?(?=\.\d|\d)(?:\d+)?(?:\.?\d*))(?:[eE]([+-]?\d+))?$/g</code></p>
-</li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/T6KVl5GAYnhx4v9.png" alt="regular_expression_93-fs8.png">regular_expression_93-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">正向的先行断言 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">(?=\.\d|\d)</code> 确保不会匹配 <code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">..</code></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">HSL颜色</strong></p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">从0到360的整数</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/^0*(?:360|3[0-5]\d|[12]?\d?\d)$/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/a1Ujgonz3lq6hXF.png" alt="regular_expression_94-fs8.png">regular_expression_94-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">百分比</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/^(?:100(?:\.0+)?|\d?\d(?:\.\d+)?)%$/g</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/XRzE9bLQsT4pmtx.png" alt="regular_expression_95-fs8.png">regular_expression_95-fs8.png</p>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器"><strong style="font-weight: bold; line-height: 1.75em; color: #4a4a4a;">HSL 和 百分比</strong></p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">/^hsl\(\s*0*(?:360|3[0-5]\d|[12]?\d?\d)\s*(?:,\s*0*(?:100(?:\.0+)?|\d?\d(?:\.\d+)?)%\s*){2}\)$/gi</code></li>
-</ul>
-<p><img style="display: block; margin: 0 auto 25px; max-width: 100%; border-radius: 4px; border: 0; width: 90%; height: auto" src="https://i.loli.net/2020/05/07/lmwpqOn96ViuXWr.png" alt="regular_expression_96-fs8.png">regular_expression_96-fs8.png</p>
-<h3 style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;" data-tool="mdnice编辑器"><span class="content" style="font-size: 16px; font-weight: bold; display: inline-block; margin-left: 8px; color: #3c70c6;">13 下一步</span></h3>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">如果你像进一步学习正则表达式及其工作原理：</p>
-<ul style="margin-top: 8px; margin-bottom: 8px; padding-left: 25px; color: black; list-style-type: disc;" data-tool="mdnice编辑器">
-<li><a style="word-wrap: break-word; font-weight: bold; color: #3c70c6; text-decoration: none; border-bottom: 1px solid #3c70c6;" href="https://github.com/aloisdg/awesome-regex">awesome-regex</a></li>
-<li><a style="word-wrap: break-word; font-weight: bold; color: #3c70c6; text-decoration: none; border-bottom: 1px solid #3c70c6;" href="https://stackoverflow.com/tags/regex/info"><code style="font-size: 14px; word-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0 2px; background-color: rgba(27,31,35,.05); font-family: Operator Mono, Consolas, Monaco, Menlo, monospace; word-break: break-all; color: #3c70c6;">regex</code> tag on StackOverflow</a></li>
-<li><a style="word-wrap: break-word; font-weight: bold; color: #3c70c6; text-decoration: none; border-bottom: 1px solid #3c70c6;" href="https://stackoverflow.com/a/22944075">StackOverflow RegEx FAQ</a></li>
-<li><a style="word-wrap: break-word; font-weight: bold; color: #3c70c6; text-decoration: none; border-bottom: 1px solid #3c70c6;" href="https://www.reddit.com/r/regex/">r/regex</a></li>
-<li><a style="word-wrap: break-word; font-weight: bold; color: #3c70c6; text-decoration: none; border-bottom: 1px solid #3c70c6;" href="https://www.rexegg.com/">RexEgg</a></li>
-<li><a style="word-wrap: break-word; font-weight: bold; color: #3c70c6; text-decoration: none; border-bottom: 1px solid #3c70c6;" href="https://www.regular-expressions.info/">Regular-Expressions.info</a></li>
-<li><a style="word-wrap: break-word; font-weight: bold; color: #3c70c6; text-decoration: none; border-bottom: 1px solid #3c70c6;" href="https://regexcrossword.com/">Regex Crossword</a></li>
-<li><a style="word-wrap: break-word; font-weight: bold; color: #3c70c6; text-decoration: none; border-bottom: 1px solid #3c70c6;" href="https://alf.nu/RegexGolf">Regex Golf</a></li>
-</ul>
-<p style="font-size: 16px; padding-bottom: 8px; margin: 0; padding-top: 23px; color: #4a4a4a; line-height: 1.75em;" data-tool="mdnice编辑器">谢谢阅读！添加微信：手边字节</p>
+        String userId </span>=<span style="color: #000000;"> sid.nextShort();
+
+        SysUser user </span>= <span style="color: #0000ff;">new</span><span style="color: #000000;"> SysUser();
+        user.setId(userId);
+        user.setUsername(</span>"weiz" + <span style="color: #0000ff;">new</span><span style="color: #000000;"> Date());
+        user.setNickname(</span>"weiz" + <span style="color: #0000ff;">new</span><span style="color: #000000;"> Date());
+        user.setPassword(</span>"abc123"<span style="color: #000000;">);
+        user.setIsDelete(</span>0<span style="color: #000000;">);
+        user.setRegistTime(</span><span style="color: #0000ff;">new</span><span style="color: #000000;"> Date());
+
+        userService.saveUserTransactional(user);
+
+        </span><span style="color: #0000ff;">return</span> JSONResult.ok("保存成功"<span style="color: #000000;">);
+    }</span></pre>
+</div>
+<p>&nbsp;</p>
+<h2>测试</h2>
+<p>首先我们看目前的sql数据中的数据，user表中数据如下：</p>
+<p><img src="https://img2020.cnblogs.com/blog/306976/202004/306976-20200420185323219-655297089.png" alt="" width="618" height="203"></p>
+<p>&nbsp;</p>
+<p>&nbsp;在浏览器中数据：http://localhost:8080/mybatis/saveUserTransactional，也没返回执行异常，数据库中的数据也没有变化，说明数据已经回滚了：</p>
+<p><img src="https://img2020.cnblogs.com/blog/306976/202004/306976-20200420185849544-1332255389.png" alt="" width="625" height="196"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>最后</h2>
+<p>以上，就把Spring Boot中事物控制讲完了，是不是特别简单。</p>
+<p>这个系列课程的完整源码，也会提供给大家。大家关注我的微信公众号（<span style="color: #00ffff;">架构师精进</span>），回复：springboot源码。获取这个系列课程的完整源码。</p>
+<p>&nbsp;</p>
 </div>
 <div id="MySignature"></div>
 <div class="clear"></div>
@@ -863,12 +194,12 @@ baz
 </div>
             </div>
             <div class="postDesc">posted @ 
-<span id="post-date">2020-05-08 09:41</span>&nbsp;
-<a href="https://www.cnblogs.com/heniu/">和牛</a>&nbsp;
+<span id="post-date">2020-05-08 09:47</span>&nbsp;
+<a href="https://www.cnblogs.com/zhangweizhong/">章为忠</a>&nbsp;
 阅读(<span id="post_view_count">...</span>)&nbsp;
 评论(<span id="post_comment_count">...</span>)&nbsp;
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12848642" rel="nofollow">编辑</a>&nbsp;
-<a href="javascript:void(0)" onclick="AddToWz(12848642);return false;">收藏</a></div>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12680873" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12680873);return false;">收藏</a></div>
         </div>
 	    
 	    
@@ -877,8 +208,8 @@ baz
 <script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
 <script>markdown_highlight();</script>
 <script>
-    var allowComments = true, cb_blogId = 442046, cb_blogApp = 'heniu', cb_blogUserGuid = '10b59032-baf8-43ce-1cb6-08d5dd9535dc';
-    var cb_entryId = 12848642, cb_entryCreatedDate = '2020-05-08 09:41', cb_postType = 1; 
+    var allowComments = true, cb_blogId = 171085, cb_blogApp = 'zhangweizhong', cb_blogUserGuid = 'a6084bc8-e391-e011-a53f-842b2b196315';
+    var cb_entryId = 12680873, cb_entryCreatedDate = '2020-05-08 09:47', cb_postType = 1; 
     loadViewCount(cb_entryId);
     loadSideColumnAd();
 </script><a name="!comments"></a>
@@ -963,7 +294,7 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 和牛
+Copyright &copy; 2020 章为忠
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 

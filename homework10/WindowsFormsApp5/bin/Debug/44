@@ -8,24 +8,24 @@
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Java技术栈 - 博客园</title>
+    <title>xybaby - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
-    <link id="MainCss" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip.min.css?v=1CubIA3L29CO3-6VLJIOrrj2uGfyKeX_-xaumWzHk7o" />
-    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/javastack/custom.css?v=TyYvkiijeoOdLUAlPYzoZBdm&#x2B;e0=" />
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip-mobile.min.css?v=0pGk3D9Ik_jI4q1TALBT2ybOjIePHS_80_0J4DDOQiY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/coffee/bundle-coffee.min.css?v=KPz7rj-c2sTAV1_ck1aDmbZcuCG3KBhyLnfvzf6nn94" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/javastack/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/javastack/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/javastack/wlwmanifest.xml" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee-mobile.min.css?v=na9bpAY4yh7uEWCcrXj3vfJM3VBse8YtU6-5fUUQPz0" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/xybaby/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/xybaby/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/xybaby/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 373522;
-        var currentBlogApp = 'javastack';
+        var currentBlogId = 325907;
+        var currentBlogApp = 'xybaby';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'darkgreentrip';
+        var skinName = 'coffee';
     </script>
     
     
@@ -39,13 +39,13 @@
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/javastack/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+	<a href="https://www.cnblogs.com/xybaby/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>			
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/javastack/">Java技术栈</a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/xybaby/">xybaby</a>
 </h1>
 <h2>
-分享Java技术，高并发编程，分布式技术，架构设计，Java面试题，算法，行业动态，程序人生等。
+竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生
 </h2>
 
 
@@ -53,51 +53,59 @@
 
 		
 	</div><!--end: blogTitle 博客的标题和副标题 -->
-	<div id="navigator">
-		
-<ul id="navList">
-<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
-博客园</a>
-</li>
-<li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/javastack/">
-首页</a>
-</li>
-<li>
-
-<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
-新随笔</a>
-</li>
-<li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/Java%E6%8A%80%E6%9C%AF%E6%A0%88">
-联系</a></li>
-<li>
-
-<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
-<li>
-<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
-管理</a>
-</li>
-</ul>
-
-
-		<div class="blogStats">
-			
-			<span id="stats_post_count">随笔 - 
-401&nbsp; </span>
-<span id="stats_article_count">文章 - 
-1&nbsp; </span>
-<span id="stats-comment_count">评论 - 
-71</span>
-
-			
-		</div><!--end: blogStats -->
-	</div><!--end: navigator 博客导航栏 -->
 </div><!--end: header 头部 -->
 
 <div id="main">
 	<div id="mainContent">
 	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+	<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/xybaby/">
+首页</a>
+</li>
+	<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+	<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/xybaby">
+联系</a></li>
+	<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+	<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/xybaby/rss/">
+订阅</a>
+	
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/xybaby/rss/">
+    <img src="/skins/coffee/images/xml.gif" alt="订阅" />
+</a></li>
+</ul>
+
+
+
+			<div class="blogStats">
+				
+				<!--done-->
+随笔- 
+97&nbsp;
+文章- 
+0&nbsp;
+评论- 
+376&nbsp;
+
+
+
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
 		
 <!--done-->
 
@@ -109,32 +117,34 @@
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/javastack/archive/2018/10/02.html">2018年10月2日</a>
+        <a href="https://www.cnblogs.com/xybaby/archive/2018/02/25.html">2018年2月25日</a>
     </div>
+
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/9736449.html">
-[置顶]    史上最全 40 道 Dubbo 面试题及答案，看完碾压面试官！
+<a class="postTitle2" href="https://www.cnblogs.com/xybaby/p/8464430.html">
+[置顶]    想要升职加薪？先管理好时间与目标！
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：想往高处走，怎么能不懂 Dubbo？ Dubbo是国内最出名的分布式服务框架，也是 Java 程序员必备的必会的框架之一。Dubbo 更是中高级面试过程中经常会问的技术，无论你是否用过，你都必须熟悉。 下面我为大家准备了一些 Dubbo 常见的的面试题，一些是我经常问别人的，一些是我过去面试遇到的一            <a href="https://www.cnblogs.com/javastack/p/9736449.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：这个春节假期，本来是制定了一系列计划，但是在假期结束时，才发现实施了不到五分之一。这让我想起了以前高中寄宿的时候，每两周才能回家一次，每次回家我都会背一书包书回去，想着在家好好学习。结果呢，大多数时候书包都不会打开，然后原样背回学校。 唯一完成的计划 就是看完《小强升职记》这本电子书，因为是电子书，            <a href="https://www.cnblogs.com/xybaby/p/8464430.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2018-10-02 10:17 Java技术栈 阅读 (1155) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=9736449" rel="nofollow">
+posted @ 2018-02-25 15:57 xybaby 阅读 (5248) 评论 (7)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=8464430" rel="nofollow">
     编辑
 </a>
 </div>
         <div class="clear"></div>
+
 </div>
 
 
@@ -143,32 +153,34 @@ posted @ 2018-10-02 10:17 Java技术栈 阅读 (1155) 评论 (0)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/javastack/archive/2018/04/10.html">2018年4月10日</a>
+        <a href="https://www.cnblogs.com/xybaby/archive/2017/12/04.html">2017年12月4日</a>
     </div>
+
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/8783383.html">
-[置顶]    Java成神之路技术整理（长期更新）
+<a class="postTitle2" href="https://www.cnblogs.com/xybaby/p/7954610.html">
+[置顶]    日志的艺术（The art of logging）
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：以下是Java技术栈微信公众号发布的关于 Java 的技术干货，从以下几个方面汇总。            <a href="https://www.cnblogs.com/javastack/p/8783383.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：程序员学习每一门语言都是从打印“hello world”开始的，日志也是新手程序员学习、调试程序的一大利器。当项目上线之后，也会有各种各样的日志，比如记录用户的行为、服务器的状态、异常情况等等。打印日志似乎是一件很简单、不值得一提的事情。但是，当看到线上项目居然有这样的日志的时候，不禁想问问我们真的            <a href="https://www.cnblogs.com/xybaby/p/7954610.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2018-04-10 21:53 Java技术栈 阅读 (5196) 评论 (2)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=8783383" rel="nofollow">
+posted @ 2017-12-04 09:05 xybaby 阅读 (11742) 评论 (5)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=7954610" rel="nofollow">
     编辑
 </a>
 </div>
         <div class="clear"></div>
+
 </div>
 
 
@@ -177,80 +189,34 @@ posted @ 2018-04-10 21:53 Java技术栈 阅读 (5196) 评论 (2)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/javastack/archive/2020/05/08.html">2020年5月8日</a>
+        <a href="https://www.cnblogs.com/xybaby/archive/2020/05/08.html">2020年5月8日</a>
     </div>
+
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12848930.html">
-    Java程序员必需掌握的 4 大基础！
+<a class="postTitle2" href="https://www.cnblogs.com/xybaby/p/12835980.html">
+    批判性思维与学会提问
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：大概每个人在学生时代开始就使用Java了，我们一直在学习Java，但Java中总有一些概念含混不清，不论是对初级还是高级程序员都是如此。所以，这篇文章的目的就是弄清楚这些概念。 读完本文你会对这些概念有更深入的了解，还能弄清楚一切灰色的东西。在本书中，我们将讨论匿名内联类、多线程、同步和序列化。 1            <a href="https://www.cnblogs.com/javastack/p/12848930.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：古人云： 三十而立，四十而不惑 可见，要想做到 不惑 还是很难的。坦白的讲，本人对“这个世界是什么样子的，这个世界应该是什么样子的” 这些基本问题都还有很多困惑。 怎么做到不惑？是听信专家吗？不见得靠谱，现在不靠谱的专家太多。那么自己冥思苦想？更不靠谱，在缺乏足够的背景知识时，是想不出正确的东西来的            <a href="https://www.cnblogs.com/xybaby/p/12835980.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-05-08 10:21 Java技术栈 阅读 (34) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12848930" rel="nofollow">
+posted @ 2020-05-08 09:33 xybaby 阅读 (109) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12835980" rel="nofollow">
     编辑
 </a>
 </div>
         <div class="clear"></div>
-            <div class="postSeparator"></div>
-        <div class="postTitle">
-            
 
-<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12848446.html">
-    Redis 到底是单线程还是多线程？我要吊打面试官！
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：最近在Java技术栈公众号发布的一篇文章，其中有一道题： Redis是多线程还是单线程？（回答单线程的请回吧，为什么请回，请往下看） 好些粉丝在后台问我： 为什么请回，Redis不是单线程吗？ 大家注意审题： Redis是多线程还是单线程？ 这个问题你要从多个方面回答，如果你仅仅只回答 &quot;单线程&quot;             <a href="https://www.cnblogs.com/javastack/p/12848446.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-05-08 09:10 Java技术栈 阅读 (324) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12848446" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-            <div class="postSeparator"></div>
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12848357.html">
-    Java中的锁原理、锁优化、CAS、AQS详解！
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：作者：高广超 www.jianshu.com/p/e674ee68fd3f 一、为什么要用锁？ ============= 锁 是为了解决并发操作引起的脏读、数据不一致的问题。 二、锁实现的基本原理 ============== 2.1、volatile Java编程语言允许线程访问共享变量， 为了            <a href="https://www.cnblogs.com/javastack/p/12848357.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-05-08 08:51 Java技术栈 阅读 (27) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12848357" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
 </div>
 
 
@@ -259,176 +225,322 @@ posted @ 2020-05-08 08:51 Java技术栈 阅读 (27) 评论 (0)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/javastack/archive/2020/05/07.html">2020年5月7日</a>
+        <a href="https://www.cnblogs.com/xybaby/archive/2020/03/31.html">2020年3月31日</a>
     </div>
+
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12844891.html">
-    天天用Synchronized，底层原理是个啥？
+<a class="postTitle2" href="https://www.cnblogs.com/xybaby/p/12601471.html">
+    高效code review指南
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：作者：iuxiaopeng https://www.cnblogs.com/paddix/p/5367116.html Synchronized 的基本使用 Synchronized 的作用主要有三个： 确保线程互斥的访问同步代码 保证共享变量的修改能够及时可见 有效解决重排序问题 从语法上讲，Sy            <a href="https://www.cnblogs.com/javastack/p/12844891.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：大多数程序员都知道并且相信code review（代码审查）的重要性，但并一定都能很好的执行这一过程，做好code review也需要遵循一定的原则、流程和规范。 我们团队的code review实践也并不是一帆风顺，两年前刚开始的时候，形式很粗糙，就是一堆人对着代码品头论足。导致的结果要么是陷入争            <a href="https://www.cnblogs.com/xybaby/p/12601471.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-05-07 18:53 Java技术栈 阅读 (28) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12844891" rel="nofollow">
+posted @ 2020-03-31 09:52 xybaby 阅读 (2643) 评论 (10)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12601471" rel="nofollow">
     编辑
 </a>
 </div>
         <div class="clear"></div>
-            <div class="postSeparator"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xybaby/archive/2019/12/27.html">2019年12月27日</a>
+    </div>
+
+
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12844558.html">
-    LinkedHashMap 源码分析，底层竟这么简单！
+<a class="postTitle2" href="https://www.cnblogs.com/xybaby/p/12107459.html">
+    写在2019的尾巴上
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：作者：Pz cnblogs.com/panzi/p/10845079.html LinkedHashMap&#160;是一个键有序的 可以将 理解为 + 所以研究 之前要先看 代码，这里不再赘述。 其实 无非就是通过链表结构将存储在 中的数据通过 连接起来。 作为一个链表结构 ,`tail&#160;`必不可少 还要有            <a href="https://www.cnblogs.com/javastack/p/12844558.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：2019年已经接近尾声，回首这一年，有收获，更多是惶恐 知道自己还有太多不知道。 该怎么总结这一年呢，用成就吗？已经是过去式了，况且本来也没有什么成就；用想做而没做到的事情，或者没有完成的计划？难免让人有些沮丧。那么就记录这一年的点滴思考吧，毕竟， 意识到了只是第一步，要坚持做到尚需更多的努力，20            <a href="https://www.cnblogs.com/xybaby/p/12107459.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-05-07 17:53 Java技术栈 阅读 (18) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12844558" rel="nofollow">
+posted @ 2019-12-27 15:21 xybaby 阅读 (773) 评论 (4)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12107459" rel="nofollow">
     编辑
 </a>
 </div>
         <div class="clear"></div>
-            <div class="postSeparator"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xybaby/archive/2019/11/24.html">2019年11月24日</a>
+    </div>
+
+
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12844553.html">
-    学习java多线程，这必须搞懂的这几个概念，很重要。
+<a class="postTitle2" href="https://www.cnblogs.com/xybaby/p/11918485.html">
+    软件架构模式
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：同步和异步 同步，Synchronous，即调用方法开始，一旦调用就必须等待方法执行完返回才能继续下面的操作。 举个例子，你去银行ATM取钱，你必须等到ATM吐完钱你拿到钱取完卡你才能离开。 异步，Asynchronous，即不关心方法执行的过程，触发要调用的方法就继续执行下面的操作，不会像同步那样            <a href="https://www.cnblogs.com/javastack/p/12844553.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：阅读 &quot;《clean architecture》&quot; 也花了较长的时间，大致也了解到整洁的架构要做到以下两点： well isolated components：component是独立部署的最小单元，由一系列遵循SOLID原则的module按照REP、CCP、CEP原则组成。 dependency             <a href="https://www.cnblogs.com/xybaby/p/11918485.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-05-07 17:52 Java技术栈 阅读 (27) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12844553" rel="nofollow">
+posted @ 2019-11-24 13:06 xybaby 阅读 (472) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11918485" rel="nofollow">
     编辑
 </a>
 </div>
         <div class="clear"></div>
-            <div class="postSeparator"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xybaby/archive/2019/11/17.html">2019年11月17日</a>
+    </div>
+
+
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12843678.html">
-    Netty 如何实现心跳机制与断线重连？
+<a class="postTitle2" href="https://www.cnblogs.com/xybaby/p/11873450.html">
+    如何读好一本书
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：作者：sprinkle_liz www.jianshu.com/p/1a28e48edd92 心跳机制 何为心跳 所谓心跳, 即在&#160;TCP&#160;长连接中, 客户端和服务器之间定期发送的一种特殊的数据包, 通知对方自己还在线, 以确保&#160;TCP&#160;连接的有效性. 注：心跳包还有另一个作用，经常被忽略，即： 一            <a href="https://www.cnblogs.com/javastack/p/12843678.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：这个年代，对中年人贩卖焦虑是件普遍的事情，尤其是对程序员。35岁左右都是一个坎，不管是国内的华为、阿里，还是国外的facebook，这种焦虑和恐慌逼得程序员不得不时刻充电。学习的方式有很多，做项目、线下线上课程、看书、看博客、看源码等等。 相比其他方法，看书（尤其是经典书籍）的好处在于，知识点比较系            <a href="https://www.cnblogs.com/xybaby/p/11873450.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-05-07 16:09 Java技术栈 阅读 (24) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12843678" rel="nofollow">
+posted @ 2019-11-17 11:28 xybaby 阅读 (3188) 评论 (9)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11873450" rel="nofollow">
     编辑
 </a>
 </div>
         <div class="clear"></div>
-            <div class="postSeparator"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xybaby/archive/2019/11/04.html">2019年11月4日</a>
+    </div>
+
+
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12843070.html">
-    为什么要进行 URL 编码？？？
+<a class="postTitle2" href="https://www.cnblogs.com/xybaby/p/11782293.html">
+    SOLID原则、设计模式适用于Python语言吗
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：作者：降瑞雪 cnblogs.com/jerrysion/p/5522673.html 我们都知道Http协议中参数的传输是&quot;key=value&quot;这种简直对形式的，如果要传多个参数就需要用“&amp;”符号对键值对进行分割。 如&quot;?name1=value1&amp;name2=value2&quot;，这样在服务端在收到这种            <a href="https://www.cnblogs.com/javastack/p/12843070.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：在阅读 &quot;clean architecture&quot; 的过程中，会发现作者经常提到 ，这些术语看起来都跟静态类型语言有关，比如Java、C++、C 。而在我经常使用的python语言中，是不存在这些概念的。于是，在阅读的时候就会有一个疑惑，《clean architecture》中提到的各种原则，比如S            <a href="https://www.cnblogs.com/xybaby/p/11782293.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-05-07 14:55 Java技术栈 阅读 (41) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12843070" rel="nofollow">
+posted @ 2019-11-04 09:37 xybaby 阅读 (403) 评论 (3)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11782293" rel="nofollow">
     编辑
 </a>
 </div>
         <div class="clear"></div>
-            <div class="postSeparator"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xybaby/archive/2019/10/24.html">2019年10月24日</a>
+    </div>
+
+
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12842586.html">
-    Java并发编程中的若干核心技术，向高手进阶！
+<a class="postTitle2" href="https://www.cnblogs.com/xybaby/p/11729354.html">
+    什么是整洁的架构
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：来源：简书 http://www.jianshu.com/p/5f499f8212e7 引言 本文试图从一个更高的视角来总结Java语言中的并发编程内容，希望阅读完本文之后，可以收获一些内容，至少应该知道在Java中做并发编程实践的时候应该注意什么，应该关注什么，如何保证线程安全，以及如何选择合适的            <a href="https://www.cnblogs.com/javastack/p/12842586.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：看完了clean code 代码整洁之道，那么接下来就应该读读其姊妹篇：clean architecture 架构整洁之道。不过对我而言，代码是实实在在的，看得见，摸得着；而架构虽然散发着光芒，但好像有点虚，似乎认知、思考还比较少。本文主要记录 &quot;《clean architecture》&quot; 的主要内            <a href="https://www.cnblogs.com/xybaby/p/11729354.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-05-07 13:52 Java技术栈 阅读 (29) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12842586" rel="nofollow">
+posted @ 2019-10-24 09:33 xybaby 阅读 (3986) 评论 (7)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11729354" rel="nofollow">
     编辑
 </a>
 </div>
         <div class="clear"></div>
-            <div class="postSeparator"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xybaby/archive/2019/10/10.html">2019年10月10日</a>
+    </div>
+
+
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12841895.html">
-    两张趣图助你理解 HTTP 状态码！
+<a class="postTitle2" href="https://www.cnblogs.com/xybaby/p/11645885.html">
+    错误、异常与自定义异常
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：作者：web开发者 https://www.sohu.com/a/190263277_467792 HTTP状态码（HTTP Status Code）是用以表示网页服务器HTTP响应状态的3位数字代码。 我们可以通过查看HTTP状态码来判断服务器状态，常见的有404 、502等；但是其他不是很常见的            <a href="https://www.cnblogs.com/javastack/p/12841895.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：程序员对于异常（Exception）这个词应该都不陌生，尤其现在Exception基本上是OOP编程语言的标配。于我而言，这个词既熟悉又陌生，熟悉是因为听过了很多遍、似乎也有大量使用；陌生是因为很少真正思考过到底什么是异常，以及如何使用异常。本文记录我对如何使用异常、自定义异常的一些看法，不一定正确            <a href="https://www.cnblogs.com/xybaby/p/11645885.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-05-07 11:39 Java技术栈 阅读 (28) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12841895" rel="nofollow">
+posted @ 2019-10-10 09:44 xybaby 阅读 (749) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11645885" rel="nofollow">
     编辑
 </a>
 </div>
         <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xybaby/archive/2019/08/18.html">2019年8月18日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xybaby/p/11372846.html">
+    关于使用第三方库、代码复用的一些思考
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：不管是 ，还是 ，对于软件开发来说，代码复用都是最基本的原则之一。 代码复用，可能是DRY（dont repeat yourself），也可能是使用别人的代码，或者是开源项目，或者是其他团队提供的组件、服务，或者是团队内他人实现的公共模块，这些复用大大减少了项目的开发周期和成本。 但怎样才算是高效、            <a href="https://www.cnblogs.com/xybaby/p/11372846.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-08-18 16:40 xybaby 阅读 (3388) 评论 (3)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11372846" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xybaby/archive/2019/08/11.html">2019年8月11日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xybaby/p/11335829.html">
+    什么是整洁的代码
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：[TOC] 写出整洁的代码，是每个程序员的追求。《clean code》指出，要想写出好的代码，首先得知道什么是肮脏代码、什么是整洁代码；然后通过大量的刻意练习，才能真正写出整洁的代码。 WTF/min是衡量代码质量的唯一标准，Uncle Bob在书中称糟糕的代码为沼泽（wading），这只突出了我            <a href="https://www.cnblogs.com/xybaby/p/11335829.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-08-11 17:56 xybaby 阅读 (6625) 评论 (24)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11335829" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
 </div>
 
 
@@ -436,7 +548,7 @@ posted @ 2020-05-07 11:39 Java技术栈 阅读 (28) 评论 (0)
 <div class="topicListFooter">
     <div id="nav_next_page">
         
-    <a href="https://www.cnblogs.com/javastack/default.html?page=2">
+    <a href="https://www.cnblogs.com/xybaby/default.html?page=2">
         下一页
     </a>
 
@@ -461,12 +573,12 @@ posted @ 2020-05-07 11:39 Java技术栈 阅读 (28) 评论 (0)
 </div>
 
 <div id="sidebar_ad"></div>
-			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script></div>
 			
-			<div id="leftcontentcontainer">
+			<DIV id="leftcontentcontainer">
 				<div id="blog-sidecolumn"></div>
                     <script>loadBlogSideColumn();</script>
-			</div>
+			</DIV>
 			
 		</div><!--end: sideBarMain -->
 	</div><!--end: sideBar 侧边栏容器 -->
@@ -475,7 +587,7 @@ posted @ 2020-05-07 11:39 Java技术栈 阅读 (28) 评论 (0)
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 Java技术栈
+Copyright &copy; 2020 xybaby
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 
@@ -484,6 +596,76 @@ Copyright &copy; 2020 Java技术栈
 </div><!--end: home 自定义的最大容器 -->
 
 
-    
+    <div id="page_end_html">
+        <style type="text/css"> 
+    #div_digg{
+        position: fixed;
+        bottom: 5px;
+        width: 140px;
+        right: 240px;
+        border: 2px solid #edd7b2;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 5px 5px 5px 5px !important;
+        box-shadow: 0 0 0 1px #ecd7b1, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+    }
+    @media screen and (max-width: 500px) {
+        #div_digg {
+            right: 0;
+            padding: 5px;
+            width: auto;
+        }
+    }
+
+</style>
+<script language="javascript" type="text/javascript">
+    GenerateContentList();
+
+    function GenerateContentList() {
+        // '.postTitle' 是标题，修改样式
+        $('.postTitle').css('font-size', '20px').css('text-align', 'center');
+
+        // '#cnblogs_post_body' 是正文，如果正文为空，则不需要任何处理
+        var mainContent = $('#cnblogs_post_body');
+        if (mainContent.length < 1)
+            return;
+
+        // 生产目录
+        let content = '';
+        titles = $('#cnblogs_post_body h1, #cnblogs_post_body h2')
+        for (let i = 0; i < titles.length; i++) {
+            // 当前是h1标题 && (后一个是h1标题 || 当前是是最后一个h1)
+            if ($(titles[i]).is('h1') && ((i + 1 < titles.length && $(titles[i + 1]).is('h1')) || i === (titles.length - 1))) {
+                content += `<li><a href="#_label_${i}">${titles[i].innerHTML}</a></li>`;
+                titles[i].style.backgroundColor = '#edd7b2';
+                $(titles[i]).before(`<a name="_label_${i}"></a>`)
+                $(titles[i]).after(`<div style="text-align: right"><a href="#_labelTop">回到顶部</a></div>`)
+            }
+
+            // 当前是h1标题 && (后一个是h2标题)
+            if ($(titles[i]).is('h1') && (i + 1 < titles.length && $(titles[i + 1]).is('h2'))) {
+                // 后一个是h2标题
+                let j = i + 1;
+                let h2Lists = ''
+                while (j < titles.length && $(titles[j]).is('h2')) {
+                    h2Lists += `<li><a href="#_label_${j}">${titles[j].innerHTML}</a></li>`;
+                    $(titles[j]).before(`<a name="_label_${j}"></a>`)
+                    j++;
+                }
+                content += `<li> <a href="#_label_${i}">${titles[i].innerHTML}</a> <ul>${h2Lists}</ul></li>`;
+                titles[i].style.backgroundColor = '#edd7b2';
+                $(titles[i]).before(`<a name="_label_${i}"></a>`)
+                $(titles[i]).after(`<div style="text-align: right"><a href="#_labelTop">回到顶部</a></div>`)
+            }
+        }
+
+        // 生成目录，嵌入到body之前
+        content = `<a name="_labelTop"></a><div id="navCategory"> <p style="font-size:18px"><b>目录</b></p> <ul>${content}</ul> </div><p>&nbsp;</p><p style="font-size:18px"><b>正文</b></p>`;
+        if ($('#cnblogs_post_body').length != 0) {
+            $($('#cnblogs_post_body')[0]).prepend(content);
+        }
+    }
+</script>
+    </div>
 </body>
 </html>

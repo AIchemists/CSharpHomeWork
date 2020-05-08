@@ -8,24 +8,24 @@
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>波多尔斯基 - 博客园</title>
+    <title>Java技术栈 - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
-    <link id="MainCss" rel="stylesheet" href="/skins/custom/bundle-custom.min.css?v=1ssrnY3Il79Ok472qeVrpxlSprSXcHhYPgZC5S3wtVM" />
-    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/podolski/custom.css?v=ailkZnJy5SEtevoTepStsXvnAYc=" />
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/custom/bundle-custom-mobile.min.css?v=-Yh290MhQyDeXLmvKTSses9H6-49lqbpXFh55zvS0w8" />
+    <link id="MainCss" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip.min.css?v=1CubIA3L29CO3-6VLJIOrrj2uGfyKeX_-xaumWzHk7o" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/javastack/custom.css?v=TyYvkiijeoOdLUAlPYzoZBdm&#x2B;e0=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip-mobile.min.css?v=0pGk3D9Ik_jI4q1TALBT2ybOjIePHS_80_0J4DDOQiY" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/podolski/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/podolski/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/podolski/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/javastack/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/javastack/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/javastack/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 180064;
-        var currentBlogApp = 'podolski';
+        var currentBlogId = 373522;
+        var currentBlogApp = 'javastack';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'Custom';
+        var skinName = 'darkgreentrip';
     </script>
     
     
@@ -39,13 +39,13 @@
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/podolski/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/javastack/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/podolski/">波多尔斯基</a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/javastack/">Java技术栈</a>
 </h1>
 <h2>
-
+分享Java技术，高并发编程，分布式技术，架构设计，Java面试题，算法，行业动态，程序人生等。
 </h2>
 
 
@@ -60,18 +60,19 @@
 博客园</a>
 </li>
 <li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/podolski/">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/javastack/">
 首页</a>
 </li>
 <li>
 
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/Java%E6%8A%80%E6%9C%AF%E6%A0%88">
+联系</a></li>
+<li>
 
-</li>
-<li>
-</li>
-<li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/podolski/rss/">
-订阅</a>
 <!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
 <li>
 <a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
@@ -83,11 +84,11 @@
 		<div class="blogStats">
 			
 			<span id="stats_post_count">随笔 - 
-29&nbsp; </span>
+401&nbsp; </span>
 <span id="stats_article_count">文章 - 
-0&nbsp; </span>
+1&nbsp; </span>
 <span id="stats-comment_count">评论 - 
-185</span>
+71</span>
 
 			
 		</div><!--end: blogStats -->
@@ -108,28 +109,28 @@
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/podolski/archive/2020/05/08.html">2020年5月8日</a>
+        <a href="https://www.cnblogs.com/javastack/archive/2018/10/02.html">2018年10月2日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/podolski/p/12847037.html">
-    在阿里云函数计算上部署.NET Core 3.1
+<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/9736449.html">
+[置顶]    史上最全 40 道 Dubbo 面试题及答案，看完碾压面试官！
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：使用阿里云ECS或者其他常见的VPS服务部署应用的时候，需要手动配置环境，并且监测ECS的行为，做补丁之类的，搞得有点复杂。好在很多云厂商（阿里云、Azure等）提供了Serverless服务，借助于Serverless，开发人员可以更加专注于代码的开发，减少运维的成本。 Azure的部署直接集成在            <a href="https://www.cnblogs.com/podolski/p/12847037.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：想往高处走，怎么能不懂 Dubbo？ Dubbo是国内最出名的分布式服务框架，也是 Java 程序员必备的必会的框架之一。Dubbo 更是中高级面试过程中经常会问的技术，无论你是否用过，你都必须熟悉。 下面我为大家准备了一些 Dubbo 常见的的面试题，一些是我经常问别人的，一些是我过去面试遇到的一            <a href="https://www.cnblogs.com/javastack/p/9736449.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-05-08 01:45 波多尔斯基 阅读 (476) 评论 (1)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12847037" rel="nofollow">
+posted @ 2018-10-02 10:17 Java技术栈 阅读 (1155) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=9736449" rel="nofollow">
     编辑
 </a>
 </div>
@@ -142,28 +143,28 @@ posted @ 2020-05-08 01:45 波多尔斯基 阅读 (476) 评论 (1)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/podolski/archive/2020/05/06.html">2020年5月6日</a>
+        <a href="https://www.cnblogs.com/javastack/archive/2018/04/10.html">2018年4月10日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/podolski/p/12838473.html">
-    迁移WPF项目到.NET Core
+<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/8783383.html">
+[置顶]    Java成神之路技术整理（长期更新）
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：综述 .NET CORE 3.0开始，桌面端支持WPF了。很多.NET FRAMEWORK的项目已经跑了一阵子了，不是很有必要支持.NET CORE，不过最近用一个程序，为了贯彻一些C 8的特性，需要升级项目到.NET CORE 3.1。 方法 参考 &quot;官方指导&quot; ，需要这么几步： 1. 了解并更新            <a href="https://www.cnblogs.com/podolski/p/12838473.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：以下是Java技术栈微信公众号发布的关于 Java 的技术干货，从以下几个方面汇总。            <a href="https://www.cnblogs.com/javastack/p/8783383.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-05-06 19:47 波多尔斯基 阅读 (483) 评论 (3)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12838473" rel="nofollow">
+posted @ 2018-04-10 21:53 Java技术栈 阅读 (5196) 评论 (2)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=8783383" rel="nofollow">
     编辑
 </a>
 </div>
@@ -176,28 +177,76 @@ posted @ 2020-05-06 19:47 波多尔斯基 阅读 (483) 评论 (3)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/podolski/archive/2020/04/20.html">2020年4月20日</a>
+        <a href="https://www.cnblogs.com/javastack/archive/2020/05/08.html">2020年5月8日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/podolski/p/12737463.html">
-    一站式WebAPI与认证授权服务
+<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12848930.html">
+    Java程序员必需掌握的 4 大基础！
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：保护WEBAPI有哪些方法？ 微软官方文档推荐了好几个： Azure Active Directory Azure Active Directory B2C (Azure AD B2C)] IdentityServer4 前面两个看着就觉得搞不太明白，第三个倒是非常常见，相关的文章也很多。不过这个东            <a href="https://www.cnblogs.com/podolski/p/12737463.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：大概每个人在学生时代开始就使用Java了，我们一直在学习Java，但Java中总有一些概念含混不清，不论是对初级还是高级程序员都是如此。所以，这篇文章的目的就是弄清楚这些概念。 读完本文你会对这些概念有更深入的了解，还能弄清楚一切灰色的东西。在本书中，我们将讨论匿名内联类、多线程、同步和序列化。 1            <a href="https://www.cnblogs.com/javastack/p/12848930.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-04-20 14:09 波多尔斯基 阅读 (1248) 评论 (5)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12737463" rel="nofollow">
+posted @ 2020-05-08 10:21 Java技术栈 阅读 (36) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12848930" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12848446.html">
+    Redis 到底是单线程还是多线程？我要吊打面试官！
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：最近在Java技术栈公众号发布的一篇文章，其中有一道题： Redis是多线程还是单线程？（回答单线程的请回吧，为什么请回，请往下看） 好些粉丝在后台问我： 为什么请回，Redis不是单线程吗？ 大家注意审题： Redis是多线程还是单线程？ 这个问题你要从多个方面回答，如果你仅仅只回答 &quot;单线程&quot;             <a href="https://www.cnblogs.com/javastack/p/12848446.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-05-08 09:10 Java技术栈 阅读 (338) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12848446" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12848357.html">
+    Java中的锁原理、锁优化、CAS、AQS详解！
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：作者：高广超 www.jianshu.com/p/e674ee68fd3f 一、为什么要用锁？ ============= 锁 是为了解决并发操作引起的脏读、数据不一致的问题。 二、锁实现的基本原理 ============== 2.1、volatile Java编程语言允许线程访问共享变量， 为了            <a href="https://www.cnblogs.com/javastack/p/12848357.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-05-08 08:51 Java技术栈 阅读 (28) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12848357" rel="nofollow">
     编辑
 </a>
 </div>
@@ -210,232 +259,172 @@ posted @ 2020-04-20 14:09 波多尔斯基 阅读 (1248) 评论 (5)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/podolski/archive/2020/04/19.html">2020年4月19日</a>
+        <a href="https://www.cnblogs.com/javastack/archive/2020/05/07.html">2020年5月7日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/podolski/p/12734603.html">
-    IdentityServer4 QuickStart 授权与自定义Claims
+<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12844891.html">
+    天天用Synchronized，底层原理是个啥？
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：最近在折腾IdentityServer4，为了简单，直接使用了官方给的QuickStart示例项目作为基础进行搭建。有一说一，为了保护一个API，感觉花费的时间比写一个API还要多。 本文基于ASP.NET CORE 3.1, IdentityServer4 3.1.3。代码皆为关键代码，贴全了太多            <a href="https://www.cnblogs.com/podolski/p/12734603.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：作者：iuxiaopeng https://www.cnblogs.com/paddix/p/5367116.html Synchronized 的基本使用 Synchronized 的作用主要有三个： 确保线程互斥的访问同步代码 保证共享变量的修改能够及时可见 有效解决重排序问题 从语法上讲，Sy            <a href="https://www.cnblogs.com/javastack/p/12844891.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-04-19 22:17 波多尔斯基 阅读 (343) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12734603" rel="nofollow">
+posted @ 2020-05-07 18:53 Java技术栈 阅读 (28) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12844891" rel="nofollow">
     编辑
 </a>
 </div>
         <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/podolski/archive/2020/04/13.html">2020年4月13日</a>
-    </div>
-
+            <div class="postSeparator"></div>
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/podolski/p/12692888.html">
-     .NET项目升级：可为空引用
+<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12844558.html">
+    LinkedHashMap 源码分析，底层竟这么简单！
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：c 8引入了新特性：“可为空引用”（ &quot;详情&quot; ），这个功能个人觉得挺好的，能够非常明确的表现程序设计者的意图，编译器能够进行检查，尽最大可能减小NullReferenceException错误。 如果是新项目，那么上手很简单，一点点搭建起来，遇山开山，遇河渡河。但是对于我这种手头上的项目大多都是以            <a href="https://www.cnblogs.com/podolski/p/12692888.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：作者：Pz cnblogs.com/panzi/p/10845079.html LinkedHashMap&#160;是一个键有序的 可以将 理解为 + 所以研究 之前要先看 代码，这里不再赘述。 其实 无非就是通过链表结构将存储在 中的数据通过 连接起来。 作为一个链表结构 ,`tail&#160;`必不可少 还要有            <a href="https://www.cnblogs.com/javastack/p/12844558.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-04-13 17:55 波多尔斯基 阅读 (504) 评论 (1)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12692888" rel="nofollow">
+posted @ 2020-05-07 17:53 Java技术栈 阅读 (18) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12844558" rel="nofollow">
     编辑
 </a>
 </div>
         <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/podolski/archive/2020/04/11.html">2020年4月11日</a>
-    </div>
-
+            <div class="postSeparator"></div>
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/podolski/p/12682978.html">
-    ASP.NET CORE WEBAPI文件下载
+<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12844553.html">
+    学习java多线程，这必须搞懂的这几个概念，很重要。
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：最近要使用ASP.NET CORE WEBAPI用来下载文件，使用的.NET CORE 3.1。考虑如下场景： 1. 文件是程序生成的。 2. 文件应该能兼容各种格式。 3. 浏览器可以感知进行下载。 准备 经过简单的调研，得到以下结论。 ASP.NET CORE 提供FileResult这种类型的            <a href="https://www.cnblogs.com/podolski/p/12682978.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：同步和异步 同步，Synchronous，即调用方法开始，一旦调用就必须等待方法执行完返回才能继续下面的操作。 举个例子，你去银行ATM取钱，你必须等到ATM吐完钱你拿到钱取完卡你才能离开。 异步，Asynchronous，即不关心方法执行的过程，触发要调用的方法就继续执行下面的操作，不会像同步那样            <a href="https://www.cnblogs.com/javastack/p/12844553.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-04-11 23:12 波多尔斯基 阅读 (652) 评论 (2)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12682978" rel="nofollow">
+posted @ 2020-05-07 17:52 Java技术栈 阅读 (27) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12844553" rel="nofollow">
     编辑
 </a>
 </div>
         <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/podolski/archive/2019/08/31.html">2019年8月31日</a>
-    </div>
-
+            <div class="postSeparator"></div>
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/podolski/p/11440485.html">
-    xunit测试无法找到testhost或没有可用测试的问题解决方法
+<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12843678.html">
+    Netty 如何实现心跳机制与断线重连？
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：xunit进行测试，需要安装如下几个包： 1. Microsoft.TestPlatform.TestHost 2. Microsoft.NET.Test.Sdk 3. xunit.runner.visualstudio 4. xunit 不安装1、2会出现找不到testhost，不安装第三个会出现            <a href="https://www.cnblogs.com/podolski/p/11440485.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：作者：sprinkle_liz www.jianshu.com/p/1a28e48edd92 心跳机制 何为心跳 所谓心跳, 即在&#160;TCP&#160;长连接中, 客户端和服务器之间定期发送的一种特殊的数据包, 通知对方自己还在线, 以确保&#160;TCP&#160;连接的有效性. 注：心跳包还有另一个作用，经常被忽略，即： 一            <a href="https://www.cnblogs.com/javastack/p/12843678.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2019-08-31 21:09 波多尔斯基 阅读 (176) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11440485" rel="nofollow">
+posted @ 2020-05-07 16:09 Java技术栈 阅读 (24) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12843678" rel="nofollow">
     编辑
 </a>
 </div>
         <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/podolski/archive/2019/05/09.html">2019年5月9日</a>
-    </div>
-
+            <div class="postSeparator"></div>
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/podolski/p/10836241.html">
-    强迫症福利--收起.NET程序的dll来
+<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12843070.html">
+    为什么要进行 URL 编码？？？
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：作为上床后需要下床检查好几次门关了没有的资深强迫症患者，有一个及其搞我的问题，就是dll问题。 曾几何时，在没有nuget的年代，当有依赖项需要引用的时候，只能通过文件引用来管理引用问题，版本问题，更新问题层出不穷，很是难受。 后来出来nuget，喜大普奔，总算解决了引用的问题。开心之余，依然还有一            <a href="https://www.cnblogs.com/podolski/p/10836241.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：作者：降瑞雪 cnblogs.com/jerrysion/p/5522673.html 我们都知道Http协议中参数的传输是&quot;key=value&quot;这种简直对形式的，如果要传多个参数就需要用“&amp;”符号对键值对进行分割。 如&quot;?name1=value1&amp;name2=value2&quot;，这样在服务端在收到这种            <a href="https://www.cnblogs.com/javastack/p/12843070.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2019-05-09 01:22 波多尔斯基 阅读 (2446) 评论 (10)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10836241" rel="nofollow">
+posted @ 2020-05-07 14:55 Java技术栈 阅读 (41) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12843070" rel="nofollow">
     编辑
 </a>
 </div>
         <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/podolski/archive/2019/05/04.html">2019年5月4日</a>
-    </div>
-
+            <div class="postSeparator"></div>
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/podolski/p/10807204.html">
-    使用高性能Pipelines构建.NET通讯程序
+<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12842586.html">
+    Java并发编程中的若干核心技术，向高手进阶！
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：.NET Standard支持一组新的API，System.Span, System.Memory，还有System.IO.Pipelines。这几个新的API极大了提升了.NET程序的效能，将来.NET很多基础API都会使用它们进行重写。 Pipelines旨在解决.NET编写Socket通信程序            <a href="https://www.cnblogs.com/podolski/p/10807204.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：来源：简书 http://www.jianshu.com/p/5f499f8212e7 引言 本文试图从一个更高的视角来总结Java语言中的并发编程内容，希望阅读完本文之后，可以收获一些内容，至少应该知道在Java中做并发编程实践的时候应该注意什么，应该关注什么，如何保证线程安全，以及如何选择合适的            <a href="https://www.cnblogs.com/javastack/p/12842586.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2019-05-04 00:26 波多尔斯基 阅读 (5416) 评论 (17)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10807204" rel="nofollow">
+posted @ 2020-05-07 13:52 Java技术栈 阅读 (29) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12842586" rel="nofollow">
     编辑
 </a>
 </div>
         <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/podolski/archive/2018/12/02.html">2018年12月2日</a>
-    </div>
-
+            <div class="postSeparator"></div>
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/podolski/p/10054286.html">
-    ASP.NET Core使用TopShelf部署Windows服务
+<a class="postTitle2" href="https://www.cnblogs.com/javastack/p/12841895.html">
+    两张趣图助你理解 HTTP 状态码！
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：asp.net core很大的方便了跨平台的开发者，linux的开发者可以使用apache和nginx来做反向代理，windows上可以用IIS进行反向代理。 反向代理可以提供很多特性，固然很好。但是还有复杂性，我们也可以使用windows service来直接启动kestrel。 asp.net             <a href="https://www.cnblogs.com/podolski/p/10054286.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：作者：web开发者 https://www.sohu.com/a/190263277_467792 HTTP状态码（HTTP Status Code）是用以表示网页服务器HTTP响应状态的3位数字代码。 我们可以通过查看HTTP状态码来判断服务器状态，常见的有404 、502等；但是其他不是很常见的            <a href="https://www.cnblogs.com/javastack/p/12841895.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2018-12-02 17:37 波多尔斯基 阅读 (4220) 评论 (20)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10054286" rel="nofollow">
+posted @ 2020-05-07 11:39 Java技术栈 阅读 (28) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12841895" rel="nofollow">
     编辑
 </a>
 </div>
@@ -447,7 +436,7 @@ posted @ 2018-12-02 17:37 波多尔斯基 阅读 (4220) 评论 (20)
 <div class="topicListFooter">
     <div id="nav_next_page">
         
-    <a href="https://www.cnblogs.com/podolski/default.html?page=2">
+    <a href="https://www.cnblogs.com/javastack/default.html?page=2">
         下一页
     </a>
 
@@ -486,7 +475,7 @@ posted @ 2018-12-02 17:37 波多尔斯基 阅读 (4220) 评论 (20)
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 波多尔斯基
+Copyright &copy; 2020 Java技术栈
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 

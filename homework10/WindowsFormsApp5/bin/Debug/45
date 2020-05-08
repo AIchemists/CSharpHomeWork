@@ -3,29 +3,29 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="referrer" content="never" />
-    <meta property="og:description" content="前文传送门： &amp;quot;「一本正经的聊数据结构（1）：时间复杂度」&amp;quot; &amp;quot;「一本正经的聊数据结构（2）：数组与向量」&amp;quot; &amp;quot;「一本正经的聊数据结构（3）：栈和队列" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="作者： &amp;quot;HelloGitHub 追梦人物&amp;quot; 文中所涉及的示例代码，已同步更新到 &amp;quot;HelloGitHub Team 仓库&amp;quot; django rest frame" />
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>一本正经的聊数据结构（5）：二叉树的存储结构与遍历 - 极客挖掘机 - 博客园</title>
+    <title>第 4 篇：用类视图实现首页 API - 削微寒 - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
-    <link id="MainCss" rel="stylesheet" href="/skins/simplememory/bundle-simplememory.min.css?v=OL4qeo1LNGlN1rKIhv5UctANvt0M6Nx6kLzr_ffx3Xk" />
-    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/babycomeon/custom.css?v=U1O5CRU9t/iVLoUCVHLTE38GFDE=" />
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory-mobile.min.css" />
+    <link id="MainCss" rel="stylesheet" href="/skins/blacklowkey/bundle-blacklowkey.min.css?v=_B1ixsexV8tpUJyj4tVsjnDwkM8eRY6ZCwGSi1TrV7s" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/xueweihan/custom.css?v=RRRtuZg9tgADpy&#x2B;UPLStdn026o0=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/blacklowkey/bundle-blacklowkey-mobile.min.css?v=cYvlxMu_nd6MVfg-vi7YqOC6FaZ7VHFsDM166vO_ekA" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/babycomeon/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/babycomeon/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/babycomeon/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/xueweihan/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/xueweihan/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/xueweihan/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 271437;
-        var currentBlogApp = 'babycomeon';
+        var currentBlogId = 228315;
+        var currentBlogApp = 'xueweihan';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'SimpleMemory';
+        var skinName = 'BlackLowKey';
     </script>
     
     
@@ -33,19 +33,21 @@
 </head>
 <body>
     <a name="top"></a>
-    
+    <div id="page_begin_html">
+        <a href="https://github.com/521xueweihan/HelloGitHub/"><img style="position: absolute; top: 0; right: 0; border: 0" src="https://images.cnblogs.com/cnblogs_com/xueweihan/859919/o_200129100904forkme_right_green_007200.png" alt="Fork me on GitHub" data-canonical-src="https://images.cnblogs.com/cnblogs_com/xueweihan/859919/o_200129100904forkme_right_green_007200.png"></a>
+    </div>
     
 <!--done-->
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/babycomeon/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/xueweihan/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/babycomeon/">极客挖掘机</a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/xueweihan/">削微寒的程序员之路</a>
 </h1>
 <h2>
-
+谦逊、专注，才能成长。
 </h2>
 
 
@@ -60,19 +62,17 @@
 博客园</a>
 </li>
 <li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/babycomeon/">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/xueweihan/">
 首页</a>
 </li>
 <li>
 
-<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
-新随笔</a>
+
 </li>
 <li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E6%9E%81%E5%AE%A2%E6%8C%96%E6%8E%98%E6%9C%BA">
-联系</a></li>
+</li>
 <li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/babycomeon/rss/">
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/xueweihan/rss/">
 订阅</a>
 <!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
 <li>
@@ -85,11 +85,11 @@
 		<div class="blogStats">
 			
 			<span id="stats_post_count">随笔 - 
-192&nbsp; </span>
+327&nbsp; </span>
 <span id="stats_article_count">文章 - 
 0&nbsp; </span>
 <span id="stats-comment_count">评论 - 
-145</span>
+1149</span>
 
 			
 		</div><!--end: blogStats -->
@@ -105,109 +105,88 @@
         <div class="post">
             <h1 class = "postTitle">
                 
-<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/babycomeon/p/12848388.html">一本正经的聊数据结构（5）：二叉树的存储结构与遍历</a>
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/xueweihan/p/12845530.html">第 4 篇：用类视图实现首页 API</a>
 
             </h1>
             <div class="clear"></div>
             <div class="postBody">
                 
 <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
-    <p><img src="https://cdn.geekdigging.com/DataStructure/head.png" alt=""></p>
-<p>前文传送门：</p>
-<p><a href="https://www.geekdigging.com/2020/03/28/6072951828/">「一本正经的聊数据结构（1）：时间复杂度」</a></p>
-<p><a href="https://www.geekdigging.com/2020/04/14/3143023839/">「一本正经的聊数据结构（2）：数组与向量」</a></p>
-<p><a href="https://www.geekdigging.com/2020/04/25/5497775819/">「一本正经的聊数据结构（3）：栈和队列」</a></p>
-<p><a href="https://www.geekdigging.com/2020/05/03/1553615465/">「一本正经的聊数据结构（4）：树」</a></p>
-<h2 id="存储结构">存储结构</h2>
-<p>前面的内容我们介绍了树和二叉树的一些基础概念，树是数据结构中的重中之重，而二叉树又是树结构中的重点。</p>
-<p>一直以来，包括我上学的年代，对树和二叉树的掌握都是模棱两可，希望能通过这篇文章可以给各位讲清楚这些疑难点。</p>
-<p>二叉树的存储结构分为两种，一种是<strong>顺序存储结构</strong>，另一种是<strong>链式存储结构</strong>。</p>
-<h3 id="顺序存储结构">顺序存储结构</h3>
-<p>顺序存储结构就是使用一维数组存储二叉树中的节点，并且节点的存储位置，就是数组的下标索引。</p>
-<p><img src="https://cdn.geekdigging.com/DataStructure/erchashu_shunxu.png" alt=""></p>
-<p>存储在一维数组中的样子如下：</p>
-<p><img src="https://cdn.geekdigging.com/DataStructure/erchashu_shunxu_cunchu.png" alt=""></p>
-<p>这个示例是一个 <strong>完全二叉树</strong> 的示例， <strong>完全二叉树</strong> 所对应的顺序存储刚好填满整个数组，但是如果二叉树不是 <strong>完全二叉树</strong> 的时候，采用顺序存储又是怎样的呢？</p>
-<p>下图中浅色结点表示结点不存在：</p>
-<p><img src="https://cdn.geekdigging.com/DataStructure/erchashu_shunxu_1.png" alt=""></p>
-<p>存储在一维数组中的样子如下：</p>
-<p><img src="https://cdn.geekdigging.com/DataStructure/erchashu_shunxu_cunchu_1.png" alt=""></p>
-<p>其中， <code>∧</code> 表示数组中此位置没有存储结点。可以看到，使用顺序存储已经造成了空间浪费的情况。</p>
-<p>如果是极端的右斜二叉树，顺序存储情况会如何呢？</p>
-<p>如下：</p>
-<p><img src="https://cdn.geekdigging.com/DataStructure/erchashu_shunxu_2.png" alt=""></p>
-<p>存储在一维数组中的样子如下：</p>
-<p><img src="https://cdn.geekdigging.com/DataStructure/erchashu_shunxu_cunchu_2.png" alt=""></p>
-<p>可以看到，在顺序存储结构下，极端的右斜二叉树存储造成了存储空间的极大的浪费。</p>
-<p>所以顺序存储方式一般适合完全二叉树。</p>
-<h3 id="链式存储结构">链式存储结构</h3>
-<p>顺序存储结构有些无法满足二叉树的存储，那么我们考虑使用链式存储结构。</p>
-<p>二叉树每个节点最多会有两个孩子，因此，可以将结点数据结构定义为一个数据和两个指针域。如下：</p>
-<p><img src="https://cdn.geekdigging.com/DataStructure/erchashu_lianshi.png" alt=""></p>
-<p>那么刚才我们的那个完全二叉树的存储结构就可以这么展现：</p>
-<p><img src="https://cdn.geekdigging.com/DataStructure/erchashu_lianshi_1.png" alt=""></p>
-<h2 id="遍历">遍历</h2>
-<p>二叉树的 <strong>遍历</strong> 是指从二叉树的根结点出发，按照某种次序依次访问二叉树中的所有结点，使得每个结点被访问一次，且仅被访问一次。</p>
-<p>二叉树的遍历依据访问次序可以分为四种方式：</p>
+    <p><img src="https://img2020.cnblogs.com/blog/759200/202004/759200-20200415161158343-1662112908.jpg" alt=""></p>
+<p>作者：<a href="https://www.zmrenwu.com">HelloGitHub-追梦人物</a></p>
+<blockquote>
+<p>文中所涉及的示例代码，已同步更新到 <a href="https://github.com/HelloGitHub-Team/HelloDjango-REST-framework-tutorial">HelloGitHub-Team 仓库</a></p>
+</blockquote>
+<p>django-rest-framework 类视图拓展自 django 的类视图，只是针对数据的序列化和反序列化等逻辑做了封装。</p>
+<p>django-rest-framework 中最基本的类视图是 <code>views.APIView</code>，这个类可以看成是上一篇教程中用到的 api_view 装饰器的类版本。这个类比较基础，其核心功能就是 HTTP 请求预处理、分发请求给对应的处理函数，以及 HTTP 响应后处理，还有就是 <code>as_view</code> 方法将类转为函数（要注意与被请求的 URL 绑定的视图必须是一个可调用对象，普通的的类是无法被直接调用的）。除非需要深度定制视图函数的逻辑，一般情况下我们的视图不会直接继承这个类。</p>
+<p>更为通用的类视图是 <code>GenericAPIView</code>，这个类继承自 <code>APIView</code>，对基类的功能做了拓展。继承自这个类的视图，只需对其类属性做一些简单的配置，就能获得获取单个资源、获取资源列表、资源列表分页等功能。当然，这个类作为其他特定功能类视图的基类，我们一般也很少使用。</p>
+<p>回顾一下此前讲的 RESTful 架构的基本概念，客户端使用 URL 访问资源，通过 HTTP 请求的动词表达对资源的操作。django-rest-framework 针对各种类型的资源操作，提供了对应的通用类视图，这些通用类视图主要包括：</p>
 <ul>
-<li>前序遍历</li>
-<li>中序遍历</li>
-<li>后序遍历</li>
-<li>层次遍历</li>
+<li>
+<p><strong>CreateAPIView</strong></p>
+<p>用于创建资源的 POST 请求。</p>
+</li>
+<li>
+<p><strong>ListAPIView</strong> 和 <strong>RetrieveAPIView</strong></p>
+<p>用于访问资源列表和单个资源的 GET 请求。</p>
+</li>
+<li>
+<p><strong>DestroyAPIView</strong></p>
+<p>用于删除资源的 DELETE 请求。</p>
+</li>
+<li>
+<p><strong>UpdateAPIView</strong></p>
+<p>用于更新资源的 PUT（全量更新）和 PATCH（部分更新）请求。</p>
+</li>
 </ul>
-<h3 id="前序遍历">前序遍历</h3>
-<p>简单来讲， <strong>前序遍历</strong> 就是由根节点开始，当第一次到达结点时就输出结点数据，按照先向左在向右的方向访问。</p>
-<p>还是用这个完全二叉树举例子：</p>
-<p><img src="https://cdn.geekdigging.com/DataStructure/erchashu_shunxu.png" alt=""></p>
-<p>当他进行前序遍历的时候，访问顺序如下：</p>
-<blockquote>
-<p>从根结点出发，则第一次到达结点 A ，故输出 A ;</p>
-<p>继续向左访问，第一次访问结点 B ，故输出 B ；</p>
-<p>按照同样规则，输出 D ，输出 H ；</p>
-<p>当到达叶子结点H，返回到 D ，此时已经是第二次到达 D ，故不在输出 D ，进而向 D 右子树访问， D 右子树不为空，则访问至 I ，第一次到达 I ，则输出 I ；</p>
-<p>I 为叶子结点，则返回到 D ， D 左右子树已经访问完毕，则返回到 B ，进而到 B 右子树，第一次到达 E ，故输出 E ；</p>
-<p>向E左子树，故输出 J ；</p>
-<p>按照同样的访问规则，继续输出 C 、 F 、 G 。</p>
-</blockquote>
-<p>所以，这个完全二叉树的前序遍历结果为： <strong>ABDHIEJCFG</strong> 。</p>
-<h3 id="中序遍历">中序遍历</h3>
-<p><strong>中序遍历</strong> 就是从二叉树的根结点出发，当第二次到达结点时就输出结点数据，按照先向左在向右的方向访问。</p>
-<p>还是上面的完全二叉树，访问顺序如下：</p>
-<blockquote>
-<p>从根结点出发，则第一次到达结点 A ，不输出 A ，继续向左访问，第一次访问结点 B ，不输出 B ；继续到达 D ， H ；</p>
-<p>到达 H ， H 左子树为空，则返回到 H ，此时第二次访问 H ，故输出 H ；</p>
-<p>H 右子树为空，则返回至 D ，此时第二次到达 D ，故输出 D ；</p>
-<p>由 D 返回至 B ，第二次到达 B ，故输出 B ；</p>
-<p>按照同样规则继续访问，输出 J 、 E 、 A 、 F 、 C 、 G ；</p>
-</blockquote>
-<p>所以，中序遍历的结果为： <strong>HDIBJEAFCG</strong> 。</p>
-<h3 id="后序遍历">后序遍历</h3>
-<p><strong>后序遍历</strong> 就是从二叉树的根结点出发，当第三次到达结点时就输出结点数据，按照先向左在向右的方向访问。</p>
-<p><strong>后序遍历</strong> 的访问顺序如下：</p>
-<blockquote>
-<p>从根结点出发，则第一次到达结点 A ，不输出 A ，继续向左访问，第一次访问结点 B ，不输出 B ；继续到达 D ， H ；</p>
-<p>到达 H ， H 左子树为空，则返回到 H ，此时第二次访问 H ，不输出 H ；</p>
-<p>H 右子树为空，则返回至 H ，此时第三次到达 H ，故输出 H ；</p>
-<p>由 H 返回至 D ，第二次到达 D ，不输出 D ；</p>
-<p>继续访问至 I ， I 左右子树均为空，故第三次访问 I 时，输出 I ；</p>
-<p>返回至 D ，此时第三次到达 D ，故输出 D ；</p>
-<p>按照同样规则继续访问，输出 J 、 E 、 B 、 F 、 G 、 C ， A ；</p>
-</blockquote>
-<p>所以，后序遍历的结果为： <strong>HIDJEBFGCA</strong> 。</p>
-<h3 id="层次遍历">层次遍历</h3>
-<p><strong>层次遍历</strong> 就是按照树的层次自上而下的遍历二叉树。</p>
-<p>层次遍历的访问顺序如下：</p>
-<blockquote>
-<p>从根节点出发，第一个到达节点 A ，直接输出 A ；</p>
-<p>继续向左访问，到达节点 B ，输出节点 B ，继续访问节点的右节点 C ，输出节点 C ，此时，第二层访问结束，继续访问第三层；</p>
-<p>访问节点 B 的左节点 D ，输出 D ，继续访问节点 B 的右节点 E ，输出节点 E ；</p>
-<p>剩下依次访问节点 F 、 G 、 H 、 I 、 J 。</p>
-</blockquote>
-<p>所以层次遍历的结果为： <strong>ABCDEFGHIJ</strong> 。</p>
-<h2 id="小结">小结</h2>
-<p>本文介绍了二叉树的存储结构以及四种遍历方式，各位看完了应该对二叉树有一个初步的认知，如果不涉及一些变种的二叉树，仅二叉树的基础内容而言，还是比较简单的，希望各位同学能够自己思考下，在大脑中能建立出一个二叉树的模型，方便后面的学习。</p>
-<h2 id="参考">参考</h2>
-<p><a href="https://www.jianshu.com/p/bf73c8d50dc2">https://www.jianshu.com/p/bf73c8d50dc2</a></p>
+<p>以及以上视图的各种组合通用类视图：<code>ListCreateAPIView</code>、<code>RetrieveUpdateAPIView</code>、<code>RetrieveDestroyAPIView</code>、<code>RetrieveUpdateDestroyAPIView</code>。</p>
+<p>博客首页 API 返回首页文章列表数据，显然应该选用的是 <code>ListAPIView</code>。其代码如下：</p>
+<pre><code class="language-python">from rest_framework.generics import ListAPIView
+from rest_framework.pagination import PageNumberPagination
+from rest_framework.permissions import AllowAny
+
+class IndexPostListAPIView(ListAPIView):
+    serializer_class = PostListSerializer
+    queryset = Post.objects.all()
+    pagination_class = PageNumberPagination
+    permission_classes = [AllowAny]
+</code></pre>
+<p>That all！首页 API 就写好了。我们基本没有写任何逻辑代码，只是指定了类视图的几个属性值。因为逻辑基本都是通用的，通用类视图在背后帮我们做了全部工作，我们只要告诉它：用哪个序列化器去做，序列化哪个资源等就可以了。以这里的类视图为例，我们指定了：</p>
+<p>使用 <code>PostListSerializer</code> 序列化器（通过 <code>serializer_class</code> 指定）；</p>
+<p>序列化博客文章（Post）列表（通过 <code>queryset</code> 指定）；</p>
+<p>对资源列表分页（通过 <code>pagination_class</code> 指定，<code>PageNumberPagination</code> 会自动对资源进行分页，后面的教程会详细介绍分页功能）；</p>
+<p>允许任何人访问该资源（通过 <code>permission_classes</code> 指定，<code>AllowAny</code> 权限类不对任何访问做拦截，即允许任何人调用这个 API 以访问其资源）。</p>
+<p>最后一步就是在 urls.py 中绑定接口，把原来绑定的函数视图改为现在的类视图：</p>
+<pre><code class="language-python">path('api/index/', views.IndexPostListAPIView.as_view())
+</code></pre>
+<p>启动开发服务器，打开浏览器访问 <a href="http://127.0.0.1:8000/api/index/%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E5%92%8C%E4%B8%8A%E4%B8%80%E7%AF%87%E6%95%99%E7%A8%8B%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0%E8%A7%86%E5%9B%BE%E8%BF%94%E5%9B%9E%E7%9A%84%E7%BB%93%E6%9E%9C%E6%98%AF%E4%B8%80%E6%A0%B7%E7%9A%84%EF%BC%9A">http://127.0.0.1:8000/api/index/，可以看到和上一篇教程中使用函数视图返回的结果是一样的：</a></p>
+<pre><code class="language-json">{
+    &quot;count&quot;: 201,
+    &quot;next&quot;: &quot;http://127.0.0.1:10000/api/index/?page=2&quot;,
+    &quot;previous&quot;: null,
+    &quot;results&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;title&quot;: &quot;Markdown 与代码高亮测试&quot;,
+            &quot;created_time&quot;: &quot;2020-04-23T14:22:36.129383+08:00&quot;,
+            &quot;excerpt&quot;: &quot;欢迎使用马克飞象\n@(示例笔记本)[马克飞象|帮助|Markdown]\n马克飞象是一款专为印象笔记（Ever&quot;,
+            &quot;category&quot;: {
+                &quot;id&quot;: 6,
+                &quot;name&quot;: &quot;Markdown测试&quot;
+            },
+            &quot;author&quot;: {
+                &quot;id&quot;: 1,
+                &quot;username&quot;: &quot;admin&quot;
+            },
+            &quot;views&quot;: 0
+        }
+    ]
+}
+</code></pre>
+<p>而且可以看到，返回的结果进行了分页，next 字段指示了下一页的链接，这样分页访问资源就变的非常方便了。</p>
+<hr>
+<p><img src="https://img2018.cnblogs.com/blog/759200/202002/759200-20200213201956024-782757549.png" alt=""></p>
+<p><strong>关注公众号加入交流群</strong></p>
 
 </div>
 <div id="MySignature"></div>
@@ -219,12 +198,12 @@
 </div>
             </div>
             <div class="postDesc">posted @ 
-<span id="post-date">2020-05-08 08:57</span>&nbsp;
-<a href="https://www.cnblogs.com/babycomeon/">极客挖掘机</a>&nbsp;
+<span id="post-date">2020-05-08 09:19</span>&nbsp;
+<a href="https://www.cnblogs.com/xueweihan/">削微寒</a>&nbsp;
 阅读(<span id="post_view_count">...</span>)&nbsp;
 评论(<span id="post_comment_count">...</span>)&nbsp;
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12848388" rel="nofollow">编辑</a>&nbsp;
-<a href="javascript:void(0)" onclick="AddToWz(12848388);return false;">收藏</a></div>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12845530" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12845530);return false;">收藏</a></div>
         </div>
 	    
 	    
@@ -233,8 +212,8 @@
 <script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
 <script>markdown_highlight();</script>
 <script>
-    var allowComments = true, cb_blogId = 271437, cb_blogApp = 'babycomeon', cb_blogUserGuid = '3e50558f-07e5-e511-9fc1-ac853d9f53cc';
-    var cb_entryId = 12848388, cb_entryCreatedDate = '2020-05-08 08:57', cb_postType = 1; 
+    var allowComments = true, cb_blogId = 228315, cb_blogApp = 'xueweihan', cb_blogUserGuid = '41673165-d8fd-e411-b908-9dcfd8948a71';
+    var cb_entryId = 12845530, cb_entryCreatedDate = '2020-05-08 09:19', cb_postType = 1; 
     loadViewCount(cb_entryId);
     loadSideColumnAd();
 </script><a name="!comments"></a>
@@ -319,7 +298,7 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 极客挖掘机
+Copyright &copy; 2020 削微寒
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 
@@ -328,17 +307,6 @@ Copyright &copy; 2020 极客挖掘机
 </div><!--end: home 自定义的最大容器 -->
 
 
-    <div id="page_end_html">
-        <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?0b8457e2520fe3afff6f4df6c82109c9";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<script type="text/javascript" src="https://s5.cnzz.com/z_stat.php?id=1277837552&web_id=1277837552"></script>
-    </div>
+    
 </body>
 </html>

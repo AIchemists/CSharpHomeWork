@@ -4,28 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="origin" />
-    
+    <meta property="og:description" content="前言 我们平时编码过程中，可能很少去查看 Java 文件编译后的字节码指令。但是，不管你是因为对技术非常热爱，喜欢刨根问底，还是想在别人面前装X 。我认为，都非常有必要了解一下常见的字节码指令。这对于" />
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>独孤风 - 博客园</title>
+    <title>你还在为怎么查看字节码指令而担忧吗？ - 烟雨星空 - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/coffee/bundle-coffee.min.css?v=KPz7rj-c2sTAV1_ck1aDmbZcuCG3KBhyLnfvzf6nn94" />
     
-    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/tree1123/custom.css?v=dkz3SpGvQHVuzquyL9ArfGCNHsM=" />
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/moonlightink/bundle-moonlightink-mobile.min.css?v=DtT6aFEL2E0nUaFINFlRXOfBp0MkOV1AK7GFtAkKKbo" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee-mobile.min.css?v=na9bpAY4yh7uEWCcrXj3vfJM3VBse8YtU6-5fUUQPz0" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/tree1123/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/tree1123/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/tree1123/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/starry-skys/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/starry-skys/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/starry-skys/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 325964;
-        var currentBlogApp = 'tree1123';
+        var currentBlogId = 558872;
+        var currentBlogApp = 'starry-skys';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'MoonlightInk';
+        var skinName = 'coffee';
     </script>
     
     
@@ -39,10 +39,10 @@
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/tree1123/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+	<a href="https://www.cnblogs.com/starry-skys/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>			
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/tree1123/">实时流式计算</a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/starry-skys/">「烟雨星空」</a>
 </h1>
 <h2>
 
@@ -53,404 +53,320 @@
 
 		
 	</div><!--end: blogTitle 博客的标题和副标题 -->
-	<div id="navigator">
-		
-<ul id="navList">
-<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
-博客园</a>
-</li>
-<li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/tree1123/">
-首页</a>
-</li>
-<li>
-
-<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
-新随笔</a>
-</li>
-<li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%8B%AC%E5%AD%A4%E9%A3%8E">
-联系</a></li>
-<li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/tree1123/rss/">
-订阅</a>
-<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
-<li>
-<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
-管理</a>
-</li>
-</ul>
-
-
-		<div class="blogStats">
-			
-			<span id="stats_post_count">随笔 - 
-96&nbsp; </span>
-<span id="stats_article_count">文章 - 
-0&nbsp; </span>
-<span id="stats-comment_count">评论 - 
-10</span>
-
-			
-		</div><!--end: blogStats -->
-	</div><!--end: navigator 博客导航栏 -->
 </div><!--end: header 头部 -->
 
 <div id="main">
 	<div id="mainContent">
 	<div class="forFlow">
-		
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+	<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/starry-skys/">
+首页</a>
+</li>
+	<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+	<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%83%9F%E9%9B%A8%E6%98%9F%E7%A9%BA">
+联系</a></li>
+	<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+	<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/starry-skys/rss/">
+订阅</a>
+	
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/starry-skys/rss/">
+    <img src="/skins/coffee/images/xml.gif" alt="订阅" />
+</a></li>
+</ul>
+
+
+
+			<div class="blogStats">
+				
+				<!--done-->
+随笔- 
+45&nbsp;
+文章- 
+0&nbsp;
+评论- 
+67&nbsp;
+
+
+
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		<div id="post_detail">
 <!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class = "postTitle">
+			
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/starry-skys/p/12848747.html">你还在为怎么查看字节码指令而担忧吗？</a>
 
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <h2 id="前言">前言</h2>
+<p>我们平时编码过程中，可能很少去查看 Java 文件编译后的字节码指令。但是，不管你是因为对技术非常热爱，喜欢刨根问底，还是想在别人面前装X 。我认为，都非常有必要了解一下常见的字节码指令。这对于我们理解代码的运行原理也会很有帮助。</p>
+<h2 id="注释会被执行吗？">注释会被执行吗？</h2>
+<p>比如，最近我就看到了二哥（沉默王二）的一篇文章，非常有意思，也让我涨了见识了。且看代码，可能会让你怀疑人生~</p>
+<pre><code class="language-java">public class TestAnno {
+    public static void main(String[] args) {
+        String str = &quot;张三&quot;;
+        // \u000d str=&quot;李四&quot;;
+        System.out.println(str);
+    }
+}
 
+</code></pre>
+<p>可以猜一下最终打印结果是什么。我来告诉你，结果是： “李四”。What？ 这是什么神仙操作。为何会这样，这被注释的代码还能执行？</p>
+<p>别光顾着吃惊，我们来看一下为什么打印结果跟我们想象中的略有偏差。</p>
+<p>仔细查看，发现注释行中，有一个 \u000d 。这是一个 unicode 码，它代表的是一个换行符。因此，在执行后，就会把 <code>str=&quot;李四&quot;</code> 这行代码换行到下一行，从而导致了它也被编译执行。</p>
+<p>有的小伙伴就说了，我怎么知道你说的是真是假呢，你这不是瞎说呢吗，一点说服力都没有啊。</p>
+<p>好吧，这就需要我们看一下编译后的字节码了，编译器总不能骗我们吧。</p>
+<h2 id="查看字节码的两种方式">查看字节码的两种方式</h2>
+<p>我们知道，通过 javac 命令，可以把 java 文件编译成 class 文件。然后，想看它的字节码指令，需要用到 javap -c 反编译一下。</p>
+<p>但是，每次都通过命令行，还是有一些麻烦。因此，懒人福利来了。这里我提供两种方式，直接在 idea 中就可以查看，非常的方便（果然，懒惰才是促使科技进步的原动力啊）。</p>
+<h3 id="配置-external-tools">配置 External Tools</h3>
+<p>这种方式，其实就是先配置一下，JDK 中 javap 命令的位置，然后让 idea 帮我们自动执行 javap 命令。</p>
+<p>找到 idea 的菜单栏，File --&gt; Settings 。然后找到 External Tools 。</p>
+<p><img src="https://img2020.cnblogs.com/other/1714084/202005/1714084-20200508095455940-2013311215.jpg" alt=""></p>
+<p>点击加号，添加一个 tool ，里边的配置项，如下，</p>
+<p><img src="https://img2020.cnblogs.com/other/1714084/202005/1714084-20200508095456198-1325913814.jpg" alt=""></p>
+<ul>
+<li>Name，就给当前 tool 起一个名字好了，用于使用时，在右键菜单选项中展示。</li>
+<li>Decriptions，描述此功能，别到时候你自己都忘了当前配置这个东西是用来干嘛的了。</li>
+<li>Program：电脑本机 javap 命令的绝对路径。</li>
+<li>Arguments：填写 -c $FileNameWithoutExtension$.class 就可以，代表编译的class文件。</li>
+<li>Working directory：填写 $OutputPath$/$FileDirRelativeToSourcepath$ ，代表class文件的工作目录。</li>
+</ul>
+<p>配置完成了，可以在idea中，直接右键，选择配置中 Name 对应的选项。</p>
+<p><img src="https://img2020.cnblogs.com/other/1714084/202005/1714084-20200508095456452-1188476716.jpg" alt=""></p>
+<p>此时 ，就可以打印出当前类编译后的字节码指令。</p>
+<p><img src="https://img2020.cnblogs.com/other/1714084/202005/1714084-20200508095456729-1624802025.jpg" alt=""></p>
+<p>我们稍后再来分析里边的具体含义。下边，还有另外一种使用插件的方式，来查看字节码。而且功能更加强大。</p>
+<h3 id="jclasslib-bytecode-viewer-插件">jclasslib bytecode viewer 插件</h3>
+<p>同上，在 idea 的 setting 菜单，找到 Plugins 插件项，然后搜索这个插件。</p>
+<p><img src="https://img2020.cnblogs.com/other/1714084/202005/1714084-20200508095457019-1083129596.jpg" alt=""></p>
+<p>安装之后，并重启 idea ，就可以生效了。</p>
+<p>使用的时候，在 View 菜单，找到 show bytecode with jclasslib。</p>
+<p><img src="https://img2020.cnblogs.com/other/1714084/202005/1714084-20200508095457479-423012352.jpg" alt=""></p>
+<p>它可以查看基本信息，常量池，接口，属性，方法等信息。如下，找到我们对应的 main 方法。</p>
+<p><img src="https://img2020.cnblogs.com/other/1714084/202005/1714084-20200508095457751-456029105.jpg" alt=""></p>
+<p>这个插件还有一个好处，就是当我们不知道某个指令是什么意思的时候，直接鼠标在指令上边单击，就可以链接到官方的解释。如，不知道第一行 ldc 什么意思，直接单击 ldc 就可以跳转到 oracle 官网对应命令的解释。这非常有利用我们学习此命令。</p>
+<p><img src="https://img2020.cnblogs.com/other/1714084/202005/1714084-20200508095457983-939040830.jpg" alt=""></p>
+<h2 id="常用字节码指令">常用字节码指令</h2>
+<p>以上两种方式，都挺方便的，根据自己喜好自由选择就好了。</p>
+<p>相信你肯定也被很多字节码指令搞的一头雾水过，接下来，我们就一起学习下常用的指令都有哪些吧。之后，再来看上边的例子就轻松很多了。</p>
+<h3 id="数据类型">数据类型</h3>
+<p>我们知道 Java 是强类型语言，在使用之前肯定已经确定了它的类型。而数据类型，无非就是基本数据类型和引用类型。它们对应的字节码，其实就是用它们的对应类型的英文首字母来表示的。（引用类型除外）</p>
+<p>例如，s 代表 short ， i 代表 int， l 代表 long ，f 代表 float，d 代表 double，b 代表 byte（不包括boolean），c 代表 char，a 代表 reference 引用。</p>
+<h3 id="加载和存储指令">加载和存储指令</h3>
+<p>我们知道，一个方法的运行，会在栈的栈帧中执行。方法中的变量称为局部变量，数的操作需要用到操作数栈。因此，加载和存储指令，就是数据在局部变量表和操作数栈中来回传输。</p>
+<p>将一个局部变量加载到操作数栈：如 iload、iload_  。表示加载的是 int 类型变量。</p>
+<p>iload_  后边带数字代表第几个 int 型变量。例如 iload_0 代表把第一个 int 型局部变量加载到操作数栈。</p>
+<p>其他类型变量同上： lload ，fload ，dload，aload 。</p>
+<p>将一个数值存储到局部变量表： istore，istore_，lstore，lstore_，fstore，fstore_，dstore，dstore_，astore，astore_ 。</p>
+<p>将一个常量加载到操作数栈： aconst_null，iconst_m1，iconst_，lconst_，fconst_，dconst_ ，bipush，sipush。</p>
+<p>ldc 代表把 int、float、String类型常量从常量池中加载到操作数栈。 ldc_w 代表宽索引。</p>
+<p>ldc2_w 代表把 long 或 double 类型常量从常量池中加载到操作数栈。（宽索引）</p>
+<p>这里需要说的是，int 类型根据数值的取值范围不同，而采用不同的字节码指令。</p>
+<p>iconst_m1 代表 -1 ，iconst_ 代表 0~5 。bipush 代表 -128~127（byte取值范围）， sipush 代表 -32768~32767（short取值范围），ldc 在 int 中代表 -2147483648~2147483647（int取值范围）。</p>
+<pre><code class="language-java">public class TestByteCode {
+    public static void main(String[] args) {
+        int a = -1;
+        int b = 0;
+        int c = 1;
+        int d = 2;
+        int e = 3;
+        int f = 4;
+        int g = 5;
+        int h = 127;
+        int i = 32767;
+        int j = 2147483647;
+    }
+}
+</code></pre>
+<p>其字节码为：</p>
+<pre><code>0 iconst_m1
+ 1 istore_1
+ 2 iconst_0
+ 3 istore_2
+ 4 iconst_1
+ 5 istore_3
+ 6 iconst_2
+ 7 istore 4
+ 9 iconst_3
+10 istore 5
+12 iconst_4
+13 istore 6
+15 iconst_5
+16 istore 7
+18 bipush 127
+20 istore 8
+22 sipush 32767
+25 istore 9
+27 ldc #2 &lt;2147483647&gt;
+29 istore 10
+31 return
+</code></pre>
+<h3 id="访问指令">访问指令</h3>
+<p>访问类字段：getstatic，putstatic</p>
+<p>访问类实例字段：getfield，putfield</p>
+<h3 id="方法调用和返回">方法调用和返回</h3>
+<ul>
+<li>invokevirtual ： 用于调用对象的实例方法。</li>
+<li>invokeinterfce： 用于调用接口方法。</li>
+<li>invokespecial：用于调用一些特殊的方法，如父类构造方法，实例初始化方法，私有方法。</li>
+<li>invokestatic：用于调用类的静态方法。</li>
+<li>invokedynamic：用于调用动态方法。</li>
+</ul>
+<p>方法返回是跟返回类型相关，根据不同的返回类型，有不同的指令。</p>
+<ul>
+<li>return：返回 void。</li>
+<li>ireturn：注意，这个不止返回 int ，返回 boolean，byte，char，short 也用这个指令。其实，很多指令都没有直接支持 byte,char，short和 boolean，而是用 int 类型代替。这是因为，虚拟机的操作码长度只有一个字节，只能表示有限个数的指令。（我们这里所提到的所有指令，都只是方便我们记忆的助记符，而在计算机内部肯定还是一个字节，即 8 个 bit 位的二进制）</li>
+<li>lreturn：返回 long 类型。</li>
+<li>freturn：返回 float 类型。</li>
+<li>dreturn：返回 double 类型。</li>
+<li>areturn：返回引用类型。</li>
+</ul>
+<h2 id="其余字节码指令">其余字节码指令</h2>
+<p>上边介绍的指令只是很少一部分字节码指令。但是，麻雀虽小，五脏俱全，也包括了最基本的变量定义，调用方法，和方法返回这些最基本的功能。同时，也足够我们去解释上边的问题，为什么注释行会被执行了。</p>
+<blockquote>
+<p>更多的字节码指令可以参考《深入理解Java虚拟机》这本书的 6.4 节，和最后的附录字节码指令表。需要这本书的，可以微信搜索到我《烟雨星空》，后台回复“Java虚拟机”。</p>
+</blockquote>
+<p>由于字节码指令太多，比如还有运算指令，包括加减乘除、位运算，比较指令等，if 等控制指令，类型强转指令，还有多线程用到的同步锁。And  so on ~</p>
+<p>不可能把它们全部记住背会，但是，其实都是由规律可循的，很多都是见名知意，用各种英文首字母简写代表。比如，int类型的加法运算，就是 iadd，double 类型的减法运算是 dsub。等等。</p>
+<p>因此，我这里只是给了一个引子，重要的还是需要自己去寻找方法，不断的实践探索 ~</p>
+<p>另外，官方文档才是最好的学习途径：<a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html">https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html</a></p>
+<h2 id="注释行字节码">注释行字节码</h2>
+<p>最后，学以致用，实践出真知。我们一起看一下开头抛出的问题吧，为什么注释行会被执行。看一下它的字节码指令就知道了。</p>
+<pre><code class="language-java">public class TestAnno {
+    public static void main(String[] args) {
+        String str = &quot;张三&quot;;
+        // \u000d str=&quot;李四&quot;;
+        System.out.println(str);
+    }
+}
+</code></pre>
+<pre><code class="language-java"> //这里就是从常量池中取出一个字符串“张三”，然后加载到操作数栈
+ 0 ldc #2 &lt;张三&gt;
+ //从操作数栈把这个字符串引用存储到局部变量表中
+ 2 astore_1
+ //从常量池中取出一个字符串“李四”，然后加载到操作数栈
+ 3 ldc #3 &lt;李四&gt;
+ //可以发现和上边一样都是astore_1，说明指向的是同一个引用 str。
+ //若定义另外一个str2赋值给“李四”，这个操作指令肯定就不同了。
+ 5 astore_1
+ //访问的是System类的静态属性out，我们知道它的类型是PrintStream
+ 6 getstatic #4 &lt;java/lang/System.out&gt;
+ //将out这个引用加载到操作数栈栈顶，以便后边操作它
+ 9 aload_1
+ //调用out的实例方法 println ，用于打印结果到控制台
+10 invokevirtual #5 &lt;java/io/PrintStream.println&gt;
+//main方法返回值为void
+13 return
+</code></pre>
+<p>这里就不用再多余解释了吧，可以从字节码指令中看到，后边的 <code>str=&quot;李四&quot;</code> 被编译器执行了。</p>
+<p>如果本文对你有用，就赶快关注我，给我点赞吧~</p>
 
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+		</div>
+		<div class="postDesc">posted @ 
+<span id="post-date">2020-05-08 09:55</span>&nbsp;
+<a href="https://www.cnblogs.com/starry-skys/">烟雨星空</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12848747" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12848747);return false;">收藏</a></div>
+	</div>
+	
+	
+</div><!--end: topics 文章、评论容器-->
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 558872, cb_blogApp = 'starry-skys', cb_blogUserGuid = 'eeb1e8f8-d0b4-41a1-97d7-08d6ee6d0083';
+    var cb_entryId = 12848747, cb_entryCreatedDate = '2020-05-08 09:55', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
 
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/tree1123/archive/2020/05/08.html">2020年5月8日</a>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
     </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/tree1123/p/12848672.html">
-    实时流式计算系统中的几个陷阱
-</a>
-
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
         </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：随着诸如Apache Flink，Apache Spark，Apache Storm之类的开源框架以及诸如Google Dataflow之类的云框架的增多，创建实时数据处理作业变得非常容易。这些API定义明确，并且诸如Map Reduce之类的标准概念在所有框架中都遵循几乎相似的语义。 但是，直到今            <a href="https://www.cnblogs.com/tree1123/p/12848672.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-05-08 09:46 独孤风 阅读 (62) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12848672" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/tree1123/archive/2020/05/07.html">2020年5月7日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/tree1123/p/12840871.html">
-    DataHub——实时数据治理平台
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：DataHub 首先，阿里云也有一款名为DataHub的产品，是一个流式处理平台，本文所述DataHub与其无关。 数据治理是大佬们最近谈的一个火热的话题。不管国家层面，还是企业层面现在对这个问题是越来越重视。数据治理要解决数据质量，数据管理，数据资产，数据安全等等。而数据治理的关键就在于 元数据管            <a href="https://www.cnblogs.com/tree1123/p/12840871.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-05-07 09:23 独孤风 阅读 (205) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12840871" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/tree1123/archive/2020/05/06.html">2020年5月6日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/tree1123/p/12834464.html">
-    聊聊流计算系统中的核心问题：状态管理
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：本文选自《实时流计算系统设计与实现》 文末有惊喜 状态管理是流计算系统的核心问题之一。在实现流数据的关联操作时，流计算系统需要先将窗口内的数据临时保存起来，然后在窗口结束时，再对窗口内的数据做关联计算。在实现时间维度聚合特征计算和关联图谱特征计算时，更是需要创建大量的寄存用于记录聚合的结果。而CEP            <a href="https://www.cnblogs.com/tree1123/p/12834464.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-05-06 09:30 独孤风 阅读 (101) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12834464" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/tree1123/archive/2020/04/28.html">2020年4月28日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/tree1123/p/12793896.html">
-    一小时搭建实时数据分析平台
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：实时数据分析门槛较高，我们如何用极少的开发工作就完成实时数据平台的搭建，做出炫酷的图表呢？ 如何快速的搭建实时数据分析平台，首先我们需要实时数据的接入端，我们选择高扩展性、容错性、速度极快的消息系统Kafka，而实时数据仓库，由于 Druid提供了非常方便快捷配置方式，如果不想编写负责的Flink和            <a href="https://www.cnblogs.com/tree1123/p/12793896.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-28 14:08 独孤风 阅读 (258) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12793896" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/tree1123/archive/2020/04/27.html">2020年4月27日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/tree1123/p/12787140.html">
-    重大更新！Druid 0.18.0 发布—Join登场，支持Java11
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：Apache Druid本质就是一个分布式支持实时数据分析的数据存储系统。 能够快速的实现查询与数据分析，高可用，高扩展能力。 距离上一次更新刚过了二十多天，距离0.17版本刚过了三个多月，Druid再次迎来重大更新，Druid也越来越强大了。 Apache Druid 0.18.0 本次更新了 4            <a href="https://www.cnblogs.com/tree1123/p/12787140.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-27 15:39 独孤风 阅读 (605) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12787140" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/tree1123/archive/2020/04/26.html">2020年4月26日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/tree1123/p/12779374.html">
-    Linux上非root用户jdk环境变量配置
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：1.设置用户环境变量vi .bash_profile 或者是 vi ~/.bashrc 2.JAVA_HOME=/home/sgmm/jdk1.6.0_13 CLASSPATH=$JAVA_HOME/lib:$JAVA_HOME/jre/lib PATH=$PATH:$JAVA_HOME/bin:$            <a href="https://www.cnblogs.com/tree1123/p/12779374.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-26 14:39 独孤风 阅读 (18) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12779374" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-            <div class="postSeparator"></div>
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/tree1123/p/12779001.html">
-    Scala学习系列（三）——入门与基础
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：本课程源码共享于 &quot;https://github.com/tree1123/learning scala&quot; 首先，打开IDEA编辑器的SbtExampleProject项目，我们将在这个项目下进行练习 本节的练习内容位于 com.tree1123.Base 中 新建一个main函数 一 、声明值和变            <a href="https://www.cnblogs.com/tree1123/p/12779001.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-26 13:43 独孤风 阅读 (28) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12779001" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/tree1123/archive/2020/04/20.html">2020年4月20日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/tree1123/p/12735914.html">
-    Kafka 2.5.0发布——弃用对Scala2.11的支持
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：近日Kafka发布了最新版本 2.5.0，增加了很多新功能： 下载地址：https://kafka.apache.org/downloads 2.5.0 对TLS 1.3的支持（默认为1.2） 引入用于 Kafka Streams 的 Co groups 用于 Kafka Consumer 的增量             <a href="https://www.cnblogs.com/tree1123/p/12735914.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-20 09:28 独孤风 阅读 (284) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12735914" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/tree1123/archive/2020/04/15.html">2020年4月15日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/tree1123/p/12703086.html">
-    重磅！Github宣布面向团队免费
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：GitHub CEO Nat Friedman 宣布已面向全体 GitHub 用户和团队提供不限制协作人数的私有仓库，并宣称 GitHub 的全部核心功能现已对所有人免费提供。 公告称： 到目前为止，如果您的组织要使用GitHub进行私有开发，则必须订阅我们的付费计划之一。但是地球上的每个开发人员都            <a href="https://www.cnblogs.com/tree1123/p/12703086.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-15 09:11 独孤风 阅读 (137) 评论 (1)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12703086" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/tree1123/archive/2020/04/14.html">2020年4月14日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/tree1123/p/12695983.html">
-    超200万？约翰斯&amp;#183;霍普金大学数据错误！——谈谈如何保证实时计算数据准确性
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：作为全球新冠疫情数据的实时统计的权威，约翰斯—霍普金斯大学的实时数据一直是大家实时关注的，也是各大媒体的主要数据来源。在今天早上的相当一段长的时间，霍普金斯大学的全球疫情分布大屏中显示，全球确诊人数已经突破200万。 有图有真相 随后相关媒体也进行了转发，不过这个数据明显波动太大，随后该网站也修改了            <a href="https://www.cnblogs.com/tree1123/p/12695983.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-14 09:49 独孤风 阅读 (372) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12695983" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-
-<div class="topicListFooter">
-    <div id="nav_next_page">
-        
-    <a href="https://www.cnblogs.com/tree1123/default.html?page=2">
-        下一页
-    </a>
-
-    </div>    
-</div>
-
-
-
-
-
-
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div></div>
 
 
 	</div><!--end: forFlow -->
@@ -464,12 +380,12 @@ posted @ 2020-04-14 09:49 独孤风 阅读 (372) 评论 (0)
 </div>
 
 <div id="sidebar_ad"></div>
-			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script></div>
 			
-			<div id="leftcontentcontainer">
+			<DIV id="leftcontentcontainer">
 				<div id="blog-sidecolumn"></div>
                     <script>loadBlogSideColumn();</script>
-			</div>
+			</DIV>
 			
 		</div><!--end: sideBarMain -->
 	</div><!--end: sideBar 侧边栏容器 -->
@@ -478,7 +394,7 @@ posted @ 2020-04-14 09:49 独孤风 阅读 (372) 评论 (0)
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 独孤风
+Copyright &copy; 2020 烟雨星空
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 

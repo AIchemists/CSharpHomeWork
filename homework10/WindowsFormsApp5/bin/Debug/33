@@ -4,28 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="origin" />
-    <meta property="og:description" content="前面介绍了Spring Boot 中的整合Mybatis并实现增删改查。不清楚的朋友可以看看之前的文章：https://www.cnblogs.com/zhangweizhong/category/1" />
+    
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Spring Boot入门系列（十三）如何实现事务 - 章为忠 - 博客园</title>
+    <title>三升水 - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
-    <link id="MainCss" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip.min.css?v=1CubIA3L29CO3-6VLJIOrrj2uGfyKeX_-xaumWzHk7o" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=UeHyLv1TT2WTz4TwfUOiMoKNmtFvLUjUnIhFE2UmZ7I" />
     
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip-mobile.min.css?v=0pGk3D9Ik_jI4q1TALBT2ybOjIePHS_80_0J4DDOQiY" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=XjHfryC9ctsatIZz1dHn7TsRIqmwz9c3aj_6SCfHSDM" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/zhangweizhong/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/zhangweizhong/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/zhangweizhong/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/sanshengshui/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/sanshengshui/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/sanshengshui/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 171085;
-        var currentBlogApp = 'zhangweizhong';
+        var currentBlogId = 463176;
+        var currentBlogApp = 'sanshengshui';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'darkgreentrip';
+        var skinName = 'CodingLife';
     </script>
     
     
@@ -39,14 +39,13 @@
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/zhangweizhong/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/sanshengshui/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/zhangweizhong/">章为忠</a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/sanshengshui/">三升水</a>
 </h1>
 <h2>
-【章小鱼】虽千万人，吾往矣。
-我的博客地址：<a href="http://www.fpeach.com/">www.fpeach.com</a>
+
 </h2>
 
 
@@ -61,7 +60,7 @@
 博客园</a>
 </li>
 <li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/zhangweizhong/">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/sanshengshui/">
 首页</a>
 </li>
 <li>
@@ -70,10 +69,10 @@
 新随笔</a>
 </li>
 <li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%AB%A0%E4%B8%BA%E5%BF%A0">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E4%B8%89%E5%8D%87%E6%B0%B4">
 联系</a></li>
 <li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/zhangweizhong/rss/">
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/sanshengshui/rss/">
 订阅</a>
 <!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
 <li>
@@ -86,11 +85,11 @@
 		<div class="blogStats">
 			
 			<span id="stats_post_count">随笔 - 
-180&nbsp; </span>
+40&nbsp; </span>
 <span id="stats_article_count">文章 - 
 0&nbsp; </span>
 <span id="stats-comment_count">评论 - 
-691</span>
+52</span>
 
 			
 		</div><!--end: blogStats -->
@@ -100,175 +99,370 @@
 <div id="main">
 	<div id="mainContent">
 	<div class="forFlow">
-		<div id="post_detail">
-    <!--done-->
-    <div id="topics">
-        <div class="post">
-            <h1 class = "postTitle">
-                
-<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/zhangweizhong/p/12680873.html">Spring Boot入门系列（十三）如何实现事务</a>
+		
+<!--done-->
 
-            </h1>
-            <div class="clear"></div>
-            <div class="postBody">
-                
-<div id="cnblogs_post_body" class="blogpost-body ">
-    <p>前面介绍了Spring Boot 中的整合Mybatis并实现增删改查。不清楚的朋友可以看看之前的文章：<a href="https://www.cnblogs.com/zhangweizhong/category/1657780.html">https://www.cnblogs.com/zhangweizhong/category/1657780.html</a>。</p>
-<p>Spring Boot 整合完Mybatis，有个特别重要的功能之前忘记讲了：那就是Spring Boot如何实现事物控制。在我们的实际系统中，事务会被经常用到。特别是数据库操作或者是复杂的业务操作时，必须事物执行。必须保证本次业务的处理结果更改要么都成功，要么都失败。那么这种场景下，我们改如何实现呢？</p>
-<p>&nbsp;</p>
-<h2 id="b3_solo_h3_21">为什么要事务</h2>
-<p>以转账业务为例：一次转载业务涉及数据库表的两次更改。为确保业务完整性，需保证这两次更改要么都成功，要么都失败。否则账户金额就做了，后果非常严重。</p>
-<p><img src="https://img2020.cnblogs.com/blog/306976/202004/306976-20200411162841457-388673908.png" alt="" width="328" height="293"></p>
-<p>&nbsp;</p>
-<h2 id="b3_solo_h3_21">事务播行为</h2>
-<pre>Propagation.REQUIRED -- 支持当前事务，如果当前没有事务，就新建一个事务,最常见的选择。</pre>
-<pre>Propagation.SUPPORTS -- 支持当前事务，如果当前没有事务，就以非事务方式执行</pre>
-<pre>Propagation.MANDATORY <em>-- </em>支持当前事务，如果当前没有事务，就抛出异常。</pre>
-<pre>Propagation.REQUIRES_NEW <em>--</em> 新建事务，如果当前存在事务，把当前事务挂起, 两个事务之间没有关系，一个异常，一个提交，不会同时回滚。</pre>
-<pre>Propagation.NOT_SUPPORTED <em>-- </em>以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。</pre>
-<pre>Propagation.NEVER -- 以非事务方式执行，如果当前存在事务，则抛出异常<br /><br /></pre>
-<h2 id="b3_solo_h2_27">如何实现</h2>
-<p>1、首先创建Spring Boot项目，并整合Mybatis相关的依赖。这个之前的文章讲过，大家可以看我这篇文章：《<a class="postTitle2" href="https://www.cnblogs.com/zhangweizhong/p/12434053.html">Spring Boot入门系列（六）Spring Boot如何整合Mybatis【附详细步骤</a><a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/zhangweizhong/p/12434053.html">】</a><a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/zhangweizhong/p/12434053.html"></a>》</p>
-<p>2、在需要事务的方法上添加&nbsp;<code>@Transactional</code>注解，并通过<code>propagation</code>指定事务机制。</p>
-<p>修改UserServiceImpl 类和UserService类，增加&nbsp;saveUserTransactional 方法。</p>
-<div class="cnblogs_code">
-<pre><span style="color: #000000;">    @Override
-    @Transactional(propagation </span>=<span style="color: #000000;"> Propagation.REQUIRED)
-    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> saveUserTransactional(SysUser user) {
 
-        userMapper.insert(user);
 
-        </span><span style="color: #0000ff;">int</span> a = 1 / 0<span style="color: #000000;">;
 
-        user.setIsDelete(</span>1<span style="color: #000000;">);
-        userMapper.updateByPrimaryKeySelective(user);
-    }</span></pre>
-</div>
-<p>说明：</p>
-<ul>
-<li><code>propagation = Propagation.REQUIRED</code>是默认的事务机制，若当前有事务则支持当前事务，否则新建事务。</li>
-<li>springboot 开启事物很简单，只需要加注解@Transactional即可。</li>
-<li><code>@Transactional</code>也可以加在类上，则该类所有方法都遵循该注解配置。</li>
-</ul>
-<p>&nbsp;3、测试调用</p>
-<p>在之前的<em style="font-family: 'Courier New'; font-size: 12px;">MyBatisCRUDController</em>增加测试方法：saveUserTransactional。</p>
-<div class="cnblogs_code">
-<pre>    @RequestMapping("/saveUserTransactional"<span style="color: #000000;">)
-    </span><span style="color: #0000ff;">public</span><span style="color: #000000;"> JSONResult saveUserTransactional() {
+		
 
-        String userId </span>=<span style="color: #000000;"> sid.nextShort();
 
-        SysUser user </span>= <span style="color: #0000ff;">new</span><span style="color: #000000;"> SysUser();
-        user.setId(userId);
-        user.setUsername(</span>"weiz" + <span style="color: #0000ff;">new</span><span style="color: #000000;"> Date());
-        user.setNickname(</span>"weiz" + <span style="color: #0000ff;">new</span><span style="color: #000000;"> Date());
-        user.setPassword(</span>"abc123"<span style="color: #000000;">);
-        user.setIsDelete(</span>0<span style="color: #000000;">);
-        user.setRegistTime(</span><span style="color: #0000ff;">new</span><span style="color: #000000;"> Date());
-
-        userService.saveUserTransactional(user);
-
-        </span><span style="color: #0000ff;">return</span> JSONResult.ok("保存成功"<span style="color: #000000;">);
-    }</span></pre>
-</div>
-<p>&nbsp;</p>
-<h2>测试</h2>
-<p>首先我们看目前的sql数据中的数据，user表中数据如下：</p>
-<p><img src="https://img2020.cnblogs.com/blog/306976/202004/306976-20200420185323219-655297089.png" alt="" width="618" height="203"></p>
-<p>&nbsp;</p>
-<p>&nbsp;在浏览器中数据：http://localhost:8080/mybatis/saveUserTransactional，也没返回执行异常，数据库中的数据也没有变化，说明数据已经回滚了：</p>
-<p><img src="https://img2020.cnblogs.com/blog/306976/202004/306976-20200420185849544-1332255389.png" alt="" width="625" height="196"></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<h2>最后</h2>
-<p>以上，就把Spring Boot中事物控制讲完了，是不是特别简单。</p>
-<p>这个系列课程的完整源码，也会提供给大家。大家关注我的微信公众号（<span style="color: #00ffff;">架构师精进</span>），回复：springboot源码。获取这个系列课程的完整源码。</p>
-<p>&nbsp;</p>
-</div>
-<div id="MySignature"></div>
-<div class="clear"></div>
-<div id="blog_post_info_block">
-    <div id="blog_post_info"></div>
-    <div class="clear"></div>
-    <div id="post_next_prev"></div>
-</div>
-            </div>
-            <div class="postDesc">posted @ 
-<span id="post-date">2020-05-08 09:47</span>&nbsp;
-<a href="https://www.cnblogs.com/zhangweizhong/">章为忠</a>&nbsp;
-阅读(<span id="post_view_count">...</span>)&nbsp;
-评论(<span id="post_comment_count">...</span>)&nbsp;
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12680873" rel="nofollow">编辑</a>&nbsp;
-<a href="javascript:void(0)" onclick="AddToWz(12680873);return false;">收藏</a></div>
-        </div>
-	    
-	    
-    </div><!--end: topics 文章、评论容器-->
-</div>
-<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
-<script>markdown_highlight();</script>
-<script>
-    var allowComments = true, cb_blogId = 171085, cb_blogApp = 'zhangweizhong', cb_blogUserGuid = 'a6084bc8-e391-e011-a53f-842b2b196315';
-    var cb_entryId = 12680873, cb_entryCreatedDate = '2020-05-08 09:47', cb_postType = 1; 
-    loadViewCount(cb_entryId);
-    loadSideColumnAd();
-</script><a name="!comments"></a>
-<div id="blog-comments-placeholder"></div>
-<script>
-    var commentManager = new blogCommentManager();
-    commentManager.renderComments(0);
-</script>
-
-<div id="comment_form" class="commentform">
-    <a name="commentform"></a>
-    <div id="divCommentShow"></div>
-    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
-    <div id="comment_form_container"></div>
-    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
-    <div id="ad_t2"></div>
-    <div id="opt_under_post"></div>
-    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
-    <script>
-        var googletag = googletag || {};
-        googletag.cmd = googletag.cmd || [];
-    </script>
-    <script>
-        googletag.cmd.push(function () {
-            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
-            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
-            googletag.pubads().enableSingleRequest();
-            googletag.enableServices();
-        });
-    </script>
-    <div id="cnblogs_c1" class="c_ad_block">
-        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/sanshengshui/archive/2020/05/08.html">2020年5月8日</a>
     </div>
-    <div id="under_post_news"></div>
-    <div id="cnblogs_c2" class="c_ad_block">
-        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
-            <script>
-                if (new Date() >= new Date(2018, 9, 13)) {
-                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
-                }
-            </script>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/sanshengshui/p/12849014.html">
+    抓住CoAP协议的“心”
+</a>
+
         </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：摘要 The Constrained Application Protocol （CoAP）是一种专用的Web传输协议，用于受约束的节点和受约束的(例如，低功率，有损)网络。 节点通常具有带少量ROM和RAM的8位微控制器，而诸如低功耗无线个人局域网 （6LoWPAN）上的IPv6之类的受限网络通常            <a href="https://www.cnblogs.com/sanshengshui/p/12849014.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
-    <div id="under_post_kb"></div>
-    <div id="HistoryToday" class="c_ad_block"></div>
-    <script type="text/javascript">
-        fixPostBody();
-        deliverBigBanner();
-setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
-        deliverAdC1();
-        deliverAdC2();
-        loadNewsAndKb();
-        loadBlogSignature();
-LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
-        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
-        loadOptUnderPost();
-        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
-    </script>
 </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-05-08 10:31 三升水 阅读 (61) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12849014" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/sanshengshui/archive/2020/05/07.html">2020年5月7日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/sanshengshui/p/12844111.html">
+    初识CoAP协议
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 本文介绍什么是CoAP，以及如何在物联网设备上使用它。CoAP是一种物联网协议，具有一些专门为受约束的设备而设计的有趣功能。还有其他一些可用于构建物联网解决方案的IoT协议，例如MQTT等。 物联网是最有趣和最有前途的技术趋势之一。在这个生态系统中，对象，人员，设备相互连接并交换数据。在此博客            <a href="https://www.cnblogs.com/sanshengshui/p/12844111.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-05-07 16:56 三升水 阅读 (119) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12844111" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/sanshengshui/archive/2020/04/09.html">2020年4月9日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/sanshengshui/p/12669011.html">
+    高性能/并发的保证-Netty在Redisson的应用
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 ​	Redisson Github: https://github.com/redisson/redisson ​	Redisson 官网：https://redisson.pro/ Redisson是一个在Redis的基础上实现的Java驻内存数据网格(In Memory Data Grid            <a href="https://www.cnblogs.com/sanshengshui/p/12669011.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-09 19:23 三升水 阅读 (154) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12669011" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/sanshengshui/archive/2020/03/24.html">2020年3月24日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/sanshengshui/p/12561065.html">
+    物联网时代-新基建-ThingsBoard调试环境搭建
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 2020开年之际,科比不幸离世、疫情当道、经济受到了严重的损失。人们都不幸的感慨: 2020年真是太不真实的一年，可以重新来过就好了！国家和政府出台了拯救经济和加速建设的利好消息。3月份最热的词是什么?价值50万亿投资额的&quot;新基建&quot;当之无愧。 这场声势浩大的新基建投资的主要战场，涵盖包括5G建            <a href="https://www.cnblogs.com/sanshengshui/p/12561065.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-03-24 19:18 三升水 阅读 (288) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12561065" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/sanshengshui/archive/2019/12/25.html">2019年12月25日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/sanshengshui/p/12094894.html">
+    出席分布式事务Seata 1.0.0 GA典礼
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 图中那个红衣服的就是本人 什么是分布式事务 分布式事务就是指事务的参与者、支持事务的服务器、资源服务器以及事务管理器分别位于不同的分布式系统的不同节点之上。 简单的说，就是一次大的操作由不同的小操作组成，这些小的操作分布在不同的服务器上，且属于不同的应用，分布式事务需要保证这些小操作要么全部成            <a href="https://www.cnblogs.com/sanshengshui/p/12094894.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-12-25 09:22 三升水 阅读 (361) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12094894" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/sanshengshui/archive/2019/11/14.html">2019年11月14日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/sanshengshui/p/11854813.html">
+    拨乱反正-重构是门艺术活
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 引用自: 《重构 改善既有代码的设计》 重构是在不改变软件可观察行为的前提下改善其内部结构。当你面对一个最需要重构的遗留系统时，其规模之大、历史之久、代码质量之差，常会使得添加单元测试或者理解其逻辑都成为不可能的任务。此时你唯一能依靠的就是那些已经被证明是行为保持的重构手法: 用绝对安全的手法            <a href="https://www.cnblogs.com/sanshengshui/p/11854813.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-11-14 09:22 三升水 阅读 (281) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11854813" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/sanshengshui/archive/2019/11/12.html">2019年11月12日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/sanshengshui/p/11839882.html">
+    记因循环依赖的解决方案
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 循环依赖分为2类 : RPC服务间（dubbo、http）循环依赖 应用间循环依赖 1. Dubbo缺省会在启动时检查依赖的服务是否可用，不可用时会抛出异常，防止Spring初始化完成 。这种情况我们就叫做RPC服务间循环依赖。出现了循环依赖，必须有一方先启动。所以这种问题是一定需要解决的。             <a href="https://www.cnblogs.com/sanshengshui/p/11839882.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-11-12 09:42 三升水 阅读 (473) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11839882" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/sanshengshui/archive/2019/10/26.html">2019年10月26日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/sanshengshui/p/11741625.html">
+    记因git规范导致的提测和发布延迟
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：号外 最 近因为换工作的原因，我的博客和Github没有像之前那样频繁的更新了。一方面原因是投递简历和准备面试，由于之前的基础没有很扎实，需要把平时的知识点都整理一遍。这个时间段持续了20多天的样子，因为今年的互联网市场遇冷，简历反馈率都不是很好。 ​	我一共投递了菜鸟网络，天猫超市，有赞，大搜车和            <a href="https://www.cnblogs.com/sanshengshui/p/11741625.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-10-26 00:52 三升水 阅读 (449) 评论 (4)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11741625" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/sanshengshui/archive/2019/08/19.html">2019年8月19日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/sanshengshui/p/11375230.html">
+    物联网时代-跟着Thingsboard学IOT架构-HTTP设备协议及API相关限制
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：thingsboard官网: https://thingsboard.io/ thingsboard GitHub: https://github.com/thingsboard/thingsboard thingsboard提供的体验地址: http://demo.thingsboard.io/             <a href="https://www.cnblogs.com/sanshengshui/p/11375230.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-08-19 09:14 三升水 阅读 (1120) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11375230" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/sanshengshui/archive/2019/08/11.html">2019年8月11日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/sanshengshui/p/11334568.html">
+    第五章-处理多窗口 | Electron实战
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：本章主要内容: 使用JavaScript 数据结构跟踪多个窗口 促进主进程和多个渲染器进程之间的通信 使用Node APIs检查应用程序运行在那个平台上 现在，当Fire Sale启动时，它为UI创建一个窗口。当该窗口关闭时，应用程序退出。虽然这种行为完全可以接受，但我们通常希望能够打开多个独立的窗            <a href="https://www.cnblogs.com/sanshengshui/p/11334568.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-08-11 12:21 三升水 阅读 (2684) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11334568" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/sanshengshui/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
 	</div><!--end: forFlow -->
 	</div><!--end: mainContent 主体内容容器-->
 
@@ -294,7 +488,7 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 章为忠
+Copyright &copy; 2020 三升水
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 

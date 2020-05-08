@@ -4,28 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="origin" />
-    
+    <meta property="og:description" content="前文 &amp;quot;Kubernetes笔记（一）：十分钟部署一套K8s环境&amp;quot; 介绍了如何快速搭建一个k8s系统。为了继续使用k8s来部署我们的应用，需要先对k8s中的一些基本组件与概念有个了" />
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>程序员cxuan - 博客园</title>
+    <title>Kubernetes笔记（二）：了解k8s的基本组件与概念 - 【空山新雨】 - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
-    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=UeHyLv1TT2WTz4TwfUOiMoKNmtFvLUjUnIhFE2UmZ7I" />
-    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/cxuanBlog/custom.css?v=z87jHRAmtK9vVV49P3mxO0DHs1A=" />
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=XjHfryC9ctsatIZz1dHn7TsRIqmwz9c3aj_6SCfHSDM" />
+    <link id="MainCss" rel="stylesheet" href="/skins/simplememory/bundle-simplememory.min.css?v=OL4qeo1LNGlN1rKIhv5UctANvt0M6Nx6kLzr_ffx3Xk" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/cxuanBlog/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/cxuanBlog/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/cxuanBlog/wlwmanifest.xml" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory-mobile.min.css" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/spec-dog/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/spec-dog/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/spec-dog/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 517352;
-        var currentBlogApp = 'cxuanBlog';
+        var currentBlogId = 185522;
+        var currentBlogApp = 'spec-dog';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'CodingLife';
+        var skinName = 'SimpleMemory';
     </script>
     
     
@@ -33,18 +33,16 @@
 </head>
 <body>
     <a name="top"></a>
-    <div id="page_begin_html">
-        <script>loadPageBeginHtml();</script>
-    </div>
+    
     
 <!--done-->
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/cxuanBlog/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/spec-dog/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/cxuanBlog/">cxuan</a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/spec-dog/">空山新雨的技术空间</a>
 </h1>
 <h2>
 
@@ -62,7 +60,7 @@
 博客园</a>
 </li>
 <li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/cxuanBlog/">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/spec-dog/">
 首页</a>
 </li>
 <li>
@@ -71,10 +69,10 @@
 新随笔</a>
 </li>
 <li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%A8%8B%E5%BA%8F%E5%91%98cxuan">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E3%80%90%E7%A9%BA%E5%B1%B1%E6%96%B0%E9%9B%A8%E3%80%91">
 联系</a></li>
 <li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/cxuanBlog/rss/">
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/spec-dog/rss/">
 订阅</a>
 <!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
 <li>
@@ -87,11 +85,11 @@
 		<div class="blogStats">
 			
 			<span id="stats_post_count">随笔 - 
-98&nbsp; </span>
+104&nbsp; </span>
 <span id="stats_article_count">文章 - 
 0&nbsp; </span>
 <span id="stats-comment_count">评论 - 
-225</span>
+127</span>
 
 			
 		</div><!--end: blogStats -->
@@ -101,360 +99,193 @@
 <div id="main">
 	<div id="mainContent">
 	<div class="forFlow">
-		
-<!--done-->
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/spec-dog/p/12849328.html">Kubernetes笔记（二）：了解k8s的基本组件与概念</a>
 
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p>前文 <a href="http://blog.jboost.cn/k8s1-installation.html">Kubernetes笔记（一）：十分钟部署一套K8s环境</a> 介绍了如何快速搭建一个k8s系统。为了继续使用k8s来部署我们的应用，需要先对k8s中的一些基本组件与概念有个了解。</p>
+<h2 id="kubernetes是什么">Kubernetes是什么</h2>
+<p>Kubernetes是Google于2014年基于其内部Brog系统开源的一个容器编排管理系统，可使用声明式的配置（以yaml文件的形式）自动地执行容器化应用程序的管理，包括部署、伸缩、负载均衡、回滚等。</p>
+<p>kubernetes提供的功能：</p>
+<ul>
+<li>自动发布与伸缩：可以通过声明式的配置文件定义想要部署的容器，Kubernetes将自动进行容器的部署，达到期望的结果；通过指定容器副本数，或者设置根据资源负载情况（如CPU、内存使用率），自动对容器组进行快速的伸缩——增大或缩小容器数量</li>
+<li>滚动升级与灰度发布：采用逐步替换的策略实现滚动升级，使用Kubernetes也可以很轻易地管理系统的灰度发布</li>
+<li>服务发现与负载均衡：Kubernetes通过DNS名称或IP地址暴露容器的访问方式，并且可在同一容器组内实现负载分发与均衡</li>
+<li>存储编排：Kubernetes可以自动挂载指定的存储系统，如local storage/nfs/云存储等</li>
+<li>故障恢复：Kubernetes自动重启已经停机的容器，替换不满足健康检查的容器</li>
+<li>密钥与配置管理：Kubernetes可以存储与管理敏感信息，如Docker Registry的登录凭证，密码，ssh密钥等</li>
+</ul>
+<h2 id="kubernetes架构">Kubernetes架构</h2>
+<p>我们先来看一张Kubernetes的架构图</p>
+<p><img src="https://img2020.cnblogs.com/other/632381/202005/632381-20200508110949254-928911372.png" alt="k8s-arch"></p>
+<p>Kubernetes是一套分布式系统， 与大多数分布式系统类似，包含控制节点（master node）与工作节点（worker node）。</p>
+<h3 id="master-node">master node</h3>
+<p>控制节点就是指挥官，负责发号施令的，其上运行一些管理服务来对整个系统进行管理与控制，包括</p>
+<ul>
+<li>apiserver：作为整个系统的对外接口，提供一套Restful API供客户端调用，任何的资源请求/调用操作都是通过kube-apiserver提供的接口进行,如kubectl、kubernetes dashboard等管理工具就是通过apiserver来实现对集群的管理</li>
+<li>kube-scheduler：资源调度器，负责将容器组分配到哪些节点上</li>
+<li>kube-controller-manager：管理控制器，集群中处理常规任务的后台线程，包括节点控制器（负责监听节点停机的事件并作出对应响应）、endpoint-controller（刷新服务与容器组的关联信息）、replication-controller（维护容器组的副本数为指定的数值）、Service Account &amp; Token控制器（负责为新的命名空间创建默认的 Service Account 以及 API Access Token）</li>
+<li>etcd：数据存储，存储集群所有的配置信息</li>
+<li>coredns：实现集群内部通过服务名称进行容器组访问的功能</li>
+</ul>
+<h3 id="worker-node">worker node</h3>
+<p>工作节点就是具体干活的小兵，其上也运行一些服务来执行指挥官分派的任务，包括</p>
+<ul>
+<li>kubelet：是工作节点上执行操作的代理程序，负责容器的生命周期管理，定期执行容器健康检查，并上报容器的运行状态</li>
+<li>kube-proxy：是一个具有负载均衡能力的简单的网络访问代理，负责将访问某个服务的请求分配到工作节点的具体某个容器上（kube-proxy也运行于master node上）</li>
+<li>Docker Daemon：这个不难理解，所有服务或容器组都要以Docker容器的形式来运行（但Kubernetes其实不局限于Docker，它支持任何实现了Kubernetes容器引擎接口的容器引擎，如containerd、rktlet）</li>
+</ul>
+<p>另外还有既在master node上也在worker node上运行的网络通信组件 kube-flannel。这些服务组件一般运行在kube-system的命名空间中，如图</p>
+<p><img src="https://img2020.cnblogs.com/other/632381/202005/632381-20200508110949478-1179327366.png" alt="kube-system"></p>
+<h2 id="kubernetes基本概念">Kubernetes基本概念</h2>
+<p>我们再来看第二张图</p>
+<p><img src="https://img2020.cnblogs.com/other/632381/202005/632381-20200508110949972-701054865.png" alt="k8s"></p>
+<p>功能组件在上面已经做了介绍。Kubernetes的操作对象主要包括容器组（Pod），服务（Service），副本控制器（replication-controller），及围绕这些的其它辅助对象</p>
+<h3 id="pod">Pod</h3>
+<p>Pod是Kubernetes创建或部署的最小基本单元。一个Pod封装一个或多个应用容器、存储资源、一个独立的网络IP以及管理控制容器运行方式的策略选项。Pod中的每个容器共享网络命名空间（包括IP与端口），Pod内的容器可以使用localhost相互通信。Pod可以指定一组共享存储卷Volumes，Pod中所有容器都可以访问共享的Volumes，Volumes用于数据持久化，防止容器重启丢失数据。</p>
+<h3 id="volume">Volume</h3>
+<p>Kubernetes使用Volume来解决Pod中容器重启数据丢失的问题，以及Pod中多个容器间数据共享的问题。Kubernetes支持的Volume类型包括：</p>
+<ul>
+<li>emptyDir：当Pod分配到Node上时，将会创建emptyDir，只要Node上的Pod一直运行，Volume就会一直存在。当Pod（不管任何原因）从Node上被删除时，emptyDir也同时会删除，存储的数据也将永久删除，但删除容器不影响emptyDir</li>
+<li>hostPath：hostPath允许挂载Node上的文件系统到Pod里面去。如果Pod需要使用Node上的文件，可以使用hostPath</li>
+<li>nfs: 使用nfs网络文件系统提供的共享目录</li>
+</ul>
+<h3 id="replicationcontroller">ReplicationController</h3>
+<p>ReplicationController确保在任何时候都有按配置的Pod副本数在运行。现在推荐使用配置ReplicaSet（下一代ReplicationController）的Deployment来建立副本管理机制。</p>
+<h3 id="replicaset">ReplicaSet</h3>
+<p>ReplicaSet是下一代ReplicationController，两者的唯一区别是ReplicaSet支持新的基于集合的选择器，而ReplicationController仅支持基于相等选择器的需求。</p>
+<h3 id="deployment">Deployment</h3>
+<p>Deployment为Pod与ReplicaSet提供了声明式的定义，描述你想要的目标状态是什么，Deployment controller就会帮你将Pod与ReplicaSet的实际状态改变到你想要的目标状态。</p>
+<h3 id="service">Service</h3>
+<p>一个Service可以看做一组提供相同服务的Pod的对外访问接口。Kubernetes提供两种类型的Service：</p>
+<ul>
+<li>NodePort： 集群外部可以通过Node IP与Node Port来访问具体某个Pod</li>
+<li>ClusterIP：指通过集群的内部IP暴露服务，服务只能够在集群内部可以访问，这也是默认的 ServiceType</li>
+</ul>
+<h3 id="label">Label</h3>
+<p>Label就是一对key/value，可以附加到各种资源对象上，如Node、Pod、Service等，一个资源对象可以定义任意数量的Label。可以通过Label选择器来选择具备某个（些）Label的资源。</p>
+<h3 id="pv--pvc">PV &amp; PVC</h3>
+<p>PersistentVolume（PV） 为用户提供了一个存储抽象，由管理员设置，它是集群的一部分。就像节点是集群中的资源一样，PV也是集群中的资源。 PV是Volume之类的卷插件，但具有独立于Pod的生命周期。</p>
+<p>PersistentVolumeClaim（PVC）是用户存储的请求。它与Pod相似。Pod消耗节点资源，PVC消耗PV资源。Pod可以请求特定级别的资源（CPU和内存）。PVC可以请求特定大小和访问模式的存储资源（例如，可以以读/写或只读模式挂载）。</p>
+<h3 id="secret">Secret</h3>
+<p>Secret解决了密码、token、密钥等敏感数据的存储问题，Secret的三种类型：</p>
+<ul>
+<li>Service Account ：用来访问Kubernetes API，由Kubernetes自动创建，并且会自动挂载到Pod的/run/secrets/kubernetes.io/serviceaccount目录中</li>
+<li>Opaque ：Base64编码格式的Secret，用来存储密码、密钥等</li>
+<li>kubernetes.io/dockerconfigjson ：用来存储docker registry的认证信息</li>
+</ul>
+<h3 id="configmap">ConfigMap</h3>
+<p>ConfigMap用来保存key/value对的配置数据，这个数据可以在Pods里使用，或者被用来为像controller一样的系统组件存储配置数据。ConfigMap可以方便的处理不含敏感信息的字符串（敏感信息可使用Secret）。</p>
+<h3 id="namespace">Namespace</h3>
+<p>Namespace类似于Kubernetes中的虚拟集群，便于不同的分组在共享使用整个集群的资源的同时还能被分别管理。比如我们如果开发测试共用一个Kubernetes集群，则可以将开发环境的服务部署到dev的namespace，测试环境的部署到test的namespace。</p>
+<h3 id="ingress">Ingress</h3>
+<p>为集群服务提供外部访问，包括基于Nginx与Traefik两个版本，为服务提供域名绑定访问与路径路由功能。也可以基于Ingress实现服务的灰度发布。</p>
+<h2 id="总结">总结</h2>
+<p>本文对Kubernetes中涉及的基本组件与概念进行了整理，对其基本构成有了一个大致的理解与印象。下一篇将从一个实践出发，实现一个基于Gitlab+Jenkins+K8s的CI/CD流程，以对涉及的各个组件进行深入了解与学习。</p>
+<hr>
+<p>相关阅读：</p>
+<ul>
+<li><a href="http://blog.jboost.cn/k8s1-installation.html">Kubernetes笔记（一）：十分钟部署一套K8s环境</a></li>
+</ul>
+<hr>
+<p>作者：雨歌<br>
+欢迎关注作者微信公众号：半路雨歌，一起学习成长</p>
+<p><img src="https://img2020.cnblogs.com/other/632381/202005/632381-20200508110950191-436080646.jpg" alt="微信公众号"></p>
 
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/cxuanBlog/archive/2020/05/08.html">2020年5月8日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/cxuanBlog/p/12849283.html">
-    一文带你入门操作系统
-</a>
-
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-08 11:10</span>&nbsp;
+<a href="https://www.cnblogs.com/spec-dog/">【空山新雨】</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12849328" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12849328);return false;">收藏</a></div>
         </div>
-        <div class="postCon">
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 185522, cb_blogApp = 'spec-dog', cb_blogUserGuid = '26f00df1-04d8-e311-8d02-90b11c0b17d6';
+    var cb_entryId = 12849328, cb_entryCreatedDate = '2020-05-08 11:10', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
 
-    <div class="c_b_p_desc">
-摘要：操作系统（Operating System，OS）：是管理计算机硬件与软件资源的系统软件，同时也是计算机系统的内核与基石。操作系统需要处理管理与配置内存、决定系统资源供需的优先次序、控制输入与输出设备、操作网络与管理文件系统等基本事务。操作系统也提供一个让用户与系统交互的操作界面。 Yna28K.p            <a href="https://www.cnblogs.com/cxuanBlog/p/12849283.html" class="c_b_p_desc_readmore">阅读全文</a>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
     </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-05-08 11:05 程序员cxuan 阅读 (78) 评论 (1)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12849283" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/cxuanBlog/archive/2020/05/01.html">2020年5月1日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/cxuanBlog/p/12812628.html">
-    程序员是如何一步一步被诈骗的？
-</a>
-
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
         </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：后来我终于明白电信诈骗来的时候像天气一样难以预料，但是你谨慎对待也是完成可以避免的。下边是来自一位在2020 年 4月30日 下午遭遇电信诈骗的读者的亲身经历，请大家认真看完，希望有所启发和帮助。 前言 今天之前，每每看到一些电信诈骗事件，我就会想，被诈骗者是在什么时候，什么地点，以什么样的心情去处            <a href="https://www.cnblogs.com/cxuanBlog/p/12812628.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
 </div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-05-01 09:49 程序员cxuan 阅读 (601) 评论 (9)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12812628" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/cxuanBlog/archive/2020/04/25.html">2020年4月25日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/cxuanBlog/p/12774370.html">
-    关于强引用、软引用、弱引用、幻象引用，你该如何回答？
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：我们说的不同的引用类型其实都是逻辑上的，而对于虚拟机来说，主要体现的是对象的不同的 状态和对 的影响。 初识引用 对于刚接触 Java 的 C++ 程序员而言，理解栈和堆的关系可能很不习惯。在 C++ 中，可以使用 new 操作符在堆上创建对象，或者使用自动分配在栈上创建对象。下面的 C++ 语句是            <a href="https://www.cnblogs.com/cxuanBlog/p/12774370.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-25 18:21 程序员cxuan 阅读 (257) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12774370" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-            <div class="postSeparator"></div>
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/cxuanBlog/p/12771994.html">
-    操作系统核心概念第二弹来了！
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：1. ：另一类 I/O 设备是 。字符设备以 为单位发送或接收一个字符流，而不考虑任何块结构。字符设备是不可寻址的，也没有任何寻道操作。常见的字符设备有 打印机、网络设备、鼠标、以及大多数与磁盘不同的设备 。 2. ： 设备控制器是处理 CPU 传入信号和传出信号的系统。设备通过插头和插座连接到计算            <a href="https://www.cnblogs.com/cxuanBlog/p/12771994.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-25 11:06 程序员cxuan 阅读 (193) 评论 (1)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12771994" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/cxuanBlog/archive/2020/04/20.html">2020年4月20日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/cxuanBlog/p/12735623.html">
-    面试 HTTP ，99% 的面试官都爱问这些问题
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：HTTP 和 HTTPS 的区别 HTTP 是一种 ， HTTP 是一个在计算机世界里专门在两点之间传输文字、图片、音频、视频等超文本数据的约定和规范 HTTP 主要内容分为三部分， 超文本（Hypertext）、传输（Transfer）、协议（Protocol） 。 超文本就是不单单只是本文，它还            <a href="https://www.cnblogs.com/cxuanBlog/p/12735623.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-20 07:08 程序员cxuan 阅读 (709) 评论 (1)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12735623" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/cxuanBlog/archive/2020/04/18.html">2020年4月18日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/cxuanBlog/p/12724257.html">
-    很用心的为你写了 9 道 MySQL 面试题
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：MySQL 一直是本人很薄弱的部分，后面会多输出 MySQL 的文章贡献给大家，毕竟 MySQL 涉及到数据存储、锁、磁盘寻道、分页等操作系统概念，而且互联网对 MySQL 的注重程度是不言而喻的，后面要加紧对 MySQL 的研究。写的如果不好，还请大家见谅。 非关系型数据库和关系型数据库区别，优势            <a href="https://www.cnblogs.com/cxuanBlog/p/12724257.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-18 09:44 程序员cxuan 阅读 (406) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12724257" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/cxuanBlog/archive/2020/04/17.html">2020年4月17日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/cxuanBlog/p/12719416.html">
-    今年行情这么差，到底如何进大厂？
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：从春节过后，我，一位双非渣本的大三学生，便踏上了实习之旅，面试了不下三十场，虽然很菜，但是也相应地拿了一些 offer ,例如京东金融、人人车等五六家 offer 总结一下春招就是一个字：难。 没学历，技术还凑合，简历能过但是面试就有点困难。这期间收到了 N 个面试官的歧视，有些面试官感觉骨子里瞧不            <a href="https://www.cnblogs.com/cxuanBlog/p/12719416.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-17 13:43 程序员cxuan 阅读 (193) 评论 (1)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12719416" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/cxuanBlog/archive/2020/04/08.html">2020年4月8日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/cxuanBlog/p/12659578.html">
-    看完这篇Exception 和 Error，和面试官扯皮就没问题了
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：在 Java 中的基本理念是 ，发现错误的理想时期是在编译期间，因为你不用运行程序，只是凭借着对 Java 基本理念的理解就能发现问题。但是编译期并不能找出所有的问题，有一些 NullPointerException 和 ClassNotFoundException 在编译期找不到，这些异常是 Ru            <a href="https://www.cnblogs.com/cxuanBlog/p/12659578.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-08 14:04 程序员cxuan 阅读 (293) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12659578" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/cxuanBlog/archive/2020/04/05.html">2020年4月5日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/cxuanBlog/p/12635842.html">
-    看完这篇 Session、Cookie、Token，和面试官扯皮就没问题了
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：Cookie 和 Session HTTP 协议是一种 ，即每次服务端接收到客户端的请求时，都是一个全新的请求，服务器并不知道客户端的历史请求记录；Session 和 Cookie 的主要目的就是为了弥补 HTTP 的无状态特性。 Session 是什么 客户端请求服务端，服务端会为这次请求开辟一块            <a href="https://www.cnblogs.com/cxuanBlog/p/12635842.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-05 09:06 程序员cxuan 阅读 (390) 评论 (1)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12635842" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/cxuanBlog/archive/2020/03/31.html">2020年3月31日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/cxuanBlog/p/12607608.html">
-    程序员必知的 89 个操作系统核心概念
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：1. ：是管理计算机硬件与软件资源的系统 ，同时也是计算机系统的 。操作系统需要处理 管理与配置内存、决定系统资源供需的优先次序、控制输入与输出设备、操作网络与管理文件系统等基本事务 。操作系统也提供一个让用户与系统交互的操作界面。 2. ：它是一个程序，可从键盘获取命令并将其提供给操作系统以执行。            <a href="https://www.cnblogs.com/cxuanBlog/p/12607608.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-03-31 19:07 程序员cxuan 阅读 (134) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12607608" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-
-<div class="topicListFooter">
-    <div id="nav_next_page">
-        
-    <a href="https://www.cnblogs.com/cxuanBlog/default.html?page=2">
-        下一页
-    </a>
-
-    </div>    
-</div>
-
-
-
-
-
-
-
-
 	</div><!--end: forFlow -->
 	</div><!--end: mainContent 主体内容容器-->
 
@@ -480,7 +311,7 @@ posted @ 2020-03-31 19:07 程序员cxuan 阅读 (134) 评论 (0)
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 程序员cxuan
+Copyright &copy; 2020 【空山新雨】
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 
@@ -489,187 +320,6 @@ Copyright &copy; 2020 程序员cxuan
 </div><!--end: home 自定义的最大容器 -->
 
 
-    <div id="page_end_html">
-        <!-- 生成博客目录的JS代码，两级目录 -->
-<script type="text/javascript">
-/*  
-    这段代码按H2、H3格式生成两级菜单
-    写博客按H2、H3格式写，不然生成不了
-    Markdown写作按##、###两级目录写
-    当然你也可以改写代码成三级菜单
-    参考：孤傲苍狼    zhang_derek
-    洪卫    2018-5-18 
-*/
-var BlogDirectory = {
-    /* 获取元素位置，距浏览器左边界的距离（left）和距浏览器上边界的距离（top）*/
-    getElementPosition:function (ele) {
-        var topPosition = 0;
-        var leftPosition = 0;
-        while (ele){
-            topPosition += ele.offsetTop;
-            leftPosition += ele.offsetLeft;
-            ele = ele.offsetParent;
-        }
-        return {top:topPosition, left:leftPosition};
-    },
-    /*获取滚动条当前位置 */
-    getScrollBarPosition:function () {
-        var scrollBarPosition = document.body.scrollTop || document.documentElement.scrollTop;
-        return  scrollBarPosition;
-    },
-    /* 移动滚动条，finalPos 为目的位置，internal 为移动速度 */
-    moveScrollBar:function(finalpos, interval) {
-        //若不支持此方法，则退出
-        if(!window.scrollTo) {
-            return false;
-        }
-        
-        //窗体滚动时，禁用鼠标滚轮
-        window.onmousewheel = function(){
-            return false;
-        };
-        
-        //清除计时
-        if (document.body.movement) {
-            clearTimeout(document.body.movement);
-        }
-        
-        //获取滚动条当前位置
-        var currentpos =BlogDirectory.getScrollBarPosition();
-
-        var dist = 0;
-        //到达预定位置，则解禁鼠标滚轮，并退出
-        if (currentpos == finalpos) {
-            window.onmousewheel = function(){
-                return true;
-            }
-            return true;
-        }
-        //未到达，则计算下一步所要移动的距离
-        if (currentpos < finalpos) {
-            dist = Math.ceil((finalpos - currentpos)/10);
-            currentpos += dist;
-        }
-        if (currentpos > finalpos) {
-            dist = Math.ceil((currentpos - finalpos)/10);
-            currentpos -= dist;
-        }
-
-        var scrTop = BlogDirectory.getScrollBarPosition();//获取滚动条当前位置
-        window.scrollTo(0, currentpos);//移动窗口
-        if(BlogDirectory.getScrollBarPosition() == scrTop)//若已到底部，则解禁鼠标滚轮，并退出
-        {
-            window.onmousewheel = function(){
-                return true;
-            }
-            return true;
-        }
-
-        //进行下一步移动
-        var repeat = "BlogDirectory.moveScrollBar(" + finalpos + "," + interval + ")";
-        document.body.movement = setTimeout(repeat, interval);
-    },
-
-    htmlDecode:function (text){
-        var temp = document.createElement("div");
-        temp.innerHTML = text;
-        var output = temp.innerText || temp.textContent;
-        temp = null;
-        return output;
-    },
     
-    /*
-    创建博客目录，id表示包含博文正文的 div 容器的 id，
-    mt 和 st 分别表示主标题和次级标题的标签名称（如 H2、H3，大写或小写都可以！），
-    interval 表示移动的速度
-    */
-    createBlogDirectory:function (id, mt, st, interval){
-        //获取博文正文div容器
-        var elem = document.getElementById(id);
-        if(!elem) return false;
-        //获取div中所有元素结点
-        var nodes = elem.getElementsByTagName("*");
-        //创建博客目录的div容器
-        var divSideBar = document.createElement('DIV');
-        divSideBar.className = 'uprightsideBar';
-        divSideBar.setAttribute('id', 'uprightsideBar');
-        var divSideBarTab = document.createElement('DIV');
-        divSideBarTab.setAttribute('id', 'sideBarTab');
-        divSideBar.appendChild(divSideBarTab);
-        var h2 = document.createElement('H2');
-        divSideBarTab.appendChild(h2);
-        var txt = document.createTextNode('目录导航');
-        h2.appendChild(txt);
-        var divSideBarContents = document.createElement('DIV');
-        divSideBarContents.style.display = 'none';
-        divSideBarContents.setAttribute('id', 'sideBarContents');
-        divSideBar.appendChild(divSideBarContents);
-        //创建自定义列表
-        var dlist = document.createElement("dl");
-        divSideBarContents.appendChild(dlist);
-        var num = 0;//统计找到的mt和st
-        mt = mt.toUpperCase();//转化成大写
-        st = st.toUpperCase();//转化成大写
-        //遍历所有元素结点
-        for(var i=0; i<nodes.length; i++)
-        {
-            if(nodes[i].nodeName == mt|| nodes[i].nodeName == st)
-            {
-                //获取标题文本
-                var nodetext = nodes[i].innerHTML.replace(/<\/?[^>]+>/g,"");//innerHTML里面的内容可能有HTML标签，所以用正则表达式去除HTML的标签
-                nodetext = nodetext.replace(/ /ig, "");//替换掉所有的
-                nodetext = BlogDirectory.htmlDecode(nodetext);
-                //插入锚
-                nodes[i].setAttribute("id", "blogTitle" + num);
-                var item;
-                switch(nodes[i].nodeName)
-                {
-                    case mt:    //若为主标题
-                        item = document.createElement("dt");
-                        break;
-                    case st:    //若为子标题
-                        item = document.createElement("dd");
-                        break;
-                }
-
-                //创建锚链接
-                var itemtext = document.createTextNode(nodetext);
-                item.appendChild(itemtext);
-                item.setAttribute("name", num);
-                //添加鼠标点击触发函数
-                item.onclick = function(){        
-                var pos = BlogDirectory.getElementPosition(document.getElementById("blogTitle" + this.getAttribute("name")));
-                    if(!BlogDirectory.moveScrollBar(pos.top, interval)) return false;
-                };
-                //将自定义表项加入自定义列表中
-                dlist.appendChild(item);
-                num++;
-            }
-        }
-
-        if(num == 0) return false;
-        /* 鼠标进入时的事件处理 */
-        divSideBarTab.onmouseenter = function(){
-            divSideBarContents.style.display = 'block';
-        }
-        /* 鼠标离开时的事件处理 */
-        divSideBar.onmouseleave = function() {
-            divSideBarContents.style.display = 'none';
-        }
-
-        document.body.appendChild(divSideBar);
-    }
-
-};
-
-window.onload=function(){
-    /* 页面加载完成之后生成博客目录 */
-    BlogDirectory.createBlogDirectory("cnblogs_post_body","h2","h3",20);
-    
-    //为右下角推荐推荐区域添加关注按钮
-    $('#div_digg').prepend('<div style="padding-bottom: 5px"><span class="icon_favorite" style="padding-top: 2px"></span><a onclick="cnblogs.UserManager.FollowBlogger(\'9a35f2c7-18ab-e111-aa3f-842b2b196315\');" href="javascript:void(0);" style="font-weight: bold; padding-left:5px;">关注一下楼主吧</a> </div>');
-}
-</script>
-    </div>
 </body>
 </html>

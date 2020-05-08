@@ -3,29 +3,29 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="referrer" content="origin" />
-    <meta property="og:description" content="前言 我们平时编码过程中，可能很少去查看 Java 文件编译后的字节码指令。但是，不管你是因为对技术非常热爱，喜欢刨根问底，还是想在别人面前装X 。我认为，都非常有必要了解一下常见的字节码指令。这对于" />
+    <meta name="referrer" content="never" />
+    <meta property="og:description" content="摘要 The Constrained Application Protocol （CoAP）是一种专用的Web传输协议，用于受约束的节点和受约束的(例如，低功率，有损)网络。 节点通常具有带少量ROM" />
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>你还在为怎么查看字节码指令而担忧吗？ - 烟雨星空 - 博客园</title>
+    <title>抓住CoAP协议的“心” - 三升水 - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
-    <link id="MainCss" rel="stylesheet" href="/skins/coffee/bundle-coffee.min.css?v=KPz7rj-c2sTAV1_ck1aDmbZcuCG3KBhyLnfvzf6nn94" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=UeHyLv1TT2WTz4TwfUOiMoKNmtFvLUjUnIhFE2UmZ7I" />
     
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee-mobile.min.css?v=na9bpAY4yh7uEWCcrXj3vfJM3VBse8YtU6-5fUUQPz0" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=XjHfryC9ctsatIZz1dHn7TsRIqmwz9c3aj_6SCfHSDM" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/starry-skys/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/starry-skys/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/starry-skys/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/sanshengshui/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/sanshengshui/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/sanshengshui/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 558872;
-        var currentBlogApp = 'starry-skys';
+        var currentBlogId = 463176;
+        var currentBlogApp = 'sanshengshui';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'coffee';
+        var skinName = 'CodingLife';
     </script>
     
     
@@ -39,10 +39,10 @@
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-	<a href="https://www.cnblogs.com/starry-skys/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>			
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/sanshengshui/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/starry-skys/">「烟雨星空」</a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/sanshengshui/">三升水</a>
 </h1>
 <h2>
 
@@ -53,235 +53,319 @@
 
 		
 	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/sanshengshui/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E4%B8%89%E5%8D%87%E6%B0%B4">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/sanshengshui/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+40&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+52</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
 </div><!--end: header 头部 -->
 
 <div id="main">
 	<div id="mainContent">
 	<div class="forFlow">
-		<div id="navigator">
-			
-<ul id="navList">
-	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
-博客园</a>
-</li>
-	<li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/starry-skys/">
-首页</a>
-</li>
-	<li>
-
-<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
-新随笔</a>
-</li>
-	<li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%83%9F%E9%9B%A8%E6%98%9F%E7%A9%BA">
-联系</a></li>
-	<li>
-<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
-管理</a>
-</li>
-	<li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/starry-skys/rss/">
-订阅</a>
-	
-<a id="blog_nav_rss_image" href="https://www.cnblogs.com/starry-skys/rss/">
-    <img src="/skins/coffee/images/xml.gif" alt="订阅" />
-</a></li>
-</ul>
-
-
-
-			<div class="blogStats">
-				
-				<!--done-->
-随笔- 
-45&nbsp;
-文章- 
-0&nbsp;
-评论- 
-67&nbsp;
-
-
-
-				
-			</div><!--end: blogStats -->
-		</div><!--end: navigator 博客导航栏 -->
 		<div id="post_detail">
-<!--done-->
-<div id="topics">
-	<div class="post">
-		<h1 class = "postTitle">
-			
-<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/starry-skys/p/12848747.html">你还在为怎么查看字节码指令而担忧吗？</a>
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/sanshengshui/p/12849014.html">抓住CoAP协议的“心”</a>
 
-		</h1>
-		<div class="clear"></div>
-		<div class="postBody">
-			
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
 <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
-    <h2 id="前言">前言</h2>
-<p>我们平时编码过程中，可能很少去查看 Java 文件编译后的字节码指令。但是，不管你是因为对技术非常热爱，喜欢刨根问底，还是想在别人面前装X 。我认为，都非常有必要了解一下常见的字节码指令。这对于我们理解代码的运行原理也会很有帮助。</p>
-<h2 id="注释会被执行吗？">注释会被执行吗？</h2>
-<p>比如，最近我就看到了二哥（沉默王二）的一篇文章，非常有意思，也让我涨了见识了。且看代码，可能会让你怀疑人生~</p>
-<pre><code class="language-java">public class TestAnno {
-    public static void main(String[] args) {
-        String str = &quot;张三&quot;;
-        // \u000d str=&quot;李四&quot;;
-        System.out.println(str);
-    }
-}
+    <p><img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-coap-part2/coap-banner2.jpg" alt=""></p>
+<h2 id="摘要">摘要</h2>
+<p><strong>The Constrained Application Protocol</strong>（CoAP）是一种专用的Web传输协议，用于受约束的节点和受约束的(例如，低功率，有损)网络。</p>
+<p>节点通常具有带少量ROM和RAM的8位微控制器，而诸如低功耗无线个人局域网 （6LoWPAN）上的IPv6之类的受限网络通常具有较高的分组错误率，典型吞吐量为10 kbps 。该协议旨在用于机器对机器（M2M）应用，例如智能能源和楼宇自动化。</p>
+<p>CoAP提供了应用程序端点之间的请求/响应交互模型，支持服务的资源发现，并包括Web的关键概念，例如URI和Internet媒体类型。CoAP旨在轻松与HTTP交互以与Web集成，同时满足诸如多播支持，非常低的开销以及在受限环境中的简单性等特殊要求。</p>
+<h2 id="介绍">介绍</h2>
+<p>互联网上的Web服务（Web API）的使用在大多数应用程序中已经无处不在，并且依赖于Web 的<strong>Representational State Transfer</strong>（REST）体系结构。</p>
+<p><strong>Constrained RESTful Environments</strong>（CoRE）的工作旨在以最合适的形式实现REST体系结构，以适用于最受约束的节点（例如RAM和ROM受限的8位微控制器）和网络（例如6LoWPAN）。诸如6LoWPAN之类的受约束的网络支持将IPv6数据包分段成小的链路层帧。但是，这会大大减少数据包交付概率。CoAP的一个设计目标是保持消息开销较小，从而限制了分段的需要。</p>
+<p>CoAP的主要目标之一是针对这种受限环境的特殊要求设计通用的Web协议，尤其是考虑到能源，楼宇自动化以及其他机器对机器（M2M）应用程序。</p>
+<p>CoAP的目标不是盲目地压缩HTTP，而是实现与HTTP通用但针对M2M应用程序进行了优化的REST的子集。尽管CoAP可用于将简单的HTTP接口重新生成更紧凑的协议，更重要的是，它还提供了M2M的功能，例如内置资源发现，多播支持和异步消息交换。</p>
+<p>该协议可以轻松转换为HTTP以与现有Web集成，同时满足特殊要求，例如多播支持，非常低的开销以及受约束环境和M2M应用程序的简便性。</p>
+<h3 id="特性">特性</h3>
+<p>CoAP具有以下主要功能:</p>
+<ul>
+<li>在受限条件下满足M2M要求的Web协议</li>
+<li>UDP [ RFC0768 ]绑定，具有可选的可靠性，支持单播和多播请求。</li>
+<li>异步消息交换。</li>
+<li>低的报头开销和解析复杂度。</li>
+<li>简单的代理和缓存功能。</li>
+<li>无状态HTTP映射，允许构建代理通过HTTP统一方式或HTTP访问CoAP资源。</li>
+<li>绑定到数据报传输层安全性（DTLS）的安全性。</li>
+<li>URI和内容类型支持。</li>
+</ul>
+<h3 id="消息格式">消息格式</h3>
+<pre><code>  0                   1                   2                   3
+    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |Ver| T |  TKL  |      Code     |          Message ID           |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |   Token (if any, TKL bytes) ...
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |   Options (if any) ...
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |1 1 1 1 1 1 1 1|    Payload (if any) ...
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</code></pre>
+<p>上图的头部字段定义如下:</p>
+<p>Version(Ver): 2位无符号整数。CoAP版本号。本规范的实现必须将此字段设置为1(01二进制)。其他值保留用于将来的版本。</p>
+<p>Type(T): 2位无符号整数。指示此消息的类型是否为<strong>Confirmable</strong>(0), <strong>Non-Confirmable</strong>, <strong>Acknowledgement</strong>(2)或者<strong>Reset</strong>(3)。</p>
+<p>Token Length(TKL): 4位无符号整数。指示可变长度令牌字段的长度（0-8个字节）。长度9-15 保留，不得发送，并且必须作为消息格式错误进行处理。</p>
+<p>Code: 8位无符号整数，响应码。</p>
+<p>Message ID: 网络字节顺序的16位无符号整数。用于检测消息重复并将<code>确认</code>/<code>重置</code>类型的消息与<code>可确认</code>/<code>不可确认</code>类型的消息进行匹配。</p>
+<h2 id="coap初体验">CoAP初体验</h2>
+<p>CoAP有两款我觉得比较不错的客户端:</p>
+<ul>
+<li>
+<p><a href="https://www.npmjs.com/package/coap-cli">CoAP-CLI</a>: CoAP-CLI是CoAP的命令行界面，基于node.js和<a href="https://github.com/mcollina/node-coap">node-coap</a>所构建。</p>
+</li>
+<li>
+<p><a href="https://github.com/tzolov/coap-shell">The CoAP Shell</a>提供用于与CoAP协议交互的命令行界面。它支持<code>coap:</code>和<code>coaps</code>模式(例如UDP和DTLS)。CoAP Shell建立在<a href="https://projects.spring.io/spring-shell/">Spring Shell</a>, <a href="https://www.eclipse.org/californium/">Californium(Cf)</a>和<a href="https://www.eclipse.org/californium/">Scandium(Sc)</a>项目之上。它是一个<a href="https://spring.io/projects/spring-boot">SpringBoot</a>应用程序,它内置于单个可自我执行的jar中，并且可以在任何<strong>Java8+</strong>环境中运行。</p>
+</li>
+</ul>
+<p>由于CoAP Shell能更好的体现和展示CoAP的功能、特性和消息格式，接下来我将通过CoAP Shell来讲述CoAP协议相关知识点。</p>
+<p>以下是<strong>CoAP Shell</strong>效果图</p>
+<p><img src="https://james-1258744956.cos.ap-shanghai.myqcloud.com/thingsboard-coap-part2/coap-shell-demo2.gif" alt=""></p>
+<h3 id="如何构建">如何构建</h3>
+<p>从GitHub克隆项目并使用Maven进行构建，或者直接从下方下载。</p>
+<p>链接: <a href="https://pan.baidu.com/s/1soGdqIlOBQe968_wezxq7Q">https://pan.baidu.com/s/1soGdqIlOBQe968_wezxq7Q</a>  密码: rw6o</p>
+<pre><code class="language-shell">git clone https://github.com/sanshengshui/coap-shell
+cd coap-shell
+mvn clean install
+</code></pre>
+<p>然后在该target文件夹中运行可执行jar包。</p>
+<h3 id="快速开始">快速开始</h3>
+<ol>
+<li>启动Shell:</li>
+</ol>
+<pre><code class="language-bash">java -jar coap-shell-1.1.2-SNAPSHOT.jar
+</code></pre>
+<pre><code class="language-bash">  _____     ___   ___     ______       ____
+ / ___/__  / _ | / _ \   / __/ /  ___ / / /
+/ /__/ _ \/ __ |/ ___/  _\ \/ _ \/ -_) / /
+\___/\___/_/ |_/_/     /___/_//_/\__/_/_/
+CoAP Shell (v1.1.2-SNAPSHOT)
+For assistance hit TAB or type &quot;help&quot;.
 
+server-unknown:&gt;
 </code></pre>
-<p>可以猜一下最终打印结果是什么。我来告诉你，结果是： “李四”。What？ 这是什么神仙操作。为何会这样，这被注释的代码还能执行？</p>
-<p>别光顾着吃惊，我们来看一下为什么打印结果跟我们想象中的略有偏差。</p>
-<p>仔细查看，发现注释行中，有一个 \u000d 。这是一个 unicode 码，它代表的是一个换行符。因此，在执行后，就会把 <code>str=&quot;李四&quot;</code> 这行代码换行到下一行，从而导致了它也被编译执行。</p>
-<p>有的小伙伴就说了，我怎么知道你说的是真是假呢，你这不是瞎说呢吗，一点说服力都没有啊。</p>
-<p>好吧，这就需要我们看一下编译后的字节码了，编译器总不能骗我们吧。</p>
-<h2 id="查看字节码的两种方式">查看字节码的两种方式</h2>
-<p>我们知道，通过 javac 命令，可以把 java 文件编译成 class 文件。然后，想看它的字节码指令，需要用到 javap -c 反编译一下。</p>
-<p>但是，每次都通过命令行，还是有一些麻烦。因此，懒人福利来了。这里我提供两种方式，直接在 idea 中就可以查看，非常的方便（果然，懒惰才是促使科技进步的原动力啊）。</p>
-<h3 id="配置-external-tools">配置 External Tools</h3>
-<p>这种方式，其实就是先配置一下，JDK 中 javap 命令的位置，然后让 idea 帮我们自动执行 javap 命令。</p>
-<p>找到 idea 的菜单栏，File --&gt; Settings 。然后找到 External Tools 。</p>
-<p><img src="https://img2020.cnblogs.com/other/1714084/202005/1714084-20200508095455940-2013311215.jpg" alt=""></p>
-<p>点击加号，添加一个 tool ，里边的配置项，如下，</p>
-<p><img src="https://img2020.cnblogs.com/other/1714084/202005/1714084-20200508095456198-1325913814.jpg" alt=""></p>
+<ol start="2">
+<li>连接到CoAP服务器(例如<code>coap://californium.eclipse.org/</code>或<code>coap://coap.me</code>)</li>
+</ol>
+<pre><code class="language-bash">server-unknown:&gt;connect coap://coap.me
+available
+coap://coap.me:&gt;ping
+available
+coap://coap.me:&gt;
+</code></pre>
+<ol start="3">
+<li>发现可用的CoAP资源</li>
+</ol>
+<pre><code>coap://coap.me:&gt;discover
+┌──────────────────────────────┬────────────────────────┬─────────────────────────┬───────────┬──────┬─────────────┐
+│Path [href]                   │Resource Type [rt]      │Content Type [ct]        │Interface  │Size  │Observable   │
+│                              │                        │                         │[if]       │[sz]  │[obs]        │
+├──────────────────────────────┼────────────────────────┼─────────────────────────┼───────────┼──────┼─────────────┤
+│/123412341234123412341234     │123412341234123412341234│text/plain (0)           │           │      │             │
+│/3                            │3                       │application/json (50)    │           │      │             │
+│/4                            │4                       │application/json (50)    │           │      │             │
+│/5                            │5                       │application/json (50)    │           │      │             │
+│/bl%C3%A5b%C3%A6rsyltet%C3%B8y│blåbærsyltetøy          │text/plain (0)           │           │      │             │
+│/broken                       │Type2, Type1            │text/plain (0)           │If2, If1   │      │             │
+│/create1                      │create1                 │text/plain (0)           │           │      │             │
+│/hello                        │Type1                   │text/plain (0)           │If1        │      │             │
+│/large                        │Type1, Type2            │text/plain (0)           │If2        │1700  │             │
+│/large-create                 │large-create            │text/plain (0)           │           │      │             │
+│/large-update                 │large-update            │text/plain (0)           │           │      │             │
+│/location-query               │location-query          │text/plain (0)           │           │      │             │
+│/location1                    │location1               │application/link-format  │           │      │             │
+│                              │                        │(40)                     │           │      │             │
+│/multi-format                 │multi-format            │text/plain (0)           │           │      │             │
+│/path                         │path                    │application/link-format  │           │      │             │
+│                              │                        │(40)                     │           │      │             │
+│/query                        │query                   │text/plain (0)           │           │      │             │
+│/secret                       │secret                  │text/plain (0)           │           │      │             │
+│/seg1                         │seg1                    │application/link-format  │           │      │             │
+│                              │                        │(40)                     │           │      │             │
+│/separate                     │separate                │text/plain (0)           │           │      │             │
+│/sink                         │sink                    │text/plain (0)           │           │      │             │
+│/test                         │test                    │text/plain (0)           │           │      │             │
+│/validate                     │validate                │text/plain (0)           │           │      │             │
+│/weird33                      │weird33                 │text/plain (0)           │           │      │             │
+│/weird333                     │weird333                │text/plain (0)           │           │      │             │
+│/weird3333                    │weird3333               │text/plain (0)           │           │      │             │
+│/weird33333                   │weird33333              │text/plain (0)           │           │      │             │
+│/weird44                      │weird44                 │text/plain (0)           │           │      │             │
+│/weird55                      │weird55                 │text/plain (0)           │           │      │             │
+└──────────────────────────────┴────────────────────────┴─────────────────────────┴───────────┴──────┴─────────────┘
+
+coap://coap.me:&gt;
+</code></pre>
+<ol start="4">
+<li><strong>GET</strong>获取资源数据</li>
+</ol>
+<pre><code class="language-bash">coap://coap.me:&gt;get /hello
+----------------------------------- Response -----------------------------------
+GET coap://coap.me/hello
+MID: 64187, Type: ACK, Token: 50E8F0AC1BA8D277, RTT: 3368ms
+Options: {&quot;Content-Format&quot;:&quot;text/plain&quot;}
+Status : 205-Reset Content, Payload: 5B
+................................... Payload ....................................
+world
+--------------------------------------------------------------------------------
+</code></pre>
+<p>从以上列表能清晰的看出CoAP的消息格式和数据包。</p>
 <ul>
-<li>Name，就给当前 tool 起一个名字好了，用于使用时，在右键菜单选项中展示。</li>
-<li>Decriptions，描述此功能，别到时候你自己都忘了当前配置这个东西是用来干嘛的了。</li>
-<li>Program：电脑本机 javap 命令的绝对路径。</li>
-<li>Arguments：填写 -c $FileNameWithoutExtension$.class 就可以，代表编译的class文件。</li>
-<li>Working directory：填写 $OutputPath$/$FileDirRelativeToSourcepath$ ，代表class文件的工作目录。</li>
+<li>
+<p><code>coap://coap.me/hello</code> : 是CoAP协议的uri</p>
+</li>
+<li>
+<p>MID: 消息的ID,用于唯一区分消息。</p>
+</li>
+<li>
+<p>Type: 消息类型，这里的消息类型为：<strong>Acknowledgement</strong>(确认)</p>
+</li>
+<li>
+<p>Token: 消息会话</p>
+</li>
+<li>
+<p>Options：<code>{&quot;Content-Format&quot;:&quot;text/plain&quot;}</code>消息可选性，这里表示消息的数据类型为<strong>文本</strong></p>
+</li>
+<li>
+<p>Status: 状态码</p>
+</li>
+<li>
+<p>Payload: 消息负载数据</p>
+</li>
 </ul>
-<p>配置完成了，可以在idea中，直接右键，选择配置中 Name 对应的选项。</p>
-<p><img src="https://img2020.cnblogs.com/other/1714084/202005/1714084-20200508095456452-1188476716.jpg" alt=""></p>
-<p>此时 ，就可以打印出当前类编译后的字节码指令。</p>
-<p><img src="https://img2020.cnblogs.com/other/1714084/202005/1714084-20200508095456729-1624802025.jpg" alt=""></p>
-<p>我们稍后再来分析里边的具体含义。下边，还有另外一种使用插件的方式，来查看字节码。而且功能更加强大。</p>
-<h3 id="jclasslib-bytecode-viewer-插件">jclasslib bytecode viewer 插件</h3>
-<p>同上，在 idea 的 setting 菜单，找到 Plugins 插件项，然后搜索这个插件。</p>
-<p><img src="https://img2020.cnblogs.com/other/1714084/202005/1714084-20200508095457019-1083129596.jpg" alt=""></p>
-<p>安装之后，并重启 idea ，就可以生效了。</p>
-<p>使用的时候，在 View 菜单，找到 show bytecode with jclasslib。</p>
-<p><img src="https://img2020.cnblogs.com/other/1714084/202005/1714084-20200508095457479-423012352.jpg" alt=""></p>
-<p>它可以查看基本信息，常量池，接口，属性，方法等信息。如下，找到我们对应的 main 方法。</p>
-<p><img src="https://img2020.cnblogs.com/other/1714084/202005/1714084-20200508095457751-456029105.jpg" alt=""></p>
-<p>这个插件还有一个好处，就是当我们不知道某个指令是什么意思的时候，直接鼠标在指令上边单击，就可以链接到官方的解释。如，不知道第一行 ldc 什么意思，直接单击 ldc 就可以跳转到 oracle 官网对应命令的解释。这非常有利用我们学习此命令。</p>
-<p><img src="https://img2020.cnblogs.com/other/1714084/202005/1714084-20200508095457983-939040830.jpg" alt=""></p>
-<h2 id="常用字节码指令">常用字节码指令</h2>
-<p>以上两种方式，都挺方便的，根据自己喜好自由选择就好了。</p>
-<p>相信你肯定也被很多字节码指令搞的一头雾水过，接下来，我们就一起学习下常用的指令都有哪些吧。之后，再来看上边的例子就轻松很多了。</p>
-<h3 id="数据类型">数据类型</h3>
-<p>我们知道 Java 是强类型语言，在使用之前肯定已经确定了它的类型。而数据类型，无非就是基本数据类型和引用类型。它们对应的字节码，其实就是用它们的对应类型的英文首字母来表示的。（引用类型除外）</p>
-<p>例如，s 代表 short ， i 代表 int， l 代表 long ，f 代表 float，d 代表 double，b 代表 byte（不包括boolean），c 代表 char，a 代表 reference 引用。</p>
-<h3 id="加载和存储指令">加载和存储指令</h3>
-<p>我们知道，一个方法的运行，会在栈的栈帧中执行。方法中的变量称为局部变量，数的操作需要用到操作数栈。因此，加载和存储指令，就是数据在局部变量表和操作数栈中来回传输。</p>
-<p>将一个局部变量加载到操作数栈：如 iload、iload_  。表示加载的是 int 类型变量。</p>
-<p>iload_  后边带数字代表第几个 int 型变量。例如 iload_0 代表把第一个 int 型局部变量加载到操作数栈。</p>
-<p>其他类型变量同上： lload ，fload ，dload，aload 。</p>
-<p>将一个数值存储到局部变量表： istore，istore_，lstore，lstore_，fstore，fstore_，dstore，dstore_，astore，astore_ 。</p>
-<p>将一个常量加载到操作数栈： aconst_null，iconst_m1，iconst_，lconst_，fconst_，dconst_ ，bipush，sipush。</p>
-<p>ldc 代表把 int、float、String类型常量从常量池中加载到操作数栈。 ldc_w 代表宽索引。</p>
-<p>ldc2_w 代表把 long 或 double 类型常量从常量池中加载到操作数栈。（宽索引）</p>
-<p>这里需要说的是，int 类型根据数值的取值范围不同，而采用不同的字节码指令。</p>
-<p>iconst_m1 代表 -1 ，iconst_ 代表 0~5 。bipush 代表 -128~127（byte取值范围）， sipush 代表 -32768~32767（short取值范围），ldc 在 int 中代表 -2147483648~2147483647（int取值范围）。</p>
-<pre><code class="language-java">public class TestByteCode {
-    public static void main(String[] args) {
-        int a = -1;
-        int b = 0;
-        int c = 1;
-        int d = 2;
-        int e = 3;
-        int f = 4;
-        int g = 5;
-        int h = 127;
-        int i = 32767;
-        int j = 2147483647;
-    }
-}
+<ol start="5">
+<li>
+<p><strong>Delete</strong>资源数据</p>
+<pre><code class="language-bash">coap://coap.me:&gt;get /sink
+NULL response!
+coap://coap.me:&gt;delete /sink
+----------------------------------- Response -----------------------------------
+DELETE coap://coap.me/sink
+MID: 64264, Type: ACK, Token: 0C2338F7FB9447F7, RTT: 274ms
+Options: {&quot;Content-Format&quot;:&quot;text/plain&quot;}
+Status : 202-Accepted, Payload: 9B
+................................... Payload ....................................
+DELETE OK
+--------------------------------------------------------------------------------
+coap://coap.me:&gt;get /sink
+----------------------------------- Response -----------------------------------
+GET coap://coap.me/sink
+MID: 64265, Type: ACK, Token: 04A8DACB450186A7, RTT: 276ms
+Options: {&quot;ETag&quot;:0xa6166ef62ce0b4bc, &quot;Content-Format&quot;:&quot;text/plain&quot;}
+Status : 205-Reset Content, Payload: 38B
+................................... Payload ....................................
+I was deleted, and you put here: hello
+--------------------------------------------------------------------------------
+coap://coap.me:&gt;
 </code></pre>
-<p>其字节码为：</p>
-<pre><code>0 iconst_m1
- 1 istore_1
- 2 iconst_0
- 3 istore_2
- 4 iconst_1
- 5 istore_3
- 6 iconst_2
- 7 istore 4
- 9 iconst_3
-10 istore 5
-12 iconst_4
-13 istore 6
-15 iconst_5
-16 istore 7
-18 bipush 127
-20 istore 8
-22 sipush 32767
-25 istore 9
-27 ldc #2 &lt;2147483647&gt;
-29 istore 10
-31 return
+</li>
+<li>
+<p><strong>PUT</strong>资源数据</p>
+<pre><code class="language-bash">coap://coap.me:&gt;put /sink --payload 'Hi From IoT Technology' --format text/plain
+----------------------------------- Response -----------------------------------
+PUT coap://coap.me/sink
+MID: 64266, Type: ACK, Token: FC2CE751AD5A232A, RTT: 368ms
+Options: {&quot;Content-Format&quot;:&quot;text/plain&quot;}
+Status : 204-No Content, Payload: 6B
+................................... Payload ....................................
+PUT OK
+--------------------------------------------------------------------------------
+coap://coap.me:&gt;get /sink
+----------------------------------- Response -----------------------------------
+GET coap://coap.me/sink
+MID: 64267, Type: ACK, Token: 3439364639206648, RTT: 13478ms
+Options: {&quot;ETag&quot;:0x01fd3e1298b1fb7a, &quot;Content-Format&quot;:&quot;text/plain&quot;}
+Status : 205-Reset Content, Payload: 36B
+................................... Payload ....................................
+you put here: Hi From IoT Technology
+--------------------------------------------------------------------------------
+coap://coap.me:&gt;
 </code></pre>
-<h3 id="访问指令">访问指令</h3>
-<p>访问类字段：getstatic，putstatic</p>
-<p>访问类实例字段：getfield，putfield</p>
-<h3 id="方法调用和返回">方法调用和返回</h3>
-<ul>
-<li>invokevirtual ： 用于调用对象的实例方法。</li>
-<li>invokeinterfce： 用于调用接口方法。</li>
-<li>invokespecial：用于调用一些特殊的方法，如父类构造方法，实例初始化方法，私有方法。</li>
-<li>invokestatic：用于调用类的静态方法。</li>
-<li>invokedynamic：用于调用动态方法。</li>
-</ul>
-<p>方法返回是跟返回类型相关，根据不同的返回类型，有不同的指令。</p>
-<ul>
-<li>return：返回 void。</li>
-<li>ireturn：注意，这个不止返回 int ，返回 boolean，byte，char，short 也用这个指令。其实，很多指令都没有直接支持 byte,char，short和 boolean，而是用 int 类型代替。这是因为，虚拟机的操作码长度只有一个字节，只能表示有限个数的指令。（我们这里所提到的所有指令，都只是方便我们记忆的助记符，而在计算机内部肯定还是一个字节，即 8 个 bit 位的二进制）</li>
-<li>lreturn：返回 long 类型。</li>
-<li>freturn：返回 float 类型。</li>
-<li>dreturn：返回 double 类型。</li>
-<li>areturn：返回引用类型。</li>
-</ul>
-<h2 id="其余字节码指令">其余字节码指令</h2>
-<p>上边介绍的指令只是很少一部分字节码指令。但是，麻雀虽小，五脏俱全，也包括了最基本的变量定义，调用方法，和方法返回这些最基本的功能。同时，也足够我们去解释上边的问题，为什么注释行会被执行了。</p>
-<blockquote>
-<p>更多的字节码指令可以参考《深入理解Java虚拟机》这本书的 6.4 节，和最后的附录字节码指令表。需要这本书的，可以微信搜索到我《烟雨星空》，后台回复“Java虚拟机”。</p>
-</blockquote>
-<p>由于字节码指令太多，比如还有运算指令，包括加减乘除、位运算，比较指令等，if 等控制指令，类型强转指令，还有多线程用到的同步锁。And  so on ~</p>
-<p>不可能把它们全部记住背会，但是，其实都是由规律可循的，很多都是见名知意，用各种英文首字母简写代表。比如，int类型的加法运算，就是 iadd，double 类型的减法运算是 dsub。等等。</p>
-<p>因此，我这里只是给了一个引子，重要的还是需要自己去寻找方法，不断的实践探索 ~</p>
-<p>另外，官方文档才是最好的学习途径：<a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html">https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html</a></p>
-<h2 id="注释行字节码">注释行字节码</h2>
-<p>最后，学以致用，实践出真知。我们一起看一下开头抛出的问题吧，为什么注释行会被执行。看一下它的字节码指令就知道了。</p>
-<pre><code class="language-java">public class TestAnno {
-    public static void main(String[] args) {
-        String str = &quot;张三&quot;;
-        // \u000d str=&quot;李四&quot;;
-        System.out.println(str);
-    }
-}
+</li>
+<li>
+<p><strong>POST</strong>资源数据</p>
+</li>
+</ol>
+<pre><code class="language-bash">coap://coap.me:&gt;delete /sink
+----------------------------------- Response -----------------------------------
+DELETE coap://coap.me/sink
+MID: 64268, Type: ACK, Token: 0CCB572626A124A6, RTT: 391ms
+Options: {&quot;Content-Format&quot;:&quot;text/plain&quot;}
+Status : 202-Accepted, Payload: 9B
+................................... Payload ....................................
+DELETE OK
+--------------------------------------------------------------------------------
+coap://coap.me:&gt;post /sink --payload 'testing for post data' --format text/plain
+----------------------------------- Response -----------------------------------
+POST coap://coap.me/sink
+MID: 64269, Type: ACK, Token: A441392CC855852D, RTT: 424ms
+Options: {&quot;Location-Path&quot;:[&quot;location1&quot;,&quot;location2&quot;,&quot;location3&quot;], &quot;Content-Format&quot;:&quot;text/plain&quot;}
+Status : 201-Created, Payload: 7B
+................................... Payload ....................................
+POST OK
+--------------------------------------------------------------------------------
+coap://coap.me:&gt;get /sink
+----------------------------------- Response -----------------------------------
+GET coap://coap.me/sink
+MID: 64270, Type: ACK, Token: DC24713232F17DB7, RTT: 325ms
+Options: {&quot;ETag&quot;:0xf97973ea26db6781, &quot;Content-Format&quot;:&quot;text/plain&quot;}
+Status : 205-Reset Content, Payload: 54B
+................................... Payload ....................................
+I was deleted, and you put here: testing for post data
+--------------------------------------------------------------------------------
 </code></pre>
-<pre><code class="language-java"> //这里就是从常量池中取出一个字符串“张三”，然后加载到操作数栈
- 0 ldc #2 &lt;张三&gt;
- //从操作数栈把这个字符串引用存储到局部变量表中
- 2 astore_1
- //从常量池中取出一个字符串“李四”，然后加载到操作数栈
- 3 ldc #3 &lt;李四&gt;
- //可以发现和上边一样都是astore_1，说明指向的是同一个引用 str。
- //若定义另外一个str2赋值给“李四”，这个操作指令肯定就不同了。
- 5 astore_1
- //访问的是System类的静态属性out，我们知道它的类型是PrintStream
- 6 getstatic #4 &lt;java/lang/System.out&gt;
- //将out这个引用加载到操作数栈栈顶，以便后边操作它
- 9 aload_1
- //调用out的实例方法 println ，用于打印结果到控制台
-10 invokevirtual #5 &lt;java/io/PrintStream.println&gt;
-//main方法返回值为void
-13 return
-</code></pre>
-<p>这里就不用再多余解释了吧，可以从字节码指令中看到，后边的 <code>str=&quot;李四&quot;</code> 被编译器执行了。</p>
-<p>如果本文对你有用，就赶快关注我，给我点赞吧~</p>
+<p>到此为止，我相信大家对CoAP协议的消息格式应该有了一定的认知。更多信息和使用请浏览这个库的<a href="https://github.com/sanshengshui/coap-shell">README</a>。</p>
+<p>下一篇，我将手把手带大家用Eclipse Californium搭建CoAP Server服务。</p>
+<h2 id="参考资料">参考资料</h2>
+<p>CoAP英文官方文档: <a href="https://tools.ietf.org/html/rfc7252">https://tools.ietf.org/html/rfc7252</a></p>
+<p>CoAP Wiki百科: <a href="https://en.wikipedia.org/wiki/Constrained_Application_Protocol">https://en.wikipedia.org/wiki/Constrained_Application_Protocol</a></p>
+<p>CoAP-Shell客户端: <a href="https://github.com/sanshengshui/coap-shell">https://github.com/sanshengshui/coap-shell</a></p>
 
 </div>
 <div id="MySignature"></div>
@@ -291,23 +375,24 @@
     <div class="clear"></div>
     <div id="post_next_prev"></div>
 </div>
-		</div>
-		<div class="postDesc">posted @ 
-<span id="post-date">2020-05-08 09:55</span>&nbsp;
-<a href="https://www.cnblogs.com/starry-skys/">烟雨星空</a>&nbsp;
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-08 10:31</span>&nbsp;
+<a href="https://www.cnblogs.com/sanshengshui/">三升水</a>&nbsp;
 阅读(<span id="post_view_count">...</span>)&nbsp;
 评论(<span id="post_comment_count">...</span>)&nbsp;
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12848747" rel="nofollow">编辑</a>&nbsp;
-<a href="javascript:void(0)" onclick="AddToWz(12848747);return false;">收藏</a></div>
-	</div>
-	
-	
-</div><!--end: topics 文章、评论容器-->
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12849014" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12849014);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
 <script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
 <script>markdown_highlight();</script>
 <script>
-    var allowComments = true, cb_blogId = 558872, cb_blogApp = 'starry-skys', cb_blogUserGuid = 'eeb1e8f8-d0b4-41a1-97d7-08d6ee6d0083';
-    var cb_entryId = 12848747, cb_entryCreatedDate = '2020-05-08 09:55', cb_postType = 1; 
+    var allowComments = true, cb_blogId = 463176, cb_blogApp = 'sanshengshui', cb_blogUserGuid = '95d12c74-ef92-408d-d41d-08d6222f6651';
+    var cb_entryId = 12849014, cb_entryCreatedDate = '2020-05-08 10:31', cb_postType = 1; 
     loadViewCount(cb_entryId);
     loadSideColumnAd();
 </script><a name="!comments"></a>
@@ -366,9 +451,7 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
         loadOptUnderPost();
         GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
     </script>
-</div></div>
-
-
+</div>
 	</div><!--end: forFlow -->
 	</div><!--end: mainContent 主体内容容器-->
 
@@ -380,12 +463,12 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
 </div>
 
 <div id="sidebar_ad"></div>
-			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
 			
-			<DIV id="leftcontentcontainer">
+			<div id="leftcontentcontainer">
 				<div id="blog-sidecolumn"></div>
                     <script>loadBlogSideColumn();</script>
-			</DIV>
+			</div>
 			
 		</div><!--end: sideBarMain -->
 	</div><!--end: sideBar 侧边栏容器 -->
@@ -394,7 +477,7 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 烟雨星空
+Copyright &copy; 2020 三升水
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 

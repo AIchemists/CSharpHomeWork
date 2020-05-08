@@ -8,24 +8,24 @@
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>艾心❤ - 博客园</title>
+    <title>NebulaGraph - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
-    <link id="MainCss" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip.min.css?v=1CubIA3L29CO3-6VLJIOrrj2uGfyKeX_-xaumWzHk7o" />
-    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/edison0621/custom.css?v=x9pcFUu&#x2B;fiua3mZOJk/N1Ry7KuY=" />
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip-mobile.min.css?v=0pGk3D9Ik_jI4q1TALBT2ybOjIePHS_80_0J4DDOQiY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=UeHyLv1TT2WTz4TwfUOiMoKNmtFvLUjUnIhFE2UmZ7I" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/edison0621/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/edison0621/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/edison0621/wlwmanifest.xml" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=XjHfryC9ctsatIZz1dHn7TsRIqmwz9c3aj_6SCfHSDM" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/nebulagraph/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/nebulagraph/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/nebulagraph/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 152901;
-        var currentBlogApp = 'edison0621';
+        var currentBlogId = 534874;
+        var currentBlogApp = 'nebulagraph';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'darkgreentrip';
+        var skinName = 'CodingLife';
     </script>
     
     
@@ -39,13 +39,13 @@
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/edison0621/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/nebulagraph/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/edison0621/">艾心</a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/nebulagraph/">NebulaGraph</a>
 </h1>
 <h2>
-努力写出高质量的文章，走心、不忽悠，只为共同进步
+一个开源的分布式图数据库
 </h2>
 
 
@@ -60,7 +60,7 @@
 博客园</a>
 </li>
 <li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/edison0621/">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/nebulagraph/">
 首页</a>
 </li>
 <li>
@@ -69,10 +69,10 @@
 新随笔</a>
 </li>
 <li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E8%89%BE%E5%BF%83%E2%9D%A4">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/NebulaGraph">
 联系</a></li>
 <li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/edison0621/rss/">
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/nebulagraph/rss/">
 订阅</a>
 <!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
 <li>
@@ -85,11 +85,11 @@
 		<div class="blogStats">
 			
 			<span id="stats_post_count">随笔 - 
-49&nbsp; </span>
+40&nbsp; </span>
 <span id="stats_article_count">文章 - 
 0&nbsp; </span>
 <span id="stats-comment_count">评论 - 
-406</span>
+0</span>
 
 			
 		</div><!--end: blogStats -->
@@ -110,28 +110,28 @@
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/edison0621/archive/2020/05/08.html">2020年5月8日</a>
+        <a href="https://www.cnblogs.com/nebulagraph/archive/2020/05/08.html">2020年5月8日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/12846376.html">
-    C#并发编程之初识并行编程
+<a class="postTitle2" href="https://www.cnblogs.com/nebulagraph/p/12849134.html">
+    用 GitHub Action 构建一套 CI/CD 系统
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：写在前面 之前微信公众号里有一位叫sara的朋友建议我写一下Parallel的相关内容，因为手中商城的重构工作量较大，一时之间无法抽出时间。近日，这套系统已有阶段性成果，所以准备写一下Parallel的相关内容，正好也延续之前的C#并发编程系列。 Parallel是并行编程的相关内容，而Parall            <a href="https://www.cnblogs.com/edison0621/p/12846376.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：在讲 Action 实践之前还需先讲下 Nebula Graph 的需求：首要目标比较明确就是自动化测试，分为单元测试和集成测试，顺带再解决一下 PM 小姐姐的发布需求，构建起来了第一版的 CI/CD 流程。            <a href="https://www.cnblogs.com/nebulagraph/p/12849134.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-05-08 10:08 艾心❤ 阅读 (145) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12846376" rel="nofollow">
+posted @ 2020-05-08 10:48 NebulaGraph 阅读 (98) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12849134" rel="nofollow">
     编辑
 </a>
 </div>
@@ -144,28 +144,28 @@ posted @ 2020-05-08 10:08 艾心❤ 阅读 (145) 评论 (0)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/edison0621/archive/2020/03/30.html">2020年3月30日</a>
+        <a href="https://www.cnblogs.com/nebulagraph/archive/2020/04/30.html">2020年4月30日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/12592842.html">
-    ASP.NET MVC升级到ASP.NET Core MVC踩坑小结
+<a class="postTitle2" href="https://www.cnblogs.com/nebulagraph/p/12807095.html">
+    D3.js 力导向图的显示优化
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：写在前面 ASP.NET Core是微软新推出的支持跨平台、高性能、开源的开发框架，它的优势不必多说，因为已经说得太多了。当然，现在依然有着数量庞大的系统运行于.NET Framework上，由于有大量的Break Changes，很多项目项目团队也不敢贸然升级，其中的考量也不全部是技术原因，更多的            <a href="https://www.cnblogs.com/edison0621/p/12592842.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：我们用 D3.js 力导向图来对图数据库的数据关系进行分析，其节点和关系线直观地体现出图数据库的数据关系，并且还可以关联相对应的图数据库语句完成拓展查询。此外，本文还讲解了如何优化新增节点和多边关系的显示            <a href="https://www.cnblogs.com/nebulagraph/p/12807095.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-03-30 09:57 艾心❤ 阅读 (1925) 评论 (28)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12592842" rel="nofollow">
+posted @ 2020-04-30 10:06 NebulaGraph 阅读 (354) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12807095" rel="nofollow">
     编辑
 </a>
 </div>
@@ -178,28 +178,28 @@ posted @ 2020-03-30 09:57 艾心❤ 阅读 (1925) 评论 (28)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/edison0621/archive/2020/02/10.html">2020年2月10日</a>
+        <a href="https://www.cnblogs.com/nebulagraph/archive/2020/04/22.html">2020年4月22日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/12287469.html">
-    使用.NET Core优雅获取并展示最新疫情数据
+<a class="postTitle2" href="https://www.cnblogs.com/nebulagraph/p/12750411.html">
+    图数据库 Nebula Graph 的代码变更测试覆盖率实践
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：前言新型冠状病毒的出现，着实让人紧张。我每天一大早都会去查看今天的最新数据，可是每次的数据都挺让人揪心的。今天突然间很想看看过去的历史的数据，结果查了很多资料都不是很全。反正国家让我们待在家里做贡献，那我们也可以多做做研究，偶然的机会发现了一个API可以查到历史数据，于是就用.NET Core 3.            <a href="https://www.cnblogs.com/edison0621/p/12287469.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：对于持续开发的大型工程而言，足够的测试是保证软件行为符合预期的有效手段，而不是仅仅依靠 code review 或者开发者自己的技术素质。测试覆盖率就是检验测试覆盖软件行为的情况，通过检查测试覆盖情况可以帮助开发人员发现没有被覆盖到的代码            <a href="https://www.cnblogs.com/nebulagraph/p/12750411.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-02-10 10:38 艾心❤ 阅读 (934) 评论 (3)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12287469" rel="nofollow">
+posted @ 2020-04-22 10:37 NebulaGraph 阅读 (31) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12750411" rel="nofollow">
     编辑
 </a>
 </div>
@@ -212,28 +212,28 @@ posted @ 2020-02-10 10:38 艾心❤ 阅读 (934) 评论 (3)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/edison0621/archive/2020/01/05.html">2020年1月5日</a>
+        <a href="https://www.cnblogs.com/nebulagraph/archive/2020/04/15.html">2020年4月15日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/12152475.html">
-    .NET Core 3.1之深入源码理解HealthCheck（二）
+<a class="postTitle2" href="https://www.cnblogs.com/nebulagraph/p/12706069.html">
+    基于 Jepsen 来发现几个 Raft 实现中的一致性问题(2) 
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：写在前面前文讨论了HealthCheck的理论部分，本文将讨论有关HealthCheck的应用内容。可以监视内存、磁盘和其他物理服务器资源的使用情况来了解是否处于正常状态。运行状况检查可以测试应用的依赖项（如数据库和外部服务终结点）以确认是否可用和正常工作。运行状况探测可以由容器业务流程协调程序和负载均衡器用于检查应用的状态。源码研究在应用中引入HealthCheck，一般需要配置Startup文...            <a href="https://www.cnblogs.com/edison0621/p/12152475.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：在这篇文章中将着重介绍如何通过 Jepsen 来对 Nebula Graph 的分布式 kv 进行一致性验证。            <a href="https://www.cnblogs.com/nebulagraph/p/12706069.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2020-01-05 15:01 艾心❤ 阅读 (486) 评论 (2)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12152475" rel="nofollow">
+posted @ 2020-04-15 16:13 NebulaGraph 阅读 (115) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12706069" rel="nofollow">
     编辑
 </a>
 </div>
@@ -246,28 +246,28 @@ posted @ 2020-01-05 15:01 艾心❤ 阅读 (486) 评论 (2)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/edison0621/archive/2019/12/02.html">2019年12月2日</a>
+        <a href="https://www.cnblogs.com/nebulagraph/archive/2020/04/08.html">2020年4月8日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/11968102.html">
-    .NET Core 3.0之深入源码理解HealthCheck（一）
+<a class="postTitle2" href="https://www.cnblogs.com/nebulagraph/p/12660335.html">
+    用全站 CDN 部署 Discourse 论坛
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：写在前面 我们的系统可能因为正在部署、服务异常终止或者其他问题导致系统处于非健康状态，这个时候我们需要知道系统的健康状况，而健康检查可以帮助我们快速确定系统是否处于正常状态。一般情况下，我们会提供公开的HTTP接口，用于专门化健康检查。 NET Core提供的健康检查库包括Microsoft.Ext            <a href="https://www.cnblogs.com/edison0621/p/11968102.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：本文详细地讲述了如何使用 Cloudflare 和 Discourse 服务自建论坛的过程。            <a href="https://www.cnblogs.com/nebulagraph/p/12660335.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2019-12-02 10:38 艾心❤ 阅读 (756) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11968102" rel="nofollow">
+posted @ 2020-04-08 15:41 NebulaGraph 阅读 (161) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12660335" rel="nofollow">
     编辑
 </a>
 </div>
@@ -280,28 +280,28 @@ posted @ 2019-12-02 10:38 艾心❤ 阅读 (756) 评论 (0)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/edison0621/archive/2019/11/26.html">2019年11月26日</a>
+        <a href="https://www.cnblogs.com/nebulagraph/archive/2020/04/01.html">2020年4月1日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/11821743.html">
-    Orleans 3.0 为我们带来了什么
+<a class="postTitle2" href="https://www.cnblogs.com/nebulagraph/p/12613319.html">
+    浅谈图数据库
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：原文：https://devblogs.microsoft.com/dotnet/orleans-3-0/ 作者：Reuben Bond，Orleans首席软件开发工程师 翻译：艾心 这是一篇来自Orleans团队的客座文章，Orleans是一个使用.NET创建分布式应用的跨平台框架。获取更多信息，            <a href="https://www.cnblogs.com/edison0621/p/11821743.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：本文主要讨论图数据库背后的设计思路、原理还有一些适用的场景，以及在生产环境中使用图数据库的具体案例。            <a href="https://www.cnblogs.com/nebulagraph/p/12613319.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2019-11-26 11:14 艾心❤ 阅读 (1037) 评论 (6)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11821743" rel="nofollow">
+posted @ 2020-04-01 16:10 NebulaGraph 阅读 (263) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12613319" rel="nofollow">
     编辑
 </a>
 </div>
@@ -314,28 +314,28 @@ posted @ 2019-11-26 11:14 艾心❤ 阅读 (1037) 评论 (6)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/edison0621/archive/2019/10/28.html">2019年10月28日</a>
+        <a href="https://www.cnblogs.com/nebulagraph/archive/2020/03/25.html">2020年3月25日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/11747912.html">
-    .NET Core 3.0之深入源码理解ObjectPool（二）
+<a class="postTitle2" href="https://www.cnblogs.com/nebulagraph/p/12564349.html">
+    图数据库 Nebula Graph TTL 特性
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：写在前面 前文主要介绍了ObjectPool的一些理论基础，本文主要从源码角度理解Microsoft.Extensions.ObjectPool是如何实现的。下图为其三大核心组件图： 核心组件 ObjectPool ObjectPool是一个泛型抽象类，里面只有两个抽象方法，Get和Return。它            <a href="https://www.cnblogs.com/edison0621/p/11747912.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：如何提高数据中有效数据的利用率、将无效的过期数据清洗掉，是数据库领域的一个热点话题。在本文中我们将着重讲述如何在数据库中处理过期数据这一问题。            <a href="https://www.cnblogs.com/nebulagraph/p/12564349.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2019-10-28 10:06 艾心❤ 阅读 (640) 评论 (3)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11747912" rel="nofollow">
+posted @ 2020-03-25 10:22 NebulaGraph 阅读 (185) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12564349" rel="nofollow">
     编辑
 </a>
 </div>
@@ -348,28 +348,28 @@ posted @ 2019-10-28 10:06 艾心❤ 阅读 (640) 评论 (3)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/edison0621/archive/2019/10/14.html">2019年10月14日</a>
+        <a href="https://www.cnblogs.com/nebulagraph/archive/2020/03/17.html">2020年3月17日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/11669000.html">
-    .NET Core 3.0之深入源码理解ObjectPool（一）
+<a class="postTitle2" href="https://www.cnblogs.com/nebulagraph/p/12510670.html">
+    使用 Github Action 进行前端自动化发布
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：写在前面 对象池是一种比较常用的提高系统性能的软件设计模式，它维护了一系列相关对象列表的容器对象，这些对象可以随时重复使用，对象池节省了频繁创建对象的开销。 它使用取用/归还-重复取用的操作模式，如下图所示： 本文将主要介绍对象池的基本概念、对象池的优势及其工作机制，下一篇文档将从源码角度介绍.NE            <a href="https://www.cnblogs.com/edison0621/p/11669000.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：说起自动化，无论是在公司还是我们个人的项目中，都会用到或者编写一些工具来帮助我们去处理琐碎重复的工作，以节约时间提升效率。本篇文章就是介绍如何利用 GitHub 提供的 Actions 来完成我们前端的发布自动化。            <a href="https://www.cnblogs.com/nebulagraph/p/12510670.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2019-10-14 11:04 艾心❤ 阅读 (734) 评论 (2)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11669000" rel="nofollow">
+posted @ 2020-03-17 14:49 NebulaGraph 阅读 (329) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12510670" rel="nofollow">
     编辑
 </a>
 </div>
@@ -382,28 +382,28 @@ posted @ 2019-10-14 11:04 艾心❤ 阅读 (734) 评论 (2)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/edison0621/archive/2019/09/23.html">2019年9月23日</a>
+        <a href="https://www.cnblogs.com/nebulagraph/archive/2020/03/12.html">2020年3月12日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/11567800.html">
-    .NET分布式大规模计算利器-Orleans(一)
+<a class="postTitle2" href="https://www.cnblogs.com/nebulagraph/p/12468032.html">
+    分布式图数据库 Nebula Graph 的 Index 实践
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：写在前面 Orleans是基于Actor模型思想的.NET领域的框架，它提供了一种直接而简单的方法来构建分布式大规模计算应用程序，而无需学习和应用复杂的并发或其他扩展模式。我在2015年下半年开始应用Orleans，当时公司的交易系统采用的架构就是基于Orleans框架的，其展现出来的高性能、高并发            <a href="https://www.cnblogs.com/edison0621/p/11567800.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：索引是数据库系统中不可或缺的一个功能，数据库索引好比是书的目录，能加快数据库的查询速度，其实质是数据库管理系统中一个排序的数据结构。不同的数据库系统有不同的排序结构，目前常见的索引实现类型如 B-Tree index、B+-Tree index、B*-Tree index、Hash index、Bitmap index、Inverted index 等等，各种索引类型都有各自的排序算法。            <a href="https://www.cnblogs.com/nebulagraph/p/12468032.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2019-09-23 09:55 艾心❤ 阅读 (2617) 评论 (26)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11567800" rel="nofollow">
+posted @ 2020-03-12 11:35 NebulaGraph 阅读 (222) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12468032" rel="nofollow">
     编辑
 </a>
 </div>
@@ -416,28 +416,28 @@ posted @ 2019-09-23 09:55 艾心❤ 阅读 (2617) 评论 (26)
 
 <div class="day">
     <div class="dayTitle">
-        <a href="https://www.cnblogs.com/edison0621/archive/2019/09/15.html">2019年9月15日</a>
+        <a href="https://www.cnblogs.com/nebulagraph/archive/2020/03/05.html">2020年3月5日</a>
     </div>
 
         <div class="postTitle">
             
 
-<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/11520497.html">
-    .NET Core 3.0之深入源码理解Host(二)
+<a class="postTitle2" href="https://www.cnblogs.com/nebulagraph/p/12418948.html">
+    一文了解各大图数据库查询语言（Gremlin vs Cypher vs nGQL）| 操作入门篇
 </a>
 
         </div>
         <div class="postCon">
 
     <div class="c_b_p_desc">
-摘要：写在前面 停了近一个月的技术博客，随着正式脱离996的魔窟，接下来也正式恢复了。本文从源码角度进一步讨论.NET Core 3.0 中关于Host扩展的一些技术点，主要讨论Long Run Program的创建与守护。 关于Host，我们最容易想到的就是程序的启动与停止，而其中隐藏着非常关键的功能，            <a href="https://www.cnblogs.com/edison0621/p/11520497.html" class="c_b_p_desc_readmore">阅读全文</a>
+摘要：本文分析了 Gremlin、Cypher、nGQL 等 3 款图数据库查询语言的语法，并用  Janus Graph 的示例图 The Graphs of Gods 的数据进行实践方便你了解到这 3 款图数据库查询语言            <a href="https://www.cnblogs.com/nebulagraph/p/12418948.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
 </div>
         <div class="clear"></div>
         <div class="postDesc">
 
-posted @ 2019-09-15 08:55 艾心❤ 阅读 (1003) 评论 (1)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11520497" rel="nofollow">
+posted @ 2020-03-05 10:51 NebulaGraph 阅读 (251) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12418948" rel="nofollow">
     编辑
 </a>
 </div>
@@ -449,7 +449,7 @@ posted @ 2019-09-15 08:55 艾心❤ 阅读 (1003) 评论 (1)
 <div class="topicListFooter">
     <div id="nav_next_page">
         
-    <a href="https://www.cnblogs.com/edison0621/default.html?page=2">
+    <a href="https://www.cnblogs.com/nebulagraph/default.html?page=2">
         下一页
     </a>
 
@@ -469,9 +469,7 @@ posted @ 2019-09-15 08:55 艾心❤ 阅读 (1003) 评论 (1)
 	<div id="sideBar">
 		<div id="sideBarMain">
 			
-<div id="sidebar_news" class="newsItem">
-            <script>loadBlogNews();</script>
-</div>
+
 
 <div id="sidebar_ad"></div>
 			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
@@ -488,7 +486,7 @@ posted @ 2019-09-15 08:55 艾心❤ 阅读 (1003) 评论 (1)
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 艾心❤
+Copyright &copy; 2020 NebulaGraph
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 
