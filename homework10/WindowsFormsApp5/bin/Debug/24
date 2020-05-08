@@ -3,49 +3,64 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="referrer" content="never" />
-    <meta property="og:description" content="论文巧妙地基于one stage目标检测算法提出实时实例分割算法YOLACT，整体的架构设计十分轻量，在速度和效果上面达到很好的trade off。 来源：【晓飞的算法工程笔记】 公众号 论文: YO" />
+    <meta name="referrer" content="origin" />
+    
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>YOLACT : 首个实时one-stage实例分割模型，29.8mAP/33.5fps | ICCV 2019 - 晓飞的算法工程笔记 - 博客园</title>
+    <title>鬼谷子com - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
     <link id="MainCss" rel="stylesheet" href="/skins/coffee/bundle-coffee.min.css?v=KPz7rj-c2sTAV1_ck1aDmbZcuCG3KBhyLnfvzf6nn94" />
     
     <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee-mobile.min.css?v=na9bpAY4yh7uEWCcrXj3vfJM3VBse8YtU6-5fUUQPz0" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/VincentLee/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/VincentLee/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/VincentLee/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/wzxNote/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/wzxNote/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/wzxNote/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 215477;
-        var currentBlogApp = 'VincentLee';
-        var cb_enable_mathjax = false;
+        var currentBlogId = 252253;
+        var currentBlogApp = 'wzxNote';
+        var cb_enable_mathjax = true;
         var isLogined = false;
         var skinName = 'coffee';
     </script>
-    
-    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
     
 </head>
 <body>
     <a name="top"></a>
-    
+    <div id="page_begin_html">
+        <a href="https://info.flagcounter.com/pQC8"><img src="https://s11.flagcounter.com/count2/pQC8/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+    </div>
     
 <!--done-->
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-	<a href="https://www.cnblogs.com/VincentLee/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>			
+	<a href="https://www.cnblogs.com/wzxNote/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>			
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/VincentLee/">晓飞的算法工程笔记</a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/wzxNote/">鬼谷子com</a>
 </h1>
 <h2>
-
+你见，或者不见我/我就在那里/不悲不喜    你念，或者不念我/情就在那里/不来不去<br>
+你爱，或者不爱我/爱就在那里/不增不减    你跟，或者不跟我/我的手就在你手里/不舍不弃<br>
+来我的怀里/或者/让我住进你的心里        默然/相爱/寂静/欢喜
 </h2>
 
 
@@ -65,7 +80,7 @@
 博客园</a>
 </li>
 	<li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/VincentLee/">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/wzxNote/">
 首页</a>
 </li>
 	<li>
@@ -74,17 +89,17 @@
 新随笔</a>
 </li>
 	<li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E6%99%93%E9%A3%9E%E7%9A%84%E7%AE%97%E6%B3%95%E5%B7%A5%E7%A8%8B%E7%AC%94%E8%AE%B0">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E9%AC%BC%E8%B0%B7%E5%AD%90com">
 联系</a></li>
 	<li>
 <a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
 管理</a>
 </li>
 	<li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/VincentLee/rss/">
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/wzxNote/rss/">
 订阅</a>
 	
-<a id="blog_nav_rss_image" href="https://www.cnblogs.com/VincentLee/rss/">
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/wzxNote/rss/">
     <img src="/skins/coffee/images/xml.gif" alt="订阅" />
 </a></li>
 </ul>
@@ -95,207 +110,399 @@
 				
 				<!--done-->
 随笔- 
-38&nbsp;
+110&nbsp;
 文章- 
 0&nbsp;
 评论- 
-2&nbsp;
+75&nbsp;
 
 
 
 				
 			</div><!--end: blogStats -->
 		</div><!--end: navigator 博客导航栏 -->
-		<div id="post_detail">
+		
 <!--done-->
-<div id="topics">
-	<div class="post">
-		<h1 class = "postTitle">
-			
-<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/VincentLee/p/12843133.html">YOLACT : 首个实时one-stage实例分割模型，29.8mAP/33.5fps | ICCV 2019</a>
 
-		</h1>
-		<div class="clear"></div>
-		<div class="postBody">
-			
-<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
-    <blockquote>
-<p>论文巧妙地基于one-stage目标检测算法提出实时实例分割算法YOLACT，整体的架构设计十分轻量，在速度和效果上面达到很好的trade-off。<br>
- <br>
-来源：【晓飞的算法工程笔记】 公众号</p>
-</blockquote>
-<p><strong>论文: YOLACT: Real-time Instance Segmentation</strong></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/20428708-9981e87f52e1ecd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<ul>
-<li><strong>论文地址：<a href="https://arxiv.org/abs/1904.02689">https://arxiv.org/abs/1904.02689</a></strong></li>
-<li><strong>论文代码：<a href="https://github.com/dbolya/yolact">https://github.com/dbolya/yolact</a></strong></li>
-</ul>
-<h1 id="introduction">Introduction</h1>
-<hr>
-<p><img src="https://upload-images.jianshu.io/upload_images/20428708-a43e0c59cf2f6d27.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>  目前的实例分割方法虽然效果都有很大的提升，但是均缺乏实时性，为此论文的提出了首个实时($&gt;30fps$)实例分割算法YOLACT，论文的主要贡献如下：</p>
-<ul>
-<li>基于one-stage目标检测算法，提出实时实例分割算法YOLACT，整体的架构设计十分轻量，在速度和效果上面达到很好的trade-off。</li>
-<li>提出加速版NMS算法Fast NMS，有12ms加速</li>
-</ul>
-<h1 id="yolact">YOLACT</h1>
-<hr>
-<p><img src="https://upload-images.jianshu.io/upload_images/20428708-d01b7181f7425efb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>  YOLACT的主要想法是直接在one-stage目标检测算法中加入Mask分支，而不添加任何的RoI池化的操作，将实例分割分成两个并行的分支：</p>
-<ul>
-<li>使用FCN来生成分辨率较大的原型mask，原型mask不针对任何的实例。</li>
-<li>目标检测分支添加额外的head来预测mask因子向量，用于对原型mask进行特定实例的加权编码。</li>
-</ul>
-<p>  这样做的原理在于，mask在空间上是连续的，卷积能很好地保持这种特性，因此原型mask通过全卷积生成的，而全连接层虽然不能保持空间连贯性，但能很好地预测语义向量，于是用来生成instance-wise的mask因子向量，结合两者进行预测，既能保持空间连贯性，也能加入语义信息并保持one-stage的快速性。最后取目标检测分支经过NMS后的实例，逐个将原型mask和mask因子向量相乘，再将相乘后的结果合并输出</p>
-<h3 id="prototype-generation">Prototype Generation</h3>
-<p><img src="https://upload-images.jianshu.io/upload_images/20428708-9f5fb05c92cb793c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>  原型mask分支预测$k$个mask，protonet按如图3的FCN形式实现，最后的卷积输出channel为$k$，protonet接在主干网络上。整体的实现与大多数的语义分割模型类似，区别在于主干网络使用了FPN来增加网络的深度，并且保持较大的分辨率($P_3$, 原图1/4大小)来提高小物体的识别。另外，论文发现不限制protonet的输出是很重要的，能够让网络对十分确定的原型给予压倒性的响应(比如背景)，可以选择对输出的原型mask进行ReLU激活或不接激活，论文最终选择了ReLU激活。</p>
-<h3 id="mask-coefficients">Mask Coefficients</h3>
-<p>  在经典的anchor-based目标检测算法中，检测head一般有两个分支，分别预测类别和bbox偏移。在此基础上添加第三个用于mask因子预测的分支，每个实例预测$k$个mask因子。<br>
-  为了更好地控制和丰富原型mask的融合，对mask因子进行tanh激活，使得值更稳定且有正负，效果如图2的分支。</p>
-<h3 id="mask-assembly">Mask Assembly</h3>
-<p><img src="https://upload-images.jianshu.io/upload_images/20428708-f5eb4ca287d98508.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>  将原型mask和mask因子进行线性组合，然后对组合结果进行sigmoid激活输出最终的mask。$P$为$h\times w\times k$的原型mask，$C$为$n\times k$的原型因子，$n$为检测分支NMS和分数过滤后留下的实例数。</p>
-<ul>
-<li>
-<h5 id="losses">Losses</h5>
-</li>
-</ul>
-<p>  训练的损失函数包含3种：分类损失$L_{cls}$、box回归损失$L_{box}$以及mask损失$L_{mask}$，权重分别为1、1.5和6.125，分类损失和回归损失的计算与SSD一样，mask损失使用pixel-wise的二元交叉熵计算$L_{mask}=BCE(M, M_{gt})$</p>
-<ul>
-<li>
-<h5 id="cropping-masks">Cropping Masks</h5>
-</li>
-</ul>
-<p>  在推理阶段，使用预测的bbox在最终的mask截取出实例，再使用阈值(人工设置0.5)来过滤成二值的mask。在训练的时候，则使用GT来截取实例计算mask损失，$L_{mask}$会除以截取的实例大小，这样有助于保留原型中的小目标。</p>
-<h3 id="emergent-behavior">Emergent Behavior</h3>
-<p><img src="https://upload-images.jianshu.io/upload_images/20428708-a2cc8e2fa20bf345.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>  一般而言，FCN做分割都需要添加一些额外的trick来增加平移可变性，比如position-sensitive特征图，虽然YOLACT唯一增加平移可变形的措施是对最终的mask进行截取输出，但是论文发现对于中大物体不截取输出的效果也不错，这代表YOLACT的原型mask学到了对不同的实例进行不同的响应，如图5所示，适当地对原型mask进行组合就能得出实例。需要注意的是全红的输入图片，其原型mask特征是各不一样的，这是由于每次卷积都会padding，使得边界存在可区分性，所以主干网络本身就存在一定的平移可变形。</p>
-<h3 id="backbone-detector">Backbone Detector</h3>
-<p>  原型mask和mask因子的预测都需要丰富的特征，为了权衡速度和特征丰富性，主干网络采用类似与RetinaNet的结构，加入FPN，去掉$P_2$加入$P_6$和$P_7$，在多层中进行head预测，并用$P_3$特征进行原型mask预测。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/20428708-242735e71dc748be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>  YOLACT head使用$P_2 \sim P_7$的特征，anchor的大小分别对应$[24, 48, 96, 192, 384]$，每个head共享一个$3\times 3$卷积，然后再分别通过独立的$3\times 3$卷积进行预测，比RetinaNet更轻量，如图4。使用smooth-$L1$训练bbox预测，使用带背景类的softmax交叉熵训练分类预测，OHEM正负比例为$1:3$。</p>
-<h1 id="other-improvements">Other Improvements</h1>
-<hr>
-<h3 id="fast-nms">Fast NMS</h3>
-<p>  正常的NMS会串行地按类别将bbox逐个校验，这种效率对于5fps的算法是足够快的，但对于30fps的算法将是很大的瓶颈。为此，论文提出Fast NMS来加速。<br>
-  首先根据类别分数对各检测结果进行排序，然后计算各自的IoU对，得到$c\times n\times n$的IoU矩阵$X$，$c$为类别数，$n$为bbox数量。假设与bbox的IoU高于阈值$t$的其它bbox的分数高于当前框，则去掉该bbox，计算逻辑如下：</p>
-<ul>
-<li>将矩阵$X$的下三角和对角线置为0，$X_{kij}=0, \forall k, j, i \ge j$</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/20428708-f86a558dc0735661.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<ul>
-<li>取每列的最大值，计算如公式2，得到最大IoU值矩阵$K$</li>
-<li>$K&lt;t$的检测结果即为每个类别保留的结果。</li>
-</ul>
-<p>  通过实验，FastNMS大约能比原生的NMS快约11.8ms，mAP下降0.1</p>
-<h3 id="semantic-segmentation-loss">Semantic Segmentation Loss</h3>
-<p>  为了提升准确率而不影响推理的速度，在训练阶段加入语义分割分支并计算语义分割损失辅助训练。在$P_3$输出上接一个c维的$1\times 1$卷积，由于一个像素可能属于多个类别，使用sigmoid激活输出而不是softmax激活，损失的权重为1，大约能提升0.4mAP。</p>
-<h1 id="results">Results</h1>
-<hr>
-<h3 id="mask-results">Mask Results</h3>
-<p><img src="https://upload-images.jianshu.io/upload_images/20428708-5cc7294be8cb2c4a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/20428708-5522ddd08af163c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h3 id="mask-quality">Mask Quality</h3>
-<p><img src="https://upload-images.jianshu.io/upload_images/20428708-1c85c9a09ec26293.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h3 id="ablations">Ablations</h3>
-<p><img src="https://upload-images.jianshu.io/upload_images/20428708-6925a26198ebe124.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h1 id="conclusion">CONCLUSION</h1>
-<hr>
-<p>  论文巧妙地基于one-stage目标检测算法提出实时实例分割算法YOLACT，整体的架构设计十分轻量，在速度和效果上面达到很好的trade-off。</p>
-<p> <br>
- <br>
- </p>
-<blockquote>
-<p>写作不易，未经允许不得转载～<br>
-更多内容请关注 微信公众号【晓飞的算法工程笔记】</p>
-</blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/20428708-7156c0e4a2f49bd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="work-life balance."></p>
 
-</div>
-<div id="MySignature"></div>
-<div class="clear"></div>
-<div id="blog_post_info_block">
-    <div id="blog_post_info"></div>
-    <div class="clear"></div>
-    <div id="post_next_prev"></div>
-</div>
-		</div>
-		<div class="postDesc">posted @ 
-<span id="post-date">2020-05-07 15:02</span>&nbsp;
-<a href="https://www.cnblogs.com/VincentLee/">晓飞的算法工程笔记</a>&nbsp;
-阅读(<span id="post_view_count">...</span>)&nbsp;
-评论(<span id="post_comment_count">...</span>)&nbsp;
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12843133" rel="nofollow">编辑</a>&nbsp;
-<a href="javascript:void(0)" onclick="AddToWz(12843133);return false;">收藏</a></div>
-	</div>
-	
-	
-</div><!--end: topics 文章、评论容器-->
-<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
-<script>markdown_highlight();</script>
-<script>
-    var allowComments = true, cb_blogId = 215477, cb_blogApp = 'VincentLee', cb_blogUserGuid = '0d9ecd5d-98a6-e411-b908-9dcfd8948a71';
-    var cb_entryId = 12843133, cb_entryCreatedDate = '2020-05-07 15:02', cb_postType = 1; 
-    loadViewCount(cb_entryId);
-    loadSideColumnAd();
-</script><a name="!comments"></a>
-<div id="blog-comments-placeholder"></div>
-<script>
-    var commentManager = new blogCommentManager();
-    commentManager.renderComments(0);
-</script>
 
-<div id="comment_form" class="commentform">
-    <a name="commentform"></a>
-    <div id="divCommentShow"></div>
-    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
-    <div id="comment_form_container"></div>
-    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
-    <div id="ad_t2"></div>
-    <div id="opt_under_post"></div>
-    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
-    <script>
-        var googletag = googletag || {};
-        googletag.cmd = googletag.cmd || [];
-    </script>
-    <script>
-        googletag.cmd.push(function () {
-            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
-            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
-            googletag.pubads().enableSingleRequest();
-            googletag.enableServices();
-        });
-    </script>
-    <div id="cnblogs_c1" class="c_ad_block">
-        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/wzxNote/archive/2020/03/30.html">2020年3月30日</a>
     </div>
-    <div id="under_post_news"></div>
-    <div id="cnblogs_c2" class="c_ad_block">
-        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
-            <script>
-                if (new Date() >= new Date(2018, 9, 13)) {
-                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
-                }
-            </script>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12596689.html">
+[置顶]    23种设计模式，c++代码实现
+</a>
+
         </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：这个系列文章我会用尽量通俗的语言和结构来讨论和实现23中设计模式。通过简单的例子和场景把大家带入到设计模式的世界中去，尽量使各位看官看完就能够达到会用的目的~ 本系列为QtCreator创建的console工程 创建型模式 简单工厂模式 工厂模式 抽象工厂模式 构建模式 单例模式 原型模式 结构型模            <a href="https://www.cnblogs.com/wzxNote/p/12596689.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
-    <div id="under_post_kb"></div>
-    <div id="HistoryToday" class="c_ad_block"></div>
-    <script type="text/javascript">
-        fixPostBody();
-        deliverBigBanner();
-setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
-        deliverAdC1();
-        deliverAdC2();
-        loadNewsAndKb();
-        loadBlogSignature();
-LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
-        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
-        loadOptUnderPost();
-        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
-    </script>
-</div></div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-03-30 09:47 鬼谷子com 阅读 (24) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12596689" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/wzxNote/archive/2020/05/08.html">2020年5月8日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12849461.html">
+    Qt for Android （三） 打开Android相册并选一个图片进行显示
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：这两天弄了一下android相册的相关功能。还是花了挺长时间的，这里总结一下，避免以后再踩坑。同时也在这篇文章里面补齐一些android开发的基础支持 打开Android相册并选一个图片进行显示 分为几个步骤: 1. QtCreator新建Android工程 本例使用的是arm64 v8 Andro            <a href="https://www.cnblogs.com/wzxNote/p/12849461.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-05-08 11:26 鬼谷子com 阅读 (39) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12849461" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/wzxNote/archive/2020/04/30.html">2020年4月30日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12809154.html">
+    备忘录模式 （c++实现）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：模式定义 备忘录（Memento）: 在不破坏封装性的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。这样以后就可以将该对象恢复到原先保存的状态。 模式动机 备忘录模式 比较适用于功能比较复杂的，但需要维护或记录属性历史的类，或者需要保存的属性只是众多属性中的一小部分时，LieKong可            <a href="https://www.cnblogs.com/wzxNote/p/12809154.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-30 15:30 鬼谷子com 阅读 (30) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12809154" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/wzxNote/archive/2020/04/29.html">2020年4月29日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12802985.html">
+    MacOS虚拟机忘记密码解决方案
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：问题如标题 1. 重启虚拟机系统 2. 重启过程中按住&quot;win&quot; + &quot;R&quot;组合键 3. 然后会出现安装界面，选择 &quot;实用工具/终端&quot; 4. 在终端输入 resetpassword ，会弹出重置密码的对话框，重新设置密码就可以了。 怕再次忘记就用记事本保存一下密码~            <a href="https://www.cnblogs.com/wzxNote/p/12802985.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-29 16:25 鬼谷子com 阅读 (34) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12802985" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/wzxNote/archive/2020/04/28.html">2020年4月28日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12794435.html">
+    Qt for Android FAQ
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：1. 其他版本（windows mingw)正常，但是android armv8调试的时候程序崩溃，没有具体错误提示，只有下面这一行： F libc : Fatal signal 5 (SIGTRAP), code 1 (TRAP_BRKPT), fault addr 0x6f37841990 in            <a href="https://www.cnblogs.com/wzxNote/p/12794435.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-28 15:09 鬼谷子com 阅读 (18) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12794435" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12791972.html">
+    cmake vs qmake
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：cmake vs qmake qmake 是为 Qt 量身打造的，使用起来非常方便 cmake 使用上不如qmake简单直接，但复杂换来的是强大的功能 内置的 out-of source 构建。（目前QtCreator为qmake也默认启用了该功能。参考：浅谈 qmake 之 shadow buil            <a href="https://www.cnblogs.com/wzxNote/p/12791972.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-28 09:30 鬼谷子com 阅读 (14) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12791972" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/wzxNote/archive/2020/04/21.html">2020年4月21日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12746336.html">
+    Flutter安装过程中遇到的问题
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：Flutter安装配置过程中遇到的问题 执行flutter doctor的时候弹出两个错误 1. ✗ Android license status unknown 最后的解决其实很简单，过程却是很曲折。很多教程说的要执行： 这个命令，但是我一直提示找不到这个命令或者没有licenses这个参数。后来            <a href="https://www.cnblogs.com/wzxNote/p/12746336.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-21 18:02 鬼谷子com 阅读 (22) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12746336" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/wzxNote/archive/2020/04/17.html">2020年4月17日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12718427.html">
+    外观模式（c++实现）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：外观模式 [TOC] 模式定义 外观模式（Facade） ，为子系统中的一组接口提供一个一致的界面，此模式定义了一个高层接口，这个接口使得这一子系统更加容易使用。 模式动机 当要为一个复杂子系统提供一个简单接口时可以使用外观模式。该接口可以满足大多数用户的需求，而且用户也可以越过外观类直接访问子系统            <a href="https://www.cnblogs.com/wzxNote/p/12718427.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-17 10:56 鬼谷子com 阅读 (47) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12718427" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/wzxNote/archive/2020/04/16.html">2020年4月16日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12714830.html">
+    原型模式（c++实现）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：原型模式 [TOC] 定义 原型模式 ，用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。 动机 1. 资源优化场景 类初始化需要消化非常多的资源，这个资源包括数据、硬件资源等。 2. 性能和安全要求的场景 通过new产生一个对象需要非常繁琐的数据准备或访问权限，则可以使用原型模式。             <a href="https://www.cnblogs.com/wzxNote/p/12714830.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-16 18:28 鬼谷子com 阅读 (12) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12714830" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12713492.html">
+    我敢说 80% 的程序员都掉进了「老鼠赛跑」的陷阱
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：今天我给大家再次分享一下，我最近的一些读书的感想，思考起来，确实能够给自己带来一些真实的帮助和启发，希望大家在平时的工作学习中，也能够认清楚学习的一些本质。 如果我们的学习是在不断掌握应对具体工作场景和问题的方法，那就是在努力提升技术效率。在这种模式下，我们遇到每个新问题都要学习新知识。 如果我们的            <a href="https://www.cnblogs.com/wzxNote/p/12713492.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-16 16:00 鬼谷子com 阅读 (14) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12713492" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12712895.html">
+    装饰模式（c++实现）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：装饰模式 [TOC] 定义 动态的给一个对象添加一些额外的职责，就增加功能来说，装饰模式比生成子类更为灵活 动机 一般有两种方式可以实现给一个类或对象增加行为： 继承机制，使用继承机制是给现有类添加功能的一种有效途径，通过继承一个现有类可以使得子类在拥有自身方法的同时还拥有父类的方法。但是这种方法是            <a href="https://www.cnblogs.com/wzxNote/p/12712895.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-16 14:53 鬼谷子com 阅读 (21) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12712895" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/wzxNote/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
 
 
 	</div><!--end: forFlow -->
@@ -323,7 +530,7 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 晓飞的算法工程笔记
+Copyright &copy; 2020 鬼谷子com
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 

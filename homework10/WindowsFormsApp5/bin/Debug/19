@@ -1,506 +1,83 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="referrer" content="origin" />
-    <meta property="og:description" content="一：背景 1. 讲故事 我们有一家top级的淘品牌店铺，为了后续的加速计算，在程序启动的时候灌入她家的核心数据到内存中，灌入完成后内存高达100G，虽然云上的机器内存有256G，然被这么划掉一半看着还" />
-    <meta http-equiv="Cache-Control" content="no-transform" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>内存迟迟下不去，可能你就差一个GC.Collect - 一线码农 - 博客园</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>用户登录 - 博客园</title>
+    <link rel="shortcut icon" href="//common.cnblogs.com/favicon.ico" type="image/x-icon" />
     
-    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
-    <link id="MainCss" rel="stylesheet" href="/skins/imetro_hd/bundle-imetro_hd.min.css?v=gS0FloTY-RBJQcN3GCAKG6fAr6HHKtDMTw60VxjN79c" />
-    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/huangxincheng/custom.css?v=z0WD6a4nBgoSBHjlq93cyLFnQd8=" />
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/imetro_hd/bundle-imetro_hd-mobile.min.css?v=VacchHeVg6bp3gCO8NqMH8D8fhA8iyRbb0JgoDUvn4o" />
+    <script src="/assets/auth/signin-iconfont.js?v=LZEirjgFiEQHD1zXtZAwp5RN1VbploOCAz_k2itaQnI"></script>
+
+    <link rel="stylesheet" href="/assets/commons.bundle.css?v=nNKmP76bZzat_qQJxJjAS-_HXFD1OFqCp4B3dD68Zus" />
+    <link rel="stylesheet" href="/assets/shared/_card.css?v=ZhvhCOaGAbcMXONJVzp3sISsPQcfpOrAn9G7NqbwPAQ" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/huangxincheng/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/huangxincheng/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/huangxincheng/wlwmanifest.xml" />
-    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
-    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
-    <script>
-        var currentBlogId = 85195;
-        var currentBlogApp = 'huangxincheng';
-        var cb_enable_mathjax = false;
-        var isLogined = false;
-        var skinName = 'iMetro_HD';
-    </script>
-    
-    
-    
+    <link rel="stylesheet" href="/assets/auth/signin.css?v=qAftVAj2D6KWk-QbO8Wz-drBxU2CTxAQOjKZLdvPHlc" />
+
 </head>
 <body>
-    <a name="top"></a>
-    
-    
-<!--done-->
-<div id="home">
-<div id="header">
-	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/huangxincheng/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
-		
-<!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/huangxincheng/"></a>
-</h1>
-<h2>
-
-</h2>
-
-
-
-
-		
-	</div><!--end: blogTitle 博客的标题和副标题 -->
-	<div id="navigator">
-		
-<ul id="navList">
-<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
-博客园</a>
-</li>
-<li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/huangxincheng/">
-首页</a>
-</li>
-<li>
-
-<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
-新随笔</a>
-</li>
-<li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E4%B8%80%E7%BA%BF%E7%A0%81%E5%86%9C">
-联系</a></li>
-<li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/huangxincheng/rss/">
-订阅</a>
-<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
-<li>
-<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
-管理</a>
-</li>
-</ul>
-
-
-		<div class="blogStats">
-			
-			<span id="stats_post_count">随笔 - 
-295&nbsp; </span>
-<span id="stats_article_count">文章 - 
-1&nbsp; </span>
-<span id="stats-comment_count">评论 - 
-4956</span>
-
-			
-		</div><!--end: blogStats -->
-	</div><!--end: navigator 博客导航栏 -->
-</div><!--end: header 头部 -->
-
-<div id="main">
-	<div id="mainContent">
-	<div class="forFlow">
-		<div id="post_detail">
-    <!--done-->
-    <div id="topics">
-        <div class="post">
-            <h1 class = "postTitle">
+    <!--[if IE]>
+    <div class="unsupported-browser">
+        该页面不支持 Internet Explorer 浏览器，建议使用
+        <a href="https://www.google.cn/intl/zh-CN/chrome/">Google Chrome</a>,
+        <a href="https://www.mozilla.org/zh-CN/firefox/">Firefox</a> 或
+        <a href="https://www.microsoftedgeinsider.com/zh-CN/">Microsoft Edge</a>
+    </div>
+<![endif]-->
+    <div class="center-container ">
+        <div class="center-body card  h-sm-100">
+            <div class="card-body">
                 
-<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/huangxincheng/p/12839160.html">内存迟迟下不去，可能你就差一个GC.Collect</a>
-
-            </h1>
-            <div class="clear"></div>
-            <div class="postBody">
-                
-<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
-    <h1 id="一：背景">一：背景</h1>
-<h2 id="1-讲故事">1. 讲故事</h2>
-<p>我们有一家top级的淘品牌店铺，为了后续的加速计算，在程序启动的时候灌入她家的核心数据到内存中，灌入完成后内存高达100G，虽然云上的机器内存有256G，然被这么划掉一半看着还是有一点心疼的，可怜那些被挤压的小啰啰程序😄😄😄，本以为是那些List，HashSet，Dictionary需要动态扩容虚占了很多内存，也就没当一回事，后来过了一天发现内存回到了大概70多G，卧槽，不是所谓的集合虚占，而是GC没给我回收呀。。。</p>
-<h2 id="2-windbg验证一下">2. windbg验证一下</h2>
-<p>为了验证我的说法，我就不去生产抓这个庞然大物的dump了，去测试环境给大家抓一个，晚上清蒸。</p>
-<blockquote>
-<p>!eeheap -gc   查看gc信息</p>
-</blockquote>
-<pre><code class="language-C#">
-0:000&gt; !eeheap -gc
-Number of GC Heaps: 1
-generation 0 starts at 0x0000019b0fc66b48
-generation 1 starts at 0x0000019b0f73b138
-generation 2 starts at 0x0000019a5da81000
-ephemeral segment allocation context: none
-         segment             begin         allocated              size
-0000019a5da80000  0000019a5da81000  0000019a6da7ffb8  0xfffefb8(268431288)
-0000019a00000000  0000019a00001000  0000019a0ffffe90  0xfffee90(268430992)
-0000019a10000000  0000019a10001000  0000019a1ffffeb0  0xfffeeb0(268431024)
-0000019a20000000  0000019a20001000  0000019a2fffffb0  0xfffefb0(268431280)
-0000019a30000000  0000019a30001000  0000019a3ffffc50  0xfffec50(268430416)
-0000019a40000000  0000019a40001000  0000019a4fffffc8  0xfffefc8(268431304)
-0000019a7aad0000  0000019a7aad1000  0000019a8aacfd60  0xfffed60(268430688)
-0000019a8cbf0000  0000019a8cbf1000  0000019a9cbefe10  0xfffee10(268430864)
-0000019a9cbf0000  0000019a9cbf1000  0000019aacbefcb8  0xfffecb8(268430520)
-0000019aacbf0000  0000019aacbf1000  0000019abcbefd18  0xfffed18(268430616)
-0000019abcbf0000  0000019abcbf1000  0000019accbefd68  0xfffed68(268430696)
-0000019accbf0000  0000019accbf1000  0000019adcbefcf8  0xfffecf8(268430584)
-0000019adcbf0000  0000019adcbf1000  0000019aecbefdc0  0xfffedc0(268430784)
-0000019af0e20000  0000019af0e21000  0000019b00e1ff28  0xfffef28(268431144)
-0000019b00e20000  0000019b00e21000  0000019b10047178  0xf226178(253911416)
-Large object heap starts at 0x0000019a6da81000
-         segment             begin         allocated              size
-0000019a6da80000  0000019a6da81000  0000019a756d0480  0x7c4f480(130348160)
-0000019b10e20000  0000019b10e21000  0000019b133ca330  0x25a9330(39490352)
-Total Size:              Size: 0xf940ee70 (4181782128) bytes.
-------------------------------
-GC Heap Size:            Size: 0xf940ee70 (4181782128) bytes.
-
-</code></pre>
-<p>从最后一行可以看到堆大小： <code>GC Heap Size: Size: 0xf940ee70 (4181782128) bytes.</code> 然后将4181782128 byte 转化为GB： <code>4181782128/1024/1024/1024= 3.89G</code>。</p>
-<p>再来看一下3代中有多少free空闲块，占了多少空间，为了方便查看，大家可以用一下sosex扩展，提供了很多方便的方法。</p>
-<blockquote>
-<p>!dumpgen xxxx  依次把0，1，2 三个代中的free空间统计出来。</p>
-</blockquote>
-<pre><code class="language-C#">
-0:000&gt; !dumpgen 0 -free -stat
-       Count      Total Size      Type
--------------------------------------------------
-         168      1,120,008   **** FREE ****
-
-168 objects, 1,120,008 bytes
-
-0:000&gt; !dumpgen 1 -free -stat
-       Count      Total Size      Type
--------------------------------------------------
-         368          8,096   **** FREE ****
-
-368 objects, 8,096 bytes
-
-0:000&gt; !dumpgen 2 -free -stat
-       Count      Total Size      Type
--------------------------------------------------
-  11,857,034  1,052,310,524   **** FREE ****
-
-11,857,034 objects, 1,052,310,524 bytes
 
 
-</code></pre>
-<p>从上面输出可以看到，三个代free objects的信息：</p>
-<p>空闲块个数:<code>168 + 368 + 11857034 = 11857570个</code>，</p>
-<p>空闲块空间：<code>1120008 + 8096 + 1052310524 = 1053438628 byte =&gt; 0.98G</code>。</p>
-<p>惊讶吧~， 3.89G的堆，等待被释放的空间就有0.98G,占比高达25%，再看看第2代中有高达1185万个空闲块，说明堆碎片有多么严重。。。</p>
-<p>所以等GC自己启动回收压缩释放不知道猴年马月，为了高效利用内存，不得已自己先给程序点个火，手工调用一下GC.Collect，让程序内存降到了 <code>3.89 - 0.98 = 2.91 G</code>。</p>
-<h1 id="二：对gc代机制的理解">二：对GC代机制的理解</h1>
-<p>有不少程序员对gc中的代管理机制不是特别清楚，或者看过书之后理解也停留在理论上，没法去验证书中所说，其实我也不是特别理解，😄😄😄，作为一个准备好好玩自媒体人，不能让您白来一趟哈。</p>
-<h2 id="1-clr堆模型">1. CLR堆模型</h2>
-<p>当CLR不小心错入程序世界的时候，会给你分配两个堆，一个叫做小对象堆，一个叫做大对象堆，默认是以83k作为大小堆的分界线，当然你也可以自定义配置，堆上的空间由很多的内存段拼成的,可能你有点蒙，我画张图吧。</p>
-<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215049318-142033641.png" alt=""></p>
-<h2 id="2-对临时内存段的解释">2. 对临时内存段的解释</h2>
-<p>看完上图，可能大家有两个疑问：</p>
-<h3 id="1--为啥小对象堆中有一个临时内存段？">&lt;1&gt;  为啥小对象堆中有一个临时内存段？</h3>
-<p>这是因为CLR做了很多假设，它假设在gen0和gen1上回收的对象会特别多，所以没事就上去转转，CLR为了方便GC快速清理回收压缩。。。就将gen0和gen1都放置在这个临时内存段上。</p>
-<p>你可能要问，有证据吗？？？ 我就拿刚才的4G程序说话吧。</p>
-<pre><code class="language-C#">
-0:000&gt; !eeheap -gc
-Number of GC Heaps: 1
-generation 0 starts at 0x0000019b0fc66b48
-generation 1 starts at 0x0000019b0f73b138
-generation 2 starts at 0x0000019a5da81000
-ephemeral segment allocation context: none
-         segment             begin         allocated              size
-0000019a5da80000  0000019a5da81000  0000019a6da7ffb8  0xfffefb8(268431288)
-0000019a00000000  0000019a00001000  0000019a0ffffe90  0xfffee90(268430992)
-0000019a10000000  0000019a10001000  0000019a1ffffeb0  0xfffeeb0(268431024)
-0000019a20000000  0000019a20001000  0000019a2fffffb0  0xfffefb0(268431280)
-0000019a30000000  0000019a30001000  0000019a3ffffc50  0xfffec50(268430416)
-0000019a40000000  0000019a40001000  0000019a4fffffc8  0xfffefc8(268431304)
-0000019a7aad0000  0000019a7aad1000  0000019a8aacfd60  0xfffed60(268430688)
-0000019a8cbf0000  0000019a8cbf1000  0000019a9cbefe10  0xfffee10(268430864)
-0000019a9cbf0000  0000019a9cbf1000  0000019aacbefcb8  0xfffecb8(268430520)
-0000019aacbf0000  0000019aacbf1000  0000019abcbefd18  0xfffed18(268430616)
-0000019abcbf0000  0000019abcbf1000  0000019accbefd68  0xfffed68(268430696)
-0000019accbf0000  0000019accbf1000  0000019adcbefcf8  0xfffecf8(268430584)
-0000019adcbf0000  0000019adcbf1000  0000019aecbefdc0  0xfffedc0(268430784)
-0000019af0e20000  0000019af0e21000  0000019b00e1ff28  0xfffef28(268431144)
-0000019b00e20000  0000019b00e21000  0000019b10047178  0xf226178(253911416)
-Large object heap starts at 0x0000019a6da81000
-         segment             begin         allocated              size
-0000019a6da80000  0000019a6da81000  0000019a756d0480  0x7c4f480(130348160)
-0000019b10e20000  0000019b10e21000  0000019b133ca330  0x25a9330(39490352)
-Total Size:              Size: 0xf940ee70 (4181782128) bytes.
-------------------------------
-GC Heap Size:            Size: 0xf940ee70 (4181782128) bytes.
-
-</code></pre>
-<p>从上面gc信息中可以看到小对象堆中目前有 15个内存段， 大对象堆有2个内存段, gen0的起始地址为<code>0x0000019b0fc66b48</code>,gen1的起始地址为<code>0x0000019b0f73b138</code>, 都落在了第15个内存段内 <code>0000019b00e20000  0000019b00e21000  0000019b10047178  0xf226178(253911416)</code>，其余内存段都被 gen2 占领，如果大家有点乱，先多看几遍，等一下看我的演示。</p>
-<h3 id="2--临时内存段大小是多少？">&lt;2&gt;  临时内存段大小是多少？</h3>
-<p>这个段的大小，需要看是x64还是x86机器，还要看GC是工作站模式还是服务器模式，不过msdn帮我们总结了，<a href="https://docs.microsoft.com/zh-cn/dotnet/standard/garbage-collection/fundamentals">https://docs.microsoft.com/zh-cn/dotnet/standard/garbage-collection/fundamentals</a> ， 截个图给大家看一下。</p>
-<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215112401-1589821210.png" alt=""></p>
-<p>我的本机是x64版本,工作站模式，可以通过 <code>!eeversion</code> 查看一下。</p>
-<pre><code class="language-C#">
-0:000&gt; !eeversion
-4.8.3801.0 free
-Workstation mode
-SOS Version: 4.8.3801.0 retail build
-
-</code></pre>
-<p>对应图中，我的临时内存段的最大内存是256M，再回过头用4G程序的来验证一下内存段大小，用 <code>allocated - begin</code> 即可。</p>
-<pre><code class="language-C#">
-ephemeral segment allocation context: none
-         segment             begin         allocated              size
-0000019b00e20000  0000019b00e21000  0000019b10047178  0xf226178(253911416)
-
-0:000&gt; ? 0000019b10047178 - 0000019b00e21000
-Evaluate expression: 253911416 = 00000000`0f226178
-
-</code></pre>
-<p>两者差值为 <code>253911416 byte =&gt; 242M</code> ，可以看出离256M不远了，等到了256M又要触发GC啦。。。。</p>
-<h2 id="3-代机制简介">3. 代机制简介</h2>
-<p>有了上面的基础，我觉得你对GC的gen机制应该明白了，由于3个gen运行时预定空间是随GC触发随时变动，所以就不知道某个时刻各个gen当时的空间触发阈值。</p>
-<p>接下来说一下三代的原理：当gen0满了会触发GC回收，将gen0中活对象送到gen1中，死的就消灭掉，当某时候gen1满了，gen1的活对象会被送到gen2中，当下个某一次gen2满了，就向操作系统申请新的内存段，所以你看到了4G程序占用了多达14个内存段，就是这么一个道理，没什么复杂的。</p>
-<h1 id="三：代机制原理的代码演示">三：代机制原理的代码演示</h1>
-<p>我刚才也说了，很多人知道这个理论，不知道怎么去验证，这里我就演示一下，先上代码：</p>
-<pre><code class="language-C#">
-        public static void Main(string[] args)
-        {
-            Student student1 = new Student() { UserName = &quot;cnblogs&quot;, Email = &quot;cnblogs@qq.com&quot; };
-            Student student2 = new Student() { UserName = &quot;csdn&quot;, Email = &quot;csdn@qq.com&quot; };
-
-            Console.WriteLine(&quot;两个对象已创建！双双进入 Gen0&quot;);
-            Console.Read();
-
-            student1 = null;
-            GC.Collect();
-
-            Console.WriteLine(&quot;Student1 已从Gen0中抹掉，助力Student2上Gen1，是否继续？&quot;);
-            Console.ReadKey();
-
-            GC.Collect();
-            Console.WriteLine(&quot;再次助力Student2上Gen2&quot;);
-            Console.ReadKey();
-
-            Console.WriteLine(&quot;全部执行结束！&quot;);
-            Console.ReadLine();
-        }
-    }
-
-    public class Student
-    {
-        public string UserName { get; set; }
-        public string Email { get; set; }
-    }
-
-</code></pre>
-<p>代码很简单，就是想让你看一下student1和student2如何在gen0，gen1，gen2中游荡，并且给你精准找出来。</p>
-<h2 id="1-探究-gen0-上的student1-和-studnet2">1. 探究 gen0 上的student1 和 studnet2</h2>
-<p>先启动程序，抓一下dump文件。</p>
-<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215126452-1424714957.png" alt=""></p>
-<pre><code class="language-C#">0:000&gt; !clrstack -l
-
-ConsoleApp4.Program.Main(System.String[]) [C:\dream\Csharp\ConsoleApp1\ConsoleApp4\Program.cs @ 18]
-    LOCALS:
-        0x000000017d7feeb8 = 0x000001d0962c2f28
-        0x000000017d7feeb0 = 0x000001d0962c2f48
-
-0:000&gt; !eeheap -gc
-Number of GC Heaps: 1
-generation 0 starts at 0x000001d0962c1030
-generation 1 starts at 0x000001d0962c1018
-generation 2 starts at 0x000001d0962c1000
-ephemeral segment allocation context: none
-         segment             begin         allocated              size
-000001d0962c0000  000001d0962c1000  000001d0962c7fe8  0x6fe8(28648)
-Large object heap starts at 0x000001d0a62c1000
-         segment             begin         allocated              size
-000001d0a62c0000  000001d0a62c1000  000001d0a62c9a68  0x8a68(35432)
-Total Size:              Size: 0xfa50 (64080) bytes.
-------------------------------
-GC Heap Size:            Size: 0xfa50 (64080) bytes.
-
-
-</code></pre>
-<p>仔细看上面的输出，从主线程的堆栈上可以看到student1和studnet2的地址依次为<code>0x000001d0962c2f28, 0x000001d0962c2f48</code>，而gen0的起始地址为：<code>0x000001d0962c1030</code>，刚好落在 gen0 的区间内，可能你有点蒙，我画一张图。</p>
-<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215135616-1589844551.png" alt=""></p>
-<h2 id="2-探究-student1-被消灭，student2进入gen1">2. 探究 student1 被消灭，student2进入gen1</h2>
-<p>按下Enter键，执行后续代码将student1=null，再执行GC操作，看下堆中又是如何？</p>
-<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215144593-1710776429.png" alt=""></p>
-<pre><code class="language-C#">
-0:000&gt; !clrstack -l
-ConsoleApp4.Program.Main(System.String[]) [C:\dream\Csharp\ConsoleApp1\ConsoleApp4\Program.cs @ 24]
-    LOCALS:
-        0x000000607e9fea50 = 0x0000000000000000
-        0x000000607e9fea48 = 0x0000017f0dff2f38
-
-000000607e9fec88 00007ff8e9396c93 [GCFrame: 000000607e9fec88] 
-0:000&gt; !eeheap -gc
-Number of GC Heaps: 1
-generation 0 starts at 0x0000017f0dff6ea0
-generation 1 starts at 0x0000017f0dff1018
-generation 2 starts at 0x0000017f0dff1000
-ephemeral segment allocation context: none
-         segment             begin         allocated              size
-0000017f0dff0000  0000017f0dff1000  0000017f0dff8eb8  0x7eb8(32440)
-Large object heap starts at 0x0000017f1dff1000
-         segment             begin         allocated              size
-0000017f1dff0000  0000017f1dff1000  0000017f1dff9a68  0x8a68(35432)
-Total Size:              Size: 0x10920 (67872) bytes.
-------------------------------
-GC Heap Size:            Size: 0x10920 (67872) bytes.
-
-</code></pre>
-<p>如果弄明白了上一个案例，看这里就很简单了，很清楚的看到studnet2落在了gen1区间段，不过从起始地址上看，gen1的空间变大了。。。我继续画一张图。</p>
-<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215156496-1714251679.png" alt=""></p>
-<h1 id="3-探究student2-送上了-gen2">3. 探究student2 送上了 gen2</h1>
-<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215206673-574190963.png" alt=""></p>
-<pre><code class="language-C#">
-0:000&gt; !clrstack -l
-ConsoleApp4.Program.Main(System.String[]) [C:\dream\Csharp\ConsoleApp1\ConsoleApp4\Program.cs @ 28]
-    LOCALS:
-        0x000000d340bfebb0 = 0x0000000000000000
-        0x000000d340bfeba8 = 0x00000217b5df2f38
-
-000000d340bfede8 00007ff8e9396c93 [GCFrame: 000000d340bfede8] 
-0:000&gt; !eeheap -gc
-Number of GC Heaps: 1
-generation 0 starts at 0x00000217b5df6f40
-generation 1 starts at 0x00000217b5df6ea0
-generation 2 starts at 0x00000217b5df1000
-ephemeral segment allocation context: none
-         segment             begin         allocated              size
-00000217b5df0000  00000217b5df1000  00000217b5df8f58  0x7f58(32600)
-Large object heap starts at 0x00000217c5df1000
-         segment             begin         allocated              size
-00000217c5df0000  00000217c5df1000  00000217c5df9a68  0x8a68(35432)
-Total Size:              Size: 0x109c0 (68032) bytes.
-------------------------------
-GC Heap Size:            Size: 0x109c0 (68032) bytes.
-
-
-</code></pre>
-<p>很简单，我就不画图了哈，student2的内存地址可是落在 gen2上哦~😄😄😄</p>
-<h1 id="四：总结">四：总结</h1>
-<p>GC.Collect尽量少用，省的把内部的分配和回收算法搞乱了，非要用的话也要理解之后再根据自己的场景使用哈。</p>
-<p>本篇就说到这里，希望对你有帮助</p>
-<hr>
-<h3 id="如您有更多问题与我互动，扫描下方进来吧">如您有更多问题与我互动，扫描下方进来吧~</h3>
-<hr>
-<p><img src="https://images.cnblogs.com/cnblogs_com/huangxincheng/345039/o_200414062434170x170.jpg" alt=""><img src="https://images.cnblogs.com/cnblogs_com/huangxincheng/345039/o_200414065053baijiahao.jpg" alt=""></p>
-
+<div class="login-top text-center">
+    <span class="login-title">博客园用户登录</span>
+    <a href="https://www.cnblogs.com/">
+        <svg class="login-sign">
+            <use xlink:href="#icon-login-sign"></use>
+        </svg>
+    </a>
+    <div class="login-info">代码改变世界</div>
 </div>
-<div id="MySignature"></div>
-<div class="clear"></div>
-<div id="blog_post_info_block">
-    <div id="blog_post_info"></div>
-    <div class="clear"></div>
-    <div id="post_next_prev"></div>
-</div>
+<form id="loginForm" method="post" onsubmit="return false">
+    
+        <div class="form-group">
+            <input tabindex="1" class="form-control" placeholder="登录用户名 / 邮箱" autofocus type="text" data-val="true" data-val-required="请输入登录用户名" id="LoginName" name="LoginName" value="">
+            <span class="invalid-feedback field-validation-valid" data-valmsg-for="LoginName" data-valmsg-replace="true"></span>
+            <a class="txt-forget-sign" href="/forgotloginname">忘记登录用户名</a>
+        </div>
+        <div class="form-group">
+            <input tabindex="2" class="form-control" placeholder="密码" type="password" data-val="true" data-val-required="请输入密码" id="Password" name="Password">
+            <span class="invalid-feedback field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+            <a class="txt-forget-sign" href="/resetpassword">忘记密码</a>
+        </div>
+        <div class="form-remember custom-control custom-checkbox">
+            <input tabindex="3" type="checkbox" id="IsRemember" name="IsRemember" value="true" class="custom-control-input">
+            <label class="custom-control-label" for="IsRemember">记住我</label>
+        </div>
+
+        <button tabindex="4" id="submitBtn" type="submit" class="btn-login btn btn-primary btn-sm ladda-button px-4" data-style="slide-down">
+            <span class="ladda-label">登录</span>
+        </button>
+        <div class="login-footer">
+            <div class="ajax-error-box">
+                <div class="ajax-error mb-2"></div>
             </div>
-            <div class="postDesc">posted @ 
-<span id="post-date">2020-05-06 21:50</span>&nbsp;
-<a href="https://www.cnblogs.com/huangxincheng/">一线码农</a>&nbsp;
-阅读(<span id="post_view_count">...</span>)&nbsp;
-评论(<span id="post_comment_count">...</span>)&nbsp;
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12839160" rel="nofollow">编辑</a>&nbsp;
-<a href="javascript:void(0)" onclick="AddToWz(12839160);return false;">收藏</a></div>
+            <span>没有账户，<a href="/signup">立即注册</a></span>
         </div>
-	    
-	    
-    </div><!--end: topics 文章、评论容器-->
-</div>
-<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
-<script>markdown_highlight();</script>
-<script>
-    var allowComments = true, cb_blogId = 85195, cb_blogApp = 'huangxincheng', cb_blogUserGuid = '40a06552-abf8-df11-ac81-842b2b196315';
-    var cb_entryId = 12839160, cb_entryCreatedDate = '2020-05-06 21:50', cb_postType = 1; 
-    loadViewCount(cb_entryId);
-    loadSideColumnAd();
-</script><a name="!comments"></a>
-<div id="blog-comments-placeholder"></div>
-<script>
-    var commentManager = new blogCommentManager();
-    commentManager.renderComments(0);
-</script>
-
-<div id="comment_form" class="commentform">
-    <a name="commentform"></a>
-    <div id="divCommentShow"></div>
-    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
-    <div id="comment_form_container"></div>
-    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
-    <div id="ad_t2"></div>
-    <div id="opt_under_post"></div>
-    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
-    <script>
-        var googletag = googletag || {};
-        googletag.cmd = googletag.cmd || [];
-    </script>
-    <script>
-        googletag.cmd.push(function () {
-            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
-            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
-            googletag.pubads().enableSingleRequest();
-            googletag.enableServices();
-        });
-    </script>
-    <div id="cnblogs_c1" class="c_ad_block">
-        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
-    </div>
-    <div id="under_post_news"></div>
-    <div id="cnblogs_c2" class="c_ad_block">
-        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
-            <script>
-                if (new Date() >= new Date(2018, 9, 13)) {
-                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
-                }
-            </script>
-        </div>
-    </div>
-    <div id="under_post_kb"></div>
-    <div id="HistoryToday" class="c_ad_block"></div>
-    <script type="text/javascript">
-        fixPostBody();
-        deliverBigBanner();
-setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
-        deliverAdC1();
-        deliverAdC2();
-        loadNewsAndKb();
-        loadBlogSignature();
-LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
-        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
-        loadOptUnderPost();
-        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
-    </script>
-</div>
-	</div><!--end: forFlow -->
-	</div><!--end: mainContent 主体内容容器-->
-
-	<div id="sideBar">
-		<div id="sideBarMain">
-			
-<div id="sidebar_news" class="newsItem">
-            <script>loadBlogNews();</script>
-</div>
-
-<div id="sidebar_ad"></div>
-			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
-			
-			<div id="leftcontentcontainer">
-				<div id="blog-sidecolumn"></div>
-                    <script>loadBlogSideColumn();</script>
-			</div>
-			
-		</div><!--end: sideBarMain -->
-	</div><!--end: sideBar 侧边栏容器 -->
-	<div class="clear"></div>
-	</div><!--end: main -->
-	<div class="clear"></div>
-	<div id="footer">
-		<!--done-->
-Copyright &copy; 2020 一线码农
-<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
-
-
-
-	</div><!--end: footer -->
-</div><!--end: home 自定义的最大容器 -->
-
-
     
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8B9DwO68dQFBg9xIizKsC6QF5zQFYwocWlUn_TUtypMNM-SD776a_it6sGI5jdtu5KvyF6lpQ5UVtrctKIZIpKO5VXUt2502Ou8iNaMxKN0L7LomQ4CKa787B3Wl8agEQExoFNqvwWlY3CpcDJhQb5U" /></form>
+
+<input type="hidden" id="PublicKey" name="PublicKey" value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCp0wHYbg/NOPO3nzMD3dndwS0MccuMeXCHgVlGOoYyFwLdS24Im2e7YyhB0wrUsyYf0/nhzCzBK8ZC9eCWqd0aHbdgOQT6CuFQBMjbyGYvlVYU2ZP7kG9Ft6YV6oc9ambuO7nPZh&#x2B;bvXH0zDKfi02prknrScAKC0XhadTHT3Al0QIDAQAB" />
+
+
+            </div>
+        </div>
+    </div>
+    <script src="/assets/commons.bundle.js?v=iyHhejVAv5PY1mNHWEfLl8qDn8gUFLpEAjgd4h1VJo4"></script>
+    <script src="/assets/shared/_withoutnav.js?v=6AtNmA7OLeOCu0W01-iEdEjDXiE9BdHbayLV3TUm4kw"></script>
+    
+    <script src="/assets/auth/signin.js?v=VoDqbInObxFY3X3TXQn9LlBfCOmSks2hSldl-LzTUMI"></script>
+
 </body>
 </html>

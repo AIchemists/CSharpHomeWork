@@ -3,29 +3,29 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="referrer" content="origin" />
-    
+    <meta name="referrer" content="never" />
+    <meta property="og:description" content="如果面试字节跳动和腾讯，上来就是先撕算法，阿里就是会突然给你电话，而且不太在意是周末还是深夜， 别问我怎么知道的，想确认的可以亲自去试试。说到算法，直接力扣hard三百题也是可以的，但似乎会比较伤脑，" />
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>JMCui - 博客园</title>
+    <title> 聊聊算法——BFS和DFS - 甲由崽 - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/classicblue/bundle-classicblue.min.css?v=C_xOBodTdu7qViYoEOWb5uyE0XIl-SuwRkgFEwSDOCc" />
     
-    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/jmcui/custom.css?v=utMgiRk7Z53Qs83Dcy&#x2B;n8qIW1ak=" />
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/red_autumnal_leaves/bundle-red_autumnal_leaves-mobile.min.css?v=ADiCwO2hOTdd5yYidcx7eob7ix2VJI4o_TXjEycTHjs" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/classicblue/bundle-classicblue-mobile.min.css?v=ADiCwO2hOTdd5yYidcx7eob7ix2VJI4o_TXjEycTHjs" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/jmcui/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/jmcui/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/jmcui/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/xxbiao/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/xxbiao/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/xxbiao/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 352483;
-        var currentBlogApp = 'jmcui';
+        var currentBlogId = 540014;
+        var currentBlogApp = 'xxbiao';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'red_autumnal_leaves';
+        var skinName = 'ClassicBlue';
     </script>
     
     
@@ -39,10 +39,10 @@
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/jmcui/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/xxbiao/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/jmcui/">JMCui</a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/xxbiao/">甲由崽</a>
 </h1>
 <h2>
 
@@ -60,7 +60,7 @@
 博客园</a>
 </li>
 <li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/jmcui/">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/xxbiao/">
 首页</a>
 </li>
 <li>
@@ -69,10 +69,10 @@
 新随笔</a>
 </li>
 <li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/JMCui">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%94%B2%E7%94%B1%E5%B4%BD">
 联系</a></li>
 <li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/jmcui/rss/">
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/xxbiao/rss/">
 订阅</a>
 <!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
 <li>
@@ -85,11 +85,11 @@
 		<div class="blogStats">
 			
 			<span id="stats_post_count">随笔 - 
-201&nbsp; </span>
+27&nbsp; </span>
 <span id="stats_article_count">文章 - 
-4&nbsp; </span>
+1&nbsp; </span>
 <span id="stats-comment_count">评论 - 
-113</span>
+18</span>
 
 			
 		</div><!--end: blogStats -->
@@ -99,340 +99,434 @@
 <div id="main">
 	<div id="mainContent">
 	<div class="forFlow">
-		
-<!--done-->
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/xxbiao/p/12845636.html"> 聊聊算法——BFS和DFS</a>
 
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <p data-tool="mdnice编辑器">&nbsp;</p>
+<p data-tool="mdnice编辑器">如果面试字节跳动和腾讯，上来就是先撕算法，阿里就是会突然给你电话，而且不太在意是周末还是深夜，</p>
+<p data-tool="mdnice编辑器">别问我怎么知道的，想确认的可以亲自去试试。说到算法，直接力扣hard三百题也是可以的，但似乎会比较伤脑，</p>
+<p data-tool="mdnice编辑器">有没一些深入浅出系列呢，看了些经典的算法，发现其实很多算法是有框架的，今天就先说下很具代表的树</p>
+<p data-tool="mdnice编辑器">算法BFS和DFS，再来点秒杀题。</p>
+<p data-tool="mdnice编辑器">&nbsp;</p>
+<p data-tool="mdnice编辑器"><span style="color: #ff0000; font-size: 14pt;">作者原创文章，谢绝一切转载，违者必究。</span></p>
+<p data-tool="mdnice编辑器"><strong>准备：</strong></p>
+<p data-tool="mdnice编辑器">Idea2019.03/JDK11.0.4</p>
+<p data-tool="mdnice编辑器"><strong>难度：</strong> 新手--<span style="color: #ff0000;">战士</span>--老兵--大师</p>
+<p data-tool="mdnice编辑器"><strong>目标：</strong></p>
+<ol data-tool="mdnice编辑器">
+<li><span style="color: #0000ff;">理解BFS和DFS框架</span></li>
+<li><span style="color: #0000ff;">框架应用扩展</span></li>
+</ol>
+<h2 data-tool="mdnice编辑器"><span class="prefix"><span class="content">1 介绍</span></span></h2>
+<p data-tool="mdnice编辑器">BFS和DFS，即&ldquo;广度优先&rdquo;和&ldquo;深度优先&rdquo;，如下图二叉树前序BFS为 <span style="color: #0000ff;">1-2-3-4-5</span> ，DFS为 <span style="color: #0000ff;">1-2-4-5-3</span>，本文中算法均以此树为例：</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/898995fb-29fe-42f6-9ad0-5abbb71c0e0d.png" alt=""></p>
+<h2 data-tool="mdnice编辑器"><span class="prefix"><span class="content">2 算法理解</span></span></h2>
+<h3 data-tool="mdnice编辑器"><span class="prefix"><span class="content">2.1 DFS递归模式</span></span></h3>
+<p data-tool="mdnice编辑器">如下，这寥寥几行，即完成了二叉树先序、中序和后序遍历算法，这就是<span style="color: #ff0000;"><strong>算法框架</strong></span>！</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> dfs(Node root){
+    </span><span style="color: #0000ff;">if</span> (root == <span style="color: #0000ff;">null</span><span style="color: #000000;">){
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;">;
+    }
+    </span><span style="color: #008000;">//</span><span style="color: #008000;"> 先序遍历位置</span>
+<span style="color: #000000;">    dfs(root.left);
+    </span><span style="color: #008000;">//</span><span style="color: #008000;"> 中序遍历位置</span>
+<span style="color: #000000;">    dfs(root.right);
+    </span><span style="color: #008000;">//</span><span style="color: #008000;"> 后序遍历位置</span>
+}</pre>
+</div>
+<pre class="custom" data-tool="mdnice编辑器"><span style="font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><br />其他更复杂的场景可以依此来类推，比如多路树的遍历，是不是很简单：</span></pre>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">private</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">class</span><span style="color: #000000;"> Node {
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> value;
+    </span><span style="color: #0000ff;">public</span><span style="color: #000000;"> Node[] children;
+}
+</span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> dfs(Node root){
+    </span><span style="color: #0000ff;">if</span> (root == <span style="color: #0000ff;">null</span><span style="color: #000000;">){
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;">;
+    }
+    </span><span style="color: #008000;">//</span><span style="color: #008000;"> 对node做点事情</span>
+    <span style="color: #0000ff;">for</span><span style="color: #000000;"> (Node child:children
+         ) {
+        dfs(child);
+    }
+}</span></pre>
+</div>
+<pre class="custom" data-tool="mdnice编辑器"><code class="hljs"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-class"><span class="hljs-keyword"><span class="hljs-title"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-function"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-title"><span class="hljs-params"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-comment"><span class="hljs-keyword">&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p data-tool="mdnice编辑器">我们来具体化一下，用Java实现，似乎一点也不难，通过调整打印root.value的位置，即可实现前中后序遍历二叉树了：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span><span style="color: #000000;"> DFS {
+    </span><span style="color: #0000ff;">private</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">class</span><span style="color: #000000;"> Node {
+        </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> value;
+        </span><span style="color: #0000ff;">public</span><span style="color: #000000;"> Node left;
+        </span><span style="color: #0000ff;">public</span><span style="color: #000000;"> Node right;
 
+        </span><span style="color: #0000ff;">public</span> Node(<span style="color: #0000ff;">int</span><span style="color: #000000;"> value, Node left, Node right) {
+            </span><span style="color: #0000ff;">this</span>.value =<span style="color: #000000;"> value;
+            </span><span style="color: #0000ff;">this</span>.left =<span style="color: #000000;"> left;
+            </span><span style="color: #0000ff;">this</span>.right =<span style="color: #000000;"> right;
+        }
+        </span><span style="color: #0000ff;">public</span> Node(<span style="color: #0000ff;">int</span><span style="color: #000000;"> value) {
+            </span><span style="color: #0000ff;">this</span>.value =<span style="color: #000000;"> value;
+        }
+        </span><span style="color: #0000ff;">public</span><span style="color: #000000;"> Node() {
+        }
+    }
 
+    </span><span style="color: #008000;">/**</span><span style="color: #008000;">  DFS的递归实现，代码简单，但如果层次过深可能会导致栈溢出 </span><span style="color: #008000;">*/</span>
+    <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> dfs(Node root){
+        </span><span style="color: #0000ff;">if</span> (root == <span style="color: #0000ff;">null</span><span style="color: #000000;">){
+            </span><span style="color: #0000ff;">return</span><span style="color: #000000;">;
+        }
+        </span><span style="color: #008000;">//</span><span style="color: #008000;"> 先序遍历位置</span>
+<span style="color: #000000;">        System.out.println(root.value);
+        dfs(root.left);
+        </span><span style="color: #008000;">//</span><span style="color: #008000;"> 中序遍历位置</span>
+<span style="color: #000000;">        dfs(root.right);
+        </span><span style="color: #008000;">//</span><span style="color: #008000;"> 后序遍历位置</span>
+<span style="color: #000000;">    }
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> main(String[] args) {
+        Node root </span>= <span style="color: #0000ff;">new</span> Node(1,<span style="color: #0000ff;">new</span> Node(),<span style="color: #0000ff;">new</span> Node(3<span style="color: #000000;">));
+        root.left </span>= <span style="color: #0000ff;">new</span> Node(2,<span style="color: #0000ff;">new</span> Node(4),<span style="color: #0000ff;">new</span> Node(5<span style="color: #000000;">));
+        </span><span style="color: #008000;">//</span><span style="color: #008000;"> 递归DFS测试</span>
+<span style="color: #000000;">        dfs(root);
+    }
+}</span></pre>
+</div>
+<pre class="custom" data-tool="mdnice编辑器"><code class="hljs"><span class="hljs-keyword"><span class="hljs-class"><span class="hljs-keyword"><span class="hljs-title"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-class"><span class="hljs-keyword"><span class="hljs-title"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-function"><span class="hljs-keyword"><span class="hljs-title"><span class="hljs-params"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-function"><span class="hljs-keyword"><span class="hljs-title"><span class="hljs-params"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-function"><span class="hljs-keyword"><span class="hljs-title"><span class="hljs-params"><span class="hljs-comment"><span class="hljs-function"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-title"><span class="hljs-params"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-comment"><span class="hljs-comment"><span class="hljs-comment"><span class="hljs-function"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-title"><span class="hljs-params"><span class="hljs-keyword"><span class="hljs-number"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-number"><span class="hljs-keyword"><span class="hljs-number"><span class="hljs-keyword"><span class="hljs-number"><span class="hljs-keyword"><span class="hljs-number"><span class="hljs-comment">&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<h3 data-tool="mdnice编辑器"><span class="prefix"><span class="content">2.2 DFS非递归模式</span></span></h3>
+<p data-tool="mdnice编辑器">为了将DFS理解的更透彻一点，再说栈方式实现，事实上，前面的递归本质上也是栈实现，只是代码上没表现出来，这是第二个框架：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008000;">/**</span><span style="color: #008000;"> 非递归，栈方式进行DFS</span><span style="color: #008000;">*/</span>
+<span style="color: #0000ff;">public</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> dfs2(Node root){
+    </span><span style="color: #0000ff;">if</span> (root == <span style="color: #0000ff;">null</span><span style="color: #000000;">){
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;">;
+    }
+    Stack</span>&lt;Node&gt; stack = <span style="color: #0000ff;">new</span> Stack&lt;&gt;<span style="color: #000000;">();
+    stack.push(root);
+    </span><span style="color: #0000ff;">while</span>( !<span style="color: #000000;">stack.isEmpty()){
+        Node treeNode </span>=<span style="color: #000000;"> stack.pop();
+        </span><span style="color: #008000;">//</span><span style="color: #008000;"> System.out.println(treeNode.value);</span>
+        <span style="color: #0000ff;">if</span> (treeNode.right != <span style="color: #0000ff;">null</span><span style="color: #000000;">){
+            stack.push(treeNode.right);
+        }
+        </span><span style="color: #0000ff;">if</span> (treeNode.left != <span style="color: #0000ff;">null</span><span style="color: #000000;">){
+            stack.push(treeNode.left);
+        }
+    }
+}</span></pre>
+</div>
+<pre class="custom" data-tool="mdnice编辑器"><span style="font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;">以上代码解析：先初始化一个栈，然后将根root压栈，循环中，先弹栈，如果弹出元素的子节点非空，则将子节点压栈，</span></pre>
+<p data-tool="mdnice编辑器">因读出是先左后右，故这里压栈要<strong>先右后左</strong>， 看下动图实现，更好理解：</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/2a3044a7-14ea-43af-9fbf-5c1c27a11f06.gif" alt=""></p>
+<h3 data-tool="mdnice编辑器"><span class="prefix"><span class="content">2.3 BFS队列模式</span></span></h3>
+<p data-tool="mdnice编辑器">对比一下，BFS使用队列实现，而 DFS使用栈实现，这是第三个框架：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span><span style="color: #000000;"> BFS {
 
-		
+    </span><span style="color: #0000ff;">private</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">class</span><span style="color: #000000;"> Node{
+        </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> value;
+        </span><span style="color: #0000ff;">public</span><span style="color: #000000;"> Node left;
+        </span><span style="color: #0000ff;">public</span><span style="color: #000000;"> Node right;
 
+        </span><span style="color: #0000ff;">public</span> Node(<span style="color: #0000ff;">int</span><span style="color: #000000;"> value, Node left, Node right) {
+            </span><span style="color: #0000ff;">this</span>.value =<span style="color: #000000;"> value;
+            </span><span style="color: #0000ff;">this</span>.left =<span style="color: #000000;"> left;
+            </span><span style="color: #0000ff;">this</span>.right =<span style="color: #000000;"> right;
+        }
+        </span><span style="color: #0000ff;">public</span> Node(<span style="color: #0000ff;">int</span><span style="color: #000000;"> value) {
+            </span><span style="color: #0000ff;">this</span>.value =<span style="color: #000000;"> value;
+        }
+        </span><span style="color: #0000ff;">public</span><span style="color: #000000;"> Node() {
+        }
+    }
 
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/jmcui/archive/2020/05/07.html">2020年5月7日</a>
-    </div>
+    </span><span style="color: #008000;">/**</span><span style="color: #008000;"> 非递归，广度优先算法是使用队列</span><span style="color: #008000;">*/</span>
+    <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> bfs(Node root) {
+        </span><span style="color: #0000ff;">if</span>(root == <span style="color: #0000ff;">null</span><span style="color: #000000;">){
+            </span><span style="color: #0000ff;">return</span><span style="color: #000000;">;
+        }
+        </span><span style="color: #008000;">//</span><span style="color: #008000;"> LinkedList implements Queue</span>
+        Queue&lt;Node&gt; queue = <span style="color: #0000ff;">new</span> LinkedList&lt;&gt;<span style="color: #000000;">();
+        queue.add(root);
 
-        <div class="postTitle">
-            
+        </span><span style="color: #0000ff;">while</span> ( !<span style="color: #000000;">queue.isEmpty()){
+           Node node  </span>=<span style="color: #000000;">  queue.poll();
+           </span><span style="color: #008000;">//</span><span style="color: #008000;"> System.out.println(node.value);</span>
+           <span style="color: #0000ff;">if</span> (node.left != <span style="color: #0000ff;">null</span><span style="color: #000000;">){
+                queue.add(node.left);
+            }
+           </span><span style="color: #0000ff;">if</span> (node.right != <span style="color: #0000ff;">null</span><span style="color: #000000;">){
+                queue.add(node.right);
+            }
+        }
+    }
+    
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> main(String[] args) {
+        Node root </span>= <span style="color: #0000ff;">new</span> Node(1,<span style="color: #0000ff;">new</span> Node(),<span style="color: #0000ff;">new</span> Node(4<span style="color: #000000;">));
+        root.left </span>= <span style="color: #0000ff;">new</span> Node(2,<span style="color: #0000ff;">new</span> Node(5),<span style="color: #0000ff;">new</span> Node(6<span style="color: #000000;">));
+        bfs(root);
+    }
+}</span></pre>
+</div>
+<pre class="custom" data-tool="mdnice编辑器"><span style="font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;">以上代码解析：LinkedList 实现了Queue接口，故可以直接作为队列使用；循环体中，子节点入队列是先左后右，</span></pre>
+<p data-tool="mdnice编辑器">动画展示：</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/2d30f39a-951a-4808-acea-7a6ae555958f.gif" alt=""></p>
+<h2 data-tool="mdnice编辑器"><span class="prefix"><span class="content">3 算法扩展应用</span></span></h2>
+<h3 data-tool="mdnice编辑器"><span class="prefix"><span class="content">3.1 BST二叉搜索树</span></span></h3>
+<p data-tool="mdnice编辑器">这里举例为节点大于左子节点，且小于右子节点的BST。</p>
+<p data-tool="mdnice编辑器">查找一个数是否存在，其实就是DFS的变形：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">static</span> <span style="color: #0000ff;">boolean</span> searchBST(Node root,<span style="color: #0000ff;">int</span><span style="color: #000000;"> target){
+    </span><span style="color: #0000ff;">if</span> (root == <span style="color: #0000ff;">null</span>) <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span><span style="color: #000000;">;
+    </span><span style="color: #0000ff;">if</span> (root.value ==<span style="color: #000000;"> target){
+        </span><span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span><span style="color: #000000;">;
+    }
+    </span><span style="color: #0000ff;">if</span>(root.value &lt;<span style="color: #000000;"> target){
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> searchBST(root.right,target);
+    }
+    </span><span style="color: #0000ff;">if</span> (root.value &gt;<span style="color: #000000;"> target){
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> searchBST(root.left,target);
+    }
+   </span><span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span><span style="color: #000000;">;
+}</span></pre>
+</div>
+<pre class="custom" data-tool="mdnice编辑器"><span style="font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><br />插入一个数：</span></pre>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">static</span> Node insertBST(Node root,<span style="color: #0000ff;">int</span><span style="color: #000000;"> target){
+    </span><span style="color: #0000ff;">if</span> (root == <span style="color: #0000ff;">null</span>) <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">new</span><span style="color: #000000;"> Node(target);
+    </span><span style="color: #008000;">//</span><span style="color: #008000;"> BST中一般不会插入已有的元素</span>
+    <span style="color: #0000ff;">if</span>(root.value &lt;<span style="color: #000000;"> target){
+        root.right </span>=<span style="color: #000000;"> insertBST(root.right,target);
+    }
+    </span><span style="color: #0000ff;">if</span> (root.value &gt;<span style="color: #000000;"> target){
+        root.left </span>=<span style="color: #000000;">  insertBST(root.left,target);
+    }
+    </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> root;
+}</span></pre>
+</div>
+<pre class="custom" data-tool="mdnice编辑器"><span style="font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;">以上代码解析：如果根为空，则直接生成只有一个根节点的BST，如果根不为空，则看要插入的目标值应该在左边还是右边。</span></pre>
+<p data-tool="mdnice编辑器">若在右边，且右子树为空，则先生成一个 new Node，然后赋值给右指针，理解<span style="color: #0000ff;"> <code>root.right = insertBST(root.right,target);</code></span></p>
+<p data-tool="mdnice编辑器">等价于两行<span style="color: #0000ff;"><code>Node node = new Node(target); root.right = node；</code></span> 这样，即实现了插入；若应该在右边且右子树非空，</p>
+<p data-tool="mdnice编辑器">则递归下去，直到子节点有为空的节点。</p>
+<p data-tool="mdnice编辑器">&nbsp;</p>
+<p data-tool="mdnice编辑器">删除一个数：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">static</span> Node deleteBST(Node root,<span style="color: #0000ff;">int</span><span style="color: #000000;"> target){
+    </span><span style="color: #0000ff;">if</span> (root == <span style="color: #0000ff;">null</span>) <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">null</span><span style="color: #000000;">;
+    </span><span style="color: #0000ff;">if</span> (root.value ==<span style="color: #000000;"> target){
+        </span><span style="color: #0000ff;">if</span>(root.left == <span style="color: #0000ff;">null</span><span style="color: #000000;">)
+            </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> root.right;
+        </span><span style="color: #0000ff;">if</span> (root.right == <span style="color: #0000ff;">null</span><span style="color: #000000;">)
+            </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> root.left;
+        Node node </span>=<span style="color: #000000;"> getMin(root.right);
+        root.right </span>=<span style="color: #000000;"> deleteBST(root.right,node.value);
+    }</span><span style="color: #0000ff;">else</span> <span style="color: #0000ff;">if</span>(root.value &lt;<span style="color: #000000;"> target){
+        root.right </span>=<span style="color: #000000;"> deleteBST(root.right,target);
+    }</span><span style="color: #0000ff;">else</span> <span style="color: #0000ff;">if</span> (root.value &gt;<span style="color: #000000;"> target){
+        root.left </span>=<span style="color: #000000;">  deleteBST(root.left,target);
+    }
+    </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> root;
+}
+</span><span style="color: #008000;">//</span><span style="color: #008000;"> 以找到最小值节点为例：根要小于右子树，直接循环到叶子</span>
+<span style="color: #0000ff;">private</span> <span style="color: #0000ff;">static</span><span style="color: #000000;"> Node getMin(Node node) {
+    </span><span style="color: #0000ff;">while</span> (node.left != <span style="color: #0000ff;">null</span><span style="color: #000000;">)
+        node </span>=<span style="color: #000000;"> node.left;
+    </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> node;
+}</span></pre>
+</div>
+<pre class="custom" data-tool="mdnice编辑器"><span style="font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;">以上代码解析：1.我们先回归到最简单模型，根为空，直接返回；删除只带有左子节点的根，则左子节点上升为根；删除只带有右子节点的根，</span></pre>
+<p data-tool="mdnice编辑器">则右子节点上升为根；删除带有左右子节点的根，则右子节点上升为根(或者左子节点上升为根) 2. 删除带有左右子树的根，则是找到右子树最</p>
+<p data-tool="mdnice编辑器">小节点(或者左子树最大节点)，再做递归 3.这个算法不算最优解，更好的解决方案是先将要删除的根和右子树最小值(或者左子树最大值)做交换，</p>
+<p data-tool="mdnice编辑器">再删除目标值节点，这样就可以避免树结构的过多调整。</p>
+<h3 data-tool="mdnice编辑器"><span class="prefix"><span class="content">3.2 其他树</span></span></h3>
+<p data-tool="mdnice编辑器">秒杀，题一，找出<strong>树</strong>的最小/最大深度:</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">static</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> minDepth(Node root){
+    </span><span style="color: #0000ff;">if</span> (root == <span style="color: #0000ff;">null</span>) <span style="color: #0000ff;">return</span> 0<span style="color: #000000;">;
+    </span><span style="color: #0000ff;">int</span> leftDepth = minDepth(root.left) + 1<span style="color: #000000;">;
+    </span><span style="color: #0000ff;">int</span> rightDepth = minDepth(root.right) + 1<span style="color: #000000;">;
+    </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> Math.min(leftDepth,rightDepth);
+}
 
-<a class="postTitle2" href="https://www.cnblogs.com/jmcui/p/12843171.html">
-    jacoco 生成单测覆盖率报告
-</a>
+</span><span style="color: #0000ff;">static</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> maxDepth(Node root){
+    </span><span style="color: #0000ff;">if</span> (root == <span style="color: #0000ff;">null</span>) <span style="color: #0000ff;">return</span> 0<span style="color: #000000;">;
+    </span><span style="color: #0000ff;">int</span> leftDepth = maxDepth(root.left) + 1<span style="color: #000000;">;
+    </span><span style="color: #0000ff;">int</span> rightDepth = maxDepth(root.right) + 1<span style="color: #000000;">;
+    </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> Math.max(leftDepth,rightDepth);
+}</span></pre>
+</div>
+<pre class="custom" data-tool="mdnice编辑器"><code class="hljs"><span class="hljs-function"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-title"><span class="hljs-params"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-number"><span class="hljs-keyword"><span class="hljs-number"><span class="hljs-keyword"><span class="hljs-number"><span class="hljs-keyword"><span class="hljs-function"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-title"><span class="hljs-params"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-number"><span class="hljs-keyword"><span class="hljs-number"><span class="hljs-keyword"><span class="hljs-number"><span class="hljs-keyword">&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p data-tool="mdnice编辑器">题二，二叉树，返回其按层序遍历得到的结果，即将每相同深度的节点放一个List，再将各层数组放入另一个List返回：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008000;">//</span><span style="color: #008000;"> 最终结果存放</span>
+<span style="color: #0000ff;">private</span> <span style="color: #0000ff;">static</span> List&lt;List&lt;Integer&gt;&gt; result = <span style="color: #0000ff;">new</span> ArrayList&lt;&gt;<span style="color: #000000;">();
 
+</span><span style="color: #008000;">/**</span><span style="color: #008000;"> BFS 按层输出二叉树,每一层为一个数组放进一个ArrayList </span><span style="color: #008000;">*/</span>
+<span style="color: #0000ff;">private</span> <span style="color: #0000ff;">static</span> List&lt;List&lt;Integer&gt;&gt;<span style="color: #000000;"> bfs(Node root) {
+    </span><span style="color: #0000ff;">if</span>(root == <span style="color: #0000ff;">null</span><span style="color: #000000;">){
+        </span><span style="color: #0000ff;">return</span> <span style="color: #0000ff;">null</span><span style="color: #000000;">;
+    }
+    </span><span style="color: #008000;">//</span><span style="color: #008000;"> LinkedList implements Queue</span>
+    Queue&lt;Node&gt; queue = <span style="color: #0000ff;">new</span> LinkedList&lt;&gt;<span style="color: #000000;">();
+    queue.add(root);
+
+    </span><span style="color: #0000ff;">while</span> ( !<span style="color: #000000;">queue.isEmpty()){
+        List</span>&lt;Integer&gt; levelNodes = <span style="color: #0000ff;">new</span> ArrayList&lt;&gt;<span style="color: #000000;">();
+        </span><span style="color: #008000;">//</span><span style="color: #008000;"> 同一层的节点数量</span>
+        <span style="color: #0000ff;">int</span> levelNum =<span style="color: #000000;"> queue.size();
+        </span><span style="color: #0000ff;">for</span> (<span style="color: #0000ff;">int</span> i = 0; i &lt; levelNum; i++<span style="color: #000000;">) {
+            Node node  </span>=<span style="color: #000000;">  queue.poll();
+            levelNodes.add(node.value);
+            System.out.println(node.value);
+            </span><span style="color: #0000ff;">if</span> (node.left != <span style="color: #0000ff;">null</span><span style="color: #000000;">){
+                queue.add(node.left);
+            }
+            </span><span style="color: #0000ff;">if</span> (node.right != <span style="color: #0000ff;">null</span><span style="color: #000000;">){
+                queue.add(node.right);
+            }
+        }
+        result.add(levelNodes);
+    }
+    </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> result;
+}</span></pre>
+</div>
+<pre class="custom" data-tool="mdnice编辑器"><span style="font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;">以上代码解析：一看就很明显是BFS算法框架，只是需要额外记录每层的节点个数，每次while循环将处理相同层节点；每次for循环，</span></pre>
+<p data-tool="mdnice编辑器">将同层的节点放入层记录List，并同时将其子节点加入队列；最终返回结果List。</p>
+<p data-tool="mdnice编辑器">&nbsp;</p>
+<p data-tool="mdnice编辑器">那么使用DFS是否也可以呢，下面给出了一个算法，这个算法很妙，推荐收藏：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008000;">//</span><span style="color: #008000;"> 最终结果存放</span>
+<span style="color: #0000ff;">private</span> <span style="color: #0000ff;">static</span> List&lt;List&lt;Integer&gt;&gt; result = <span style="color: #0000ff;">new</span> ArrayList&lt;&gt;<span style="color: #000000;">();
+</span><span style="color: #0000ff;">private</span> <span style="color: #0000ff;">static</span> List&lt;List&lt;Integer&gt;&gt; dfs(Node root,<span style="color: #0000ff;">int</span><span style="color: #000000;"> level) {
+    </span><span style="color: #0000ff;">if</span> (root == <span style="color: #0000ff;">null</span>) <span style="color: #0000ff;">return</span><span style="color: #000000;">;
+    </span><span style="color: #0000ff;">if</span> (result.size() &lt; level + 1<span style="color: #000000;">){
+        result.add(</span><span style="color: #0000ff;">new</span> ArrayList&lt;&gt;<span style="color: #000000;">());
+    }
+    List</span>&lt;Integer&gt; levelList =<span style="color: #000000;"> result.get(level);
+    levelList.add(root.value);
+</span><span style="color: #008000;">//</span><span style="color: #008000;"> 理解算法的辅助输出</span>
+<span style="color: #000000;">    System.out.println(result);
+    </span><span style="color: #008000;">//</span><span style="color: #008000;"> 遍历左右子树</span>
+    dfs(root.left,level +1<span style="color: #000000;">);
+    dfs(root.right,level </span>+1<span style="color: #000000;">);
+</span><span style="color: #0000ff;">return</span><span style="color: #000000;"> result;
+}
+</span><span style="color: #008000;">//</span><span style="color: #008000;"> 运行测试</span>
+System.out.println(dfs(root,0));</pre>
+</div>
+<pre class="custom" data-tool="mdnice编辑器"><span style="font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;">以上代码解析：DFS递归中附加一个层数变量，于是每递归一层，则层数变量会加 1 ，而根的层数变量可以初始化为0，</span></pre>
+<p data-tool="mdnice编辑器">这样在递归的过程中顺带通过<strong>result大小</strong>判断是否需要添加一个空数组，随后将节点加入与<strong>层变量对应的数组</strong>中，理解算法的辅助输出如下：</p>
+<p><img src="https://imgkr.cn-bj.ufileos.com/85d6570d-6706-4f03-ab28-c7e6bb5caac9.png" alt=""></p>
+<p data-tool="mdnice编辑器">总结：这里说了<strong>三套</strong>算法框架，请问看官掌握了吗？</p>
+<p data-tool="mdnice编辑器"><strong>全文完！</strong></p>
+<hr data-tool="mdnice编辑器" />
+<p data-tool="mdnice编辑器">我的其他文章：</p>
+<ul class=" list-paddingleft-2" data-tool="mdnice编辑器">
+<li>1&nbsp;<a href="http://mp.weixin.qq.com/s?__biz=MzI4MjA5NzQyOA==&amp;mid=2247484129&amp;idx=1&amp;sn=5d7cf81efbbced1ba94d4206ac8b837b&amp;chksm=eb9e609adce9e98c0a4d4570fe36f1993033995c9c876ea623de34167183576fc3ca6c2873e7&amp;scene=21#wechat_redirect" target="_blank" data-itemshowtype="0" data-linktype="2">微服务通信方式&mdash;&mdash;gRPC</a></li>
+<li>2&nbsp;<a href="http://mp.weixin.qq.com/s?__biz=MzI4MjA5NzQyOA==&amp;mid=2247484124&amp;idx=1&amp;sn=ee7fb1037434042b11eeddc3a4010646&amp;chksm=eb9e60a7dce9e9b186ffaeecf6a29b3bb1decabd9bc2a1fe3b6dac5a6312a30853c78695f023&amp;scene=21#wechat_redirect" target="_blank" data-itemshowtype="0" data-linktype="2">分布式任务调度系统</a></li>
+<li>3&nbsp;<a href="http://mp.weixin.qq.com/s?__biz=MzI4MjA5NzQyOA==&amp;mid=2247484119&amp;idx=1&amp;sn=522d890d4e936ec9b0e8a179a27ba700&amp;chksm=eb9e60acdce9e9ba6b9a48f751809ed4238731e868d1a646852404283907e0a97819beed4605&amp;scene=21#wechat_redirect" target="_blank" data-itemshowtype="0" data-linktype="2">Dubbo学习系列之十八（Skywalking服务跟踪）</a></li>
+<li>4&nbsp;<a href="http://mp.weixin.qq.com/s?__biz=MzI4MjA5NzQyOA==&amp;mid=2247484114&amp;idx=1&amp;sn=d70fde7986d7784f248e88e5a3bbb7a1&amp;chksm=eb9e60a9dce9e9bfa02eafcee2ffc1887edc58caf355a2c0d7354126c2643f75833e22be6783&amp;scene=21#wechat_redirect" target="_blank" data-itemshowtype="0" data-linktype="2">Spring优雅整合Redis缓存</a></li>
+<li>5&nbsp;<a href="http://mp.weixin.qq.com/s?__biz=MzI4MjA5NzQyOA==&amp;mid=2247484106&amp;idx=1&amp;sn=a4462b3e313dc9125e407ace2d739d48&amp;chksm=eb9e60b1dce9e9a7ac4d8210ef0a5e1130778237c63fa26aecc9cca269a2ec7954e32d7a01cc&amp;scene=21#wechat_redirect" target="_blank" data-itemshowtype="0" data-linktype="2">SOFARPC模式下的Consul注册中心</a></li>
+</ul>
+<p>&nbsp;</p>
+<p data-tool="mdnice编辑器">只写原创，敬请关注</p>
+<p data-tool="mdnice编辑器">&nbsp;</p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-08 11:12</span>&nbsp;
+<a href="https://www.cnblogs.com/xxbiao/">甲由崽</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12845636" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12845636);return false;">收藏</a></div>
         </div>
-        <div class="postCon">
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 540014, cb_blogApp = 'xxbiao', cb_blogUserGuid = '680f8a72-bc0e-46bc-d122-08d73112bbe6';
+    var cb_entryId = 12845636, cb_entryCreatedDate = '2020-05-08 11:12', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
 
-    <div class="c_b_p_desc">
-摘要：一、jacoco 简介 jacoco 是一个开源的覆盖率工具，它针对的开发语言是 java。其使用方法很灵活，可以嵌入到 ant、maven 中；可以作为 Eclipse 插件；可以作为 javaAgent 探针监控 java 程序等等。 很多第三方的工具提供了对 jacoco 的集成，如 sona            <a href="https://www.cnblogs.com/jmcui/p/12843171.html" class="c_b_p_desc_readmore">阅读全文</a>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
     </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-05-07 15:09 JMCui 阅读 (22) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12843171" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/jmcui/archive/2020/04/29.html">2020年4月29日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/jmcui/p/12802099.html">
-    使用 Junit + Mockito 实践单元测试
-</a>
-
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
         </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：一、前言 相信做过开发的同学，都多多少少写过下面的代码，很长一段时间我一直以为这就是单元测试... 但这是单元测试嘛？unitService 中可能还依赖了 Dao 的操作；如果是微服务，可能还要起注册中心。那么这个“单元”也太大了吧！如果把它称为集成测试，可能更恰当一点，那么有没有可能最小粒度进行            <a href="https://www.cnblogs.com/jmcui/p/12802099.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
 </div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-29 14:41 JMCui 阅读 (230) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12802099" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/jmcui/archive/2020/04/27.html">2020年4月27日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/jmcui/p/12785518.html">
-    git 的 hook 操作
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：一、git hook 和其它版本控制系统一样，Git 能在特定的重要动作发生时触发自定义脚本。有两组这样的钩子：客户端钩子和服务器钩子。客户端钩子由诸如提交和合并这样的操作所调用，而服务器端钩子作用于诸如接收被推送的提交这样的联网操作。 钩子都被存储在 Git 目录下的 hooks 子目录中。 也即            <a href="https://www.cnblogs.com/jmcui/p/12785518.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-27 11:30 JMCui 阅读 (44) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12785518" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/jmcui/archive/2020/04/20.html">2020年4月20日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/jmcui/p/12707131.html">
-    JVM系列十四（读书笔记）.
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：在高性能硬件上部署程序，目前主要有两种方式： 1. 通过64位JDK来使用大内存。 2. 通过若干个32位虚拟机建立逻辑集群来利用硬件资源。 32位的虚拟机和64位的虚拟机部署应用有什么区别？ 1. 在32位的 Windows 平台中每个进程只能使用 2GB 内存，考虑到堆以外的内存开销，堆一般最多            <a href="https://www.cnblogs.com/jmcui/p/12707131.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-20 14:46 JMCui 阅读 (68) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12707131" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-            <div class="postSeparator"></div>
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/jmcui/p/12720062.html">
-    JVM系列十三（运行时栈帧结构）.
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：栈帧（Stack Frame）是用于支持虚拟机进行方法调用和方法执行的数据结构，它是虚拟机运行时数据区中的虚拟机栈的栈元素。每一个栈帧都包括了局部变量表、操作数栈、动态连接、方法返回地址和一些额外的附加信息。在编译程序代码的时候，栈帧中需要多大的局部变量表、多深的操作数栈都已经完全确定了，并且写入到            <a href="https://www.cnblogs.com/jmcui/p/12720062.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-20 14:45 JMCui 阅读 (29) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12720062" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/jmcui/archive/2020/04/15.html">2020年4月15日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/jmcui/p/12699655.html">
-    JVM系列十二（类加载机制）.
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：一、类加载机制 虚拟机把描述类的数据从 Class 文件加载到内存，并对数据进行校验、转换解析和初始化，最终形成可以被虚拟机直接使用的 Java 类型，这就是虚拟机的类加载机制。 类的整个生命周期包括了：加载（Loading）、验证（Verification）、准备（Preparation）、解析（            <a href="https://www.cnblogs.com/jmcui/p/12699655.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-15 10:11 JMCui 阅读 (34) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12699655" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/jmcui/archive/2020/04/11.html">2020年4月11日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/jmcui/p/12627180.html">
-    JVM系列十一（Class 文件结构）. 
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：一、Class 文件结构 JDK 的版本号已经到 14 了，相对于语言、API 以及 Java 技术体系中其他方面的变化，Class 文件结构一直处于比较稳定的状态，Class 文件的主体结构、字节码指令的语义和数量几乎没有出现过变动。 Class 文件是一组以8位字节为基础单位的二进制流，各个数据            <a href="https://www.cnblogs.com/jmcui/p/12627180.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-11 15:55 JMCui 阅读 (60) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12627180" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-            <div class="postSeparator"></div>
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/jmcui/p/12574636.html">
-    JVM系列十（虚拟机性能监控神器 - BTrace）.  
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：BTrace 是什么？ BTrace 是一个动态安全的 Java 追踪工具，它通过向运行中的 Java 程序植入字节码文件，来对运行中的 Java 程序热更新，方便的获取程序运行时的数据信息，并且，保证自己的消耗特别小，大部分情况下不会影响 Java 程序的性能。 BTrace 能干什么？ 相信每一            <a href="https://www.cnblogs.com/jmcui/p/12574636.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-04-11 15:54 JMCui 阅读 (172) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12574636" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-		
-
-
-<div class="day">
-    <div class="dayTitle">
-        <a href="https://www.cnblogs.com/jmcui/archive/2020/03/25.html">2020年3月25日</a>
-    </div>
-
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/jmcui/p/12511623.html">
-    Java 中的协程库 - Quasar
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：一、协程 一个进程可以产生许多线程，每个线程有自己的上下文，当我们在使用多线程的时候，如果存在长时间的 I/O 操作，线程会一直处于阻塞状态，这个时候会存在很多线程处于空闲状态，会造成线程资源的浪费。这就是协程适用的场景。 协程，其实就是在一个线程中，有一个总调度器，对于多个任务，同时只有一个任务在            <a href="https://www.cnblogs.com/jmcui/p/12511623.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-03-25 17:12 JMCui 阅读 (172) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12511623" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-            <div class="postSeparator"></div>
-        <div class="postTitle">
-            
-
-<a class="postTitle2" href="https://www.cnblogs.com/jmcui/p/12561004.html">
-    Java Agent 简介
-</a>
-
-        </div>
-        <div class="postCon">
-
-    <div class="c_b_p_desc">
-摘要：一、写在前面 Java Agent 这个技术出现在 JDK1.5 之后，对于大多数人来说都比较陌生，但是多多少少又接触过，实际上，我们平时用的很多工具，都是基于 Java Agent 实现的，例如常见的热部署 JRebel，各种线上诊断工具（Btrace, Greys），还有阿里开源的 Arthas            <a href="https://www.cnblogs.com/jmcui/p/12561004.html" class="c_b_p_desc_readmore">阅读全文</a>
-    </div>
-</div>
-        <div class="clear"></div>
-        <div class="postDesc">
-
-posted @ 2020-03-25 10:23 JMCui 阅读 (70) 评论 (0)
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12561004" rel="nofollow">
-    编辑
-</a>
-</div>
-        <div class="clear"></div>
-</div>
-
-
-
-<div class="topicListFooter">
-    <div id="nav_next_page">
-        
-    <a href="https://www.cnblogs.com/jmcui/default.html?page=2">
-        下一页
-    </a>
-
-    </div>    
-</div>
-
-
-
-
-
-
-
-
 	</div><!--end: forFlow -->
 	</div><!--end: mainContent 主体内容容器-->
 
@@ -458,7 +552,7 @@ posted @ 2020-03-25 10:23 JMCui 阅读 (70) 评论 (0)
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 JMCui
+Copyright &copy; 2020 甲由崽
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 

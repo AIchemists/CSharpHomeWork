@@ -1,0 +1,576 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="never" />
+    <meta property="og:description" content="NLP（二十九）一步一步，理解Self-Attention" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>NLP（二十九）一步一步，理解Self-Attention - 山阴少年 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/simplememory/bundle-simplememory.min.css?v=OL4qeo1LNGlN1rKIhv5UctANvt0M6Nx6kLzr_ffx3Xk" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory-mobile.min.css" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/jclian91/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/jclian91/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/jclian91/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
+    <script>
+        var currentBlogId = 373768;
+        var currentBlogApp = 'jclian91';
+        var cb_enable_mathjax = true;
+        var isLogined = false;
+        var skinName = 'SimpleMemory';
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/jclian91/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/jclian91/">jclian91</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/jclian91/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%B1%B1%E9%98%B4%E5%B0%91%E5%B9%B4">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/jclian91/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+191&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+76</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/jclian91/p/12846772.html">NLP（二十九）一步一步，理解Self-Attention</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+    <div id="cnblogs_post_description" style="display: none">
+        NLP（二十九）一步一步，理解Self-Attention
+    </div>
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p>  本文大部分内容翻译自<a href="https://towardsdatascience.com/illustrated-self-attention-2d627e33b20a">Illustrated Self-Attention, Step-by-step guide to self-attention with illustrations and code</a>，仅用于学习，如有翻译不当之处，敬请谅解！</p>
+<h3 id="什么是self-attention（自注意力机制）？">什么是Self-Attention（自注意力机制）？</h3>
+<p>  如果你在想Self-Attention（自注意力机制）是否和Attention（注意力机制）相似，那么答案是肯定的。它们本质上属于同一个概念，拥有许多共同的数学运算。<br>
+  一个Self-Attention模块拥有n个输入，返回n个输出。这么模块里面发生了什么？从非专业角度看，Self-Attention（自注意力机制）允许输入之间互相作用（“self”部分），寻找出谁更应该值得注意（“attention”部分）。输出的结果是这些互相作用和注意力分数的聚合。</p>
+<h3 id="一步步理解self-attention">一步步理解Self-Attention</h3>
+<p>  理解分为以下几步：</p>
+<ol>
+<li>准备输入；</li>
+<li>初始化权重；</li>
+<li>获取<code>key</code>，<code>query</code>和<code>value</code>；</li>
+<li>为第1个输入计算注意力分数；</li>
+<li>计算softmax;</li>
+<li>将分数乘以values；</li>
+<li>对权重化后的values求和，得到输出1；</li>
+<li>对其余的输入，重复第4-7步。</li>
+</ol>
+<blockquote>
+<p>注意：实际上，这些数学运算都是向量化的，也就是说，所有的输入都会一起经历这些数学运算。我们将会在后面的代码部分看到。</p>
+</blockquote>
+<h4 id="第一步：准备输入">第一步：准备输入</h4>
+<p><img src="https://img-blog.csdnimg.cn/20200507223434720.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2pjbGlhbjkx,size_16,color_FFFFFF,t_70#pic_center" alt="准备数据"><br>
+在这个教程中，我们从3个输入开始，每个输入的维数为4。</p>
+<pre><code>Input 1: [1, 0, 1, 0] 
+Input 2: [0, 2, 0, 2]
+Input 3: [1, 1, 1, 1]
+</code></pre>
+<h4 id="第二步：初始化权重">第二步：初始化权重</h4>
+<p>  每个输入必须由三个表示（看下图）。这些输入被称作<code>key</code>（橙色），<code>query</code>（红色）<code>value</code>（紫色）。在这个例子中，我们假设我们想要的表示维数为3。因为每个输入的维数为4，这就意味着每个权重的形状为4×3。</p>
+<blockquote>
+<p>注意：我们稍后会看到<code>value</code>的维数也是output的维数。</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200507224517664.gif#pic_center" alt="从每个输入中获取key，value，query的表示"><br>
+  为了获取这些表示，每个输入（绿色）会乘以一个权重的集合得到<code>keys</code>，乘以一个权重的集合得到<code>queries</code>，乘以一个权重的集合得到<code>values</code>。在我们的例子中，我们初始化三个权重的集合如下。<br>
+  <code>key</code>的权重：</p>
+<pre><code>[[0, 0, 1],
+ [1, 1, 0],
+ [0, 1, 0],
+ [1, 1, 0]]
+</code></pre>
+<p>  <code>query</code>的权重：</p>
+<pre><code>[[1, 0, 1],
+ [1, 0, 0],
+ [0, 0, 1],
+ [0, 1, 1]]
+</code></pre>
+<p>  <code>value</code>的权重：</p>
+<pre><code>[[0, 2, 0],
+ [0, 3, 0],
+ [1, 0, 3],
+ [1, 1, 0]]
+</code></pre>
+<blockquote>
+<p>注意： 在神经网络设置中，这些权重通常都是一些小的数字，利用随机分布，比如Gaussian, Xavier and Kaiming分布，随机初始化。在训练开始前已经完成初始化。</p>
+</blockquote>
+<h3 id="第三步：获取key，query和value；">第三步：获取<code>key</code>，<code>query</code>和<code>value</code>；</h3>
+<p>  现在我们有了3个权重的集合，让我们来给每个输入获取<code>key</code>，<code>query</code>和<code>value</code>。<br>
+  第1个输入的<code>key</code>表示：</p>
+<pre><code>               [0, 0, 1]
+[1, 0, 1, 0] x [1, 1, 0] = [0, 1, 1]
+               [0, 1, 0]
+               [1, 1, 0]
+</code></pre>
+<p>  利用相同的权重集合获取第2个输入的<code>key</code>表示：</p>
+<pre><code>               [0, 0, 1]
+[0, 2, 0, 2] x [1, 1, 0] = [4, 4, 0]
+               [0, 1, 0]
+               [1, 1, 0]
+</code></pre>
+<p>  利用相同的权重集合获取第3个输入的<code>key</code>表示：</p>
+<pre><code>               [0, 0, 1]
+[1, 1, 1, 1] x [1, 1, 0] = [2, 3, 1]
+               [0, 1, 0]
+               [1, 1, 0]
+</code></pre>
+<p>  更快的方式是将这些运算用向量来描述：</p>
+<pre><code>               [0, 0, 1]
+[1, 0, 1, 0]   [1, 1, 0]   [0, 1, 1]
+[0, 2, 0, 2] x [0, 1, 0] = [4, 4, 0]
+[1, 1, 1, 1]   [1, 1, 0]   [2, 3, 1]
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20200507230007824.gif#pic_center" alt="获取key表示"><br>
+  让我们用相同的操作来获取每个输入的<code>value</code>表示：<br>
+<img src="https://img-blog.csdnimg.cn/20200507230133445.gif#pic_center" alt="获取value"><br>
+最后是<code>query</code>的表示：</p>
+<pre><code>               [1, 0, 1]
+[1, 0, 1, 0]   [1, 0, 0]   [1, 0, 2]
+[0, 2, 0, 2] x [0, 0, 1] = [2, 2, 2]
+[1, 1, 1, 1]   [0, 1, 1]   [2, 1, 3]
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20200507230240639.gif#pic_center" alt="获取query"></p>
+<blockquote>
+<p>注意：实际上，一个偏重向量也许会加到矩阵相乘后的结果。</p>
+</blockquote>
+<h4 id="第四步：为第1个输入计算注意力分数">第四步：为第1个输入计算注意力分数</h4>
+<p><img src="https://img-blog.csdnimg.cn/20200507230653550.gif#pic_center" alt="为第1个输入计算注意力分数（蓝色）"><br>
+  为了获取注意力分数，我们从输入1的<code>query</code>（红色）和所有<code>keys</code>（橙色）的点积开始。因为有3个<code>key</code>表示（这是由于我们有3个输入），我们得到3个注意力分数（蓝色）。</p>
+<pre><code>            [0, 4, 2]
+[1, 0, 2] x [1, 4, 3] = [2, 4, 4]
+            [1, 0, 1]
+</code></pre>
+<p>注意到我们只用了输入的<code>query</code>。后面我们会为其他的<code>queries</code>重复这些步骤。</p>
+<h4 id="第五步：计算softmax">第五步：计算softmax</h4>
+<p><img src="https://img-blog.csdnimg.cn/20200507231505965.gif#pic_center" alt="对注意力分数进行softmax运算"><br>
+  对这些注意力分数进行softmax函数运算（蓝色部分）。</p>
+<pre><code>softmax([2, 4, 4]) = [0.0, 0.5, 0.5]
+</code></pre>
+<h4 id="第六步：-将分数乘以values">第六步： 将分数乘以values</h4>
+<p><img src="https://img-blog.csdnimg.cn/202005072317296.gif#pic_center" alt="将value（紫色）和score（蓝色）相乘得到权重化value的表示"><br>
+  将每个输入（绿色）的softmax作用后的注意力分数乘以各自对应的<code>value</code>（紫色）。这会产生3个向量（黄色）。在这个教程中，我们把它们称作<code>权重化value</code>。</p>
+<pre><code>1: 0.0 * [1, 2, 3] = [0.0, 0.0, 0.0]
+2: 0.5 * [2, 8, 0] = [1.0, 4.0, 0.0]
+3: 0.5 * [2, 6, 3] = [1.0, 3.0, 1.5]
+</code></pre>
+<h4 id="第七步：对权重化后的values求和，得到输出1">第七步：对权重化后的values求和，得到输出1</h4>
+<p><img src="https://img-blog.csdnimg.cn/20200507232414393.gif#pic_center" alt="将权重后value（黄色）相加得到输出1"><br>
+  将<code>权重后value</code>按元素相加得到输出1：</p>
+<pre><code>  [0.0, 0.0, 0.0]
++ [1.0, 4.0, 0.0]
++ [1.0, 3.0, 1.5]
+-----------------
+= [2.0, 7.0, 1.5]
+</code></pre>
+<p>  产生的向量[2.0, 7.0, 1.5]（暗绿色）就是输出1，这是基于输入1的<code>query</code>表示与其它的<code>keys</code>，包括它自身的<code>key</code>互相作用的结果。</p>
+<h4 id="第八步：对输入2、3，重复第4-7步">第八步：对输入2、3，重复第4-7步</h4>
+<p>  既然我们已经完成了输入1，我们重复步骤4-7能得到输出2和3。这个可以留给读者自己尝试，相信聪明的你可以做出来。<br>
+<img src="https://img-blog.csdnimg.cn/20200507233321491.gif#pic_center" alt="重复之前的步骤，得到输出2和3"></p>
+<h3 id="代码">代码</h3>
+<p>  这里有PyTorch的实现代码，PyTorch是一个主流的Python深度学习框架。为了能够很好地使用代码片段中的<code>@</code>运算符, <code>.T</code> and <code>None</code>操作，请确保Python≥3.6，PyTorch ≥1.3.1。</p>
+<h4 id="1-准备输入">1. 准备输入</h4>
+<pre><code class="language-python">import torch
+
+x = [
+  [1, 0, 1, 0], # Input 1
+  [0, 2, 0, 2], # Input 2
+  [1, 1, 1, 1]  # Input 3
+ ]
+x = torch.tensor(x, dtype=torch.float32)
+</code></pre>
+<h4 id="2-初始化权重">2. 初始化权重</h4>
+<pre><code class="language-python">w_key = [
+  [0, 0, 1],
+  [1, 1, 0],
+  [0, 1, 0],
+  [1, 1, 0]
+]
+w_query = [
+  [1, 0, 1],
+  [1, 0, 0],
+  [0, 0, 1],
+  [0, 1, 1]
+]
+w_value = [
+  [0, 2, 0],
+  [0, 3, 0],
+  [1, 0, 3],
+  [1, 1, 0]
+]
+w_key = torch.tensor(w_key, dtype=torch.float32)
+w_query = torch.tensor(w_query, dtype=torch.float32)
+w_value = torch.tensor(w_value, dtype=torch.float32)
+</code></pre>
+<h4 id="3-获取key，query和value">3. 获取<code>key</code>，<code>query</code>和<code>value</code></h4>
+<pre><code class="language-python">
+keys = x @ w_key
+querys = x @ w_query
+values = x @ w_value
+
+print(keys)
+# tensor([[0., 1., 1.],
+#         [4., 4., 0.],
+#         [2., 3., 1.]])
+
+print(querys)
+# tensor([[1., 0., 2.],
+#         [2., 2., 2.],
+#         [2., 1., 3.]])
+
+print(values)
+# tensor([[1., 2., 3.],
+#         [2., 8., 0.],
+#         [2., 6., 3.]])
+</code></pre>
+<h4 id="4-为第1个输入计算注意力分数">4. 为第1个输入计算注意力分数</h4>
+<pre><code>attn_scores = querys @ keys.T
+
+# tensor([[ 2.,  4.,  4.],  # attention scores from Query 1
+#         [ 4., 16., 12.],  # attention scores from Query 2
+#         [ 4., 12., 10.]]) # attention scores from Query 3
+</code></pre>
+<h4 id="5-计算softmax">5. 计算softmax</h4>
+<pre><code class="language-python">from torch.nn.functional import softmax
+
+attn_scores_softmax = softmax(attn_scores, dim=-1)
+# tensor([[6.3379e-02, 4.6831e-01, 4.6831e-01],
+#         [6.0337e-06, 9.8201e-01, 1.7986e-02],
+#         [2.9539e-04, 8.8054e-01, 1.1917e-01]])
+
+# For readability, approximate the above as follows
+attn_scores_softmax = [
+  [0.0, 0.5, 0.5],
+  [0.0, 1.0, 0.0],
+  [0.0, 0.9, 0.1]
+]
+attn_scores_softmax = torch.tensor(attn_scores_softmax)
+</code></pre>
+<h4 id="6-将分数乘以values">6. 将分数乘以values</h4>
+<pre><code class="language-python">weighted_values = values[:,None] * attn_scores_softmax.T[:,:,None]
+
+# tensor([[[0.0000, 0.0000, 0.0000],
+#          [0.0000, 0.0000, 0.0000],
+#          [0.0000, 0.0000, 0.0000]],
+# 
+#         [[1.0000, 4.0000, 0.0000],
+#          [2.0000, 8.0000, 0.0000],
+#          [1.8000, 7.2000, 0.0000]],
+# 
+#         [[1.0000, 3.0000, 1.5000],
+#          [0.0000, 0.0000, 0.0000],
+#          [0.2000, 0.6000, 0.3000]]])
+</code></pre>
+<h4 id="7-对权重化后的values求和，得到输出">7. 对权重化后的values求和，得到输出</h4>
+<pre><code>outputs = weighted_values.sum(dim=0)
+
+# tensor([[2.0000, 7.0000, 1.5000],  # Output 1
+#         [2.0000, 8.0000, 0.0000],  # Output 2
+#         [2.0000, 7.8000, 0.3000]]) # Output 3
+</code></pre>
+<blockquote>
+<p>注意：PyTorch已经提供了这个API，名字为<code>nn.MultiheadAttention</code>。但是，这个API需要你提供PyTorch的Tensor形式的key，value，query。还有，这个模块的输出会经历一个线性变换。</p>
+</blockquote>
+<h3 id="自己实现？">自己实现？</h3>
+<p>  以下是笔者自己写的部分。<br>
+  对于不熟悉PyTorch的读者来说，上述的向量操作理解起来有点困难，因此，笔者自己用简单的Python代码实现了一遍上述Self-Attention的过程。<br>
+  完整的Python代码如下：</p>
+<pre><code class="language-python"># -*- coding: utf-8 -*-
+
+from typing import List
+import math
+from pprint import pprint
+
+x = [[1, 0, 1, 0], # Input 1
+     [0, 2, 0, 2], # Input 2
+     [1, 1, 1, 1]  # Input 3
+    ]
+
+w_key = [[0, 0, 1],
+        [1, 1, 0],
+        [0, 1, 0],
+        [1, 1, 0]
+        ]
+
+w_query = [[1, 0, 1],
+            [1, 0, 0],
+            [0, 0, 1],
+            [0, 1, 1]
+          ]
+
+w_value = [[0, 2, 0],
+            [0, 3, 0],
+            [1, 0, 3],
+            [1, 1, 0]
+          ]
+
+
+# vector dot of two vectors
+def vector_dot(list1: List[float or int], list2: List[float or int]) -&gt; float or int:
+    dot_sum = 0
+    for element_i, element_j in zip(list1, list2):
+        dot_sum += element_i * element_j
+
+    return dot_sum
+
+
+# get weights matrix by x, using matrix multiplication
+def get_weights_matrix_by_x(x, weight_matrix):
+    x_matrix = []
+    for i in range(len(x)):
+        x_row = []
+        for j in range(len(weight_matrix[0])):
+            x_row.append(vector_dot(x[i], [_[j] for _ in weight_matrix]))
+
+        x_matrix.append(x_row)
+
+    return x_matrix
+
+
+# softmax function
+def softmax(x: List[float or int]) -&gt; List[float or int]:
+    x_sum = sum([math.exp(_) for _ in x])
+    return [math.exp(_)/x_sum for _ in x]
+
+
+x_key = get_weights_matrix_by_x(x, w_key)
+x_value = get_weights_matrix_by_x(x, w_value)
+x_query = get_weights_matrix_by_x(x, w_query)
+# print(x_key)
+# print(x_value)
+# print(x_query)
+
+outputs = []
+for query in x_query:
+    score_list = [vector_dot(query, key) for key in x_key]
+    softmax_score_list = softmax(score_list)
+
+    weights_list = []
+    for i in range(len(softmax_score_list)):
+        weights = [softmax_score_list[i] * _ for _ in x_value[i]]
+        weights_list.append(weights)
+
+    output = []
+    for j in range(len(weights_list[0])):
+        output.append(sum([_[j] for _ in weights_list]))
+
+    outputs.append(output)
+
+pprint(outputs)
+</code></pre>
+<p>输出结果如下：</p>
+<pre><code>[[1.9366210616669624, 6.683105308334811, 1.5950684074995565],
+ [1.9999939663351456, 7.9639915951322156, 0.0539764053125496],
+ [1.9997046127769653, 7.759892254657784, 0.3583892946751152]]
+</code></pre>
+<h3 id="总结">总结</h3>
+<p>  本文主要讲述了如何一步一步来实现Self-Attention机制，对于想要自己实现算法的读者来说，值得一读。<br>
+  本文分享到此结束，感谢大家的阅读~</p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-07 23:58</span>&nbsp;
+<a href="https://www.cnblogs.com/jclian91/">山阴少年</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12846772" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12846772);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 373768, cb_blogApp = 'jclian91', cb_blogUserGuid = '6af687de-2158-47cd-7483-08d49c352df3';
+    var cb_entryId = 12846772, cb_entryCreatedDate = '2020-05-07 23:58', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 山阴少年
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

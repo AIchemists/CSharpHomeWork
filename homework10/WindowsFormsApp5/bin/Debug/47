@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="使用阿里云ECS或者其他常见的VPS服务部署应用的时候，需要手动配置环境，并且监测ECS的行为，做补丁之类的，搞得有点复杂。好在很多云厂商（阿里云、Azure等）提供了Serverless服务，借助于" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>在阿里云函数计算上部署.NET Core 3.1 - 波多尔斯基 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/custom/bundle-custom.min.css?v=1ssrnY3Il79Ok472qeVrpxlSprSXcHhYPgZC5S3wtVM" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/podolski/custom.css?v=ailkZnJy5SEtevoTepStsXvnAYc=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/custom/bundle-custom-mobile.min.css?v=-Yh290MhQyDeXLmvKTSses9H6-49lqbpXFh55zvS0w8" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/podolski/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/podolski/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/podolski/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
+    <script>
+        var currentBlogId = 180064;
+        var currentBlogApp = 'podolski';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'Custom';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/podolski/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/podolski/">波多尔斯基</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/podolski/">
+首页</a>
+</li>
+<li>
+
+
+</li>
+<li>
+</li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/podolski/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+29&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+185</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/podolski/p/12847037.html">在阿里云函数计算上部署.NET Core 3.1</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p>使用阿里云ECS或者其他常见的VPS服务部署应用的时候，需要手动配置环境，并且监测ECS的行为，做补丁之类的，搞得有点复杂。好在很多云厂商（阿里云、Azure等）提供了Serverless服务，借助于Serverless，开发人员可以更加专注于代码的开发，减少运维的成本。</p>
+<p>Azure的部署直接集成在了VS中，非常方便，本文主要介绍一下使用ASP.NET CORE 3.1部署在阿里云Serverless（函数计算）的内容。</p>
+<h2 id="准备">准备</h2>
+<p>阿里云的函数计算提供了很多运行库，对.NET的支持现在到ASP.NET CORE 2.1，如果我们需要自定义runtime，那么需要使用到函数计算的custom runtime功能。</p>
+<p>首先准备好一个ASP.NET CORE 3.1程序，保证其可以正常运行（Release模式下能够正常工作）。然后做以下改动：</p>
+<h3 id="修改端口">修改端口</h3>
+<p>阿里云函数计算自定义runtime使用的是固定的监听端口9000，因此，需要修改Program.cs文件</p>
+<pre><code class="language-c#">public static IWebHostBuilder CreateWebHostBuilder(string[] args) =&gt;
+    WebHost.CreateDefaultBuilder(args)
+    //指定监听9000端口
+           .UseUrls(&quot;http://*:9000&quot;)
+           .UseStartup&lt;Startup&gt;();
+</code></pre>
+<h3 id="设置发布选项">设置发布选项</h3>
+<p>VS右键点击工程，点发布，选择高级。<br>
+<img src="https://img2020.cnblogs.com/blog/616093/202005/616093-20200508014352736-1606363931.png" alt="img"></p>
+<p>由于目标是linux系统，因此需要选择目标运行时为<code>linux-64</code>，部署模式选择独立。（阿里云暂时没有配置.NET Core 3.1 Runtime，需要自带运行组件，但是不要选择单一文件，实测有问题）。</p>
+<p><img src="https://img2020.cnblogs.com/blog/616093/202005/616093-20200508014353532-834857411.png" alt="img"></p>
+<p>发布完成之后，转到对应的publish目录，将应用程序名称相同的一个无拓展名的文件，重命名为<code>bootstrap</code>。</p>
+<blockquote>
+<p>windows默认的情况下，这个文件就是可以执行的，如果是其他系统，需要确保这个文件有可执行权限。</p>
+</blockquote>
+<h2 id="部署">部署</h2>
+<p>这里需要借助阿里云函数计算的工具<code>fun.exe</code>，在正式部署之前，需要先运行<code>fun.exe config</code>进行配置。具体的使用方式可以参考阿里云的文档。</p>
+<p>部署需要一个配置的文件，我的文件配置如下：</p>
+<pre><code class="language-yml">ROSTemplateFormatVersion: '2015-09-01'
+Transform: 'Aliyun::Serverless-2018-04-03'
+Resources:
+  MonitorService:
+    Type: 'Aliyun::Serverless::Service'
+    Properties:
+      Description: 'rsystem'
+    RSystemApi:
+      Type: 'Aliyun::Serverless::Function'
+      Properties:
+        Handler: index.handler
+        Runtime: custom
+        CodeUri: 'RSystemApi/RSystemApi/bin/Release/netcoreapp3.1/publish/'
+      Events:
+        httpTrigger:
+          Type: HTTP
+          Properties:
+            AuthType: ANONYMOUS
+            Methods:
+              - GET
+              - POST
+              - PUT 
+              - PATCH
+              - DELETE 
+    
+</code></pre>
+<p>使用powershell执行<code>fun.exe deploy -t deploy.yml</code>，一路下一步，等待提示完成，就可以在函数计算中心看到新部署的服务。</p>
+<p>服务可以通过阿里云的控制台进行访问，但是不推荐，容易有各种各样的问题。建议大家使用自定义域名的方式进行访问，详情见文末参考资料。</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>尽量控制文件压缩后的大小在50M以内，否则部署不会成功，如果需要更大文件的部署，那么可以使用NAS服务。</li>
+<li>fun config可以设置超时时间，文件比较大的情况，deploy超时时间段可能会造成部署失败。（我设置了120s）</li>
+</ul>
+<blockquote>
+<ul>
+<li>以上步骤也适用于其他语言环境应用custom的情况。详情见<a href="https://help.aliyun.com/document_detail/132044.html">https://help.aliyun.com/document_detail/132044.html</a></li>
+<li>顺便吐槽一下阿里云，官方提供custom runtime示例里面有F#，里面是基于.NET CORE 3.1的，直接原生支持多好。</li>
+</ul>
+</blockquote>
+<h2 id="常见问题：">常见问题：</h2>
+<p>对于.NET Core 3.1的调试，大多数情况本地能行，那么生产服务器也就可以，当然也有一些例外情况。</p>
+<h3 id="提示cafilenotfound">提示CAFileNotFound</h3>
+<pre><code class="language-json">{
+    &quot;ErrorCode&quot;: &quot;CAFileNotFound&quot;,
+    &quot;ErrorMessage&quot;: &quot;The CA process cannot be started due to missing files:ContainerStartDuration:100000000. CA process cannot be started due to missing file: invalid header field value \&quot;oci runtime error: container_linux.go:247: starting container process caused \\\&quot;exec: \\\\\\\&quot;/code/bootstrap\\\\\\\&quot;: stat /code/bootstrap: no such file or directory\\\&quot;\\n\&quot;Error response from daemon: invalid header field value \&quot;oci runtime error: container_linux.go:247: starting container process caused \\\&quot;exec: \\\\\\\&quot;/code/bootstrap\\\\\\\&quot;: stat /code/bootstrap: no such file or directory\\\&quot;\\n\&quot;&quot;
+}
+</code></pre>
+<p>检查一下是不是没有将主文件改名成bootstrap</p>
+<h3 id="提示caexited">提示CAExited</h3>
+<p>检查一下代码是不能够在本地正常运行，有没有代码里面强行限制为localhost的情况。</p>
+<h3 id="提示404错误">提示404错误</h3>
+<p>使用阿里云的控制台调用的时候，经常出现本地调用成功，远程调用报404的问题。需要注意，阿里云给的调试地址是：<br>
+<code>https://xxxxxxxxxxxxxxxx.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/[ServiceName]/[FuctionName]/xxx</code>的地址模式。这个大概率和我们提供的路由解析规则不符。因此，请尽量使用自定义域名。</p>
+<blockquote>
+<p>自定义域名必须是已经备案的域名才可以，而且解析需要在阿里云才行。可是暂时不知道什么方法可以单独搞到备案的域名，比较通用的方式是申请域名，并且解析到ECS进行备案，等备案完成，再解析到函数计算服务。</p>
+</blockquote>
+<h2 id="参考资料：">参考资料：</h2>
+<p><a href="https://yq.aliyun.com/articles/731985">https://yq.aliyun.com/articles/731985</a></p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-08 01:45</span>&nbsp;
+<a href="https://www.cnblogs.com/podolski/">波多尔斯基</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12847037" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12847037);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 180064, cb_blogApp = 'podolski', cb_blogUserGuid = '02d591a4-dab1-e311-8d02-90b11c0b17d6';
+    var cb_entryId = 12847037, cb_entryCreatedDate = '2020-05-08 01:45', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 波多尔斯基
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

@@ -4,28 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="origin" />
-    <meta property="og:description" content="PS：上一篇从0开始学自定义View有博友给我留言说要看实战，今天我特意写了几个例子，供大家参考，所画的图案加上动画看着确实让人舒服，喜欢的博友可以直接拿到自己的项目中去使用，由于我这个写的是demo" />
+    
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>自定义View实战 - TMusketeer - 博客园</title>
+    <title>weixiaokun - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
-    <link id="MainCss" rel="stylesheet" href="/skins/sea/bundle-sea.min.css?v=Jpv_XRZqv7HnW0FXxHohZmb1TG6nYuWdNSwqJML5lHA" />
     
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/sea/bundle-sea-mobile.min.css?v=GEzW0neGdNE-VMws0ftJENKA__n-moeEPmS2Y9XCJis" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/weixk/custom.css?v=Qw&#x2B;EJiNbKxoHdIv8Fdc/kVE8iv4=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/elf/bundle-elf-mobile.min.css?v=Lk2wjMMUJjSLadG0Xil7JdDLDWWAvcpQmxzjUgc7cAk" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/cmusketeer/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/cmusketeer/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/cmusketeer/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/weixk/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/weixk/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/weixk/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 388360;
-        var currentBlogApp = 'cmusketeer';
+        var currentBlogId = 522412;
+        var currentBlogApp = 'weixk';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'sea';
+        var skinName = 'elf';
     </script>
     
     
@@ -33,355 +33,210 @@
 </head>
 <body>
     <a name="top"></a>
+    <div id="page_begin_html">
+        <link  type="text/css" rel="stylesheet" href="https://files.cnblogs.com/files/hafiz/feedback.css">
+
+<link  type="text/css" rel="stylesheet" href="https://files.cnblogs.com/files/miangao/maodian.css">
+    </div>
     
-    <!--done-->
-<div id="header">
-	
 <!--done-->
-<div class="header">
-	<div class="headerText">
-		<a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/cmusketeer/">TMusketeer-刘志通</a>
-<br>
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/weixk/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
 		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/weixk/">weixk</a>
+</h1>
+<h2>
+
+</h2>
 
 
-	</div>
-</div>
 
 
-</div>
-
-<div id="mytopmenu">
-	
-		<div id="mylinks">
-<a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
 博客园</a>
- &nbsp;
-
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/cmusketeer/">
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/weixk/">
 首页</a>
- &nbsp;
-
+</li>
+<li>
 
 <a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
 新随笔</a>
- &nbsp;
-
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/TMusketeer">
-联系</a> &nbsp;
-
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/cmusketeer/rss/">
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/weixiaokun">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/weixk/rss/">
 订阅</a>
-<a id="blog_nav_rss_image" href="https://www.cnblogs.com/cmusketeer/rss/">
-    <img src="/skins/sea/images/xml.gif" alt="订阅" />
-</a>&nbsp;
-
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
 <a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
 管理</a>
-
-
-</div>
-		<DIV id="mystats">随笔-
-47&nbsp;
-评论-
-59&nbsp;
-文章-
-2&nbsp;
-<!--trackbacks-<partial name="./Shared/_PingTrackCount.cshtml" model="BlogServer.Web.Models.DetailBlogPage" />-->
-
-</DIV>
-	
-</div>
-<div id="centercontent">
-	<div id="post_detail">
-<div class="post">
-	<h1 class = "postTitle">
-<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/cmusketeer/p/12843367.html">自定义View实战</a>
-</h1>
-	
-<div id="cnblogs_post_body" class="blogpost-body ">
-    <blockquote>
-<p>PS：上一篇<a href="https://www.cnblogs.com/cmusketeer/p/12837076.html" target="_blank">从0开始学自定义View</a>有博友给我留言说要看实战，今天我特意写了几个例子，供大家参考，所画的图案加上动画看着确实让人舒服，喜欢的博友可以直接拿到自己的项目中去使用，由于我这个写的是demo，代码格式写的有些乱，所以，要自己封装一下才可以使用，当然你如果真的不想封装，可以直接使用，也可以给我留言，我封装好放在github上供大家参考，也会做成依赖让大家直接添加即可</p>
-</blockquote>
-<p>先上图再分析</p>
-<p><img src="https://img2020.cnblogs.com/blog/1258190/202005/1258190-20200507144401614-623716641.gif" alt=""></p>
-<p>可以看出图中有三种样式</p>
-<ul>
-<li>第一种是普通的一个label，使用场景：商品过期，促销等展示。</li>
-<li>第二种是圆形进度条， &nbsp; &nbsp; &nbsp;使用场景：下载文件进度，加载视频进度，耗电量进度.....</li>
-<li>第三种是条形进度条， &nbsp; &nbsp; &nbsp;使用场景：滑动调值，手机音效大小...</li>
+</li>
 </ul>
-<p>上面的三种，均是demo，考虑使用场景并不完善，比如说第三种条形进度条还可以加上刻度，滑动到两边需要判断越界等。那就先拿第三个来吧</p>
-<h2>条形进度条-可拖动</h2>
-<p>分析：我们想要做一个类似的控件，需要考虑的问题不只是眼睛看的到的，看不到的就好比我只能点击小红球才可以滑动，我点击其他区域是不能有任何操作的，这个时候就要判断手指down的时候是否落在了小球上。</p>
-<ul>
-<li>线条 ： 渐变颜色，线帽格式，长度，宽度设置，父布局宽高格式设置格式设置，子view宽高格式设置</li>
-<li>球 ：颜色，起始位置和终止位置要在线上，尺寸</li>
-</ul>
-<p>在做之前我们先一个一个知识点解析，首先是线的渐变颜色，单独拿出</p>
-<div class="cnblogs_code">
-<pre><span style="color: #008000;">/**</span><span style="color: #008000;">
-     * 设置进度圆环颜色(支持渐变色)
-     *
-     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> colorArray 渐变色集合
-     </span><span style="color: #008000;">*/</span>
-    <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">int</span>[] mColorArray;  <span style="color: #008000;">//</span><span style="color: #008000;"> 圆环渐变色</span>
-    <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span> setProgColor(@ColorRes <span style="color: #0000ff;">int</span><span style="color: #000000;">[] colorArray) {
-        </span><span style="color: #0000ff;">if</span> (colorArray == <span style="color: #0000ff;">null</span> || colorArray.length &lt; 2) <span style="color: #0000ff;">return</span><span style="color: #000000;">;
-        mColorArray </span>= <span style="color: #0000ff;">new</span> <span style="color: #0000ff;">int</span><span style="color: #000000;">[colorArray.length];
-        </span><span style="color: #0000ff;">for</span> (<span style="color: #0000ff;">int</span> index = 0; index &lt; colorArray.length; index++<span style="color: #000000;">)
-            mColorArray[index] </span>=<span style="color: #000000;"> ContextCompat.getColor(getContext(), colorArray[index]);
-        paint.setShader(</span><span style="color: #0000ff;">new</span> LinearGradient(0, 0, getMeasuredWidth(),0 , mColorArray, <span style="color: #0000ff;">new</span> <span style="color: #0000ff;">float</span>[]{0<span style="color: #000000;">,.3F,.6F,.9F}, Shader.TileMode.MIRROR));
-        invalidate();
-    }</span></pre>
-</div>
-<p>我们可以看到我封装成了一个方法，通过paint.setShader进行着色，方法传入的是LinearGradient对象，我们看源码，解释参数</p>
-<div class="cnblogs_code">
-<pre> <span style="color: #008000;">/**</span><span style="color: #008000;">
-     * Create a shader that draws a linear gradient along a line.
-     *
-     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> x0           The x-coordinate for the start of the gradient line
-     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> y0           The y-coordinate for the start of the gradient line
-     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> x1           The x-coordinate for the end of the gradient line
-     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> y1           The y-coordinate for the end of the gradient line
-     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> colors       The colors to be distributed along the gradient line
-     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> positions    May be null. The relative positions [0..1] of
-     *                     each corresponding color in the colors array. If this is null,
-     *                     the the colors are distributed evenly along the gradient line.
-     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> tile         The Shader tiling mode
-    </span><span style="color: #008000;">*/</span>
-    <span style="color: #0000ff;">public</span> LinearGradient(<span style="color: #0000ff;">float</span> x0, <span style="color: #0000ff;">float</span> y0, <span style="color: #0000ff;">float</span> x1, <span style="color: #0000ff;">float</span> y1, @NonNull @ColorInt <span style="color: #0000ff;">int</span><span style="color: #000000;"> colors[],
-            @Nullable </span><span style="color: #0000ff;">float</span><span style="color: #000000;"> positions[], @NonNull TileMode tile) {
-        </span><span style="color: #0000ff;">if</span> (colors.length &lt; 2<span style="color: #000000;">) {
-            </span><span style="color: #0000ff;">throw</span> <span style="color: #0000ff;">new</span> IllegalArgumentException("needs &gt;= 2 number of colors"<span style="color: #000000;">);
-        }
-        </span><span style="color: #0000ff;">if</span> (positions != <span style="color: #0000ff;">null</span> &amp;&amp; colors.length !=<span style="color: #000000;"> positions.length) {
-            </span><span style="color: #0000ff;">throw</span> <span style="color: #0000ff;">new</span> IllegalArgumentException("color and position arrays must be of equal length"<span style="color: #000000;">);
-        }
-        mType </span>=<span style="color: #000000;"> TYPE_COLORS_AND_POSITIONS;
-        mX0 </span>=<span style="color: #000000;"> x0;
-        mY0 </span>=<span style="color: #000000;"> y0;
-        mX1 </span>=<span style="color: #000000;"> x1;
-        mY1 </span>=<span style="color: #000000;"> y1;
-        mColors </span>=<span style="color: #000000;"> colors.clone();
-        mPositions </span>= positions != <span style="color: #0000ff;">null</span> ? positions.clone() : <span style="color: #0000ff;">null</span><span style="color: #000000;">;
-        mTileMode </span>=<span style="color: #000000;"> tile;
-    }</span></pre>
-</div>
-<p>参数</p>
-<ol>
-<li>x0,y0着色的起始位置</li>
-<li>x1，y1终止位置</li>
-<li>colors区域内着色的颜色集</li>
-<li>positions区域内部划分模块，逐一着色，如：区域1-100划分为4块，第一块1-25红色，26-50蓝色..。系统会默认在两种颜色不一样的情况下进行颜色过度渲染，达到渐变的效果，所以我们不用担心出现红蓝划分明显的情况。</li>
-<li>TileMode 模式选择<ol>
-<li>　　CLAMP：当图片小于绘制尺寸时要进行边界拉伸来填充</li>
-<li>　　REPEAT：当图片小于绘制尺寸时重复平铺</li>
-<li>　　MIRROR：当图片小于绘制尺寸时镜像平铺</li>
-</ol></li>
-</ol>
-<p>好了，下面我们就先画线和红点，如果有看不懂的博友，可以先看上一篇<a href="https://www.cnblogs.com/cmusketeer/p/12837076.html" target="_blank">从0开始学自定义View</a>。</p>
-<div class="cnblogs_code">
-<pre><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> init(){
-        paint </span>= <span style="color: #0000ff;">new</span><span style="color: #000000;"> Paint();
-        paint.setStrokeWidth(</span>20);<span style="color: #008000;">//</span><span style="color: #008000;">画笔宽度</span>
-        paint.setStyle(Paint.Style.FILL);<span style="color: #008000;">//</span><span style="color: #008000;">填充类型</span>
-        paint.setAntiAlias(<span style="color: #0000ff;">true</span><span style="color: #000000;">);
-        paint.setStrokeCap(Paint.Cap.ROUND);</span><span style="color: #008000;">//</span><span style="color: #008000;">线帽，半圆</span>
-        paintCircle2 = <span style="color: #0000ff;">new</span><span style="color: #000000;"> Paint();
-        paintCircle2.setColor(Color.RED);
-        paintCircle2.setStrokeWidth(</span>5<span style="color: #000000;">);
-        paintCircle2.setStyle(Paint.Style.FILL);
-        paintCircle2.setAntiAlias(</span><span style="color: #0000ff;">true</span><span style="color: #000000;">);
-    }<br /></span></pre>
-</div>
-<div class="cnblogs_code">
-<pre><span style="color: #000000;"> @Override
-    </span><span style="color: #0000ff;">protected</span> <span style="color: #0000ff;">void</span> onMeasure(<span style="color: #0000ff;">int</span> widthMeasureSpec, <span style="color: #0000ff;">int</span><span style="color: #000000;"> heightMeasureSpec) {
-        </span><span style="color: #0000ff;">super</span><span style="color: #000000;">.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        width </span>=<span style="color: #000000;"> MeasureSpec.getSize(widthMeasureSpec);
-        heigth </span>=<span style="color: #000000;">  MeasureSpec.getSize(heightMeasureSpec);
-        Log.e(</span>"heigth -- width ",heigth+"  -- "+<span style="color: #000000;">width);
-        circleX</span>=width/2;<span style="color: #008000;">//</span><span style="color: #008000;">初始化红点坐标位置</span>
-        circleY=20<span style="color: #000000;">;
-    }</span></pre>
-</div>
-<div class="cnblogs_code">
-<pre> <span style="color: #0000ff;">int</span>[] colors=<span style="color: #000000;">{R.color.colorPrimary,R.color.colorAccent,R.color.color_environment_serious,R.color.color_environment_mild};
-    @Override
-    </span><span style="color: #0000ff;">protected</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> onDraw(Canvas canvas) {
-
-        </span><span style="color: #0000ff;">super</span><span style="color: #000000;">.onDraw(canvas);
-        setProgColor(colors);
-        </span><span style="color: #008000;">//</span><span style="color: #008000;">绘制一条线，线帽为半圆</span>
-        canvas.drawLine(50,20,width-50,20<span style="color: #000000;">,paint);
-        canvas.drawCircle(circleX,circleY,</span>15<span style="color: #000000;">,paintCircle2);
-    }</span></pre>
-</div>
-<p>到这里，线和点就已经做好了，只是静态的，下面是如何拖动，就要在onTouchEvent方法中去写了，代码都已经添加了注释 &nbsp;Math.abs(dhx)&lt;50&amp;&amp;Math.abs(dhy)&lt;50 &nbsp;是证明down的坐标点和原始球的坐标点相差范围在50内，如果小球在屏幕200，200的位置，而我们手指down的点在800，800，那么相差如此巨大，肯定不是我们想要的结果，所以，我们就认为down的坐标减去球的坐标差值最小（50内）才是我们想要的结果，这个时候我们再设置小球move的坐标（让小球跟随手指移动）。</p>
-<div class="cnblogs_code">
-<pre><span style="color: #008000;">/**</span><span style="color: #008000;">
-     * 判断所按压的坐标和红点坐标的关系
-     * 如果手指按在了红点的下方，那么down-红点y坐标的绝对值如果等于或者小于半径，也就是说目前按压的就是红点，
-     *
-     * </span><span style="color: #008000;">*/</span>
-    <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">boolean</span> clickCircle(<span style="color: #0000ff;">int</span> downHeigth,<span style="color: #0000ff;">int</span><span style="color: #000000;"> downWidth){
-        </span><span style="color: #0000ff;">int</span> dhy = downHeigth -<span style="color: #000000;"> circleY;
-        </span><span style="color: #0000ff;">int</span> dhx = downWidth -<span style="color: #000000;"> circleX;
-        </span><span style="color: #008000;">//</span><span style="color: #008000;">证明按压的是原点</span>
-        <span style="color: #0000ff;">if</span>(Math.abs(dhx)&lt;50&amp;&amp;Math.abs(dhy)&lt;50<span style="color: #000000;">){
-            </span><span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span><span style="color: #000000;">;
-        }
-        </span><span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span><span style="color: #000000;">;
-    }
-    @Override
-    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">boolean</span><span style="color: #000000;"> dispatchTouchEvent(MotionEvent event) {
-        </span><span style="color: #0000ff;">return</span> <span style="color: #0000ff;">super</span><span style="color: #000000;">.dispatchTouchEvent(event);
-    }
-    </span><span style="color: #0000ff;">boolean</span> isFlag=<span style="color: #0000ff;">false</span><span style="color: #000000;">;
-    @Override
-    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">boolean</span><span style="color: #000000;"> onTouchEvent(MotionEvent event) {
-        </span><span style="color: #0000ff;">int</span> rawX = (<span style="color: #0000ff;">int</span><span style="color: #000000;">) event.getX();
-        </span><span style="color: #0000ff;">int</span> rawY = (<span style="color: #0000ff;">int</span>) event.getY();<span style="color: #008000;">//</span><span style="color: #008000;">获取到视图坐标，想对于外部viewgroup来说。</span>
-        Log.e("raw",rawX+"  ---  "+<span style="color: #000000;">rawY);
-        Log.e(</span>"rawwww",circleX+"  ---  "+<span style="color: #000000;">circleY);
-        </span><span style="color: #0000ff;">switch</span><span style="color: #000000;"> (event.getAction()){
-            </span><span style="color: #0000ff;">case</span><span style="color: #000000;"> MotionEvent.ACTION_DOWN:
-                </span><span style="color: #008000;">//</span><span style="color: #008000;">如果是手指down在了红点上，move时可重绘</span>
-                <span style="color: #0000ff;">if</span><span style="color: #000000;">(clickCircle(rawY,rawX)) {
-                    circleX </span>=<span style="color: #000000;"> rawX;
-                    isFlag</span>=<span style="color: #0000ff;">true</span><span style="color: #000000;">;
-                }</span><span style="color: #0000ff;">else</span><span style="color: #000000;">{
-                    isFlag</span>=<span style="color: #0000ff;">false</span><span style="color: #000000;">;
-                }
-                </span><span style="color: #0000ff;">break</span><span style="color: #000000;">;
-            </span><span style="color: #0000ff;">case</span><span style="color: #000000;"> MotionEvent.ACTION_MOVE:
-                </span><span style="color: #0000ff;">if</span><span style="color: #000000;">(isFlag){
-                    circleX </span>=<span style="color: #000000;"> rawX;
-                    invalidate();
-                }
-                </span><span style="color: #0000ff;">break</span><span style="color: #000000;">;
-            </span><span style="color: #0000ff;">case</span><span style="color: #000000;"> MotionEvent.ACTION_UP:
-                isFlag</span>=<span style="color: #0000ff;">false</span>;<span style="color: #008000;">//</span><span style="color: #008000;">抬起手指，状态恢复</span>
-                <span style="color: #0000ff;">break</span><span style="color: #000000;">;
-        }
-        </span><span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span>;<span style="color: #008000;">//</span><span style="color: #008000;">自己消费</span>
-    }</pre>
-</div>
-<p>下一篇是圆形进度条</p>
-</div>
-<div id="MySignature"></div>
-<div class="clear"></div>
-<div id="blog_post_info_block">
-    <div id="blog_post_info"></div>
-    <div class="clear"></div>
-    <div id="post_next_prev"></div>
-</div>
-	<div class="postDesc">posted on 
-<span id="post-date">2020-05-07 15:29</span>&nbsp;
-<a href="https://www.cnblogs.com/cmusketeer/">TMusketeer</a>&nbsp;
-阅读(<span id="post_view_count">...</span>)&nbsp;
-评论(<span id="post_comment_count">...</span>)&nbsp;
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12843367" rel="nofollow">编辑</a>&nbsp;
-<a href="javascript:void(0)" onclick="AddToWz(12843367);return false;">收藏</a></div>
-</div>
 
 
-<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
-<script>markdown_highlight();</script>
-<script>
-    var allowComments = true, cb_blogId = 388360, cb_blogApp = 'cmusketeer', cb_blogUserGuid = '2af63623-717d-4c5d-21e6-08d4ef52ecb6';
-    var cb_entryId = 12843367, cb_entryCreatedDate = '2020-05-07 15:29', cb_postType = 1; 
-    loadViewCount(cb_entryId);
-    loadSideColumnAd();
-</script><a name="!comments"></a>
-<div id="blog-comments-placeholder"></div>
-<script>
-    var commentManager = new blogCommentManager();
-    commentManager.renderComments(0);
-</script>
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+1&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+0</span>
 
-<div id="comment_form" class="commentform">
-    <a name="commentform"></a>
-    <div id="divCommentShow"></div>
-    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
-    <div id="comment_form_container"></div>
-    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
-    <div id="ad_t2"></div>
-    <div id="opt_under_post"></div>
-    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
-    <script>
-        var googletag = googletag || {};
-        googletag.cmd = googletag.cmd || [];
-    </script>
-    <script>
-        googletag.cmd.push(function () {
-            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
-            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
-            googletag.pubads().enableSingleRequest();
-            googletag.enableServices();
-        });
-    </script>
-    <div id="cnblogs_c1" class="c_ad_block">
-        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<!--done-->
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/weixk/archive/2020/05/08.html">2020年5月8日</a>
     </div>
-    <div id="under_post_news"></div>
-    <div id="cnblogs_c2" class="c_ad_block">
-        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
-            <script>
-                if (new Date() >= new Date(2018, 9, 13)) {
-                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
-                }
-            </script>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/weixk/p/12849200.html">
+    软件设计七大原则
+</a>
+
         </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：软件设计七大原则 1、 开闭原则 定义：一个软件实体，如类、模块和函数应该对扩展开放，对修改关闭。中心思想：用抽象构建框架，用实现扩展细节。即面向抽象编程。优点：提高软件系统的可复用性和可维护性。举例：很多互联网公司实行弹性制考勤，每天上班8小时，这是不可修改的，但是什么时间上班和下班，是开放的。             <a href="https://www.cnblogs.com/weixk/p/12849200.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
-    <div id="under_post_kb"></div>
-    <div id="HistoryToday" class="c_ad_block"></div>
-    <script type="text/javascript">
-        fixPostBody();
-        deliverBigBanner();
-setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
-        deliverAdC1();
-        deliverAdC2();
-        loadNewsAndKb();
-        loadBlogSignature();
-LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
-        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
-        loadOptUnderPost();
-        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
-    </script>
-</div></div>
-
-
 </div>
-<div id="leftcontent">
-	
-		<DIV id="leftcontentcontainer">
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-05-08 12:11 weixiaokun 阅读 (5) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12849200" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
 			
 <div id="sidebar_news" class="newsItem">
             <script>loadBlogNews();</script>
 </div>
 
 <div id="sidebar_ad"></div>
-			<div id="calendar"><div id="blog-calendar" style="display:none"></div></div>                
-                    <script>loadBlogDefaultCalendar();</script><br>
-			<div id="blog-sidecolumn"></div>
-                    <script>loadBlogSideColumn();</script></DIV>
-	
-</div>
-<!--done-->
-<div class="footer">
-	Powered by: <a href="http://www.cnblogs.com">博客园</a>
-	Copyright &copy; 2020 TMusketeer
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 weixiaokun
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    <div id="page_end_html">
+        <script type="text/javascript">
+$(function(){
+    $('#blogTitle h1').addClass('bounceInLeft animated');
+    $('#blogTitle h2').addClass('bounceInRight animated');
+    // 删除反对按钮
+    $('.buryit').remove();
+    initCommentData();
+});
+function initCommentData() {
+    $('.feedbackItem').each(function() {
+        var text = $(this).find('.feedbackListSubtitle .layer').text();
+        // 将楼层信息放到data里面
+        // $(this).find('.blog_comment_body').attr('data-louceng', text.replace(/^#/g, ''));
+        if($(this).find('.feedbackListSubtitle .louzhu').length>0) $(this).addClass('myself');
+        var avatar = $(this).find('> .feedbackCon > span').html() || 'http://pic.cnitblog.com/face/sample_face.gif';
+        $(this).find('> .feedbackCon > .blog_comment_body').append('<img class="user-avatar" src="'+avatar+'"/>')
+    });
+}
+
+$(document).ajaxComplete(function(event, xhr, settings) {
+  // 监听获取评论ajax事件
+  if(settings.url.indexOf('/mvc/blog/GetComments.aspx') >= 0) {
+    initCommentData();
+  }
+});
+</script>
+
+<script src="https://files.cnblogs.com/files/hafiz/jquery-migrate-1.2.1.js"></script>
+<div id="scrollTop" style="display:none;">
+      <div class="level-2"></div>
+      <div class="level-3"></div>
 </div>
+<script src="https://files.cnblogs.com/files/hafiz/scroll2top.js"></script>
+<script type="text/javascript">
+    UI.global_search();
+    var uvOptions = {};
+    // !important
+    (function() {
+        initScrollTop();
+    })();
+</script>
 
-
-
-
-
-
-    
+<script src="https://files.cnblogs.com/files/miangao/bootstrap.min.js"></script>
+    </div>
 </body>
 </html>

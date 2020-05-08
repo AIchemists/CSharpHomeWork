@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="随着诸如Apache Flink，Apache Spark，Apache Storm之类的开源框架以及诸如Google Dataflow之类的云框架的增多，创建实时数据处理作业变得非常容易。这些API" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>实时流式计算系统中的几个陷阱 - 独孤风 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/tree1123/custom.css?v=dkz3SpGvQHVuzquyL9ArfGCNHsM=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/moonlightink/bundle-moonlightink-mobile.min.css?v=DtT6aFEL2E0nUaFINFlRXOfBp0MkOV1AK7GFtAkKKbo" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/tree1123/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/tree1123/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/tree1123/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
+    <script>
+        var currentBlogId = 325964;
+        var currentBlogApp = 'tree1123';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'MoonlightInk';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/tree1123/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/tree1123/">实时流式计算</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/tree1123/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%8B%AC%E5%AD%A4%E9%A3%8E">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/tree1123/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+96&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+10</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/tree1123/p/12848672.html">实时流式计算系统中的几个陷阱</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p><img src="https://img2020.cnblogs.com/other/1089984/202005/1089984-20200508094546754-907266824.jpg" alt="file"><br>
+随着诸如Apache Flink，Apache Spark，Apache Storm之类的开源框架以及诸如Google Dataflow之类的云框架的增多，创建实时数据处理作业变得非常容易。这些API定义明确，并且诸如Map-Reduce之类的标准概念在所有框架中都遵循几乎相似的语义。</p>
+<p>但是，直到今天，实时数据处理领域的开发人员都在为该领域的某些特性而苦苦挣扎。因此，他们在不知不觉中创建了一条路径，该路径导致了应用程序中相当常见的错误。</p>
+<p>让我们看一下在设计实时应用程序时可能需要克服的一些陷阱。</p>
+<h1 id="活动时间">活动时间</h1>
+<p>源生成数据的时间戳称为“ <strong>事件时间”</strong>，而应用程序处理数据的时间戳称为“ <strong>处理时间”</strong>。在实时数据流应用程序中，最常见的陷阱是无法区分这些时间戳。</p>
+<p>让我们详细说明一下。</p>
+<p>由于诸如代理中的GC较高或太多数据导致背压之类的多个问题，数据队列易出现延迟。我将事件表示为（E，P），其中E是事件时间戳（HH：MM：SS格式），P是处理时间戳。在理想世界中，E == P，但这在任何地方都不会发生。</p>
+<p>假设我们收到以下数据</p>
+<pre><code>（'05：00：00'，'05：00：02'），（'05：00：01'，'05：00：03'），（'05：00：01'，'05：00： 03'），（'05:00:01'，'05:00:05'），
+（'05:00:02'，'05:00:05'），（'05:00:02'，' 05:00:05'）
+</code></pre>
+<p>现在，我们假设有一个程序可以计算每秒接收到的事件数。根据事件时间，程序返回</p>
+<pre><code>[05:00:00，05:00:01）= 1 
+[05:00:01，05:00:02）= 3 
+[05:00:02，05:00:03）= 2
+</code></pre>
+<p>但是，基于处理时间，输出为</p>
+<pre><code>[5时○○分00秒，5点00分01秒）= 0 
+[5点00分01秒，5点00分02秒）= 0 
+[5点00分02秒，5时00分03秒）= 1 
+[05:00： 03，05:00:04）= 2 
+[05:00:04，05:00:05）= 0 
+[05:00:05，05:00:06）= 3
+</code></pre>
+<p>如您所见，这两个都是完全不同的结果。</p>
+<h1 id="数据流中异常的延迟">数据流中异常的延迟</h1>
+<p>大多数实时数据应用程序使用来自分布式队列的数据，例如Apache Kafka，RabbitMQ，Pub / Sub等。队列中的数据由其他服务生成，例如消费者应用程序的点击流或数据库的日志。</p>
+<p>问题队列容易受到延迟的影响。即使在几十毫秒内，生成的事件也可能到达您的工作中，或者在最坏的情况下可能会花费一个多小时（极高的背压）。由于以下原因，数据可能会延迟：</p>
+<ul>
+<li>kafka上的高负载</li>
+<li>生产者在其服务器中缓冲数据</li>
+<li>由于应用程序中的背压，消耗速度慢</li>
+</ul>
+<p>假设数据将永远不会延迟是一个巨大陷阱。开发人员应始终具有测量数据延迟的工具。例如，在Kafka，您应该检查偏移量滞后。</p>
+<p>您还应该监视作业中的背压以及延迟（即事件时间与处理时间之间的差）。没有这些将导致数据意外丢失，例如10分钟。时间窗口似乎没有数据，并且窗口显示10分钟。之后，其期望值将是预期值的两倍。</p>
+<h1 id="joins">Joins</h1>
+<p>在批处理数据处理系统中，将两个数据集合并起来比较简单。在流处理世界中，情况变得有些麻烦。</p>
+<pre><code>//数据集的格式为（时间戳，键，值）
+//数据组1 （05:00: 
+00，A，值A），
+（05:00: 01，B，值B），（05:00： 04，C，值C），（05:00:04，D，值D）
+//数据流2 
+（05:00:00，A，值A'），（05:00:02，B，值B' ），
+（05:00:00，C，值C'）
+</code></pre>
+<p><img src="https://img2020.cnblogs.com/other/1089984/202005/1089984-20200508094547130-248926768.jpg" alt="file"></p>
+<p>现在，我们将两个数据流都放在它们的Key上。为简单起见，我们将进行内部联接。</p>
+<p><strong>Key A</strong> — 值A和值A'都同时到达。因此，我们可以轻松地将它们组合为一个函数并发出输出</p>
+<p><strong>Key B</strong> — 值B比值B`早1秒。因此，我们需要在数据流1上等待至少1秒钟，才能使连接正常工作。因此，您需要考虑以下内容-</p>
+<ul>
+<li>那一秒钟的数据将存储在哪里？</li>
+<li>如果1秒不是固定的延迟，并且在最坏的情况下不规则地增加到10分钟怎么办？</li>
+</ul>
+<p><strong>Key C</strong> —值C比值C'晚4秒钟到达。这与以前相同，但是现在您在数据流1和2中都具有不规则的延迟，并且没有固定的模式将其值设为1。</p>
+<p><strong>Key D</strong> —值D到达，但是没有观察到值D'。考虑以下-</p>
+<ul>
+<li>您要等多久才能获得价值D`？</li>
+<li>如果值D`可以从至少5秒到接近1小时的任何时间出现，该怎么办？</li>
+<li>如果这是一个外部联接，而您必须决定何时单独发出值D，该怎么办？</li>
+<li>如果在前一种情况下，在发出值D 1分钟后到达值D`，该怎么办？</li>
+</ul>
+<p><img src="https://img2020.cnblogs.com/other/1089984/202005/1089984-20200508094547902-1029191610.jpg" alt="file"></p>
+<p>以上所有问题的答案将取决于您的用例。重要的是要考虑所有这些问题，而不是忽略流系统的复杂性。</p>
+<p><strong>一定要注意  不要回避这些问题</strong></p>
+<h1 id="配置">配置</h1>
+<p>在标准微服务中，配置位于作业内部或数据库中。您可以在数据流应用程序中执行相同的操作。但是，在继续使用此方法之前，您需要考虑以下事项。</p>
+<h2 id="您将多久访问一次配置？">您将多久访问一次配置？</h2>
+<p>如果需要为每个事件访问配置，并且事件数量很多（超过一百万RPM），那么您也可以尝试其他方法。一种是将配置存储在作业状态中。这可以使用状态处理在Flink和Spark中完成。可以使用文件读取器或Kafka中的其他流以状态填充该配置。</p>
+<p>在流处理世界中，针对每个事件进行数据库调用可能会使您的应用程序变慢并导致背压。选择是使用快速数据库，还是通过在应用程序内部存储状态来消除网络调用。</p>
+<h2 id="您的配置有多大？">您的配置有多大？</h2>
+<p>如果配置很大，则仅当配置可以拆分到多个服务器时才应使用应用程序内状态，例如，一个配置为每个用户保留一些阈值。可以基于用户ID密钥将这样的配置拆分到多台计算机上。这有助于减少每台服务器的存储量。</p>
+<p>如果无法在节点之间拆分配置，请首选数据库。否则，所有数据将需要路由到包含配置的单个服务器，然后再次重新分发。唯一包含配置的服务器充当该方案的瓶颈。</p>
+<p><img src="https://img2020.cnblogs.com/other/1089984/202005/1089984-20200508094548383-600121401.jpg" alt="file"></p>
+<p>设计实时数据流应用程序似乎很容易，但是开发人员会犯很多上述错误，特别是如果它们来自微服务领域。</p>
+<p>重要的部分是了解数据流的基础知识以及如何处理单个流，然后转到处理多个联接，实时配置更新等的复杂应用程序。</p>
+<p>更多实时数据分析相关博文与科技资讯，欢迎关注 “实时流式计算”</p>
+<p><img src="https://img2020.cnblogs.com/other/1089984/202005/1089984-20200508094548845-1832571484.jpg" alt="file"></p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-08 09:46</span>&nbsp;
+<a href="https://www.cnblogs.com/tree1123/">独孤风</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12848672" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12848672);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 325964, cb_blogApp = 'tree1123', cb_blogUserGuid = '7b0c4ffd-5dd1-e611-845c-ac853d9f53ac';
+    var cb_entryId = 12848672, cb_entryCreatedDate = '2020-05-08 09:46', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 独孤风
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

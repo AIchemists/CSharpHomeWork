@@ -4,25 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="origin" />
-    <meta property="og:description" content="随着团队越来越多，越来越大，需求更迭越来越快，每天提交的代码变更由原先的2位数，暴涨到3位数，每天几百次代码Check In，补丁提交，大量的代码审查消耗了大量的资源投入。 如何确保提交代码的质量和提" />
+    <meta property="og:description" content="引言 看到这个标题的时候，相信大部分人的第一反应一定是：卧槽！标题党来了！ 是的，你猜对了，-_-。 其实之所以写这篇文章，是因为有一个读者，遇到了人生中一次比较重要的抉择，因而来咨询LZ，而LZ恰好" />
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>.NET Core技术研究-通过Roslyn代码分析技术规范提升代码质量 - Eric zhou - 博客园</title>
+    <title>新人程序员必须知道的，不然等你回过神来的时候，一切已晚矣。 - 左潇龙 - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
-    <link id="MainCss" rel="stylesheet" href="/skins/simpleblue/bundle-simpleblue.min.css?v=A3b2aPJdyRz0wsOsfRnhl-bqaa45nYsYwvEqo53RYFs" />
     
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/zuoxiaolong/custom.css?v=JJ6ZKSE7cHh2VgSn56d7gVyPnYk=" />
     <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/simpleblue/bundle-simpleblue-mobile.min.css?v=X7swQJ1TyCJAf6FMVjDPbYhUAiMdNFddEy1-m0_TbFQ" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/tianqing/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/tianqing/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/tianqing/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/zuoxiaolong/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/zuoxiaolong/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/zuoxiaolong/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 27084;
-        var currentBlogApp = 'tianqing';
+        var currentBlogId = 160491;
+        var currentBlogApp = 'zuoxiaolong';
         var cb_enable_mathjax = false;
         var isLogined = false;
         var skinName = 'SimpleBlue';
@@ -38,10 +38,10 @@
     <div id="header">
         <div id="blogTitle">
             
-<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/tianqing/">I love .net</a>
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/zuoxiaolong/">Java paradise</a>
 </div>
 <div class="subtitle">
-
+Always on the way of programming.
 </div>
 
         </div>
@@ -52,19 +52,18 @@
 博客园</a>
 </li>
     <li id="nav_myhome">
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/tianqing/">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/zuoxiaolong/">
 首页</a>
 </li>
     <li id="nav_newpost">
 
-<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
-新随笔</a>
+
 </li>
     <li id="nav_contact">
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/Eric%20zhou">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%B7%A6%E6%BD%87%E9%BE%99">
 联系</a></li>
     <li id="nav_rss">
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/tianqing/rss/">
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/zuoxiaolong/rss/">
 订阅</a></li>
     <li id="nav_admin">
 <a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
@@ -75,12 +74,12 @@
             <div class="blogStats">
                 
 <span id="stats_post_count">随笔 - 
-102&nbsp;</span>
+284&nbsp;</span>
 <span id="stats_article_count">文章 - 
 0&nbsp;</span>
 <!-- <span id="stats-comment_count"></span> -->
 <span id="stats_comment_count">评论 - 
-422</span>
+3928</span>
             </div>
         </div>
     </div>
@@ -92,295 +91,152 @@
         <div class="post">
             <h1 class="postTitle">
                 
-<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/tianqing/p/12815747.html">.NET Core技术研究-通过Roslyn代码分析技术规范提升代码质量</a>
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/zuoxiaolong/p/12834121.html">新人程序员必须知道的，不然等你回过神来的时候，一切已晚矣。</a>
 
             </h1>
             <div class="clear"></div>
             <div class="postBody">
                 
 <div id="cnblogs_post_body" class="blogpost-body ">
-    <p>随着团队越来越多，越来越大，需求更迭越来越快，每天提交的代码变更由原先的2位数，暴涨到3位数，每天几百次代码Check In，补丁提交，大量的代码审查消耗了大量的资源投入。</p>
-<p>如何确保提交代码的质量和提测产品的质量，这两个是非常大的挑战。</p>
-<p>工欲善其事，必先利其器。在上述需求背景下，今年我们准备用工具和技术，全面把控并提升代码质量和产品提测质量。即：</p>
-<p><strong>1. 代码质量提升：</strong>通过自定义代码扫描规则，将有问题的代码、不符合编码规则的代码扫描出来，禁止签入</p>
-<p><strong>2. 产品提测质量：</strong>通过单元测试覆盖率和执行通过率，严控产品提交质量，覆盖率和通过率达不到标准，无法提交测试。</p>
-<p>准备用2篇文章，和大家分享我们是如何提升代码质量和产品提测质量的。今天分享第一篇：通过Roslyn代码分析全面提升代码质量。</p>
-<p><span style="font-size: 18pt;"><strong>一、什么是Roslyn</strong></span></p>
-<p>&nbsp; Roslyn 是微软开源的 .NET 编译平台(.NET Compiler Platform)。&nbsp; 编译平台支持 C# 和 Visual Basic 代码编译，并提供丰富的代码分析 API。</p>
-<p>&nbsp;&nbsp;利用Roslyn可以生成代码分析器和代码修补程序，从而发现和更正编码错误。&nbsp;</p>
-<p>&nbsp;&nbsp;分析器不仅理解代码的语法和结构，还能检测应更正的做法。 代码修补程序建议一处或多处修复，以修复分析器发现的编码错误。</p>
-<p>&nbsp; 我们写下面一堆代码，Roslyn编译器会有如下提示：&nbsp;</p>
-<p>&nbsp;&nbsp;<img src="https://img2020.cnblogs.com/blog/23525/202005/23525-20200502070311367-2098644613.jpg" alt=""></p>
-<p>&nbsp;通过编写分析器和代码修补程序，主要服务以下场景：&nbsp;&nbsp;</p>
-<ul>
-<li>强制执行团队编码标准（Local）</li>
-<li>提供库包方面的指导约束（Nuget）</li>
-<li>提供代码分析器相关的VSIX扩展插件（Visual Studio Marketplace）</li>
-</ul>
-<p>&nbsp;Roslyn是如何做到代码分析的呢？这背后依赖于一套强大的语法分析和API：</p>
-<p>&nbsp;<img src="https://img2020.cnblogs.com/blog/23525/202005/23525-20200502070658623-255351950.png" alt="" width="1017" height="514"></p>
-<p>&nbsp; 上图中：Language Service：语言层面的服务，可以简单理解为我们在VS中编码时,可以实现的语法高亮、查找所有引用、重命名、转到定义、格式化、抽取方法等操作</p>
-<p>&nbsp; Compiler API：编译器API，这里提供了Syntax Tree API代码语法树API，Symbol API代码符号API</p>
-<p>&nbsp; Binding and Flow Anllysis APIs绑定和流分析API（<a href="https://joshvarty.com/2015/02/05/learn-roslyn-now-part-8-data-flow-analysis/">https://joshvarty.com/2015/02/05/learn-roslyn-now-part-8-data-flow-analysis/</a>），</p>
-<p>&nbsp; Emit API编译反射发出API（<a href="https://joshvarty.com/2016/01/16/learn-roslyn-now-part-16-the-emit-api/">https://joshvarty.com/2016/01/16/learn-roslyn-now-part-16-the-emit-api/</a>）</p>
-<p>&nbsp; 这里我们详细看一下语法树、符号、语义模型、工作区：</p>
-<p>&nbsp; 1.&nbsp;<strong>语法树是一种由编译器 API 公开的基础数据结构。</strong> 这些树表示源代码的词法和语法结构。其包含：&nbsp;&nbsp;</p>
-<ul>
-<li>语法节点：是语法树的一个主要元素。 这些节点表示声明、语句、子句和表达式等语法构造。</li>
-<li>语法标记：表示代码的最小语法片段。 语法标记包含关键字、标识符、文本和标点。</li>
-<li>琐碎内容：对正常理解代码基本上没有意义的源文本部分，例如空格、注释和预处理器指令。</li>
-<li>范围：每个节点、标记或琐碎内容在源文本内的位置和包含的字符数。</li>
-<li>种类：标识节点、标记或琐碎内容所表示的确切语法元素。</li>
-<li>错误：表示源文本中包含的语法错误。</li>
-</ul>
-<p>&nbsp; &nbsp; &nbsp;看一张语法树的图：</p>
-<p>&nbsp;&nbsp;<img src="https://img2020.cnblogs.com/blog/23525/202005/23525-20200502071431277-1800488714.png" alt="" width="844" height="723"></p>
-<p>&nbsp;<strong> 2. 符号：</strong>符号表示源代码声明的不同元素，或作为元数据从程序集中导出。每个命名空间、类型、方法、属性、字段、事件、参数或局部变量都由符号表示。</p>
-<p><strong>&nbsp; 3. 语义模型</strong>：语义模型表示单个源文件的所有语义信息。 可使用语义模型查找到以下内容：&nbsp; &nbsp;</p>
-<ul>
-<li>在源中特定位置引用的符号。</li>
-<li>任何表达式的结果类型。</li>
-<li>所有诊断（错误和警告）。</li>
-<li>变量流入和流出源区域的方式。</li>
-<li>更多推理问题的答案。</li>
-</ul>
-<p><strong>&nbsp; 4. 工作区：工作区是对整个解决方案执行代码分析和重构的起点。相关的API可以实现：</strong></p>
-<p>&nbsp; &nbsp; &nbsp;将解决方案中项目的全部相关信息组织为单个对象模型，可让用户直接访问编译器层对象模型（如源文本、语法树、语义模型和编译），而无需分析文件、配置选项，或管理项目内依赖项。</p>
-<p>&nbsp; &nbsp;<img src="https://img2020.cnblogs.com/blog/23525/202005/23525-20200502071829502-1758566839.png" alt=""></p>
-<p>&nbsp; 了解了Roslyn的大致情况之后，我们开始基于Roslyn做一些&ldquo;不符合编程规范要求（团队自定义的）&rdquo;的代码分析。</p>
-<p><span style="font-size: 18pt;"><strong>二、基于Roslyn进行代码分析</strong></span></p>
-<p>&nbsp; 接下来讲通过Show case的方法，通过实际的场景和大家分享。在我们编写实际的代码分析器之前，我们先把开发环境准备好<strong>&nbsp; ：</strong></p>
-<p><strong>&nbsp; &nbsp; 使用VS2017创建一个Analyzer with Code Fix工程</strong></p>
-<p><strong>&nbsp; &nbsp; 因为我本机的VS2019找了好久没找到对应的工程，这个章节，使用VS2017吧</strong></p>
-<p><strong>&nbsp; &nbsp;&nbsp;<img src="https://img2020.cnblogs.com/blog/23525/202005/23525-20200502081551012-1511241433.png" alt=""></strong></p>
-<p>&nbsp; &nbsp; 创建完成会有两个工程：</p>
-<p>&nbsp; &nbsp;&nbsp;<img src="https://img2020.cnblogs.com/blog/23525/202005/23525-20200502081807148-827305611.jpg" alt=""></p>
-<p>&nbsp; &nbsp; 其中，TeldCodeAnalyzer.Vsix工程，主要用以生成VSIX扩展文件</p>
-<p>&nbsp; &nbsp;TeldCodeAnalyzer工程，主要用于编写代码分析器。</p>
-<p>&nbsp; &nbsp; 工程转换好之后，我们开始编码吧。</p>
-<p><strong>&nbsp;1. catch 吞掉异常场景</strong></p>
-<p>&nbsp; <strong>问题：</strong><span style="color: #ff0000;">catch吞掉异常后，线上很难排查问题，同时确定哪块代码有问题</span></p>
-<p>&nbsp; 示例代码：</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:csharp;gutter:true;">try
-{
-     var logService = HSFService.Proxy&lt;ILogService&gt;();
-     logService.SendMsg(new SysActionLog());
-}
-catch (Exception ex)
-{
-                
-}
-</pre>
-</div>
-<p>&nbsp; 需求：当开发人员在catch吞掉异常时，给与编程提示：异常吞掉时必须上报监控或者日志</p>
-<p>&nbsp; 明确了上述需要，我们开始编写Roslyn代码分析器。ExceptionCatchWithMonitorAnalyzer</p>
-<p>&nbsp;&nbsp;<img src="https://img2020.cnblogs.com/blog/23525/202005/23525-20200502082036672-1451191614.jpg" alt=""></p>
-<p>&nbsp; 我们详细解读一下：</p>
-<p>&nbsp; ①&nbsp;ExceptionCatchWithMonitorAnalyzer必须继承抽象类DiagnosticAnalyzer</p>
-<p>&nbsp; ② 重写方法SupportedDiagnostics，注册代码扫描规则：DiagnosticDescriptor&nbsp; &nbsp;&nbsp;</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:csharp;gutter:true;">internal static DiagnosticDescriptor Rule = new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-            DiagnosticSeverity.Warning, isEnabledByDefault: true, description: Description);
-
-public override ImmutableArray&lt;DiagnosticDescriptor&gt; SupportedDiagnostics =&gt; ImmutableArray.Create(Rule);
-</pre>
-</div>
-<p>　③ 重写方法Initialize，注册Microsoft.CodeAnalysis.SyntaxNode完成Catch语句的语义分析后的事件Action</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:csharp;gutter:true;">public override void Initialize(AnalysisContext context)
-{           context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.Analyze | GeneratedCodeAnalysisFlags.None);
-            context.EnableConcurrentExecution();
-            context.RegisterSyntaxNodeAction(AnalyzeDeclaration, SyntaxKind.CatchClause);
-}
-</pre>
-</div>
-<p>　④ 实现语法分析AnalyzeDeclaration，检查对catch语句中代码实现&nbsp; &nbsp;</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:csharp;gutter:true;">private void AnalyzeDeclaration(SyntaxNodeAnalysisContext context)
-{
-            var catchClause = (CatchClauseSyntax)context.Node;
-            var block = catchClause.Block;
-            foreach (var statement in block.Statements)
-            {
-                if (statement is ThrowStatementSyntax)
-                {
-                    return;
-                }
-            }
-
-
-            if (Common.IsReallyContains(block, "MonitorClient") == false)
-            {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, block.GetLocation()));
-            }
-}
-</pre>
-</div>
-<p>　　代码实现后的效果（直接调试VSIX工程即可）</p>
-<p style="margin-left: 30px;">&nbsp;&nbsp;<img src="https://img2020.cnblogs.com/blog/23525/202005/23525-20200502083022109-712054259.png" alt=""></p>
-<p style="margin-left: 30px;">代码编译后也有对应Warnning提示</p>
-<p><strong>&nbsp;2. 在For循环中进行服务调用</strong></p>
-<p><strong>&nbsp; 问题：</strong>for循环中调用RPC服务，每次访问都会发起一次RPC请求，如果循环次数太多，性能很差，建议使用批量处理的RPC方法</p>
-<p>&nbsp;<strong> 示例代码：</strong></p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:csharp;gutter:true;">foreach (var item in items)
-{
-      var logService = HSFService.Proxy&lt;ILogService&gt;();
-      logService.SendMsg(new SysActionLog());
-}　　</pre>
-</div>
-<p>&nbsp;&nbsp;<strong>需求：</strong>当开发人员在For循环中调用HSF服务时，给与编程提示：不建议在循环中调用HSF服务, 建议调用批量处理方法.</p>
-<p>&nbsp; 明确了上述需要，我们开始编写Roslyn代码分析器。HSFForLoopAnalyzer&nbsp;&nbsp;</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:csharp;gutter:true;">    [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    public sealed class HSFForLoopAnalyzer : DiagnosticAnalyzer
-    {
-        public const string DiagnosticId = "TA001";
-        internal const string Title = "增加循环中HSF服务调用检查";
-        public const string MessageFormat = "不建议在循环中调用HSF服务, 建议调用批量处理方法.";
-        internal const string Category = "CodeSmell";
-
-        internal static DiagnosticDescriptor Rule = new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-            DiagnosticSeverity.Warning, isEnabledByDefault: true);
-
-        public override ImmutableArray&lt;DiagnosticDescriptor&gt; SupportedDiagnostics =&gt; ImmutableArray.Create(Rule);
-
-        public override void Initialize(AnalysisContext context)
-        {
-            context.RegisterSyntaxNodeAction(AnalyzeMethodForLoop, SyntaxKind.InvocationExpression);
-        }
-
-        private static void AnalyzeMethodForLoop(SyntaxNodeAnalysisContext context)
-        {
-            var expression = (InvocationExpressionSyntax)context.Node;
-            string exressionText = expression.ToString();
-            if (Common.IsReallyContains(expression, "HSFService.Proxy&lt;"))
-            {
-                var loop = expression.Ancestors().FirstOrDefault(p =&gt; p is ForStatementSyntax || p is ForEachStatementSyntax || p is DoStatementSyntax || p is WhileStatementSyntax);
-                if (loop != null)
-                {
-                    var diagnostic = Diagnostic.Create(Rule, expression.GetLocation());
-                    context.ReportDiagnostic(diagnostic);
-                    return;
-                }
-
-                if (Common.IsReallyContains(expression, "&gt;.") == false)
-                {
-                    var syntax = expression.Ancestors().FirstOrDefault(p =&gt; p is LocalDeclarationStatementSyntax);
-                    if (syntax != null)
-                    {
-                        var declaration = (LocalDeclarationStatementSyntax)syntax;
-                        var variable = declaration.Declaration.Variables.SingleOrDefault();
-                      
-
-                        var method = declaration.Ancestors().First(p =&gt; p is MethodDeclarationSyntax);
-                        var expresses = method.DescendantNodes().Where(p =&gt; p is InvocationExpressionSyntax);
-                        foreach (var express in expresses)
-                        {
-                            loop = express.Ancestors().FirstOrDefault(p =&gt; p is ForStatementSyntax || p is ForEachStatementSyntax || p is DoStatementSyntax || p is WhileStatementSyntax);
-                            if (loop != null)
-                            {
-                                var diagnostic = Diagnostic.Create(Rule, expression.GetLocation());
-                                context.ReportDiagnostic(diagnostic);
-                                return;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-</pre>
-</div>
-<p>　　基本的实现方式，和上一个差不多，唯一不同的逻辑是在实际的代码分析过程中，AnalyzeMethodForLoop。大家可以根据自己的需要写一下。</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp;实际的效果：</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp;<img src="https://img2020.cnblogs.com/blog/23525/202005/23525-20200502084130726-1466800280.jpg" alt=""></p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp;还有几个代码检查场景，基本都是同样的实现思路，再次不一一罗列了。</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp;在这里还可以自动完成代理修补程序，这个地方我们还在研究中，可能每个业务代码的场景不同，很难给出一个通用的改进代码，所以这个地方等后续我们完成后，再和大家分享。</p>
-<p><strong><span style="font-size: 18pt;">三、通过Roslyn实现静态代码扫描</span></strong></p>
-<p>&nbsp; 线上很多代码已经写完了，发布上线了，对已有的代码进行代码扫描也是非常重要的。因此，我们对catch吞掉异常的代码进行了一次集中扫描和改进。</p>
-<p>&nbsp; 那么基于Roslyn如何实现静态代码扫描呢？主要的步骤有：</p>
-<p>&nbsp; ① 创建一个编译工作区MSBuildWorkspace.Create()</p>
-<p>&nbsp; ② 打开解决方案文件OpenSolutionAsync(slnPath);&nbsp;&nbsp;</p>
-<p>&nbsp; ③ 遍历Project中的Document</p>
-<p>&nbsp; ④ 拿到代码语法树、找到Catch语句CatchClauseSyntax</p>
-<p>&nbsp; ⑤ 判断是否有throw语句，如果没有，收集数据进行通知改进</p>
-<p>&nbsp; 看一下具体代码实现：</p>
-<p>&nbsp; 先看一下Nuget引用：</p>
-<p><strong>&nbsp;&nbsp;Microsoft.CodeAnalysis</strong></p>
-<p><strong>&nbsp;&nbsp;Microsoft.CodeAnalysis.Workspaces.MSBuild</strong></p>
-<p><strong>&nbsp;&nbsp;<img src="https://img2020.cnblogs.com/blog/23525/202005/23525-20200502085205392-358829189.jpg" alt="" width="1030" height="702"></strong></p>
-<p>&nbsp; 代码的具体实现：</p>
-<p>&nbsp;&nbsp;<img src="https://img2020.cnblogs.com/blog/23525/202005/23525-20200502084938090-804921634.jpg" alt="">&nbsp; &nbsp;&nbsp;</p>
-<div class="cnblogs_Highlighter">
-<pre class="brush:csharp;gutter:true;"> public async Task&lt;List&lt;CodeCheckResult&gt;&gt; CheckSln(string slnPath)
-        {
-            var slnFile = new FileInfo(slnPath);
-            var results = new List&lt;CodeCheckResult&gt;();          
-            var solution = await MSBuildWorkspace.Create().OpenSolutionAsync(slnPath);            
-
-            if (solution.Projects != null &amp;&amp; solution.Projects.Count() &gt; 0)
-            {
-                foreach (var project in solution.Projects.ToList())
-                {
-                    var documents = project.Documents.Where(x =&gt; x.Name.Contains(".cs"));
-
-                    foreach (var document in documents)
-                    {
-                        var tree = await document.GetSyntaxTreeAsync();
-                        var root = tree.GetCompilationUnitRoot();
-                        if (root.Members == null || root.Members.Count == 0) continue;
-                        //member
-                        var firstmember = root.Members[0];
-                        //命名空间Namespace
-                        var namespaceDeclaration = (NamespaceDeclarationSyntax)firstmember;
-
-                        foreach (var classDeclare in namespaceDeclaration.Members)
-                        {
-                            var programDeclaration = classDeclare as ClassDeclarationSyntax;
-
-                            foreach (var method in programDeclaration.Members)
-                            {
-
-                                //方法 Method
-                                var methodDeclaration = (MethodDeclarationSyntax)method;
-
-                                var catchNode = methodDeclaration.DescendantNodes().FirstOrDefault(i =&gt; i is CatchClauseSyntax);
-                                if (catchNode != null)
-                                {
-                                    var catchClause = catchNode as CatchClauseSyntax;
-                                    if (catchClause != null || catchClause.Declaration != null)
-                                    {
-                                        if (catchClause.DescendantNodes().OfType&lt;ThrowStatementSyntax&gt;().Count() == 0)
-                                        {
-                                            results.Add(new CodeCheckResult()
-                                            {
-                                                Sln = slnFile.Name,
-                                                ProjectName = project.Name,
-                                                ClassName = programDeclaration.Identifier.Text,
-                                                MethodName = methodDeclaration.Identifier.Text,
-                                            });
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            return results;
-        }　　</pre>
-</div>
-<p>&nbsp; &nbsp; &nbsp;以上是通过Roslyn代码分析全面提升代码质量的一些具体实践，分享给大家。</p>
+    <h3>引言</h3>
+<p>　　</p>
+<p>　　看到这个标题的时候，相信大部分人的第一反应一定是：卧槽！标题党来了！</p>
+<p>　　是的，你猜对了，-_-。</p>
+<p>　　其实之所以写这篇文章，是因为有一个读者，遇到了人生中一次比较重要的抉择，因而来咨询LZ，而LZ恰好无事，因此就十分耐心的给这个读者谈了谈自己的一些想法，而这个读者事后也表示茅厕顿开。</p>
+<p>　　后来LZ觉得这次谈话内容，或许对不少人也有帮助和警醒的作用，因此就决定索性用文字的形式记录下来，这就是这篇文章出处了。</p>
+<p>　　当然了，是否对所有人都有用，LZ也不做任何担保，现在毕竟是信息爆炸时代，所有人都需要具备两项最基本的技能：信息筛选和自我判断能力。</p>
+<p>　　不然的话，你早晚会被淹没在网络的信息海洋里。</p>
+<p>　　好了，接下来言归正传，咱们先来简单聊聊这位读者，面临着怎样的困惑。</p>
+<p>　　</p>
+<h3>是否该跳槽</h3>
+<p>　　</p>
+<p>　　是的，这个读者当时问的，就是这个问题。</p>
+<p>　　看到这个问题，应该算是老生常谈了，是否该跳槽这个疑惑，相信绝大多数，甚至可以说是所有人都面临过这个问题。</p>
+<p>　　而这个问题的每一次抉择，或许都会改变你以后的职场轨迹，因此这个问题的选择就显得格外重要。</p>
+<p>　　事实上，不止本文提到的这一个读者问过LZ这个问题，很多人都咨询过这个问题，而LZ对此类问题的统一回答是：该不该跳槽，你说了不算，市场说了算。</p>
+<p>　　说人话就是：<strong>你得出去找找看，能找到更好的就该跳，否则......从哪里来，回哪里去，老老实实继续提升自己才是正道。</strong></p>
+<p>　　之所以会有这样的回答，其实这里面核心的逻辑有两点。</p>
+<p>　　<strong>第一点就是围城现象</strong>，当你产生了跳槽的想法的时候，说明你的心里其实已经开始躁动了，这种情况下，如果你不出去试试看的话，很可能会造成你对当前的工作也无法尽心尽力，这个时候，你就必须出去看一看，否则你的心态会长时间处于一种对工作厌烦的状态，这对你没有任何好处。</p>
+<p>　　而你出去试一下就不同了，如果你能找到更好的，那自然皆大欢喜，哪怕你找不到更好的，你也会知道外面的世界并没有你想象的那么美好，你最起码可以踏实在当前的工作岗位好好工作。</p>
+<p>　　所以，围城现象，是LZ提出这个建议的第一个核心逻辑。</p>
+<p>　　而第二个逻辑，其实是打破信息不对称，或者说信息最大化，说白了就是，<strong>当你遇到一件事不知道如何判断的时候，那就尽可能搜集更多的信息，来帮助你判断，这样你做出错误选择的可能性就会大大降低</strong>。</p>
+<p>　　这其实也很容易理解，如果你明确的知道了，你出去是什么样的后果，你自然会更加容易判断你该不该跳槽。</p>
+<p>　　就好比你现在有A和B两个女生都想和你结婚，而你不知道选A当老婆好，还是选B当老婆好，最好的办法当然是掌握A和B更多的信息，比如她们的家境、性格、爱好，甚至是三围，这样你才好去判断到底选哪个好，选错的概率自然也会大大降低。</p>
+<p>　　当然了，这只是个举个例子，LZ知道作为单身狗的你，是不会面临这种选择的，-_-。</p>
+<p>　　说回正题，事实上，当这位读者问这个问题的时候，因为LZ和这位读者聊的比较投机，因此在谈的时候，LZ其实不仅仅谈了跳槽这个问题，而是谈到了程序员的发展路线。</p>
+<p>　　毕竟跳槽在某种程度上，会极大的影响到你未来的发展路线，因此聊跳槽聊的深了，不可避免的就会谈到发展路线，这也是本文重点要谈的一个话题，也是为何LZ觉得值得记录下来的一点。</p>
+<p>　　其实关于程序员的发展路线，LZ以前也聊过，但都比较零碎，这次LZ准备系统的来谈一谈这个问题。</p>
+<p>　　话不多说，接下来就进入主题。</p>
 <p>&nbsp;</p>
-<p>周国庆</p>
-<p>2020/5/2</p>
+<h3>发展路线是什么？</h3>
+<p>　　</p>
+<p>　　在正式谈这个话题之前，LZ先要说一下，发展路线到底是什么？</p>
+<p>　　其实发展路线本身的定义很简单，无非是规划自己未来几年到底要达到哪种高度，然后为了这个目标而去努力。</p>
+<p>　　而大部分人在规划自己的职业发展路线时，都是几年当上项目经理，几年当上架构师之类的，包括之前的LZ自己，也是这么给自己定目标的。</p>
+<p>　　但LZ相信，大部分人规划完以后，都会比较迷茫，特别是当上了公司所为的&ldquo;项目经理&rdquo;和&ldquo;架构师&rdquo;，完成了自己的目标时，反而更会有一种心里茫然的感觉，总觉得哪里不对，又说不上来到底是哪里不对。</p>
+<p>　　事实上，之所以会有这样的感觉，其实是<strong>目标价值不够清晰</strong>所导致的。</p>
+<p>　　上面这句话，是LZ基于自己的理解所总结的，可能不太好理解，接下来LZ举个例子，相信大家就很容易明白了。</p>
+<p>　　比如很早的时候，那时候还没有货币，大家都是以物换物，因此那时候，每个东西的价值，是很难具体衡量的，可能你觉得比较贵的东西，别人觉得很廉价，反之亦然。</p>
+<p>　　后来，货币出现了，大家对于物品的价值有了直观的感受，拿现在的人民币来举例，每个东西到底值多少钱，是非常具体的一个数字。</p>
+<p>　　因此，在这个时候，价值就很清晰了。</p>
+<p>　　回到刚才的话题，很多人之所以对自己的职业规划茫然，其实本质是因为，&ldquo;项目经理&rdquo;、&ldquo;架构师&rdquo;这样的称呼，就和之前以物换物时代的物品一样，它的价值是不固定的，当你以一个不固定价值的东西为目标时，就很难衡量你是否达到了目标，你自然就会很迷茫。</p>
+<p>　　因为你根本不知道，你到底有没有达到目标，毕竟你的目标价值本身就很难衡量。</p>
+<p>　　这也是为什么定目标的时候，要强调目标一定要清晰，因为一个无法衡量的目标，很容易让一个人产生迷茫的情绪，也很容易失去斗志。</p>
+<p>　　就比如LZ在工作2年的时候，就坐上了项目经理的位置，管理一个将近20人的团队，看似已经达到了最初LZ给自己定的&ldquo;项目经理&rdquo;的目标，但LZ当时却一度十分茫然，因为LZ总觉得此&ldquo;项目经理&rdquo;非彼&ldquo;项目经理&rdquo;，但又说不上哪里不对，毕竟LZ心目中的那个&ldquo;项目经理&rdquo;的价值，根本就无从判断，因此LZ也不知道到底达没达到目标，也不知道到底离真正的目标到底有多远。</p>
+<p>　　再比如有些人，工作几年就当上了某某公司&ldquo;架构师&rdquo;甚至是&ldquo;CTO&rdquo;，但这个&ldquo;架构师&rdquo;和&ldquo;CTO&rdquo;的价值到底有多大，其实很难去衡量，因为有的公司可能&ldquo;CTO&rdquo;的工资还不如一个大厂的普通资深程序员。</p>
+<p>　　所以，在规划自己的职业发展路线时，给自己定下的目标必须要足够清晰，且可以客观的去衡量，不然你努力之后，压根就不知道自己有没有达标。</p>
+<p>　　那么，说了这么多，重点要来了，到底以什么为目标能满足以上条件呢，答案其实很简单，那就是一个字&mdash;&mdash;&ldquo;钱&rdquo;。</p>
+<p>　　很多读者看到这里可能会说了，&ldquo;你扯了这么半天，就得出这么一个简单的结论，有点太小题大做了吧，这个我早就知道了，我就是这么给自己定目标的，而且我已经达到了目标。&rdquo;</p>
+<p>　　关于这点，LZ只能说，会者不难难者不会，至少当初的LZ，曾经就被这个问题困扰过。</p>
+<p>　　所以，LZ还是希望借这个文章，专门提醒一下那些还陷于迷茫的程序员们，给自己定目标的时候，千万不要定什么&ldquo;项目经理&rdquo;、&ldquo;架构师&rdquo;这些虚头巴脑的目标，这只会把你引向迷茫的深渊。</p>
+<p>　　你的一切目标，只能由一个字来判断&mdash;&mdash;&ldquo;钱&rdquo;。</p>
+<p>　　</p>
+<h3>此&ldquo;钱&rdquo;非彼&ldquo;钱&rdquo;　　</h3>
+<p>　　</p>
+<p>　　有的读者会注意到，LZ给钱加了个双引号，这就意味着，这个标准不仅仅是指的人民币，某些时候，也可以用一些其它的来代替。</p>
+<p>　　但大体上可以分为两种，一种是真正的钱，也就是所谓的人民币，一种则是等级。</p>
+<p>　　而对于等级这种标准，主要是针对大厂程序员来说的，因为从某种程度上来说，大厂程序员的等级，也算是程序员圈子里，比较通用的一种&ldquo;货币&rdquo;，因为它也有其比较固定的价值。</p>
+<p>　　而普通厂子里所谓的&ldquo;高级程序员&rdquo;、&ldquo;项目经理&rdquo;、&ldquo;架构师&rdquo;、&ldquo;CTO&rdquo;、&ldquo;技术总监&rdquo;等等，就不存在任何固定价值了，也无法作为程序员圈子里的&ldquo;货币&rdquo;进行流通，就比如你是某小厂的&ldquo;架构师&rdquo;，到了大厂里以后，指不定是什么等级，甚至可能你连进都进不去。</p>
+<p>　　因此，这些小厂的title统统没有太多的参考价值，就像卖理财的都叫理财顾问，卖房子的都叫置业顾问一样，这些都只是个title，唯一衡量它们的标准，就是真正的人民币。</p>
+<p>　　好了，说了这么多，接下来要进入正题了。</p>
+<p>　　其实前面说清楚了，真正说发展路线反倒比较简单，LZ无非就是给出一个相对比较中等（偏上）的标准，然后让大家来参考，以此来衡量自己到底达到了什么水平，这样就不容易迷茫。</p>
+<p>　　这就好像你高考前准备考试一样，你可能学完以后老会感觉心里没底，但如果你知道了大家都是什么水平以后，你或许心里就会淡定许多了。</p>
+<p>　　而LZ给出这个标准，就是这么个道理，让你知道大多数程序员，他们的水平大概是什么样的，这样你对比自己以后，就会心里有点X数了，这样就不至于太迷茫。</p>
+<p>　　同时，考虑到很多人的起步不同，因此LZ大致分成了两种路线来说，接下来咱们就一一来看下。</p>
+<p>　　</p>
+<h3>大厂（高端）程序员发展路线</h3>
+<p>　　</p>
+<p>　　先来谈一谈大厂程序员发展路线，这一部分，主要说的是那些应届就进入大厂的程序员们，也就是起点比较高的这批人，LZ也称这部分人为高端程序员。</p>
+<p>　　其实这些人的发展路线，一般都是比较固定的，无非就是各个大厂之间来回穿梭，而大厂之间一般都有个等级的折算，因此这批人的发展路线很容易规划，就按照等级来规划就可以了。</p>
+<p>　　根据LZ以往的经验，总结一下就是，头几年234，后面看老天。</p>
+<p>　　翻译一下就是，第一次晋升2年，第二次晋升3年，第三次晋升4年，后面就看情况吧。</p>
+<p>　　拿某里应届生来举例，入厂一般是P5，那么比较合理的发展路线就是，2年升P6，再过3年升P7，再过4年升P8，后面的就交给老天吧。</p>
+<p>　　当然了，LZ给的这个路线，只是作为参考，毕竟LZ自己不属于高端程序员这个群体，因此也不能很确定的给出一个十分官方的标准。</p>
+<p>　　而且不管你是高端程序员，还是接下来LZ要谈的低端程序员，你还有一个可以对比的群体，那就是你的同学，特别是科班出身的同学，同学大多也都是干这个的，那么横向对比之下，你就很容易知道你是否掉队。</p>
+<p>　　而像LZ这种数学专业毕业的就比较悲剧了，同学都是当数学老师的，也没什么可以对比的对象。</p>
 <p>&nbsp;</p>
-<p style="margin-left: 30px;">&nbsp;</p>
+<h3>非大厂（低端）程序员发展路线</h3>
+<p>　　</p>
+<p>　　和高端程序员相反，低端程序员自然就是指的，那些没能一开始就进入大厂的程序员。</p>
+<p>　　这部分程序员中还有一大批和LZ一样从培训班出来的，这部分人往往做了一段时间，体会了高工资所带来的少许快感之后，就容易产生迷茫，因为他们往往不知道自己现在是什么水平，达到了什么程度，以及达到什么程度才算达标。</p>
+<p>　　因为这部分程序员大多混迹于各种不知名的公司，而很多公司并没有大厂那种明确的等级制度，薪资也往往不是和职称直接挂钩的，就比如LZ之前做项目经理的那家公司，升职到项目经理之后，其实薪资并没有什么太大的涨幅，这就容易让人越做越迷茫。</p>
+<p>　　在这里，LZ再次郑重的描述一下，此类低端程序员的发展路线（LZ也属于这一类，培训出身），到底到一定年限应该达到什么样的水平。</p>
+<p>　　一线城市以北京为例，应届生目前基本在年薪10-15W左右，3年基本在年薪30-35W左右，而5年则基本在年薪50W左右。</p>
+<p>　　二线城市则以杭州为例，应届生目前基本年薪在5-10W左右，3年基本在25W左右，而5年则基本在40-45W左右。</p>
+<p>　　LZ给出的这个标准，是中等偏上的水平，因此如果你能跟上，那么你基本上已经超越了大部分人。</p>
+<p>　　另外，还有一种情况需要说一下，那就是低端程序员有的时候，也会进入大厂，而进入大厂之后，可以继续参考上面大厂程序员的路线。</p>
+<p>　　比如某小A四年工作经验时进了某里，职级P6，那么他大体应该在3年内升P7，4年内升P8，同样的，到了P8之后，就看老天了。</p>
+<p>　　按照这样的标准，你就可以随时审视自己，看自己走到了哪一步，看看自己掉队了多少，又或者是领先了多少。</p>
+<p>　　</p>
+<h3>再谈发展路线</h3>
+<p>　　</p>
+<p>　　看完上面的内容后，有的同学可能会比较受打击，觉得自己离这个标准太远，这也是为什么LZ把标题起为&ldquo;否则一切已晚矣&rdquo;的原因。</p>
+<p>　　因为LZ想告诉新人们，如果你觉得你受打击了，那么说明你已经掉队了，那你就得努力跟上，不然你会离队伍越来越远。</p>
+<p>　　这就像当初有个读者问LZ，&ldquo;我看我回老家的那些同学生活的也很好，而我在北京反而生活的紧巴巴，感觉生活条件还不如在老家，这样在北京漂着真的值得吗？&rdquo;</p>
+<p>　　LZ当时的回答是，当他回老家的那一刻，其实你们的差距就已经产生了，只不过短时间内体现不出来而已。</p>
+<p>　　试想一下，假设他在老家年薪10W，你在北京年薪30W，那么一年以后你们的资产就差20W，10年之后，20年之后呢？</p>
+<p>　　这还没算两者涨薪的差距，更何况很多人的老家根本达不到年薪10W，而很多在北京的人也不止年薪30W。</p>
+<p>　　所以，这就是所谓的，一旦掉队，就会掉队的越来越厉害，甚至到最后，你根本就追不上了。</p>
+<p>　　之所以有这样的感慨，其实也是因为LZ自身的经历所致。</p>
+<p>　　在众多读者的眼里，LZ一直扮演着一个还算比较成功的程序员，事实上LZ自己也觉得自己确实已经很幸运了，通过自己的努力，拥有了稳定的生活，作为一个老百姓来说，这其实已经算是很成功了。</p>
+<p>　　但其实从上面那个标准来说，LZ其实也掉队了，而掉队的原因，就是因为LZ之前压根就没有意识到这一点，甚至因为LZ是培训班出身，当时LZ觉得自己反而已经是走在了很多人的前面。</p>
+<p>　　事实上也确实如此，如果按照当时培训班的同学水平来说，LZ确实是走在了很多人，甚至是绝大多数人的前面。</p>
+<p>　　但进了大厂之后，LZ就发现，因为你的起点比较低，其实你已经无形当中落后了很多，而你必须抓紧时间追赶，才能跟上脚步，而如果你没有及时领会到这一点，你就可能失去追赶的机会。</p>
+<p>　　而当一个人满足于现状的时候，是很容易失去这种紧迫感的，因此结局很简单，LZ掉队了。</p>
+<p>　　当然了，这其中其实也有一部分生活的原因，如果LZ是孑身一人，或许LZ当初根本不会来杭州，就算要去大厂，或许也会留在北京，那可能就又是另外一番景象了。</p>
+<p>　　但是，人生无悔，LZ从来不后悔自己做的任何一个决定，所以，感慨归感慨，但LZ从来无悔。</p>
+<p>　　不过，如果可能的话，LZ希望可以警醒一部分新人，<strong>一定要让自己保持不掉队，特别是头5年，十分的重要，如果你前面5年掉队了，那么，后面你追赶的代价，将会是以前的数倍，因为，你在进步的同时，别人也在进步，甚至比你还快，而且别人更早的上位后，会拥有更多的机会，如此恶性循环，你失去的，不仅仅是那一点点掉队的距离，还有前方无数的机会，都会被别人捷足先登</strong>。</p>
+<p>　　比如某里有两个P6，其中一个先一步升了P7，结果后来团队扩张，需要人来带团队，那么谁来带？肯定是P7来带。</p>
+<p>　　后来，因为团队的扩展，P7可能很快又升P8了，而那个P6，可能还是那个P6，他依旧还在那里，不骄不躁。</p>
+<p>　　这就是典型的，一步差，步步差。</p>
+<p>　　所以，请不要给自己留遗憾，在该奋斗的年纪，做该做的事，杜绝温水煮青蛙，你的未来，原本可以更精彩。</p>
+<p>　　</p>
+<h3>再谈生活发展路线</h3>
+<p>　　</p>
+<p>　　说完了工作，咱们来谈谈生活。</p>
+<p>　　生活发展路线是什么？</p>
+<p>　　这个绝大多数人都是一样的，谈恋爱、买房、结婚、生子，不排除部分不婚主义者和丁克一族，但这些毕竟是少数，千百年来形成的人类发展路线，个人其实很难抗衡，如果你要抗衡，你就要面对来自外界异样的眼光和批判，甚至也包括家人的阻拦。</p>
+<p>　　大部分人，最终依旧会选择妥协，但其实妥协的时候，往往只会更加痛苦。</p>
+<p>　　该恋爱的年纪没谈恋爱，该结婚的年纪没结婚，该生孩子的年纪没生孩子，该买房的年纪没买房，到时候，只会留下一地的感慨和遗憾。</p>
+<p>　　当然了，每个人的情况都不同，到底什么时候该做什么，无法一概而论，但和职场一样，LZ也希望警醒一部分人，不要和工作一样，温水煮青蛙，总是被动的等待着，不主动去争取，总觉得该来的总是会来的，就像当初的LZ总觉得该晋升的时候，自然就会晋升的。</p>
+<p>　　事实证明，该来的不会自己来，只会越走越远，你必须要自己主动想办法。</p>
+<p>　　相信大多数人，在年轻时都产生过此生不结婚，此生不生子的想法，但其实这些想法，最终都会被现实打败。</p>
+<p>　　俗话说退一步海阔天空，其实有时候你退一步看一看，你会发现，其实结婚生子这些俗套的东西，并没有你想象中的那么无趣，反而会让你觉得生活更加精彩。</p>
+<p>　　一个人的精彩，终究是要落幕的，但一家人的精彩，却可以永世传承。</p>
+<p>　　所以，LZ奉劝部分年轻人，放弃掉这些不切实际的想法，这么多人走过的路线，不说一定是正确的，但至少不会是错误的，就算是错误的，参考围城逻辑，你也要走一遍，才能走出这个围城，去真正的享受一个人的精彩。</p>
+<p>　　有些南墙，终究是要去撞一撞的。</p>
+<p>　　</p>
+<h3>结语</h3>
+<p>　　</p>
+<p>　　好了，到这里，文章想表达的内容LZ基本上讲完了。</p>
+<p>　　不知道各位读者看完的感受是什么，或许是亚历山大，或许是恍然大悟，或许是一番感慨，也或许是嗤之以鼻。</p>
+<p>　　但无论是什么，工作是你的，生活是你的，自己的选择，自己来负责。</p>
 <p>&nbsp;</p>
-<p>&nbsp;&nbsp;</p>
+<h3>结尾彩蛋</h3>
+<p>&nbsp;</p>
+<p>　　文末，送上彩蛋一张（自从有了孩子，就有了彩蛋，-_-），抖音说孩子们带上口罩，其实一直在舔，这事是真的，/捂脸。</p>
+<p>　　<img src="https://img2020.cnblogs.com/blog/558323/202005/558323-20200506230158237-1605309549.png" alt="" width="582" height="776"></p>
+<p>&nbsp;</p>
 </div>
 <div id="MySignature"></div>
 <div class="clear"></div>
@@ -391,18 +247,18 @@ public override ImmutableArray&lt;DiagnosticDescriptor&gt; SupportedDiagnostics 
 </div>
             </div>
             <div class="postDesc">posted @ 
-<span id="post-date">2020-05-06 06:52</span>&nbsp;
-<a href="https://www.cnblogs.com/tianqing/">Eric zhou</a>&nbsp;
+<span id="post-date">2020-05-06 23:14</span>&nbsp;
+<a href="https://www.cnblogs.com/zuoxiaolong/">左潇龙</a>&nbsp;
 阅读(<span id="post_view_count">...</span>)&nbsp;
 评论(<span id="post_comment_count">...</span>)&nbsp;
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12815747" rel="nofollow">编辑</a>&nbsp;
-<a href="javascript:void(0)" onclick="AddToWz(12815747);return false;">收藏</a></div>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12834121" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12834121);return false;">收藏</a></div>
         </div>
 <script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
 <script>markdown_highlight();</script>
 <script>
-    var allowComments = true, cb_blogId = 27084, cb_blogApp = 'tianqing', cb_blogUserGuid = 'ea753d0b-63cf-dd11-9e4d-001cf0cd104b';
-    var cb_entryId = 12815747, cb_entryCreatedDate = '2020-05-06 06:52', cb_postType = 1; 
+    var allowComments = true, cb_blogId = 160491, cb_blogApp = 'zuoxiaolong', cb_blogUserGuid = '8834a931-b305-e311-8d02-90b11c0b17d6';
+    var cb_entryId = 12834121, cb_entryCreatedDate = '2020-05-06 23:14', cb_postType = 1; 
     loadViewCount(cb_entryId);
     loadSideColumnAd();
 </script><a name="!comments"></a>
@@ -489,7 +345,7 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
     <div class="clear"></div>
     <div id="footer">
         <!--done-->
-Copyright &copy; 2020 Eric zhou
+Copyright &copy; 2020 左潇龙
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
     </div>

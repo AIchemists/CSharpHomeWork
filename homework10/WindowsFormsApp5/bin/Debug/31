@@ -1,0 +1,502 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>艾心❤ - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip.min.css?v=1CubIA3L29CO3-6VLJIOrrj2uGfyKeX_-xaumWzHk7o" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/edison0621/custom.css?v=x9pcFUu&#x2B;fiua3mZOJk/N1Ry7KuY=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip-mobile.min.css?v=0pGk3D9Ik_jI4q1TALBT2ybOjIePHS_80_0J4DDOQiY" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/edison0621/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/edison0621/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/edison0621/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
+    <script>
+        var currentBlogId = 152901;
+        var currentBlogApp = 'edison0621';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'darkgreentrip';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/edison0621/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/edison0621/">艾心</a>
+</h1>
+<h2>
+努力写出高质量的文章，走心、不忽悠，只为共同进步
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/edison0621/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E8%89%BE%E5%BF%83%E2%9D%A4">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/edison0621/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+49&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+406</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<!--done-->
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/edison0621/archive/2020/05/08.html">2020年5月8日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/12846376.html">
+    C#并发编程之初识并行编程
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：写在前面 之前微信公众号里有一位叫sara的朋友建议我写一下Parallel的相关内容，因为手中商城的重构工作量较大，一时之间无法抽出时间。近日，这套系统已有阶段性成果，所以准备写一下Parallel的相关内容，正好也延续之前的C#并发编程系列。 Parallel是并行编程的相关内容，而Parall            <a href="https://www.cnblogs.com/edison0621/p/12846376.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-05-08 10:08 艾心❤ 阅读 (145) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12846376" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/edison0621/archive/2020/03/30.html">2020年3月30日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/12592842.html">
+    ASP.NET MVC升级到ASP.NET Core MVC踩坑小结
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：写在前面 ASP.NET Core是微软新推出的支持跨平台、高性能、开源的开发框架，它的优势不必多说，因为已经说得太多了。当然，现在依然有着数量庞大的系统运行于.NET Framework上，由于有大量的Break Changes，很多项目项目团队也不敢贸然升级，其中的考量也不全部是技术原因，更多的            <a href="https://www.cnblogs.com/edison0621/p/12592842.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-03-30 09:57 艾心❤ 阅读 (1925) 评论 (28)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12592842" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/edison0621/archive/2020/02/10.html">2020年2月10日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/12287469.html">
+    使用.NET Core优雅获取并展示最新疫情数据
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言新型冠状病毒的出现，着实让人紧张。我每天一大早都会去查看今天的最新数据，可是每次的数据都挺让人揪心的。今天突然间很想看看过去的历史的数据，结果查了很多资料都不是很全。反正国家让我们待在家里做贡献，那我们也可以多做做研究，偶然的机会发现了一个API可以查到历史数据，于是就用.NET Core 3.            <a href="https://www.cnblogs.com/edison0621/p/12287469.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-02-10 10:38 艾心❤ 阅读 (934) 评论 (3)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12287469" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/edison0621/archive/2020/01/05.html">2020年1月5日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/12152475.html">
+    .NET Core 3.1之深入源码理解HealthCheck（二）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：写在前面前文讨论了HealthCheck的理论部分，本文将讨论有关HealthCheck的应用内容。可以监视内存、磁盘和其他物理服务器资源的使用情况来了解是否处于正常状态。运行状况检查可以测试应用的依赖项（如数据库和外部服务终结点）以确认是否可用和正常工作。运行状况探测可以由容器业务流程协调程序和负载均衡器用于检查应用的状态。源码研究在应用中引入HealthCheck，一般需要配置Startup文...            <a href="https://www.cnblogs.com/edison0621/p/12152475.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-01-05 15:01 艾心❤ 阅读 (486) 评论 (2)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12152475" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/edison0621/archive/2019/12/02.html">2019年12月2日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/11968102.html">
+    .NET Core 3.0之深入源码理解HealthCheck（一）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：写在前面 我们的系统可能因为正在部署、服务异常终止或者其他问题导致系统处于非健康状态，这个时候我们需要知道系统的健康状况，而健康检查可以帮助我们快速确定系统是否处于正常状态。一般情况下，我们会提供公开的HTTP接口，用于专门化健康检查。 NET Core提供的健康检查库包括Microsoft.Ext            <a href="https://www.cnblogs.com/edison0621/p/11968102.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-12-02 10:38 艾心❤ 阅读 (756) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11968102" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/edison0621/archive/2019/11/26.html">2019年11月26日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/11821743.html">
+    Orleans 3.0 为我们带来了什么
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：原文：https://devblogs.microsoft.com/dotnet/orleans-3-0/ 作者：Reuben Bond，Orleans首席软件开发工程师 翻译：艾心 这是一篇来自Orleans团队的客座文章，Orleans是一个使用.NET创建分布式应用的跨平台框架。获取更多信息，            <a href="https://www.cnblogs.com/edison0621/p/11821743.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-11-26 11:14 艾心❤ 阅读 (1037) 评论 (6)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11821743" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/edison0621/archive/2019/10/28.html">2019年10月28日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/11747912.html">
+    .NET Core 3.0之深入源码理解ObjectPool（二）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：写在前面 前文主要介绍了ObjectPool的一些理论基础，本文主要从源码角度理解Microsoft.Extensions.ObjectPool是如何实现的。下图为其三大核心组件图： 核心组件 ObjectPool ObjectPool是一个泛型抽象类，里面只有两个抽象方法，Get和Return。它            <a href="https://www.cnblogs.com/edison0621/p/11747912.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-10-28 10:06 艾心❤ 阅读 (640) 评论 (3)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11747912" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/edison0621/archive/2019/10/14.html">2019年10月14日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/11669000.html">
+    .NET Core 3.0之深入源码理解ObjectPool（一）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：写在前面 对象池是一种比较常用的提高系统性能的软件设计模式，它维护了一系列相关对象列表的容器对象，这些对象可以随时重复使用，对象池节省了频繁创建对象的开销。 它使用取用/归还-重复取用的操作模式，如下图所示： 本文将主要介绍对象池的基本概念、对象池的优势及其工作机制，下一篇文档将从源码角度介绍.NE            <a href="https://www.cnblogs.com/edison0621/p/11669000.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-10-14 11:04 艾心❤ 阅读 (734) 评论 (2)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11669000" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/edison0621/archive/2019/09/23.html">2019年9月23日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/11567800.html">
+    .NET分布式大规模计算利器-Orleans(一)
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：写在前面 Orleans是基于Actor模型思想的.NET领域的框架，它提供了一种直接而简单的方法来构建分布式大规模计算应用程序，而无需学习和应用复杂的并发或其他扩展模式。我在2015年下半年开始应用Orleans，当时公司的交易系统采用的架构就是基于Orleans框架的，其展现出来的高性能、高并发            <a href="https://www.cnblogs.com/edison0621/p/11567800.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-09-23 09:55 艾心❤ 阅读 (2617) 评论 (26)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11567800" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/edison0621/archive/2019/09/15.html">2019年9月15日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/edison0621/p/11520497.html">
+    .NET Core 3.0之深入源码理解Host(二)
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：写在前面 停了近一个月的技术博客，随着正式脱离996的魔窟，接下来也正式恢复了。本文从源码角度进一步讨论.NET Core 3.0 中关于Host扩展的一些技术点，主要讨论Long Run Program的创建与守护。 关于Host，我们最容易想到的就是程序的启动与停止，而其中隐藏着非常关键的功能，            <a href="https://www.cnblogs.com/edison0621/p/11520497.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-09-15 08:55 艾心❤ 阅读 (1003) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11520497" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/edison0621/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 艾心❤
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

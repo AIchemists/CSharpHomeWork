@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,14 +15,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp5
 {
-    public partial class Form1 : Form                 //因为在ui界面显示爬行过程的方式用的是textbox.text=xxx这种手动刷新的方式，所以把爬行过程放在了form里。。
+    public partial class Form1 : Form                 //因为一开始在ui界面显示爬行过程的方式用的是textbox.text=xxx这种手动刷新的方式，所以把爬行过程放在了form里。。
     {                                                   //用数据绑定的话无法实时更新爬行信息
-        private int count = 0;
-        private int pagecount = 0;                                 //记录爬取页面数
+        private int count = 0;                             //记录爬取页面数
         private int crawlErrorCount = 0;
         private int crawlSuccessCount = 0;
-        public Queue<string> pending = new Queue<string>();
-       public Queue<string> downloadPending = new Queue<string>();
+        public ConcurrentQueue<string> pending = new ConcurrentQueue<string>();
         public static readonly string urlParseRegex = @"^(?<site>https?://(?<host>[\w\d.]+)(:\d+)?($|/))([\w\d]+/)*(?<file>[^#?]*)";
         public SimpleCrawler crawler = new SimpleCrawler();
         public string crawlingPocess { get; set; }
@@ -36,52 +35,32 @@ namespace WindowsFormsApp5
         }
         private void Crawl()
         {
+            pending = new ConcurrentQueue<string>();
+            pending.Enqueue(crawler.Url);
             crawlingPocess += "开始爬行了.... \r\n";
             textBox2.Text = crawlingPocess;
             List<Task> tasks = new List<Task>();
-            while (pending.Count > 0 && count < crawler.maxPage)
+            while (count < crawler.maxPage)
             {
                 string current = null;
-                string html = "";
-                int downloadCount = pending.Count;
-
-                while (pending.Count > 0 && count < crawler.maxPage)
+                while (!pending.TryDequeue(out current))                
                 {
-                    current = pending.Dequeue();
-                    count++;
-                    Task<string> task = Task.Run(() => DownLoad(current));
-                    tasks.Add(task);
-                    Thread.Sleep(300);
+                    if (tasks.Count < this.crawler.maxPage)
+                        continue;
+                    else break;
                 }
-                Task.WaitAll(tasks.ToArray()); //等待剩余任务全部执行完毕
-
-                if (count < crawler.maxPage)
-                {
-                    while (downloadPending.Count > 0)
-                    {
-                        html = downloadPending.Dequeue();
-                        if (html == "") { crawler.urls[current] = true; }
-                        else
-                        {
-
-                            crawler.urls[current] = true;
-                            bool isHtml;
-                            if (html.Length >= 15)
-                                isHtml = html.Substring(0, 15).ToLower() == "<!doctype html>"; //判断是否为html
-                            else
-                                isHtml = false;
-                            if (isHtml)                                  //只爬取html文本
-                                Parse(html, current);//解析,并加入新的链接
-                        }
-                    }
-                }
+                count++;
+                Task<string> task = Task.Run(() => DownloadandParse(current));
+                Thread.Sleep(200);
+                tasks.Add(task);
             }
+            Task.WaitAll(tasks.ToArray());
             warning.Text = "起始网站爬取完成！\r\n" + $"成功:{crawlSuccessCount},失败：{crawlErrorCount}";
             crawlingPocess += "爬行完成";
             textBox2.Text = crawlingPocess;
         }
 
-        public string DownLoad(string url)
+        public string DownloadandParse(string url)
         {
             try
             {
@@ -91,10 +70,10 @@ namespace WindowsFormsApp5
                 string fileName = count.ToString();
                 File.WriteAllText(fileName, html, Encoding.UTF8);
                 crawlSuccessCount++;
-                downloadPending.Enqueue(html);                      //将url加入已下载队列中（html待解析）
                 crawlingPocess += ("爬行页面!\r\n" + url + "\r\n");
                 crawlingPocess += "爬行结束\r\n\r\n";
                 textBox2.Text = crawlingPocess;
+                Parse(html, url);
                 return html;
             }
             catch (Exception ex)
@@ -105,7 +84,6 @@ namespace WindowsFormsApp5
                 crawlingPocess += "爬行失败\r\n\r\n"; 
                 textBox2.Text = crawlingPocess;
                 crawlErrorCount++;
-                downloadPending.Enqueue("");
                 return "";
             }
         }
@@ -179,14 +157,11 @@ namespace WindowsFormsApp5
                 crawler.FileFilter = ".html?$";
                 crawlSuccessCount = 0;
                 crawlErrorCount = 0;
-                pagecount = 0;
                 count = 0;
                 if (thread != null)
                 {
                     thread.Abort();
                 }
-                pending.Clear();
-                downloadPending.Clear();
                 pending.Enqueue(crawler.Url);
                 crawlingPocess = "";
                 textBox2.Text = crawlingPocess;

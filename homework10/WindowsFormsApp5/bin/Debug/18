@@ -4,28 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="origin" />
-    <meta property="og:description" content="一：背景 1. 讲故事 我们有一家top级的淘品牌店铺，为了后续的加速计算，在程序启动的时候灌入她家的核心数据到内存中，灌入完成后内存高达100G，虽然云上的机器内存有256G，然被这么划掉一半看着还" />
+    <meta property="og:description" content="0. 前言 这是对C 基础系列的一个总结，现在我们利用之前学到的知识做一个小小的工具来给我们使用。 如果有看过IO篇的小伙伴，应该有印象。当时我提过一个场景描述，我们在平时使用系统的时候，经常会为了找" />
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>内存迟迟下不去，可能你就差一个GC.Collect - 一线码农 - 博客园</title>
+    <title>C# 基础知识系列- 17 实战篇 编写一个小工具（1） - 月影西下 - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
-    <link id="MainCss" rel="stylesheet" href="/skins/imetro_hd/bundle-imetro_hd.min.css?v=gS0FloTY-RBJQcN3GCAKG6fAr6HHKtDMTw60VxjN79c" />
-    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/huangxincheng/custom.css?v=z0WD6a4nBgoSBHjlq93cyLFnQd8=" />
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/imetro_hd/bundle-imetro_hd-mobile.min.css?v=VacchHeVg6bp3gCO8NqMH8D8fhA8iyRbb0JgoDUvn4o" />
+    <link id="MainCss" rel="stylesheet" href="/skins/coffee/bundle-coffee.min.css?v=KPz7rj-c2sTAV1_ck1aDmbZcuCG3KBhyLnfvzf6nn94" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/huangxincheng/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/huangxincheng/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/huangxincheng/wlwmanifest.xml" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee-mobile.min.css?v=na9bpAY4yh7uEWCcrXj3vfJM3VBse8YtU6-5fUUQPz0" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/c7jie/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/c7jie/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/c7jie/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 85195;
-        var currentBlogApp = 'huangxincheng';
+        var currentBlogId = 572560;
+        var currentBlogApp = 'c7jie';
         var cb_enable_mathjax = false;
         var isLogined = false;
-        var skinName = 'iMetro_HD';
+        var skinName = 'coffee';
     </script>
     
     
@@ -39,10 +39,10 @@
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/huangxincheng/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+	<a href="https://www.cnblogs.com/c7jie/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>			
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/huangxincheng/"></a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/c7jie/">月影西下</a>
 </h1>
 <h2>
 
@@ -53,334 +53,295 @@
 
 		
 	</div><!--end: blogTitle 博客的标题和副标题 -->
-	<div id="navigator">
-		
-<ul id="navList">
-<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
-博客园</a>
-</li>
-<li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/huangxincheng/">
-首页</a>
-</li>
-<li>
-
-<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
-新随笔</a>
-</li>
-<li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E4%B8%80%E7%BA%BF%E7%A0%81%E5%86%9C">
-联系</a></li>
-<li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/huangxincheng/rss/">
-订阅</a>
-<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
-<li>
-<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
-管理</a>
-</li>
-</ul>
-
-
-		<div class="blogStats">
-			
-			<span id="stats_post_count">随笔 - 
-295&nbsp; </span>
-<span id="stats_article_count">文章 - 
-1&nbsp; </span>
-<span id="stats-comment_count">评论 - 
-4956</span>
-
-			
-		</div><!--end: blogStats -->
-	</div><!--end: navigator 博客导航栏 -->
 </div><!--end: header 头部 -->
 
 <div id="main">
 	<div id="mainContent">
 	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+	<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/c7jie/">
+首页</a>
+</li>
+	<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+	<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E6%9C%88%E5%BD%B1%E8%A5%BF%E4%B8%8B">
+联系</a></li>
+	<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+	<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/c7jie/rss/">
+订阅</a>
+	
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/c7jie/rss/">
+    <img src="/skins/coffee/images/xml.gif" alt="订阅" />
+</a></li>
+</ul>
+
+
+
+			<div class="blogStats">
+				
+				<!--done-->
+随笔- 
+25&nbsp;
+文章- 
+0&nbsp;
+评论- 
+19&nbsp;
+
+
+
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
 		<div id="post_detail">
-    <!--done-->
-    <div id="topics">
-        <div class="post">
-            <h1 class = "postTitle">
-                
-<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/huangxincheng/p/12839160.html">内存迟迟下不去，可能你就差一个GC.Collect</a>
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class = "postTitle">
+			
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/c7jie/p/12842459.html">C# 基础知识系列- 17 实战篇 编写一个小工具（1）</a>
 
-            </h1>
-            <div class="clear"></div>
-            <div class="postBody">
-                
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			
 <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
-    <h1 id="一：背景">一：背景</h1>
-<h2 id="1-讲故事">1. 讲故事</h2>
-<p>我们有一家top级的淘品牌店铺，为了后续的加速计算，在程序启动的时候灌入她家的核心数据到内存中，灌入完成后内存高达100G，虽然云上的机器内存有256G，然被这么划掉一半看着还是有一点心疼的，可怜那些被挤压的小啰啰程序😄😄😄，本以为是那些List，HashSet，Dictionary需要动态扩容虚占了很多内存，也就没当一回事，后来过了一天发现内存回到了大概70多G，卧槽，不是所谓的集合虚占，而是GC没给我回收呀。。。</p>
-<h2 id="2-windbg验证一下">2. windbg验证一下</h2>
-<p>为了验证我的说法，我就不去生产抓这个庞然大物的dump了，去测试环境给大家抓一个，晚上清蒸。</p>
-<blockquote>
-<p>!eeheap -gc   查看gc信息</p>
-</blockquote>
-<pre><code class="language-C#">
-0:000&gt; !eeheap -gc
-Number of GC Heaps: 1
-generation 0 starts at 0x0000019b0fc66b48
-generation 1 starts at 0x0000019b0f73b138
-generation 2 starts at 0x0000019a5da81000
-ephemeral segment allocation context: none
-         segment             begin         allocated              size
-0000019a5da80000  0000019a5da81000  0000019a6da7ffb8  0xfffefb8(268431288)
-0000019a00000000  0000019a00001000  0000019a0ffffe90  0xfffee90(268430992)
-0000019a10000000  0000019a10001000  0000019a1ffffeb0  0xfffeeb0(268431024)
-0000019a20000000  0000019a20001000  0000019a2fffffb0  0xfffefb0(268431280)
-0000019a30000000  0000019a30001000  0000019a3ffffc50  0xfffec50(268430416)
-0000019a40000000  0000019a40001000  0000019a4fffffc8  0xfffefc8(268431304)
-0000019a7aad0000  0000019a7aad1000  0000019a8aacfd60  0xfffed60(268430688)
-0000019a8cbf0000  0000019a8cbf1000  0000019a9cbefe10  0xfffee10(268430864)
-0000019a9cbf0000  0000019a9cbf1000  0000019aacbefcb8  0xfffecb8(268430520)
-0000019aacbf0000  0000019aacbf1000  0000019abcbefd18  0xfffed18(268430616)
-0000019abcbf0000  0000019abcbf1000  0000019accbefd68  0xfffed68(268430696)
-0000019accbf0000  0000019accbf1000  0000019adcbefcf8  0xfffecf8(268430584)
-0000019adcbf0000  0000019adcbf1000  0000019aecbefdc0  0xfffedc0(268430784)
-0000019af0e20000  0000019af0e21000  0000019b00e1ff28  0xfffef28(268431144)
-0000019b00e20000  0000019b00e21000  0000019b10047178  0xf226178(253911416)
-Large object heap starts at 0x0000019a6da81000
-         segment             begin         allocated              size
-0000019a6da80000  0000019a6da81000  0000019a756d0480  0x7c4f480(130348160)
-0000019b10e20000  0000019b10e21000  0000019b133ca330  0x25a9330(39490352)
-Total Size:              Size: 0xf940ee70 (4181782128) bytes.
-------------------------------
-GC Heap Size:            Size: 0xf940ee70 (4181782128) bytes.
-
+    <h1 id="0-前言">0. 前言</h1>
+<p>这是对C# 基础系列的一个总结，现在我们利用之前学到的知识做一个小小的工具来给我们使用。</p>
+<p>如果有看过IO篇的小伙伴，应该有印象。当时我提过一个场景描述，我们在平时使用系统的时候，经常会为了找某个文件的位置而烦恼。那么我们现在尝试写一个控制台程序来帮助我们找文件的具体位置。</p>
+<h1 id="1-分析">1. 分析</h1>
+<p>好，大家应该初步了解了需求内容。然后让我们来做一个简单的需求分析：</p>
+<ol>
+<li>简单分析一下需求包括哪些功能点</li>
+<li>规划各个功能点的实现方式</li>
+</ol>
+<p>嗯，理论上讲还有一大堆的步骤，但因为是个练手的小项目就不扯那么多没用的了。简单来讲就是，分两步：</p>
+<ol>
+<li>抓取系统可以访问的所有文件，并保存其全路径</li>
+<li>根据输入的参数查询文件的全路径</li>
+</ol>
+<p>需求分析完了，然后寻找可以实现的技术，我们现有的技术有IO、文件/路径操作、任务模式等技术，那么可以供我们选择的技术一目了然了：通过文件/目录/路径API访问所有的文件目录，使用字典保存，然后使用Linq查询文件所在目录。</p>
+<p>OK，需求分析完了，技术也确认了。那么我们现在开始吧，小伙伴们跟紧了哦，车速不快的。</p>
+<h1 id="2-开始">2. 开始</h1>
+<p>这里简单演示一下如何用Rider和VSCode、Visual Studio2019创建项目。</p>
+<h2 id="21-创建一个名为-filefinder的项目">2.1. 创建一个名为 FileFinder的项目</h2>
+<p><strong>a.使用Rider：</strong></p>
+<p>点击箭头所指方向：</p>
+<p><img src="https://img2020.cnblogs.com/other/1266612/202005/1266612-20200507132408633-1977411928.png" alt="image-20200506213821025"></p>
+<p>先在左侧选择Console Application，然后修改 Project name，最后修改 Solution Directory为自己的目录：</p>
+<p><img src="https://img2020.cnblogs.com/other/1266612/202005/1266612-20200507132408868-828817260.png" alt="image-20200506214124769"></p>
+<p>然后点击 Create，创建完成结果如下：</p>
+<p><img src="https://img2020.cnblogs.com/other/1266612/202005/1266612-20200507132409070-1958362690.png" alt="image-20200506214423649"></p>
+<p>Rider创建项目的步骤在Windows、Linux、Mac三个系统都是一样的。</p>
+<p><strong>b. 使用VS Code创建项目</strong></p>
+<p>使用VS Code创建项目与Rider和Visual Studio有所不同，步骤比较繁琐：</p>
+<p>先在合适的文件夹下创建一个fileFinder目录，并在fileFinder目录下打开命令行，输入以下命令：</p>
+<pre><code class="language-bash">dotnet new sln -n fileFinder # 创建一个名为 fileFinder 的解决方案
+dotnet new console -n fileFinder # 创建一个名为 fileFinder的控制台程序
+dotnet sln add fileFinder # 把 fileFinder的项目添加到fileFinder的解决方案里
 </code></pre>
-<p>从最后一行可以看到堆大小： <code>GC Heap Size: Size: 0xf940ee70 (4181782128) bytes.</code> 然后将4181782128 byte 转化为GB： <code>4181782128/1024/1024/1024= 3.89G</code>。</p>
-<p>再来看一下3代中有多少free空闲块，占了多少空间，为了方便查看，大家可以用一下sosex扩展，提供了很多方便的方法。</p>
-<blockquote>
-<p>!dumpgen xxxx  依次把0，1，2 三个代中的free空间统计出来。</p>
-</blockquote>
-<pre><code class="language-C#">
-0:000&gt; !dumpgen 0 -free -stat
-       Count      Total Size      Type
--------------------------------------------------
-         168      1,120,008   **** FREE ****
-
-168 objects, 1,120,008 bytes
-
-0:000&gt; !dumpgen 1 -free -stat
-       Count      Total Size      Type
--------------------------------------------------
-         368          8,096   **** FREE ****
-
-368 objects, 8,096 bytes
-
-0:000&gt; !dumpgen 2 -free -stat
-       Count      Total Size      Type
--------------------------------------------------
-  11,857,034  1,052,310,524   **** FREE ****
-
-11,857,034 objects, 1,052,310,524 bytes
-
-
+<p>最终结果应该是这样的：</p>
+<p><img src="https://img2020.cnblogs.com/other/1266612/202005/1266612-20200507132409239-1935349895.png" alt="image-20200506220949536"></p>
+<p><strong>c.使用 Visual Studio</strong></p>
+<p><img src="https://img2020.cnblogs.com/other/1266612/202005/1266612-20200507132409529-617796445.png" alt="file"></p>
+<p>选择【创建新项目】<br>
+<img src="https://img2020.cnblogs.com/other/1266612/202005/1266612-20200507132409761-1923183354.png" alt="file"><br>
+注意框住地方的选择，选控制台程序，然后点击下一步<br>
+<img src="https://img2020.cnblogs.com/other/1266612/202005/1266612-20200507132409931-215388526.png" alt="file"><br>
+填写项目名称、路径，点击创建<br>
+<img src="https://img2020.cnblogs.com/other/1266612/202005/1266612-20200507132410140-541682316.png" alt="file"></p>
+<h2 id="22-开始编写程序">2.2 开始编写程序</h2>
+<p>现在我们创建完成了一个项目，然后可以开始编写我们的程序了。</p>
+<p>首先创建一个遍历所有目录的方法：</p>
+<pre><code class="language-c#">public static Dictionary&lt;string,List&lt;string&gt;&gt; OverDirectories()
+{
+    //
+    return null;
+}
 </code></pre>
-<p>从上面输出可以看到，三个代free objects的信息：</p>
-<p>空闲块个数:<code>168 + 368 + 11857034 = 11857570个</code>，</p>
-<p>空闲块空间：<code>1120008 + 8096 + 1052310524 = 1053438628 byte =&gt; 0.98G</code>。</p>
-<p>惊讶吧~， 3.89G的堆，等待被释放的空间就有0.98G,占比高达25%，再看看第2代中有高达1185万个空闲块，说明堆碎片有多么严重。。。</p>
-<p>所以等GC自己启动回收压缩释放不知道猴年马月，为了高效利用内存，不得已自己先给程序点个火，手工调用一下GC.Collect，让程序内存降到了 <code>3.89 - 0.98 = 2.91 G</code>。</p>
-<h1 id="二：对gc代机制的理解">二：对GC代机制的理解</h1>
-<p>有不少程序员对gc中的代管理机制不是特别清楚，或者看过书之后理解也停留在理论上，没法去验证书中所说，其实我也不是特别理解，😄😄😄，作为一个准备好好玩自媒体人，不能让您白来一趟哈。</p>
-<h2 id="1-clr堆模型">1. CLR堆模型</h2>
-<p>当CLR不小心错入程序世界的时候，会给你分配两个堆，一个叫做小对象堆，一个叫做大对象堆，默认是以83k作为大小堆的分界线，当然你也可以自定义配置，堆上的空间由很多的内存段拼成的,可能你有点蒙，我画张图吧。</p>
-<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215049318-142033641.png" alt=""></p>
-<h2 id="2-对临时内存段的解释">2. 对临时内存段的解释</h2>
-<p>看完上图，可能大家有两个疑问：</p>
-<h3 id="1--为啥小对象堆中有一个临时内存段？">&lt;1&gt;  为啥小对象堆中有一个临时内存段？</h3>
-<p>这是因为CLR做了很多假设，它假设在gen0和gen1上回收的对象会特别多，所以没事就上去转转，CLR为了方便GC快速清理回收压缩。。。就将gen0和gen1都放置在这个临时内存段上。</p>
-<p>你可能要问，有证据吗？？？ 我就拿刚才的4G程序说话吧。</p>
-<pre><code class="language-C#">
-0:000&gt; !eeheap -gc
-Number of GC Heaps: 1
-generation 0 starts at 0x0000019b0fc66b48
-generation 1 starts at 0x0000019b0f73b138
-generation 2 starts at 0x0000019a5da81000
-ephemeral segment allocation context: none
-         segment             begin         allocated              size
-0000019a5da80000  0000019a5da81000  0000019a6da7ffb8  0xfffefb8(268431288)
-0000019a00000000  0000019a00001000  0000019a0ffffe90  0xfffee90(268430992)
-0000019a10000000  0000019a10001000  0000019a1ffffeb0  0xfffeeb0(268431024)
-0000019a20000000  0000019a20001000  0000019a2fffffb0  0xfffefb0(268431280)
-0000019a30000000  0000019a30001000  0000019a3ffffc50  0xfffec50(268430416)
-0000019a40000000  0000019a40001000  0000019a4fffffc8  0xfffefc8(268431304)
-0000019a7aad0000  0000019a7aad1000  0000019a8aacfd60  0xfffed60(268430688)
-0000019a8cbf0000  0000019a8cbf1000  0000019a9cbefe10  0xfffee10(268430864)
-0000019a9cbf0000  0000019a9cbf1000  0000019aacbefcb8  0xfffecb8(268430520)
-0000019aacbf0000  0000019aacbf1000  0000019abcbefd18  0xfffed18(268430616)
-0000019abcbf0000  0000019abcbf1000  0000019accbefd68  0xfffed68(268430696)
-0000019accbf0000  0000019accbf1000  0000019adcbefcf8  0xfffecf8(268430584)
-0000019adcbf0000  0000019adcbf1000  0000019aecbefdc0  0xfffedc0(268430784)
-0000019af0e20000  0000019af0e21000  0000019b00e1ff28  0xfffef28(268431144)
-0000019b00e20000  0000019b00e21000  0000019b10047178  0xf226178(253911416)
-Large object heap starts at 0x0000019a6da81000
-         segment             begin         allocated              size
-0000019a6da80000  0000019a6da81000  0000019a756d0480  0x7c4f480(130348160)
-0000019b10e20000  0000019b10e21000  0000019b133ca330  0x25a9330(39490352)
-Total Size:              Size: 0xf940ee70 (4181782128) bytes.
-------------------------------
-GC Heap Size:            Size: 0xf940ee70 (4181782128) bytes.
-
+<p>现在我们有一个问题，因为Windows的特殊性，目录结构分为了<strong>磁盘:\文件夹</strong>这种形式，我们没法通过设置一个根目录去遍历，这时候就要借助一下官方文档了。通过查阅API，我们发现一个类：</p>
+<pre><code class="language-c#">public sealed class DriveInfo : System.Runtime.Serialization.ISerializable//提供对有关驱动器的信息的访问。
 </code></pre>
-<p>从上面gc信息中可以看到小对象堆中目前有 15个内存段， 大对象堆有2个内存段, gen0的起始地址为<code>0x0000019b0fc66b48</code>,gen1的起始地址为<code>0x0000019b0f73b138</code>, 都落在了第15个内存段内 <code>0000019b00e20000  0000019b00e21000  0000019b10047178  0xf226178(253911416)</code>，其余内存段都被 gen2 占领，如果大家有点乱，先多看几遍，等一下看我的演示。</p>
-<h3 id="2--临时内存段大小是多少？">&lt;2&gt;  临时内存段大小是多少？</h3>
-<p>这个段的大小，需要看是x64还是x86机器，还要看GC是工作站模式还是服务器模式，不过msdn帮我们总结了，<a href="https://docs.microsoft.com/zh-cn/dotnet/standard/garbage-collection/fundamentals">https://docs.microsoft.com/zh-cn/dotnet/standard/garbage-collection/fundamentals</a> ， 截个图给大家看一下。</p>
-<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215112401-1589821210.png" alt=""></p>
-<p>我的本机是x64版本,工作站模式，可以通过 <code>!eeversion</code> 查看一下。</p>
-<pre><code class="language-C#">
-0:000&gt; !eeversion
-4.8.3801.0 free
-Workstation mode
-SOS Version: 4.8.3801.0 retail build
-
+<p>有一个方法：</p>
+<pre><code class="language-c#">public static System.IO.DriveInfo[] GetDrives ();// 检索计算机上的所有逻辑驱动器的驱动器名称。
 </code></pre>
-<p>对应图中，我的临时内存段的最大内存是256M，再回过头用4G程序的来验证一下内存段大小，用 <code>allocated - begin</code> 即可。</p>
-<pre><code class="language-C#">
-ephemeral segment allocation context: none
-         segment             begin         allocated              size
-0000019b00e20000  0000019b00e21000  0000019b10047178  0xf226178(253911416)
-
-0:000&gt; ? 0000019b10047178 - 0000019b00e21000
-Evaluate expression: 253911416 = 00000000`0f226178
-
+<p>再看一下属性：</p>
+<pre><code class="language-c#">public string Name { get; }// 获取驱动器的名称，如 C:\。
+public System.IO.DirectoryInfo RootDirectory { get; }// 获取驱动器的根目录。
 </code></pre>
-<p>两者差值为 <code>253911416 byte =&gt; 242M</code> ，可以看出离256M不远了，等到了256M又要触发GC啦。。。。</p>
-<h2 id="3-代机制简介">3. 代机制简介</h2>
-<p>有了上面的基础，我觉得你对GC的gen机制应该明白了，由于3个gen运行时预定空间是随GC触发随时变动，所以就不知道某个时刻各个gen当时的空间触发阈值。</p>
-<p>接下来说一下三代的原理：当gen0满了会触发GC回收，将gen0中活对象送到gen1中，死的就消灭掉，当某时候gen1满了，gen1的活对象会被送到gen2中，当下个某一次gen2满了，就向操作系统申请新的内存段，所以你看到了4G程序占用了多达14个内存段，就是这么一个道理，没什么复杂的。</p>
-<h1 id="三：代机制原理的代码演示">三：代机制原理的代码演示</h1>
-<p>我刚才也说了，很多人知道这个理论，不知道怎么去验证，这里我就演示一下，先上代码：</p>
-<pre><code class="language-C#">
-        public static void Main(string[] args)
+<p>初步查看满足我们的需要，先在Program.cs的头添加命名空间引用：</p>
+<pre><code class="language-c#">using System.IO;
+</code></pre>
+<p>表示在这个代码文件中会使用这个命名空间的类或者结构体等元素。</p>
+<p>在项目中编写一个方法：</p>
+<pre><code class="language-c#">public static void GetDrivers()
+{
+    var drives = DriveInfo.GetDrives();
+    foreach(var drive in drives)
+    {
+        Console.WriteLine($&quot;驱动器名称：{drive.Name}:\t {drive.RootDirectory}&quot;);
+    }
+}
+</code></pre>
+<p>然后修改Main方法为：</p>
+<pre><code class="language-c#">static void Main(string[] args)
+{
+    GetDrivers();
+}
+</code></pre>
+<p>运行程序，下图是Linux系统的打印结果：（Rider/Visual Studio的运行程序快捷键是F5）</p>
+<p><img src="https://img2020.cnblogs.com/other/1266612/202005/1266612-20200507132410397-978572009.png" alt="image-20200506224209939"></p>
+<p>经过完美符合我们的需求，修改GetDrivers方法，使其可以返回所有驱动器的根目录：</p>
+<p>先引入以下命名空间的引用：</p>
+<pre><code class="language-c#">using System.Linq;// Linq的支持
+using System.Collections.Generic;//泛型集合的支持
+</code></pre>
+<p>修改方法如下：</p>
+<pre><code class="language-c#">public static List&lt;DirectoryInfo&gt; GetDrivers()
+{
+    var drives = DriveInfo.GetDrives();
+    return drives.Select(p=&gt;p.RootDirectory).ToList();
+}
+</code></pre>
+<p>然后回到方法OverDirectories里，先获取所有的驱动器，遍历所有驱动器下的所有目录和文件，之后对遍历结果归类：</p>
+<p>修改OverrDirectories方法：</p>
+<pre><code class="language-c#">public static Dictionary&lt;string,List&lt;string&gt;&gt; OverDirectories(DirectoryInfo rootDirectory)
+{
+    var dict = new Dictionary&lt;string, List&lt;string&gt;&gt;();// 创建一个保存数据的 字典类型
+    foreach(var file in rootDirectory.EnumerateFiles()) //枚举当前目录下的所有文件
+    {
+        var key = Path.GetFileNameWithoutExtension(file.Name); //获取无扩展名的文件名
+        if(!dict.ContainsKey(key)) //检查dict是否存放过 文件名，如果没有，则创建一个列表，如果有则在列表中添加一条文件的全路径
         {
-            Student student1 = new Student() { UserName = &quot;cnblogs&quot;, Email = &quot;cnblogs@qq.com&quot; };
-            Student student2 = new Student() { UserName = &quot;csdn&quot;, Email = &quot;csdn@qq.com&quot; };
+            dict[key] = new List&lt;string&gt;();
+        }
+        dict[key].Add(file.FullName);
+    }
 
-            Console.WriteLine(&quot;两个对象已创建！双双进入 Gen0&quot;);
-            Console.Read();
-
-            student1 = null;
-            GC.Collect();
-
-            Console.WriteLine(&quot;Student1 已从Gen0中抹掉，助力Student2上Gen1，是否继续？&quot;);
-            Console.ReadKey();
-
-            GC.Collect();
-            Console.WriteLine(&quot;再次助力Student2上Gen2&quot;);
-            Console.ReadKey();
-
-            Console.WriteLine(&quot;全部执行结束！&quot;);
-            Console.ReadLine();
+    // 枚举当前目录的子目录，递归调用该方法
+    var dirs = rootDirectory.EnumerateDirectories().Select(OverDirectories); 
+    foreach(var dir in dirs)//处理返回的字典枚举，将数据合并到当前dict变量中
+    {
+        foreach(var key in dir.Keys)
+        {
+            if(!dict.ContainsKey(key))
+            {
+                dict[key] = new List&lt;string&gt;();
+            }
+            dict[key].AddRange(dir[key]);
         }
     }
-
-    public class Student
+    // 返回结果
+    return dict;
+}
+</code></pre>
+<p>我们简单测试一下，修改Main方法：</p>
+<pre><code class="language-c#">static void Main(string[] args)
+{
+    var drivers = GetDrivers();
+    var results = OverDirectories(drivers[0]);
+    Console.WriteLine(results);
+}
+</code></pre>
+<p>嗯，如果不出意外的话，你应该能得到类似如下的提示：</p>
+<p><img src="https://img2020.cnblogs.com/other/1266612/202005/1266612-20200507132410689-1523828861.png" alt="image-20200506234510641"></p>
+<p>这是因为在系统中（不管哪种系统）会有一些文件或者目录是我们没有权限访问的，这时候就必须用try/catch处理这些没有访问权限的目录和文件。因为我们平时使用不会 把文件放到这些目录下面，所以我们可以简单的略过这些目录。</p>
+<p>同时观察一下，GetDrivers 返回的是一组DirectoryInfo实例，而OverDirectories每次处理一个目录，然后返回一个字典集合，所以我们需要整合这些集合，但我们在OverDirectories里编写过相似的代码，为了减少重复代码的编写，提取这部分代码为一个方法：</p>
+<pre><code class="language-c#">public static Dictionary&lt;string,List&lt;string&gt;&gt; Concat(params Dictionary&lt;string,List&lt;string&gt;&gt;[] dicts)
+{
+    var dict = new Dictionary&lt;string,List&lt;string&gt;&gt;();
+    foreach(var dir in dicts)
     {
-        public string UserName { get; set; }
-        public string Email { get; set; }
+        foreach(var key in dir.Keys)
+        {
+            if(!dict.ContainsKey(key))
+            {
+                dict[key] = new List&lt;string&gt;();
+            }
+            dict[key].AddRange(dir[key]);
+        }
+    }
+    return dict;
+}
+</code></pre>
+<blockquote>
+<p>params 是C#可变参数列表关键字，声明方式： params T[] values。表示方法可以接收任意个T类型的参数，方法中接到的是一个数组</p>
+</blockquote>
+<p>继续改造 OverDirectories方法，增加异常处理：</p>
+<pre><code class="language-c#">public static Dictionary&lt;string,List&lt;string&gt;&gt; OverDirectories(DirectoryInfo rootDirectory)
+{
+    var dict = new Dictionary&lt;string, List&lt;string&gt;&gt;();
+    IEnumerable&lt;FileInfo&gt; files = new List&lt;FileInfo&gt;();
+    try
+    {
+        files = rootDirectory.EnumerateFiles();
+    }
+    catch(Exception e)
+    {
+        Console.WriteLine($&quot;错误信息：{e}&quot;);//打印错误信息
     }
 
+    foreach(var file in files)
+    {
+        var key = Path.GetFileNameWithoutExtension(file.Name);
+        if(!dict.ContainsKey(key))
+        {
+            dict[key] = new List&lt;string&gt;();
+        }
+        dict[key].Add(file.FullName);
+    }
+
+    try
+    {
+        var dicts = rootDirectory.EnumerateDirectories().Select(OverDirectories);    
+        return Concat(dicts.Append(dict).ToArray());
+    }
+    catch (System.Exception e)
+    {
+        Console.WriteLine($&quot;错误信息：{e}&quot;);//打印错误信息
+    }
+    return dict;
+}
 </code></pre>
-<p>代码很简单，就是想让你看一下student1和student2如何在gen0，gen1，gen2中游荡，并且给你精准找出来。</p>
-<h2 id="1-探究-gen0-上的student1-和-studnet2">1. 探究 gen0 上的student1 和 studnet2</h2>
-<p>先启动程序，抓一下dump文件。</p>
-<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215126452-1424714957.png" alt=""></p>
-<pre><code class="language-C#">0:000&gt; !clrstack -l
+<p>最后修改 Main方法，使其支持使用用户输入的字符串进行查询：</p>
+<pre><code class="language-c#">static void Main(string[] args)
+{
+    var drivers = GetDrivers();
+    var results = Concat(drivers.Select(OverDirectories).ToArray());
+    Console.WriteLine(&quot;请输入要查询的文件名：&quot;);
+    var search = Console.ReadLine().Trim();
+    var keys = results.Keys.Where(p=&gt;p.Contains(search));
 
-ConsoleApp4.Program.Main(System.String[]) [C:\dream\Csharp\ConsoleApp1\ConsoleApp4\Program.cs @ 18]
-    LOCALS:
-        0x000000017d7feeb8 = 0x000001d0962c2f28
-        0x000000017d7feeb0 = 0x000001d0962c2f48
-
-0:000&gt; !eeheap -gc
-Number of GC Heaps: 1
-generation 0 starts at 0x000001d0962c1030
-generation 1 starts at 0x000001d0962c1018
-generation 2 starts at 0x000001d0962c1000
-ephemeral segment allocation context: none
-         segment             begin         allocated              size
-000001d0962c0000  000001d0962c1000  000001d0962c7fe8  0x6fe8(28648)
-Large object heap starts at 0x000001d0a62c1000
-         segment             begin         allocated              size
-000001d0a62c0000  000001d0a62c1000  000001d0a62c9a68  0x8a68(35432)
-Total Size:              Size: 0xfa50 (64080) bytes.
-------------------------------
-GC Heap Size:            Size: 0xfa50 (64080) bytes.
-
-
+    foreach(var key in keys)
+    {
+        var list = results[key];
+        Console.WriteLine(&quot;查找到路径是：&quot;);
+        foreach(var path in list)
+        {
+            Console.WriteLine(path);
+        }
+    }
+}
 </code></pre>
-<p>仔细看上面的输出，从主线程的堆栈上可以看到student1和studnet2的地址依次为<code>0x000001d0962c2f28, 0x000001d0962c2f48</code>，而gen0的起始地址为：<code>0x000001d0962c1030</code>，刚好落在 gen0 的区间内，可能你有点蒙，我画一张图。</p>
-<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215135616-1589844551.png" alt=""></p>
-<h2 id="2-探究-student1-被消灭，student2进入gen1">2. 探究 student1 被消灭，student2进入gen1</h2>
-<p>按下Enter键，执行后续代码将student1=null，再执行GC操作，看下堆中又是如何？</p>
-<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215144593-1710776429.png" alt=""></p>
-<pre><code class="language-C#">
-0:000&gt; !clrstack -l
-ConsoleApp4.Program.Main(System.String[]) [C:\dream\Csharp\ConsoleApp1\ConsoleApp4\Program.cs @ 24]
-    LOCALS:
-        0x000000607e9fea50 = 0x0000000000000000
-        0x000000607e9fea48 = 0x0000017f0dff2f38
-
-000000607e9fec88 00007ff8e9396c93 [GCFrame: 000000607e9fec88] 
-0:000&gt; !eeheap -gc
-Number of GC Heaps: 1
-generation 0 starts at 0x0000017f0dff6ea0
-generation 1 starts at 0x0000017f0dff1018
-generation 2 starts at 0x0000017f0dff1000
-ephemeral segment allocation context: none
-         segment             begin         allocated              size
-0000017f0dff0000  0000017f0dff1000  0000017f0dff8eb8  0x7eb8(32440)
-Large object heap starts at 0x0000017f1dff1000
-         segment             begin         allocated              size
-0000017f1dff0000  0000017f1dff1000  0000017f1dff9a68  0x8a68(35432)
-Total Size:              Size: 0x10920 (67872) bytes.
-------------------------------
-GC Heap Size:            Size: 0x10920 (67872) bytes.
-
-</code></pre>
-<p>如果弄明白了上一个案例，看这里就很简单了，很清楚的看到studnet2落在了gen1区间段，不过从起始地址上看，gen1的空间变大了。。。我继续画一张图。</p>
-<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215156496-1714251679.png" alt=""></p>
-<h1 id="3-探究student2-送上了-gen2">3. 探究student2 送上了 gen2</h1>
-<p><img src="https://img2020.cnblogs.com/blog/214741/202005/214741-20200506215206673-574190963.png" alt=""></p>
-<pre><code class="language-C#">
-0:000&gt; !clrstack -l
-ConsoleApp4.Program.Main(System.String[]) [C:\dream\Csharp\ConsoleApp1\ConsoleApp4\Program.cs @ 28]
-    LOCALS:
-        0x000000d340bfebb0 = 0x0000000000000000
-        0x000000d340bfeba8 = 0x00000217b5df2f38
-
-000000d340bfede8 00007ff8e9396c93 [GCFrame: 000000d340bfede8] 
-0:000&gt; !eeheap -gc
-Number of GC Heaps: 1
-generation 0 starts at 0x00000217b5df6f40
-generation 1 starts at 0x00000217b5df6ea0
-generation 2 starts at 0x00000217b5df1000
-ephemeral segment allocation context: none
-         segment             begin         allocated              size
-00000217b5df0000  00000217b5df1000  00000217b5df8f58  0x7f58(32600)
-Large object heap starts at 0x00000217c5df1000
-         segment             begin         allocated              size
-00000217c5df0000  00000217c5df1000  00000217c5df9a68  0x8a68(35432)
-Total Size:              Size: 0x109c0 (68032) bytes.
-------------------------------
-GC Heap Size:            Size: 0x109c0 (68032) bytes.
-
-
-</code></pre>
-<p>很简单，我就不画图了哈，student2的内存地址可是落在 gen2上哦~😄😄😄</p>
-<h1 id="四：总结">四：总结</h1>
-<p>GC.Collect尽量少用，省的把内部的分配和回收算法搞乱了，非要用的话也要理解之后再根据自己的场景使用哈。</p>
-<p>本篇就说到这里，希望对你有帮助</p>
-<hr>
-<h3 id="如您有更多问题与我互动，扫描下方进来吧">如您有更多问题与我互动，扫描下方进来吧~</h3>
-<hr>
-<p><img src="https://images.cnblogs.com/cnblogs_com/huangxincheng/345039/o_200414062434170x170.jpg" alt=""><img src="https://images.cnblogs.com/cnblogs_com/huangxincheng/345039/o_200414065053baijiahao.jpg" alt=""></p>
+<h1 id="3-总结">3. 总结</h1>
+<p>代码进行到这里了，可以说基本功能已经完成。如果有小伙伴尝试使用示例代码的话，可能会遇到各种问题，下一篇继续为大家在现有知识基础上做优化，让它成为一个真正意义上可以使用的小工具。</p>
+<blockquote>
+<p>更多内容烦请关注<a href="https://blogs.attachie.club">我的博客《高先生小屋》</a></p>
+</blockquote>
+<p><img src="https://img2020.cnblogs.com/other/1266612/202005/1266612-20200507132411013-877236558.png" alt="file"></p>
 
 </div>
 <div id="MySignature"></div>
@@ -390,24 +351,23 @@ GC Heap Size:            Size: 0x109c0 (68032) bytes.
     <div class="clear"></div>
     <div id="post_next_prev"></div>
 </div>
-            </div>
-            <div class="postDesc">posted @ 
-<span id="post-date">2020-05-06 21:50</span>&nbsp;
-<a href="https://www.cnblogs.com/huangxincheng/">一线码农</a>&nbsp;
+		</div>
+		<div class="postDesc">posted @ 
+<span id="post-date">2020-05-07 13:24</span>&nbsp;
+<a href="https://www.cnblogs.com/c7jie/">月影西下</a>&nbsp;
 阅读(<span id="post_view_count">...</span>)&nbsp;
 评论(<span id="post_comment_count">...</span>)&nbsp;
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12839160" rel="nofollow">编辑</a>&nbsp;
-<a href="javascript:void(0)" onclick="AddToWz(12839160);return false;">收藏</a></div>
-        </div>
-	    
-	    
-    </div><!--end: topics 文章、评论容器-->
-</div>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12842459" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12842459);return false;">收藏</a></div>
+	</div>
+	
+	
+</div><!--end: topics 文章、评论容器-->
 <script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
 <script>markdown_highlight();</script>
 <script>
-    var allowComments = true, cb_blogId = 85195, cb_blogApp = 'huangxincheng', cb_blogUserGuid = '40a06552-abf8-df11-ac81-842b2b196315';
-    var cb_entryId = 12839160, cb_entryCreatedDate = '2020-05-06 21:50', cb_postType = 1; 
+    var allowComments = true, cb_blogId = 572560, cb_blogApp = 'c7jie', cb_blogUserGuid = 'f7f130fe-8c19-4f36-4637-08d4ef52ecb6';
+    var cb_entryId = 12842459, cb_entryCreatedDate = '2020-05-07 13:24', cb_postType = 1; 
     loadViewCount(cb_entryId);
     loadSideColumnAd();
 </script><a name="!comments"></a>
@@ -466,7 +426,9 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
         loadOptUnderPost();
         GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
     </script>
-</div>
+</div></div>
+
+
 	</div><!--end: forFlow -->
 	</div><!--end: mainContent 主体内容容器-->
 
@@ -478,12 +440,12 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
 </div>
 
 <div id="sidebar_ad"></div>
-			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script></div>
 			
-			<div id="leftcontentcontainer">
+			<DIV id="leftcontentcontainer">
 				<div id="blog-sidecolumn"></div>
                     <script>loadBlogSideColumn();</script>
-			</div>
+			</DIV>
 			
 		</div><!--end: sideBarMain -->
 	</div><!--end: sideBar 侧边栏容器 -->
@@ -492,7 +454,7 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 一线码农
+Copyright &copy; 2020 月影西下
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 

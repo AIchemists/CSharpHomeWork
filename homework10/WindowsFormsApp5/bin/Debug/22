@@ -4,48 +4,63 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="origin" />
-    <meta property="og:description" content="一、jacoco 简介 jacoco 是一个开源的覆盖率工具，它针对的开发语言是 java。其使用方法很灵活，可以嵌入到 ant、maven 中；可以作为 Eclipse 插件；可以作为 javaAg" />
+    
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>jacoco 生成单测覆盖率报告 - JMCui - 博客园</title>
+    <title>鬼谷子com - 博客园</title>
     
     <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/coffee/bundle-coffee.min.css?v=KPz7rj-c2sTAV1_ck1aDmbZcuCG3KBhyLnfvzf6nn94" />
     
-    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/jmcui/custom.css?v=utMgiRk7Z53Qs83Dcy&#x2B;n8qIW1ak=" />
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/red_autumnal_leaves/bundle-red_autumnal_leaves-mobile.min.css?v=ADiCwO2hOTdd5yYidcx7eob7ix2VJI4o_TXjEycTHjs" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee-mobile.min.css?v=na9bpAY4yh7uEWCcrXj3vfJM3VBse8YtU6-5fUUQPz0" />
     
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/jmcui/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/jmcui/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/jmcui/wlwmanifest.xml" />
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/wzxNote/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/wzxNote/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/wzxNote/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
     <script src="/js/blog-common.min.js?v=98Fvfd6UZH20B_MF08daNaODjSu879MVR9RHmyvWAlg"></script>
     <script>
-        var currentBlogId = 352483;
-        var currentBlogApp = 'jmcui';
-        var cb_enable_mathjax = false;
+        var currentBlogId = 252253;
+        var currentBlogApp = 'wzxNote';
+        var cb_enable_mathjax = true;
         var isLogined = false;
-        var skinName = 'red_autumnal_leaves';
+        var skinName = 'coffee';
     </script>
-    
-    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
     
 </head>
 <body>
     <a name="top"></a>
-    
+    <div id="page_begin_html">
+        <a href="https://info.flagcounter.com/pQC8"><img src="https://s11.flagcounter.com/count2/pQC8/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+    </div>
     
 <!--done-->
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
-        <a id="lnkBlogLogo" href="https://www.cnblogs.com/jmcui/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+	<a href="https://www.cnblogs.com/wzxNote/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>			
 		
 <!--done-->
-<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/jmcui/">JMCui</a>
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/wzxNote/">鬼谷子com</a>
 </h1>
 <h2>
-
+你见，或者不见我/我就在那里/不悲不喜    你念，或者不念我/情就在那里/不来不去<br>
+你爱，或者不爱我/爱就在那里/不增不减    你跟，或者不跟我/我的手就在你手里/不舍不弃<br>
+来我的怀里/或者/让我住进你的心里        默然/相爱/寂静/欢喜
 </h2>
 
 
@@ -53,285 +68,443 @@
 
 		
 	</div><!--end: blogTitle 博客的标题和副标题 -->
-	<div id="navigator">
-		
-<ul id="navList">
-<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
-博客园</a>
-</li>
-<li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/jmcui/">
-首页</a>
-</li>
-<li>
-
-<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
-新随笔</a>
-</li>
-<li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/JMCui">
-联系</a></li>
-<li>
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/jmcui/rss/">
-订阅</a>
-<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
-<li>
-<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
-管理</a>
-</li>
-</ul>
-
-
-		<div class="blogStats">
-			
-			<span id="stats_post_count">随笔 - 
-201&nbsp; </span>
-<span id="stats_article_count">文章 - 
-4&nbsp; </span>
-<span id="stats-comment_count">评论 - 
-113</span>
-
-			
-		</div><!--end: blogStats -->
-	</div><!--end: navigator 博客导航栏 -->
 </div><!--end: header 头部 -->
 
 <div id="main">
 	<div id="mainContent">
 	<div class="forFlow">
-		<div id="post_detail">
-    <!--done-->
-    <div id="topics">
-        <div class="post">
-            <h1 class = "postTitle">
-                
-<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/jmcui/p/12843171.html">jacoco 生成单测覆盖率报告</a>
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+	<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/wzxNote/">
+首页</a>
+</li>
+	<li>
 
-            </h1>
-            <div class="clear"></div>
-            <div class="postBody">
-                
-<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
-    <h2 id="一、jacoco-简介">一、jacoco 简介</h2>
-<p>jacoco 是一个开源的覆盖率工具，它针对的开发语言是 java。其使用方法很灵活，可以嵌入到 ant、maven 中；可以作为 Eclipse 插件；可以作为 javaAgent 探针监控 java 程序等等。</p>
-<p>很多第三方的工具提供了对 jacoco 的集成，如 sonar、jenkins 等等。</p>
-<p>jacoco 包含了多种尺度的覆盖率计数器，包含指令级覆盖（Instructions,C0coverage）、分支覆盖（Branches,C1coverage）、圈复杂度（CyclomaticComplexity）、行覆盖（Lines）、方法覆盖（non-abstract methods）、类覆盖（classes），其含义如下：</p>
-<ul>
-<li>行覆盖率：度量被测程序的每行代码是否被执行，判断标准行中是否至少有一个指令被执行。</li>
-<li>类覆盖率：度量计算 class 类文件是否被执行。</li>
-<li>分支覆盖率：度量 if 和 switch 语句的分支覆盖情况，计算一个方法里面的总分支数，确定执行和不执行的分支数量。</li>
-<li>方法覆盖率：度量被测程序的方法执行情况，是否执行取决于方法中是否有至少一个指令被执行。</li>
-<li>指令覆盖：计数单元是单个 java 二进制代码指令，指令覆盖率提供了代码是否被执行的信息，度量完全独立源码格式。</li>
-<li>圈复杂度：在（线性）组合中，计算在一个方法里面所有可能路径的最小数目，缺失的复杂度同样表示测试案例没有完全覆盖到这个模块。</li>
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+	<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E9%AC%BC%E8%B0%B7%E5%AD%90com">
+联系</a></li>
+	<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+	<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/wzxNote/rss/">
+订阅</a>
+	
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/wzxNote/rss/">
+    <img src="/skins/coffee/images/xml.gif" alt="订阅" />
+</a></li>
 </ul>
-<h2 id="二、jacoco-和-maven-集成">二、jacoco 和 maven 集成</h2>
-<h3 id="21-mvn-命令增加参数">2.1 mvn 命令增加参数</h3>
-<p>在执行 mvn 命令时，加上 &quot;org.jacoco:jacoco-maven-plugin:prepare-agent&quot; 参数即可。示例：</p>
-<pre><code>mvn clean test org.jacoco:jacoco-maven-plugin:0.8.5:prepare-agent install -Dmaven.test.failure.ignore=true
-</code></pre>
-<p>其中，jacoco-maven-plugin 后面跟的是jacoco的版本。&quot;-Dmaven.test.failure.ignore=true&quot; 建议加上，否则如果单元测试失败，就会直接中断，不会产生 .exec 文件。</p>
-<p>执行以上命令后，会在当前目录的 target 目录下产生一个jacoco.exec文件，该文件就是覆盖率的文件。</p>
-<p>总体说来，这种方式比较简单，在与 jenkins 集成时也非常方便。</p>
-<h3 id="22-在-pom-文件中使用-jacoco-插件">2.2 在 pom 文件中使用 jacoco 插件</h3>
-<p>首先，需要添加 jacoco 的依赖：</p>
-<pre><code>    &lt;properties&gt;
-        &lt;jacoco.version&gt;0.8.5&lt;/jacoco.version&gt;
-    &lt;/properties&gt;
-</code></pre>
-<pre><code>    &lt;dependency&gt;
-        &lt;groupId&gt;org.jacoco&lt;/groupId&gt;
-        &lt;artifactId&gt;jacoco-maven-plugin&lt;/artifactId&gt;
-        &lt;version&gt;${jacoco.version}&lt;/version&gt;
-        &lt;scope&gt;test&lt;/scope&gt;
-    &lt;/dependency&gt;
-</code></pre>
-<p>接着，我们需要配置 jacoco-maven-plugin 和 maven-surefire-plugin 内容：</p>
-<pre><code>        &lt;plugins&gt;
-            &lt;plugin&gt;
-                &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
-                &lt;configuration&gt;
-                    &lt;argLine&gt;
-                        -javaagent:${settings.localRepository}/org/jacoco/org.jacoco.agent/${jacoco.version}/org.jacoco.agent-${jacoco.version}-runtime.jar=destfile=${project.basedir}/target/coverage-reports/jacoco-unit.exec
-                    &lt;/argLine&gt;
-                    &lt;testFailureIgnore&gt;true&lt;/testFailureIgnore&gt;
-                &lt;/configuration&gt;
-            &lt;/plugin&gt;
-            &lt;!--检查代码覆盖率的插件配置--&gt;
-            &lt;plugin&gt;
-                &lt;groupId&gt;org.jacoco&lt;/groupId&gt;
-                &lt;artifactId&gt;jacoco-maven-plugin&lt;/artifactId&gt;
-                &lt;version&gt;0.8.5&lt;/version&gt;
-                &lt;configuration&gt;
-                    &lt;!--指定生成.exec文件的存放位置--&gt;
-                    &lt;destFile&gt;target/coverage-reports/jacoco-unit.exec&lt;/destFile&gt;
-                    &lt;!--Jacoco是根据.exec文件生成最终的报告，所以需指定.exec的存放路径--&gt;
-                    &lt;dataFile&gt;target/coverage-reports/jacoco-unit.exec&lt;/dataFile&gt;
-                    &lt;includes&gt;
-                        &lt;include&gt;**/service/**&lt;/include&gt;
-                    &lt;/includes&gt;
-                    &lt;!-- rules里面指定覆盖规则 --&gt;
-                    &lt;rules&gt;
-                        &lt;rule implementation=&quot;org.jacoco.maven.RuleConfiguration&quot;&gt;
-                            &lt;element&gt;BUNDLE&lt;/element&gt;
-                            &lt;limits&gt;　　
-                                &lt;!-- 指定方法覆盖到50% --&gt;
-                                &lt;limit implementation=&quot;org.jacoco.report.check.Limit&quot;&gt;
-                                    &lt;counter&gt;METHOD&lt;/counter&gt;
-                                    &lt;value&gt;COVEREDRATIO&lt;/value&gt;
-                                    &lt;minimum&gt;0.50&lt;/minimum&gt;
-                                &lt;/limit&gt;
-                                &lt;!-- 指定分支覆盖到50% --&gt;
-                                &lt;limit implementation=&quot;org.jacoco.report.check.Limit&quot;&gt;
-                                    &lt;counter&gt;BRANCH&lt;/counter&gt;
-                                    &lt;value&gt;COVEREDRATIO&lt;/value&gt;
-                                    &lt;minimum&gt;0.50&lt;/minimum&gt;
-                                &lt;/limit&gt;
-                                &lt;!-- 指定类覆盖到100%，不能遗失任何类 --&gt;
-                                &lt;limit implementation=&quot;org.jacoco.report.check.Limit&quot;&gt;
-                                    &lt;counter&gt;CLASS&lt;/counter&gt;
-                                    &lt;value&gt;MISSEDCOUNT&lt;/value&gt;
-                                    &lt;maximum&gt;0&lt;/maximum&gt;
-                                &lt;/limit&gt;
-                            &lt;/limits&gt;
-                        &lt;/rule&gt;
-                    &lt;/rules&gt;
-                &lt;/configuration&gt;
-                &lt;executions&gt;
-                    &lt;execution&gt;
-                        &lt;id&gt;pre-test&lt;/id&gt;
-                        &lt;goals&gt;
-                            &lt;goal&gt;prepare-agent&lt;/goal&gt;
-                        &lt;/goals&gt;
-                    &lt;/execution&gt;
-                    &lt;execution&gt;
-                        &lt;id&gt;post-test&lt;/id&gt;
-                        &lt;phase&gt;test&lt;/phase&gt;
-                        &lt;goals&gt;
-                            &lt;goal&gt;report&lt;/goal&gt;
-                        &lt;/goals&gt;
-                    &lt;/execution&gt;
-                &lt;/executions&gt;
-            &lt;/plugin&gt;
-        &lt;/plugins&gt;
-</code></pre>
-<p>&lt;includes&gt;或&lt;excludes&gt;标签的值应该是相对于目录 /classes/ 的编译类的类路径（而不是包名），用来指定哪些类需要进行单元测试。</p>
-<p>另外 maven 的测试类需要遵循相应的规范命名，否则无法运行测试类，无法生成测试报告以及覆盖率报告。jacoco 使用的是 maven-surefire-plugin 插件，它的默认测试类名规范是：</p>
-<ul>
-<li>Test*.java：以 Test 开头的 Java 类;</li>
-<li>*Test.java：以 Test 结尾的 Java 类;</li>
-<li>*TestCase.java：以 TestCase 结尾的 Java 类;</li>
-</ul>
-<p>或者可以在pom中自定义测试类：</p>
-<pre><code>&lt;plugin&gt;
-	&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
-	&lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
-	&lt;configuration&gt;
-		&lt;includes&gt;
-			&lt;include&gt;**/*Tests.java&lt;/include&gt;
-			&lt;include&gt;**/*Test.java&lt;/include&gt;
-		&lt;/includes&gt;
-		&lt;excludes&gt;
-			&lt;exclude&gt;**/Abstract*.java&lt;/exclude&gt;
-		&lt;/excludes&gt;
-	&lt;/configuration&gt;
-&lt;/plugin&gt;
-</code></pre>
-<p>&lt;rules&gt; 指定筛选规则。</p>
-<p>接着运行 mvn test 生成 index.html，即覆盖率报告<br>
-<img src="https://img2020.cnblogs.com/blog/1153954/202005/1153954-20200507145600498-1897605575.png" alt=""></p>
-<br>
-<br>
-推荐阅读：
-<ol>
-<li>ant 集成 jacoco：<a href="http://eclemma.org/jacoco/trunk/doc/ant.html">http://eclemma.org/jacoco/trunk/doc/ant.html</a></li>
-<li>eclipse 使用 jacoco：<a href="http://www.eclemma.org/">http://www.eclemma.org/</a></li>
-</ol>
+
+
+
+			<div class="blogStats">
+				
+				<!--done-->
+随笔- 
+110&nbsp;
+文章- 
+0&nbsp;
+评论- 
+75&nbsp;
+
+
+
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		
+<!--done-->
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/wzxNote/archive/2020/03/30.html">2020年3月30日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12596689.html">
+[置顶]    23种设计模式，c++代码实现
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：这个系列文章我会用尽量通俗的语言和结构来讨论和实现23中设计模式。通过简单的例子和场景把大家带入到设计模式的世界中去，尽量使各位看官看完就能够达到会用的目的~ 本系列为QtCreator创建的console工程 创建型模式 简单工厂模式 工厂模式 抽象工厂模式 构建模式 单例模式 原型模式 结构型模            <a href="https://www.cnblogs.com/wzxNote/p/12596689.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-03-30 09:47 鬼谷子com 阅读 (24) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12596689" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
 
 </div>
-<div id="MySignature"></div>
-<div class="clear"></div>
-<div id="blog_post_info_block">
-    <div id="blog_post_info"></div>
-    <div class="clear"></div>
-    <div id="post_next_prev"></div>
-</div>
-            </div>
-            <div class="postDesc">posted @ 
-<span id="post-date">2020-05-07 15:09</span>&nbsp;
-<a href="https://www.cnblogs.com/jmcui/">JMCui</a>&nbsp;
-阅读(<span id="post_view_count">...</span>)&nbsp;
-评论(<span id="post_comment_count">...</span>)&nbsp;
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12843171" rel="nofollow">编辑</a>&nbsp;
-<a href="javascript:void(0)" onclick="AddToWz(12843171);return false;">收藏</a></div>
-        </div>
-	    
-	    
-    </div><!--end: topics 文章、评论容器-->
-</div>
-<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
-<script>markdown_highlight();</script>
-<script>
-    var allowComments = true, cb_blogId = 352483, cb_blogApp = 'jmcui', cb_blogUserGuid = 'e3fe74c3-b829-e711-9fc1-ac853d9f53cc';
-    var cb_entryId = 12843171, cb_entryCreatedDate = '2020-05-07 15:09', cb_postType = 1; 
-    loadViewCount(cb_entryId);
-    loadSideColumnAd();
-</script><a name="!comments"></a>
-<div id="blog-comments-placeholder"></div>
-<script>
-    var commentManager = new blogCommentManager();
-    commentManager.renderComments(0);
-</script>
 
-<div id="comment_form" class="commentform">
-    <a name="commentform"></a>
-    <div id="divCommentShow"></div>
-    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
-    <div id="comment_form_container"></div>
-    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
-    <div id="ad_t2"></div>
-    <div id="opt_under_post"></div>
-    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
-    <script>
-        var googletag = googletag || {};
-        googletag.cmd = googletag.cmd || [];
-    </script>
-    <script>
-        googletag.cmd.push(function () {
-            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
-            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
-            googletag.pubads().enableSingleRequest();
-            googletag.enableServices();
-        });
-    </script>
-    <div id="cnblogs_c1" class="c_ad_block">
-        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/wzxNote/archive/2020/05/08.html">2020年5月8日</a>
     </div>
-    <div id="under_post_news"></div>
-    <div id="cnblogs_c2" class="c_ad_block">
-        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
-            <script>
-                if (new Date() >= new Date(2018, 9, 13)) {
-                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
-                }
-            </script>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12849461.html">
+    Qt for Android （三） 打开Android相册并选一个图片进行显示
+</a>
+
         </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：这两天弄了一下android相册的相关功能。还是花了挺长时间的，这里总结一下，避免以后再踩坑。同时也在这篇文章里面补齐一些android开发的基础支持 打开Android相册并选一个图片进行显示 分为几个步骤: 1. QtCreator新建Android工程 本例使用的是arm64 v8 Andro            <a href="https://www.cnblogs.com/wzxNote/p/12849461.html" class="c_b_p_desc_readmore">阅读全文</a>
     </div>
-    <div id="under_post_kb"></div>
-    <div id="HistoryToday" class="c_ad_block"></div>
-    <script type="text/javascript">
-        fixPostBody();
-        deliverBigBanner();
-setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
-        deliverAdC1();
-        deliverAdC2();
-        loadNewsAndKb();
-        loadBlogSignature();
-LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
-        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
-        loadOptUnderPost();
-        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
-    </script>
 </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-05-08 11:26 鬼谷子com 阅读 (39) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12849461" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/wzxNote/archive/2020/04/30.html">2020年4月30日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12809154.html">
+    备忘录模式 （c++实现）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：模式定义 备忘录（Memento）: 在不破坏封装性的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。这样以后就可以将该对象恢复到原先保存的状态。 模式动机 备忘录模式 比较适用于功能比较复杂的，但需要维护或记录属性历史的类，或者需要保存的属性只是众多属性中的一小部分时，LieKong可            <a href="https://www.cnblogs.com/wzxNote/p/12809154.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-30 15:30 鬼谷子com 阅读 (30) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12809154" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/wzxNote/archive/2020/04/29.html">2020年4月29日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12802985.html">
+    MacOS虚拟机忘记密码解决方案
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：问题如标题 1. 重启虚拟机系统 2. 重启过程中按住&quot;win&quot; + &quot;R&quot;组合键 3. 然后会出现安装界面，选择 &quot;实用工具/终端&quot; 4. 在终端输入 resetpassword ，会弹出重置密码的对话框，重新设置密码就可以了。 怕再次忘记就用记事本保存一下密码~            <a href="https://www.cnblogs.com/wzxNote/p/12802985.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-29 16:25 鬼谷子com 阅读 (34) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12802985" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/wzxNote/archive/2020/04/28.html">2020年4月28日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12794435.html">
+    Qt for Android FAQ
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：1. 其他版本（windows mingw)正常，但是android armv8调试的时候程序崩溃，没有具体错误提示，只有下面这一行： F libc : Fatal signal 5 (SIGTRAP), code 1 (TRAP_BRKPT), fault addr 0x6f37841990 in            <a href="https://www.cnblogs.com/wzxNote/p/12794435.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-28 15:09 鬼谷子com 阅读 (18) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12794435" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12791972.html">
+    cmake vs qmake
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：cmake vs qmake qmake 是为 Qt 量身打造的，使用起来非常方便 cmake 使用上不如qmake简单直接，但复杂换来的是强大的功能 内置的 out-of source 构建。（目前QtCreator为qmake也默认启用了该功能。参考：浅谈 qmake 之 shadow buil            <a href="https://www.cnblogs.com/wzxNote/p/12791972.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-28 09:30 鬼谷子com 阅读 (14) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12791972" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/wzxNote/archive/2020/04/21.html">2020年4月21日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12746336.html">
+    Flutter安装过程中遇到的问题
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：Flutter安装配置过程中遇到的问题 执行flutter doctor的时候弹出两个错误 1. ✗ Android license status unknown 最后的解决其实很简单，过程却是很曲折。很多教程说的要执行： 这个命令，但是我一直提示找不到这个命令或者没有licenses这个参数。后来            <a href="https://www.cnblogs.com/wzxNote/p/12746336.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-21 18:02 鬼谷子com 阅读 (22) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12746336" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/wzxNote/archive/2020/04/17.html">2020年4月17日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12718427.html">
+    外观模式（c++实现）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：外观模式 [TOC] 模式定义 外观模式（Facade） ，为子系统中的一组接口提供一个一致的界面，此模式定义了一个高层接口，这个接口使得这一子系统更加容易使用。 模式动机 当要为一个复杂子系统提供一个简单接口时可以使用外观模式。该接口可以满足大多数用户的需求，而且用户也可以越过外观类直接访问子系统            <a href="https://www.cnblogs.com/wzxNote/p/12718427.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-17 10:56 鬼谷子com 阅读 (47) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12718427" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/wzxNote/archive/2020/04/16.html">2020年4月16日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12714830.html">
+    原型模式（c++实现）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：原型模式 [TOC] 定义 原型模式 ，用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。 动机 1. 资源优化场景 类初始化需要消化非常多的资源，这个资源包括数据、硬件资源等。 2. 性能和安全要求的场景 通过new产生一个对象需要非常繁琐的数据准备或访问权限，则可以使用原型模式。             <a href="https://www.cnblogs.com/wzxNote/p/12714830.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-16 18:28 鬼谷子com 阅读 (12) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12714830" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12713492.html">
+    我敢说 80% 的程序员都掉进了「老鼠赛跑」的陷阱
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：今天我给大家再次分享一下，我最近的一些读书的感想，思考起来，确实能够给自己带来一些真实的帮助和启发，希望大家在平时的工作学习中，也能够认清楚学习的一些本质。 如果我们的学习是在不断掌握应对具体工作场景和问题的方法，那就是在努力提升技术效率。在这种模式下，我们遇到每个新问题都要学习新知识。 如果我们的            <a href="https://www.cnblogs.com/wzxNote/p/12713492.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-16 16:00 鬼谷子com 阅读 (14) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12713492" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/wzxNote/p/12712895.html">
+    装饰模式（c++实现）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：装饰模式 [TOC] 定义 动态的给一个对象添加一些额外的职责，就增加功能来说，装饰模式比生成子类更为灵活 动机 一般有两种方式可以实现给一个类或对象增加行为： 继承机制，使用继承机制是给现有类添加功能的一种有效途径，通过继承一个现有类可以使得子类在拥有自身方法的同时还拥有父类的方法。但是这种方法是            <a href="https://www.cnblogs.com/wzxNote/p/12712895.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-16 14:53 鬼谷子com 阅读 (21) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12712895" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/wzxNote/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
 	</div><!--end: forFlow -->
 	</div><!--end: mainContent 主体内容容器-->
 
@@ -343,12 +516,12 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
 </div>
 
 <div id="sidebar_ad"></div>
-			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script></div>
 			
-			<div id="leftcontentcontainer">
+			<DIV id="leftcontentcontainer">
 				<div id="blog-sidecolumn"></div>
                     <script>loadBlogSideColumn();</script>
-			</div>
+			</DIV>
 			
 		</div><!--end: sideBarMain -->
 	</div><!--end: sideBar 侧边栏容器 -->
@@ -357,7 +530,7 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
 	<div class="clear"></div>
 	<div id="footer">
 		<!--done-->
-Copyright &copy; 2020 JMCui
+Copyright &copy; 2020 鬼谷子com
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
 
 
