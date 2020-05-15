@@ -10,25 +10,20 @@ namespace ConsoleApp6
 {
    public class OrderService                           //数据库版
     {
-        public List<Order> orderList;
-        public OrderService(List<Order> list)             //构造函数
-        {
-            if (list == null)
-                this.orderList = new List<Order> { };
-            else
-            this.orderList = list;
-        }
         public OrderService()
         {
-            this.orderList = new List<Order>();
 
+        }
+        public static List<Order> GetOrderList()
+        {
+            List<Order> orderList = new List<Order>();
             using (var context = new OrderingContext())                 //将数据库的数据读入orderlist
             {
                 var orderquery = context.OrderforDBs.Include("ItemforDBs");  //联接查询
                 foreach (var orderdb in orderquery)
                 {
                     Order order = new Order();
-                    order.OrderNo = orderdb.orderNo;                    
+                    order.OrderNo = orderdb.orderNo;
                     order.Clients.Name = orderdb.clientName;
                     order.OrderDate = Convert.ToDateTime(orderdb.dateTime);
                     order.Total = orderdb.total;
@@ -41,20 +36,19 @@ namespace ConsoleApp6
                         item.Total = itemdb.total;
                         order.OrderItemList.Add(item);
                     }
-                    this.orderList.Add(order);
+                    orderList.Add(order);
                 }
             }
+            return orderList;
         }
-
-
-        public void addOrder(Order o)                        //添加订单
+        public static void addOrder(List<Order> orderList, Order o)                        //添加订单
         {
-            foreach (Order x in orderList)                
+            foreach (Order x in orderList)
                 if (x.Equals(o))
                     return;
             orderList.Add(o);
-            sort();                     //添加后按订单号排序
-  
+            sort(orderList);                     //添加后按订单号排序
+
             using (var context = new OrderingContext())                 //将新order加入数据库
             {
                 var orderdb = new OrderforDB
@@ -64,28 +58,33 @@ namespace ConsoleApp6
                     dateTime = o.OrderDate.ToString(),
                     total = o.Total
                 };
-                    orderdb.ItemforDBs = new List<ItemforDB>();
-                    foreach (OrderItem oi in o.OrderItemList)         //对order的itemlist赋值
+                orderdb.ItemforDBs = new List<ItemforDB>();
+                foreach (OrderItem oi in o.OrderItemList)         //对order的itemlist赋值
                 {
-                       ItemforDB itemfordb = new ItemforDB() { productName= oi.Products.Name, price=oi.price,
-                                                                   count = oi.Number,total=oi.Total};
-                       orderdb.ItemforDBs.Add(itemfordb);
-                    }
-                    context.OrderforDBs.Add(orderdb);
-                    context.SaveChanges();
-            } 
+                    ItemforDB itemfordb = new ItemforDB()
+                    {
+                        productName = oi.Products.Name,
+                        price = oi.price,
+                        count = oi.Number,
+                        total = oi.Total
+                    };
+                    orderdb.ItemforDBs.Add(itemfordb);
+                }
+                context.OrderforDBs.Add(orderdb);
+                context.SaveChanges();
+            }
         }
 
-        public void sort()                              //排序
+        public static void sort(List<Order> orderList)                              //排序
         {
-            this.orderList.Sort();
+            orderList.Sort();
         }
 
 
-        public void deleteOrder(string orderNo)          //删除订单（根据订单号）
+        public static void deleteOrder(List<Order> orderList, string orderNo)          //删除订单（根据订单号）
         {
             int i;
-            for (i = orderList.Count-1; i >= 0; i--)
+            for (i = orderList.Count - 1; i >= 0; i--)
             {
                 if (orderList[i].OrderNo == orderNo)
                 {
@@ -93,7 +92,7 @@ namespace ConsoleApp6
                     break;
                 }
             }
-            if (i <0)
+            if (i < 0)
             {
                 Exception e = new Exception($"找不到订单{orderNo}。");
                 throw e;
@@ -112,7 +111,7 @@ namespace ConsoleApp6
 
 
 
-        public void modifyOrder(string orderNo, Order o)      //修改订单
+        public static void modifyOrder(List<Order> orderList, string orderNo, Order o)      //修改订单
         {
             int i = 0;
             for (i = 0; i < orderList.Count; i++)
@@ -164,18 +163,18 @@ namespace ConsoleApp6
         }
 
 
-        public Order InquireNo(String no)                     //按订单号查询（订单号不会重复，因此只返回一个order）
+        public static Order InquireNo(List<Order> orderList, String no)                     //按订单号查询（订单号不会重复，因此只返回一个order）
         {
-            foreach(Order o in orderList)
+            foreach (Order o in orderList)
             {
-                if (o.OrderNo==no)
+                if (o.OrderNo == no)
                 {
                     return o;
                 }
             }
-                return null;                      //没找到
+            return null;                      //没找到
         }
-        public List<Order> InquireProductName(String name)  //按商品名称查询
+        public static List<Order> InquireProductName(List<Order> orderList, String name)  //按商品名称查询
         {
             var query = orderList.Where(order =>
             {
@@ -190,32 +189,32 @@ namespace ConsoleApp6
             else
                 return null;
         }
-        public List<Order> InquireClientName(String name)    //按客户名称查询
+        public static List<Order> InquireClientName(List<Order> orderList, String name)    //按客户名称查询
         {
             var query = from order in orderList
                         where order.Clients.Name == name
                         orderby order.Total
                         select order;
-            List < Order > list= query.ToList();
-            if (list.Count!=0)
+            List<Order> list = query.ToList();
+            if (list.Count != 0)
                 return query.ToList();
             else
                 return null;
         }
-        public void Export(String name)
+        public static void Export(List<Order> orderList, String name)
         {
             XmlSerializer xmlserializer = new XmlSerializer(typeof(List<Order>));
-            using (FileStream fs = new FileStream(name, FileMode.Create)) 
+            using (FileStream fs = new FileStream(name, FileMode.Create))
             {
-                xmlserializer.Serialize(fs, this.orderList);
+                xmlserializer.Serialize(fs, orderList);
             }
         }
-        public void Import(String name)
+        public static void Import(List<Order> orderList, String name)
         {
             XmlSerializer xmlserializer = new XmlSerializer(typeof(List<Order>));
             using (FileStream fs = new FileStream(name, FileMode.Open))
             {
-                this.orderList = (List<Order>)xmlserializer.Deserialize(fs);
+                orderList = (List<Order>)xmlserializer.Deserialize(fs);
             }
         }
     }
